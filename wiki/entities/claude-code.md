@@ -78,7 +78,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **版本：**
 
 - npm `stable`＝**2.1.323**、`latest`＝**2.1.330**（dist-tags，查證 2026-11-21）。stable 這週一次跳過 12 個版號（2.1.311→2.1.323）。
-- **該不該升**：**本站目前核對過的破壞性變更已全部落在 stable 裡**（最高 v2.1.321），包含先前只有 latest 才有的寫入邊界設定（`blockWritesOutsideWorkingDirectories`，2.1.314）、auto mode 在 LLM gateway 下不再退回舊分類（2.1.319）與 Fable 5.2 成為預設模型（2.1.321）——**升上 stable 這一步本身就會改到既有行為，升之前先看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]**。latest 多出來的是 2.1.324–330 的新功能，沒有非升不可的理由。逐版與通道見 [[entities/claude-code-releases]]。
+- **該不該升**：**本站核對過的破壞性變更已全部落在 stable 裡**（最高 v2.1.321）
+  - 含先前只有 latest 才有的寫入邊界設定（`blockWritesOutsideWorkingDirectories`，2.1.314）
+  - auto mode 在 LLM gateway 下不再退回舊分類（2.1.319）、Fable 5.2 成為預設模型（2.1.321）
+  - **升上 stable 這一步本身就會改到既有行為**，升之前先看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]
+  - latest 多出來的是 2.1.324–330 的新功能，沒有非升不可的理由。逐版與通道見 [[entities/claude-code-releases]]
 
 **近期平台與文件異動：**
 
@@ -104,9 +108,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期報導（尚待官方佐證）：**
 
 - ❓ **待查證**（標 2026-11-17｜查 Claude Sheets）｜**財經媒體稱 Anthropic 推出「Claude Sheets」**（Google News／The Motley Fool，2026-11-17，殼層摘要、無可讀內文）：標題稱推出新產品並藉此質疑 Microsoft 股價，未附產品細節；非官方來源，官方文件與 changelog 未見對應名稱。
-- 🔎 **查無官方**（標 2026-11-07｜查 自動設定、API 金鑰｜複 2026-12-21）｜**Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰**（Google News／FourWeekMBA＋Pasquale Pillitteri，2026-11-07，僅標題）：兩篇低流量轉述來源稱雲端開新任務可自動配置，省去手動初始化，官方文件與 changelog 未見對應條目。2026-11-21 查官方雲端文件：未見「自動設定 repo 與 API 金鑰」功能；現行機制為 Default 環境（無預設 setup script）、環境變數／setup script 與需手動加入的 network secrets；Team／Enterprise 的 Quick setup 僅簡化 GitHub 連接與首個環境建立（[Cloud environments](https://code.claude.com/docs/en/cloud-environments)、[Claude Code in the cloud](https://code.claude.com/docs/en/claude-code-on-the-web)）。
-- **Anthropic 使用政策更新：新增禁止對模型持續且無謂的辱虐行為**：官方公告（2026-10-08 發布、**2026-11-12 生效**）新增「sustained and needless abusive or cruel behavior toward our models」禁令，僅針對無明顯目的的極端情況；一般挫折、反駁、黑暗創作題材與模型測試／研究不在範圍，主要執行手段仍是 Claude 結束對話。Forbes 2026-11-06 報導的「別對 Claude 太差」即此條（來源：[2026 usage policy update](https://anthropic.com/news/2026-usage-policy-update)，查證 2026-11-21）。
-- **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）；媒體稱（Unite.AI，11-21 查）LiveCVEBench 190 題 VR-1.1 修復 57.9%、Claude Code 與 Codex 各 45.3%，為 Cogent 自家執行、推論預算不同、無獨立重現，證據仍弱
+- 🔎 **查無官方**（標 2026-11-07｜查 自動設定、API 金鑰｜複 2026-12-21）｜**Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰**（Google News／FourWeekMBA＋Pasquale Pillitteri，2026-11-07，僅標題）
+  - 兩篇低流量轉述來源稱雲端開新任務可自動配置 repo 與 API 金鑰，省去手動初始化
+  - 官方文件與 changelog 未見對應條目；2026-11-21 再查官方雲端文件仍未見
+  - 現行機制為 Default 環境（無預設 setup script）、環境變數／setup script 與需手動加入的 network secrets
+  - Team／Enterprise 的 Quick setup 僅簡化 GitHub 連接與首個環境建立（[Cloud environments](https://code.claude.com/docs/en/cloud-environments)、[Claude Code in the cloud](https://code.claude.com/docs/en/claude-code-on-the-web)）
+- **Anthropic 使用政策更新：新增禁止對模型持續且無謂的辱虐行為**：官方公告（2026-10-08 發布、**2026-11-12 生效**）新增「sustained and needless abusive or cruel behavior toward our models」禁令，僅針對無明顯目的的極端情況
+  - 一般挫折、反駁、黑暗創作題材與模型測試／研究不在範圍，主要執行手段仍是 Claude 結束對話。Forbes 2026-11-06 報導的「別對 Claude 太差」即此條（來源：[2026 usage policy update](https://anthropic.com/news/2026-usage-policy-update)，查證 2026-11-21）
+- **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）
+  - 媒體稱（Unite.AI，11-21 查）LiveCVEBench 190 題 VR-1.1 修復 57.9%、Claude Code 與 Codex 各 45.3%，為 Cogent 自家執行、推論預算不同、無獨立重現，證據仍弱
 - **社群工具聲稱可讓 Max $20 方案用量「擴大 50 倍」**（[muaaz9329/cheap-ag](https://github.com/muaaz9329/cheap-ag)，186★，2026-11-01）：單一 GitHub repo 宣稱「50x your Claude usage」，未附測試方法或與官方用量上限的對照數據，證據薄弱；計費規則另見 [[entities/pricing]]。
 - **社群工具聲稱效能優於 Claude Code（Show HN「Synaps」，2 分，2026-11-05）**：作者稱自家 Rust 改寫版 agent 工具 7ms 可 attach 到運行中的 daemon、40ms 啟動 daemon、cache 命中率 99%+，未附測試方法或與官方數據的對照，單一貼文、低互動，證據薄弱；[GitHub](https://github.com/HaseebKhalid1507/SynapsCLI)。
   - 同貼文稱 Anthropic 已為 Claude Code 新增規則禁止使用者自製遊戲且無選項關閉；此說法為作者轉述其在 Reddit 看到的二手訊息、非一手，且與已查證的遊戲複製限制範圍（僅擋「重現他人特定遊戲」，原創仍可做，見 [[entities/claude-code-known-issues]]「🧠 行為與品質」組）不一致，不採信、不另立條目。

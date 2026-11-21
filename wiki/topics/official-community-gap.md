@@ -63,7 +63,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 新開一個 session 它就忘光 | 🧪 | Claude Code 的 auto memory（依你的更正與偏好自己寫筆記，`/memory` 管理，子代理也各有一份） | 跨工具、跨模型、團隊共享仍要靠社群工具；要自己接外部記憶層，四個 session／compact hook 都能用 ⟨G-05⟩ | 2026-11-21 |
 | 額度快用完、錢花到哪看不看得到 | 🧪 | `/usage` 拆到 skills／subagents／plugins／各 MCP server 的百分比與每個 loop 的 token、狀態列 `rate_limits`、VS Code 70% 警示橫幅 | 沒有逐次請求的金額，數字是本機估算、不含其他裝置與 claude.ai；告警門檻似乎不能自訂 ⟨G-07⟩ | 2026-11-21 |
 | 想自己決定哪段用哪個模型、不被鎖住 | 🧪 | `opusplan`＋`CLAUDE_CODE_SUBAGENT_MODEL`、`CLAUDE_CODE_SUBAGENT_EFFORT`（v2.1.316）；企業端另有 org default model | 三者皆是**固定指定**，動態選模型的路由官方文件未見；細節見下方 ⟨G-13⟩ | 2026-11-21 |
-| 一堆 agent 在跑，看不到誰卡住 | 🧪 | Agent view（研究預覽）每個 session 一列，標出它在跑、在等你、還是做完了；提示列會顯示還有幾個 agent 在等你；`--forward-subagent-text` 可帶出子代理文字；v2.1.329 起 `/tasks` 標頭與頁尾背景計數併為一個數字（涵蓋 shell、Monitor、MCP 呼叫、agent、workflow 與排程任務），VS Code 版 v2.1.330 新增 `/workflows` 開啟執行中工作流的 agent map | 看得到單一 session 的狀態，看不到誰在等誰這種依賴關係的全圖 ⟨G-09⟩ | 2026-11-21 |
+| 一堆 agent 在跑，看不到誰卡住 | 🧪 | Agent view（研究預覽）每個 session 一列，標出它在跑、在等你、還是做完了；提示列會顯示還有幾個 agent 在等你；`--forward-subagent-text` 可帶出子代理文字 | 看得到單一 session 的狀態，看不到誰在等誰這種依賴關係的全圖 ⟨G-09⟩ | 2026-11-21 |
 | Agent 之間直接傳訊 | 🧪 | 跨 session 訊息 `ListAgents`＋`SendMessage`（v2.1.224 起，原生 Windows v2.1.234），可達他機與雲端 | 點對點已跨機器；共享頻道式 A2A（issue #28300 仍開著）與自動依賴排序沒有 ⟨G-10⟩ | 2026-11-21 |
 | 它說做完了，但品質夠不夠 | 🧪 | `/goal` 判完成條件（一般功能）、`/code-review`（v2.1.218 起背景執行）；Outcomes 規格驗證屬 Managed Agents，仍是 beta、要帶 beta header | 答的是「做完沒」不是「寫得好不好」；社群的多模型對抗審查無公開對照數據 ⟨G-06⟩ | 2026-11-21 |
 | 手機或瀏覽器用得到嗎 | 🧪 | 用得到但不完整：Artifacts 可把成果輸出成網頁分享；Cowork 網頁／行動版自 2026-07-07 起逐步開放（beta，先給 Max 用戶），任務在雲端續跑 | 官方明說桌面版才是完整體驗——只有桌面能讓它用你本機的檔案與瀏覽器 | 2026-11-21 |

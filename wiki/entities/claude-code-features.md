@@ -47,7 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **hook 能不能當防線**：hook 一觸發就是硬擋，但不保證會觸發；要保證一定擋，用沙箱；deny 規則與 hook 都當第二層（見 [[#hooks：事件、失效模式與能不能當防線]]）。
 - **平行分派派哪種 subagent**：什麼都不設就在背景跑、同時最多 20 個；要共用主對話的 context 與 cache 選 fork（見 [[#Subagent 型別差異對照]]）。
 - **桌面版能做什麼**：依主題歸群在 [[#桌面版功能地圖]]，每條日期對到同頁「桌面版文件時序」。
-- 官方建議的做法見 [[topics/coding-workflow-guide]]；Mods 見 [[entities/claude-mods]]；文中「已知問題頁」指 [[entities/claude-code-known-issues]]。
+- 官方建議的做法見 [[topics/coding-workflow-guide]]；還沒公告、只出現在出貨 build 裡的旗標見 [[topics/claude-code-experimental]]；Mods 見 [[entities/claude-mods]]；文中「已知問題頁」指 [[entities/claude-code-known-issues]]。
 
 ## 核心功能
 
@@ -66,7 +66,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
 - **官方文件新增頁：Claude Code 接 Google Cloud（Anthropic managed）模型**（[文件索引](https://code.claude.com/docs/llms.txt) 新增 [claude-models-on-google-cloud-anthropic-managed.md](https://code.claude.com/docs/en/claude-models-on-google-cloud-anthropic-managed.md)，2026-11-14）：具體設定步驟與可用範圍未載（僅標題可用）。
 - **Claude Desktop 新增 release channel 版本頻道設定**（[Help Center Release Notes](https://support.claude.com/en/articles/12138966-release-notes)，2026-11-17）：可選擇更新時走哪個版本頻道，Stable 頻道維持現狀；同一批文件移除「Organize your tasks with projects in Claude Cowork」一段。
-- **模型設定段落再變**：官方文件 model-config 頁的相關段落自 2026-11-09 起多次增刪（見下兩條沿革）；2026-11-21 查證現行頁面含「Available models／Adjust effort level／Extended thinking」等段，切換說明改指 `opus`→Opus 5.5、`sonnet`→Sonnet 5.5、`haiku`→Haiku 5.5，並新增 `fable` 別名（Fable 5.2，v2.1.321+）；屬文件搬移與別名更新，非新增指令（來源：[Claude Code model configuration](https://code.claude.com/docs/en/model-config)，查證 2026-11-21）。
+- **模型設定段落再變**（來源：[Claude Code model configuration](https://code.claude.com/docs/en/model-config)，查證 2026-11-21）
+  - 官方 model-config 頁的相關段落自 2026-11-09 起多次增刪（見下兩條沿革）
+  - 現行頁面含「Available models／Adjust effort level／Extended thinking」等段
+  - 切換說明改指 `opus`→Opus 5.5、`sonnet`→Sonnet 5.5、`haiku`→Haiku 5.5，並新增 `fable` 別名（Fable 5.2，v2.1.321+）
+  - 屬文件搬移與別名更新，不是新增指令
   - 11-10 該段與切換說明再被移除，內容仍未載。
   - 11-15 再新增「Claude Code model configuration」與「為何對話中換成 Opus 5／5.5」兩段，同時移除「切換模型、effort 與 thinking 設定」與「訓練資料多新」兩段；段落在新增／移除間反覆第三次，具體設定內容仍未載。
 

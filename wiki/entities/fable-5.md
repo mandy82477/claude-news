@@ -142,7 +142,9 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 承自 5.1、5.2 指南仍然沿用的：
 
-- **要刪「hold all findings for the final response」這類抑制敘述的舊句，並把 `thinking.display` 設 `updates`**：它比 Fable 5 更少主動寫進度，不刪不設的話長工具鏈會整段靜默好幾分鐘。5.2 指南把這條寫得更細——進度更新是 progress-update thinking block，預設 `omitted` 時文字為空，只渲染 `text` block 的客戶端會看起來整段沒反應。
+- **要刪「hold all findings for the final response」這類抑制敘述的舊句，並把 `thinking.display` 設 `updates`**
+  - 它比 Fable 5 更少主動寫進度，不刪不設的話長工具鏈會整段靜默好幾分鐘
+  - 5.2 指南寫得更細：進度更新是 progress-update thinking block，預設 `omitted` 時文字為空，只渲染 `text` block 的客戶端會看起來整段沒反應
 - **要加「你在自主執行、使用者不在旁邊」那段**：少了它，模型會用「Next, I'll …」描述下一步就結束回合，或為原請求已涵蓋的步驟回頭問「Shall I apply this?」；官方說開頭那句承載大部分效果。
 - **要刪舊的反格式化規則**：那些是為了壓住前代濫用 bullet 與 bold 寫的，Fable 5.1 偏向用得太少，改寫成「什麼時候該用清單」才對得上它。
 - **`low` effort 下它比 Fable 5 更少呼叫搜尋工具、更傾向憑記憶回答**：這幾個回合改用 per-message effort 調高，或加官方那句「不確定的名字本身就是要查的東西」。

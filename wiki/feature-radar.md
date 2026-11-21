@@ -61,7 +61,9 @@
 - **CLI 之外**：anthropic-sdk-python v1.0.0（2026-08-20）把 client 升到 httpx2，影響的是用該 SDK 寫的整合程式碼，不是 CLI 升版本身。
 - **與版本無關的未修問題**：升不升版都在，而且各自只發生在特定產品或平台上，見 [[entities/claude-code]]「現在還沒修好的」。**上表你都對不上號，版本面就沒有東西擋著你升級。**
 - **其餘預設值改變**（2.1.217–219 巢狀子代理深度、2.1.218、2.1.221、2.1.224、2.1.229、2.1.251），以及 2.1.270 後只影響窄場景的變更（如 2.1.275 npm 來源外掛不再跑安裝腳本），見[官方 changelog](https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md)。
-- **因上限 12 列移出的門檻**：2.1.317／312／307／304／300／295／285／284／261／260（預設值改變，窄場景或已被較新列涵蓋）；較舊的 2.1.257 Fable 換 5.1、2.1.234／239／243 三項、2.1.212 `/fork` 改名、2.1.215 審查不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開、2.1.233 Todo 拿掉；見 [[entities/claude-code-releases]]。
+- **因上限 12 列移出的門檻**：2.1.317／312／307／304／300／295／285／284／261／260
+  - 皆為預設值改變，屬窄場景或已被較新版本涵蓋
+  - 事實已先搬進 [[entities/claude-code-releases]] 才移出
 
 > Fable 5 Defense in Depth 誤判非升版可解，見 [[entities/fable-5]]。
 
@@ -134,7 +136,7 @@
 | **anthropic-sdk-python 1.0.0**（httpx2 Breaking Change，⚠️ 無過渡期） | 2026-08-20 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **keybindingFlavor readline 模式**（v2.1.238，可選提示列刪除鍵行為；v2.1.261 起失效） | 2026-08-20 | 🔥 | ❌ 暫不推薦 | 正式發布 |
 | **Concise 輸出風格**（v2.1.237 新增內建 output style，省略前言與敘述性文字） | 2026-08-20 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Managed Agents Web Search 設定**（anthropic-sdk-python v0.125.0 新增 SDK 層設定支援）（2026-08-19 公告，此後未見後續報導；11-19 日報的 Managed Agents 計價文件異動不涉本項，掃至 2026-11-21） | 2026-08-19 | 🔥 | ⏳ 觀望 | Beta（SDK 層；框架整體仍 beta）|
+| **Managed Agents Web Search 設定**（anthropic-sdk-python v0.125.0 新增 SDK 層設定支援；2026-08-19 公告後未見後續，掃至 2026-11-21） | 2026-08-19 | 🔥 | ⏳ 觀望 | Beta（SDK 層；框架整體仍 beta）|
 | **spellcheck 輸入框拼字檢查**（v2.1.235，需本機 aspell／hunspell／ispell） | 2026-08-18 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **自訂專案 Transcript 目錄短名稱**（`CLAUDE_CODE_PROJECT_DIR_NAME` 環境變數，v2.1.234） | 2026-08-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.233**（`--worktree`／`claude agents` 視圖支援 GitLab MR URL，MR 顯示為 `!N`；另有 opt-in `forward_user_identity` 設定） | 2026-08-14 | 🔥 | ⚡ 有條件推薦 | 正式發布 |

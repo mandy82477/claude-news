@@ -792,6 +792,118 @@
    ],
    "reviewed": "2026-11-14",
    "why": "判讀層單向引用定價事實，pricing-history 是沿革帳本、不反向連判讀頁"
+  },
+  {
+   "pages": [
+    "entities/opus-5-5",
+    "topics/anthropic-business"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "共同落地的是 Opus 5.5 發布，模型面的家是模型頁、營收面的家是商業母頁；兩頁各自已連向 entities/pricing，直接互連會讓發布事實長出第三份副本"
+  },
+  {
+   "pages": [
+    "entities/claude-code-features",
+    "entities/pricing"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "共同落地的是官方 release notes 文件異動，用法面與計費面各有家；兩頁都已連向 entities/claude-code 母頁，互連無新資訊"
+  },
+  {
+   "pages": [
+    "entities/claude-code-releases",
+    "entities/mythos"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "共同落地的是 SDK 版本更新同時提到兩者，屬同一則 changelog 的兩個面向，不是同一個故事"
+  },
+  {
+   "pages": [
+    "entities/pricing-history",
+    "topics/anthropic-product-matrix"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "共同落地的是 Whiteboards／Sheets／Data 上線，價格沿革與產品對照表各記一面；兩頁都已連向 entities/claude-workspace-suite"
+  },
+  {
+   "pages": [
+    "entities/pricing-history",
+    "topics/market-signals"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "價格沿革是事實層、投資訊號是判讀層，判讀頁依規則只 wikilink 到事實頁而不反向，母頁互連會讓判讀層被事實層引用"
+  },
+  {
+   "pages": [
+    "topics/ai-agent-safety-cyber",
+    "topics/market-signals-customers"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "共同落地的是 IBM／Cisco 導入 Mythos：安全面看的是能力與防護、客戶面看的是採用訊號，兩頁各自已連向 entities/mythos"
+  },
+  {
+   "pages": [
+    "entities/claude-docs",
+    "entities/claude-workspace-suite"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "兩批不同時間推出的產品組（09-17 Docs／Slides 隨 Cowork 合併 vs 11-10 Whiteboards／Sheets／Data），共同鄰居全是 feature-radar、產品矩陣這類樞紐頁"
+  },
+  {
+   "pages": [
+    "entities/claude-slides",
+    "entities/claude-workspace-suite"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "同上：Slides 屬 09-17 那一批，workspace-suite 屬 11-10 那一批，相似度來自共同的樞紐鄰居"
+  },
+  {
+   "pages": [
+    "topics/community-multi-agent",
+    "topics/llm-wiki-pattern"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "一個講多 agent 分工、一個講 LLM wiki 模式，兩者只是同被社群樞紐頁引用；硬連會製造沒有語意的邊"
+  },
+  {
+   "pages": [
+    "topics/community-memory",
+    "topics/community-skills"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "同屬 community-tech-patterns 的七個子頁，母頁路由表已把七頁串在一起，子頁之間不互連是刻意設計"
+  },
+  {
+   "pages": [
+    "topics/anthropic-commitments",
+    "topics/market-signals-legal"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "承諾追蹤是事實層、投資訊號是判讀層；判讀頁依規則單向連向事實頁，不反向"
+  },
+  {
+   "pages": [
+    "topics/anthropic-business-risks",
+    "topics/market-lessons"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "風險表是事實層、教材頁是判讀沉澱層，兩者都已連向 topics/market-signals 母頁"
+  },
+  {
+   "pages": [
+    "entities/pricing-history",
+    "topics/model-task-leaderboard"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "價格沿革與跨家任務榜單無語意關係，相似度全來自共同的模型頁鄰居"
+  },
+  {
+   "pages": [
+    "entities/claude-code-releases",
+    "topics/anthropic-agent-stack"
+   ],
+   "reviewed": "2026-11-21",
+   "why": "版本逐版明細與官方 agent 積木總覽各答不同問題，兩頁都已連向 entities/claude-code 母頁"
   }
  ]
 }

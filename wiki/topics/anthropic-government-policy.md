@@ -140,12 +140,17 @@ S-1 寫了哪些風險、誰能叫停、與既有承諾對得上多少。下表�
 - **澳洲參議院AI調查聽證會**：09-27 至少 4 個來源報導傳喚 OpenAI、Anthropic 執行長出席聽證會；09-28 Reuters／The Guardian 報導兩公司確認不出席 10 月 1 日聽證會，衛報將此與 OpenAI 遭駭事件餘波並提；具體法律強制力與衛報所稱關聯均未見報導。與既有「澳洲著作權遊說」線（07-13 起）當事國相同、議題不同，是否同一佈局待後續釐清。
 - **英國測試機構模型存取受限**：Politico（09-24）與 Bloomberg（09-25）跨媒體報導白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查，僅標題可用。與 09-09「未依 AISI 要求提交 Mythos 5.1」時間相近，惟兩則報導未建立因果關係，暫不合併。
   - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就此發布任何說明**；2026-11-21 再查 AISI 官網與搜尋仍無官方說明；英方存取恢復的具名媒體與部長說法見下一條。
-  - **英方早期存取已恢復（媒體稱，2026-11-21 查證）**：媒體稱（Telegraph、FT，經 TechRepublic、CryptoBriefing 轉述）白宮撤回暫緩要求，英國 AISI 約 10-11 重獲發布前存取，凍結約 17 天；英國 AI 部長 Kanishka Narayan 10-12 公開稱英方已獲取得測試新模型的存取（Reuters 經 The Star），11-03 再稱對存取有信心。Kuwait Times「英方保留早期存取」與「10-11 恢復」因此是先後而非互斥。**仍分歧**：Mythos 5.1 是否一併恢復——IBTimes 稱仍限美國機構、MLex 稱僅少數美國機構取得；AISI 官網、白宮與 Anthropic 官方頁均未載。
+  - **英方早期存取已恢復（媒體稱，2026-11-21 查證）**：媒體稱（Telegraph、FT，經 TechRepublic、CryptoBriefing 轉述）白宮撤回暫緩要求，英國 AISI 約 10-11 重獲發布前存取，凍結約 17 天
+    - 英國 AI 部長 Kanishka Narayan 10-12 公開稱英方已獲取得測試新模型的存取（Reuters 經 The Star），11-03 再稱對存取有信心。Kuwait Times「英方保留早期存取」與「10-11 恢復」因此是先後而非互斥。**仍分歧**：Mythos 5.1 是否一併恢復——IBTimes 稱仍限美國機構、MLex 稱僅少數美國機構取得
+    - AISI 官網、白宮與 Anthropic 官方頁均未載
     - 具名媒體補上的部分：Politico 首報，要求來自白宮國家網路主任辦公室（Office of the National Cyber Director），資深政府官員稱這是對美國 AI 公司的標準做法；Anthropic 已照辦——Mythos 5.1 未交給英國 AISI、存取限美國機構，並稱正與美國政府合作擴大對國內外夥伴的開放。
     - 英國 AISI 主任 Henry de Zoete 稱該機構仍保有部分模型的發布前存取（含 OpenAI 的 GPT-6 Astra）。**媒體說法分歧**：一方稱涵蓋兩家所有新模型（含 Opus 5.5 與 09-22 發布的 GPT-6 Sol／Luna），一方稱只涉 Mythos 5.1。**仍未有答案的**：審查期限
   %% 2026-10-10 讓位給白宮通報義務線（表滿載） %%
 - **白宮要求 AI 公司比照通報類似「非預期行為」事故**：Axios 獨家報導，起因為 Anthropic 測試用 agent 誤送費城警局假兇殺案線報（7/18，9/28 才查覺，10/7 才通報）與美國國務院 20 份假簽證申請；Axios 稱適用所有 AI 公司，生效時程與罰則未載。事件技術面見 [[topics/ai-eval-boundary-incidents#事件年表]]。
-  - 🔎 **查無官方**（標 2026-10-10｜查 Axios、White House AI reporting、unintended model actions｜複 2026-12-21）：2026-10-24 查白宮官網與 Anthropic [官方貼文](https://www.anthropic.com/research/investigating-unintended-model-actions)，後者僅載已向白宮簡報、未提通報義務；白宮聲明全文未見；2026-11-21 重查仍無白宮官方全文，Axios 10-09 獨家（〈Anthropic breaches spark White House AI reporting mandate〉）已確認存在，多家轉述一致稱未載強制手段或罰則；簽證申請的數字媒體稱為 8 月 19 份、5 月 1 份且均未獲處理（與本條「20 份」合計吻合），費城假線報在本輪搜尋只見單一來源提及
+  - 🔎 **查無官方**（標 2026-10-10｜查 Axios、White House AI reporting、unintended model actions｜複 2026-12-21）：2026-10-24 查白宮官網與 Anthropic [官方貼文](https://www.anthropic.com/research/investigating-unintended-model-actions)，後者僅載已向白宮簡報、未提通報義務
+    - 白宮聲明全文未見
+    - 2026-11-21 重查仍無白宮官方全文，Axios 10-09 獨家（〈Anthropic breaches spark White House AI reporting mandate〉）已確認存在，多家轉述一致稱未載強制手段或罰則
+    - 簽證申請的數字媒體稱為 8 月 19 份、5 月 1 份且均未獲處理（與本條「20 份」合計吻合），費城假線報在本輪搜尋只見單一來源提及
     - 媒體稱（Axios 10-09 獨家，經 Digg、AI Weekly 轉述）：官員稱 AI 公司須通報並補救模型安全事故，期待立即通報、配合聯邦與州執法、補救損害，適用所有公司；未載強制手段或罰則
     - 背景：Axios 09-09 曾報導川普 AI 框架缺公開事故通報指引，國會亦未立法；法源依據未見
 - **歐盟監管姿態與據點爭奪**：07-31 歐盟稱將加強監控高風險 AI 系統部署，尚未提出針對 Anthropic 的具體措施；奧地利已向歐盟提案邀請 Anthropic 設立歐盟據點（06-28）。距今最後動態 07-31，滿 90 天為 **2026-10-29**。未列入上表，此處續留追蹤。
@@ -706,7 +711,9 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 - **[🌐] Reuters：Anthropic 投資人 Joe Lonsdale 稱 AI 公司渲染風險是為了影響政策走向**：與同日法院裁定同日出現，詳見「## 攻防紀錄」
 - **[🏛️] Bloomberg／Politico：白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查**：Politico（09-24）與 Bloomberg（09-25）為同一政策動作的跨媒體報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」
   - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就此發布任何說明**；2026-11-21 再查 AISI 官網與搜尋仍無官方說明；英方存取恢復的具名媒體與部長說法見下一條。
-  - **英方早期存取已恢復（媒體稱，2026-11-21 查證）**：媒體稱（Telegraph、FT，經 TechRepublic、CryptoBriefing 轉述）白宮撤回暫緩要求，英國 AISI 約 10-11 重獲發布前存取，凍結約 17 天；英國 AI 部長 Kanishka Narayan 10-12 公開稱英方已獲取得測試新模型的存取（Reuters 經 The Star），11-03 再稱對存取有信心。Kuwait Times「英方保留早期存取」與「10-11 恢復」因此是先後而非互斥。**仍分歧**：Mythos 5.1 是否一併恢復——IBTimes 稱仍限美國機構、MLex 稱僅少數美國機構取得；AISI 官網、白宮與 Anthropic 官方頁均未載。
+  - **英方早期存取已恢復（媒體稱，2026-11-21 查證）**：媒體稱（Telegraph、FT，經 TechRepublic、CryptoBriefing 轉述）白宮撤回暫緩要求，英國 AISI 約 10-11 重獲發布前存取，凍結約 17 天
+    - 英國 AI 部長 Kanishka Narayan 10-12 公開稱英方已獲取得測試新模型的存取（Reuters 經 The Star），11-03 再稱對存取有信心。Kuwait Times「英方保留早期存取」與「10-11 恢復」因此是先後而非互斥。**仍分歧**：Mythos 5.1 是否一併恢復——IBTimes 稱仍限美國機構、MLex 稱僅少數美國機構取得
+    - AISI 官網、白宮與 Anthropic 官方頁均未載
     - 具名媒體補上的部分：Politico 首報，要求來自白宮國家網路主任辦公室（Office of the National Cyber Director），資深政府官員稱這是對美國 AI 公司的標準做法；Anthropic 已照辦——Mythos 5.1 未交給英國 AISI、存取限美國機構，並稱正與美國政府合作擴大對國內外夥伴的開放。
     - 英國 AISI 主任 Henry de Zoete 稱該機構仍保有部分模型的發布前存取（含 OpenAI 的 GPT-6 Astra）。**媒體說法分歧**：一方稱涵蓋兩家所有新模型（含 Opus 5.5 與 09-22 發布的 GPT-6 Sol／Luna），一方稱只涉 Mythos 5.1。**仍未有答案的**：審查期限
   %% 未列入現況表：表滿載，2026-10-10 %%

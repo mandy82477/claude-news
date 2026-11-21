@@ -44,7 +44,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-Addy Osmani 已由 Google 轉職加入 Anthropic，負責 Claude Code（[RuntimeWire](https://runtimewire.com/article/addy-osmani-joins-anthropic-claude-code-developer-experience)、[The Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/from-chrome-devtools-to-ai-engineering)，查證日 2026-11-03）。本庫此前兩次提及他時其身分仍記為「Google Chrome DevRel 資深工程師」（[[topics/community-skills]] 2026-09-02、[[topics/community-guardrails]] 2026-10-16），兩處描述的是他轉職前的背景，並非錯誤。
+Addy Osmani 已由 Google 轉職加入 Anthropic，負責 Claude Code（[RuntimeWire](https://runtimewire.com/article/addy-osmani-joins-anthropic-claude-code-developer-experience)、[The Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/from-chrome-devtools-to-ai-engineering)，查證日 2026-11-03）。本庫此前兩次提及他時其身分仍記為「Google Chrome DevRel 資深工程師」（[[topics/community-skills]] 2026-09-02、[[topics/community-guardrails]] 2026-10-16），兩處描述的是他轉職前的背景，並非錯誤。　同期 [[entities/cat-wu]] 於 2026-11-04 卸任 Claude Code 產品負責人，兩筆是同一條產品線的人事更替。
 
 ---
 

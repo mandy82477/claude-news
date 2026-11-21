@@ -76,7 +76,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 💰 Reuters：Anthropic 因新模型名稱「Mythos」遭控商標侵權提告（2026-11-13）
 
-**一眼**：📉 負面（敘事型，未見具體求償金額，為新具名訴訟首次揭露）｜誰有感：無（未上市）｜硬度：單一標題（Reuters，經 Google News 轉載）｜線：Mythos 商標訴訟 ▸ 開線
+**一眼**：📉 負面（敘事型，未見具體求償金額，為新具名訴訟首次揭露）。訴狀訴求的「凍結 AI 軍備競賽」對應的事實線見 [[topics/recursive-self-improvement]]｜誰有感：無（未上市）｜硬度：單一標題（Reuters，經 Google News 轉載）｜線：Mythos 商標訴訟 ▸ 開線
 
 **為什麼這樣判**：新資訊是 Reuters 首次報導 Anthropic 因新模型名稱「Mythos」遭控商標侵權而被告；此前本頁未判讀過涉及 Mythos 這個現役旗艦模型系列名稱的法律訴訟。判負面是因為 Mythos 5.2 已是具名企業客戶（IBM、Cisco）導入的產品名稱，若侵權成立可能迫使改名，對已採用該名稱的客戶造成混淆成本；但報導未附具體原告身分、侵權主張細節或求償金額，僅是起訴動作，爭議是否成立尚未有法院裁定。事實見 [[topics/anthropic-ipo]]。
 

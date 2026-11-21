@@ -65,7 +65,9 @@ Anthropic 在 Claude 內建的三項團隊協作功能：共用白板、試算�
 
 Claude Meetings 與 Claude Sheets 同日（2026-11-10）見報：TechCrunch 稱 Meetings 把會議討論轉成計畫與任務，Reuters 稱 Claude 可進入 Google Meet 即時處理任務，VentureBeat 稱會議中可起草文件與白板（2026-11-12）。The Verge、Bloomberg 把這批產品形容為 Anthropic 自己的辦公套件、直接對上 Microsoft。
 
-Meetings 目前只見媒體報導、未見官方一手文章，本頁不把它列為三件組成員。
+**Meetings 已有官方介紹文（2026-11-21 更正）**：11-10 以 beta 推出，限 **Team／Enterprise**，Claude 以可見參與者身分加入視訊會議、邊聽邊動手；官方介紹文登上 Hacker News 首頁（104 分，11-14），討論串見 [[topics/community-tech-discussions]]。本頁此前寫「未見官方一手文章」已失效。
+
+**它仍不列為三件組成員**：三件組（Whiteboards／Sheets／Data）是同一篇官方文章一起介紹的，Meetings 是另一條產品線；計費面唯一的交集是「Meetings 通話中建立的 artifact 至 2027-02-10 前免費」，見 [[entities/pricing]]。本庫尚無 Meetings 專頁，事實目前散在本頁、[[topics/anthropic-product-matrix]] 與 [[topics/community-tech-discussions]]。
 
 ## 時間線
 

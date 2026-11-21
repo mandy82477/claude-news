@@ -9283,3 +9283,81 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - **`community-multi-agent` 的 `### 缺口追蹤` 資料截至 10-09，2026-12-08 滿 60 天**，需主編屆時重查官方文件
 - 需使用者端設定（B 段新增）：
   - 本輪 5c 查證被雲端網路政策擋下的網域（Trusted 清單未涵蓋）：`sec.gov`、`metr.org`、`businesswire.com`、`esgdive.com`、`thehackernews.com`、`cybersecuritynews.com`、`github.blog`、`artificialanalysis.ai`、`runtimewire.com`、`courtlistener.com`、CNBC、DCD、Akamai IR。使用者可在 claude.ai 環境設定改為 Custom 並加入這些網域；加入後 5c 的「依媒體收斂」類（目前 11 筆）才有機會升格為查實結案
+
+## 2026-11-21 Lint
+
+- 修正矛盾：3 處——① `entities/fable-5` 護欄「四個觸發類別」與官方現況不符（官方已收斂為三類，且前沿 LLM 開發由「沒有繞法」改為接手 Opus 5），回掃同批修 `entities/fable-5` 表下細節與 `topics/anthropic-government-policy`「政府動作對你的產品做了什麼」；② `entities/claude-workspace-suite` 寫「Claude Meetings 未見官方一手文章」，與 `topics/community-tech-discussions` 記載的官方介紹文（HN 104 分，11-14）矛盾，以後者為準更正；③ `topics/anthropic-ipo` 把 ESG 評級方寫成 ESG Dive，實為 Morningstar Sustainalytics（ESG Dive 只是報導者）
+- 補連結：無孤立頁（六位記者各自 Grep 確認入邊皆 ≥1，最低為 `community-tech-timeline` 1 條）
+- 狀態更新：`topics/enterprise-cost-management` ongoing→monitoring（最後新聞更新 2026-11-05，距今 16 天，日報與 log 皆無新事件）；index 已同步
+- resolved 收尾：無（各 archive 頁為 `resolved（封存頁）`，頂部 callout 已標封存、留原路徑）
+- 新增 entities：無（本輪判定該建 `entities/claude-meetings`，雲端不動手，見「本機承接」）
+- 呈現品質：全部通過（人物記者 43 頁、安全政策記者 13 頁本輪補跑機械面三項後各修 4 頁與 7 頁的連續日期條目分組；功能記者 `official-community-gap` 的 19 連續日期條目交 3h 蒸餾處置）
+- 入口層健檢：補結構 11 頁（人物 jacob-coxon／linus-torvalds／simon-willison／dario-amodei 補月份分組；安全政策 cyber／product-vulns／prompt-injection／ai-eval-boundary-incidents／government-policy／recursive-self-improvement／safety-china-trust-dispute 補 `### YYYY-MM 時序` 分組，改前已 grep 全庫確認無日期錨點引用）；語意分岔／死案候選：無
+- 待查證回訪：已更新 2 筆（`competitor-landscape` Fusion 測試條件加 `｜訊 2026-11-17`；`community-memory` context-mode 掃描日推進）／已改註「日報無後續、官方未查證」1 筆（`entities/pricing` Linked Billing 額外平台費）／其餘新語法標記近 14 天日報零命中；舊語法回填 **34 筆**（配額 19＋5c 順手 10＋安全政策額外 5；盲區 **34→11 筆**）
+- 蒸餾候選（3h）：提案 **16 個時段**（模型 opus-5×2；商業 competitor-landscape／enterprise-tool-tracker／ai-talent-flow 各 1；功能 official-community-gap×2；社群 guardrails／interfaces／memory／skills 各 1 ＋七子頁 2026-07 一批＋community-cost×2＋code-quality-decline 2026-06；人物 simon-willison×2、dario-amodei×1）；**已執行 0 個**／例外擋下 3 個（product-vulns 與 prompt-injection 的 2026-08 時段有錨點入邊，擋於例外一；dario-amodei 2026-08 含 🔎 標記細節，須與細節區成對搬）／其餘由主編判定本輪不執行，見「主編判定」
+- 規則檔健檢：
+  - 矛盾：1 處——`.claude/reporter-rules/shared.md`「記者不可碰 `wiki/feature-radar.md`」vs 本輪 lint 明文派功能記者裁剪 radar 升級變更表。建議保留前者為預設、補一條例外（主編於 lint 明文派工裁剪 radar 單一表格時視為授權），雲端不改規則檔，見「本機承接」
+  - 引用驗證：全部通過（`check_rules.py` 七項檢查全綠，含 13 個登記錨點）
+  - 遵守率：全部通過（近 3 次 ingest：呈現品質審查 3/3、feature-radar 更新 3/3、log 格式 3/3；本輪無決策表首選變動，該條不適用）
+  - 過期規則（> 60 天）：**逾閾值 191 節／在閾值內 40 節**。本輪新跨線三節逐一確認皆仍吻合現狀：`features/pages.md:209` 產品化矩陣同步（本輪 5n 正依它執行）、`features/pages.md:235` 5n 整張表對官方一手（同上）、`rules/web-reader-design.md:85` 卡片（pinned）未於本輪驗證，留下輪
+  - 來源健康：全部正常——官方／白名單組無 `ok=false`；`discovery_queue_history.csv` 最新 2026-11-20（距今 1 天），`retired`／`rejected` 窗依條文不判為窗死，無 window 整個消失；`repo_star_history.csv` 33,039 列、最新 2026-11-20，持續增長（E 窗記錄端健在）。記分卡：Google News 低信譽桶 **0 筆**（高信譽 1,693／中間 41／未知 83）；⚠️ 未註冊 slug 2 個（`sec-edgar` 3 筆、`anthropic-official` 1 筆，皆為 2026-11-15 ingest 寫入），主編判定見下
+  - 跨檔案語意矛盾（6f）：✅ 全部 139 組配對語意一致（`check_rules.py` 檢查 4 機械面全綠，逐組抽讀未見實質衝突）
+  - 規則密度（6h）：候選 **1 檔**（`.claude/reporter-rules/features/pages.md` 309 行／教訓 0.6%），提案 0 檔——主編判定本輪不蒸餾，見「主編判定」
+  - 突變測試（6i）：`mutate` **131 組全綠、假看守 0 處**；`hits report` ⚠️ **3d、3f 連續 10 輪零命中**（6i 自身 7 輪、7b 4 輪未達門檻）。主編機械複核世界確實乾淨：非封存 `resolved` topics 僅 1 頁（`community-tech-timeline`，為已併回的 redirect，callout 與目前結論齊備）；>500 行頁面全部具備頂部 callout。依條文排入降頻評估，雲端不改規則檔，見「本機承接」
+  - 對抗輪（6j）：非本月首次 lint，跳過
+  - 連結缺口（6k）：相似候選 **10 對**（補連結 **2**／併頁候選 0／登記無需連結 **8**）；同新聞候選 **10 對**（補連結 **4**／併頁候選 0／登記無需連結 **6**）。補的連結：`addy-osmani`↔`cat-wu`（同一條產品線的人事更替）、`claude-code-features`→`claude-code-experimental`（摘要列加出貨旗標指路）、`claude-design`→`pricing-history`＋`anthropic-business`、`anthropic-business-risks`↔`recursive-self-improvement`、`market-signals-legal`→`recursive-self-improvement`（後兩者同為「AI 軍備競賽」訴訟）
+  - 讀者語言（6l）：基線剩 **48 頁／479 筆**，本輪清 **0 頁**，新增命中 **0**（主編自己在 5g 寫入的三頁一度外洩「lint」一詞，機械閘當場擋下並已改寫為「查核」——這正是該閘的用途）
+- 月度蒸餾／記者成長迴路（A 段，月度）：非本月首次 lint，跳過月度蒸餾（11 月首次為 2026-11-14）
+- 品質指標（6g）：
+  - ref 覆蓋率（每週）：**100%**（11-15~11-20，17 條列/17 皆有歸因），缺 ref 日期：無（11-21 當日日報尚未產出，不計入分母）
+  - 採用驗證率（月度）：非本月首次 lint，跳過
+  - 外部死鏈（每週）：共 **14 條**疑似死鏈，已標註 **14 條**（13 條既有標註仍成立，本輪新標 1 條：`community-integrations` 的 `hitkeeen/blender-ai-mcp-addon`，保留原 URL）。報告 `checked_at` 2026-11-20，距今 1 天，新鮮；anti_bot 291／unverified 10 依規則不派工不標註
+  - 趨勢判讀：持平（ref 覆蓋率連續 16 期 ≥96%，本期 100%）
+- 跨家榜單週更（5b）：雲端 egress 未開，跳過（`EGRESS: leaderboard PARTIAL (1/12 個網域)`）
+- 逾期待查證清算（5c）：盤點 **53 筆，清零 ✅**（收尾 `--queue` 總逾期數 0）。處置 查實 **10**／確認官方未載 **29**／失效移除 **3**／依日報或具名媒體收斂 **11**，結案回掃上修 **約 25 處**。🎯 本輪目標行原樣：「清到 0（待清 51 筆；近 7 天新增 21 筆）」；📈 趨勢行原樣：「2026-11-14 0 筆 → 今日 51 筆（+51）」（開工時讀值；派工前重跑為 53 筆）。⚠️ 舊語法盲區 34 筆、前三頁 `anthropic-government-policy`／`market-signals-ipo`／`pricing`，收尾降至 **11 筆**
+- 歸因忠實度抽查（5d）：抽 5 筆，相符 **4**／修正漂移 **0**／未刊出抓取條目 **0**／無對應 **1**（11-10 Claude Meetings／Sheets 辦公套件報導，歸因頁 `topics/anthropic-business` 現存的是 11-11 官方介紹文那一條）。**降頻中（起算 2026-11-21）**——連續 B=0 已第 5 週，條文規定連續 3 週即自動降頻卻從未啟動，本輪補啟動並登漏抓帳
+- pricing 通路與乘數（5e）：資料截至 2026-10-31（距今 21 天，未逾 30 天不觸發），但 11-19 日報載官方計價文件異動涉及乘數規則，主編仍逐節重查並把資料截至推到 **2026-11-21**；本週無新模型世代；商業記者轉來 0 筆查證。改四項：① Google Cloud 兩種代管的乘數歸屬由官方寫明（解掉 11-19 懸置題）② 新增 Claude Managed Agents 兩軸計費（token＋session runtime $0.08／session-hour，只在 `running` 計；Batch 折扣與合作方雲端定價皆不適用）③ fast mode 可用通路再擴（Fable 5.2 到 Google Cloud 兩種代管與 Foundry 上 Anthropic 代管部署；Mythos 5.2 在第一方 API）④ **更正本庫 11-19 的記載——官方並未移除「每千次搜尋 $10」的 web search 計價**
+- devpractice 週彙整（5f）：候選 落地 **16**／不寫 **44**；本週亮點 3 條（升 stable 一次吃 12 版／Fable 5.2 官方提示做法／官方驗證迴圈）；缺口回訪 補了第 8 段「規則是否與現狀相符」；跨頁對帳 ✅ 一致；⚠️ 需主編轉知 **3 筆**（已登 H-e04e94、H-40c2b0、H-be49fb）
+- 投資訊號回顧（5h）：結算 **9 列**（✅ **1**／❌ **1**／～ **5**／不可驗證 **2**），剩餘 ⏳ **26 列**。❌ 那一列是 11-07 的 IPO 看跌判讀——官方 11-18 以 $83 定價，高於 11-10 路演區間 $70–78；✅ 那一列是 Max 訂閱廣告誤導訴訟查實為 Kahn v. Anthropic（N.D. Cal. 3:26-cv-05763），主要主張可續行。TeraWulf 兩列因兩組公開報價互相矛盾判為不可驗證。母頁合計表已覆寫為 已結算 99／✅22／❌5／～56／—16／⏳26
+- 安全兩頁結論表退場（5i）：safety（複查 **11** 列，移除 **1**／補位 **1**／不動 **10**；三類結論改寫 **3** 類；未歸類分派 **2** 則）／injection（訊號表 **8/8** 滿載、階梯 **7** 階，導言與「仍未有答案的」三處則數與表列數一致，本輪無新訊號不汰除）／cyber（網攻表移出 **0** 列，25/25 滿載、最舊 09-25 距今 57 天）／gov-policy（複查 **8** 列，移除 **0**／補位 **0**／不動 **8**，最舊最後動態 09-26 距今 56 天；產品節 **3** 項對 **3** 列）
+- 商業健康度四表健檢（5j）：指標 **10** 列（移除 **0**／補位 **0**，但「官方估值」那列的下一個時點「IPO 定價」已到，數字改寫為 $83／股並把下一個時點推到上市後首份季報）／風險 **6** 列（移除 **0**／補位 **0**，最舊 09-06 距今 76 天）／合作 **6** 列／人物 **8** 人／通路快照資料截至 **2026-11-21**
+- 社群模式概覽退場複查（5k）：列數 **21／21**（✅4／⚡6／⏳11）／最後動態已重算 **21** 列（覆寫 6 列）／退場 **0** 列／補位 **0** 列／合併 **0** 組／主線 tag 補填 0 則（累計 **407/407**，已無缺填）／滿載讓位：**已裁決但雲端未執行**（採納第一組、不採納第二組，見「主編判定」與「本機承接」）
+- 社群討論兩表（5k）：爭論 **8/10**（還在吵 4／已共識 0／僵住 4）／討論 **46/50**（移出 6／改標 1）／最後動態已重算 **54** 列
+- 模型頁世代表（5l）：結論表資料截至 fable-5 2026-11-09、opus-5 2026-11-14（皆未逾 60 天，重查 **0** 列）／**護欄四類 → 變動：收斂為三類**（官方文件改名為〈Why Claude switched models in your conversation with Fable models〉，明載涵蓋 Fable 5.2／5.1／5；攻擊性資安→Opus 4.8，雙重用途生物與窄範圍前沿 LLM 開發→Opus 5；distillation 不再是獨立切換類別）／熱度表 一致／跟它怎麼說話 5 頁齊全、**補寫 2 頁**（fable-5／mythos 換上官方 Fable 5.2 指南並逐條改寫三條差異）、重查 0 頁
+- code-quality-decline 三條線（5m）：**4** 列比對／**0** 列已改（#41930 closed、#65687／#77136／#83510 仍 open，與表上全數相同）／資料截至 **2026-11-21**
+- 官方補了沒表（5n）：**18** 列比對／**1** 列已改／核對日逾 30 天 **0** 列。官方 CHANGELOG 已掃到 **v2.1.330**，2.1.326～330 未補上任何一列的缺口；三個仍被引用的 issue 以 `gh api` 實查（#40043 open、#28300 open、#24316 closed）與表上敘述一致
+- 厚頁清單（5o）：**12** 頁逾 600 行／**0** 頁逾 60 天未交代切法。本輪補齊六頁從未評估者的切法評估：主編做 `market-signals-ipo`（852 行，不拆）、`market-signals-customers`（616 行，不拆）、`ai-agent-safety-cyber`（609 行，不拆）；社群記者做 `community-integrations`（731 行，**判定該拆**）、`community-skills`（695 行，不拆）、`community-cost`（610 行，不拆）
+- 讀者模擬：3 題——① [Claude Code 重度使用者]「stable 跳到 2.1.323，我升不升、會不會改到我現在的用法？」**✅**（index「升版前要知道什麼」列 → `entities/claude-code-releases`「現在該跟哪條」＋`feature-radar` 升級表，2 跳；兩處本輪皆已更新）；② [AI 系統開發者]「換到 Fable 5.2 之後，我的 prompt 要改什麼？」**✅**（index → `entities/fable-5` →「跟它怎麼說話」，3 跳，本輪剛補上官方 5.2 指南的三條差異）；③ [Anthropic 生態追蹤者]「官方那批辦公產品，我的方案有沒有、算不算額外收費？」**⚠️ 已修復**（Whiteboards／Sheets／Data 三件組 3 跳可達，但 Claude Meetings 卡在 `claude-workspace-suite` 一句過期的「未見官方一手文章」上；已更正為「已有官方介紹文、11-10 beta、限 Team／Enterprise」並補上它與三件組的分界與計費交集）
+- 質疑代打（7b）：seed `2026-W47`，抽中 **Q3、Q5**。**Q3 ✅ 通過**——三個心跳齊：`news/2026-11-20.md`（距今 1 天）、`weekly/2026-W46.md`（W46 收尾於 11-15，距今 6 天，未逾 8 天）、`git log --since="36 hours"` 有 `0f5e19d6 chore: cloud daily-news-pipeline-cloud heartbeat 2026-11-20` 與 `4bd64bc3 web: rebuild 2026-11-20` 兩筆自動線 commit；feature-radar「現在值得跟的三件」最後輪替 2026-11-09（12 天，未達 14 天門檻，11-23 跨線）。**Q5 ✅ 通過**——擲骰（seed `2026-W47-Q5`，母體 148 頁）抽中 `entities/pricing-archive`，`check_cell_limits --page` 無新增超限，前 160 字為「本頁是 [[entities/pricing]] 的原始條目封存，現行規則與牌價在主頁……」，冷讀者一眼知道自己在哪、該去哪。人類質疑時效燈：未亮
+- lint 自我遵守率：**4/6 位一次過**；退回 2 位——[人物] 3e 與 3h 同時寫「✅ 通過」與「其餘 41 頁沒有逐頁檢查」，自相矛盾等於無結論；[安全政策] 3e 警示條件自承「未執行」。兩位補做後皆通過
+- 行為層抽驗：擲骰（seed `2026-W47`，N=29）抽中 **#29「社群記者決策表五列加推薦細節」**，主編開 `git diff wiki/topics/community-tech-tools.md` 核對——帳單加 tokendoctor、記憶加 Memro／Crosshead、盯狀態加 Cyberviber／Fardesk、說做完了加 canary／code-review-gate-skill／Gravitas、額度加 teamclaude 五項全部如實存在，對應工具列也都在目錄裡。**抽驗相符**
+- 懸置語法 WARN：**0 條**（收尾全庫 `check_pending_markers.py` 無 WARN）
+- 熱度降溫（5a）：檢查 **22** 條（全覽表 ≥🔥🔥），降 **0** 條——逐條看命中原文，Claude Mods 與 Cowork 初查零命中係別名過窄（實際 4 週內皆有真實提及），Code Review 一列 5 天命中中僅 11-15 一天真指官方 Code Review，仍非零；同步 entities 頁 0 處。⏳ 逾期：**9** 條，處置（升 **0**／降 **0**／加註 **1**／已加註且本輪無新後續故跳過 **8**）
+- 高引用停滯（5g）：**4** 頁，處置：派記者確認 **0**／改引用方連結 **0**／主編親做明寫停滯 **3**（`entities/sonnet-5` 入鏈 21、54 天；`entities/haiku-5-5` 17、43 天；`entities/claude-security` 16、29 天，各補一行「自 YYYY-MM-DD 起無新動態」）／確認無誤留原狀 **1**（`topics/ai-eval-boundary-incidents`，狀態欄本來就寫明「之後無新評測越界事件，轉低頻觀察」，停滯已在頁面上）
+- 渲染層驗收：查 `wiki/overview.md` 與 `wiki/feature-radar.md` 兩頁（本輪改動最多）的雲端 build 產物 `web_reader/data/wiki/overview.json`（8 KB）與 `feature-radar.json`（76 KB）——本輪改動段落全部出現（護欄三類、stable 跳版、Morningstar 評級、12 列裁剪說明、Managed Agents Web Search 加註、v2.1.321 列），wikilink 與 `⟨Q-nn⟩` 懸置標記未被解析器吞掉（overview 本無懸置標記，屬設計）
+- overview.md：已更新
+- 規則版本：`9d654ba2`
+- 漏抓帳：**2 筆**——① `check_cell_limits.py` 的 `--page` 單頁模式與母頁＋子頁模式涵蓋範圍不同，兩位記者據單頁輸出回報「無新增超限」而實際有 15 筆（本該由 5c 抓到，原因：檢查失效）；② 5d「連續 3 週 B=0 自動降頻」條文從未啟動，實際已連續 5 週（本該由 5d 抓到，原因：無對應檢查）
+- 主編判定：
+  - **封存頁不補月份分組**（安全政策記者問 `ai-agent-safety-archive` 897 行與 `anthropic-government-policy-archive` 237 行要不要補）：3e 的警示針對讀者入口頁的可掃描性，archive 是封存證據層、讀者不從它進站，改動分組等於動封存原文結構，收益不抵風險
+  - **功能記者裁剪 feature-radar 的派工有效**：`shared.md` 規定記者不可碰 radar，但 2026-11-20 主編已裁決列數裁剪留給本輪 lint，且動作限於該表、其 `%%` 備忘與表下說明句。惟規則與實務的缺口要補，見「本機承接」
+  - **blender-skills 複核結論採納**：社群記者查出 EL4CTEO 於 10-26 已有 522★、早於 arjun988 首見（11-15），時間線不支持「後者仿前者」；兩者為不同帳號、不同網址、支援客戶端也不同，判為兩個獨立同名 repo。2026-11-18 日報品質備註的疑慮解除，該工具已依門檻補進工具目錄
+  - **5i 的 `### 未歸類` 兩則不分派到三個子頁**：依路由表四問皆不成立——它們質疑的是 Anthropic 的**安全主張本身**，屬母頁「官方擋到哪」的信任面。節名改為 `### 外界怎麼質疑它的安全主張`，兩則留母頁
+  - **5k 兩組讓位建議：採納第一組、不採納第二組**。採納「架構邊界合約（10-18）讓位給安全架構（11-17）」；不採納「Agent 預算控制讓位給 MCP 長 Session 穩健化」——後者代表技巧只有三種防護加一份 dev.to 排查清單，未過「≥2 獨立來源」判準句，再等一週
+  - **本輪不執行 3h 蒸餾（16 個提案全數保留到下輪）**：本輪已有 53 筆 5c 清零與多處事實面上修動到同一批頁面，蒸餾與它們在同一頁並行會讓 diff 不可讀、也拉高錯搬風險；其中 `opus-5` 兩時段另需先建 `opus-5-archive`（屬建新頁，雲端不動手）
+  - **6h 本輪不蒸餾規則檔**：`features/pages.md` 超標僅 9 行、教訓行 0.6%（遠低於 5% 門檻），近一個月新增的 5n 與產品化矩陣兩節都是現行流程正在執行的條文，強行蒸餾會把正在被用的判準搬進沿革檔。下輪若仍 >300 行且無新增，再評估把「⏳ 觀望是有期限的判斷」的實例段下沉
+  - **6e 未註冊 slug 判定錯在記者側，但修法不在雲端**：`sec-edgar`／`anthropic-official` 是記者引用一手文件時臨場造的 slug。傾向在 registry 新增「一手文件（非抓取來源）」分組收容，而**不**改寫歷史歸因（改寫會讓「這筆事實從哪來」失真）；registry schema 是否支援該分組屬開發改動，見「本機承接」
+  - **5c 剩餘的 METR 那筆不算未清零**：`metr.org` 不在白名單，記者已依搜尋摘要更新內文並把複查日推到 2026-12-05，該筆已不在逾期佇列；收尾 `--queue` 總逾期數為 0
+- 本機承接：
+  - **跨家榜單週更（5b）因雲端 egress 未開（leaderboard 組 PARTIAL 1/12）跳過**，留待本機 `/weekly`
+  - **建 `wiki/entities/claude-meetings` 實體頁**：觸發標準＝近 30 天日報具名提及 ≥3 天且無專頁；判定建頁，理由＝11-10 beta 發布（Team／Enterprise）、官方介紹文 HN 104 分，事實目前散在 `claude-workspace-suite`／`anthropic-product-matrix`／`community-tech-discussions`／`pricing-history` 四頁且無單一家；雲端不動手（建新頁屬頁面結構改動）
+  - **`topics/community-integrations` 判定「該拆」**：切出 `topics/community-creative-tools` 收「創意工具 Agent 整合」一類（約 31 則／約 310 行），母頁留 Plugin／MCP 與 MCP 穩健化（約 420 行）；切出時同批改 patterns 路由表第 0 條。雲端不開拆頁波
+  - **3h 的 16 個蒸餾提案全數待執行**，其中 `opus-5` 兩時段須先建 `opus-5-archive`
+  - **5k 模式概覽讓位第一組（架構邊界合約 → 安全架構）**：判定採納，雲端不動結論表結構
+  - **`.claude/reporter-rules/shared.md` 補一條 feature-radar 例外**：擬加「主編於 `/wiki-lint` 明文派工裁剪 radar 單一表格時視為授權，動作限於該表、其 `%%` 備忘與表下說明句」——否則每次都要記者先違規再由主編追認
+  - **6i 的 3d／3f 降頻評估**：兩步連續 10 輪零命中且本輪機械複核確認世界乾淨，依條文該排入 6h 評估降頻或合併；改的是 `.claude/skills/wiki-lint-reporters/references/dispatch.md` 的步驟定義，雲端不改規則檔
+  - **6e 未註冊 slug 的 registry 修法**：擬在 `data/source_registry.json` 新增「一手文件（非抓取來源）」分組收 `sec-edgar`／`anthropic-official`，需先確認記分卡消費端不會把它們算進排名分母
+  - **`community-multi-agent` 的 `### 缺口追蹤` 資料截至 10-09，2026-12-08 滿 60 天**，屆時需主編重查官方文件
+- 需使用者端設定：
+  - **把下列網域加進 claude.ai 雲端環境的網路設定（改為 Custom 並加入）**：`sec.gov`、`metr.org`、`businesswire.com`、`esgdive.com`、`thehackernews.com`、`cybersecuritynews.com`、`github.blog`、`artificialanalysis.ai`、`runtimewire.com`、`courtlistener.com`、CNBC、DCD、Akamai IR。加入後 5c 目前判為「依媒體收斂」的 11 筆才有機會升格為查實結案。⏳ 已擱置 **1 週**（2026-11-19 ingest 紀錄首次提出 `businesswire.com`／`news.google.com`，本輪擴大清單）
+  - **把 leaderboard 組的 12 個榜單網域加進同一份白名單**（`www.swebench.com`、`aider.chat`、`lmarena.ai`、`arena.ai`、`artificialanalysis.ai`、`www.tbench.ai`、`llm-stats.com`、`huggingface.co`、`eqbench.com`、`metr.org`、`openrouter.ai`；`github.com` 已通），否則 5b 跨家榜單週更每週都會落到本機。⏳ 已擱置 **至少 9 週**（2026-09-19 起每次 lint 皆記錄 leaderboard 組 PARTIAL 1/12）

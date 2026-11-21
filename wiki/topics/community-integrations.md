@@ -111,7 +111,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心模式：** Blender 外掛＋MCP server，供 ChatGPT、Claude、Gemini、Ollama、OpenCode 等多款模型使用，提供視覺化對話介面、場景操作工具與 multi-agent 工作流；近 3 天新增約 1,995 星（約 665 星/日），GitHub Search 累積 2,123 星。
 - **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（blender-ai-copilot-hub 等，[[topics/community-integrations#2026-11]]）本週第二個多模型接 Blender 實作——既有做法聚焦場景工具與連線管理，本則另加視覺化對話與 multi-agent 工作流；主線填 —。
 - **可信度註記：** 星速偵測收錄（近 3 天 +1,995 星，約 665 星/日），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，multi-agent 工作流具體機制未見報導（細節未載）。
-- **來源：** GitHub Search；[GitHub](https://github.com/hitkeeen/blender-ai-mcp-addon)
+- **來源：** GitHub Search；[GitHub](https://github.com/hitkeeen/blender-ai-mcp-addon)（原文已失效，2026-11-20 連結健檢；URL 保留供查 web archive）
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，星速異常偏高，尚無第三方採用或複現數據）
 
 #### cth9191/animate：Claude Code 專用程式化動畫工具，單檔案輸出短篇 canvas 動畫並配分鏡回饋（2026-11-16）

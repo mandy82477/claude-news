@@ -61,7 +61,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復 v2.1.317**｜**Claude Code 把使用者信箱塞進對外 HTTP 請求 User-Agent（如 SEC API 要求）（GitHub issue #107757，HN 1,485 分，2026-11-05）**：與 #78431 同一現象、不同 issue 號。
   - v2.1.317（11-03）起，web 或 shell 工具要把帳號信箱送上網路前會先詢問（[CHANGELOG v2.1.317](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)，2026-11-08 查證）；npm 穩定版 11-08 仍為 2.1.311、尚未包含。
   - 官方未在 issue 回應，檢查涵蓋範圍未說明。證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
-- 🔴 **未修復**｜**Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定檔（三源同報，互動均 0，2026-11-05）**：第三方供應鏈事件非 Claude Code 缺陷，移除靠手動刪設定檔項目、外掛資料外送未見證據（媒體稱，2026-11-21 查），證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+- 🔴 **未修復**｜**Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定檔**（三源同報，互動均 0，2026-11-05）
+  - 第三方供應鏈事件，不是 Claude Code 自身缺陷；移除靠手動刪設定檔項目
+  - 外掛資料外送未見證據（媒體稱，2026-11-21 查）；證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]
 - 🔴 **未修復**｜**CLAUDE.md／AGENTS.md 指令沒有強制力（#53223，31 則留言、5 讚，2026-10-28）**：官方未回應；與 #2544 同一限制（見「🧠 行為與品質」）。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 - 🔴 **未修復**｜**使用者 email 被放進 prompt，可能被帶給外部網站（#81138，2026-10-29）**：官方未回應；與 #78431 觸發機制不同。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 - 🔎 **查無官方**（標 2026-10-28｜查 v2.1.311、skip permissions｜複 2026-12-14）｜**v2.1.311 疑似移除 skip 模式的 `rm` 阻擋**：2026-11-14 逐條查 [CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) v2.1.311，無 `rm` 或 skip 模式條目。
@@ -141,7 +143,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
 
-- **Claude API 單次請求上限為 128 MB（Messages／Token Counting）**：官方 API overview 載明第一方 Claude API 的 Messages 與 Token Counting 上限 128 MB、Message Batches 256 MB、Files 500 MB、Sessions／Agents／Environments 32 MB；Bedrock 20 MB（故媒體稱「Bedrock 的 6.4 倍」與 128/20 吻合），Anthropic 營運的 AWS／Google Cloud／Foundry 為 32 MB。媒體（FourWeekMBA、Startup Fortune，2026-10-30）所稱「由 32 MB 升至 128 MB」的升級時點官方文件未載（來源：[API overview](https://platform.claude.com/docs/en/api/overview)，查證 2026-11-21）。
+- **Claude API 單次請求上限為 128 MB（Messages／Token Counting）**：官方 API overview 載明第一方 Claude API 的 Messages 與 Token Counting 上限 128 MB、Message Batches 256 MB、Files 500 MB、Sessions／Agents／Environments 32 MB
+  - Bedrock 20 MB（故媒體稱「Bedrock 的 6.4 倍」與 128/20 吻合），Anthropic 營運的 AWS／Google Cloud／Foundry 為 32 MB。
+    - 媒體（FourWeekMBA、Startup Fortune，2026-10-30）所稱「由 32 MB 升至 128 MB」的升級時點官方文件未載（來源：[API overview](https://platform.claude.com/docs/en/api/overview)，查證 2026-11-21）
 
 ### 🧠 行為與品質（83 條未修復、3 條已修復、1 條拒修、9 條查無官方、1 條❓）
 
@@ -155,7 +159,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：新增選項可關閉 Edit/Write 工具輸出的行內差異對照（GitHub issue #37951，累積 35 則留言、127 個讚，2026-11-01）**：對話串中 Edit／Write 工具輸出的行內 diff 目前無法關閉顯示，雖有可按 Esc 關閉的 diff 對話框，但不等於能關掉行內顯示本身；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**Claude Code 被引導不重現他人特定遊戲，使用者回報無害的逆向工程與移植也被拒（2026-10-31）**：Anthropic 證實 Opus 5.5 更新讓 Claude Code 避開「重現他人的特定遊戲」，原創與自有素材仍可做，但開發者回報自家專案被誤擋（[Wccftech](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)）；模型面見 [[entities/opus-5-5]]。
   - **鬆綁一半（2026-11-05，Tom's Hardware）**：使用者提出重現他人遊戲的請求時，Claude Code 改為主動提議做同類型但原創的遊戲；無害逆向工程案例的存取仍未恢復。
-- 🔎 **查無官方**（標 2026-11-05｜查 1xop1wm、activated｜複 2026-12-21）｜**新 session 傳預設開在 cloud，簡單任務也跑不順（Reddit，單一貼文、0 留言）**：r/ClaudeCode 使用者抱怨新開的 session 現在一律預設在 cloud 執行；單一來源、0 讚 0 留言，無法判斷是否為普遍預設變更或個人環境設定問題。2026-11-21 查官方雲端文件：未載「新 session 預設跑在 cloud」的變更；文件寫法是桌面／行動／網頁的 session 使用選擇器所示環境（組織可設預設環境），CLI 以 `/remote-env` 與 `--cloud` 明示選擇（[Claude Code in the cloud](https://code.claude.com/docs/en/claude-code-on-the-web)、[Cloud environments](https://code.claude.com/docs/en/cloud-environments)）。
+- 🔎 **查無官方**（標 2026-11-05｜查 1xop1wm、activated｜複 2026-12-21）｜**新 session 傳預設開在 cloud，簡單任務也跑不順（Reddit，單一貼文、0 留言）**：r/ClaudeCode 使用者抱怨新開的 session 現在一律預設在 cloud 執行
+  - 單一來源、0 讚 0 留言，無法判斷是否為普遍預設變更或個人環境設定問題。2026-11-21 查官方雲端文件：未載「新 session 預設跑在 cloud」的變更
+  - 文件寫法是桌面／行動／網頁的 session 使用選擇器所示環境（組織可設預設環境），CLI 以 `/remote-env` 與 `--cloud` 明示選擇（[Claude Code in the cloud](https://code.claude.com/docs/en/claude-code-on-the-web)、[Cloud environments](https://code.claude.com/docs/en/cloud-environments)）
 - 🔴 **未修復**｜**`--scope project` 安裝的外掛被其他專案誤判為全域已安裝（GitHub issue #14202，累積 27 則留言、66 個讚，2026-10-30）**：Marketplaces 畫面誤判「已安裝」並拒絕真正安裝；多專案各裝不同外掛者，安裝狀態顯示可能不可信；官方尚未回應。
 - 🔴 **未修復**｜**v2.1.219 內部提示詞片段 `heron_brook` 只在 Opus 5 悄悄蓋過使用者委派政策，無關閉選項（GitHub issue #80988，累積 38 則留言、91 個讚，2026-10-29）**：注入「不要未經要求呼叫 AgentTool」，蓋過自訂委派策略且無法關閉；用 Opus 5 拆工作給子 agent 者可能發現委派未生效；官方尚未回應。
 - 🔴 **未修復**｜**輸入框拼字檢查無法關閉，紅色底線標記讓輸入文字難以閱讀（GitHub issue #58693，累積 31 則留言、18 個讚，2026-10-29）**：常輸入非英文或專有名詞的使用者受影響最明顯；官方尚未回應或提供設定選項。
@@ -238,7 +244,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-09｜查 #16856、token 消耗｜複 2026-12-14）｜**升級至 v2.1.1 後 token 消耗異常暴增 4 倍以上（GitHub issue #16856，累積留言 73，2026-07-03 指控）**：使用者反映升級後 rate 消耗速度明顯加快超過 4 倍，屬重大體驗負評；查證確認 issue 仍為 open（`has repro`、`area:cost`、`oncall` 標籤，內部已排查但無公開回應），無官方留言或修復版本；升版前建議留意此回報，若已升級可觀察實際 usage 曲線變化。
 - 🔴 **未修復**｜**Extended Thinking「思考內容」實為摘要，非真實推理（2026-06-22 社群揭露）**：工程師 Patrick McCanna 分析 Claude Code session log 後發現，`thinking blocks` 呈現的文字為摘要，而非模型的真實推理過程。真實推理被 Anthropic 以加密方式存於 600 字元 signature 中，API 僅回傳摘要；完整思考內容需要企業級協議才可取用，Anthropic 持有解密金鑰。需依賴 thinking blocks 進行審計追蹤的工程師應特別注意此限制（HN score 98，見 [原文](https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/)）
 - 🔴 **未修復**｜**Explore subagent 固定使用 Haiku 模型（2026-06-30 社群分析）**：深入分析 Claude Code 內建 subagent 類型後發現，Explore subagent 被鎖定只能使用 Haiku 模型（見 [Reddit 討論](https://www.reddit.com/r/ClaudeAI/comments/1ujpz0t/caution_when_using_native_subagent_explore_for/)）。在複雜除錯場景中，Haiku 能力可能不足以完成任務，導致誤判或分析遺漏。使用前建議確認任務複雜度是否在 Haiku 能力範圍內；若需更強推理能力，考慮改用其他 subagent 類型或直接指定模型的自訂 agent。
-- 🔎 **查無官方**（標 2026-08-09｜查 [[topics/code-quality-decline]]、記憶過多｜複 2026-12-21）｜**記憶過多導致品質退步**（2026-06-22 指控）：用戶反映兩個專案的 Claude Code 品質大幅退步，疑 context 累積過多歷史記憶；為獨立於 2026-04 退步事件的另一批回報，Anthropic 未單獨回應，是否同源無官方說明。2026-11-21 複查：官方僅有一般指引（對話狀態過長時用 `/context`、`/compact`、`/clear`，見 [Error reference](https://code.claude.com/docs/en/errors)）與 04 月退步事後檢討，未見回應此類「記憶過多」個案。
+- 🔎 **查無官方**（標 2026-08-09｜查 [[topics/code-quality-decline]]、記憶過多｜複 2026-12-21）｜**記憶過多導致品質退步**（2026-06-22 指控）：用戶反映兩個專案的 Claude Code 品質大幅退步，疑 context 累積過多歷史記憶
+  - 為獨立於 2026-04 退步事件的另一批回報，Anthropic 未單獨回應，是否同源無官方說明。2026-11-21 複查：官方僅有一般指引（對話狀態過長時用 `/context`、`/compact`、`/clear`，見 [Error reference](https://code.claude.com/docs/en/errors)）與 04 月退步事後檢討，未見回應此類「記憶過多」個案
   - 2026-09-20 複查：官方 2026-04-23 postmortem（thinking block 清除 bug 等三項成因，04-20 前修復）僅涵蓋 04 月事件，未提 06-22 批次。見 [[topics/code-quality-decline]]。
   - 2026-10-24 再複查：重檢[官方 4 月 23 日 postmortem](https://anthropic.com/engineering/april-23-postmortem)，仍只涵蓋 04 月三項成因，無針對「記憶過多」回報的官方說明。
 - 🔴 **未修復**｜**LLM 無障礙偏差：CLAUDE.md 明定 WCAG 2.2 AA 為硬性要求，仍被視為可選項目（Aaron Gustafson 揭露，GitHub issue #56079，2026-06-18）**：價值觀優先序偏差，非能力不足；官方尚未回應。
@@ -312,7 +319,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⛔ **官方拒修**｜**Session 歷史 30 天自動刪除（Anthropic 明確拒絕修復）**（2026-05-01 確認，07-28 更新）：Claude Code 預設在 30 天後自動刪除 session `.jsonl` 歷史檔；Anthropic 官方在 [GitHub issue #62476](https://github.com/anthropics/claude-code/issues/62476) 明確表示不會修復此行為。社群建議替代方案：用 CLAUDE.md 記錄關鍵決策，或建立 `.claude/changelog` 手動保留對話摘要。延長保留期間的臨時解法（目前不保證有效）：`npx agentinit agent set claude cleanupPeriodDays 365`。**2026-07-28 Hacker News 討論補充：** 本地 30 天刪除為裝置端保留機制，與訓練資料使用政策為不同議題——依官方[資料使用政策文件](https://code.claude.com/docs/en/data-usage)，消費版（Free/Pro/Max）預設可自行選擇是否讓對話用於模型訓練；商用版（Team/Enterprise/API/第三方平台/Claude Gov）維持不用客戶程式碼訓練模型，除非客戶主動選擇加入（如 Development Partner Program）；即刪除時程與訓練授權為兩條獨立規則，不可混為一談。
   - 2026-10-25 互動數更新：累積 28 則留言、33 個讚，官方立場未變。
   - 2026-10-29 新回報：issue #41458 指出即使設定 `cleanupPeriodDays: 99999` 仍遭忽略、490 個 session 遭靜默刪除（見上方條目），上述延長解法是否持續有效待觀察。**此設定目前不保證有效**。
-- 🔎 **查無官方**（標 2026-08-09｜查 Claude Projects、對話消失｜複 2026-12-21）｜**Claude Projects 對話消失**（2026-04-30 指控）：重度使用者三度遭遇整天對話無故消失且搜尋不到；查無 Anthropic 針對此個案的官方回應。2026-11-21 複查：支援中心僅載一般原因（登入信箱不同、搜尋範圍限於各 project 內、保留期限到期刪除，見 [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects)），未見對此消失個案的回應。
+- 🔎 **查無官方**（標 2026-08-09｜查 Claude Projects、對話消失｜複 2026-12-21）｜**Claude Projects 對話消失**（2026-04-30 指控）：重度使用者三度遭遇整天對話無故消失且搜尋不到
+  - 查無 Anthropic 針對此個案的官方回應。2026-11-21 複查：支援中心僅載一般原因（登入信箱不同、搜尋範圍限於各 project 內、保留期限到期刪除，見 [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects)），未見對此消失個案的回應
   - 同類報告續見於 2026-06-30（The Register）與 07-14（Anthropic 稱該次為 HIPAA 設定調整、並未刪除對話）；媒體調查推論多為桌面版同步前靜默當機，屬第三方推論；09-20 複查另有獨立報導一致。
   - 2026-10-24 再複查：[說明中心「如何復原已刪除的對話」](https://support.claude.com/en/articles/9519177-how-can-i-recover-a-deleted-conversation)只談封存／共用專案與權限造成的「看似消失」，未提無故消失或同步前當機，04-30 個案仍無官方逐案說明。
 - 🔴 **未修復**｜**Auto Compact 失效**（2026-04-28 回報）：context window 滿載後 Auto Compact 未自動觸發，手動執行 `/compact` 亦失效，導致整個 session 鎖死；即使重購額外用量並重啟工具問題仍未解決
@@ -476,7 +484,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Bedrock 功能相容性落差（持續）**（2026-05-07 再次回報）：Claude Code 透過 AWS Bedrock 接入時功能異常，社群指出 Bedrock 與 Anthropic 直接服務的新功能同步速度慣常落後，每次新功能發布後的相容性落差問題已成常態。
 - 🔴 **未修復**｜**Mac 卸載不完整**：依官方教學卸載後，macOS 仍殘留「Claude Code URL Handler」應用程式
 - 🔴 **未修復**｜**主題模式不跟隨系統，無法隨作業系統自動切換明暗模式（GitHub issue #2990，累積 242 個讚，2026-08-02 讚數更新，本日已知問題讚數最高）**：`auto` 主題僅在啟動時偵測一次，不會即時同步作業系統 dark/light 切換；社群 workaround：WezTerm + Lua 事件鉤子。
-- 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-12-21）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：多台電腦重裝後沙箱仍無法啟動，狀態頁正常，疑帳號層級隱性故障，無官方回應。2026-11-21 複查：官方 [Claude Desktop on Linux (beta)](https://code.claude.com/docs/en/desktop-linux) 載有 Cowork 啟動需求（KVM、vhost_vsock、QEMU）與排錯，但未見對此帳號層級個案的回應。
+- 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-12-21）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：
+  - 多台電腦重裝後沙箱仍無法啟動，狀態頁正常，疑帳號層級隱性故障，無官方回應
+  - 2026-11-21 複查：官方 [Claude Desktop on Linux (beta)](https://code.claude.com/docs/en/desktop-linux) 載有 Cowork 啟動需求（KVM、vhost 等），但未提此故障
   - 社群診斷同類失敗（`cowork-vm-service.js` 未啟動、`.sock` 不存在）根因為服務未自動喚起並有手動 workaround，非官方確認；07-07 擴展至行動/網頁版後是否延伸待觀察。
   - 2026-10-24 再複查：[說明中心沙箱文章](https://support.claude.com/en/articles/14479288)只述 macOS 與 Windows 本機虛擬機，未載 Linux 支援或本案診斷，查無官方。
 - ✅ **已修復** v2.1.277（2026-09-18）｜**AGENTS.md 支援上線（issue #6235，396 則留言、6643 個讚，全站讚數最高）**：無 `CLAUDE.md` 時原生改讀 [AGENTS.md](https://agents.md/)；社群回報 `.agents/skills` 未涵蓋；三個邊界見 [[topics/official-community-gap]] ⟨G-08⟩。

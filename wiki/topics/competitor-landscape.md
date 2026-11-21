@@ -92,7 +92,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **跨模型路由（GitHub Copilot Fusion）會不會改變選 Claude Code 的成本論點？** 10-29 The New Stack 稱 Fusion 勝 Claude Code、成本減半。
   - 媒體稱數字源自 Artificial Analysis 的 Coding Agent Index：Fusion Max 60 分、每任務約 $5.59，對 Claude Code＋Opus 5.5 Max 62 分、約 $11.42（2026-11-14 查證）。
   - 「一半」是 API 每任務成本、不是訂閱價，不能拿來重算訂閱比價；見「對手雷達」Microsoft／GitHub 列。
-  - ❓ **待查證**（標 2026-11-01｜查 Copilot Fusion、The New Stack｜複 2026-12-05）｜**Fusion 成本與勝負的測試條件**：The New Stack、VentureBeat 皆稱出自 Artificial Analysis 指數（媒體稱，評測原頁未讀）；官方 changelog 只確認 10-28 GA；11-21 搜尋摘要顯示 GitHub 11-17 changelog 稱 Fusion Max 在 Terminal-Bench 4.1 為 71.2%（GitHub 自稱）、Coding Agent Index 為 60 分、較 Claude Code＋Opus 5.5 Max 低約 2 分而每任務成本約一半；Artificial Analysis 10-28 評測用的是 Terminal-Bench 4.0（71 分），兩版本不可直接比較（github.blog、artificialanalysis.ai 本輪 egress 不通，原頁未讀，數字不升格為官方確認）。
+  - ❓ **待查證**（標 2026-11-01｜查 Copilot Fusion、The New Stack｜複 2026-12-05）｜**Fusion 成本與勝負的測試條件**：The New Stack、VentureBeat 皆稱出自 Artificial Analysis 指數（媒體稱，評測原頁未讀）
+    - 官方 changelog 只確認 10-28 GA
+    - 11-21 搜尋摘要顯示 GitHub 11-17 changelog 稱 Fusion Max 在 Terminal-Bench 4.1 為 71.2%（GitHub 自稱）、Coding Agent Index 為 60 分、較 Claude Code＋Opus 5.5 Max 低約 2 分而每任務成本約一半
+    - Artificial Analysis 10-28 評測用的是 Terminal-Bench 4.0（71 分），兩版本不可直接比較（github.blog、artificialanalysis.ai 本輪 egress 不通，原頁未讀，數字不升格為官方確認）
 
 ## 競品定價對照
 
@@ -357,7 +360,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **OpenAI（分析文，非編碼工具）**：官方部落格宣布籌備下一輪內部安全衝刺，與 Cathedral Systems 合作測試並強化防禦；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 - **OpenAI（分析文，非編碼工具）**：官方部落格宣布提高資安漏洞懸賞金額，新增報告品質、忠誠度與優先專案加成；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 - **OpenAI（案例，透過 ChatGPT Enterprise／Codex，非編碼能力異動）**：官方部落格報導 Heimstaden 用 ChatGPT Enterprise 與 Codex 轉型房地產管理、降低成本；屬廠商客戶案例自宣，非編碼能力或定價對比，不列入「對手雷達」表（Blog/OpenAI News）
-- **Cogent Security**：❓ **待查證**（標 2026-11-03｜查 Cogent Security、VR-1.1｜複 2026-12-05）｜**VR-1.1 聲稱漏洞修補測試勝 Claude Code 與 Codex**：媒體稱（Unite.AI、RuntimeWire，11-21 搜尋摘要；公司原頁未讀）在 LiveCVEBench 190 題中 VR-1.1 修復 57.9%、Claude Code（Opus 5.5）與 Codex 各 45.3%，為 Cogent 自家執行，推論預算三方不同，且對手訓練截止日晚於部分 CVE 公布日、可能見過修補；尚無獨立重現
+- **Cogent Security**：❓ **待查證**（標 2026-11-03｜查 Cogent Security、VR-1.1｜複 2026-12-05）｜**VR-1.1 聲稱漏洞修補測試勝 Claude Code 與 Codex**：媒體稱（Unite.AI、RuntimeWire，11-21 搜尋摘要
+  - 公司原頁未讀）在 LiveCVEBench 190 題中 VR-1.1 修復 57.9%、Claude Code（Opus 5.5）與 Codex 各 45.3%，為 Cogent 自家執行，推論預算三方不同，且對手訓練截止日晚於部分 CVE 公布日、可能見過修補
+  - 尚無獨立重現
   %% 新進入者，是否開「對手雷達」新列待主編裁示：表已滿 12 列、無 ⚪ 可汰，記者不自行汰除 🟡 %%
 
 #### 2026-11-02

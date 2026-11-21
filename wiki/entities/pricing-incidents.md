@@ -86,7 +86,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### ⚖️ 2026-11-07：法院裁定 Anthropic 須就 Claude Max 訂閱廣告是否誤導使用者的指控面對訴訟程序
 
-- **Courthouse News（2026-11-07）**：報導稱 Anthropic 須就 Claude Max 訂閱廣告是否誤導使用者的相關指控進一步面對訴訟程序；報導未附具體案號或法官裁定全文；2026-11-21 補查：媒體稱（Courthouse News、TNW）即 Kahn v. Anthropic（N.D. Cal.，案號 3:26-cv-05763，訴狀印章日 06-14），治安法官 Alex Tse 裁定 Max「5x／20x 用量」宣傳「plausibly misleading」、主要主張可繼續、部分主張駁回，集體尚未認證（法院卷宗未讀）；與 2026-06 集體訴訟（指控 Max 5x／Max 20x 實際限制遠低於廣告宣稱，見上方「還在發生的事故」⚖️ 列）為同案。
+- **Courthouse News（2026-11-07）**：報導稱 Anthropic 須就 Claude Max 訂閱廣告是否誤導使用者的相關指控進一步面對訴訟程序
+  - 報導未附具體案號或法官裁定全文
+  - 2026-11-21 補查：媒體稱（Courthouse News、TNW）即 Kahn v. Anthropic（N.D. Cal.，案號 3:26-cv-05763，訴狀印章日 06-14），治安法官 Alex Tse 裁定 Max「5x／20x 用量」宣傳「plausibly misleading」、主要主張可繼續、部分主張駁回，集體尚未認證（法院卷宗未讀）
+  - 與 2026-06 集體訴訟（指控 Max 5x／Max 20x 實際限制遠低於廣告宣稱，見上方「還在發生的事故」⚖️ 列）為同案
 - **同事件另一報導（The Next Web，2026-11-07，非新事實）**：同日報導「Anthropic must face Claude Max ad claims, report says」，僅標題可用，未見新增案情細節。
 - **11-09 跟進（Reuters／shattered.io，非新事實）**：兩家同日報導同一裁定，Reuters 稱須就廣告「5 倍、20 倍」用量宣稱是否誤導消費者進一步面對訴訟；shattered.io 標題確認「5x, 20x Claims Proceed」。
 - 均未附新增案號或裁定全文，與 11-07 Courthouse News 報導為同一事件的媒體擴散（Google News/Reuters；Google News/shattered.io）。

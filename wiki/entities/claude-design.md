@@ -68,7 +68,7 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 ### Dashboards 轉正式版、Whiteboards 與 Sheets 上線（2026-11-11）
 
-Dashboards 轉正式版並更名 Claude Data，另新增 Whiteboards、Sheets 兩項 beta；功能、方案與 Enterprise 預設開關見 [[entities/claude-workspace-suite]]。
+Dashboards 轉正式版並更名 Claude Data，另新增 Whiteboards、Sheets 兩項 beta。這批產品吃原有方案額度、沒有獨立配額（計價沿革見 [[entities/pricing-history]]），上線時機落在 IPO 定價前一週（公司面見 [[topics/anthropic-business]]）；功能、方案與 Enterprise 預設開關見 [[entities/claude-workspace-suite]]。
 
 ### Docs、Slides、Design 脫離 beta（同日）
 
