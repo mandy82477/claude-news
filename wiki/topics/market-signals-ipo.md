@@ -4,18 +4,18 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-21"
-last_news_update: "2026-11-20"
+last_news_update: "2026-11-21"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 8
 attribution_count: 34
 attribution_last: "2026-11-20"
 top_source: "google-news"
-pending_count: 24
+pending_count: 26
 pending_overdue: 0
 pending_next_review: "2026-11-23"
 pending_signalled: 1

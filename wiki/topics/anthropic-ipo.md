@@ -11,7 +11,7 @@ parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
-inbound_links: 113
+inbound_links: 115
 attribution_count: 127
 attribution_last: "2026-11-21"
 top_source: "google-news"
