@@ -9372,6 +9372,7 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - **安全政策**：無（Yahoo Finance 工程師當機警告與 NPR 使命承諾質疑兩則皆為論述/推測，未過任一頁收錄門檻）
   - **模型**：entities/fable-5
   - **社群**：topics/community-skills、topics/community-memory、topics/community-interfaces、topics/community-integrations、topics/community-tech-patterns（母頁，僅 callout＋路由表「最後動態」欄）
+  - **投資分析**：topics/market-signals-ipo（＋母頁 topics/market-signals）
   - **主編**：wiki/feature-radar.md（新增 1 條最新功能詳細條目＋全覽表列：Claude Code v2.1.330 Enterprise Admin Console 組織登入）
 - 新增頁面：無
 - 摘要：Anthropic 股價風暴今天擴大為「4 兆美元 AI 板塊性賣壓」（WSJ／Axios／Reuters／CNBC／CNN 多方報導，含承銷商平倉避險倉位穩定股價的細節），黎曼猜想爭議同時出現新進展（史丹佛發布競爭性全人類證明草稿）；次要事件含 Claude Code v2.1.330 新增 Enterprise Admin Console 組織登入、WSJ 刊出 Dario／Daniela Amodei 人物側寫，以及兩則 GitHub Issues 高互動 bug 回報（Cowork 工作區啟動失敗、2.1.1 用量暴增，各 73 留言）。
@@ -9382,4 +9383,6 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 主編判定：
   - **不採納商業記者對 wiki/index.md「anthropic-business」鉤子句的具體數字建議**（建議納入「市值蒸發達 $4 兆」）。理由：`wiki/CLAUDE.md`「資訊架構哲學」明定 index 只放慢變的路由事實，快變事實（如當日市值數字）一律留在頁面標頭；現有鉤子「指標表與 IPO 一句；往下鑽合作與算力、風險與商業模式、上市與財報」本就是穩定指路句，具體數字已由 `topics/anthropic-ipo` 頁面 callout 承載，不需也不該搬進 index
 - 截止日複查（Step 3g）：`feature-radar.md`「⏰ 倒數中」1 筆已過期（Claude Data Enterprise 預設開啟，11-20）。WebFetch 複查官方文章（[sheets-whiteboards-data](https://claude.com/resources/articles/sheets-whiteboards-data)）確認「turns on by default on November 20, 2026」如期發生、未延期，判定**已生效，移出本表**並補一行說明；回掃全庫引用方，`entities/claude-workspace-suite.md` 兩處過期的「要在 11-20 前關掉」倒數語氣與「倒數見 feature-radar」已同步改為既成事實語氣
+- devpractice 沉澱：候選 1 筆（Postman 桌面版更新未經同意把外掛寫入 Claude Code／Codex 設定檔）／手冊寫入 0 則（候選已 append `data/devpractice-candidates.jsonl`，待週更落地判斷）；基準線已推進至 `31581f439b`
+- market 判讀：新增 2 則（IPO 板塊性賣壓定量為 4 兆美元、承銷商平倉避險倉位護盤），標的表覆寫 2 列（ANT／NVDA），里程碑登記 2 筆，回顧結算 ⏳ 新增 2 列（結算日 2026-12-05）
 - 📋 需使用者端設定：無
