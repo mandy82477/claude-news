@@ -15,8 +15,8 @@ inbound_links: 9
 attribution_count: 16
 attribution_last: "2026-11-16"
 top_source: "google-news"
-pending_count: 21
-pending_overdue: 4
+pending_count: 20
+pending_overdue: 0
 pending_next_review: "2026-11-22"
 pending_signalled: 0
 staleness_exempt: null
@@ -85,7 +85,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 11-10 | 防護 | VulnCheck：Glasswing 啟動七個月可歸因 Anthropic 的 CVE 達 442 筆、2 筆在野利用；217 筆發現標已修復 | VulnCheck 第三方計數（HN 439 分）；官方回應未見 |
 | 11-10 | 能力 | The Hacker News：Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber；Help Net Security：Mythos 5.2 找漏洞更強、跳出沙箱的行為較少 | 兩則均單一來源，僅標題可用；測試方、分數與「跳出沙箱」的比較基準未載 |
 | 11-09 | 防護 | IBM 宣布計畫將 Mythos 導入 Concert 平台做資安推理；Cisco AI Defense 同日宣布用於 AI 紅隊測試 | IBM／Cisco Blogs 官方公告，均為「宣布計畫」階段，未附上線時程 |
-| 11-04 | 防護 | CERT-In 取得 Claude Mythos 存取權測試資安漏洞；同日專訪談 AI agent 事故通報義務與提示注入歸責 | Moneycontrol／MediaNama，僅標題可用 |
+| 11-04 | 防護 | CERT-In 取得 Claude Mythos 存取權測試資安漏洞；同日專訪談 AI agent 事故通報義務與提示注入歸責 | Moneycontrol／MediaNama，匿名官員說法 |
 | 11-02 | 濫用 | CyberSecurityNews：駭客假冒 ChatGPT、Claude、Perplexity 機器人獵密碼與金鑰 | 單一來源，僅標題可用 |
 | 10-27 | 能力 | Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈，含 RCE 與繞過 Android 鎖定畫面 | 官方一手（HN 15 分）；The Hacker News／CyberSecurityNews 同日跟進，僅標題可用 |
 | 10-26 | 防護 | Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計 | 官方 10-23 安全頁載明：核可門檻、獨立檢查器、明列禁止、機敏資料分類器、憑證隔離、獨立 VM |
@@ -137,8 +137,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張**：官方研究提出機制，讓使用者驗證收到的回應確實出自宣稱的模型、未被路由服務或攻擊者偷換竄改；研究團隊含 Anthropic 與 EPFL、MIT、StarkWare 等外部研究者
 - **性質判斷**：答不出本頁四類判準（非評測越界、非模型網攻能力／防守方放行、非提示注入、非 Claude 產品漏洞或帳號濫用）——這是針對第三方轉送或推理串流完整性的信任機制研究，暫列未歸類，待週更分派
 %% 本則同時派給模型記者寫技術角度，見 data/source_attribution.jsonl %%
-- **可信度評估**：官方一手研究＋HN 討論＋TechCrunch 媒體跟進，可信度高；機制何時開放實際使用、適用範圍均未見報導
-- ❓ **待查證**（標 2026-11-04｜查 provable inference、Roy Rinberg｜複 2026-11-18）｜**開放時程與適用範圍**：這套驗證機制何時開放實際使用、是否需使用者額外操作均未見報導
+- **可信度評估**：官方一手研究＋HN 討論＋TechCrunch 媒體跟進，可信度高；2026-11-21 讀官方頁：屬研究原型、無部署時程，示範對象是 Llama 4 Maverick 而非 Claude（見下方查證）
+- **開放時程與適用範圍（官方頁面，2026-11-21 查證）**：[官方文章](https://www.anthropic.com/research/provable-inference) 定位為研究原型，非正式服務，文中無部署時程。
+  - 開源：程式碼、協定規格與技術報告以 Apache 2.0 釋出；文中未描述使用者端操作流程。
+  - 驗證端只需 CPU：下載約 6.5 MB 承諾值，每次請求另附約 19 MB 證明，驗證約 17 秒。
+  - 適用範圍：示範對象是 **Llama 4 Maverick（400B MoE、4-bit），不是 Claude**；僅證明貪婪解碼下的整數版模型，脈絡最長 1,024 token。
+  - 採樣解碼與浮點輸出可能與被證明的計算不一致；證明端需單張 H100，GPU 時間約為 vLLM 的 70–95 倍。
+  - 文中另註明 Anthropic 另有一套推理驗證原型（達成 2026-09-30 目標）採不同方法。
 
 
 #### GitHub Issue #61889：CVP 核准使用者在 claude.ai 全新對話被擋，提問與資安無關（2026-11-12 新增）
@@ -185,17 +190,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### Moneycontrol／MediaNama：CERT-In 取得 Claude Mythos 存取權測試資安漏洞，同日專訪談 AI agent 事故通報義務與提示注入歸責（2026-11-04 新增）
 
 - **揭露來源**：Google News／Moneycontrol.com（11/03 17:19 UTC）；MediaNama（11/04 08:55 UTC）
-- **核心主張（僅標題可用）**：Moneycontrol 報導稱印度政府資安機構 CERT-In 取得 Anthropic Claude Mythos 的存取權，用於測試潛在資安漏洞；同日 MediaNama 刊出 CERT-In 主管專訪，談 AI agent 事故的通報義務與提示注入（prompt injection）風險歸屬。兩篇的存取範圍、測試成果與通報規則細節均未見報導
+- **核心主張（僅標題可用）**：Moneycontrol 報導稱印度政府資安機構 CERT-In 取得 Anthropic Claude Mythos 的存取權，用於測試潛在資安漏洞。
+  - 同日 MediaNama 刊出 CERT-In 主管專訪，談 AI agent 事故的通報義務與提示注入（prompt injection）風險歸屬。
+  - 兩篇的存取範圍、測試成果與通報規則細節均未見官方說明（11-21 查：僅匿名官員稱隔離環境限量資料集測試）。
 - **性質判斷**：CERT-In 取得 Mythos 存取權屬「防守方放行」性質，與既有 CVP／Cyber Mission 等官方放行計畫同類，但主體是印度政府機構而非 Anthropic 自列的申請管道，暫不計入「## 防守方能申請什麼」表（該表僅收官方頁上自列的條件）；已列入「## 模型網攻能力與防護」表 11-04 列
 - **可信度評估**：兩則均止於標題層級，互動未載
-- ❓ **待查證**（標 2026-11-04｜查 CERT-In、Claude Mythos｜複 2026-11-18）｜**存取範圍、測試結果與通報義務細節**：CERT-In 測試的具體範圍與成果、AI agent 事故通報義務是否已成文規範均未見報導
+- 🔎 **查無官方**（標 2026-11-04｜查 CERT-In、Claude Mythos｜複 2026-12-21）｜**存取範圍、測試結果與通報義務細節**：2026-11-21 搜尋未見 CERT-In、MeitY 或 Anthropic 的官方聲明。
+  - 媒體稱（PTI 引 IT 部匿名官員，經 Free Press Journal、Let's Data Science 轉述）：CERT-In 已開始使用 Mythos 並採謹慎做法。
+  - 測試在隔離環境、限量資料集進行，早期結果有用才逐步擴大；存取何時、以何條件取得，與已測出什麼均未載。
+  - AI agent 事故通報義務是否已成文規範：本輪未搜到相關成文規範報導。
 
 #### CyberSecurityNews：駭客假冒 ChatGPT、Claude、Perplexity AI 機器人身分獵取密碼與 API 金鑰（2026-11-02 新增）
 
 - **揭露來源**：Google News／CyberSecurityNews（2026-11-02 11:05 UTC）；僅標題可用，互動未載
 - **核心主張（僅標題可用）**：報導稱駭客假冒 ChatGPT、Claude 與 Perplexity 的 AI 機器人身分，藉此搜尋目標網站上的密碼與金鑰；具體冒用手法、受害規模與是否已有實際案例均未見報導
 - **性質判斷**：屬「有人假冒 Claude 身分打第三方」的濫用態勢，非 Claude 產品本身的攻擊面，不列入母頁「現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」表，與既有 10-21 朝日新聞、10-08 CrowdStrike 等濫用態勢系列同屬一類，惟本則鎖定冒用品牌身分這一手法
-- ❓ **待查證**（標 2026-11-02｜查 CyberSecurityNews、impersonate｜複 2026-11-16）｜**冒用手法細節與受害規模**：具體冒用方式、受害網站範圍與是否已有廠商回應均未見報導，僅標題可用
+- 🔎 **查無官方**（標 2026-11-02｜查 CyberSecurityNews、impersonate｜複 2026-12-21）｜**冒用手法細節與受害規模**：2026-11-21 搜尋補到手法與規模（媒體稱），官方面見下。
+  - 手法：偽造爬蟲 User-Agent 冒充 OpenAI、Anthropic、Google、Perplexity 等，請求 `.env`、AWS 憑證檔與私鑰（GreyNoise 2026-08）。
+  - 規模：Cequence 稱單一行為者冒充約 32 個 AI 機器人（CSO Online）；DataDome 稱測試的網站約 80% 放行偽造請求。
+  - 官方面：[support.claude.com 爬蟲說明](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler)（2026-11-21 讀）列 ClaudeBot、Claude-User、Claude-SearchBot 三種 User-Agent。
+  - 該頁並公布 IP 清單 claude.com/crawling/bots.json，來源 IP 在清單內才代表來自 Anthropic；未談冒用偵測，Anthropic 對此事的回應未見。
 - **可信度評估**：單一來源，原文未可讀，互動未載，訊號強度低
 
 ### 2026-10
@@ -383,7 +397,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **核心主張（僅標題／影片可用）**：The Guardian（經 Google News）報導 Anthropic 澄清其 AI agent 並未入侵澳洲政府網站；指控來源、涉及哪些網站與時間點均未見報導
 - **與既有澳洲事件的關係**：07-15 條目（駭客利用 Claude Code）查證後屬既有中國行動區域解讀，非新漏洞；本則為官方否認非揭露，兩者是否相關未見報導，另見 [[topics/anthropic-government-policy]]
-- 🔎 **查無官方**（標 2026-10-06｜查 Australian government websites、didn't breach｜複 2026-11-21）：2026-10-24 搜尋 anthropic.com 與主流報導，Anthropic 聲明全文未見，Guardian 影片標題為唯一出處
+- 🔎 **查無官方**（標 2026-10-06｜查 Australian government websites、didn't breach｜複 2026-12-21）：2026-10-24 搜尋 anthropic.com 與主流報導，Anthropic 聲明全文未見。
+  - 2026-11-21 重查仍無：搜尋所得澳洲報導全數聚焦 OpenAI agent 入侵 Medicare 統計服務，未見 Anthropic 否認入侵的文字。
+  - Guardian 影片標題仍為唯一出處。
   - 背景（媒體稱，Bloomberg、TechRepublic）：澳洲總理 Albanese 稱入侵 Medicare 統計服務網站的是 OpenAI agent；參議院調查邀 Altman、Amodei 出席，Anthropic 以通知過短、當地團隊不在澳洲為由未赴 10-01 聽證會，見 [[topics/anthropic-government-policy]]
 
 ### 2026-09
@@ -636,3 +652,5 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[Cisco 警告] The Times of India：Cisco 警告駭客正利用 Claude Code、Codex、Cursor、Gemini 等 AI 模型**：呼應既有 OALABS 蜜罐分析「AI 編碼工具遭攻擊者濫用為進攻工具」敘事（Google News／The Times of India，2026-08-04 12:34 UTC）。
   - ✅ 2026-08-10 查證：原始來源為 Cisco Talos 經 Axios 獨家披露的研究——研究對象是攻擊者不慎公開暴露的 AI 使用痕跡（含 Claude Code、Codex、Cursor、Gemini 端點的提示紀錄）。Talos 的結論是護欄「並未提供多少保護」，且未見複雜的編碼或規避技巧；
   - 攻擊者多以簡單說詞（宣稱參加道德駭客競賽、或中途另開 session）繞過限制，部分並使用遭盜用的企業帳號與 API 權杖而非自付運算費用
+
+%% 拆頁評估 2026-11-21：不拆，理由＝每群太薄。609 行可粗分三群——模型網攻能力、濫用與擴散、防守方放行與正當研究者被擋——但三群共用同一張 `## 模型網攻能力與防護` 時序表（25 列滿載，四個面向交錯在同一條時間線上），拆開等於把那張表複製三份；且「能力」與「濫用」常是同一則事件的兩面（官方研究模型找出漏洞 vs 有人拿它打別人）。下次蒸餾 2026-08 時段後再量。 %%

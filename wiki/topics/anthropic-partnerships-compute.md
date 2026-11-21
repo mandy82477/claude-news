@@ -3,7 +3,7 @@ page: "topics/anthropic-partnerships-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-20"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-20"
 status_main: "ongoing"
 days_since_news: 1
@@ -31,7 +31,7 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-20
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-20
 
 > **最新動態**（2026-11-20）
@@ -103,7 +103,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 **這張表只列會改到你拿得到什麼、或付多少的合作。** 其餘合作是公司擴張的紀錄，在下方一行制清單裡。
 
-**通路差異資料截至 2026-10-31，以 [[entities/pricing#通路：誰定價、怎麼開票]] 為準**（與 pricing「通路與乘數」同批；該頁 10-31 查證明載通路五條與 09-26 一致）。
+**通路差異資料截至 2026-11-21，以 [[entities/pricing#通路：誰定價、怎麼開票]] 為準**（與 pricing「通路與乘數」同批；該頁 2026-11-21 查證：通路五條未變，惟官方已寫明資料落地 ×1.1 乘數適用於第一方 API、Claude Platform on AWS 與 Google Cloud「Anthropic 代管」，而 Google Cloud「Google 代管」與 Bedrock 走合作方自訂地區定價）。
 
 | 合作方 | 會改到什麼 | 不會改到什麼 | 最後動態 |
 |---|---|---|---|

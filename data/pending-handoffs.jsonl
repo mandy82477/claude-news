@@ -455,3 +455,7 @@
 {"id": "H-959ab3", "closed": "2026-11-19", "status": "done", "by": "功能", "result": "功能記者 2026-11-19 ingest 回報已處理"}
 {"id": "H-03e408", "opened": "2026-11-19", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "今日 patterns 子頁新增 4 則節點（NVIDIA/SkillEvaluator、product-launch-motion＋video-director、openmotion、Gravitas），請評估是否列入「產品化矩陣」", "status": "open"}
 {"id": "H-03e408", "closed": "2026-11-20", "status": "done", "by": "功能", "result": "功能記者 2026-11-20 ingest 回報已處理"}
+{"id": "H-e04e94", "opened": "2026-11-21", "from": "開發實務", "to": "功能", "page": "entities/claude-code-releases", "note": "v2.1.305（allowedMcpServers 不再過濾只在 env 用 ${VAR} 的 stdio 伺服器）只在 devpractice 候選帳本有、該頁版本列查無對應列；手冊第 6 段已引用此事實，請補上該列讓事實有家", "status": "open"}
+{"id": "H-40c2b0", "opened": "2026-11-21", "from": "開發實務", "to": "功能", "page": "entities/claude-code-releases", "note": "v2.1.309（ultrareview 改需工作區信任）、v2.1.311（DISABLE_COMPACT 改單向）、v2.1.318（恢復對話不再保留先前 thinking、新建 managed agent 預設 auto 權限政策）三項行為變化在該頁版本列的描述未含；手冊第 6 段已引用，請確認並補進原頁", "status": "open"}
+{"id": "H-be49fb", "opened": "2026-11-21", "from": "開發實務", "to": "社群", "page": "topics/community-tech-tools", "note": "（低優先）「說做完了但沒做」列的 canary 與 Gravitas 判定欄仍是 ⏳；手冊第 9 段只標「單一作者、無採用回饋」未做推薦，兩邊口徑請對齊", "status": "open"}
+{"id": "H-8ff4bb", "closed": "2026-11-21", "status": "done", "by": "安全政策", "result": "已在 topics/ai-agent-safety 母頁補寫聯名信〈The MisAnthropic Statement〉具名簽署人（Thomas Wolf、Igor Babuschkin、Steven Pinker、Max Tegmark、Gary Marcus 等，網站列 89 人）與主張，以及 Morningstar Sustainalytics 評級三項評等；businesswire.com 仍連不上，全部標明媒體稱、未讀原文"}

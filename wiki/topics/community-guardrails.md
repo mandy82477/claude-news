@@ -3,7 +3,7 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-18"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-18"
 status_main: "ongoing"
 days_since_news: 3
@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 3
-inbound_links: 17
+inbound_links: 18
 attribution_count: 22
 attribution_last: "2026-11-18"
 top_source: "github"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-18
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-18
 
 > **安全架構新增「外部沙盒」設計：agent 留在沙盒外，要執行的程式碼才進沙盒**（2026-11-18）
@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **強制勝過建議**：規則寫進 CLAUDE.md 只是提醒，邊界要放在 hook、CI 或部署閘這類 agent 改不到的地方。
 - **把關分兩型**：檢查型事後比對、不擋；強制型直接擋或回滾。檢查器若和 agent 同處一個環境，agent 可能動到檢查本身（見下方「把關層彙整」）。
 - **審查有方向性**：跨模型互審不是對稱的，Claude 審 Codex 有效、反向反而變差（見下方「查證備註」）。
-- **「完成」開始由 agent 以外的一層判定**：2026-11-02 一天四則（測試閘、judge model、獨立複核、規格對照），11-12 claim-check 再加一個 Stop hook，agent 宣稱「fixed」卻沒有成功執行紀錄就退回一次補證據；作者實測 406 則宣告中 0.2.0 擋 86 則、0.3.0 擋 2 則，皆單一作者、無第二方採用回報。
+- **「完成」開始由 agent 以外的一層判定**：2026-11-02 一天四則（測試閘、judge model、獨立複核、規格對照），11-12 claim-check 再加一個 Stop hook，agent 宣稱「fixed」卻沒有成功執行紀錄就退回一次補證據；作者實測 406 則宣告中 0.2.0 擋 86 則、0.3.0 擋 2 則，皆單一作者、無第二方採用回報。11-15 另有兩則延伸：code-review-gate-skill 用四道獨立探針加 JSON 合併關卡決定 PR 能否過，Innei/ryugi 讓設計稿與驗證報告可留言並送回 agent；同樣單一作者、無採用回報。
 - **你的選項：** 先把「必須遵守」的規則從 CLAUDE.md 搬到 hook；多 agent 的產出至少配一個只能讀、不能改的審查者；想擋「假完成」可試 Stop hook，但只當輔助，因為它只擋一次。
 
 **機制細節**

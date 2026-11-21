@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（Claude 5.5 家族第三款模型，取代 Haiku 4.5；Haiku 4.5 無獨立頁，細節見 [[topics/model-comparison]]）"
 domain: "🤖 模型"
-last_updated: "2026-11-14"
+last_updated: "2026-11-21"
 last_news_update: "2026-10-09"
 status_main: "active"
 days_since_news: 43
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-haiku-5-5
 **首次出現：** 2026-10-08（本站收錄；官方發布日 2026-10-07）
-**最後更新：** 2026-11-14
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-10-09
 
 > **牌價與 100K 分段已查實**（官方頁 2026-10-11 查證）
@@ -40,6 +40,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 現況
+
+- **自 2026-10-09 起無新動態**（2026-11-21 查核）：本頁被全庫 17 處引用，停滯是事實而非漏更新——Haiku 5.5 仍是現行 Haiku，官方自 10-09 後未再就它發布消息。
 
 **自 2026-10-09 起無新動態（2026-11-14 核）——仍是現行 Haiku，官方發布後未再有新消息；不是漏更新。**
 

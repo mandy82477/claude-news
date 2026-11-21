@@ -4,7 +4,7 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-20"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-20"
 status_main: "active"
 matrix_role: "產品"
@@ -17,8 +17,8 @@ inbound_links: 128
 attribution_count: 855
 attribution_last: "2026-11-17"
 top_source: "github-issues"
-pending_count: 6
-pending_overdue: 2
+pending_count: 5
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 0
 staleness_exempt: null
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-20
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-20
 
 > **最新動態**（2026-11-20）
@@ -104,9 +104,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期報導（尚待官方佐證）：**
 
 - ❓ **待查證**（標 2026-11-17｜查 Claude Sheets）｜**財經媒體稱 Anthropic 推出「Claude Sheets」**（Google News／The Motley Fool，2026-11-17，殼層摘要、無可讀內文）：標題稱推出新產品並藉此質疑 Microsoft 股價，未附產品細節；非官方來源，官方文件與 changelog 未見對應名稱。
-- ❓ **待查證**（標 2026-11-07｜查 自動設定、API 金鑰）｜**Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰**（Google News／FourWeekMBA＋Pasquale Pillitteri，2026-11-07，僅標題）：兩篇低流量轉述來源稱雲端開新任務可自動配置，省去手動初始化，官方文件與 changelog 未見對應條目。
-- ❓ **待查證**（標 2026-11-06｜查 mean to Claude、Don't Be Mean）｜**Forbes：Anthropic 更新使用規範，其中一條要求使用者別對 Claude 說話太差**（Google News／Forbes，2026-11-06 報導，僅標題可用）：規範全文、生效時間與完整清單均未見官方確認。
-- **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）；僅標題層級，未附測試項目、樣本量或分數細節，證據不足
+- 🔎 **查無官方**（標 2026-11-07｜查 自動設定、API 金鑰｜複 2026-12-21）｜**Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰**（Google News／FourWeekMBA＋Pasquale Pillitteri，2026-11-07，僅標題）：兩篇低流量轉述來源稱雲端開新任務可自動配置，省去手動初始化，官方文件與 changelog 未見對應條目。2026-11-21 查官方雲端文件：未見「自動設定 repo 與 API 金鑰」功能；現行機制為 Default 環境（無預設 setup script）、環境變數／setup script 與需手動加入的 network secrets；Team／Enterprise 的 Quick setup 僅簡化 GitHub 連接與首個環境建立（[Cloud environments](https://code.claude.com/docs/en/cloud-environments)、[Claude Code in the cloud](https://code.claude.com/docs/en/claude-code-on-the-web)）。
+- **Anthropic 使用政策更新：新增禁止對模型持續且無謂的辱虐行為**：官方公告（2026-10-08 發布、**2026-11-12 生效**）新增「sustained and needless abusive or cruel behavior toward our models」禁令，僅針對無明顯目的的極端情況；一般挫折、反駁、黑暗創作題材與模型測試／研究不在範圍，主要執行手段仍是 Claude 結束對話。Forbes 2026-11-06 報導的「別對 Claude 太差」即此條（來源：[2026 usage policy update](https://anthropic.com/news/2026-usage-policy-update)，查證 2026-11-21）。
+- **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）；媒體稱（Unite.AI，11-21 查）LiveCVEBench 190 題 VR-1.1 修復 57.9%、Claude Code 與 Codex 各 45.3%，為 Cogent 自家執行、推論預算不同、無獨立重現，證據仍弱
 - **社群工具聲稱可讓 Max $20 方案用量「擴大 50 倍」**（[muaaz9329/cheap-ag](https://github.com/muaaz9329/cheap-ag)，186★，2026-11-01）：單一 GitHub repo 宣稱「50x your Claude usage」，未附測試方法或與官方用量上限的對照數據，證據薄弱；計費規則另見 [[entities/pricing]]。
 - **社群工具聲稱效能優於 Claude Code（Show HN「Synaps」，2 分，2026-11-05）**：作者稱自家 Rust 改寫版 agent 工具 7ms 可 attach 到運行中的 daemon、40ms 啟動 daemon、cache 命中率 99%+，未附測試方法或與官方數據的對照，單一貼文、低互動，證據薄弱；[GitHub](https://github.com/HaseebKhalid1507/SynapsCLI)。
   - 同貼文稱 Anthropic 已為 Claude Code 新增規則禁止使用者自製遊戲且無選項關閉；此說法為作者轉述其在 Reddit 看到的二手訊息、非一手，且與已查證的遊戲複製限制範圍（僅擋「重現他人特定遊戲」，原創仍可做，見 [[entities/claude-code-known-issues]]「🧠 行為與品質」組）不一致，不採信、不另立條目。

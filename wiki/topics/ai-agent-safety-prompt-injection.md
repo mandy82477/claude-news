@@ -16,7 +16,7 @@ attribution_count: 13
 attribution_last: "2026-11-20"
 top_source: "topic-watch"
 pending_count: 11
-pending_overdue: 2
+pending_overdue: 0
 pending_next_review: "2026-11-22"
 pending_signalled: 0
 staleness_exempt: null
@@ -202,7 +202,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Homeland411（2026-11-02 12:57 UTC）；僅標題可用，互動未載
 - **核心主張（僅標題可用）**：報導稱攻擊者在 AI coding 專案裡藏匿惡意規則（rules）以挾持 AI 助理；具體規則檔類型（如 CLAUDE.md、`.cursorrules` 一類）、受影響 agent 產品與是否涉及 Claude Code 均未見報導
 - **與既有敘事的關係**：延續「## 提示注入已不是單點漏洞，是產業級攻擊面」既有收斂觀察——可信輸入邊界已依序擴至 `.git` 設定檔（09-02）、`llms.txt`（08-29）；本則若屬實，規則檔會是再一個被濫用的可信輸入類型，惟僅標題可用，訊號強度不足以更動該表（已滿 8 列）
-- ❓ **待查證**（標 2026-11-02｜查 Homeland411、malicious rules｜複 2026-11-16）｜**規則檔類型、受影響產品與是否涉及 Claude Code**：僅標題可用，具體攻擊鏈與是否已有修補／防法均未見報導
+- 🔎 **查無官方**（標 2026-11-02｜查 Homeland411、malicious rules｜複 2026-12-21）｜**規則檔類型、受影響產品與是否涉及 Claude Code**：2026-11-21 搜尋找不到 Homeland411 該文，亦無官方回應。
+  - 同主題既有公開研究：Pillar Security「Rules File Backdoor」（2025-03，以零寬字元與雙向文字標記在規則檔藏指令，示範對象 GitHub Copilot 與 Cursor）。
+  - 學術論文〈Your AI, My Shell〉（arXiv 2509.22040）稱廠商已承認類似漏洞，含 Claude Code CVE-2025-65099；Homeland411 是否即指此類，未證實。
 - **可信度評估**：單一來源（Homeland411），互動未載，原文層級未知，訊號強度低
 %% 本則為「AI coding 工具安全」定向抓取補收，與本頁一般的 Claude/Anthropic 關聯門檻判準不同 %%
 
@@ -328,7 +330,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Google News／CyberSecurityNews（2026-10-06 15:52 UTC）；0 互動，單一來源，原文無可讀內文
 - **核心主張（僅標題層級可用）**：資安研究揭露 GitHub Copilot CLI 存在可被加密提示注入攻擊竊取開發者機密的漏洞，加密內容會繞過一般的提示注入偵測；具體攻擊鏈、受影響版本與是否已修補均未見報導
 - **收錄說明**：跨廠商提示注入案例，不套用一般的 Claude/Anthropic 關聯門檻；與 Claude 產品無直接關聯，不列入母頁「現在還擋不住的攻擊」表，亦非「## 提示注入已不是單點漏洞」訊號表既有收斂點的延伸（該表已滿 8 列，暫不更動）
-- 🔎 **查無官方**（標 2026-10-06｜查 GitHub Copilot CLI、encrypted prompt injection｜複 2026-11-21）：2026-10-24 搜尋未見 GitHub 公開聲明或修補公告（CSO Online 稱 GitHub 尚未公開回應）
+- 🔎 **查無官方**（標 2026-10-06｜查 GitHub Copilot CLI、encrypted prompt injection｜複 2026-12-21）：2026-10-24 搜尋未見 GitHub 公開聲明或修補公告（CSO Online 稱 GitHub 尚未公開回應）。
+  - 2026-11-21 重查仍無 GitHub 官方頁，但具名媒體補上立場：媒體稱（InfoWorld、Expert Insights、NeuralTrust）GitHub 驗證了發現、但不視為產品漏洞。
+  - 理由是使用者指示抓取頁面且授予自主權；示範需開啟 autopilot 模式，Microsoft mai-code-1.1-flash 約半數成功、兩個 GPT-5.6 模型拒絕；未見修補。
   - 媒體稱（CSO Online、InfoWorld、The Register；Adversa 研究）：Adversa 稱「Cryptographic Context Injection」把 AES-256-GCM 加密指令與金鑰模板嵌進網頁，Copilot 讀本機檔（如 .env）填入金鑰後解密執行，再經後續 URL 外洩，示範 28 秒
   - 條件：需 autopilot 模式與寬鬆模型，非單擊入侵；Adversa 稱 GitHub 驗證了發現但未列為漏洞（理由是使用者已授權自主權限並指示取回攻擊者內容），研究者不同意；受影響版本未載
 - **可信度評估**：單一來源，0 互動，RSS 無正文，訊號強度低；提示注入主題定向補抓收錄

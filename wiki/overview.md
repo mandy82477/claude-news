@@ -7,7 +7,7 @@
 
 ## 當前局勢
 
-**IPO 從定價走完到結算，然後股價就跌了**：官方 11-18 以每股 **$83** 定價，11-19 以代號 **ANT** 在 Nasdaq 掛牌（開盤 $111.50、盤中一度 $114.99），11-20 官方公告超額配售權全額行使、發行上修至 **11.27 億股**，結算毛額約 **$93.5 億**、實收約 **$91.6 億**，為史上規模最大 IPO。但掛牌第二天股價較前一日再跌逾 **11%**，同日那斯達克綜合指數抹平 2026 全年漲幅。市值估算各家口徑不一（Reuters 稱盤中近 $2 兆後回落約 $1.2 兆，WSJ 稱 $1.5～2 兆）。事實層見 [[topics/anthropic-ipo]]，判讀層見 [[topics/market-signals-ipo]]。
+**IPO 從定價走完到結算，然後股價就跌了**：官方 11-18 以每股 **$83** 定價，11-19 以代號 **ANT** 在 Nasdaq 掛牌（開盤 $111.50、盤中一度 $114.99），11-20 官方公告超額配售權全額行使、發行上修至 **11.27 億股**，結算毛額約 **$935 億**、實收約 **$916 億**，為史上規模最大 IPO。但掛牌第二天股價較前一日再跌逾 **11%**，同日那斯達克綜合指數抹平 2026 全年漲幅。市值估算各家口徑不一（Reuters 稱盤中近 $2 兆後回落約 $1.2 兆，WSJ 稱 $1.5～2 兆）。事實層見 [[topics/anthropic-ipo]]，判讀層見 [[topics/market-signals-ipo]]。
 
 **Gemini 4 Neon 直接對著 Opus 5.5 打**：11-19 Google 發布 Gemini 4 Neon 並同步上線 GitHub Copilot，官方稱程式撰寫能力追平 Claude Opus 5.5、**API 價低 25%**；同期 OpenAI Astra 6.2 被報導在速度與成本上優於 Claude Fable 5.2，但 12 項任務輸 7 項。價格戰這一輪輪到對手降價，見 [[topics/competitor-landscape]]。
 
@@ -19,9 +19,9 @@
 
 **金融業三家同週導入，數學與物理各出一個未經同行審查的宣稱**：Barclays／Citadel／BNY 將 Claude 導入工作流（11-20）；同日 Anthropic 數學家 Levent Alpöge 聲稱與 Claude 合作找到黎曼猜想的證明（**尚未經同行審查**，多家媒體以 unverified 措辭跟進），Anthropic Research 另發文稱 Claude 解開黑洞物理兩個懸置逾 20 年的理論問題（附預印本）。採用面見 [[topics/market-signals-customers]]。
 
-**IPO 前夕的安全品牌質疑仍未落地成事實**：科學家與法律學者聯名信〈Anthropic is Not a Safe AI Company〉、ESG Dive「高風險」評級、Sam Altman 受訪稱不知道 Anthropic 是否安全——這條線的完整聯名人士與具體主張**本輪仍卡在外部一手來源查不到**（`businesswire.com` 不在雲端網路白名單內），見下方「需使用者端設定」與 [[topics/ai-agent-safety]]。
+**IPO 前夕的安全品牌質疑，本輪查出了具體內容**：聯名信〈The MisAnthropic Statement〉具名簽署人包含 Thomas Wolf、Igor Babuschkin、Steven Pinker、Max Tegmark 與 [[entities/gary-marcus|Gary Marcus]]，Center for AI Safety 亦加入，網站列 89 人；主張是 Anthropic 一邊警告遞迴自我改進 AI、一邊競相打造，並以安全品牌向投資人與大眾取得權力。Anthropic 回應稱自己有「業界最強安全防護之一」。評級那一則**本庫此前寫錯了評級方**：給出「商業倫理嚴重、人力資本高」評等的是 **Morningstar Sustainalytics**（報告日 11-16），ESG Dive 只是報導者，已更正。以上皆為媒體轉述、未讀到原文（`businesswire.com` 仍不在雲端網路白名單內）。見 [[topics/ai-agent-safety]]。
 
-**本輪站內最值得記的事實面修正**：除上面兩條官方查證外，`feature-radar` 的「升級前要知道的」表由 22 列裁回規則上限 **12 列**（破壞性變更 8 列全留），被裁的 10 列事實先搬進 [[entities/claude-code-releases]] 才移出；`entities/claude-code-releases` 另把發布逾 90 天的 23 列版本搬進封存頁。
+**本輪站內最值得記的事實面修正**：除上面兩條官方查證外，`feature-radar` 的「升級前要知道的」表由 22 列裁回規則上限 **12 列**（破壞性變更 8 列全留），被裁的 10 列事實先搬進 [[entities/claude-code-releases]] 才移出；`entities/claude-code-releases` 另把發布逾 90 天的 23 列版本搬進 [[entities/claude-code-archive]]。
 
 ## 主要模型現況
 
@@ -51,7 +51,7 @@
 ### 🔴 高度關注
 
 1. **[[topics/anthropic-ipo]] — 已結算，戲份轉到股價與鎖定期**
-   - $83 定價、11.27 億股、毛額約 $93.5 億；掛牌次日跌逾 11%；市值口徑各家不一，下輪看首份季報與解禁時程
+   - $83 定價、11.27 億股、毛額約 $935 億；掛牌次日跌逾 11%；市值口徑各家不一，下輪看首份季報與解禁時程
 2. **[[topics/competitor-landscape]] — Gemini 4 Neon 稱追平 Opus 5.5 且便宜 25%**
    - 對手這輪用降價回應降價；Astra 6.2 速度／成本佔優但任務勝率仍輸
 3. **[[topics/ai-agent-safety]] — Claude Dispatch 官方確認但不修補的狀態未變**
@@ -75,9 +75,9 @@
 
 | 日期 | 事件 | 影響 |
 |------|------|------|
-| 11-20 | **IPO 結算完成**（11.27 億股、毛額約 $93.5 億）；掛牌次日股價再跌逾 11%；**Barclays／Citadel／BNY 導入 Claude**；黎曼猜想與黑洞物理兩個未經同行審查的宣稱；Claude Code v2.1.329 | 資本面落地、採用面擴張，研究宣稱待驗 |
+| 11-20 | **IPO 結算完成**（11.27 億股、毛額約 $935 億）；次日股價再跌逾 11%；**Barclays／Citadel／BNY 導入**；兩個未經同行審查的研究宣稱 | 資本面落地、採用面擴張，研究宣稱待驗 |
 | 11-19 | **IPO 定價 $83、以 ANT 在 Nasdaq 掛牌**（開盤 $111.50）；**Google Gemini 4 Neon 發布**並上線 GitHub Copilot（稱追平 Opus 5.5、API 低 25%）| 上市日與對手旗艦撞在同一天 |
-| 11-18 | **IPO 定價最後階段**；TechCrunch 揭 Amazon／Google 合計持股近 30%（Amazon 約 14.7%）；**安全品牌同時受聯名信、ESG 評級與 Sam Altman 質疑**；Code Mode 跟進報導稱 token 降 77%；遊說支出 $163 萬曝光 | 定價前夕的信任面壓力測試 |
+| 11-18 | **IPO 定價最後階段**；Amazon／Google 合計持股近 30%；**安全品牌三面受質疑**（聯名信、評級、Altman）；遊說支出 $163 萬曝光 | 定價前夕的信任面壓力測試 |
 | 11-17 | Claude Code v2.1.326：agent teams 可與 **Code Mode** 同開 | 實驗功能與多 agent 接上 |
 | 11-16 | Jasjeet Sekhon（Google DeepMind 前策略長）離職加入 Anthropic 傳聞；Brad Gerstner 宣布 $50 億認購 | 人才與認購同週 |
 
@@ -89,7 +89,8 @@
 
 社群工具目錄（[[topics/community-tech-tools]]）本輪（news 窗口 2026-11-14～11-20）**新增 34 筆、移出 14 筆、另對 14 列逾 30 天零後續者加註首見日**，目錄現為 **280 列**。六個症狀列的首選**全部沒換**。
 
-- 🔥🔥🔥🔥 **「它說做完了但沒做」** — 本週一次多三個證據導向的新做法：canary（500★，附錄影／console log／network HAR／Playwright trace）、code-review-gate-skill（504★，要求發現項附證據）、Gravitas（501★，把 Claude Code 的工作紀律移植到 Gemini）；首選 Groundtruth 仍未換，但它只有 7★ 且 07-20 後未更新，**下輪該複查是否換首選**（已連兩輪掛在這）
+- 🔥🔥🔥🔥 **「它說做完了但沒做」** — 本週一次多三個證據導向的新做法：canary（500★，附錄影與 trace）、code-review-gate-skill（504★，發現項要附證據）、Gravitas（501★，移植到 Gemini）
+  - 首選 Groundtruth 仍未換，但它只有 7★ 且 07-20 後未更新，**下輪該複查是否換首選**（已連兩輪掛在這）
 - 🔥🔥🔥 **記憶層** — Memro（PostgreSQL＋pgvector 經 MCP 共享記憶）、Crosshead（compaction 後的身分保留）；兩個都只有單一來源、無使用回報
 - 🔥🔥🔥 **費用監測** — tokendoctor（Show HN，HN 31 分）分析 token 浪費在哪；留言有人主張一味砍用量會犧牲品質
 - 🔥🔥 **盯 agent 狀態** — Cyberviber（15 美元實體螢幕）、Fardesk（不經第三方伺服器的 iPhone app）
@@ -100,7 +101,7 @@
 
 ## 商業動態
 
-- **IPO 已結算**：$83／股、11.27 億股（含超額配售全額行使）、毛額約 $93.5 億、實收約 $91.6 億；掛牌次日股價較前一日跌逾 11%
+- **IPO 已結算**：$83／股、11.27 億股（含超額配售全額行使）、毛額約 $935 億、實收約 $916 億；掛牌次日股價較前一日跌逾 11%
 - **股權結構**：Amazon 與 Google 合計持股近 30%（Amazon 約 14.7%，部分來自低換股價可轉債；TechCrunch 11-18）；Brad Gerstner 宣布 $50 億認購
 - **客戶**：年營收 $10 萬以上客戶逾 11,900 家、年增逾 12 倍（官方 IPO 頁 11-12）；**金融業本週一次三家**（Barclays／Citadel／BNY）
 - **算力承諾**：採購承諾總額 $8,950 億，其中 $4,475 億預計 2030 年底前支出完畢（修訂版 S-1）

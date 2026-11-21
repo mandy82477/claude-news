@@ -3,7 +3,7 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-19"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-19"
 status_main: "ongoing"
 days_since_news: 2
@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 15
+inbound_links: 16
 attribution_count: 32
 attribution_last: "2026-11-19"
 top_source: "github"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-19
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-19
 
 > **可靠性測試新增 skill 品質評估框架；Skills 設計再添兩款 Code-rendered 影片技能**（2026-11-19）
@@ -60,7 +60,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 目前結論
 
-- **Skills 正從「指令封裝」變成「知識框架載體」**：單一職責的寫法自 2026-05 起沒有人再反對，但也還沒有第二方量測（[[topics/community-skills#2026-09]]）。**接下來看什麼：** 第三方 skill 的品質量測（可靠性測試那一類）會不會補上來。
+- **Skills 正從「指令封裝」變成「知識框架載體」**：單一職責的寫法自 2026-05 起沒有人再反對，但也還沒有第二方量測（[[topics/community-skills#2026-09]]）。**接下來看什麼：** 第三方 skill 的品質量測（可靠性測試那一類）有了第一個來源：2026-11-19 NVIDIA SkillEvaluator 在安裝前篩品質、安全與語意重疊，仍是單一團隊發布、無採用回報。
 - **來源從個人 repo 擴到業者與策展站**：2026-11-12 Jane Street 公開自家 agent skills 集合（描述僅「Agent skills」、內容細節未載），11-13 出現每 8 小時更新、附安全評級的 skills 目錄站；兩者都只有星數與站方自述，沒有使用回饋。
 - **做法會隨模型版本靜默失效**：2026-11-03 一位作者靠強迫呼叫不存在工具取得結構化輸出，Opus 5.5 不再配合；10-26 另有一套把「需求沒做到」與「測試寫得太綁死」分開判讀的方法。兩者都是單一作者案例。
 - **你的選項：** 寫新 skill 前先把 description 寫成「什麼時候該叫我」的具體條件；skill 一多就檢查清單有沒有被擠掉；要硬擋的規則改用 hook；換模型版本後重跑一次依賴特定輸出格式的 skill。
@@ -718,3 +718,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **來源：** 「I built a Claude Code skill that finds customers, not competitors, on Reddit & LinkedIn」— dev.to（作者 newan2001，原文發布 06-19）
 - **成熟度：** ⏳ 新興（單一作者工具，尚無採用數據）
 
+%% 拆頁評估 2026-11-21：不拆，分不出群。正文約 700 行，但 Skills 設計一類佔約 470 行（46 則）、可靠性測試只有 6 則約 59 行（每群太薄，<150，併回鄰群）、其餘 15 則多是週邊；Skills 設計內部是各領域 skill 清單（設計、影片、資安、SEO、金融、課程與合輯），讀者問題都是「有沒有現成的 X skill」，沒有各自的結論與節奏；寫法與觸發機制已集中在本頁「慣例與地雷」與「給 coding agent 的 Skill 與角色檔」兩節。下次評估觸發：可靠性測試連續兩個月累積過 150 行，或領域清單裡某一域（如影片 skill）自己長出第二個故事。 %%

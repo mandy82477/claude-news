@@ -3,7 +3,7 @@ page: "topics/community-integrations"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-19"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-19"
 status_main: "ongoing"
 days_since_news: 2
@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 3
+inbound_links: 4
 attribution_count: 39
 attribution_last: "2026-11-19"
 top_source: "github"
@@ -20,7 +20,7 @@ pending_overdue: 0
 pending_next_review: "2026-11-24"
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 社群做法：MCP、plugin 與外部工具整合
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-19
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-19
 
 > **創意工具 Agent 整合新增全端影片工作室 openmotion，近 2 天暴增約 1,954 星**（2026-11-19）
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **整合面一直往外擴**：從程式碼工具鏈擴到創作工具（影片、遊戲引擎、ComfyUI），十月起也接上實體機器人；十一月再出現大廠自己發 plugin（Notion 2026-11-05、Microsoft Windows 開發外掛集 11-08）與跨平台爬蟲 API 訂閱服務（EveryInfra，11-13，106 個平台 573 個 API）。
 - **大廠官方 plugin 與單一作者 MCP server 並存**：前者出處明確，後者仍沒有人篩過；兩者都未見使用回報。
-- **MCP 長 session 穩健化**：最後一則做法停在 2026-08-14，心跳、重試、快照三種防護還沒有新的實測。
+- **MCP 長 session 穩健化**：心跳、重試、快照三種防護的最後一則做法是 2026-08-14，之後 2026-11-17 出現一份診斷面的排查清單（schema token 膨脹、8MB 回應砍掉 stdio 伺服器、工具順序變動洗掉 prompt cache），仍是單篇 dev.to 整理，防護本身還沒有新的實測。
 - **你的選項：** 先查 tools 頁有沒有對應症狀的首選；裝單一作者的 MCP server 前，先確認它會載入多少工具定義進 context。
 
 ---
@@ -753,3 +753,5 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-11-24）：複查（2026-10-24）原始 Reddit 貼文仍未能取得（reddit.com 網域對本工具封鎖擷取）。
   - 補充查得官方確有自動快照機制：[Checkpointing 文件](https://code.claude.com/docs/en/checkpointing)載明每次送出提示前自動快照檔案、`/rewind` 可還原至任一檢查點。
   - 但無法比對原貼文所指是否即為此機制。
+
+%% 拆頁評估 2026-11-21：該拆，擬切出 topics/community-creative-tools（收「創意工具 Agent 整合」一類，約 31 則節點、約 310 行；母頁留 Plugin / MCP 整合與 MCP 長 Session 穩健化，約 420 行，降到 600 行以下）。理由：這一頁現在回答兩個不同的讀者問題——「該裝哪個 MCP／plugin、斷線怎麼辦」與「agent 能不能接進影片、Blender、遊戲引擎等創作工具」，兩群各自超過 150 行、節奏不同（創作工具一群 2026-11 每週都有新節點，母頁其餘兩類新動靜少）；三題檢驗：有自己的問題（過）、能寫自己的目前結論與 callout（過，本週 callout 已是單獨一條）、被獨立引用（偏弱：目前入邊幾乎全是本頁內錨點，僅母頁路由表與概覽表單獨指向，這一題靠切出後補）。落選方案：不拆、改在「目前結論」補創作工具一條——不選，因為事件流已佔正文近一半、讀者要翻過 300 行創作工具節點才到 plugin。雲端本輪不開拆頁波，由主編記本機承接；切出時須同批更新母頁 patterns 路由表（第 0 條）與 patterns_tree_audit 的落點表。 %%

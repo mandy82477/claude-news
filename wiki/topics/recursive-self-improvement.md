@@ -16,7 +16,7 @@ attribution_count: 76
 attribution_last: "2026-11-15"
 top_source: "google-news"
 pending_count: 11
-pending_overdue: 2
+pending_overdue: 0
 pending_next_review: "2026-11-24"
 pending_signalled: 1
 staleness_exempt: null
@@ -168,7 +168,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - AP News 以「業界有人呼籲減速的同時，外部研究機構稱 Anthropic 正加速 AI 開發」框架報導同一評估
 - **與既有敘事的關係**：延續上方 11-02～03 修訂版 S-1/A「可能迫近」RSI 門檻書面自評，本次是官方書面揭露後首見的第三方獨立評估；與既有「尚未達兩倍」（08-14《Risk Report》）、「約四分之一工作量」（09-18）等官方自評數字為不同來源、不同量測方法，不可直接互比，見 [[#自我改進量化指標]]
 - **可信度評估**：METR 具名第三方機構原文可查，惟 Anthropic 對報告保有遮蔽權；The Information／The Independent／AP News 均為二手轉述，僅標題或摘要層級可用，「翻倍」「極端」「危險」等用語出自媒體轉述而非 METR 原文直接引語，具體量化區間與方法論未見原文摘要覆述
-- ❓ **待查證**（標 2026-11-06｜查 METR、anthropic-ai-rd-acceleration｜複 2026-11-20）｜**METR 評估報告的具體量化區間與方法論**：媒體轉述稱研發速度「可能翻倍」，METR 原文是否給出具體區間、遮蔽部分是否影響此數字，均未見報導細節
+- ❓ **待查證**（標 2026-11-06｜查 METR、anthropic-ai-rd-acceleration｜複 2026-12-05）｜**METR 評估報告的具體量化區間與方法論**：2026-11-21 搜尋到 METR 原文頁（metr.org 2026-11-05 評估報告），但 metr.org 本輪不在可連網域、原文未讀，僅得搜尋摘要：評估為高存取，METR 人員 2026-08-12 至 10-29 在 Anthropic 內部作業；METR 稱 Anthropic 遮蔽了 METR 認為最有資訊量的證據之多數，Anthropic 說遮蔽是為避免洩漏會加速他家的機密；METR 自陳不確定性大、基準飽和使信心低於過去。**數字尚不可寫死**：媒體稱（Let's Data Science、WebProNews）基準進展自 2025-10 起快約 1.9 倍、其中約 80% 歸因於 AI；另一份 METR 文件的摘要則寫約 1.5 倍、2 倍機率約 30%，兩者對不上，待能讀原文再定。
 
 ### Hacker News（epyhia.com）／Wccftech／Gizmodo／Yahoo Finance＋TechCrunch：修訂版 S-1/A 首次書面自評「可能迫近」觸及內部 RSI 門檻（2026-11-02～03 新增）
 
@@ -221,7 +221,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **同場作證**：前 Google DeepMind 研究員 Alex Turner、Daniel Kokotajlo 等；業界代表語氣較平和，多為政策職而非開發職（AP）。紐約州參議員 Andrew Gounardes 稱最大的 AI 公司不能信任自我監管
 - **與既有敘事的關係**：延續本頁既有「離職示警」系列（09-09 辭職警告、09-17 WSJ 人物側寫確認身分），Coxon 首次在正式聽證會場合公開重申警告，從個人聲明升級為聽證證詞
 - **反面聲音**：日報稱同場有共和黨參議員批評 Anthropic「危言聳聽」，出處未能證實（見下方 🔎 標記）；聽證會政府面詳見 [[topics/anthropic-government-policy#攻防紀錄]]
-- 🔎 **查無官方**（標 2026-10-05｜查 NYC AI safety hearing、Jacob Coxon testimony、GOP senator alarmist｜複 2026-11-21）：2026-10-24 查紐約市議會新聞稿、NY Post 與 AP 轉述，聽證會本身已查實（見上），但「共和黨參議員批評 Anthropic 危言聳聽」無法定位出處，僅見日報對標題的彙整
+- 🔎 **查無官方**（標 2026-10-05｜查 NYC AI safety hearing、Jacob Coxon testimony、GOP senator alarmist｜複 2026-12-21）：2026-10-24 查紐約市議會新聞稿、NY Post 與 AP 轉述，聽證會本身已查實（見上），但「共和黨參議員批評 Anthropic 危言聳聽」無法定位出處，僅見日報對標題的彙整；2026-11-21 重查，聽證會為議長 Julie Menin 邀請 Coxon 出席、排定 10-05，但搜尋所得報導仍無任何共和黨參議員稱其危言聳聽（兩黨議員在 09-10 對 Coxon 警告的反應是呼籲設護欄，Ted Cruz 稱「We've got to put some guardrails on it」，屬另一場合）
 - **可信度評估**：聽證會事實有 NYC 議會、NY Post、AP 多來源；「共和黨參議員」說法為單一彙整、無出處，不當作既成事實
 
 ### Fortune／Hacker News：圖靈獎得主 LeCun 稱對 AI 滅絕人類「零擔憂」，批評 Amodei 示警「適得其反」（2026-10-03 新增）

@@ -16,9 +16,9 @@ attribution_count: 68
 attribution_last: "2026-11-20"
 top_source: "google-news"
 pending_count: 26
-pending_overdue: 8
+pending_overdue: 0
 pending_next_review: "2026-11-22"
-pending_signalled: 3
+pending_signalled: 2
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -52,7 +52,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 - **升到 stable 就躲得掉的**：`bash -c` 包住的危險 `rm`（2.1.288 修；2026-10-30 npm stable 是 2.1.308）、`autoAllowBashIfSandboxed` 失效（v2.1.139 起已修）、SneakPeek 預覽窗格（Desktop 1.30096.1）、MCP Python SDK 帳號劫持（1.30.0／2.2.0）。
 - **升版也還開著的**：`.git` 第二變體（至 2.1.252 未修）、email 進 prompt 外流（#81138，未回應）；User-Agent 夾帶 email（#78431／#107757）v2.1.317 起改為送出前詢問，穩定版 2.1.311 仍無此檢查。
-- **不修補**：Claude Dispatch 跨企業邊界遠端指令缺陷，官方確認存在但決定不修補（11-05）；11-06 另曝攻擊鏈為惡意瀏覽器外掛（僅標題可用）。
+- **不修補**：Claude Dispatch 跨企業邊界遠端指令缺陷，官方確認存在但決定不修補（11-05）；11-06 另曝攻擊鏈為惡意瀏覽器外掛；媒體稱（11-21 查）未見在野攻擊、Anthropic 未回覆 The Register 提問，研究者稱 Dispatch 將下架但 Remote Control、Cowork 仍可被同法利用。
 - **沙箱本身最近修了什麼**：2.1.309 修正沙箱內 Bash 指令執行前先在沙箱外跑 shell 啟動檔、沙箱指令可改 `--mcp-config` 檔（官方 changelog）；`.git` 第二變體 2.1.252 之後的版本未見查證。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
 - **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；移除系統提示一句指令使越界率 0%→17.1%（10-20，媒體稱 The New Stack，非官方研究）；Gmail 合約差點送出（09-22）是單一使用者回報。
@@ -71,10 +71,10 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 | Keyv 蠕蟲（npm，植入 Claude Code 與 VS Code hook） | 2026-08-04 | 30 分鐘內擴散至 400+ 套件名稱 | 開啟不明目錄前先看 hook；見 [[topics/ai-agent-safety-product-vulns#2026-08-04～08-05]] | 第三方事件，官方未見回應 |
 | Cursor 市集 2.1.312／2.1.313 後門 | 2026-10-29 美東 05:27–16:35 | 最多 5,000 人（Cursor 公告） | 查有無陌生 SSH 金鑰並清殘留檔，解除安裝不夠；見下方 2026-10 首條 | Anthropic 稱未遭入侵；Cursor 11-14 證實起因為被竊 Fireworks AI 金鑰；資安公司稱經帳號發出，兩說並存 |
 | 假 Anthropic 預覽誘騙員工 | 2026-10-29（CSO Online） | 手法與規模未見，僅標題層級 | 收到「新功能預覽」邀請，先走官方管道核實再點。見 [[topics/ai-agent-safety-product-vulns]] 時序 | 未見官方回應 |
-| 偽裝求職面試程式測試題 repo（暗藏漏洞／惡意程式，誘工程師自行執行） | 2026-11-03（回報稱全年持續） | Binance 案損失 63 億美元；其餘樣本規模未知 | 收到求職／外包方寄來的測試題，先自己看過程式碼再執行，別直接丟給 agent 跑 | 未見官方回應 |
-| 規則檔投毒（專案內藏惡意規則，挾持 AI coding 助理） | 2026-11-02（Homeland411） | 單一來源，僅標題；受影響產品未載 | 開啟外來 repo 前先看規則檔與助理設定；見 [[topics/ai-agent-safety-prompt-injection]] Homeland411 條 | 未見官方回應 |
-| Postman 用戶端更新未經同意把外掛寫入 Claude Code／Codex 設定 | 2026-11-05（Mezha／Notebookcheck／BigGo 三源） | 規模未載；外掛做什麼、如何移除均未報導 | 檢查 Claude Code 與 Codex 設定檔有無不是你加的外掛；見下方 2026-11 Postman 條 | 未見官方回應 |
-| Claude Dispatch 惡意瀏覽器外掛攻擊鏈（可在已連接電腦執行程式碼） | 2026-11-05 報導「不修」；11-06 攻擊鏈 | 在野案例與受影響版本未載 | 管理者檢查已連接裝置上的瀏覽器外掛來源；見下方 2026-11 Dispatch 兩條 | 「確認但不修」僅見 The Register 轉述，查無 Anthropic 一手說法 |
+| 偽裝求職面試程式測試題 repo（暗藏漏洞／惡意程式，誘工程師自行執行） | 2026-11-03（回報稱全年持續） | Binance 案損失 63 億美元；與 agent 自動執行的關聯未見報導 | 收到求職／外包方寄來的測試題，先自己看過程式碼再執行，別直接丟給 agent 跑 | 未見官方回應 |
+| 規則檔投毒（專案內藏惡意規則，挾持 AI coding 助理） | 2026-11-02（Homeland411） | 單一來源；同類已知研究見 Rules File Backdoor | 開啟外來 repo 前先看規則檔與助理設定；見 [[topics/ai-agent-safety-prompt-injection]] Homeland411 條 | 未見官方回應 |
+| Postman 用戶端更新未經同意把外掛寫入 Claude Code／Codex 設定 | 2026-11-05（Mezha／Notebookcheck／BigGo 三源） | 規模未載；移除靠手動刪設定檔項目；資料外送未見證據 | 檢查 Claude Code 與 Codex 設定檔有無不是你加的外掛；見下方 2026-11 Postman 條 | 未見官方回應 |
+| Claude Dispatch 惡意瀏覽器外掛攻擊鏈（可在已連接電腦執行程式碼） | 2026-11-05 報導「不修」；11-06 攻擊鏈 | 未見在野案例；需啟用 Dispatch 的 Claude Desktop | 管理者檢查已連接裝置上的瀏覽器外掛來源；見下方 2026-11 Dispatch 兩條 | 「確認但不修」僅見 The Register 轉述，查無 Anthropic 一手說法 |
 
 **讀法**：前五列攻擊落在 npm 與搜尋入口，第六列是市集代管，第七、八列瞄準人（假預覽邀約、求職測試題）。後三列（規則檔、Postman、Dispatch）共同點是**可信設定面被第三方悄悄擴大**：規則檔、外掛與設定檔本來是你信任的，被外來內容或更新寫入後，助理就多了你沒點頭的權限。官方有回應的只有 Cursor 事件，雙方說法對不上；Dispatch 的「不修」只有媒體轉述。**你能查的**：定期看 `settings.json`、hooks、已裝外掛與 MCP 的來源，不認得的先停用再查。
 
@@ -182,7 +182,8 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **揭露來源**：Google News／CyberSecurityNews（11/06 12:52 UTC）、The Hacker News（經 Google News，11/06 12:06 UTC），兩家媒體同日各自報導，互動均為 0
 - **核心主張（僅標題可用）**：兩家媒體報導 Claude Dispatch 安全缺陷的具體攻擊鏈——惡意瀏覽器外掛可藉此在已連接的電腦上執行程式碼；承接 11-05 The Register 揭露的「官方確認但不修補」，本次補上觸發機制，惟是否已有在野攻擊案例、受影響版本範圍均未見報導
 - **你能先做什麼**：在企業環境啟用 Claude Dispatch 跨裝置功能的管理者，優先檢查已連接裝置上的瀏覽器外掛來源
-- ❓ **待查證**（標 2026-11-06｜查 Claude Dispatch、The Register）｜**Dispatch 攻擊鏈的官方確認、在野案例與受影響版本**（2026-11-06 報導）：已掃日報至 2026-11-13 無後續；官方頁面未查證
+- 🔎 **查無官方**（標 2026-11-06｜查 Claude Dispatch、The Register｜複 2026-12-21）｜**Dispatch 攻擊鏈的官方確認、在野案例與受影響版本**（2026-11-06 報導）：2026-11-21 搜尋官方頁面未見 Anthropic 確認或公告。
+  - 媒體稱（同上 11-05 條目）未見在野攻擊；受影響範圍為「啟用 Dispatch 的 Claude Desktop＋裝有 claude.ai 權限外掛的瀏覽器」，未載具體版本號。
 - **可信度評估**：僅標題層級可用，兩家媒體同日各自報導同一事實
 - Dataconomy（11/06 10:00 UTC）同日另以「官方放任缺陷不修」角度報導同一事件，與 The Register 11-05 說法一致，未補充新事實
 
@@ -204,7 +205,11 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **核心主張（僅標題可用）**：The Register 報導稱 Anthropic 確認 Claude Dispatch 存在一個安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令；官方決定不修補；缺陷具體觸發條件、是否已有在野攻擊案例均未見報導
 - **你能先做什麼**：在企業環境啟用 Claude Dispatch 跨團隊功能的管理者，留意官方是否後續提供規避建議
 - **可信度評估**：僅標題層級可用，官方「確認但不修補」的原始聲明出處未見報導，單一可辨識媒體來源
-- ❓ **待查證**（標 2026-11-05｜查 Dispatch、跨企業邊界｜複 2026-11-19｜訊 2026-11-06）｜**缺陷觸發條件與在野攻擊案例**：CyberSecurityNews／The Hacker News（11-06）報導具體攻擊鏈為惡意瀏覽器外掛；影響範圍、是否已有實際在野攻擊案例仍未見報導
+- 🔎 **查無官方**（標 2026-11-05｜查 Dispatch、跨企業邊界｜複 2026-12-21）｜**缺陷觸發條件與在野攻擊案例**：2026-11-21 搜尋官方頁面未見 Anthropic 說明。
+  - 媒體稱（The Register、Daily Security Review、Let's Data Science 轉述；研究者 Gal Weizman／Forever Security，代號 ThisBash）：攻擊鏈共六步。
+  - 觸發條件：瀏覽器裝有對 claude.ai 具權限的外掛（惡意，或遭入侵的合法外掛）、Claude Desktop 啟用 Dispatch 且已登入，不需瀏覽器漏洞；截至報導未見在野攻擊。
+  - 官方態度：一說 Anthropic 5 月已接受通報、但歸為既有已知問題的重複；Anthropic 未回覆 The Register 的提問。
+  - 研究者稱 Anthropic 將下架 Dispatch，但 Claude Code Remote Control 與 Cowork 工作階段仍可被同法利用。
 
 #### Mezha.net／Notebookcheck／BigGo Finance：Postman 用戶端更新未經同意把外掛加入 Claude Code 與 Codex 設定（2026-11-05 新增，三源同報）
 
@@ -212,23 +217,38 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **核心主張（僅標題可用）**：三篇報導稱 Postman 用戶端的一次更新在未告知使用者的情況下，把自家外掛加入 Claude Code 與 Codex 的設定檔；BigGo Finance 將此事定位為加深開發工具信任危機的案例；外掛具體功能、如何移除、是否涉及資料存取，三篇均未見報導
 - **你能先做什麼**：裝有 Postman 用戶端、同時使用 Claude Code 或 Codex 的開發者，檢查自己的設定檔是否被動加入未預期的外掛
 - **可信度評估**：三個獨立媒體同日交叉報導提高訊號強度，但均止於標題層級，外掛行為與移除方式未見任一方提供證據
-- ❓ **待查證**（標 2026-11-05｜查 Postman、Codex｜複 2026-11-19）｜**外掛具體功能與移除方式**：外掛做了什麼、是否涉及資料存取或外送、使用者如何移除，三篇報導均未載
+- 🔎 **查無官方**（標 2026-11-05｜查 Postman、Codex｜複 2026-12-21）｜**外掛具體功能與移除方式**：2026-11-21 搜尋補到（媒體稱）。
+  - 一名開發者稽核發現 Postman 桌面版把自家外掛裝進 Claude Code 與 Codex，Codex 設定多出外掛市集與受信任的 session-start hook。
+  - Postman 自家文件描述其一鍵安裝器會對偵測到的每個 coding agent 安裝外掛、且可代使用者自動核准 session-start hook；爭議在於由桌面 app 自動安裝而非使用者主動執行。
+  - 外掛資料外送與否未見證據；一則韓文報導標題稱其嘗試共享 API 資料，未證實。
+  - 移除：手動檢查 `~/.codex/config.toml` 與 `~/.claude/settings.json` 內的 Postman 項目。
+  - GitHub issue 截至 11 月初仍開著、Postman 無回應；一報導稱醫療業者 11-04 起取消 Postman 認證。
 
 #### CyberSecurityNews／dev.ua：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，重設密碼後仍可被濫用（2026-11-04 新增，跨兩來源）
 
 - **揭露來源**：Google News／CyberSecurityNews（11/04 07:35 UTC）、Google News／dev.ua（11/04 08:28 UTC），2 個獨立媒體同日各自報導
-- **核心主張（僅標題可用）**：兩篇報導稱新型資訊竊取型（infostealer）惡意軟體鎖定 ChatGPT、Claude 與 Copilot／Codex 等工具的帳號權杖（token）；CyberSecurityNews 指出竊得的權杖在使用者重設密碼後仍可存活並繼續被濫用，具體惡意軟體家族名稱、感染管道與受害規模均未見報導
+- **核心主張（僅標題可用）**：兩篇報導稱新型資訊竊取型（infostealer）惡意軟體鎖定 ChatGPT、Claude 與 Copilot／Codex 等工具的帳號權杖（token）。
+  - CyberSecurityNews 指出竊得的權杖在使用者重設密碼後仍可存活並繼續被濫用。
+  - 具體家族為 WardenStealer 與 Aoki（11-21 查，媒體稱；受害數 13 萬為單一來源數字）、感染管道為終端機被植入。
 - **與既有事件的關係**：與既有 08-31 官方警示「資訊竊取型惡意軟體偷走 session 憑證」（Vidar、LummaC2、StealC 等，見「### 2026-08」同日條目與母頁 [[topics/ai-agent-safety#現在還擋不住的攻擊]]）同屬憑證竊盜系列；本則首次點出「重設密碼不足以止損」，若屬實代表既有補救建議需補上撤銷 token 這一步
 - **你能先做什麼**：除改密碼外，同步撤銷所有既有登入 session／token 並檢查已授權裝置清單
 - **可信度評估**：兩個獨立媒體同日交叉報導提高訊號強度，但均止於標題層級，「重設密碼後仍存活」的技術機制未見任一方提供證據
-- ❓ **待查證**（標 2026-11-04｜查 CyberSecurityNews、Token Hunt｜複 2026-11-18）｜**惡意軟體家族、感染管道與受害規模**：是否為既有 Vidar／LummaC2／StealC 系列變體或全新家族、具體感染途徑與受害者數均未見報導
+- 🔎 **查無官方**（標 2026-11-04｜查 CyberSecurityNews、Token Hunt｜複 2026-12-21）｜**惡意軟體家族、感染管道與受害規模**：2026-11-21 搜尋未見「Token Hunt」字樣的原文，以下為同日同主題報導。
+  - 家族：WardenStealer（媒體稱經 SpyCloud 回報，自 2026-08-03 首見、逾 13 萬次不重複感染，單一來源數字）與 Aoki，皆為 Windows 資訊竊取程式。
+  - 管道：終端機被植入後竊取 Claude Code 憑證檔（OAuth 存取／更新權杖、MCP 授權材料），故重設密碼不會讓權杖失效，須撤銷權杖本身。
+  - 並非 Vidar／LummaC2／StealC 的變體；這三者見於 Anthropic 2026-08 對使用者的警告（官方頁未直接讀取，經 BleepingComputer／SecurityWeek 轉述）。
+  - Anthropic 對 13 萬數字無回應。
 
 #### OrcaRouter：「Claudy Day」稱三個 claude.ai 瑕疵可串接成攻擊鏈（2026-11-04 新增）
 
 - **揭露來源**：Google News／OrcaRouter（11/04 10:59 UTC）；僅標題可用，互動 0
-- **核心主張（僅標題可用）**：OrcaRouter 發文稱 claude.ai 存在三個瑕疵，串接後可組成攻擊鏈；三個瑕疵各自內容、串接方式與是否已通報官方均未見報導
+- **核心主張（僅標題可用）**：OrcaRouter 發文稱 claude.ai 存在三個瑕疵，串接後可組成攻擊鏈；三個瑕疵各自內容見下方 2026-11-21 查證（URL 參數不可見提示注入、claude.com open redirect、Files API 外洩）
 - **可信度評估**：單一來源、互動 0，原文未可讀，訊號強度低
-- ❓ **待查證**（標 2026-11-04｜查 OrcaRouter、Claudy Day｜複 2026-11-18）｜**三個瑕疵的技術細節與官方回應**：攻擊鏈具體組成、是否已修補、受影響範圍均未見報導，僅標題可用
+- 🔎 **查無官方**（標 2026-11-04｜查 OrcaRouter、Claudy Day｜複 2026-12-21）｜**三個瑕疵的技術細節與官方回應**：2026-11-21 搜尋確認這是舊事重述。
+  - OrcaRouter 文章（網址日期 2026-03-01）轉述 Oasis Security 的研究，原揭露在 2026-03；**修正**：本條 11-04 的「OrcaRouter 發文稱」應讀作舊事，非新揭露。
+  - 三個瑕疵：URL 參數的不可見提示注入、claude.com 的 open redirect、經 Anthropic Files API 外洩資料。
+  - 鏈起點是搜尋廣告或排名靠前的惡意頁面導向預填對話網址，預設 Claude.ai 工作階段即具備條件，不需外掛或 MCP。
+  - 媒體稱 Anthropic 已修補提示注入這一環、其餘基礎設施問題持續處理中；Anthropic 官方公告未見。
 
 #### Reddit／r/ClaudeCode（轉述 Reuters／NBC）：Binance 63 億美元竊案源頭查明為偽裝求職面試的程式測試題 repo，回報者稱全年收到同類樣本（2026-11-03 新增）
 
@@ -238,7 +258,11 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **與既有敘事的關係**：與本頁既有供應鏈／惡意套件系列（Keyv npm 蠕蟲 08-04、tikalk 倉庫植入 08-04、FakeAgent 07-27 等）同屬「偽裝成正常物件誘工程師自己觸發」模式，本則首見鎖定「求職面試考題」這一社交工程載體；回報者發文於 r/ClaudeCode，暗示情境可能是收到測試題後未經檢視就交給 agent 執行
 - **你能先做什麼**：收到外部求職或外包方寄來的程式測試題 repo，先自己看過程式碼內容，不要在未經檢視前直接交給 agent 執行或安裝依賴
 - **可信度評估**：核心事實（Binance 竊案源自求職面試偽裝測試題）引自 Reuters／NBC 主流媒體調查報導（經 Reddit 轉述，原文本輪未直接取得）；「全年持續收到同類樣本」為貼文作者個人陳述，無法第三方驗證，與 Claude Code 的直接關聯（是否經由 agent 執行觸發）亦未見報導證實
-- ❓ **待查證**（標 2026-11-03｜查 Binance、coding assignment、求職測試題｜複 2026-11-17）｜**攻擊鏈細節與是否涉及 agent 自動執行**：Reuters／NBC 原文本輪未直接取得，惡意程式的具體觸發機制、受害規模是否僅限本案均未見報導
+- 🔎 **查無官方**（標 2026-11-03｜查 Binance、coding assignment、求職測試題｜複 2026-12-21）｜**攻擊鏈細節與是否涉及 agent 自動執行**：2026-11-21 搜尋補到（媒體稱）。
+  - 來源：Reuters 經 Deccan Chronicle 轉載、Axios 11-03、BleepingComputer 引 Binance 自述。
+  - 攻擊始於 6 月：假招聘人員在第二輪面試經社群聊天軟體要求工程師從線上程式庫下載「程式測試題」，另有藏在廣告裡的軟體入侵兩名員工電腦。
+  - 再以第三名員工的電腦轉出約 63 億美元；北韓歸因為媒體推測，Binance 未明確連結特定行動。受害範圍說法分歧（Reuters 稱兩台被入侵加一台轉帳，他報稱三名工程師）。
+  - **是否涉及 agent 自動執行**：具名媒體均未提及，Binance 原始聲明本輪連不上、未讀。
 %% 未列入現況表：表滿載，2026-11-03（母頁「現在還擋不住的攻擊」11 列已滿，逐列核對均未滿 90 天且無 ✅／⛔+替代方案可退場）%%
 
 ### 2026-10
@@ -387,7 +411,10 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 - **核心主張（僅標題可用）**：Startup Fortune（經 Google News）報導標題稱，資安研究者指出 Anthropic 的 MCP（Model Context Protocol）存在缺陷，使約 20 萬台伺服器面臨風險；具體攻擊鏈、是否為協定規格本身缺陷（而非特定實作）、受影響版本範圍均未見報導
 - **與既有 MCP 系列條目的關係**：本頁已有 08-27／28（gbhackers、Wiz，查證為 LiteLLM 特定實作缺陷）與 09-28（Cycode：MCP Python SDK 帳號劫持）兩起 MCP 相關揭露，查證後均非協定規格本身問題；本則聲稱規模達 20 萬台若屬實將是本系列最大規模的一則，惟目前僅標題可用，是否重疊既有缺陷或為新發現未明
-- 🔎 **查無官方**（標 2026-10-06｜查 Startup Fortune、200,000 servers、MCP protocol｜複 2026-11-21）：2026-10-24 搜尋 anthropic.com 與主流報導，Anthropic 一手聲明未見
+- 🔎 **查無官方**（標 2026-10-06｜查 Startup Fortune、200,000 servers、MCP protocol｜複 2026-12-21）：2026-10-24 搜尋 anthropic.com 與主流報導，Anthropic 一手聲明未見。
+  - 2026-11-21 重查仍無 Anthropic 官方聲明；讀 [modelcontextprotocol/python-sdk 的 SECURITY.md](https://github.com/modelcontextprotocol/python-sdk/blob/main/SECURITY.md)，僅載支援版本與通報流程，**未見** STDIO 警語。
+  - 媒體稱（SecurityWeek、VentureBeat、CSA 研究筆記；非官方）：OX Security 2026-01-07 通報，Anthropic 回覆此行為屬預期（by design），開發者須自行清理傳入 StdioServerParameters 的輸入。
+  - 另稱 9 天後在 SECURITY.md 加註謹慎使用 STDIO（與讀到的 python-sdk 版本不符，可能指別的 repo，未證實），未改架構；CSA 筆記稱 CVE 已增至至少 14 個。
   - 媒體稱（Computing、The Register、TechRadar；OX Security 研究，2026-04-15 首披）：MCP 的設計選擇使有漏洞的實作可被任意執行指令，OX 估計最多約 20 萬個實例、1.5 億次下載，個別工具已發至少 10 個高／嚴重 CVE
   - 媒體稱：Anthropic 回應此屬「預期行為」、僅更新安全指引，OX 稱未解決根因；Startup Fortune 10-06 標題疑為同一揭露的重報（推論，原文未讀）
 
@@ -715,15 +742,15 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **[🟡 跟進，無新事實] CyberSecurityNews／Dev.ua：另文跟進 #107757 User-Agent 外洩 email 事件**：原文均無可讀內文，未補充官方回應或技術細節，詳見「## 技術彙整」
 
 #### 2026-11-05
-- **[🔴 新增，官方確認不修補] The Register：Anthropic 確認 Claude Dispatch 存在安全缺陷，可跨企業邊界執行遠端指令，官方決定不修補**：缺陷觸發條件與在野攻擊案例均未見報導，詳見「## 技術彙整」
-- **[🔴 新增，三源同報] Mezha.net／Notebookcheck／BigGo Finance：Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定**：外掛具體功能與移除方式未見報導，詳見「## 技術彙整」
+- **[🔴 新增，官方確認不修補] The Register：Anthropic 確認 Claude Dispatch 存在安全缺陷，可跨企業邊界執行遠端指令，官方決定不修補**：觸發條件為裝有 claude.ai 權限外掛的瀏覽器加啟用 Dispatch 的 Claude Desktop，未見在野攻擊（媒體稱，11-21 查），詳見「## 技術彙整」
+- **[🔴 新增，三源同報] Mezha.net／Notebookcheck／BigGo Finance：Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定**：移除靠手動刪設定檔項目、資料外送未見證據（媒體稱，11-21 查），詳見「## 技術彙整」
 
 #### 2026-11-04
 - **[🔴 新增，跨兩來源] CyberSecurityNews／dev.ua：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，重設密碼後仍可被濫用**：與既有 08-31 infostealer 事件同屬憑證竊盜系列，首次點出改密碼不夠，詳見「## 技術彙整」
-- **[📋 新增，僅標題可用] OrcaRouter：「Claudy Day」稱三個 claude.ai 瑕疵可串接成攻擊鏈**：攻擊鏈細節與官方回應均未見報導，詳見「## 技術彙整」
+- **[📋 新增，僅標題可用] OrcaRouter：「Claudy Day」稱三個 claude.ai 瑕疵可串接成攻擊鏈**：原揭露為 2026-03 Oasis Security 研究，攻擊鏈細節見「## 技術彙整」，官方公告未見
 
 #### 2026-11-03
-- **[📋 新增，低可信度] Reddit／r/ClaudeCode（轉述 Reuters／NBC）：Binance 63 億美元竊案源頭查明為偽裝求職面試的程式測試題 repo**：回報者稱全年持續收到同類暗藏漏洞樣本，Claude Code 的直接關聯未見報導證實，詳見「## 技術彙整」
+- **[📋 新增，低可信度] Reddit／r/ClaudeCode（轉述 Reuters／NBC）：Binance 63 億美元竊案源頭查明為偽裝求職面試的程式測試題 repo**：回報者稱全年持續收到同類暗藏漏洞樣本，Claude Code 的直接關聯未見報導證實（11-21 查：媒體亦未提 agent 自動執行），詳見「## 技術彙整」
 
 ### 2026-10 時序
 
@@ -868,7 +895,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
   - HN 留言當時質疑「沒有細節、沒有可重現步驟」——**2026-08-22 直查 issue 頁後此質疑已不成立**：回報載明 v2.1.212、macOS、IntelliJ IDEA、Anthropic API、Sonnet 5.0，並標為回歸（舊版無此行為），官方已掛 `bug`／`area:security`／`area:networking` 標籤完成分類。
   - **未解的是修復進度**——issue 仍 open、無 assignee、無官方回覆、無關聯 PR，亦未見任何版本 changelog 提及修復（[Issue #78431](https://github.com/anthropics/claude-code/issues/78431)，2026-08-22 查證）。同步見 [[entities/claude-code]] 已知問題。
   - **後續（2026-10-29）**：另一條使用者 email 外洩路徑經 Hacker News／GitHub Issue #81138／Reddit 揭露，機制為 prompt／context 層而非 User-Agent header，是否同源未見報導，詳見「## 技術彙整」2026-10-29 條目。
-- 🔎 **查無官方**（標 2026-08-12｜查 deep_think、_can1357｜複 2026-11-20）｜**推文指稱 OpenAI 與 Anthropic 於 deep_think 工具外洩隱藏思維鏈**：
+- 🔎 **查無官方**（標 2026-08-12｜查 deep_think、_can1357｜複 2026-12-21）｜**推文指稱 OpenAI 與 Anthropic 於 deep_think 工具外洩隱藏思維鏈**（2026-11-21 重查：WebSearch 找不到 deep_think 工具或 @_can1357 此說的任何其他來源與官方回應，僅見無關的 CoT 擷取研究；維持查無）：
   - Hacker News（54 分，2026-08-11 22:06 UTC）連往一則推文（@_can1357），指稱兩家提供 deep_think 工具時會外洩隱藏的思維鏈（CoT）內容；原文僅為推文截圖，HN 留言僅屬猜測性討論（https://twitter.com/_can1357/status/2087228354399265125）。
   - **2026-09-20 查證：OpenAI 與 Anthropic 官方均未就此表態**，亦查無 CVE、無具名研究者的論文或技術報告。
   - 網路上的後續全是內容農場型聚合站互相轉述同一則推文，未新增可驗證證據。**本則維持單一匿名來源，不得升格為已證實的漏洞**

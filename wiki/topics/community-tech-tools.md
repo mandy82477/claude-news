@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 1
-inbound_links: 56
+inbound_links: 57
 attribution_count: 15
 attribution_last: "2026-09-26"
 top_source: "github"
@@ -82,7 +82,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **agent-usage-guard 是預防式 mod，不是提醒**（Show HN，10-22）：快取過期或內容過大時提示先壓縮、用量超過 80% 擋下繼續生子 agent；作者自稱 75 天實測單次爆量的 agent 數從 365 降到 27，只有這一筆自測、無第三方回報，額度這一列首選不變。
 - **額度告警這一列的其他選項**：CCLimitPing（45★、09-14 仍在更新）解的是「額度一解封就自動接著跑」不是提醒，要它去下面目錄拿連結。
 - **Nekot 與 syrtis 是額度告警的新選項，都沒有使用回報**（10-24～10-28）：Nekot（Show HN，iPhone app）在用量即將觸頂前提醒，HN 1 分、單一來源；syrtis（501★）是 macOS 選單列、追蹤 25 種以上 agent 的用量，偏事後歸因而非事前告警。這一列首選不變。
-- **context 撐爆這一列多了 context-mode**（11-02）：本機沙箱加 SQLite FTS5，輸出不進 context、不經代理層，宣稱省 99%（自述）；33,266★，2026-06-29 後僅機器人提交，首選 pxpipe 不變。
+- **context 撐爆這一列多了 context-mode**（11-02）：本機沙箱加 SQLite FTS5，輸出不進 context、不經代理層，宣稱省 99%（自述）；33,266★，11-18 仍有真人 commit（11-21 查 GitHub），首選 pxpipe 不變。
 - **Nomos 對應「說做完了但沒做」，仍無使用回報**（Show HN，11-02）：Go 靜態執行檔，擋 agent 用刪測試、回傳假值讓編譯過關；Sentient 與 intent-lens 解的是「動手前先看清」，不對應任何症狀列，首選 Groundtruth 不變。
 - **claim-check 與 Groundtruth 解同一個症狀**（dev.to，11-12）：claim-check 的 Stop hook 在「fixed」「tests pass」缺證據時退回；作者自測 0.2.0 擋 86 則、手查 24 則中 18 則屬實，僅單一作者；Groundtruth 07-20 後未更新，下輪複查，首選暫不換。
 - **盯 agent 狀態的新品都只有單一來源**（11-03～11-11）：Aq（Show HN，hooks 排注意力佇列）、capri-desktop（517★，旁白目前進度），首選 Omar 不變。
@@ -252,7 +252,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**victorcarrico/arvre**](https://github.com/victorcarrico/arvre) | IDE/終端 | ⏳ | 2026-11-02 | Show HN：終端圖形化檢視 Claude Code 的 session 與 fork 分支；作者自述週末個人專案，HN 1 分 |
 | [**mgantlett/nomos**](https://github.com/mgantlett/nomos) | 安全工具 | ⏳ | 2026-11-02 | Show HN：28MB 靜態 Go binary，擋 agent 用刪測試、回傳假值、改規格讓編譯過關；HN 單來源，無使用回報 |
 | [**Dhananjay-JSR/intent-lens**](https://github.com/Dhananjay-JSR/claude-mods/tree/main/plugins/intent-lens) | 安全工具 | ⏳ | 2026-11-02 | Show HN：Claude Code 外掛，執行前用一行白話說明要做什麼，`rm -rf`、強推整行變紅；預設不額外呼叫模型 |
-| [**mksglu/context-mode**](https://github.com/mksglu/context-mode) | 搜尋/診斷 | ⏳ | 2026-11-02 | 本機沙箱＋SQLite FTS5，把工具輸出留在 context 外，宣稱省 99%；33,266 星，近 4 個月無真人 commit |
+| [**mksglu/context-mode**](https://github.com/mksglu/context-mode) | 搜尋/診斷 | ⏳ | 2026-11-02 | 本機沙箱＋SQLite FTS5，把工具輸出留在 context 外，宣稱省 99%；33,266 星，11-18 仍有真人 commit |
 | [**altsang/claude-tandem**](https://github.com/altsang/claude-tandem) | 工作流 | ⏳ | 2026-11-02 | Show HN：管理多組 Claude 帳號與 profile，並在多台 Mac／iPhone 間搬移 session 狀態；HN 單來源 |
 | [**Smalt**](https://getsmalt.com/) | 其他 | ⏳ | 2026-11-02 | Show HN：macOS 語音操作 Claude Code，說話下指令、聽語音回覆；HN 單來源 |
 | [**patch-gg/pixelfx**](https://github.com/patch-gg/pixelfx) | Skills | ⏳ | 2026-11-01 | 244 種像素藝術特效各為一小段程式碼，附 Claude Code skill 供自製新特效；2,351 星，僅星數佐證 |

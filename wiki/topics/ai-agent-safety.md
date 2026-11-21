@@ -3,7 +3,7 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-20"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-12"
 status_main: "ongoing"
 days_since_news: 9
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-20
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
@@ -66,6 +66,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 維運備忘：本表上限 11 列，退場與補位判準見 `.claude/reporter-rules/safety-policy/pages.md`「topics/ai-agent-safety」節第 2 條 %%
 %% 最後動態（列內無日期者）：套件供應鏈列＝2026-08-29（Alon Hertz `llms.txt` 揭露；前一則 Keyv npm 蠕蟲 2026-08-04），90 天退場判定日 2026-11-27 %%
 %% 2026-11-14 複查（11 列全查，移除 0／補位 0／滿載 11/11）——逐列最後動態與 90 天判定日：Auto 模式列＝2026-08-31（embracethered／The Register 實測 60–80%，見 prompt-injection 2026-08-31 條），判定日 2026-11-29；Gmail 代寄列＝2026-08-19（媒體報導，無後續），判定日 2026-11-17；deny-list 列＝2026-09-11（Show HN 8 種繞過），判定日 2026-12-10；資訊竊取型惡意軟體列＝2026-08-30（官方通知），判定日 2026-11-28。下輪先看 Gmail 與套件供應鏈兩列 %%
+%% 2026-11-21 複查（11 列全查）：Gmail 代寄列（最後動態 2026-08-19）逾 90 天判定日 11-17，本輪 8 週日報零新事實，依第 2 條退場——事實仍在 [[topics/ai-agent-safety-product-vulns]]；補位為「外洩或遭竊的 API 金鑰可被遠端遙控」（Help Net Security 2026-11-12，2 來源；與 11-07 金鑰外洩同一個讀者動作，依第 2 條合為一列）。其餘 10 列判定日未到：套件供應鏈 11-27、資訊竊取型惡意軟體 11-28、Auto 模式 11-29、deny-list 12-10。下輪先看套件供應鏈與資訊竊取兩列 %%
 %% 2026-11-05：灰市轉售折扣帳號列（最後動態 08-06）距今逾 90 天，本輪無新事實，依第 2 條退場；事實仍在 [[topics/ai-agent-safety-product-vulns]] 2026-08 技術彙整。Claude Dispatch 新列（The Register，2026-11-05）補位 %%
 
 | 擋不住的是什麼 | 誰會遇到 | 狀態 | 官方擋到哪 | 你能先做什麼 |
@@ -78,9 +79,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 一句模糊的指令就可能讓它遞迴強制刪掉整個資料夾 | 用自然語言派刪除或整理任務、且沒有備份或版本控制的人 | 🔴 | 無回應（2026-04-28、2026-08-12、2026-09-17 三起同構事件；09-25 傳第四起 48,000 檔案案例，單一來源，見產品漏洞子頁 09-25 條目） | 動資料前先建備份；把 DROP、DELETE、`rm -rf` 設成要顯式確認才放行 |
 | 套件供應鏈：受感染 npm 套件植入 SessionStart hook；`llms.txt` 指向未註冊套件名可被搶注 | 讓 agent 照建議裝套件的人；安裝過受感染 npm 套件的開發環境 | 🔴 | 無回應（第三方生態；惡意版本帶有效簽章，常規信任檢查失效） | 裝套件前確認套件名已註冊、作者對得上；檢查專案裡有沒有不是你建立的 `.claude/settings.json` hook |
 | 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶：強制登出、移除已存付款方式、退款未授權扣款；平台本身未被入侵；11-04 另有報導稱新變種 token 重設密碼後仍可濫用，官方未回應 | 安裝檔只從官方 Releases 取；被強制登出後重新加付款方式，並核對帳單有無未授權扣款；僅改密碼不夠，需同步撤銷既有登入憑證／token |
-| Gmail 整合可未經詢問直接寄信，不再需要人工確認草稿 | 已啟用 Gmail 整合的人 | 🔴 | 無獨立官方安全說明（2026-08-19 媒體報導） | 把信箱權限收成唯讀搜尋，不給代寄與刪信 |
+| 外洩或遭竊的 Claude API 金鑰可被拿來把 Claude Code 當成遠端遙控植入程式 | 金鑰曾進過公開 repo、容器映像或共用設定檔的人 | 🔴 | 無獨立官方安全說明（2026-11-12 Help Net Security，2 個來源；與 11-07 揭露的「是，並不要再問」選項外洩密碼與金鑰為同一個讀者動作） | 立刻輪替所有 Claude API 金鑰，改用範圍最小的金鑰，並掃一次自己的公開 repo 與映像 |
 | 任何網站都能把指令檔丟進你的 Downloads 資料夾，Claude Code／Codex 會照著執行 | 允許 Claude Code 或 Codex 存取 Downloads 資料夾的使用者 | ❓ | 已查官方公告與 CHANGELOG，查無修補（2026-11-14；2026-10-26／10-27 兩個獨立來源披露，觸發機制未見報導） | 定期清空或隔離 Downloads 資料夾，別讓 agent 自動讀取裡面你沒建立的檔案 |
-| Claude Dispatch 存在安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令 | 在企業環境啟用 Claude Dispatch 跨團隊功能的管理者 | ⛔ | 官方確認但決定不修補（11-05 The Register）；11-06 CyberSecurityNews／The Hacker News 曝攻擊鏈為惡意瀏覽器外掛，僅標題可用 | 無繞法（官方未提供規避建議）；優先檢查已連接裝置上的瀏覽器外掛來源 |
+| Claude Dispatch 存在安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令 | 在企業環境啟用 Claude Dispatch 跨團隊功能的管理者 | ⛔ | 官方確認但決定不修補（11-05 The Register）；攻擊鏈為惡意瀏覽器外掛（11-06）；媒體稱 11-21 查未見在野攻擊 | 無繞法（官方未提供規避建議）；優先檢查已連接裝置上的瀏覽器外掛來源 |
 
 另有偽裝求職面試程式測試題 repo 的供應鏈攻擊案例（Binance 竊案源頭）與「是，並不要再問」選項外洩密碼／金鑰案例（1,994 個倉庫、2,539 組密鑰，11-07），見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 
@@ -108,15 +109,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 提示注入
 
-十月沒有改變收斂點：代理讀進來的東西仍沒有一層在問「憑什麼可信」；多出來的是新載體（Markdown 檔、Downloads 資料夾、HTTP 標頭）與第一個官方模型層數字。證據與訊號表見 [[topics/ai-agent-safety-prompt-injection]]。
+十一月仍沒改變收斂點：代理讀進來的東西仍沒有一層在問「憑什麼可信」。本月多的是 Claude Code 記憶功能這個新載體（11-17，媒體稱、未讀原文）。證據與訊號表見 [[topics/ai-agent-safety-prompt-injection]]。
 
 ### 自我複製／蠕蟲化
 
-最深一階仍是官方實驗室實測（10-12，小型模型在物聯網裝置上），沒有在野蠕蟲案例；七階證據見 [[topics/ai-agent-safety-prompt-injection#自我複製／蠕蟲化]]。
+最深一階仍是官方實驗室實測（10-12，小型模型在物聯網裝置上），本月無新階、仍無在野蠕蟲案例；七階證據見 [[topics/ai-agent-safety-prompt-injection#自我複製／蠕蟲化]]。
 
 ### 產品層漏洞與誤操作
 
-已修的升到 stable 就躲得掉（2026-11-14 npm stable 是 2.1.311）；升版也還開著的是上表的 email 外流與誤刪類，以及 `.git` 第二變體（2.1.252 之後未見查證；攻擊手法是塞進 repo 設定，事件住 [[topics/ai-agent-safety-prompt-injection#2026-09]]）。逐則版本與狀態見 [[topics/ai-agent-safety-product-vulns#目前結論]]。
+**這週變的是「升上去」本身的成本**：npm stable 由 2.1.311 一次跳到 **2.1.323**（2026-11-21 查證），已修的漏洞躲得掉，但同一跳會一次吃下三項會改到既有行為的變更，升版前先看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]。升版也還開著的仍是上表的 email 外流與誤刪類，以及新補上表的金鑰外洩一列。逐則見 [[topics/ai-agent-safety-product-vulns]]。
 
 ### 模型網攻能力與防護
 
@@ -135,7 +136,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **要擋 Auto 模式、惡意 `.git`、供應鏈三列** → 沙盒隔離（SmolVM）：讓 Claude Code 在隔離的本機容器裡跑，宿主系統不受影響。
 - **要擋遞迴刪檔那一列** → 每步驟人工確認（EvanFlow）＋備份先行：不自動 commit，動資料前先建備份。
 - **要擋「它說做完了其實沒做」** → 完成驗證 Hook（Groundtruth）：宣告完成前必須交出可驗證的執行證明。這不擋攻擊，擋的是誤信。
-- **要擋 Gmail 誤發那一列** → 權限最小化：設定成只能搜尋信箱、不能代寄或刪信（2026-08-27）。
+- **要擋金鑰外洩那一列** → 金鑰輪替＋範圍最小化：把長期全權金鑰換成範圍最小、可單獨撤銷的金鑰，並掃一次公開 repo 與容器映像（2026-11-21）。
 - **企業要買現成的** → Radware（2026-07-07）、CrowdStrike Falcon AIDR（2026-07-31）已把 Claude Code 防護納入產品線，含合規與稽核報告。
 
 ---
@@ -143,6 +144,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 逐則事件依類別住三個子頁（見「每一類住哪一頁」）；本節只留判不出歸哪一頁的事件，以及 2026-07 以前各月的總結。
+
+### 外界怎麼質疑它的安全主張
+
+- **〈The MisAnthropic Statement〉聯名信：「Anthropic is Not a Safe AI Company」（2026-11-18）**
+  - 以下全為具名媒體轉述（The National、Gizmodo、OfficeChai、City AM），`businesswire.com` 本輪連不上、未讀原文
+  - 主張：一邊警告遞迴自我改進 AI、一邊競相打造它；稱其削弱自家安全承諾、遊說有利自己的監管
+  - 結語是要「拒絕它以公益之名積累權力」；時機落在 IPO 定價前數日
+  - 具名簽署人：Thomas Wolf（Hugging Face）、Igor Babuschkin（xAI）、Steven Pinker、Max Tegmark、[[entities/gary-marcus|Gary Marcus]]；Center for AI Safety 加入，網站當時列 89 人
+  - Gizmodo 評為措辭寬泛、簽署動機混雜（Wolf 與 Babuschkin 的公司是競爭者）；Anthropic 回應稱有「業界最強的安全防護之一」
+  - IPO 面見 [[topics/anthropic-ipo]]
+- **Morningstar Sustainalytics 給「高風險」ESG 評級（2026-11-16 報告，11-18 經 ESG Dive 報導）**
+  - 評級方是 Morningstar Sustainalytics，不是泛稱的「投資機構」，也不是 ESG Dive
+  - 商業倫理風險「嚴重」、人力資本「高」，產品治理的管理面則評為強
+  - CryptoBriefing 稱總分 32.1，落在高風險區間（30–39.99），商業倫理與人力資本合計佔近半
+  - 「倫理風險與大規模資料蒐集有關」只在一次檢索出現、另一次未重現，不當定論
+  - 以上數字全為媒體稱；原始報告與 ESG Dive 原文本輪皆連不上、未讀，不升格為官方數字
 
 ### 2026-07（時段總結）
 

@@ -3,7 +3,7 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-18"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-18"
 status_main: "ongoing"
 days_since_news: 3
@@ -11,12 +11,12 @@ parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 3
-inbound_links: 165
+inbound_links: 164
 attribution_count: 218
 attribution_last: "2026-11-18"
 top_source: "google-news"
-pending_count: 17
-pending_overdue: 4
+pending_count: 15
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 0
 staleness_exempt: null
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-11-18
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-18
 %% 拆頁評估 2026-10-25：不拆，理由＝分得出群但每群太薄（<150 行）。全列各節所答：摘要／現在有哪幾條線在動／誰在動／政府動作對你的產品做了什麼／根本矛盾／三個戰場＝「政府對 Claude 做了什麼」的結論層（約 262 行，一個故事，不可再分）；攻防紀錄 172＋時序 366 為事件流，依主題粗估可分三群（含結論層相關列）：軍事／五角大廈／聯邦採購約 106 行、出口管制／中國／蒸餾／地區約 127 行、立法／遊說／監管調查約 158 行，只有立法群過 150，其餘兩群併鄰群後仍與其交錯（中國線同時跨出口管制、蒸餾、香港），且 134＋43 行無法歸群；下次蒸餾 2026-07～08 時段後再量。 %%
 
@@ -139,13 +139,13 @@ S-1 寫了哪些風險、誰能叫停、與既有承諾對得上多少。下表�
   %% 09-27 讓位給澳洲參議院AI調查聽證會線（表滿載） %%
 - **澳洲參議院AI調查聽證會**：09-27 至少 4 個來源報導傳喚 OpenAI、Anthropic 執行長出席聽證會；09-28 Reuters／The Guardian 報導兩公司確認不出席 10 月 1 日聽證會，衛報將此與 OpenAI 遭駭事件餘波並提；具體法律強制力與衛報所稱關聯均未見報導。與既有「澳洲著作權遊說」線（07-13 起）當事國相同、議題不同，是否同一佈局待後續釐清。
 - **英國測試機構模型存取受限**：Politico（09-24）與 Bloomberg（09-25）跨媒體報導白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查，僅標題可用。與 09-09「未依 AISI 要求提交 Mythos 5.1」時間相近，惟兩則報導未建立因果關係，暫不合併。
-  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就此發布任何說明**；後續媒體稱（Kuwait Times 轉述英國 AI 部長）英方保留早期存取，另一報導稱 10-11 恢復，均為單次檢索。
-  - ❓ **待查證**（標 2026-09-25｜查 Kuwait Times、early access、AISI）｜**英方是否保留早期存取、10-11 是否恢復**：兩說互斥，已掃日報至 2026-11-20 無後續；官方頁面未查證。
+  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就此發布任何說明**；2026-11-21 再查 AISI 官網與搜尋仍無官方說明；英方存取恢復的具名媒體與部長說法見下一條。
+  - **英方早期存取已恢復（媒體稱，2026-11-21 查證）**：媒體稱（Telegraph、FT，經 TechRepublic、CryptoBriefing 轉述）白宮撤回暫緩要求，英國 AISI 約 10-11 重獲發布前存取，凍結約 17 天；英國 AI 部長 Kanishka Narayan 10-12 公開稱英方已獲取得測試新模型的存取（Reuters 經 The Star），11-03 再稱對存取有信心。Kuwait Times「英方保留早期存取」與「10-11 恢復」因此是先後而非互斥。**仍分歧**：Mythos 5.1 是否一併恢復——IBTimes 稱仍限美國機構、MLex 稱僅少數美國機構取得；AISI 官網、白宮與 Anthropic 官方頁均未載。
     - 具名媒體補上的部分：Politico 首報，要求來自白宮國家網路主任辦公室（Office of the National Cyber Director），資深政府官員稱這是對美國 AI 公司的標準做法；Anthropic 已照辦——Mythos 5.1 未交給英國 AISI、存取限美國機構，並稱正與美國政府合作擴大對國內外夥伴的開放。
     - 英國 AISI 主任 Henry de Zoete 稱該機構仍保有部分模型的發布前存取（含 OpenAI 的 GPT-6 Astra）。**媒體說法分歧**：一方稱涵蓋兩家所有新模型（含 Opus 5.5 與 09-22 發布的 GPT-6 Sol／Luna），一方稱只涉 Mythos 5.1。**仍未有答案的**：審查期限
   %% 2026-10-10 讓位給白宮通報義務線（表滿載） %%
 - **白宮要求 AI 公司比照通報類似「非預期行為」事故**：Axios 獨家報導，起因為 Anthropic 測試用 agent 誤送費城警局假兇殺案線報（7/18，9/28 才查覺，10/7 才通報）與美國國務院 20 份假簽證申請；Axios 稱適用所有 AI 公司，生效時程與罰則未載。事件技術面見 [[topics/ai-eval-boundary-incidents#事件年表]]。
-  - 🔎 **查無官方**（標 2026-10-10｜查 Axios、White House AI reporting、unintended model actions｜複 2026-11-21）：2026-10-24 查白宮官網與 Anthropic [官方貼文](https://www.anthropic.com/research/investigating-unintended-model-actions)，後者僅載已向白宮簡報、未提通報義務；白宮聲明全文未見
+  - 🔎 **查無官方**（標 2026-10-10｜查 Axios、White House AI reporting、unintended model actions｜複 2026-12-21）：2026-10-24 查白宮官網與 Anthropic [官方貼文](https://www.anthropic.com/research/investigating-unintended-model-actions)，後者僅載已向白宮簡報、未提通報義務；白宮聲明全文未見；2026-11-21 重查仍無白宮官方全文，Axios 10-09 獨家（〈Anthropic breaches spark White House AI reporting mandate〉）已確認存在，多家轉述一致稱未載強制手段或罰則；簽證申請的數字媒體稱為 8 月 19 份、5 月 1 份且均未獲處理（與本條「20 份」合計吻合），費城假線報在本輪搜尋只見單一來源提及
     - 媒體稱（Axios 10-09 獨家，經 Digg、AI Weekly 轉述）：官員稱 AI 公司須通報並補救模型安全事故，期待立即通報、配合聯邦與州執法、補救損害，適用所有公司；未載強制手段或罰則
     - 背景：Axios 09-09 曾報導川普 AI 框架缺公開事故通報指引，國會亦未立法；法源依據未見
 - **歐盟監管姿態與據點爭奪**：07-31 歐盟稱將加強監控高風險 AI 系統部署，尚未提出針對 Anthropic 的具體措施；奧地利已向歐盟提案邀請 Anthropic 設立歐盟據點（06-28）。距今最後動態 07-31，滿 90 天為 **2026-10-29**。未列入上表，此處續留追蹤。
@@ -202,7 +202,7 @@ S-1 寫了哪些風險、誰能叫停、與既有承諾對得上多少。下表�
 
 **3. 送給 Fable 5 的高風險 cybersecurity 請求會改由 Opus 4.8 執行。** Anthropic 在 2026-06-30 的「Redeploying Claude Fable 5」公告中說明 Defense in Depth 機制：安全分類器判定為潛在有害的 cybersecurity 請求，「the request will instead be sent to Opus 4.8」；「Users will be notified if a request to Fable 5 is blocked」——**被擋時你會收到通知，不是靜默降級**。Amazon 通報的那項特定技術官方稱「blocked in over 99% of cases」，代價則由官方自己寫明：日常 coding 與 debugging 任務會較常被誤標為可疑（原文 flagging benign requests more often during routine coding and debugging tasks）。07-02 已有使用者的合法安全審查請求被誤攔的公開案例。這是 07-01 解封時三項承諾中「主動偵測安全風險」的第一個具體實作。
 
-**適用範圍已涵蓋 Fable 5 與 Fable 5.1（2026-09-26 查證）。** 官方說明中心〈Why Claude switched models in your conversation with Fable 5〉逐字把四個觸發類別寫成同時適用兩代；本頁原記「官方未提及 5.1 是否沿用」已解消。同一份文件另載**接手的模型分兩路**：資安類請求由 Opus 4.8 接手，生物、化學與生命科學類請求由 Opus 5 接手——上一段只寫 Opus 4.8，指的是資安那一路。模型面的分類器細節（觸發比例、生物領域誤判修復）見 [[entities/fable-5]]，本節只寫「政府談判換來的承諾，落到你手上長什麼樣」。**你的選項**：把安全審查類工作拆成不觸發分類器的小步驟、看到通知後接受 Opus 4.8 的結果、或改用不經此分類器的通路。承諾追蹤見 [[topics/anthropic-commitments]]。
+**適用範圍已涵蓋 Fable 5、5.1 與 5.2，觸發類別由四類收斂為三類（2026-11-21 複查）。** 官方說明中心該文標題已改為〈Why Claude switched models in your conversation with Fable models〉，內文明載 "Claude Fable 5.2, Fable 5.1, and Fable 5 are Mythos-class models"。現在會觸發切換的是三類：**攻擊性資安**（接手 Opus 4.8）、**雙重用途生物**與**窄範圍前沿 LLM 開發**（兩者皆接手 Opus 5）。本頁此前記的「四個觸發類別」含獨立的「模型萃取（distillation）」已失效——distillation 分類器仍在，但官方只在計費段提到它；前沿 LLM 開發此前被記為「沒有繞法」，現在官方寫明它也會換模型。上一段只寫 Opus 4.8，指的是資安那一路。模型面的分類器細節見 [[entities/fable-5]]，本節只寫「政府談判換來的承諾，落到你手上長什麼樣」。**你的選項**：把安全審查類工作拆成不觸發分類器的小步驟、看到通知後接受接手模型的結果、或改用不經此分類器的通路。承諾追蹤見 [[topics/anthropic-commitments]]。
 
 ### 浮水印：法源、爭點與未解
 
@@ -375,7 +375,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 2026-09-27 | 🏛️ | 澳洲參議院傳喚 OpenAI、Anthropic 執行長出席 AI 調查聽證會 | 具體聽證會日期、調查範圍與傳喚法源均未見報導；至少 4 個來源（Reuters／Bloomberg／Al Jazeera／Anadolu Ajansı）同日報導，僅標題可用，詳見「## 時序」、「## 現在有哪幾條線在動」 |
 | 2026-09-25 | 🏛️ | D.C. 巡迴上訴法院推翻地院判決，維持五角大廈供應鏈風險認定；因拒絕依軍方要求啟用 Claude 特定功能（跨十餘家媒體同日報導，HN 426 分） | 黑名單回復生效；判決全文、是否上訴更高審級均未見報導，詳見「## 三個戰場」🪖 軍事合約段落與「## 現在有哪幾條線在動」第 4 列 |
 | 2026-09-25 | 🌐 | Reuters：Anthropic 投資人 Joe Lonsdale 稱 AI 公司渲染風險是為了影響政策走向，與同日法院維持黑名單一事同日出現 | 具體所指公司與政策訴求未見報導；呼應「## 根本矛盾」段落論述 |
-| 2026-09-25 | 🏛️ | Bloomberg／Politico：白宮／川普政府要求 OpenAI、Anthropic 暫緩向英國 AI 測試機構提供新模型，待美方完成審查 | 具體審查範圍、期限與是否涵蓋 09-09 Mythos 5.1 提交爭議均未見報導；兩媒體僅標題可用，詳見「## 時序」與「## 現在有哪幾條線在動」英國測試機構線 |
+| 2026-09-25 | 🏛️ | Bloomberg／Politico：白宮／川普政府要求 OpenAI、Anthropic 暫緩向英國 AI 測試機構提供新模型，待美方完成審查 | 媒體稱 10-11 前後凍結解除（約 17 天，2026-11-21 查）；Mythos 5.1 是否一併恢復仍有分歧；詳見「## 時序」與「## 現在有哪幾條線在動」英國測試機構線 |
 | 2026-09-24 | 🏛️🏢 | CNN／CNBC／FT：OpenAI 與 Anthropic 執行長於聯合國安理會同台呼籲訂定 AI 安全標準；Amodei 主張協議應「narrow（範圍限定）」而非全面性；川普此前已公開拒絕「全球主義陰謀」式的 AI 控制提案 | 具體標準草案、協議範疇與川普發言全文均未見報導；延續 09-22 Bloomberg「Amodei 將向聯合國安理會簡報 AI 風險」動態，首見公開呼籲具體立場，詳見「## 時序」|
 | 2026-09-24 | 🏢 | The Information（經 Google News）：Google、OpenAI、Anthropic 三方組成的 AI 安全聯盟正在成形 | 具體組織架構、成員範圍與運作機制均未見報導，僅標題可用；與 09-15 Anthropic／OpenAI「AI 安全反壟斷豁免提案」是否同一佈局延伸，報導未載，不逕自合併，詳見「## 時序」|
 | 2026-09-22 | 🏛️ | Gizmodo（經 Google News）：中國當局調查 DeepSeek、Moonshot AI，起因為 Anthropic 稱兩者曾將用戶請求轉發給 Claude 處理 | 具體調查機關、進度與 DeepSeek／Moonshot 官方回應均未見報導；延續既有中國線 09-11 Moonshot 挪用指控，首見中國監管機構對該指控的正式動作，詳見「## 現在有哪幾條線在動」中國線最後動態 |
@@ -705,8 +705,8 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
     - ❓ **待查證**（標 2026-10-13｜查 en banc、MLex、Law360｜複 2026-12-14）｜**全院重審聲請與裁定**：僅媒體轉述、官方未載；已掃日報至 2026-11-20 無後續；官方頁面未查證
 - **[🌐] Reuters：Anthropic 投資人 Joe Lonsdale 稱 AI 公司渲染風險是為了影響政策走向**：與同日法院裁定同日出現，詳見「## 攻防紀錄」
 - **[🏛️] Bloomberg／Politico：白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查**：Politico（09-24）與 Bloomberg（09-25）為同一政策動作的跨媒體報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」
-  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就此發布任何說明**；後續媒體稱（Kuwait Times 轉述英國 AI 部長）英方保留早期存取，另一報導稱 10-11 恢復，均為單次檢索。
-  - ❓ **待查證**（標 2026-09-25｜查 Kuwait Times、early access、AISI）｜**英方是否保留早期存取、10-11 是否恢復**：兩說互斥，已掃日報至 2026-11-20 無後續；官方頁面未查證。
+  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就此發布任何說明**；2026-11-21 再查 AISI 官網與搜尋仍無官方說明；英方存取恢復的具名媒體與部長說法見下一條。
+  - **英方早期存取已恢復（媒體稱，2026-11-21 查證）**：媒體稱（Telegraph、FT，經 TechRepublic、CryptoBriefing 轉述）白宮撤回暫緩要求，英國 AISI 約 10-11 重獲發布前存取，凍結約 17 天；英國 AI 部長 Kanishka Narayan 10-12 公開稱英方已獲取得測試新模型的存取（Reuters 經 The Star），11-03 再稱對存取有信心。Kuwait Times「英方保留早期存取」與「10-11 恢復」因此是先後而非互斥。**仍分歧**：Mythos 5.1 是否一併恢復——IBTimes 稱仍限美國機構、MLex 稱僅少數美國機構取得；AISI 官網、白宮與 Anthropic 官方頁均未載。
     - 具名媒體補上的部分：Politico 首報，要求來自白宮國家網路主任辦公室（Office of the National Cyber Director），資深政府官員稱這是對美國 AI 公司的標準做法；Anthropic 已照辦——Mythos 5.1 未交給英國 AISI、存取限美國機構，並稱正與美國政府合作擴大對國內外夥伴的開放。
     - 英國 AISI 主任 Henry de Zoete 稱該機構仍保有部分模型的發布前存取（含 OpenAI 的 GPT-6 Astra）。**媒體說法分歧**：一方稱涵蓋兩家所有新模型（含 Opus 5.5 與 09-22 發布的 GPT-6 Sol／Luna），一方稱只涉 Mythos 5.1。**仍未有答案的**：審查期限
   %% 未列入現況表：表滿載，2026-10-10 %%
@@ -928,7 +928,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 #### 2026-07-16
 - **[🏛️] Politico：參議員 Mike Rounds 就 Mythos 接受五角大廈簡報**：Google News 轉載 Politico 標題，稱美國參議員 Mike Rounds 就 Anthropic 的 Mythos 接受五角大廈（Pentagon）簡報（Google News/Politico，2026-07-16 20:12 UTC）
-  - 🔎 **查無官方**（標 2026-08-10｜查 Mike Rounds、五角大廈簡報｜複 2026-11-21）：重新查證（2026-10-24），Politico 原標題確認簡報確實舉行，本文未能讀取，簡報內容與 Rounds 立場仍未公開
+  - 🔎 **查無官方**（標 2026-08-10｜查 Mike Rounds、五角大廈簡報｜複 2026-12-21）：重新查證（2026-10-24），Politico 原標題確認簡報確實舉行，本文未能讀取，簡報內容與 Rounds 立場仍未公開；2026-11-21 再查仍無（搜尋只見 Rounds 9 月對國防戰略簡報的無關發言，未見 Mythos 簡報的任何文字）
   - 同期尚有其他國會簡報：眾院國土安全委員會獲 Mythos 現場示範、參院情報委員會 Warner／Cotton 由網戰司令部／NSA 首長 Rudd 簡報；惟 Rounds 本人簡報內容或立場仍無進一步揭露
 - **[🌐] WIRED：Anthropic 積極遊說各州加快 AI 監管**：WIRED（經 Google News 轉載）分析報導指出 Anthropic 正積極推動美國各州加快 AI 監管腳步（州級而非僅聯邦層級的政策遊說），確認並補強 07-15 Politico 標題式報導（Google News/WIRED，2026-07-16 18:35 UTC）
 - **[🌐] 南華早報獨家：Pax Silica 政策架構推手論美國可維持 AI 領先地位**：南華早報（SCMP）獨家專訪「Pax Silica」政策架構的主要推手，探討 Anthropic 與中國之間的競合關係，並論述美國仍可維持 AI 領先地位；為 Bloomberg（06-26）「管制反效」論述後首見的正面反駁觀點（Google News/South China Morning Post，2026-07-16 15:00 UTC）。**2026-08-10 查證**：推手為白宮科技顧問 Jacob Helberg；Pax Silica 為 2025-12 由美、英、日、韓、新加坡、荷蘭、以色列、阿聯等 15 國成立的策略性倡議，對抗中國半導體/AI 優勢（[SCMP](https://www.scmp.com/news/china/diplomacy/article/3360833/anthropic-china-and-why-pax-silica-architect-thinks-us-can-keep-ai-lead)）

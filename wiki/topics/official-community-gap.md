@@ -3,7 +3,7 @@ page: "topics/official-community-gap"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-20"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-14"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **開始日期：** 2026-05-17
-**最後更新：** 2026-11-20
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-14
 
 > **官方補了沒更新**（2026-11-14）
@@ -52,28 +52,28 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ✅ 官方有正式功能、能直接用｜🧪 官方有東西但受限（測試中、須申請、只給企業端）｜❌ 官方目前無對應
 > 「核對日」＝這一列最後一次對過官方文件或 CHANGELOG 的日期；`—` 代表還沒對過，要拿它做決定時建議自己再查一次官方文件。
 > 每個 issue 現在多少人在吵、官方回了什麼，見 [[entities/claude-code]]。
-> **2026-11-14 掃描**：官方 CHANGELOG 已掃到 v2.1.325，新版本（2.1.322～325）全為修補，**沒有任何一列的缺口被補上**；Projects 改版同步「官方給的是什麼」欄，核對日更新；其餘列除第一列外維持 2026-11-08。
+> **2026-11-21 掃描**：官方 CHANGELOG 已掃到 **v2.1.330**，新版本（2.1.326～330）**沒有補上任何一列的缺口**；唯一相關的是可見性——v2.1.329 把 `/tasks` 標頭與頁尾背景計數併成一個數字（涵蓋 shell、Monitor、MCP 呼叫、agent、workflow 與排程任務），v2.1.330 的 VS Code 版新增 `/workflows` 開啟執行中工作流的 agent map，兩者已寫進「一堆 agent 在跑，看不到誰卡住」那一列。三個仍被引用的 issue 以 `gh api` 實查：#40043 open、#28300 open（A2A 共享頻道仍缺）、#24316 closed，與表上敘述一致。全 18 列核對日更新。
 
 | 你痛的是什麼 | 官方補了沒 | 官方給的是什麼 | 還缺什麼、你現在能怎麼辦 | 核對日 |
 |---|---|---|---|---|
-| Cowork 專案想移除已加入的本機資料夾 | ❌ | 無——Cowork 專案目前只能新增本機資料夾，截至 2026-10-01 官方文件未見移除機制 | 社群提出刪除／重新整理需求待補；issue [#40043](https://github.com/anthropics/claude-code/issues/40043) 累積 33 則留言、109 個讚（11-14 快照，仍 open） | 2026-11-14 |
-| CLAUDE.md 寫了它不聽 | ❌ | 沒有強制生效的機制，只有一支健檢：`/doctor prompt-audit`（v2.1.283）掃 CLAUDE.md／skills／agents／commands，先列失效路徑、失效指令與互相牴觸的指示檔 | 官方給的是「找出哪裡寫壞了」，不是「保證它會照做」；為什麼一直沒補見下一節 | 2026-11-08 |
-| 用 AI 寫久了技能退化、技術債變快 | ❌ | 無——截至 2026-09-19 官方文件未見，官方公開說法的方向與此相反 | 你能做的是自己量，見下一節 | 2026-11-08 |
-| 想在一個地方操作好幾家 agent | ❌ | 無——官方只管 Claude Code 自己的 session，截至 2026-09-19 官方文件未見 | 只有社群工具，08-24 起一個月冒出 10 款 ⟨G-11⟩ | 2026-11-08 |
-| 新開一個 session 它就忘光 | 🧪 | Claude Code 的 auto memory（依你的更正與偏好自己寫筆記，`/memory` 管理，子代理也各有一份） | 跨工具、跨模型、團隊共享仍要靠社群工具；要自己接外部記憶層，四個 session／compact hook 都能用 ⟨G-05⟩ | 2026-11-08 |
-| 額度快用完、錢花到哪看不看得到 | 🧪 | `/usage` 拆到 skills／subagents／plugins／各 MCP server 的百分比與每個 loop 的 token、狀態列 `rate_limits`、VS Code 70% 警示橫幅 | 沒有逐次請求的金額，數字是本機估算、不含其他裝置與 claude.ai；告警門檻似乎不能自訂 ⟨G-07⟩ | 2026-11-08 |
-| 想自己決定哪段用哪個模型、不被鎖住 | 🧪 | `opusplan`＋`CLAUDE_CODE_SUBAGENT_MODEL`、`CLAUDE_CODE_SUBAGENT_EFFORT`（v2.1.316）；企業端另有 org default model | 三者皆是**固定指定**，動態選模型的路由官方文件未見；細節見下方 ⟨G-13⟩ | 2026-11-08 |
-| 一堆 agent 在跑，看不到誰卡住 | 🧪 | Agent view（研究預覽）每個 session 一列，標出它在跑、在等你、還是做完了；提示列會顯示還有幾個 agent 在等你；`--forward-subagent-text` 可帶出子代理文字 | 看得到單一 session 的狀態，看不到誰在等誰這種依賴關係的全圖 ⟨G-09⟩ | 2026-11-08 |
-| Agent 之間直接傳訊 | 🧪 | 跨 session 訊息 `ListAgents`＋`SendMessage`（v2.1.224 起，原生 Windows v2.1.234），可達他機與雲端 | 點對點已跨機器；共享頻道式 A2A（issue #28300 仍開著）與自動依賴排序沒有 ⟨G-10⟩ | 2026-11-08 |
-| 它說做完了，但品質夠不夠 | 🧪 | `/goal` 判完成條件（一般功能）、`/code-review`（v2.1.218 起背景執行）；Outcomes 規格驗證屬 Managed Agents，仍是 beta、要帶 beta header | 答的是「做完沒」不是「寫得好不好」；社群的多模型對抗審查無公開對照數據 ⟨G-06⟩ | 2026-11-08 |
-| 手機或瀏覽器用得到嗎 | 🧪 | 用得到但不完整：Artifacts 可把成果輸出成網頁分享；Cowork 網頁／行動版自 2026-07-07 起逐步開放（beta，先給 Max 用戶），任務在雲端續跑 | 官方明說桌面版才是完整體驗——只有桌面能讓它用你本機的檔案與瀏覽器 | 2026-11-08 |
-| 把多 agent 工作流寫成能重跑的腳本 | ✅ | Dynamic workflows 全部付費方案可用（Pro 要在 `/config` 打開），最多 1,000 平行子代理；Claude Code Projects 2026-11 改版為對話式自動指派任務（beta） | Projects 還是 public beta、只給 Pro 與 Max；本庫因 UltraCode 1.7M token 事件在 [[feature-radar]] 標為暫不推薦，官方未就此發過說明 ⟨G-02⟩ | 2026-11-14 |
-| 別家 agent 的 AGENTS.md，它讀不讀 | ✅ | v2.1.277（2026-09-18）起原生讀 `AGENTS.md`；v2.1.281 起 Bedrock／Vertex／Foundry／LLM gateway／關閉遙測的 session 也讀得到 | 只剩預設順序這一項：有 `CLAUDE.md` 時預設只讀 `CLAUDE.md`，要兩者並讀在 `/config` 設 `claude-md-and-agents-md` ⟨G-08⟩ | 2026-11-08 |
-| 它需要你輸入時會不會叫你 | ✅ | 接上 Remote Control 可推手機通知、桌面閒置通知、`Notification` hook、`waitingFor` 可見性 | 社群補的是終端機標籤變色、實體燈號這類形式 ⟨G-03⟩ | 2026-11-08 |
-| 把活分給 subagent、編排它們 | ✅ | Managed Agents（beta，須帶 beta header）、`/fork`／`/subtask`、subagent forking 預設開啟（v2.1.232） | 隊友可指名 `.claude/agents/` 的定義（#24316 已於 08-17 出貨），但 `skills`／`mcpServers` 不套用 ⟨G-01⟩ | 2026-11-08 |
-| 它會不會跑出破壞性指令 | ✅ | auto mode 封鎖破壞性 git（v2.1.183）、Sandboxing、`hard_deny`、worktree 隔離（v2.1.222）、擋跨目錄寫入（v2.1.314） | git 層與寫入路徑已補；更廣的資源限制仍靠社群沙盒 ⟨G-04⟩ | 2026-11-08 |
-| Slack 裡要一個 AI 隊友 | ✅ | [[entities/claude-tag\|Claude Tag]]（2026-06-24，Slack 原生） | 這一列的社群前驅稀薄、官方主導色彩強，放在這裡只供對照 | 2026-11-08 |
-| 把 Linear 工單指派給 Claude Code 就觸發雲端 agent | ❌ | 無——僅 GitHub Issues 可指派觸發雲端工作流；截至 2026-09-24 官方文件未見 Linear 對應支援，issue 見 [[entities/claude-code]] | 社群自接官方 Linear MCP＋本地 Lanes MCP 橋接 issue-to-code；官方尚未排入路線圖，issue #12925 累積 154 讚（11-08 快照） | 2026-11-08 |
+| Cowork 專案想移除已加入的本機資料夾 | ❌ | 無——Cowork 專案目前只能新增本機資料夾，截至 2026-10-01 官方文件未見移除機制 | 社群提出刪除／重新整理需求待補；issue [#40043](https://github.com/anthropics/claude-code/issues/40043) 累積 33 則留言、109 個讚（11-14 快照，仍 open） | 2026-11-21 |
+| CLAUDE.md 寫了它不聽 | ❌ | 沒有強制生效的機制，只有一支健檢：`/doctor prompt-audit`（v2.1.283）掃 CLAUDE.md／skills／agents／commands，先列失效路徑、失效指令與互相牴觸的指示檔 | 官方給的是「找出哪裡寫壞了」，不是「保證它會照做」；為什麼一直沒補見下一節 | 2026-11-21 |
+| 用 AI 寫久了技能退化、技術債變快 | ❌ | 無——截至 2026-09-19 官方文件未見，官方公開說法的方向與此相反 | 你能做的是自己量，見下一節 | 2026-11-21 |
+| 想在一個地方操作好幾家 agent | ❌ | 無——官方只管 Claude Code 自己的 session，截至 2026-09-19 官方文件未見 | 只有社群工具，08-24 起一個月冒出 10 款 ⟨G-11⟩ | 2026-11-21 |
+| 新開一個 session 它就忘光 | 🧪 | Claude Code 的 auto memory（依你的更正與偏好自己寫筆記，`/memory` 管理，子代理也各有一份） | 跨工具、跨模型、團隊共享仍要靠社群工具；要自己接外部記憶層，四個 session／compact hook 都能用 ⟨G-05⟩ | 2026-11-21 |
+| 額度快用完、錢花到哪看不看得到 | 🧪 | `/usage` 拆到 skills／subagents／plugins／各 MCP server 的百分比與每個 loop 的 token、狀態列 `rate_limits`、VS Code 70% 警示橫幅 | 沒有逐次請求的金額，數字是本機估算、不含其他裝置與 claude.ai；告警門檻似乎不能自訂 ⟨G-07⟩ | 2026-11-21 |
+| 想自己決定哪段用哪個模型、不被鎖住 | 🧪 | `opusplan`＋`CLAUDE_CODE_SUBAGENT_MODEL`、`CLAUDE_CODE_SUBAGENT_EFFORT`（v2.1.316）；企業端另有 org default model | 三者皆是**固定指定**，動態選模型的路由官方文件未見；細節見下方 ⟨G-13⟩ | 2026-11-21 |
+| 一堆 agent 在跑，看不到誰卡住 | 🧪 | Agent view（研究預覽）每個 session 一列，標出它在跑、在等你、還是做完了；提示列會顯示還有幾個 agent 在等你；`--forward-subagent-text` 可帶出子代理文字；v2.1.329 起 `/tasks` 標頭與頁尾背景計數併為一個數字（涵蓋 shell、Monitor、MCP 呼叫、agent、workflow 與排程任務），VS Code 版 v2.1.330 新增 `/workflows` 開啟執行中工作流的 agent map | 看得到單一 session 的狀態，看不到誰在等誰這種依賴關係的全圖 ⟨G-09⟩ | 2026-11-21 |
+| Agent 之間直接傳訊 | 🧪 | 跨 session 訊息 `ListAgents`＋`SendMessage`（v2.1.224 起，原生 Windows v2.1.234），可達他機與雲端 | 點對點已跨機器；共享頻道式 A2A（issue #28300 仍開著）與自動依賴排序沒有 ⟨G-10⟩ | 2026-11-21 |
+| 它說做完了，但品質夠不夠 | 🧪 | `/goal` 判完成條件（一般功能）、`/code-review`（v2.1.218 起背景執行）；Outcomes 規格驗證屬 Managed Agents，仍是 beta、要帶 beta header | 答的是「做完沒」不是「寫得好不好」；社群的多模型對抗審查無公開對照數據 ⟨G-06⟩ | 2026-11-21 |
+| 手機或瀏覽器用得到嗎 | 🧪 | 用得到但不完整：Artifacts 可把成果輸出成網頁分享；Cowork 網頁／行動版自 2026-07-07 起逐步開放（beta，先給 Max 用戶），任務在雲端續跑 | 官方明說桌面版才是完整體驗——只有桌面能讓它用你本機的檔案與瀏覽器 | 2026-11-21 |
+| 把多 agent 工作流寫成能重跑的腳本 | ✅ | Dynamic workflows 全部付費方案可用（Pro 要在 `/config` 打開），最多 1,000 平行子代理；Claude Code Projects 2026-11 改版為對話式自動指派任務（beta） | Projects 還是 public beta、只給 Pro 與 Max；本庫因 UltraCode 1.7M token 事件在 [[feature-radar]] 標為暫不推薦，官方未就此發過說明 ⟨G-02⟩ | 2026-11-21 |
+| 別家 agent 的 AGENTS.md，它讀不讀 | ✅ | v2.1.277（2026-09-18）起原生讀 `AGENTS.md`；v2.1.281 起 Bedrock／Vertex／Foundry／LLM gateway／關閉遙測的 session 也讀得到 | 只剩預設順序這一項：有 `CLAUDE.md` 時預設只讀 `CLAUDE.md`，要兩者並讀在 `/config` 設 `claude-md-and-agents-md` ⟨G-08⟩ | 2026-11-21 |
+| 它需要你輸入時會不會叫你 | ✅ | 接上 Remote Control 可推手機通知、桌面閒置通知、`Notification` hook、`waitingFor` 可見性 | 社群補的是終端機標籤變色、實體燈號這類形式 ⟨G-03⟩ | 2026-11-21 |
+| 把活分給 subagent、編排它們 | ✅ | Managed Agents（beta，須帶 beta header）、`/fork`／`/subtask`、subagent forking 預設開啟（v2.1.232） | 隊友可指名 `.claude/agents/` 的定義（#24316 已於 08-17 出貨），但 `skills`／`mcpServers` 不套用 ⟨G-01⟩ | 2026-11-21 |
+| 它會不會跑出破壞性指令 | ✅ | auto mode 封鎖破壞性 git（v2.1.183）、Sandboxing、`hard_deny`、worktree 隔離（v2.1.222）、擋跨目錄寫入（v2.1.314） | git 層與寫入路徑已補；更廣的資源限制仍靠社群沙盒 ⟨G-04⟩ | 2026-11-21 |
+| Slack 裡要一個 AI 隊友 | ✅ | [[entities/claude-tag\|Claude Tag]]（2026-06-24，Slack 原生） | 這一列的社群前驅稀薄、官方主導色彩強，放在這裡只供對照 | 2026-11-21 |
+| 把 Linear 工單指派給 Claude Code 就觸發雲端 agent | ❌ | 無——僅 GitHub Issues 可指派觸發雲端工作流；截至 2026-09-24 官方文件未見 Linear 對應支援，issue 見 [[entities/claude-code]] | 社群自接官方 Linear MCP＋本地 Lanes MCP 橋接 issue-to-code；官方尚未排入路線圖，issue #12925 累積 154 讚（11-08 快照） | 2026-11-21 |
 
 ---
 

@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 8
-inbound_links: 24
+inbound_links: 23
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -133,7 +133,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥（估） **子代理歷史重送疑慮**（8/27，Reddit）：「裁剪什麼」四條路徑之外的新警訊——四個平行 fork 子代理共耗約 200 萬 token；官方證實 fork 會繼承父對話，每次重送、累積多快只有這則單一回報（見 [[topics/community-large-codebase-workflow]]）
 - 🔥（估） **nightshift：DAG 調度＋三層 context 管理疊加**（9/10，Show HN）：不限廠商 Rust CLI，以任務相依圖調度協調 GitHub Issues，疊 PCC 記憶＋本地向量 RAG＋滑動視窗三層因應多 issue 工作流的 context rot；作者具名指出官方 `/goal` 有相同架構缺陷改自製，屬單一開發者對官方功能的負向對照，未經獨立覆核
 - 🔥（估） **MCP 工具定義移出 context**（10/4、10/6）：mcptoon 壓縮 MCP 工具發現與 schema 的 context 佔用；Armin Ronacher 重申別把工具塞進 context、改用程式碼呼叫工具；兩者同一機制，皆無量化對照
-- 🔥（估） **context-mode**（11/02，GitHub Search 33,266★）：本機沙箱執行工具、輸出存成全文索引只回傳搜尋結果，稱省 99%（自述）；06-29 後無真人提交，僅星數佐證
+- 🔥（估） **context-mode**（11/02，GitHub Search 33,266★）：本機沙箱執行工具、輸出存成全文索引只回傳搜尋結果，稱省 99%（自述）；11-18 仍有真人 commit（11-21 查 GitHub），星數佐證
 
 **代表模式：**
 - **Context 裁剪 Tool Output**：主動截斷或摘要化工具回應，而非全量塞入 context

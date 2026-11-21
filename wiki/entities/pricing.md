@@ -12,11 +12,11 @@ parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
 days_since_news_subtree: 2
-inbound_links: 194
+inbound_links: 192
 attribution_count: 179
 attribution_last: "2026-11-19"
 top_source: "google-news"
-pending_count: 4
+pending_count: 3
 pending_overdue: 0
 pending_next_review: "2026-12-01"
 pending_signalled: 0
@@ -243,7 +243,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 ## 通路與乘數
 
-上方三個區塊是**牌價**。實付金額還取決於兩件事：**走哪條通路**，以及**套了哪些乘數**——兩者都會讓帳單與牌價對不上。資料截至 **2026-10-31**（官方定價頁查證；本次改兩項——長脈絡標準價的 Haiku 5.5 例外、Fast mode 不再限第一方 API；通路五條與其餘乘數與 09-26 一致）。
+上方三個區塊是**牌價**。實付金額還取決於兩件事：**走哪條通路**，以及**套了哪些乘數**——兩者都會讓帳單與牌價對不上。資料截至 **2026-11-21**（官方定價頁逐節查證）。本次改四項——① Google Cloud 兩種代管的乘數歸屬已由官方寫明（解掉 11-19 的懸置題）；② 新增 Claude Managed Agents 的兩軸計費（token ＋ session runtime）；③ fast mode 可用通路再擴；④ **更正本頁 11-19 的記載：官方定價頁並未移除「每千次搜尋 $10」的 web search 計價**，該行今日仍在「Web search tool」節。
 
 ### 通路：誰定價、怎麼開票
 
@@ -257,7 +257,9 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 **通路細節**
 
-- ❓ **待查證**（標 2026-11-19｜查 Google Cloud、multiplier｜複 2026-12-03）｜**官方定價文件區分 Google Cloud Anthropic 代管與 Google 代管**：前者疑似與 Claude API、AWS 同套乘數；後者與 Bedrock 並列為合作方自營，乘數由對方自訂；與上表現有寫法是否同一件事待核對
+- **Google Cloud 兩種代管的乘數歸屬不同（2026-11-21 官方查證，原懸置題已解）**：
+  - 吃 ×1.1 資料落地乘數：Claude API（第一方）、Claude Platform on AWS、Google Cloud（**Anthropic 代管**）
+  - 不吃：Google Cloud（**Google 代管**）與 Amazon Bedrock——這兩條是合作方自訂的地區定價，費率查該平台自己的價目表
 - **partner 通路（Bedrock、Google Cloud）的絕對數字本頁不記**——費率由該平台自訂且會各自調整，抄下來即過期。查 [Bedrock 定價](https://aws.amazon.com/bedrock/pricing/)／[Google Cloud 定價](https://cloud.google.com/vertex-ai/generative-ai/pricing#claude-models)
 - **Bedrock 無 Message Batches API ⇒ 拿不到 50% 批次折扣**；亦不支援 `anthropic-beta` 標頭，compaction／context editing／task budgets 皆不可用——長脈絡的成本控制手段少一半
 - **Claude Platform on AWS 組織固定於 Start 層且不自動升級**，月花費上限 $500，提額須聯繫 Anthropic 客戶代表；私有報價須在產生用量**前**接受，折扣不溯及既往
@@ -282,13 +284,26 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 - **Fast mode 擴大至 Fable 5.2（2026-11-09 官方 Plans & Pricing 頁查證）**：Fable 5.2 另計 $16／$80（2x 標準價），約 2.5 倍標準速度；此前 Fast mode 僅三款 Opus 可用，本次首度擴及非 Opus 模型。
 - 同日頁面 Batch processing 示範模型同步換代（Fable 5.1→5.2、新增 Sonnet 5），屬範例更新，不代表 Batch 折扣費率（×0.5）本身變動（同 09-28 示範換代先例）。
 - **會疊乘**：例如 Batch ×0.5 與資料落地 ×1.1 同時成立時兩者相乘。往下的只有快取命中與 Batch
-- **Fast mode 可用在哪些通路、哪一款要被淘汰（2026-10-31 官方查證）**：Opus 5.5 的 fast mode 另可用於 Google Cloud（Anthropic managed）與 Azure 上的 Microsoft Foundry，**不再限第一方 API**。
+- **Fast mode 可用在哪些通路（2026-11-21 官方查證）**：
+  - Opus 5.5：第一方 API、Google Cloud（Anthropic 代管）、Azure 上的 Foundry
+  - **Fable 5.2：已擴及 Google Cloud 兩種代管**（Google 代管那條由 Google 自訂價）與 Foundry 上 Anthropic 代管的部署
+  - Mythos 5.2：第一方 API
+  - 計價套用整個脈絡窗（含逾 20 萬 token 的請求），**不能與 Batch API 併用**
   - Opus 5 與 4.8 的 fast mode 仍是研究預覽；**Opus 4.8 的 fast mode 已於 2026-10-30 宣告淘汰、2026-11-30 移除**，之後請求會直接回錯誤、不會退回標準 Opus 4.8。
 - **快取命中的特例（三檔，2026-10-10 官方查證）**：Fable 5.1／Mythos 5.1 為基準輸入價的 ×0.025（$0.25/Mtok）、**Opus 5.5 與 Sonnet 5.5** 為 ×0.05（分別 $0.20／**$0.10**/Mtok），其餘所有模型維持 ×0.1；
   - 快取寫入倍率（5 分 ×1.25／1 小時 ×2）三者相同（官方定價頁 Prompt caching 節）。⚠️ Sonnet 5.5 這一檔 09-26 查證時漏列，2026-10-10 依官方 models overview 與 Sonnet 5.5 模型頁補上
 - **長脈絡的分界是模型世代，不是「1M」這個功能**。Claude 4.6 以後內含 1M 且不加價（官方[定價頁](https://platform.claude.com/docs/en/about-claude/pricing) Long context pricing 節）；Sonnet 4／4.5 世代的 1M 為 public preview，[AWS 公告](https://aws.amazon.com/about-aws/whats-new/2025/08/anthropic-claude-sonnet-bedrock-expanded-context-window/)明載超過 20 萬 token 的 prompt 約為兩倍輸入價、1.5 倍輸出價。**兩代混用時，兩套規則會出現在同一份帳單上**
 - **診斷法**：價差只在大請求出現 → 舊世代長脈絡溢價；小請求也貴同樣比例 → 資料落地或地區端點
 - 模型之間「同一份工作換個模型差多少」的換算（含 tokenizer 換代的影響）不在本頁，見 [[topics/model-comparison#同一份工作，換設定差多少]]
+
+**Claude Managed Agents：唯一按時間計費的那一條（2026-11-21 官方定價頁查證）**
+
+它不是單純的 token 計價，是**兩軸**：token 照上方牌價計（快取乘數照舊、session 內觸發的 web search 照樣 $10／千次、`model.speed` 設 `"fast"` 時套 fast mode 價、`model.inference_geo` 釘 `"us"` 時套 ×1.1），**另加 session runtime $0.08／session-hour**，以毫秒計、只在狀態為 `running` 時累加——`idle`（等你回話或等工具確認）、`rescheduling`、`terminated` 都不計。
+
+- **兩個乘數在這裡不成立**：Batch 折扣不適用（session 是有狀態、互動式的，沒有批次模式）、合作方雲端平台定價不適用（Bedrock／Google 代管上沒有這個產品）
+- **它取代 code execution 的容器計時**：用 Managed Agents 時不會再另外被收容器小時費
+- **官方自己的試算**：Opus 5.5 跑 1 小時、5 萬輸入＋1.5 萬輸出 ＝ $0.20＋$0.30＋$0.08 ＝ **$0.58**；若 4 萬輸入是快取命中則降為 $0.428
+- 自架版本（self-hosted Managed Agents）的價格官方未公開，寫明要找客戶團隊談
 
 ### 額度與通路的帳務坑
 

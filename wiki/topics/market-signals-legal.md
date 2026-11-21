@@ -3,7 +3,7 @@ page: "topics/market-signals-legal"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-18"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-18"
 status_main: "ongoing"
 days_since_news: 3
@@ -11,12 +11,12 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 3
-inbound_links: 7
+inbound_links: 5
 attribution_count: 6
 attribution_last: "2026-11-18"
 top_source: "google-news"
 pending_count: 25
-pending_overdue: 2
+pending_overdue: 0
 pending_next_review: "2026-11-22"
 pending_signalled: 3
 staleness_exempt: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-09-11
-**最後更新：** 2026-11-18
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-18
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：訴訟、機關調查、政府採用與流失 15 條線 24 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
@@ -501,7 +501,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-11-13 | Mythos 商標訴訟 | 本體不可買；間接曝險 📉（開線） | 原告身分與侵權主張細節是否披露、Anthropic 官方是否回應、是否啟動改名（11-27） | ⏳ | ⏳ |
 | 2026-11-13 | 非營利組織AI軍備競賽凍結訴訟 | 本體不可買；GOOGL 間接關聯 📉（開線） | 訴狀全文或法院案號是否可查、官方是否回應、法院是否受理進入實質審理（11-27） | ⏳ | ⏳ |
 | 2026-11-11 | 紐約州 AI 安全法 | 本體不可買；間接曝險 〰（開線） | 條文義務與適用門檻是否經官方或具名報導確認（11-25） | ⏳ | ⏳ |
-| 2026-11-07 | Max 訂閱廣告誤導訴訟 | 本體不可買；間接曝險 📉（開線） | 本案是否被確認與 06-16 集體訴訟同案、或進入實質審理／和解（11-21） | ⏳ | ⏳ |
+| 2026-11-07 | Max 訂閱廣告誤導訴訟 | 本體不可買；間接曝險 📉（開線） | 本案是否被確認與 06-16 集體訴訟同案、或進入實質審理／和解（11-21） | 出現（2026-11-21）：確認為 Kahn v. Anthropic（N.D. Cal. 3:26-cv-05763），主要主張可續行、集體尚未認證（媒體稱） | ✅ |
 | 2026-10-28 | GSA 政府採購折扣擴大 | 本體不可買；間接曝險 ⚖️（開線） | 具名地方政府簽約案例或財報拆分政府客戶營收貢獻（11-11） | 出現（2026-11-14：官方 GSA 擴大合作頁載 40% 折扣涵蓋州、地方、部落與屬地政府，具名案例為猶他州試點；合約金額未載） | ✅ |
 | 2026-10-28 | 州層級 AI 監管遊說 | 本體不可買；間接曝險 ⚖️（開線） | 加州是否將提案納入正式法案（11-11） | 未出現（2026-11-14 查證：媒體稱 10-15 致 Newsom 的信件屬建議、非法案，加州未將提案納入正式法案） | ～ 仍懸 |
 | 2026-10-25 | 音樂著作權訴訟 | 本體不可買；間接曝險 📉（第 2 則） | 訴狀全文或法院案號公開、原告身分經官方文件確認（11-08） | 未出現（2026-11-14 查證：官方新聞室無貼文，訴狀全文與法院案號未公開；法院網站本輪環境無法連） | ～ 仍懸 |
@@ -544,7 +544,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-11-13｜查 Mythos、商標侵權｜複 2026-11-27）｜**Mythos 商標侵權訴訟的原告身分與侵權主張細節是否經法院文件或後續報導披露**：Reuters 報導僅標題可用，Anthropic 官方回應與是否啟動改名均未見報導。
 - ❓ **待查證**（標 2026-11-13｜查 軍備競賽、arms race｜複 2026-11-27）｜**非營利組織「凍結 AI 軍備競賽」訴訟的訴狀全文或法院案號是否可查**：Politico、CBS News 報導僅標題可用，原告身分、訴求條款與受理法院均未見報導。
 - ❓ **待查證**（標 2026-11-11｜查 紐約州、New York、AI 安全法｜複 2026-11-25）｜**紐約州 AI 安全法的義務內容與適用門檻是否經官方條文或具名報導確認**：TechCrunch 報導僅標題可用，罰則、主管機關與申報時程均未見報導。
-- ❓ **待查證**（標 2026-11-07｜查 [[entities/pricing-incidents]]、Courthouse News｜複 2026-11-21）｜**是否確認與 06-16 集體訴訟同案、是否進入實質審理或和解**：僅知法院裁定須面對訴訟程序，未附案號，求償金額與審理時程均未見報導。
+- ❓ **待查證**（標 2026-11-07｜查 [[entities/pricing-incidents]]、Courthouse News｜複 2026-12-05）｜**Kahn v. Anthropic 的裁定日期、卷宗內容與後續（是否和解）是否經法院文件確認**
+  - 2026-11-21 WebSearch 補：媒體稱（Courthouse News、TNW）11-07 報導即該案——N.D. Cal. 治安法官 Alex Tse 就 Claude Max「5x／20x 用量」宣傳裁定「plausibly misleading」，主要主張可繼續，另駁回部分主張；集體尚未認證，TNW 稱未讀裁定原文。
+  - 同案原告 Karl Kahn、案號 3:26-cv-05763（媒體稱引訴狀首頁，印章日 06-14，與本站舊記 06-16 差兩日，以訴狀為準）；求償金額、審理時程與和解均未見報導；CourtListener／PACER 本輪環境無法連，卷宗未讀。
 - 已查證（2026-11-14，[Anthropic 官方公告](https://www.anthropic.com/news/expanding-partnership-gsa)）｜**GSA 折扣擴大（OneGov）與地方政府採用**：官方 10-27 公告載明 40% 折扣擴及州、地方、部落、屬地政府，無最低採購承諾，具名案例僅猶他州試點。
   - 折扣適用 Claude Enterprise、Claude for Government 與 Claude API，涵蓋聯邦與 SLTT 政府，可經 GSA Multiple Award Schedule 以 OneGov 折扣購買，雲端供應商通路數月內跟進。
   - 官方稱約 500 個美國聯邦、州與地方機構已使用 Claude，估計折扣可為政府省下 $10 億；猶他州為 4 週試點（10 個州機關 34 名開發者用 Claude Code），無具名地方政府簽約金額，營收貢獻待財報拆分。
@@ -577,16 +579,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-09-30｜查 Federal Trade Commission、subpoena、investigation scope｜複 2026-12-14｜訊 2026-10-15）｜**FTC 傳票範圍與法源是否公布**：依 10-15 日報（CBS News、The Hill）：已對 Anthropic、OpenAI 發出傳票，Ars Technica 同證。
   - 2026-11-14 WebSearch 補：媒體稱（Axios 10-15）兩家各收到逾 50 頁的民事調查要求（CID，傳票的一種），涵蓋安全事故、防護措施、行銷素材與隱私政策；FTC 09-30 已證實調查，法源 FTC Act 第 5 條；ftc.gov 本輪環境無法連。
   - 媒體稱（Reuters 09-30，引 FTC 資深官員）：屬涵蓋多家 AI 實驗室的產業調查，依據為 FTC 對不公平或欺騙行為的職權；傳票具體範圍仍未見。ftc.gov 本輪無法連線，未查官方。
-- ❓ **待查證**（標 2026-09-29｜查 rogue AI agents、uncertain legal risk｜複 2026-11-21）｜**失控 AI agent 法律風險的具體案例或求償對象**：公開版 S-1 已於 10-26 提交，本輪環境無法連 sec.gov、未讀原文。
-  - 前提更新（2026-11-14）：舊稱「未見公開版文字」已過時（官方新聞室 10-26 貼文）；下列 09-29 Reuters 轉述屬保密草稿版，公開版是否仍載該段、有無具體案例與求償對象待查。
-  - 媒體稱（Reuters 獨家 09-29，經 The Star、WHBL 轉載）：招股書稱客戶與使用者可能就失控 agent 的行為提告，法律框架不確定，合約責任上限未必「可執行或足夠」；舉例為刪除資料、金融交易等不可逆動作。
-  - AI 是否比照線上平台處理、具體案例與求償對象均未載。
+- 🔎 **查無官方**（標 2026-09-29｜查 rogue AI agents、uncertain legal risk｜複 2026-12-14）｜**失控 AI agent 法律風險的具體案例或求償對象**：2026-11-21 查 [S-1 公開版](https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm)（WebSearch 檢索摘要，非全文），未點名具體案件或求償對象。
+  - 公開版仍載：客戶、終端用戶或第三方可能就 agent 自主行為求償，即使客戶已設定或監督；法律標準未定，曝險高度不確定。
+  - 公開版另載：服務條款的免責與責任上限可能不被採信或不足；與外部評測方的協議有無上限的補償義務（檢索摘要）。
+  - 媒體稱（Reuters 09-29，經 The Star、Deccan Chronicle 轉載）：舉例為刪除資料、金融交易等不可逆動作，AI 行為是否約束部署者、是否比照線上平台均待釐清。
 - 🔎 **查無官方**（標 2026-09-28｜查 Australian senate、will not attend、October 1｜複 2026-12-14）｜**澳洲參議院對 Anthropic、OpenAI 缺席 10-01 聽證會是否採取後續行動**：2026-11-14 重查：官方未就此發言，未見參議院正式異議或強制到場程序的報導。
   - aph.gov.au 本輪環境無法連，未核對委員會公告。
   - 媒體稱（AAP 轉引 Sydney Morning Herald）：Anthropic 缺席該場後將派代表於 10-06 赴雪梨，Anthropic 未向 AAP 證實；Reuters（09-28）稱公司因邀請過晚已請求改期。
   - 10-06 日報另載 Reuters、Quartz：兩家向澳洲政府表態支持強制性 AI 資安漏洞揭露法規。
 - ❓ **待查證**（標 2026-09-27｜查 Australian Senate、AI inquiry、hearing date｜複 2026-12-14｜訊 2026-09-28）｜**澳洲參議院 AI 調查聽證會的具體日期與調查範圍是否公布**：09-28 Reuters、The Guardian 確認聽證會日期為 10 月 1 日、雙方不出席，調查範圍見下方 11-14 補查。
-  - 2026-11-14 補：媒體稱（Al Jazeera 09-27、TNW）為綠黨主導、Sarah Hanson-Young 主持的參議院調查，範圍涵蓋 AI 與大型資料中心對社區、產業、用水與用電的影響；aph.gov.au 本輪環境無法連，維持待查證。
+  - 2026-11-14 補：媒體稱（Al Jazeera 09-27、TNW）為綠黨主導、Sarah Hanson-Young 主持的參議院調查，範圍涵蓋 AI 與大型資料中心對社區、產業、用水與用電的影響；aph.gov.au 本輪環境無法連，未核對委員會公告，標記保留。
 - 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、supply chain risk appeal、Anthropic petition、遷出計畫｜複 2026-12-14）｜**判決全文推理、是否上訴更高審級、國防部十月遷出計畫是否受影響**：11-14 重查官方新聞室 至 11-10 貼文，官方未就本案發言。
   - 2026-11-14：法院網站（D.C. Circuit）本輪環境無法連，未讀判決原文；10-10 初查結論不變。
   - 推理已由具名媒體補上（2:1、主筆 Katsas、Henderson 異議），公司只說「評估所有選項，包括進一步審理」；是否已正式聲請複審、以及國防部十月遷出是否暫緩，仍查無紀錄。細節見 [[topics/anthropic-government-policy]]。

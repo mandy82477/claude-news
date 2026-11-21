@@ -17,8 +17,8 @@ inbound_links: 9
 attribution_count: 23
 attribution_last: "2026-11-06"
 top_source: "google-news"
-pending_count: 2
-pending_overdue: 2
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
@@ -36,13 +36,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-11-06
 
 > **最新動態**（2026-11-06）
-> Benzinga 報導 Anthropic 稱 Claude 協助科學家繪製神秘細胞結構；同日 Anthropic 部落格「How scientists use Claude」疑似同一文章的案例之一，原文皆無法讀取，案例細節未載明。
+> Anthropic 生物研究團隊 2026-11-04 發表首度解出原核生物 vault 顆粒 3D 結構（Claude 參與蛋白搜尋、DNA 設計、cryo-EM 處理），Benzinga 於 11-06 轉述；詳見下文與[官方頁](https://www.anthropic.com/news/investigating-vault-particles-with-claude)（查證 2026-11-21）。
 
 ---
 
 ## 現況
 
-❓ **待查證**（標 2026-11-06｜查 cell structure、scientists use）｜**Anthropic 稱 Claude 協助科學家繪製神秘細胞結構**（Benzinga，2026-11-06 報導，僅標題可用）：同日 Anthropic 部落格「How scientists use Claude」（Google News 聚合 3 個來源，11-05）疑似為同一篇文章的案例之一，兩者原文均無法讀取，案例細節、所屬研究團隊與是否與 09-24 CRISPR 特徵酶系統發現同屬同一計畫均未載明。
+**Claude 協助繪製神秘細胞結構**：Anthropic 生物研究團隊 2026-11-04 發表（官方頁「Investigating vault particles with Claude」），首度解出原核生物 vault 顆粒的 3D 結構（噬菌體蛋白 L05、96 份同蛋白、體積較哺乳類 vault 大約 25%）；Claude 負責蛋白搜尋、DNA 設計、cryo-EM 影像處理（RELION），並將純化由約三天縮至約 90 分鐘、34 小時內得初版模型；vault 生理功能仍未知。Benzinga 報導即此文。官方頁未使用「How scientists use Claude」標題，亦未提及 CRISPR，與 09-24 CRISPR 特徵酶系統無明示關聯（來源：[Investigating vault particles with Claude](https://www.anthropic.com/news/investigating-vault-particles-with-claude)，查證 2026-11-21）。
 
 **蠍毒神經毒素蛋白質結合物（2026-10-21）：** Anthropic 公布研究成果：Claude 自主設計出可中和蠍毒神經毒素的蛋白質結合物。投資機構 Citrini Research 應用此法測試 211 個候選蛋白，篩出 17 個有效 binder，尚待實驗室進一步驗證（Hacker News 111 分，4 個來源，含 Google News、HN Repo Bridge 跟進）。
 
@@ -89,7 +89,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 ## 參考來源
 
 - Google News / Benzinga："Anthropic Says Claude Helped Scientists Map a Mysterious Cell Structure"（2026-11-06，僅標題可用）
-- Google News / Anthropic："How scientists use Claude"（2026-11-05，3 個來源聚合，僅標題可用）
+- Google News / Anthropic："How scientists use Claude"（2026-11-05，3 個來源聚合，僅標題可用；官方 vault 頁未使用此標題，2026-11-21 查證）
 - [Anthropic Research: Claude designed protein binders against scorpion neurotoxins](https://www.anthropic.com/research/claude-scorpion-toxin-binder-design)（2026-10-21，Hacker News 111 分，4 個來源）
 - Hacker News 討論：[item?id=50170021](https://news.ycombinator.com/item?id=50170021)（70 則留言）
 - [Anthropic Science: Yes, Claude can do nine loops](https://www.anthropic.com/research/yes-claude-can-do-nine-loops)（2026-09-25，Hacker News 103 分）
@@ -121,7 +121,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 | 日期 | 事件 |
 |------|------|
-| 2026-11-06 | ❓ **待查證**（標 2026-11-06｜查 cell structure、scientists use）｜**細胞結構報導**：Benzinga 稱 Claude 協助繪製神秘細胞結構，疑與同日部落格同文 |
+| 2026-11-06 | **細胞結構報導**：Benzinga 轉述 Anthropic 2026-11-04 官方文章（vault 顆粒 3D 結構，見上文；[來源](https://www.anthropic.com/news/investigating-vault-particles-with-claude)，查證 2026-11-21） |
 | 2026-10-23 | 官方查證：產品頁標 beta；運算跑在本機／HPC／雲端 VM／Slurm／Modal，非動態調配的雲端運算（[來源](https://claude.com/product/claude-science)） |
 | 2026-10-21 | Anthropic 公布 Claude 自主設計可中和蠍毒神經毒素的蛋白質結合物；Citrini Research 測試 211 候選、篩出 17 個有效 binder，待實驗室驗證（HN 111 分，4 個來源） |
 | 2026-10-06 | IBM 發文檢視 CRISPR 特徵酶系統發現「實際上顯示了什麼」，延續 09-27 起對原創性與能力範圍的質疑；僅標題可用 |

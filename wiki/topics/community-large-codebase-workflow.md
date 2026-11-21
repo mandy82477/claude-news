@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 8
-inbound_links: 55
+inbound_links: 54
 attribution_count: 2
 attribution_last: "2026-08-05"
 top_source: "reddit"
@@ -100,7 +100,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | CLAUDE.md 取捨 | 四層寄放地依觸發頻率；載入順序（CLAUDE.local.md 後載、受管理原則檔各 OS 路徑不同，與官方文件一致） | 「該裝什麼」「載入順序」兩篇 | 單一深度分析 |
 | 固定成本量測 | `claude -p` 未加 `--bare` 冷啟動約 15 萬 token，多 agent pipeline 反覆呼叫會放大；官方沒給數字 | headless 冷啟動實測 | 單一實測 |
 | 工具輸出裁剪 | grep 輸出宣稱削減 42% token，但只測 50 題一次、p 值 0.22，benchmark 遭質疑 AI 代寫；09-29 另有壓縮閘道自述省 85% | Graft、paritok | 單一實測 |
-| 輸出攔在 context 外 | 11-02：本機沙箱執行、輸出存成可全文搜尋的索引，agent 只拿搜尋結果；自稱進 context 的位元組減 99%（自述）；06-29 後無真人提交 | context-mode | 推論 |
+| 輸出攔在 context 外 | 11-02：本機沙箱執行、輸出存成可全文搜尋的索引，agent 只拿搜尋結果；自稱進 context 的位元組減 99%（自述）；11-18 仍有真人 commit（11-21 查 GitHub） | context-mode | 推論 |
 | fork 子代理的歷史 | fork 子代理繼承父對話（官方證實）；社群回報四個平行子代理耗約 200 萬 token，官方沒給數字 | Reddit 回報 | 單一實測 |
 | 對話整理 | 兩篇 dev.to 同向：依易腐程度決定留主對話或移到 subagent、第二 session、headless；另列四個污染 context 的壞習慣 | 「冰箱」比喻、4 Context Antipatterns | 單一深度分析 |
 | 非主流方向 | 清程式碼內 AI 殘留註解（CCN，2,700 次迭代自陳）；文字 context 渲染成圖片（pxpipe） | CCN、pxpipe | 推論 |

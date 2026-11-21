@@ -11,12 +11,12 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 14
-inbound_links: 6
+inbound_links: 7
 attribution_count: 16
 attribution_last: "2026-11-07"
 top_source: "github"
-pending_count: 1
-pending_overdue: 1
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
@@ -107,10 +107,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **主線：** Context 管理
 - **核心模式：** 在本機沙箱執行工具呼叫，輸出改存 SQLite 並建 FTS5 全文索引，agent 只拿到搜尋結果而非整段輸出，稱可讓進 context 的位元組減少 99%；相容 Claude Code、Codex 等 10 款以上 agent。
 - **與既有模式的關係：** 補上「Context 管理」既有代表技巧（Just-in-Time @-file、Repo-as-Memory 等，[[topics/community-memory#2026-10]]）一個 sandbox＋全文索引取代整段工具輸出的實作；主線填 Context 管理。
-- **可信度註記：** 查核 git commit 記錄：2026-02-23～06-29 有十餘位具名貢獻者、逾 1,400 筆真人 commit，非單一帳號灌水；但 2026-06-29 後至今僅剩 GitHub Actions 機器人每日自動提交「update install stats」，無任何真人 commit；forks／issues 本次無 API 權限，未查。
-- ❓ **待查證**（標 2026-11-02｜查 mksglu、context-mode）｜**近期維護活躍度**：僅機器人提交、無真人 commit；已掃日報至 2026-11-20 無後續；官方頁面未查證。
+- **可信度註記：** 查核 git commit 記錄：2026-02-23～06-29 有十餘位具名貢獻者、逾 1,400 筆真人 commit，非單一帳號灌水；2026-11-18 仍有 mksglu 真人 commit（11-21 查證，見下方維護活躍度）；之後為機器人統計更新；GitHub 頁顯示約 2.4k forks、19 個開放 issue（11-21）。
+- **近期維護活躍度**：2026-11-21 查 [GitHub commits](https://github.com/mksglu/context-mode/commits/main)：11-18 有 mksglu 與 Claude 共同署名的多筆真人 commit（#1401、#1402、#1406 修正與測試），11-19、11-20 為 GitHub Actions 機器人的統計更新；先前「06-29 後僅機器人提交」的判斷不成立，專案仍在維護。
 - **來源：** GitHub Search；[GitHub](https://github.com/mksglu/context-mode)
-- **成熟度：** ⏳ 新興（本庫今日首次收錄；曾有真實多人開發期，近 4 個月僅自動化提交，採用規模與維護現況待觀察）
+- **成熟度：** ⏳ 新興（本庫今日首次收錄；曾有多人開發期，11-18 仍有維護者提交；採用規模待觀察）
 
 #### altsang/claude-tandem：多組 Claude 帳號與 profile 管理，跨 Mac／iPhone 搬移 session 工作狀態（2026-11-02）
 

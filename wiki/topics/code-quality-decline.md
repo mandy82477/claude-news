@@ -3,7 +3,7 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-11-15"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-15"
 status_main: "ongoing"
 days_since_news: 6
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-11-15
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-15
 
 > **Fable 5.2 上線後出現額度與 context 體感抱怨，皆為單一來源**（2026-11-15）
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 三條線現在到哪
 
-> 資料截至 2026-11-14（四個 issue 以 `gh api` 實查）。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
+> 資料截至 2026-11-21（四個 issue 以 `gh api` 實查，狀態與上輪全數相同：#41930 已關閉、#65687／#77136／#83510 仍開啟）。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
 %% 維運備忘：上限 4 列、現有三列固定不移除、入口與退場判準見 .claude/rules/wiki-ingest-community.md「code-quality-decline 的三張表」第 1 條 %%
 
 | 線（最後動態） | 官方說了什麼（日期） | 現在還在嗎 | 你能先做什麼 |

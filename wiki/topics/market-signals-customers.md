@@ -3,7 +3,7 @@ page: "topics/market-signals-customers"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-20"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-20"
 status_main: "ongoing"
 days_since_news: 1
@@ -11,12 +11,12 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 5
+inbound_links: 6
 attribution_count: 10
 attribution_last: "2026-11-20"
 top_source: "google-news"
-pending_count: 21
-pending_overdue: 1
+pending_count: 22
+pending_overdue: 0
 pending_next_review: "2026-11-22"
 pending_signalled: 0
 staleness_exempt: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-08-26
-**最後更新：** 2026-11-20
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-20
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：定價改版、企業採用等 16 條線 25 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
@@ -96,7 +96,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **下一個催化劑**：Schwab 或 Anthropic 官方是否證實獨家合作條款是否已變動；Schwab 的 agentic AI 功能是否接入其他 LLM 供應商；RIA 通路何時納入此次升級範圍。
 
-**你的選項**：(a) 什麼都不做，報導未附時程，獨家條款是否已實際變動仍未證實；(b) 想追蹤 Schwab 這條通路的讀者，把「自建 MCP」「agentic AI」這兩個關鍵詞記下來，留意是否出現 Schwab 接入其他 LLM 供應商的具體公告。
+**你的選項**：(a) 什麼都不做，報導未附時程，獨家條款是否已實際變動，官方與 Schwab 均未說明（見里程碑區標記）；(b) 想追蹤 Schwab 這條通路的讀者，把「自建 MCP」「agentic AI」這兩個關鍵詞記下來，留意是否出現 Schwab 接入其他 LLM 供應商的具體公告。
 
 **一課｜客戶自建基礎設施是獨家關係的警訊**
 - 概念：通路夥伴自己動手建技術基礎設施，往往是為日後接入其他供應商鋪路，不只是功能升級。
@@ -562,6 +562,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 追蹤中的里程碑
 
+- ❓ **待查證**（標 2026-11-21｜查 Schwab、獨家 LLM、MCP 伺服器｜複 2026-12-05）｜**Schwab 與 Anthropic 的獨家 LLM 供應商關係是否已實際變動**
+  - 2026-11-21 WebSearch 補：媒體稱（FX News Group、Wealth Management 引 Schwab 11-12 公告）Schwab MCP 伺服器目前僅對選定 Claude 用戶試行，並計畫日後支援其他 AI 平台；「獨家」說法僅見 RIABiz 標題，條款與時程未載，Schwab 官網與 Anthropic 官方站本輪未查到對應說明。
+
 - ❓ **待查證**（標 2026-11-20｜查 Citadel、金融業工作流｜複 2026-12-04）｜**Citadel、BNY 導入 Claude 的具體範疇、席位數與費用是否經官方進一步說明**：報導僅標題層級，三家金融機構並列但未見官方公告佐證導入深度。
 - ❓ **待查證**（標 2026-11-19｜查 Gemini 4 Neon、Astra 6.2｜複 2026-12-03）｜**Gemini 4 Neon 與 Astra 6.2 的對標測試是否經社群獨立複現**：OODA Loop／BigGo Finance 報導均為標題轉述，測試方法論、題目選取與第三方複現均未見報導。
 - ❓ **待查證**（標 2026-11-13｜查 自建 MCP、agentic AI｜複 2026-11-27）｜**Schwab 自建 MCP 伺服器後，獨家合作條款是否已變動、是否接入其他 LLM 供應商**：RIABiz 報導僅標題可用，具體時程、範圍與獨家條款現況均未見報導。
@@ -611,9 +614,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 已查證（2026-10-17，[API 發行說明](https://platform.claude.com/docs/en/release-notes/overview)、[拒答與備援文件](https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback)）｜**拒答計費改版：官方確認五類拒答分類，其中三類在輸出前拒答也計費**：2026-09-24 起，`stop_details.category` 為 bio、frontier_llm、reasoning_extraction 的輸出前拒答，照所跑模型的一般費率計費。
   - 五類為 cyber、bio、frontier_llm、reasoning_extraction、general_harms；cyber、general_harms 與 category 為 null 的輸出前拒答不計費，但仍計入速率限制。
   - 串流中途拒答本就計費；06-02 起「輸出前拒答一律不計費」的規則因此收窄。官方稱計費類別會依誤判率量測結果調整。
-- ❓ **待查證**（標 2026-09-23｜查 GPT-6 Sol、毛利率｜複 2026-11-21）｜**Opus 5.5 定價下修對 Anthropic 整體毛利率的實際影響是否揭露**：11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 至 11-10 貼文，只載牌價、未載毛利率；
-  - 2026-11-14：公開版 S-1 已於 10-26 提交、官方 IPO 頁 11-12 公布 Q3 財務，本輪環境無法連 sec.gov 與該頁，未讀毛利率相關數字，不宣稱查無，維持待查證。
+- ❓ **待查證**（標 2026-09-23｜查 GPT-6 Sol、毛利率｜複 2026-12-05）｜**Opus 5.5 定價下修對 Anthropic 整體毛利率的實際影響是否揭露**
+  - 2026-11-21 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 至 11-20 貼文，只載牌價、未載毛利率；WebSearch 補：媒體稱（Decrypt、FourWeekMBA 轉述 S-1/A）價格調降與折扣在 Q3 抵銷約 $6 億營收，公司稱未改變其他季度趨勢。
+  - 毛利率二手口徑互相矛盾（Forrester 自行推算上半年約 85%，其他分析估約 44～60%），皆非公司逐項揭露，不採；Opus 5.5 單獨對毛利率的影響未見拆分。
   - 官方 [models overview](https://platform.claude.com/docs/en/about-claude/models/overview) 只載牌價（Opus 5.5 $4／$20、快取讀取 5%），無任何毛利率或成本結構揭露，官方稱運算成本降 40%、牌價僅降 20%，暗示單位毛利率上升，但下一份財報或 S-1 尚未出現，OpenAI GPT-6 Sol／Luna 正式定價亦未見公告。
+  - OpenAI GPT-6 Sol／Luna 正式定價仍未見官方公告；sec.gov 本輪環境無法連，S-1/A 原文未讀。
 - 🔎 **查無官方**（標 2026-09-17｜查 JPMorgan、摩根大通、支出上限｜複 2026-11-30）｜**JPMorgan 合約規模／席位數與更多受監管金融機構跟進，官方站未見說明**：查證 2026-10-31，Anthropic 官方站（anthropic.com、claude.com）仍未見 JPMorgan 合約規模或席位數；
   - 媒體僅有 JPMorgan 內部平台使用量與 2026-06 FT 報導其限制香港員工使用 Claude（原因與授權條款措辭有關，雙方未說明）。
   - 媒體稱（Business Insider，經 Newsquawk 等轉述）部分工程師設每月 2,000 美元 Claude Code 支出上限、約 8,000 人持授權，均為媒體數字，非官方。
@@ -640,3 +645,5 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[topics/enterprise-tool-tracker]] — 具名企業採用與退出
 - [[topics/competitor-landscape]] — 競品動態與定價對照
 - [[topics/market-lessons]] — 課程表與消息線走向（週更）
+
+%% 拆頁評估 2026-11-21：不拆，理由＝分不出群。616 行、事件流佔比 0%，與 market-signals-ipo 同一個版面：逐則判讀／回顧結算／里程碑三層一個故事。客戶線的子題（企業採用、競品定價對標、通路）彼此共用同一組標的與同一張結算表，分開後每頁都要複製那張表。 %%

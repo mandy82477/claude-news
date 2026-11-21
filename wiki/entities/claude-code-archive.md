@@ -11,13 +11,13 @@ parent: "entities/claude-code"
 children: "[]"
 page_role: "archive"
 days_since_news_subtree: 205
-inbound_links: 9
+inbound_links: 10
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-12-21"
 pending_signalled: 0
 staleness_exempt: null
 signal: "休眠"
@@ -184,7 +184,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-06-21 | **v2.1.185**：stream-stall 提示文字改為「Waiting for API response · will retry in …」，觸發門檻延長至 20 秒（原 10 秒），reliability 改善；Anthropic 官方博客發布「七種 Claude Code 控制層」決策框架（CLAUDE.md、rules、skills、subagents、hooks、output styles、system prompt append），HN score 4 |
 
 **懸置細節**
-- ⟨Q-13⟩ 🔎 **查無官方**（標 2026-08-09｜查 Governor、token 浪費｜複 2026-11-21）：社群工具 Governor 宣稱優化 token 浪費，HN 社群對其實際成效提出疑慮；2026-08-10 查證找到廠商自報數據（compact professional 模式宣稱較基準降低 55.5% output token），惟均為工具作者／推廣部落格自行發布。2026-09-20 複查：本輪另搜尋獨立測試／評測站台，僅找到其他 token 優化工具（非 Governor 本身）的第三方 benchmark，未見任何獨立來源覆核或反駁 Governor 自報的 55.5% 數字；Governor 屬第三方社群工具，非 Anthropic 官方項目，故本題本質上不會有「官方」說法，僅能靠獨立覆核解決，目前仍缺，爭議維持未解。2026-10-24 再複查：重新檢索未見 Anthropic 針對 Governor 的任何說法（僅有官方一般性 token 節省指引，與該工具無關），獨立覆核仍缺。
+- ⟨Q-13⟩ 🔎 **查無官方**（標 2026-08-09｜查 Governor、token 浪費｜複 2026-12-21）：社群工具 Governor 宣稱優化 token 浪費，HN 社群對其實際成效提出疑慮；2026-08-10 查證找到廠商自報數據（compact professional 模式宣稱較基準降低 55.5% output token），惟均為工具作者／推廣部落格自行發布。2026-09-20 複查：本輪另搜尋獨立測試／評測站台，僅找到其他 token 優化工具（非 Governor 本身）的第三方 benchmark，未見任何獨立來源覆核或反駁 Governor 自報的 55.5% 數字；Governor 屬第三方社群工具，非 Anthropic 官方項目，故本題本質上不會有「官方」說法，僅能靠獨立覆核解決，目前仍缺，爭議維持未解。2026-10-24 再複查：重新檢索未見 Anthropic 針對 Governor 的任何說法（僅有官方一般性 token 節省指引，與該工具無關），獨立覆核仍缺。2026-11-21 再複查：搜尋官方網域（anthropic.com／code.claude.com）仍無針對 Governor 的說法，僅有一般性成本與 token 指引（[Manage costs](https://code.claude.com/docs/en/costs)），獨立覆核仍缺。
 
 **版本表（發布超過 90 天的列）**
 

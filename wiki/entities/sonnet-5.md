@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（Legacy，仍可呼叫）"
 domain: "🤖 模型"
-last_updated: "2026-11-14"
+last_updated: "2026-11-21"
 last_news_update: "2026-09-28"
 status_main: "active"
 days_since_news: 54
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（Legacy，仍可呼叫）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-01
-**最後更新：** 2026-11-14
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-09-28
 
 > **最新動態**（2026-09-28）
@@ -39,6 +39,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 現況
+
+- **自 2026-09-28 起無新動態**（2026-11-21 查核）：本頁仍被全庫 21 處引用，但停滯是事實而非漏更新——Sonnet 這一代的新消息都落在 [[entities/sonnet-5-5]]，拿它做選型決定前先看那一頁。
 
 **自 2026-09-28 起無新動態（2026-11-14 核）——它已是 Legacy，預設地位由 [[entities/sonnet-5-5]] 接手；本頁留著是因為仍有 21 個頁面指向它。**
 

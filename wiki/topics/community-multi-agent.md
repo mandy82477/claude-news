@@ -3,7 +3,7 @@ page: "topics/community-multi-agent"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-19"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-19"
 status_main: "ongoing"
 days_since_news: 2
@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 8
+inbound_links: 9
 attribution_count: 9
 attribution_last: "2026-11-19"
 top_source: "github"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-11-19
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-19
 
 > **確定性 Agent 框架新增跨模型紀律移植案例：Gravitas 把 Claude Code 工作流程套用在 Gemini 上**（2026-11-19）
@@ -54,7 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **開到多大**：超過 10 個並行 agent 要獨立 worktree 加一層協調；官方 session 預設同時跑到 20 個 subagent 時再開新的會失敗，上限可用 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 調（官方 sub-agents 文件，2026-10-09 查證）。
 - **怎麼停下來**：「怎麼停」比「怎麼跑起來」更難，要寫顯式終止條件；目前只有一則做法（2026-08-19），之後兩個月沒有新做法，已移出概覽表。
 - **接下來看什麼：** 官方 agent teams 何時脫離實驗性、會不會補上隔離；社群控制平面（amux、cezar、Offrun 這一路）有沒有人拿出跨工具比較。
-  - 十一月新增兩個單一專案方向：runner（11-10）讓四款 CLI agent 同一任務各保留原生終端機，Comma（11-07）主張自架常駐、與 10-21 的託管式 Omnara 相反；皆無第二方實測。
+  - 十一月新增三個單一專案方向：Gravitas（11-19）把 Claude Code 的讀檔、規劃、測試、附證據紀律強制套在 Gemini 上；runner（11-10）讓四款 CLI agent 同一任務各保留原生終端機，Comma（11-07）主張自架常駐、與 10-21 的託管式 Omnara 相反；皆無第二方實測。
 
 **機制細節**
 - **Multi-agent 架構**：ccteams 將驗證良好的 subagent 組合打包為可跨專案安裝的套件；OtoDock 將 Claude Code 與 Codex 組成協作團隊部署於自有伺服器

@@ -3,15 +3,15 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "💻 開發實務"
-last_updated: "2026-11-17"
-last_news_update: "2026-11-17"
+last_updated: "2026-11-21"
+last_news_update: "2026-11-21"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
+days_since_news_subtree: 0
 inbound_links: 39
 attribution_count: 6
 attribution_last: "2026-11-06"
@@ -32,15 +32,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-21
+**最後新聞更新：** 2026-11-21
 
 > **本頁在回答什麼**
 > 用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查。
 > 只讀這頁就拿得到每一段可照做的答案與關鍵數字；細節與原始證據在各段指向的頁。官方做法在前（可查證、會更新），社群做法只在官方留白處補位，並標明證據強度。
 
-> **官方查證：Claude Code 模型切換三法**（2026-11-17）
-> 官方說明中心確認模型切換三法（`/model`／`--model`／環境變數）＋`/status` 確認目前模型；managed-settings.json 不套用到 cloud session 或 Claude Desktop。本頁「2a 官方的 session 經營建議」同步更新。
+> **官方查證：Fable 5.2 提示指南**（2026-11-21）
+> 「這份程式碼是你的」收斂重複碼但多耗 70–80% 輸出 token；effort 要重跑 sweep。見第 4、6 段。
 
 ---
 
@@ -366,6 +366,8 @@ Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](
 
 規劃產出物可以直接改：**`Ctrl+G` 用你的編輯器打開 plan**。
 
+官方 Claude Code Projects（beta，僅 Pro／Max，2026-11-14 重新設計）把這一步交給 Claude：你描述目標，它自己界定範圍、拆成多條平行工作線、離開電腦後仍持續跑；是否切得合你預期沒有公開判準，用前先看它拆的範圍，見 [[entities/claude-code]]。
+
 ### 官方的規格品質判準
 
 官方有一套 interview 流程（「Let Claude interview you」），並給了規格的三條判準：
@@ -405,11 +407,15 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI，而 hook 本身也會失靈，三件事先知道：command／HTTP hook 設 `onFailure: "block"`（v2.1.295 起），hook 起不來或逾時就擋下動作、不默默放行；沙箱自動放行（`autoAllowBashIfSandboxed`）遇到含 shell expansion 的指令不保證成立，無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略是長期未解的已知問題，強制性要落在 hook 而不是措辭。issue 狀態與其他失效模式見 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]]。改了 hooks、MCP 或 plugin 設定後要完整重啟 session 才生效、沒有熱重載（GitHub issue #24057，未修復），改設定前先收尾手上的工作。
 
-想把寫入範圍鎖在工作目錄內，v2.1.314 起可開 `permissions.blockWritesOutsideWorkingDirectories`（預設關；2026-11-14 仍只在 `latest` 通道 2.1.325，`stable` 2.1.311 沒有，通道見 [[entities/claude-code-releases]]）：Write／Edit／NotebookEdit 在任何權限模式（含 bypass）都拒絕寫入工作目錄外的路徑，不必自己寫 hook；官方只列這三個工具，Bash 寫入不在其中（推論）。若依賴 sandboxed Bash 當隔離邊界，v2.1.309 之前的版本實際比預期鬆——指令執行前會先跑 shell 啟動檔而落在沙盒外，macOS 的 `denyWrite` glob 也比對不完全，兩者 v2.1.309 修復，見 [[entities/claude-code]]。
+想把寫入範圍鎖在工作目錄內，v2.1.314 起可開 `permissions.blockWritesOutsideWorkingDirectories`（預設關；`stable` 通道 2.1.323 已含（2026-11-21 查證），通道見 [[entities/claude-code-releases]]）：Write／Edit／NotebookEdit 在任何權限模式（含 bypass）都拒絕寫入工作目錄外的路徑，不必自己寫 hook；官方只列這三個工具，Bash 寫入不在其中（推論）。若依賴 sandboxed Bash 當隔離邊界，v2.1.309 之前的版本實際比預期鬆——指令執行前會先跑 shell 啟動檔而落在沙盒外，macOS 的 `denyWrite` glob 也比對不完全，兩者 v2.1.309 修復，見 [[entities/claude-code]]。
 
 「不再詢問」存進 repo 的密鑰已有官方修補：v2.1.323 起含密鑰的允許規則只在本次 session 有效、不寫檔，`settings.local.json` 改全域忽略；曾被存進 repo 的金鑰仍須換，見 [[topics/ai-agent-safety-product-vulns]]。
 
+兩個跟憑證有關的做法：收到求職或外包方寄來的程式測試題 repo，先自己看過程式碼再執行，別直接丟給 agent 跑或裝依賴（Binance 63 億美元竊案源頭即偽裝面試的測試題 repo，主流媒體報導，攻擊鏈細節待查證，2026-11-03）；設 MCP 伺服器時用 `claude mcp add-json <name> -` 從 stdin 讀 JSON，token 不留在 shell 歷史（v2.1.327 起，目前只在 `latest`，`stable` 2.1.323 沒有），見 [[entities/claude-code-releases]]。
+
 硬擋層還有兩個寫法上的坑：`permissions.deny` 要覆蓋同一動作的各種寫法——Reddit 一則回報稱對 `git push` 設的 deny 擋不住 `git -C . push`（單一來源，2026-10-14），見 [[topics/community-guardrails]]；v2.1.300 起 hook 回傳的 `updatedInput` 依 schema 驗證，靠 hook 改寫 schema 以外欄位的寫法，升版後會失效，見 [[entities/claude-code]]。
+
+**官方的提示做法（Fable 5.2）**：官方〈[Prompting Claude Fable 5.2](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2)〉（2026-11-21 查證）測出提示裡加一句「這份程式碼是你的」，模型把重複程式碼收斂成共用函式的比例由不到 10% 升到約 75%，代價是輸出 token 多 70–80%，且會做沒人要求的改動；只想最小改動時別加，「禁止順手重構」這類限制句壓不住它，見 [[entities/fable-5#跟它怎麼說話]]。
 
 **社群做法：** 讓它「寫得合你的意」不是攔錯誤，是攔「不合意的寫法」——社群目前收斂在強制層與注入層兩條路：
 
@@ -484,9 +490,13 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 
 **用 Sonnet 5.5 跑 `low` effort 要自己補驗證指令**：官方 prompting 指南（2026-10-03 查證）指出它在 `low` 下可能沒跑真正的檢查就回報完成；在指示裡加「改到可執行的程式就要跑測試／型別檢查／build」，官方測得略增成本、品質無可測變化，見 [[entities/sonnet-5-5]]。
 
+**官方自己怎麼讓 agent 自證**（Anthropic 部落格，2026-11-17，HN 194 分）：Claude Code 團隊稱約 90% 程式碼由 Claude 寫也由 Claude 審，靠端對端、property、差異三種測試迴圈讓 agent 拿證據證明做對，才敢同時平行跑幾十到上百個；結論是並行規模的前提是驗證迴圈，不是多開 agent。細節見 [[topics/community-multi-agent]]。
+
 **升版檢查：`claude -p` 的預設權限模式變了。** v2.1.302 起，`claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑（先前是 auto）；CI 或無人值守腳本若依賴舊行為，升版後要明寫 `--permission-mode auto`。同版起 fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟，不想要就設 `CLAUDE_CODE_FORK_SUBAGENT=0`，見 [[entities/claude-code]]。同樣跑無人值守，v2.1.310 起停用 telemetry 或非必要流量時，長時間 foreground sleep 會被攔阻，腳本裡用 sleep 輪詢的寫法升版後可能中斷；同版新增官方 Monitor tool 可改走監控。另有 issue 回報 headless `claude -p` 相同工作負載耗用 5 小時額度約為互動式 CLI 的 1.8 倍（#97074，未修復、單一回報），批次排程前先把這個倍率算進成本，見 [[entities/claude-code]]。
 
-**Fable 5.2 升級對 effort 與成本的影響**：v2.1.321（11-09）起 5.2 成預設 Fable，牌價 $8/$40；官方遷移指南稱「別多想」類提示在 medium 以上擋不住思考，xhigh／max 會自開子 agent 審查，成本要看 effort 而非提示措辭，見 [[entities/fable-5]]。
+**升 stable 前逐項對照**：stable 現為 2.1.323（latest 2.1.330，2026-11-21），上一輪停在 2.1.311 的人這一跳會一次吃下 12 版。對 CI 與腳本有影響的：`DISABLE_COMPACT` 只能關不能再開（v2.1.311），靠它動態切換壓縮的腳本要改；`claude ultrareview` 需先信任工作區（v2.1.309），未信任的自動化流程會中斷；Read 工具重讀未變更檔案不再提示、直接回傳全文（v2.1.317），常重讀同檔的 hook 要重估 token；自架 runner 的 checkout hook 預設 30 分鐘停止（v2.1.307，`--checkout-hook-timeout-min` 可調）；`allowedMcpServers` 不再過濾只在 env 用 `${VAR}` 的 stdio 伺服器（v2.1.305），要停用改走 `deniedMcpServers`；新建 managed agent 預設改 auto 權限（v2.1.318）。Opus 4.8 fast mode 11-30 移除，之後請求直接報錯、不會退回標準 Opus 4.8，要先遷到 Opus 5.5。其餘（寫入邊界 2.1.314、auto mode 在 gateway 下不再退回舊分類 2.1.319、Fable 5.2 預設 2.1.321、Code Mode 2.1.323）逐列見 [[entities/claude-code-releases]]、[[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]。
+
+**Fable 5.2 升級對 effort 與成本的影響**：v2.1.321（11-09）起 5.2 成預設 Fable，牌價 $8/$40；官方遷移指南稱「別多想」類提示在 medium 以上擋不住思考，xhigh／max 會自開子 agent 審查，成本要看 effort 而非提示措辭，見 [[entities/fable-5]]。官方 5.2 提示指南另有兩點：effort 級名跨模型不對應同樣的思考量，照搬 5.1 調好的值要重跑 sweep；長任務「還沒做完就收手」官方給了可貼進 system prompt 的段落（把逾時、報錯當成自己排除的阻礙、只有刻意的封鎖線留給人），代價是輸出 token 約多三成、它問你的次數變少，風險性動作的確認步驟要自己留，見 [[entities/fable-5#跟它怎麼說話]]。
 
 **`claude -p` 撞 API 400**：GitHub issue #11678（仍 open，52 則留言）回報無頭模式一送 prompt 即回 `tools.3.custom.input_examples` 400，CI 腳本先查此 issue，無官方修復，見 [[entities/claude-code-known-issues]]。
 
@@ -552,7 +562,9 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 
 訊號強度：兩者皆單一作者首發，逾四個月無第二個獨立案例佐證持續使用或採用回饋；`community-tech-tools`「CLAUDE.md 寫了它不聽」決策表目前也判定「這一列沒有工具可評」，未把 Patina 列為可選首選（見 [[topics/community-tech-tools]]）。
 
-**還沒解掉的那一塊**：「規則內容是否還與程式碼現狀相符」至今沒有任何證據——兩個候選一個驗規則本身有沒有被定期清過、一個驗 agent 輸出像不像平常，沒有一個把 CLAUDE.md 條文拿去跟目前的原始碼狀態做比對。這題官方與社群都還是空白。
+另有兩個沾邊的新做法，皆單一來源：gauge-cli（Show HN，HN 40 分，2026-11-05）用 agent 任務的成功率回頭遞迴修正 CLAUDE.md 等文件，本機執行免帳號，見 [[topics/community-memory]]；換模型版本後 skill 會靜默失效（一位作者靠強迫呼叫不存在工具取得結構化輸出，Opus 5.5 不再配合，2026-11-03），社群建議 description 寫清楚「什麼時候該叫我」、skill 一多就清點清單有沒有被擠掉、硬規則改用 hook、換模型後重跑一次依賴特定輸出格式的 skill，見 [[topics/community-skills]]。
+
+**還沒解掉的那一塊**：「規則內容是否還與程式碼現狀相符」至今沒有直接證據（gauge-cli 只從任務成功率間接回推）——兩個候選一個驗規則本身有沒有被定期清過、一個驗 agent 輸出像不像平常，沒有一個把 CLAUDE.md 條文拿去跟目前的原始碼狀態做比對。這題官方與社群都還是空白。
 
 ---
 
@@ -579,6 +591,10 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 除錯本身：`/engineering:debug` 提供重現 → 隔離 → 診斷 → 修復的流程；官方 recipe 建議**直接告訴 Claude 重現指令並給它 stack trace**、說明錯誤是間歇還是穩定發生。無法在本機重現的場景（硬體在迴路、生產限定），這流程第一步就會卡住。
 
 **社群做法：** 靜默失敗的社群對策分兩路——**偵測**與**預防**。偵測面：「你的 AI Subagent 在騙你」一文從 317 色碼平行清理任務的踩坑記錄歸納出 4 種靜默失敗模式（各 subagent 回報「完成」，實際檢查卻不然；dev.to，2026-07-29）；另一獨立來源指出 MCP server 在長 session 中會無聲斷線，Claude Code 對已失效工具的呼叫因此得到靜默失敗，對應做法是心跳檢查＋自動重連。預防面：**對抗性雙 Claude 審查**是目前唯一有多專案追蹤的做法——計畫前做法讓 Agent B 實際讀真實 codebase 挑戰 Agent A 的計畫（2026-06-25）；程式碼完成後做法則是起草者／批評者角色分工，作者追蹤六個生產專案，回報執行後的靜默失敗變少（未給數字），尤其長任務與規格不完整場景（2026-05-12）。三者細節見 [[topics/community-tech-patterns]]。**與官方的關係**：`/goal`／驗證 subagent 解的是「怎麼確認完成」，這些社群做法解的是「怎麼在完成之前先防止樂觀偏差」，兩者互補。
+
+**「說做完了但沒做」的證據導向工具**（皆單一作者、僅星數或自報數據，無第三方採用回饋，首選與判斷以 [[topics/community-tech-tools]]「我卡在這裡」決策表為準）：canary 在 E2E 測試失敗時附螢幕錄影、console log、network HAR 與 Playwright trace；nomos 擋刪測試、改回傳值這類讓編譯器放行的作弊（見 [[topics/community-guardrails]]）；Gravitas 把先查證才完工的紀律套到 Gemini。
+
+**MCP 連線莫名斷掉、cache 突然失效時的三個排查方向**（dev.to，2026-11-17）：多個伺服器的 schema 塞滿 context；工具回應超過 8MB 會讓 stdio 伺服器被砍、回報 `Connection closed`（對應官方 issue #105703）；工具順序變動悄悄洗掉 prompt cache。只有 8MB 一項有 issue 佐證，見 [[topics/community-integrations]]。
 
 **還沒解掉的那一塊（範圍要縮小）**：`/goal` 的評估者不跑工具，只能判斷 Claude 已經在對話中說出來的東西——Claude 沒講的，它抓不到。要真正閉環得靠 `Stop` hook 這種跑 script 的確定性閘。工具失敗、API 錯誤、用量耗盡三種靜默失敗源頭混在一起難以分辨，仍是缺口。
 
@@ -625,6 +641,7 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 官方文件的完整索引在 [llms.txt](https://code.claude.com/docs/llms.txt)，跟 codebase 工作相關的是這些。每頁後面標的是「它在回答什麼」：
 
 - [prompting-claude-opus-5-5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5)（2026-09-28 發布，HN 187 分）—— Opus 5.5 相對 Opus 5 的行為差異與因應寫法：effort calibration、無人值守／多代理任務的進度回報、安全拒答、frontend 設計、貼上文字處理等。
+- [prompting-claude-fable-5-2](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2)（2026-11-21 查證）—— Fable 5.2 的 effort 重跑 sweep、長任務收手的 system prompt 段落、「這份程式碼是你的」的收斂與代價；重點見第 4、6 段。
 - [Getting the most out of Opus 5.5 in Claude and Claude Code](https://claude.dev/blog/getting-the-most-out-of-opus-5-5/)（2026-10-03，HN 224 分）—— 在 Claude 與 Claude Code 怎麼提示它、怎麼放手讓它跑長任務、完工後怎麼核對結果；重點見第 9 段「Opus 5.5 的提示建議」。
 - [large-codebases](https://code.claude.com/docs/en/large-codebases) —— **大 repo／monorepo 該怎麼設定**。全站唯一專門講這件事的一頁，含可貼上就用的 `settings.json`。
 - [memory](https://code.claude.com/docs/en/memory) —— CLAUDE.md 怎麼載入、rules 的 `paths:`、auto memory、`/doctor` 的減法原則。
@@ -661,11 +678,11 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 
 ## 本週 coding 亮點
 
-- **「不再詢問」存進 repo 的密鑰已修**：v2.1.323 起只在本次 session 有效，舊金鑰仍須換，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
-- **寫入邊界設定只在 latest 通道**：`blockWritesOutsideWorkingDirectories` 預設關，stable 2.1.311 沒有，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
-- **長 session 的成本旋鈕**：中途調 effort 不打掉快取、閒置對話接續前會先警告、subagent effort 可固定，見 [第 2a 段](#2a-怎麼讀得省)
+- **升 stable 一次吃 12 版**：stable 跳到 2.1.323，CI 與腳本要逐項對照，見 [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)
+- **Fable 5.2 官方提示做法**：「這份程式碼是你的」收斂重複碼但多耗 token、長任務收手的可貼段落、effort 要重跑 sweep，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
+- **官方的驗證迴圈**：Claude Code 團隊以三種測試迴圈撐起大規模平行委派，見 [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)
 
-%% 亮點檢查日 2026-11-14；其餘候選（工具星數類、單一作者工具、安全事件、功能請求類 issue、Code Mode 與 Monitor tool 屬他頁）不入本節。 %%
+%% 亮點檢查日 2026-11-21；其餘候選（工具星數類、單一作者工具、安全事件、功能請求類 issue、Code Mode 與 Monitor tool 屬他頁）不入本節。 %%
 
 ---
 
@@ -707,13 +724,17 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 
 - [How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work) — 關 thinking 省 token 的建議，第 2a 段
 
+2026-11-21 補查：
+
+- [Prompting Claude Fable 5.2](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2) — 重跑 effort sweep、長任務收手段落、ownership 句，第 4、6 段
+
 2026-11-17 補查：
 
 - [Claude Code model configuration](https://support.claude.com/en/articles/11940350-claude-code-model-configuration) — 模型切換三法、`/status`、managed-settings.json 的適用範圍，第 2a 段
 
 社群與一手觀察：
 
-- [anthropics/skills](https://github.com/anthropics/skills) ／ [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — 官方技能清冊，2026-11-14 查證，近 7 天無增減
+- [anthropics/skills](https://github.com/anthropics/skills) ／ [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — 官方技能清冊，2026-11-21 查證，近 7 天無增減
 - [Putting Spec Kit through its paces](https://blog.scottlogic.com/2025/11/26/putting-spec-kit-through-its-paces-radical-idea-or-reinvented-waterfall.html) — spec-driven 反方實測
 - [Cross-Model LLM Code Review（arXiv 2607.21656）](https://arxiv.org/abs/2607.21656) — 跨模型互審通過率方法論，[[topics/community-guardrails]]「查證備註」2026-08-13 查證
 - 熱門專案設定調查 — 14 個 repo，2026-08-08 一手觀察，樣本限制見該節

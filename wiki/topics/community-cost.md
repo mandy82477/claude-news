@@ -3,7 +3,7 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-17"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-17"
 status_main: "ongoing"
 days_since_news: 4
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-11-17
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-17
 
 > **模型使用策略再添兩款：便宜模型配測試把關、跨廠商 CLI 橋接**（2026-11-17）
@@ -633,3 +633,5 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-05⟩ **ip_reminder 標籤**：原始文章已定位——[dev.to/nomurasan](https://dev.to/nomurasan/i-grepped-my-own-claude-code-logs-and-found-the-hidden-tag-anthropic-never-shows-you-17c0)（2026-07-27 發表，查證日 2026-09-20）。
   - 作者 grep 自己的 JSONL session log 找到 `<ip_reminder>` 標籤，單一 session 比對出 151 行相符、437 次出現，判定為版權安全用途的系統層注入。
   - **屬社群逆向工程發現、非官方確認**，且與先前查得的 `<system-reminder>` 標籤（GitHub issue #52018、#17601）不是同一個。
+
+%% 拆頁評估 2026-11-21：不拆，分不出群。正文約 610 行，剛過門檻；三類中 Agent 預算控制只有 1 則約 9 行（太薄），Token／成本優化約 208 行、模型使用策略約 173 行、額度監控與帳號橋接等其他約 180 行，讀者問題都是「怎麼少花錢、怎麼看見花在哪」，目前結論與「用量去向歸因」「用量窗口與配額守門」兩節共用同一組結論（subagent 既是用量來源又是路由對象），切開後每群都得借另一群的結論。模型使用策略受官方定價與模型發布影響最大，若之後一個月內有官方定價事件把路由與監控的讀者問題拉開，再評估切出。 %%

@@ -12,12 +12,12 @@ parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
 days_since_news_subtree: 2
-inbound_links: 48
+inbound_links: 49
 attribution_count: 44
 attribution_last: "2026-11-19"
 top_source: "google-news"
 pending_count: 3
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-22"
 pending_signalled: 0
 staleness_exempt: null
@@ -181,10 +181,11 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 - 多家外媒同日跟進報導 Fable／Mythos 5.2 雙發布，多聚焦 IPO 前市場脈絡與定價戰，商業面見 [[entities/pricing]]、[[topics/anthropic-ipo]]；本頁僅記模型能力與存取面
 
 #### 2026-11-01
-❓ **待查證**（標 2026-11-01｜查 Hugging Face、Mythos-class）｜**HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息**：
+🔎 **查無官方**（標 2026-11-01｜查 Hugging Face、Mythos-class｜複 2026-12-05）｜**HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息**：
 - Hacker News（17 分）、Reddit r/ClaudeAI（週熱門）同步出現「Anthropic 的 Mythos-class 模型外流到 Hugging Face」傳言；原網址因惡意軟體疑慮未附，無法查核實際頁面內容
 - 留言者普遍判定此消息幾乎可以肯定是假的，指出手法與近期「Fable 5 checkpoint 在暗網論壇出售」傳聞同屬一類——疑在誘騙較不熟悉者下載並執行惡意程式碼，非真實模型外流
 - Anthropic 未就此傳言公開回應確認或否認；是否真有檔案外流、外流內容為何均未見報導
+  - 11-21 查證：anthropic.com 搜尋無針對此傳言的聲明；HN 討論串（[item 50326727](https://news.ycombinator.com/item?id=50326727)）指涉 repo 為 `burner22/numbat`（宣稱約 14T 參數、772 個分片），留言者稱權重為隨機資料、README 參數量與索引不符，「numbat」僅為 Claude Code 原始碼外洩中已公開的內部代號；皆為社群判斷，非官方結論
 
 ### 2026-10
 
