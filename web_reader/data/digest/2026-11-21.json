@@ -1,0 +1,544 @@
+{
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-21 22:13 UTC",
+  "articleCount": 52,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[Bug] Excessive token usage in Claude Code 2.1.1 - 4x+ faster rate consumption than previous versions",
+      "url": "https://github.com/anthropics/claude-code/issues/16856",
+      "source": "GitHub Issues",
+      "time": "11/20 16:24",
+      "sentiment": "",
+      "body": "這則回報稱升級到 Claude Code 2.1.1 後，同樣的專案與工作習慣卻讓用量消耗速度快了 4 倍以上，留言數已累積到 73 則，遠超過 GitHub 討論互動的高門檻（50 留言）。長期用固定額度方案跑 CC、覺得這幾天額度燒得特別快的人，可以去這則底下核對症狀是否相符。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Cowork: \"Failed to start Claude's workspace\" — VM service not running, persists after reboot",
+      "url": "https://github.com/anthropics/claude-code/issues/27801",
+      "source": "GitHub Issues",
+      "time": "11/20 16:38",
+      "sentiment": "",
+      "body": "承上，另一則回報稱 Cowork 的工作區持續跳出「Failed to start Claude's workspace」、VM 服務起不來，重開機也沒用，留言數同樣累積到 73 則。仰賴 Cowork 排定自動化流程的人，這幾天若遇到工作區開不起來，可以在這則底下對照是否是同一個已知問題。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic engineer's warning about Claude Code explains why tech outages could get much worse - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPZHJCVThaVWVtUkpteGlHSWR3MDRPd0lsVjJ6dTlEaGhVX1hsWVFhRW45WEdDTlNTS05iUGs3TzVrTTY4QTI3aVBrVG5CbU40Yi1sWFNYN0JPUXY0RE1TUGJ1WndpanJVbUZiOVNiV2JXbUhicno2eGludENWRmFlU3RVR0hLemhoYkVLd05PMDZzSGc1dVhHNEJYWUpvMmdyTmh0TXUzWW1icGhDRGhRZTBkN2ctSlA3ei1nMEJxRnRSYlhSRlpnMC10Zm8tODhIQjkzdjl3VEZNODNVaHJCR2plZ3drajg?oc=5",
+      "source": "Yahoo Finance",
+      "time": "11/21 11:00",
+      "sentiment": "",
+      "body": "Yahoo Finance 報導一位 Anthropic 工程師就 Claude Code 可能讓科技業當機風險惡化發出警告，三個獨立媒體來源同日跟進報導，但標題未進一步公開警告的具體機制。倚賴 Claude Code 跑自動化、擔心基礎設施韌性的人，可以留意官方或當事工程師是否後續公開更多細節。",
+      "focusTags": []
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.330",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+      "source": "GitHub",
+      "time": "11/20 22:32",
+      "sentiment": "",
+      "body": "官方發布 v2.1.330，新增「登入由 Enterprise Admin Console 管理的組織」支援：執行 `claude auth login` 後，Claude Code 會套用該組織的設定並使用其雲端供應商。用 Enterprise Admin Console 集中管理團隊的公司，成員現在能直接用公司帳號登入並套用對應設定。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "I stopped hitting Claude's usage limits after changing one habit in how I start sessions",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQW4yZEYtalBxUnlUbTM4d19lWHVXOUxBaW00bTZJeEpIUDVXZmtzWGR2RWM4Z0xwZGphSFFvTW1PLWJDdGFOdEpVNHE2N2pLUnVVUUtqZjlWSmw4ZDdIblc5aXEtYTUtZWJIRFoteURoRURzcnVSaGcwUlRYdWNDaHYwM20zVEw4WlhrM3FFT3lXenhucWRQUjlzZHV1WEFiTnMxM0szUmFmWlBSeEp0TEFnQzU3Q3pvUEJ3?oc=5",
+      "source": "XDA",
+      "time": "11/21 15:30",
+      "sentiment": "",
+      "body": "XDA 一篇使用心得稱，作者改變了啟動 session 的某個習慣後，就不再頻繁撞到 Claude 的用量上限；標題未進一步說明具體是哪個習慣。常覺得額度用太快的人，可以點進原文找答案。",
+      "focusTags": []
+    },
+    {
+      "title": "I used Claude to debloat my 6-year-old Android TV, finally fixing what Google broke",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9SRmhmVTdzUFJ2NUNmRnlUTlF1RGJVTi1LMUNjLUROMXNxRkJSYWg3UDBlNU16OGk0cjNOT3FzaVpKbjcyNkM4WUhfQWNuYkJCc2lNSVlZVkhxMnpobDhtRWJ3Z3pVS21oemxGSDFaWDd1aV9lMVFqdEp3VQ?oc=5",
+      "source": "XDA",
+      "time": "11/21 16:30",
+      "sentiment": "",
+      "body": "XDA 另一篇心得分享作者用 Claude 幫忙移除一台用了 6 年的 Android TV 上的臃腫預裝軟體，解決了 Google 自己造成的問題。想延長老舊智慧電視壽命、不想花錢換新機的人，這是一個真實使用案例。",
+      "focusTags": []
+    },
+    {
+      "title": "I had Gemini and Claude build me a tracker app; only one made it to my Android home screen",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOV1RmQTg0TERZVFFFV0V5MS1hZmxKa0FLR1RpTUFyMHl3U0RGdVBacFV5MXFxZnFfaV90MUtCbTduUnRwUWlSbUR5RGRsWFNaYklCdV9pa0RZcVdyVUFRanVBZUhsMmxmbS1WTlNvc0Y0aG51SU90UjRHS3BzWUxOelBSdERsaHQyRDVyaHhkV3BNcGJBN0o2QVBSTjJzU2tud0E?oc=5",
+      "source": "Android Police",
+      "time": "11/21 13:45",
+      "sentiment": "",
+      "body": "Android Police 讓 Gemini 與 Claude 各自寫一個追蹤 app，結果只有其中一個最終留在作者的 Android 主畫面上；標題未直接點名是哪一個模型勝出。同時評估該用哪家模型做個人小工具的人，可以看原文找答案。",
+      "focusTags": []
+    },
+    {
+      "title": "They Run Anthropic. They Want to Keep It Weird. They're Brother and Sister. - WSJ",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZGJyNGh6cktKS0FsM3FIbF9LbjFqVThfY3MyRURJREVmd1JqVGtVX3pTV1FuQzBUUUI3VDdXVHdUYkpKTDk1Ml9vZzdoN1p5T0pVZ3g1eGpwQ1NfVFp6VlhJX1FSXzZ6ajVDYjVKazF5N2FGbXVHLUdjN05YRzVQZnRYaVZtMkE?oc=5",
+      "source": "WSJ",
+      "time": "11/21 02:00",
+      "sentiment": "",
+      "body": "WSJ 刊出一篇人物側寫，描述執掌 Anthropic 的兄妹 Dario 與 Daniela Amodei，想在公司壯大、甚至完成史上最大規模 IPO 之後，仍保留原本的「獨特」風格。想了解 Anthropic 決策核心人物性格與公司文化的人，這是一篇貼近創辦人本人的側寫角度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic says it will put humanity first. Will its IPO change that? - NPR",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVWZST3piU2NqZVJlVFlPQU9BY1F3eXNMR3VQdVd3OTRTcUF0b0FHSmp3MFZpZHFYaWNrOE9zRnl5LXBlNDlwaXQxaHhKY0VDVjQyVHhiT2ZQZHA0c2pwWFJ2VkItZEtmMHFfSmg3VU44dHgta0VnUHNVZy1sZGhRT0V3?oc=5",
+      "source": "NPR",
+      "time": "11/21 10:00",
+      "sentiment": "",
+      "body": "NPR 提出質疑：Anthropic 長期宣稱會把人類福祉放在公司利益之前，但在完成史上最大 IPO、股東壓力隨之而來後，這個承諾是否還能維持；報導本身未給出結論。在意 Anthropic 安全與使命承諾會不會因股東壓力鬆動的人，這是本週 IPO 之後浮現的新角度。",
+      "focusTags": []
+    },
+    {
+      "title": "Scale AI cofounder says she passed on an Anthropic investment to support her ex's lifestyle: 'Lost a billion' - Business Insider",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZ1ZRM1BXMkItVU9WdFVsc0dJOFVrRjlIbVVPOGxRendaRXc5QUlFQ3FYU0tQSXZRY1N5cjNRWXFJcmluLW9tLW5IaElvX0hJUHNiYWJKWVpha3FqSzBqRElZY2hBTnhsZzhoSEJKbzZMZ25vYU9Wc1J4QXpxZ0MyTVJob19lZFVnYjMyUmF5cVRaQTRBOHBz?oc=5",
+      "source": "Business Insider",
+      "time": "11/21 12:00",
+      "sentiment": "",
+      "body": "Business Insider 報導，Scale AI 共同創辦人表示自己當年為了支持前伴侶的生活方式，放棄了一筆投資 Anthropic 的機會，事後估算「損失了十億美元」。關注這波 IPO 造富敘事、好奇當事人決策代價的人，這是一個聚焦個人故事的真實案例。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Show HN: XSquads– Set a mission, agents work on it autonomously in your harness",
+      "url": "https://xsquads.ai",
+      "source": "Hacker News",
+      "time": "11/20 21:56 UTC ·",
+      "sentiment": "😐",
+      "body": "這款多代理「元框架」宣稱可疊在既有訂閱上運作，支援 Claude Code、Codex、Pi Coding Agent、Open Code、Antigravity、Hermes、Grok 等多種既有 harness，讓非工程背景的知識工作者也能派任務給一組 AI 隊友。已經在用 Claude Code 訂閱、想疊加自動化派工層的人可以留意這類整合工具。",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Compare how codex and Claude Build a procedural octopus jar escape",
+      "url": "https://keepplain.com/b/build-a-procedural-octopus-jar-escape-in-threejs/vs/build-a-procedural-octopus-jar-escape-in-threejs-cjma,build-a-procedural-octopus-escaping-a-jar-in-threejs,build-a-procedural-octopus-jar-escape-scene-in-threejs",
+      "source": "Hacker News",
+      "time": "11/21 17:14 UTC ·",
+      "sentiment": "🤔",
+      "body": "作者用同一段提示詞分別讓 Codex 與 Claude 寫出一個章魚解開玻璃罐蓋的 3D 場景，並把兩邊產出的程式結果並列展示。想直觀比較兩家編碼模型在同一題目上寫出的實際效果的人，可以直接看這個並排案例。",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Name the World – An Atlas Quiz",
+      "url": "https://nametheworld.starshadowx2.workers.dev/",
+      "source": "Hacker News",
+      "time": "11/21 01:45 UTC ·",
+      "sentiment": "😊",
+      "body": "作者過去幾個月只用免費方案的 Claude（Sonnet 5 與 5.5）斷斷續續做出這款國家地理猜謎遊戲，形容這是一次驗證免費額度限制下仍能做出完整小作品的過程。好奇免費方案 Claude 實際能撐起多少個人專案的人，這是一個具體案例。",
+      "focusTags": []
+    },
+    {
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Search",
+      "time": "11/21 17:39 UTC ·",
+      "sentiment": "😐",
+      "body": "（近 2 天 +3,372 星，約 1,686 星/日，目前累計 15,587 星）一套用於抓漏與外部紅隊工作的 Claude Code skill 合集，含 82 個 skill、15 個斜線指令，並整理了跨 24 類核心漏洞的 681 個已揭露報告範式；成長速度異常快，未見 forks／issues／近期 commit 等佐證，未另行查證。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "bookwjitchieni1986/blender-ai-mcp-addon",
+      "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+      "source": "GitHub Search",
+      "time": "11/21 17:39 UTC ·",
+      "sentiment": "😐",
+      "body": "（近 2 天 +1,871 星，約 936 星/日，目前累計 2,075 星）一款讓 Blender 接上 AI 助理與 MCP 伺服器的外掛，支援視覺化對話、場景操作工具與多代理工作流，相容 ChatGPT、Claude、Gemini、Ollama、OpenCode 等多種後端；成長速度異常快，未見 forks／issues／近期 commit 等佐證，未另行查證。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-20） Anthropic 股價風暴今天擴大成整個 AI 板塊的賣壓：WSJ 與 Hacker News 討論串把這波損失定量為市值蒸發達 4 兆美元的賣壓，Axios 另報導 Nvidia 股價同步重挫；Reuters 並披露承銷商當時曾平倉一筆避險倉位以穩定 ANT 股價。持有或關注 AI 概念股的人，這是比 11-20 單一股票下跌 11% 更大範圍的市場衝擊數字。",
+      "ref_urls": [
+        "https://www.wsj.com/finance/stocks/anthropics-ipo-bust-punctuates-4-trillion-ai-wipeout-on-wall-street-f1f1ec90",
+        "https://news.google.com/rss/articles/CBMieEFVX3lxTE9lT3pUcFhra290UDVtQVlwcVBjeDdBX1NLX1lPMGVjM3lPRHZDZk04eHI3cDk1STFLejBDODdHZWYtVFJzRnd3Q2ZDLW5EdjN1RTZzT3ZLblNoa004bmN6bjRSWXF4Y0RoQWs1UGR4UThYR004a1hWcw?oc=5",
+        "https://www.reuters.com/markets/us/anthropics-ipo-bank-closed-position-meant-stabilize-stock-removing-source-2026-11-20"
+      ],
+      "ref_names": [
+        "WSJ",
+        "Axios",
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-20） 黎曼猜想爭議今天多了一個競爭對手：The Decoder 報導，就在 Anthropic 稱 Claude 證出黎曼猜想幾小時後，史丹佛大學隨即發布一份完全由人類完成、與其競爭的證明草稿。關注 Claude 數學形式化證明能力上限、或留意這場真偽未定爭議的人，這是比 11-20 單一未經同行審查的聲稱更進一步的狀態變化。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQUGJqSjZWaXNISk8tTE9CM0d4czdubmlPOW4zQjNBTG51X0drbzlBSGl2Mkx4NHdCS0RtWmhNSERHdm4yMkk1bGJZZnhlMzZRMVMzaGZMZTlMekJaVFNQdkpDUDMyUERoQWhhWW9QSVJIQk53eFVUa1EwdUpQUFZTSFVuemIwcWFmWlRyRl8xdm5KUDd6V2Qza3ZPM1IzbHVTRl91TFNDNDNxUnhzdXZXWk1teGcyN2RORU5xTTdHYzJZUkZLaE1ySEpraWljMFlJQV9ZR2JXcDU?oc=5"
+      ],
+      "ref_names": [
+        "The Decoder"
+      ]
+    }
+  ],
+  "topicRadar": [],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 41
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 0
+    }
+  ],
+  "preview": "程式開發實戰手冊：「這份程式碼是你的」收斂重複碼但多耗 70–80% 輸出 token；effort 要重跑 sweep。見第 4、6 段。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code-features",
+      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-releases",
+      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5、5.1 與 5.2",
+      "pageType": "entity"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "coding-workflow-guide",
+      "name": "程式開發實戰手冊",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-interfaces",
+      "name": "社群做法：手機遠端、介面與 agent 可視化",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-memory",
+      "name": "社群做法：記憶、CLAUDE.md 與 context",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-ipo",
+      "name": "IPO 與財務揭露這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-21",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "topics/coding-workflow-guide",
+            "name": "程式開發實戰手冊",
+            "label": "官方查證：Fable 5.2 提示指南",
+            "date": "",
+            "body": "「這份程式碼是你的」收斂重複碼但多耗 70–80% 輸出 token；effort 要重跑 sweep。見第 4、6 段。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.330（自 2.1.329 起）新增 10 個候選旗標（名單見追蹤表），皆第一階、無代號旗標；另 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目自身，暫不升第二階。"
+          },
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **互動數更新**：Cowork 工作區啟動失敗「VM service not running」，重開機未解（#27801，73 則留言、42 讚）。"
+          },
+          {
+            "page": "entities/claude-code-releases",
+            "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.330**：新增登入由 Enterprise Admin Console 管理的組織支援——`claude auth login` 後套用該組織設定並使用其雲端供應商。build 同時新增 10 個候選旗標，見 [[topics/claude-code-experimental]]。\n- **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。"
+          },
+          {
+            "page": "entities/claude-workspace-suite",
+            "name": "Claude 協作三件組（Whiteboards、Sheets、Data）",
+            "label": "最新動態",
+            "date": "",
+            "body": "Enterprise 方案的 Claude Data 已於 11-20 如期預設開啟（官方文章 2026-11-21 複查確認未延期），Whiteboards、Sheets 仍預設關；不想自動開的管理員現在就到 Organization settings > Artifacts 關掉。"
+          },
+          {
+            "page": "entities/claude-code-features",
+            "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+            "label": "最新動態",
+            "date": "",
+            "body": "桌面版文件新增：Code tab 的 Computer use 需 Pro／Max／Ultra 方案（macOS／Windows）；Dispatch 不再開放給新使用者；詳見 [[entities/claude-code-features#桌面版功能地圖]]「其他」「Dispatch 與 Claude 建議的任務」。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/fable-5",
+            "name": "Claude Fable 5、5.1 與 5.2",
+            "label": "研究動態與未驗證宣稱",
+            "date": "",
+            "body": "- **黎曼猜想爭議升溫**：史丹佛發布競爭性全人類證明草稿，雙方均未經同行審查。\n- **黑洞物理兩道難題**：官方確認解開兩道懸置逾 20 年的理論問題，附兩篇預印本論文。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **上市後賣壓擴大為全 AI 板塊性賣壓，市值蒸發達 $4 兆，Nvidia 同步重挫；承銷商曾平倉避險倉位穩定 ANT 股價**（WSJ／Axios／Reuters）"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-tools",
+            "name": "社群工具目錄",
+            "label": "目錄新增 34 個工具、14 列不再列入、14 列加註「此後未見後續報導」",
+            "date": "",
+            "body": "涵蓋 11-14～11-20 的 Show HN 與 GitHub 新品；帳單、記憶、盯狀態、說做完了但沒做、額度五列各多了新選項或對照（皆無使用回報），各症狀列首選都沒動。"
+          },
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "Skills 設計新增抓漏合集與內容再製自驗收 Skill",
+            "date": "",
+            "body": "- **Claude-BugHunter**：抓漏與紅隊用 skill 合集，82 個 skill、15 個斜線指令，含 681 個已揭露報告範式。\n- **article2media**：文章／影片一鍵轉社群圖文與配音短影音，21 套主題，產出前自動驗收。"
+          },
+          {
+            "page": "topics/community-memory",
+            "name": "社群做法：記憶、CLAUDE.md 與 context",
+            "label": "記憶與知識管理新增 Obsidian 當記憶後端的「AI 第二大腦」",
+            "date": "",
+            "body": "- **avenoxbeyin**：開源系統整合 Obsidian 與 Claude Code，提供跨 session 持久記憶。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "Plugin / MCP 整合新增手機操控 MCP 伺服器；同名 Blender 外掛兩個月內第三度換帳號出現",
+            "date": "",
+            "body": "- **phonedriver**：MCP 伺服器＋CLI 讓 agent 讀手機畫面文字並操控 Android／iPhone。\n- **blender-ai-mcp-addon**：第三個帳號（bookwjitchieni1986）發布同名同描述外掛，前兩次（LiCinCan、hitkeeen）連結均已失效，疑似假星數手法。"
+          },
+          {
+            "page": "topics/community-interfaces",
+            "name": "社群做法：手機遠端、介面與 agent 可視化",
+            "label": "行動裝置遠端控制新增桌面動態島整合 Claude Code 核准推播",
+            "date": "",
+            "body": "- **Fuyu**：Windows／macOS 動態島整合多通訊 App 通知，並把 Claude Code／Codex 狀態與核准請求推播到手機。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "最新動態",
+            "date": "",
+            "body": "WSJ 側寫 Dario 與妹妹 Daniela Amodei（Anthropic 總裁）：執掌公司壯大、推動史上最大 IPO 之餘，兩人仍想保留創辦初期的「獨特」風格（僅標題可用）。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "readerTopStories": [
+    {
+      "title": "[Bug] Excessive token usage in Claude Code 2.1.1 - 4x+ faster rate consumption than previous versions",
+      "url": "https://github.com/anthropics/claude-code/issues/16856",
+      "source": "GitHub Issues",
+      "time": "11/20 16:24",
+      "sentiment": "",
+      "body": "這則回報稱升級到 Claude Code 2.1.1 後，同樣的專案與工作習慣卻讓用量消耗速度快了 4 倍以上，留言數已累積到 73 則，遠超過 GitHub 討論互動的高門檻（50 留言）。長期用固定額度方案跑 CC、覺得這幾天額度燒得特別快的人，可以去這則底下核對症狀是否相符。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Cowork: \"Failed to start Claude's workspace\" — VM service not running, persists after reboot",
+      "url": "https://github.com/anthropics/claude-code/issues/27801",
+      "source": "GitHub Issues",
+      "time": "11/20 16:38",
+      "sentiment": "",
+      "body": "承上，另一則回報稱 Cowork 的工作區持續跳出「Failed to start Claude's workspace」、VM 服務起不來，重開機也沒用，留言數同樣累積到 73 則。仰賴 Cowork 排定自動化流程的人，這幾天若遇到工作區開不起來，可以在這則底下對照是否是同一個已知問題。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic engineer's warning about Claude Code explains why tech outages could get much worse - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPZHJCVThaVWVtUkpteGlHSWR3MDRPd0lsVjJ6dTlEaGhVX1hsWVFhRW45WEdDTlNTS05iUGs3TzVrTTY4QTI3aVBrVG5CbU40Yi1sWFNYN0JPUXY0RE1TUGJ1WndpanJVbUZiOVNiV2JXbUhicno2eGludENWRmFlU3RVR0hLemhoYkVLd05PMDZzSGc1dVhHNEJYWUpvMmdyTmh0TXUzWW1icGhDRGhRZTBkN2ctSlA3ei1nMEJxRnRSYlhSRlpnMC10Zm8tODhIQjkzdjl3VEZNODNVaHJCR2plZ3drajg?oc=5",
+      "source": "Yahoo Finance",
+      "time": "11/21 11:00",
+      "sentiment": "",
+      "body": "Yahoo Finance 報導一位 Anthropic 工程師就 Claude Code 可能讓科技業當機風險惡化發出警告，三個獨立媒體來源同日跟進報導，但標題未進一步公開警告的具體機制。倚賴 Claude Code 跑自動化、擔心基礎設施韌性的人，可以留意官方或當事工程師是否後續公開更多細節。",
+      "focusTags": []
+    }
+  ]
+}

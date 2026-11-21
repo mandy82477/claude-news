@@ -517,18 +517,8 @@
       "pageType": "entity"
     },
     {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
       "id": "community-multi-agent",
       "name": "社群做法：多 agent 怎麼分工與協調",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-skills",
-      "name": "社群做法：Skills 怎麼寫",
       "pageType": "topic"
     }
   ],
