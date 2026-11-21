@@ -1616,3 +1616,7 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [週六 2026/11/21 03:47:20.00] Weekly lint OK - 修 60+ 頁，5c 清零 53→0，9 項本機承接，2 項需使用者端設定；測試全綠／build 成功／單一 push
 [cloud weekly-wiki-lint-cloud OK 2026-11-21T03:47:20Z] 清零 53 筆、ref 覆蓋率 100%、死鏈新標 1 條、5b 因 egress 跳過
 [cloud daily-news-pipeline-cloud STARTED 2026-11-21T12:07:59Z]
+[Saturday 2026/11/21 12:08:53.00] === Agent pipeline start (2026-11-21) ===
+[Saturday 2026/11/21 12:08:53.00] ABORTED: gathered_items.json date=2026-11-20 items=74，非目標日期的新鮮資料
+[Saturday 2026/11/21 12:08:53.00] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud ABORTED 2026-11-21T12:08:53Z] TARGET_DATE=2026-11-21 reason=gather_data_not_ready: src/gathered_archive/2026-11-21.json 不存在（cp 失敗），src/gathered_items.json 仍為舊資料 date=2026-11-20 items=74，非目標日期的新鮮資料，交由下一班（17:00 或 22:00 UTC）或 GitHub Actions 補齊後接手
