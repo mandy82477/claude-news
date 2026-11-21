@@ -4,15 +4,15 @@ kind: "entity"
 type: "feature"
 status: "beta（Whiteboards、Sheets 為 beta；Claude Data 為正式版，認證查詢與即時分享仍 beta）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-15"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-15"
 status_main: "beta"
 matrix_role: "功能"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 5
+days_since_news_subtree: 6
 inbound_links: 10
 attribution_count: 2
 attribution_last: "2026-11-15"
@@ -35,7 +35,7 @@ Anthropic 在 Claude 內建的三項團隊協作功能：共用白板、試算�
 **對照角色：** 功能（產出物；含 Whiteboards、Sheets、Data）
 **別名：** Claude Whiteboards, Claude Sheets, Claude Data, Claude Dashboards
 **首次出現：** 2026-11-10
-**最後更新：** 2026-11-15
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-15
 
 > **最新動態**（2026-11-15）
@@ -59,7 +59,7 @@ Anthropic 在 Claude 內建的三項團隊協作功能：共用白板、試算�
 
 - **Claude Data 前置條件**：先接資料 connector（資料倉儲或 CRM）；Dashboards 時期支援的來源清單見 [[entities/claude-design#Claude Dashboards 與 Claude Motion（beta，2026-10-08 發布）]]。
 - **Dashboards 沿革**：2026-10-08 以 beta 發布，2026-11-11 轉正式版並更名；查詢可稽核、用量算進方案上限的規則是否沿用，官方文章未再說。
-- **Sheets 細節**：官方文章細節本頁尚未取得，下方待查證。
+- **Sheets 細節**：官方文章細節本頁尚未取得，見下方「尚未取得的細節」節的懸置項。
 
 ## 與 Claude Meetings 的關係
 
@@ -75,7 +75,7 @@ Meetings 目前只見媒體報導、未見官方一手文章，本頁不把它�
 - 2026-11-10：Claude Meetings 與 Sheets 見報；官方定價頁同步出現 Claude Sheets（beta）段落，異動見 [[entities/pricing-history]]
 - 2026-10-08：Claude Dashboards（beta）與 Claude Motion 發布，見 [[entities/claude-design]]
 
-## 待查證缺口
+## 尚未取得的細節
 
 - ❓ **待查證**（標 2026-11-15｜查 Claude Sheets、Claude Whiteboards、Claude Meetings）｜**Sheets 與 Whiteboards 功能細節**：能否匯入匯出、與 Google Sheets 或 Excel 的關係、即時共編規則、用量是否算進方案額度，均未取得（官方說用量未載）
 - Claude Data 即時分享的對象權限與資料量上限：Dashboards 時期說明中心即未載，轉正式版後未見更新

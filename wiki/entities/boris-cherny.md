@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-11-14"
 last_news_update: "2026-11-08"
 status_main: "active"
-days_since_news: 12
+days_since_news: 13
 parent: null
 children: "['entities/boris-cherny-archive']"
 page_role: "hub"
-days_since_news_subtree: 12
+days_since_news_subtree: 13
 inbound_links: 32
 attribution_count: 12
 attribution_last: "2026-11-08"
@@ -47,9 +47,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**截至 2026-10-26**，Google News 轉載 eu.36kr.com 標題稱 Claude Code 創作者正式辭職；單一來源、無正文可用；2026-11-14 查證官方未載，標記見下。此前最近一次公開發言為 10-09 CTech 報導其提示工程心法——清楚說出需求、交給 AI 自行判斷，延續 10-07 Business Insider／Times of India「視 Claude 為同事」主張；技巧細節均未載，僅標題可用。
+**截至 2026-10-26**，Google News 轉載 eu.36kr.com 標題稱 Claude Code 創作者正式辭職；單一來源、無正文可用；2026-11-14 查證未見官方說法，標記見下。此前最近一次公開發言為 10-09 CTech 報導其提示工程心法——清楚說出需求、交給 AI 自行判斷，延續 10-07 Business Insider／Times of India「視 Claude 為同事」主張；技巧細節均未載，僅標題可用。
 
-🔎 **查無官方**（標 2026-10-26｜查 Boris Cherny｜複 2026-12-14）｜**Google News／eu.36kr.com 標題稱 Claude Code 創作者正式辭職**（2026-10-26 報導，2026-11-14 查證）：Anthropic 官方新聞室、本人公開發文均未見離職說法；WebSearch 摘要稱同日 36 氪轉載的是新智元一篇 Claude Code 桌面版負責人 Anthony Morris 離職文章，標題所指未必是本人（原文因站外連線受限未能開啟，未證實）；Latent Space 人物頁仍列其為 Head of Claude Code（[Latent Space](https://latent.space/wiki/boris-cherny/)）。無官方或當事人說法前，不寫成已離職。
+🔎 **查無官方**（標 2026-10-26｜查 Boris Cherny｜複 2026-12-14）｜**Google News／eu.36kr.com 標題稱 Claude Code 創作者正式辭職**（2026-10-26 報導，2026-11-14 查證）：Anthropic 官方新聞室、本人公開發文均未見離職說法；WebSearch 摘要稱同日 36 氪轉載的是新智元一篇 Claude Code 桌面版負責人 Anthony Morris 離職文章，標題所指未必是本人（原文因站外連線受限未能開啟，此說尚無佐證）；Latent Space 人物頁仍列其為 Head of Claude Code（[Latent Space](https://latent.space/wiki/boris-cherny/)）。無官方或當事人說法前，不寫成已離職。
 
 截至 2026-11-14，原列於本頁候選的 TechRadar「AI 寫程式仍須人類負責、技能不練會流失」論述，經搜尋摘要確認發言人為 Anthropic 工程師 [[entities/addy-osmani]]（TechRadar 原文因站外連線受限未能開啟），不是本頁人物，候選已撤。
 

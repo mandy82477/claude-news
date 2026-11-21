@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-11-18"
 last_news_update: "2026-11-18"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['entities/dario-amodei-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 35
 attribution_count: 59
 attribution_last: "2026-11-18"
@@ -214,17 +214,25 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+### 2026-11
+
 - 2026-11-18：OpenAI 執行長 Sam Altman 受訪被問 Anthropic 是否安全開發 AI，答「我不知道」，列入公開批評者對照（來源：Google News／ADWEEK、Google News／TheWrap）
 - 2026-11-16：Yahoo Finance 報導一位未具名資深科技投資人稱 Amodei 藉 IPO「自我造勢」，批評者身分未載（僅標題可用）（來源：Google News／Yahoo Finance）
 - 2026-11-16：Bloomberg 報導稱隨 Anthropic IPO，Amodei 已成 AI 業界「頭號代言人」（僅標題可用）（來源：Google News／Bloomberg.com）
 - 2026-11（11-09 至 11-13 總結）：IPO 路演期表態——癌症十年論與醫界質疑、「少承諾多交付」口徑、同業不滿標題等，彙整見 [[#IPO 路演期表態（2026 年 11 月）]]
 - 2026-11-05：《紐約時報》刊出側寫文章，整理 Amodei 的思想脈絡如何形成他現行的 AI 路線；僅標題層級資訊可用，具體論點未見報導（來源：Google News／The New York Times）
+
+### 2026-10
+
 - 2026-10-29：Fortune 報導 Anthropic 去年花費 275 萬美元保護 Amodei 人身安全，金額超過他 1,800 萬美元年薪（見 10-06）四倍以上；具體安保措施未見報導（僅標題可用）（來源：Google News／Fortune）
 - 2026-10-17：Fortune 報導 Amodei 正推動公司可能高達 2 兆美元的 IPO，同時重申他最多花 40% 工時維護企業文化，與 06-08「文化決勝論」同一說法；僅標題可用，IPO 估值脈絡見 [[topics/anthropic-business]]（來源：Google News／Fortune）
 - 2026-10-06：Reuters 獨家報導，Amodei 去年薪酬為 1,800 萬美元，落在科技業 CEO 薪酬排行中段，與外界對頂尖 AI 實驗室高層薪酬的想像有落差；僅標題可用，具體薪酬結構未見報導（來源：Google News／Reuters）
 - 2026-10-03：據華爾街日報（Yahoo Finance 轉述），黃仁勳等 AI 業者主管在 Trump 與約 24 位科技 CEO 午宴後私下質疑 Amodei 的 AI 風險警告；Amodei 呼籲同業對模型能力保持透明誠實，詳見 [[entities/jensen-huang]]（來源：Google News／Yahoo Finance）
 - 2026-10-01：Bloomberg 報導 Trump 公開表示喜歡 Amodei 本人，為兩人緊張關係釋出解凍訊號，續 09-27 白宮晚餐、09-29 黃仁勳同赴會晤；具體談話內容未見報導（僅標題可用）（來源：Google News／Bloomberg）
 - 2026-10-01：AI「教父」Yann LeCun 公開批評 Amodei 看待 AI 風險的方式「deluded」「crazy」，並稱其不懂資安，詳見 [[entities/yann-lecun]]（來源：Google News／Fortune、Google News／Yahoo Finance）
+
+### 2026-09
+
 - 2026-09-29：Bloomberg 稱 Nvidia 執行長黃仁勳將偕同 Amodei 再赴白宮與 Trump 會晤、聚焦 AI 風險；Fox News 引述會中談話指出 Trump 呼籲美國在 AI 競賽中保持領先，談話實質內容未見報導（來源：Google News／Bloomberg、Google News／Fox News）
 - 2026-09-27：與 Trump 於白宮共進晚餐，緊接 09-25 上訴法院維持五角大廈「供應鏈風險」認定之後；具體談話內容未見報導（來源：Google News／WSJ、華郵、紐約郵報、Axios、半島電視台、KRXI2／KTVL）
 - 2026-09-24：Axios 獨家報導川普陣營盟友把 Dario Amodei 塑造成 AI「末日論」（doomerism）代表人物，開闢新一輪政治攻防戰線；10-17 查證：手法為白宮內流傳的備忘錄、稱有效利他主義「打造 AI 末日論管線」，詳見 [[topics/recursive-self-improvement]]（來源：Axios）
@@ -238,6 +246,9 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 - 2026-09-14：Trump 公開回絕 Amodei 的減速呼籲；中國官方媒體批評此舉是「冷戰」話術；同日 AI 類股應聲下跌（來源：Reuters／Yahoo、Yahoo Finance，2026-09-14）
 - 2026-09-13：接受 CNBC 專訪稱中國是其所提 AI 減速方案中「最棘手的兩難」（來源：Hacker News（10分）／CNBC）
 - 2026-09-13：公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持暫緩，安全治理角度完整討論見 [[topics/recursive-self-improvement]]（來源：Hacker News／BBC、VentureBeat，2026-09-13）
+
+### 2026-08
+
 - 2026-08-28：Business Insider 報導 Dario Amodei 公開回應外界對 AI 威脅論的疑慮，稱 Anthropic「無意摧毀任何人」（"not interested in destroying anyone"）；僅標題與轉址連結可用，發言的具體場合與完整脈絡未見報導，查證狀態見上方公開立場表格標記（來源：Google News／Business Insider）
 - 2026-08-26：與 Salesforce 董事長暨執行長 Marc Benioff 共同接受 CNBC《Closing Bell: Overtime》主持人 Jim Cramer 專訪，CNBC 公開完整逐字稿；日報僅載逐字稿已公開一事，未節錄任何具體發言內容，合作動態詳見 [[topics/anthropic-business]]（來源：Google News／CNBC）
 - 2026-08-24：Fortune 發表評論文章〈What Anthropic's Dario Amodei can learn from the airline industry's lesson on marketing and safety〉，以航空業在行銷與安全議題上的經驗為借鏡討論 Dario Amodei 可以從中學到什麼；僅標題可用，具體論點與建議內容未見報導，查證狀態見頁首標記（來源：Google News／Fortune）

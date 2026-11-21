@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-10-31"
 last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 31
+days_since_news: 32
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 31
+days_since_news_subtree: 32
 inbound_links: 3
 attribution_count: 7
 attribution_last: "2026-10-20"
@@ -78,6 +78,8 @@ Linus 在送上 Linux 核心信件列表的 patch cover letter 親口寫道：�
 
 ## 歷史記錄
 
+### 2026-10
+
 - 2026-10-19：Hacker News（16分）轉載 The New Stack 完整報導，揭露此 10-patch 分支原為擱置 18 個月的 page cache 效能瓶頸，合成測試跑出 23 倍吞吐量提升，Torvalds 提醒真實環境增益遠小於測試數字（來源：Hacker News／The New Stack）
 - 2026-10-17：r/ClaudeCode 轉貼 Torvalds 對反 AI 編碼規則的表態，原始脈絡見下條（2026-10-18 查證；來源：Reddit／r/ClaudeCode、The Register）
 - 2026-10-15：GBHackers 報導標題稱 Claude Code 協助 Linus 處理長期的 kernel 記憶體效能瓶頸（僅標題）（來源：Google News／GBHackers News）
@@ -87,4 +89,7 @@ Linus 在送上 Linux 核心信件列表的 patch cover letter 親口寫道：�
 - 2026-10-13：這個 Claude Code 協作分支正式整理成 patch 貼上 Linux 核心信件列表，Linus 在 cover letter 親自寫下程式碼、測試程式與效能測量皆在自己指示下用 Claude Code 完成、在自己機器上測得（來源：Hacker News／StartupFortune）
 - 2026-10-12：重新整理 `torvalds/linux.git` 時意外發現新分支 `noref-filemap-read-with-llm`；Phoronix 判讀為使用 Claude Code 開發 kernel 新功能，與他過去僅在主線推 master 的習慣不同（來源：Hacker News／Phoronix）
 - 2026-10-08：布拉格 Linux Maintainers Summit 討論 AI 貢獻；Torvalds 要求貢獻者懂自己送的程式碼，人類仍須負 `Signed-off-by` 責任，AI agent 不能簽（來源：The Register、heise）
+
+### 2026-08
+
 - 2026-08-22：Simon Willison 部落格轉引其 commit 訊息，稱某次「地獄等級」除錯過程主要靠 AI 完成繁瑣工作，未點名具體工具（來源：Blog／Simon Willison）

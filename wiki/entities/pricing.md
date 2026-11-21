@@ -4,21 +4,21 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-19"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-19"
 status_main: "active"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 194
 attribution_count: 179
 attribution_last: "2026-11-19"
 top_source: "google-news"
-pending_count: 2
+pending_count: 4
 pending_overdue: 0
-pending_next_review: "2026-12-03"
+pending_next_review: "2026-12-01"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -32,12 +32,12 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-19
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-19
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
 > **最新計費政策異動**（2026-11-19）
-> - **官方定價文件新增 Managed Agents 計費依據與各平台乘數規則細項**，並移除舊版 Google Cloud 定價與每千次搜尋 $10 的 web search 定價行（細節見下方「當前生效的計費規則」，待查證移除後的替代寫法）
+> - **官方定價文件新增 Managed Agents 計費依據與各平台乘數規則細項**，並移除舊版 Google Cloud 定價與每千次搜尋 $10 的 web search 定價行（細節見下方「當前生效的計費規則」；移除後的替代寫法尚未核對）
 > - **Max 方案 1M context 誤判需加購**：GitHub Issue #45390 回報，選用 Opus 4.6（1M context）即使用量遠低於需要加購的量仍顯示「Extra usage required」，官方尚無回應，詳見 [[entities/pricing-incidents]]
 > - **Linked Billing 公開測試上線**：第三方平台可把自己的計費系統接上 Claude API 用量帳務，Python／TypeScript SDK 同日新增 `billing_policy` 參數與對應錯誤碼；Railway、Harness（Cosmos）同日宣布已支援
 > - **claude.ai 購買與方案變更一度出錯、已解決**：官方狀態頁 11-14 通報，延遲款項與方案變更已補上，詳見 [[entities/pricing-incidents]]
@@ -188,7 +188,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 - **✅ 2026-11-17 Linked Billing 公開測試上線**：第三方 app 的客戶可用自己的 Claude organization 付該 app 的 API 用量；SDK 同步支援，Railway、Harness（Cosmos）同日宣布採用（來源：[release notes](https://platform.claude.com/docs/en/release-notes/api)、[billing connections](https://platform.claude.com/docs/en/manage-claude/oauth-apps/organization-billing-connections)，查證 2026-11-17）：
   - **流程**：客戶連結 organization 到你的 app → 你每次請求設 `billing_policy.bill_to`：`"user_profile"` 由客戶付、`"self"`／留空由你付 → 客戶在 Console 自設月度上限或解除連結
   - **限制**：客戶須直接付費 Anthropic（非雲端市集／僅訂閱制），否則 `403`；扣不到客戶款時 API 拒絕該請求、不轉嫁你；額度不足回 `402`
-  - **費用**：官方未載額外平台費；你的用量報表不計入客戶付的請求
+  - **費用**：❓ **待查證**（標 2026-11-17｜查 billing_policy、Linked Billing｜複 2026-12-01）｜**額外平台費**：已掃日報至 11-20 無後續；官方頁面未查證；你的用量報表不計入客戶付的請求
 - **✅ 2026-11-11 官方 usage credits 說明頁｜購買一律不可退款**：新增「Refunds」節，載明 usage credits 購買不可退款，含取消訂閱或刪除帳戶；剩餘額度在刪除帳戶時作廢。細節見 [[entities/pricing-history]]（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，diff 偵測，2026-11-11）
 - **✅ 2026-11-08 Help Center release notes｜Enterprise 新增收費代碼標記＋成本代碼追蹤（beta）**：專案可標既有收費代碼（charge code）／client-matter；另可依成本代碼（cost code）追蹤花費。操作細節未見完整說明（來源：Help Center release notes，連結待補，查證 2026-11-08）
 - **✅ 2026-11-07 官方 usage credits 說明頁改版｜刪除帳戶即沒收剩餘額度**：新增帳戶刪除不退 usage credits 規則；auto-reload 改寫為「餘額低於門檻自動加購」。細節見 [[entities/pricing-history]]（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-11-07）
@@ -257,7 +257,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 **通路細節**
 
-- ❓ **待查證（同上，標 2026-11-19）**｜**官方定價文件區分 Google Cloud Anthropic 代管與 Google 代管**：前者疑似與 Claude API、AWS 同套乘數；後者與 Bedrock 並列為合作方自營，乘數由對方自訂；與上表現有寫法是否同一件事待核對
+- ❓ **待查證**（標 2026-11-19｜查 Google Cloud、multiplier｜複 2026-12-03）｜**官方定價文件區分 Google Cloud Anthropic 代管與 Google 代管**：前者疑似與 Claude API、AWS 同套乘數；後者與 Bedrock 並列為合作方自營，乘數由對方自訂；與上表現有寫法是否同一件事待核對
 - **partner 通路（Bedrock、Google Cloud）的絕對數字本頁不記**——費率由該平台自訂且會各自調整，抄下來即過期。查 [Bedrock 定價](https://aws.amazon.com/bedrock/pricing/)／[Google Cloud 定價](https://cloud.google.com/vertex-ai/generative-ai/pricing#claude-models)
 - **Bedrock 無 Message Batches API ⇒ 拿不到 50% 批次折扣**；亦不支援 `anthropic-beta` 標頭，compaction／context editing／task budgets 皆不可用——長脈絡的成本控制手段少一半
 - **Claude Platform on AWS 組織固定於 Start 層且不自動升級**，月花費上限 $500，提額須聯繫 Anthropic 客戶代表；私有報價須在產生用量**前**接受，折扣不溯及既往

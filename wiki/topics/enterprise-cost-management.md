@@ -1,16 +1,16 @@
 ---
 page: "topics/enterprise-cost-management"
 kind: "topic"
-status: "ongoing"
+status: "monitoring"
 domain: "💼 商業"
-last_updated: "2026-11-05"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-05"
-status_main: "ongoing"
-days_since_news: 15
+status_main: "monitoring"
+days_since_news: 16
 parent: null
 children: "['topics/enterprise-cost-management-archive']"
 page_role: "hub"
-days_since_news_subtree: 15
+days_since_news_subtree: 16
 inbound_links: 44
 attribution_count: 12
 attribution_last: "2026-11-05"
@@ -25,10 +25,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 企業規模 Claude 成本管理
 
-**狀態：** ongoing
+**狀態：** monitoring
 **領域：** 💼 商業
 **開始日期：** 2026-05-01
-**最後更新：** 2026-11-05
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-05
 
 > **個人開發者具名成本案例：一次性資料任務花費 $1,070**（2026-11-05）

@@ -8,18 +8,18 @@ last_updated: "2026-11-20"
 last_news_update: "2026-11-20"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 128
 attribution_count: 855
 attribution_last: "2026-11-17"
 top_source: "github-issues"
 pending_count: 6
-pending_overdue: 1
-pending_next_review: "2026-11-21"
+pending_overdue: 2
+pending_next_review: "2026-11-30"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -77,8 +77,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **版本：**
 
-- 最新 **v2.1.329**；npm `stable`＝2.1.311、`latest`＝2.1.325（查證 2026-11-14）。
-- **該不該升**：**Monitor tool 已進 stable**（2.1.310），沒用 Opus 4.8 fast mode 的人留在 stable 就夠；只有要寫入邊界設定（`blockWritesOutsideWorkingDirectories`，2.1.314）才需要 latest。逐版與通道見 [[entities/claude-code-releases]]。
+- npm `stable`＝**2.1.323**、`latest`＝**2.1.330**（dist-tags，查證 2026-11-21）。stable 這週一次跳過 12 個版號（2.1.311→2.1.323）。
+- **該不該升**：**本站目前核對過的破壞性變更已全部落在 stable 裡**（最高 v2.1.321），包含先前只有 latest 才有的寫入邊界設定（`blockWritesOutsideWorkingDirectories`，2.1.314）、auto mode 在 LLM gateway 下不再退回舊分類（2.1.319）與 Fable 5.2 成為預設模型（2.1.321）——**升上 stable 這一步本身就會改到既有行為，升之前先看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]**。latest 多出來的是 2.1.324–330 的新功能，沒有非升不可的理由。逐版與通道見 [[entities/claude-code-releases]]。
 
 **近期平台與文件異動：**
 

@@ -4,22 +4,22 @@ kind: "entity"
 type: "model"
 status: "active（現行世代為 Fable 5.2，2026-11-09 取代 5.1 成為預設；5.1 官方仍列 Active、退役不早於 2027-09-01（2026-11-14 查證）；Fable 5 仍為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-11-20"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-20"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 78
+days_since_news_subtree: 1
+inbound_links: 79
 attribution_count: 73
 attribution_last: "2026-11-20"
 top_source: "google-news"
-pending_count: 6
+pending_count: 5
 pending_overdue: 0
-pending_next_review: "2026-11-23"
-pending_signalled: 1
+pending_next_review: "2026-11-29"
+pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -33,7 +33,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-11-20
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-20
 
 > **研究動態與未驗證宣稱**（2026-11-20）
@@ -110,16 +110,15 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 送進去的請求若被前置安全分類器判為高風險，**你會收到通知**（回覆上會標出實際作答的模型），不是安靜地把品質調低（官方 2026-06-30〈Redeploying Claude Fable 5〉：「Users will be notified if a request to Fable 5 is blocked」）。2026-06-09 發布時的「降級且不告知」已於 06-11 由官方道歉撤回。
 
-**接手的模型分兩路（2026-09-26 查證）**：資安類請求由 **Opus 4.8** 接手，生物、化學與生命科學類請求由 **Opus 5** 接手（官方說明中心[〈Why Claude switched models in your conversation with Fable 5 or Fable 5.1〉](https://support.claude.com/en/articles/15363606-why-claude-switched-models-in-your-conversation-with-fable-5-or-fable-5-1)逐字載明 "the Opus 4.8 for offensive cybersecurity technique requests" 與 "currently Opus 5 for biology, chemistry, and life sciences requests"）。本頁此前只寫「一律改由 Opus 4.8」，已依官方更正。
+**接手的模型分兩路（2026-11-21 複查仍成立）**：資安類請求由 **Opus 4.8** 接手，生物、化學與生命科學類請求**以及前沿 LLM 開發類請求**由 **Opus 5** 接手（官方說明中心[〈Why Claude switched models in your conversation with Fable 5 or Fable 5.1〉](https://support.claude.com/en/articles/15363606-why-claude-switched-models-in-your-conversation-with-fable-5-or-fable-5-1)逐字載明 "the Opus 4.8 for offensive cybersecurity technique requests" 與 "currently Opus 5 for biology, chemistry, and life sciences requests"）。本頁此前只寫「一律改由 Opus 4.8」，已依官方更正。
 
-> 下表四個觸發類別**官方已明載同時適用 Fable 5 與 Fable 5.1**（同一份說明中心文件寫 "Distillation attacks on Fable 5 and Fable 5.1"，2026-09-26 查證；2026-10-17 複查四類未變，官方文章標題已更名為含 Fable 5.1）。此前本頁註記「5.1 是否原樣沿用官方未明說」（查證 2026-09-07）已由這份文件解消。
+> **2026-11-21 複查：官方把切換類別由四類收斂為三類，且前沿 LLM 開發現在也有接手模型。** 說明中心文件標題已再度更名為〈[Why Claude switched models in your conversation with Fable models](https://support.claude.com/en/articles/15363606-why-claude-switched-models-in-your-conversation-with-fable-5-or-fable-5-1)〉，內文明載 "Claude Fable 5.2, Fable 5.1, and Fable 5 are Mythos-class models"，三代共用同一套機制。「模型萃取（distillation）」已不再是獨立的切換類別——distillation 分類器仍在，但官方只在計費段提到它（產出前就被擋下的拒絕，在 biology／distillation／frontier LLM development 三類會計費，其他類別不計費）。
 
 | 會踩到的類別 | 具體是什麼 | 誰最容易誤觸 | 你能先做什麼 |
 |---|---|---|---|
 | 資安（cybersecurity）| 攻擊性資安任務 | **日常 coding 與 debugging 也會較常被誤標**（官方自己寫明的代價）| 看到通知就接受 Opus 4.8 的答案，或把安全審查拆成不觸發的小步驟 |
-| 生物與化學 | 高風險生物、化學請求（官方現稱涵蓋生命科學）| 做相關研究的人 | 接手的是 Opus 5；2026-08-07 官方更新分類器後生物領域誤判約降 85%，再遇到就換問法 |
-| 模型萃取（distillation）| 取得權重或行為以訓練競品 | 想拿它的輸出訓練自己模型的人 | 沒有繞法 |
-| 窄範圍前沿 LLM 開發 | 分散式訓練基建、ML 加速器設計、非標準晶片的 kernel 開發 | 做這三類工程的人 | 沒有繞法，這類工作改用其他模型 |
+| 雙重用途生物 | 官方現寫 "A large fraction of queries we consider dual-use in biology"，舉例為病毒學、毒理學、藥物設計與分子設計（2026-11-21 查證）| 做相關研究的人 | 接手的是 Opus 5；2026-08-07 官方更新分類器後生物領域誤判約降 85%，再遇到就換問法 |
+| 窄範圍前沿 LLM 開發 | 分散式訓練基建、ML 加速器設計、非標準晶片的 kernel 開發 | 做這三類工程的人 | **接手的是 Opus 5**（2026-11-21 官方查證；本頁此前寫「沒有繞法」已失效）|
 
 **表下細節**
 
@@ -131,12 +130,19 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 ## 跟它怎麼說話
 
-❓ **待查證**（標 2026-11-09｜查官方 prompting 文件是否已補 Fable 5.2 版本｜訊 2026-11-10）｜**官方 Fable 5.2 專屬 prompting 指南已出現，內容未逐條查證**：2026-11-10 Simon Willison 摘引〈Prompting Claude Fable 5.2〉一段（見表下細節），完整文件尚未讀到，下列其餘仍為 Fable 5.1 版本，5.2 是否沿用或有新差異未經確認。
+官方 prompting 指南：[Prompting Claude Fable 5.2](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2)（同一份涵蓋 [[entities/mythos]] 的 Mythos 5.2；查證 2026-11-21）。5.1 版指南仍在線上，但現行世代看這份。
 
-官方 prompting 指南：[Prompting Claude Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1)（同一份涵蓋 [[entities/mythos]] 的 Mythos 5.1；查證 2026-10-03）。
+下面三條是官方 5.2 指南自己標出、和 5.1 不一樣的地方（2026-11-21 逐條讀過原文）：
 
-- **effort 預設 `high`，但級距跨代不等量，要重跑一次 sweep**：官方明寫 effort 級名在不同模型間不對應同樣的思考量，`medium` 大致追平 Fable 5 而更便宜，`low` 常在「成本／分數」上勝過 Opus 與 Sonnet——沿用 Fable 5 的 effort 值，換到的是白花的錢。
-- **要刪「hold all findings for the final response」這類抑制敘述的舊句，並把 `thinking.display` 設 `updates`**：它比 Fable 5 更少主動寫進度，不刪不設的話長工具鏈會整段靜默好幾分鐘。
+- **effort 預設仍是 `high`，但官方要你重跑 sweep**：級名在不同模型間不對應同樣的思考量，照搬 5.1 調好的值是白花錢。官方另寫 5.2 在 `low` 的 coding 成績接近 5.1 在更高 effort 的表現；`high` 以上增益不均、看任務。
+- **它會把事做完，但也更敢自己動**：5.2 在長任務上「還沒做完就收手」的情況，官方給了一段可貼進 system prompt 的文字（主旨是把逾時、報錯這類一般阻礙當成要自己排除的，而刻意的封鎖線才留給人決定）；代價是輸出 token 約多三成，且它問你的次數會變少——風險性動作的確認步驟要自己留著。
+- **「這份程式碼是你的」那一句會大幅改變行為**：官方測出加上 ownership 那句後，模型把重複程式碼收斂成共用函式的比例由不到 10% 升到約 75%，但輸出 token 多 70–80%、且會做沒人要求的改動。使用者自己擁有程式碼、只想最小改動時別加——官方實測「禁止順手重構」那類限制句壓不住它。
+
+另外兩件 5.2 專屬的：拒絕回覆現在會回 `stop_reason: "refusal"` 並在 `stop_details.category` 標類別（`cyber`／`bio`／`frontier_llm`／`reasoning_extraction`／`general_harms`／`null`），其中 `reasoning_extraction` 是新的——要模型把內部推理原樣寫進回覆會被擋；以及 5.2 用 preserved thinking，harness 若在請求之間改動 system、tools 或較早的訊息，之後的 thinking block 會失效而被 API 退回。
+
+承自 5.1、5.2 指南仍然沿用的：
+
+- **要刪「hold all findings for the final response」這類抑制敘述的舊句，並把 `thinking.display` 設 `updates`**：它比 Fable 5 更少主動寫進度，不刪不設的話長工具鏈會整段靜默好幾分鐘。5.2 指南把這條寫得更細——進度更新是 progress-update thinking block，預設 `omitted` 時文字為空，只渲染 `text` block 的客戶端會看起來整段沒反應。
 - **要加「你在自主執行、使用者不在旁邊」那段**：少了它，模型會用「Next, I'll …」描述下一步就結束回合，或為原請求已涵蓋的步驟回頭問「Shall I apply this?」；官方說開頭那句承載大部分效果。
 - **要刪舊的反格式化規則**：那些是為了壓住前代濫用 bullet 與 bold 寫的，Fable 5.1 偏向用得太少，改寫成「什麼時候該用清單」才對得上它。
 - **`low` effort 下它比 Fable 5 更少呼叫搜尋工具、更傾向憑記憶回答**：這幾個回合改用 per-message effort 調高，或加官方那句「不確定的名字本身就是要查的東西」。
@@ -155,7 +161,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 **注意事項：**
 - 方案內含與 usage credits 的分界見 [[entities/pricing]]；Max 與 Team premium 為標配（週用量 50% 內），Pro 與 standard 走 usage credits。
-- 前沿 LLM 開發、攻擊性資安、生物化學、模型萃取四類請求會觸發分類器，見上一節。
+- 攻擊性資安、雙重用途生物、窄範圍前沿 LLM 開發三類請求會觸發切換（2026-11-21 官方查證，原為四類），見上一節。
 - 30 天資料保留政策適用於所有平台（含 AWS Bedrock），資料離開 AWS 安全邊界。
 
 ## 核心功能

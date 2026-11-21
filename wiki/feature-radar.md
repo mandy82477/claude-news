@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-20
+**最後更新：** 2026-11-21
 
 > **本日新增重大發布**（2026-11-09）
 > Claude Fable 5.2 與 Claude Mythos 5.2 發布，Claude Code v2.1.321 起 Fable 5.2 為預設 Fable 模型（1M context、降價兩成）；多家外媒同日報導，HN 討論達 614 分。
@@ -35,7 +35,7 @@
 
 找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.321，2026-11-20；v2.1.289–v2.1.294、v2.1.296–v2.1.299、v2.1.301、v2.1.303 區間尚未逐版核對，待下次補齊），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250／315／320 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
 
-%% 2026-11-20：本表新增 v2.1.305–v2.1.318 共 9 列後，目前有 21 列、超過每週整理時「12 列」的上限；v2.1.260 那一列的事實目前只住本表、還沒有別的家，下次每週整理要先把它搬進 [[entities/claude-code-releases]] 才能從本表移除。這批列的去留排序留給下次每週整理處理，已記 wiki/log.md。 %%
+%% 2026-11-21 週度整理：本表由 22 列裁到 12 列（破壞性變更 8 列全留，預設值改變留 321／302／283／280 四列）；移出 317／312／307／304／300／295／285／284／261／260，事實已搬進 [[entities/claude-code-releases]]（307、260 補新列，其餘列於表格細節）。 %%
 
 **本表與下方版本表記的不是同一件事**：本表只收破壞性變更與預設值改變（來源官方 changelog）；[[entities/claude-code-releases#最新版本]] 記的是本站報導過的新功能（來源日報）。同一版本兩邊內容不同是正常的。
 
@@ -44,25 +44,15 @@
 | v2.1.321 | Claude Fable 5.2 成為預設 Fable 模型（取代 Fable 5.1），1M context、每 Mtok 輸入 $8／輸出 $40 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Fable 5.1 既有行為的排程任務先確認 |
 | v2.1.319 | auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway 使用）：伺服器無法檢查的呼叫一律詢問或拒絕，不再退回內建傳統分類方式，無遷移期 | 破壞性變更 | 用 LLM gateway 或關閉遙測跑 Claude Code 的團隊，升級後遇到被詢問或拒絕的呼叫是預期行為，不是故障 |
 | v2.1.318 | 復原 2.1.288 的修正，恢復對話不再保留先前 thinking；新建 managed agent 預設給 auto 權限政策 | 破壞性變更 | 依賴恢復對話仍保留 thinking 行為的人會發現已失效；新建代理人要自行確認權限模式 |
-| v2.1.317 | Read 工具移除「檔案未變更」提示，重讀未變更檔案直接回傳內容 | 預設值改變 | 大量重讀同一檔案的 hook／腳本，留意 token 用量可能變化 |
 | v2.1.316 | Opus 4.8 fast mode 10-30 起列為淘汰，11-30 將移除；移除後請求直接回錯誤、不退回標準 Opus 4.8 | 破壞性變更 | 用 Opus 4.8 fast mode 的人請在 11-30 前遷移到 Opus 5.5 以保留加速效果 |
 | v2.1.314 | permissions.blockWritesOutsideWorkingDirectories 在所有權限模式下都會擋 Write/Edit/NotebookEdit 寫到工作目錄外 | 破壞性變更 | 原本靠 bypass 模式寫工作目錄外檔案的腳本或 hook，升級後會被直接擋下 |
-| v2.1.312 | Bedrock／Vertex／Foundry／Mantle 對不認識的模型名稱改用較短 system prompt | 預設值改變 | 用這些通道接自訂或微調模型名稱的人，提示內容會不同 |
 | v2.1.311 | DISABLE_COMPACT 只能關閉壓縮、不能再重新打開 | 破壞性變更 | 曾經用這個環境變數動態開關壓縮的腳本，升級後只能關不能開 |
 | v2.1.309 | claude ultrareview 改為需要工作區信任；bypass 模式下危險的 rm／rmdir 改直接拒絕（非再提示） | 破壞性變更 | CI 或自動化若靠 bypass 模式跑這兩種指令，升級後會被直接擋下 |
-| v2.1.307 | 自架 runner 的 checkout hook 預設 30 分鐘後停止；axScreenReader 不再接受 settings env 區塊設定 | 預設值改變 | 自架 CI 設定時間較長的人要調 `--checkout-hook-timeout-min`；用 env 區塊設螢幕閱讀器選項的要改到 user／managed 設定 |
 | v2.1.305 | allowedMcpServers 不再過濾 managed-mcp.json 裡只在 env 用 `${VAR}` 的 stdio 伺服器，原本被排除的伺服器升級後會載入 | 破壞性變更 | 靠這個白名單規則讓某些 MCP 伺服器保持停用的管理員，要改用 `deniedMcpServers` 才能繼續停用 |
-| v2.1.304 | 自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟（gateway 回 400／422 會改不帶它重試）；壓縮後重送 skill 清單 | 預設值改變 | 走自家 gateway 的人：工具改為按需載入，若 gateway 不支援會多一次重試；可觀察請求量 |
 | v2.1.302 | `claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑；fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟 | 預設值改變 | CI 要 auto 就加 `--permission-mode auto`；不要 fork 設 `CLAUDE_CODE_FORK_SUBAGENT=0` |
-| v2.1.300 | hook `updatedInput` 依 schema 驗證；大型請求預設 gzip（`CLAUDE_CODE_GZIP_REQUEST_BODIES=0` 關）；transcript 多記請求的 system prompt | 預設值改變 | 靠 hook 注入非 schema 欄位的要改寫；分享 transcript 前留意其中含 system prompt |
-| v2.1.295 | Bedrock／Vertex／Foundry 的 token 計數改用 AWS 官方 CountTokens API | 預設值改變 | 用這三個通道的企業管理者需額外授予 `bedrock:CountTokens` IAM 權限，否則計數功能可能受影響 |
-| v2.1.285 | 背景 Bash／PowerShell 指令加上時限（預設 30 分、最長 2 小時），到時自動停止；v2.1.288 起只套用在無人值守的 session | 預設值改變 | 無人值守跑長建置或測試的，用 `timeout` 參數明設時限 |
-| v2.1.284 | Anthropic API 端的 Sonnet 系列預設模型改指 Claude Sonnet 5.5（CLI 本身是否同步換見 [[entities/sonnet-5]]） | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Sonnet 5 既有行為的排程任務先確認 |
 | v2.1.283 | 沒設權限模式時，互動 session 一律從 auto 模式開始（2.1.283 擴及第三方供應商與關 telemetry，2.1.284 擴及所有方案） | 預設值改變 | 要每步手動確認的人，在設定寫 `permissions.defaultMode` |
 | v2.1.280 | `default` 模型改指 Claude Opus 5.5（Foundry 仍 Sonnet 4.5）；未指定模型的 session、routines 與排程任務跟著換 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或原本跑 Sonnet 的排程用 `/model sonnet` 固定 |
 | v2.1.277 | 移除 TaskOutput 工具，`taskOutputMaxChars` 與 `TASK_MAX_OUTPUT_LENGTH` 失效；背景任務輸出改用 Read 讀檔 | 破壞性變更 | 引用 TaskOutput 的 hook、skill 或權限規則要改寫 |
-| v2.1.261 | `keybindingFlavor` 設定失效，鍵位一律改成 Bash 式 | 預設值改變 | 設過 readline 模式的人：那行設定已無作用，可刪 |
-| v2.1.260 | subagent 背景指令的 1 小時上限移除 | 預設值改變 | 長跑代理不再被自動截斷，改用自己的逾時控制 |
 
 **與版本無關、已經生效的一件**：8/14 起 auto 已是 Pro／Max／Team 的預設權限模式，不論你裝哪一版都已套用。靠手動確認做安全把關的人，到 `/permissions` 的 Auto 分頁看一次。
 
@@ -71,7 +61,7 @@
 - **CLI 之外**：anthropic-sdk-python v1.0.0（2026-08-20）把 client 升到 httpx2，影響的是用該 SDK 寫的整合程式碼，不是 CLI 升版本身。
 - **與版本無關的未修問題**：升不升版都在，而且各自只發生在特定產品或平台上，見 [[entities/claude-code]]「現在還沒修好的」。**上表你都對不上號，版本面就沒有東西擋著你升級。**
 - **其餘預設值改變**（2.1.217–219 巢狀子代理深度、2.1.218、2.1.221、2.1.224、2.1.229、2.1.251），以及 2.1.270 後只影響窄場景的變更（如 2.1.275 npm 來源外掛不再跑安裝腳本），見[官方 changelog](https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md)。
-- **因上限 12 列移出的較舊門檻**：2.1.257 Fable 換 5.1、2.1.234／239／243 三項、2.1.212 `/fork` 改名、2.1.215 審查不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開、2.1.233 Todo 拿掉；見 [[entities/claude-code-releases]]。
+- **因上限 12 列移出的門檻**：2.1.317／312／307／304／300／295／285／284／261／260（預設值改變，窄場景或已被較新列涵蓋）；較舊的 2.1.257 Fable 換 5.1、2.1.234／239／243 三項、2.1.212 `/fork` 改名、2.1.215 審查不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開、2.1.233 Todo 拿掉；見 [[entities/claude-code-releases]]。
 
 > Fable 5 Defense in Depth 誤判非升版可解，見 [[entities/fable-5]]。
 
@@ -144,7 +134,7 @@
 | **anthropic-sdk-python 1.0.0**（httpx2 Breaking Change，⚠️ 無過渡期） | 2026-08-20 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **keybindingFlavor readline 模式**（v2.1.238，可選提示列刪除鍵行為；v2.1.261 起失效） | 2026-08-20 | 🔥 | ❌ 暫不推薦 | 正式發布 |
 | **Concise 輸出風格**（v2.1.237 新增內建 output style，省略前言與敘述性文字） | 2026-08-20 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Managed Agents Web Search 設定**（anthropic-sdk-python v0.125.0 新增 SDK 層設定支援） | 2026-08-19 | 🔥 | ⏳ 觀望 | Beta（SDK 層；框架整體仍 beta）|
+| **Managed Agents Web Search 設定**（anthropic-sdk-python v0.125.0 新增 SDK 層設定支援）（2026-08-19 公告，此後未見後續報導；11-19 日報的 Managed Agents 計價文件異動不涉本項，掃至 2026-11-21） | 2026-08-19 | 🔥 | ⏳ 觀望 | Beta（SDK 層；框架整體仍 beta）|
 | **spellcheck 輸入框拼字檢查**（v2.1.235，需本機 aspell／hunspell／ispell） | 2026-08-18 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **自訂專案 Transcript 目錄短名稱**（`CLAUDE_CODE_PROJECT_DIR_NAME` 環境變數，v2.1.234） | 2026-08-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.233**（`--worktree`／`claude agents` 視圖支援 GitLab MR URL，MR 顯示為 `!N`；另有 opt-in `forward_user_identity` 設定） | 2026-08-14 | 🔥 | ⚡ 有條件推薦 | 正式發布 |

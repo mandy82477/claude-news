@@ -7,12 +7,12 @@ domain: "🤖 模型"
 last_updated: "2026-11-14"
 last_news_update: "2026-09-28"
 status_main: "active"
-days_since_news: 53
+days_since_news: 54
 parent: null
 children: "['entities/sonnet-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 53
-inbound_links: 21
+days_since_news_subtree: 54
+inbound_links: 20
 attribution_count: 3
 attribution_last: "2026-07-31"
 top_source: "google-news"

@@ -3,21 +3,21 @@ page: "entities/claude-code-archive"
 kind: "entity"
 status: "resolved（封存頁）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-01"
+last_updated: "2026-11-21"
 last_news_update: "2026-04-30"
 status_main: "resolved"
-days_since_news: 204
+days_since_news: 205
 parent: "entities/claude-code"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 204
+days_since_news_subtree: 205
 inbound_links: 9
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 1
-pending_overdue: 0
-pending_next_review: "2026-11-21"
+pending_overdue: 1
+pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
 signal: "休眠"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** resolved（封存頁）
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
-**最後更新：** 2026-11-01
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-04-30
 
 > 本頁保存從 [[entities/claude-code]] 與三個子頁移出的原始條目：歷史記錄、發布超過 90 天的版本表列、已解決的 Anthropic Status 事故。條目一字不刪，只是搬離主頁讓主頁讀得動；重點見主頁與 [[entities/claude-code-releases]]。
@@ -307,6 +307,34 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-08-04 | v2.1.221 為 VSCode 擴充新增 Focus view（`Ctrl+Alt+F` 切換）。已知問題新增 1 則：使用者反映幾乎每天都須重新透過網頁驗證登入（issue #1757，74 個讚）。互動數更新 6 則：Max 訂閱瞬間觸及用量上限（issue #16157，1480→1483 則留言，今日聚焦頭條）；提示卡住 5–20 分鐘以上（issue #26224，149→150 個讚，新補 128 則留言，今日聚焦頭條）；Session 額度上限自動續行功能請求（issue #13354，182→193 個讚）；claude.ai visualize 功能故障（issue #34820，94→96 則留言）；Cowork 網路白名單失效（issue #30112，49→51 個讚，新補 54 則留言）；GitHub connector 帳號全域讀不到內容的迴歸問題確認為 issue #71542（37→48 則留言、33→43 個讚）；Linux 上持續產生 Windows 換行檔案（issue #2805，39→47 則留言、32→33 個讚）。另 Anthropic Status 於 08-03～08-04 出現 3 起短暫錯誤率事件，均同日確認解決，未列個別條目。 |
 | 2026-08-02 | 新增已知問題 4 則：Max 5x 升級至 Max 20x 失敗「Unable to update subscription」，回報者稱與 #10832／#50710／#43118 同屬相同模式（issue #55266，39 則留言、1 個讚）、Cowork 無法加入私有 GitHub marketplace（issue #28125，35 個讚）、MCP OAuth `resource` 參數多加尾端斜線導致 Microsoft Entra ID 驗證失敗 AADSTS9010010（issue #52871，26 個讚）、功能請求：提供選項關閉啟動歡迎畫面（issue #2254，126 個讚）；已知問題互動數更新 2 則：Advisor 觸發「No response from API」錯誤（issue #69238，69→96 個讚）、主題模式不隨系統自動切換明暗（issue #2990，新補讚數 242，本日已知問題讚數最高）。Google News（經 Startup Fortune 轉載）報導稱 Anthropic 已承認自身 bug 為先前 Claude Code 故障成因、此前曾「否認數週」；惟該報導僅有標題可讀、無具體時間線或官方聲明原文佐證，且屬單一低知名度媒體來源，暫不列入已知問題，待更多來源確認。 |
 | 2026-08-01 | 已知問題互動數更新 2 則：macOS 持續性 ECONNRESET 連線錯誤（issue #5674，47→51 則留言，今日全站互動最高）、CLI TUI 無法捲動回看對話歷史（issue #28077，留言增至 37、讚數增至 75）；新增已知問題 6 則：v2.1.150 起滑鼠滾輪失效、滾動動作誤判為方向鍵（issue #65833，35 則留言，今日互動次高）、多帳號設定檔支援功能請求（issue #20131，39 則留言）、Bedrock Opus 4.7 回傳 permission_error 儘管 AUTHORIZED（issue #51183，37 則留言）、Session 重新命名後第二次退出即消失（issue #25090，32 則留言）、Cowork Global instructions 儲存後靜默還原（issue #40175，30 則留言）、CLI 與 Desktop app 同步對話歷史功能請求（issue #28791，30 則留言）。 |
+
+**版本表（發布超過 90 天的列）**
+
+| 版本 | 發布日 | 重點 |
+|------|------|------|
+| **v2.1.239** | 2026-08-21 | Cost estimates（`/cost`、狀態列、`--max-budget-usd`）現會計入資料常駐（data-residency）工作區的 1.1 倍純美國推理附加費；另有一項全螢幕渲染器相關設定調整，官方 changelog 原文於此處截斷，其餘細節未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.239)）|
+| **v2.1.238** | 2026-08-20 | 新增 `keybindingFlavor` 設定：設為 `"readline"` 時可讓提示列中的 Ctrl+W 依 Bash 慣例刪除到前一個空白字元，預設值 `"classic"` 行為不變（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)）|
+| **anthropic-sdk-python v1.0.0** | 2026-08-20 | ⚠️ **Breaking change**：SDK 正式發布 1.0.0，client 升級至 httpx2；官方未提供明確遷移時程，升級前建議先查閱完整 changelog（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0)）|
+| **v2.1.237** | 2026-08-20 | 修復使用 LLM gateway 或自訂 base URL 的 session 中 prompt caching 失效問題；新增內建「Concise」輸出風格，讓 Claude 直接給結果、省去前言與敘述性文字（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.237)）|
+| **anthropic-sdk-python v0.125.0** | 2026-08-19 | Features：新增 managed agents 的 web search 設定相關功能，官方 changelog 未列出具體項目，詳見 [[entities/managed-agents]]（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0)）|
+| **anthropic-sdk-typescript vertex-sdk v0.19.5 / google-cloud-sdk v0.0.10** | 2026-08-19 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.5)）|
+| **v2.1.235** | 2026-08-18 | 新增可選 `spellcheck` 設定：透過本機安裝的 aspell／hunspell／ispell，即時在輸入框底線標出拼字錯誤；同時修復一項與整段提示詞（whole-prompt）相關的問題，官方 changelog 原文於此處截斷，其餘細節未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)）|
+| **v2.1.234** | 2026-08-17 | 新增可選環境變數 `CLAUDE_CODE_PROJECT_DIR_NAME`：讓每個 session 有獨立設定目錄的主機（如 CI／多租戶執行環境）可為專案 transcript 目錄自訂短名稱；官方 changelog 原文於此處截斷，其餘細節未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.234)）|
+| **v2.1.233** | 2026-08-14 | 新增 GitLab MR URL 顯示支援（`--worktree` 旗標本身早於 v2.1.133 即存在）；新增選用 `forward_user_identity` gateway 設定（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.233)）|
+| **v2.1.232** | 2026-08-13 | Subagent forking 預設開啟：帶 `subagent_type: "fork"` 的 subagent 現在預設繼承完整對話與 prompt cache；互動 session 中非 teammate 的 agent 任務指派行為亦有相應調整，官方 changelog 原文於此處截斷，細節未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.232)）|
+| **anthropic-sdk-typescript vertex-sdk v0.19.4** | 2026-08-13 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.4)）|
+| **anthropic-sdk-python v0.122.0** | 2026-08-13 | Features：新增 API `output_behavior` 欄位支援於 dream creation（可建立新記憶庫或原地更新既有輸入庫），非先前判讀的「dream cr」截斷字詞（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.122.0)，查證日 2026-09-20）|
+| **v2.1.231** | 2026-08-13 | Bug fix：修復 MCP OAuth 登入失敗問題，針對使用預先註冊 OAuth client 的伺服器（如 Slack）先前因 redirect URI 不符而登入失敗；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.231)）|
+| **v2.1.228** | 2026-08-11 | Bug fixes：修復互動式 session 因罕見內部排版錯誤而停止重繪畫面（背景程序仍持續執行）；修復 Windows 上找不到 `git`／Git Bash 的問題；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.228)）|
+| **v2.1.227** | 2026-08-10 | Bug fix：session 以過期登入 token 啟動時，feature flag 未依使用者訂閱層級正確評估，曾導致 Max 方案使用者被誤導提示啟用相關功能；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.227)）|
+| **v2.1.226** | 2026-08-08 | Bug fixes and reliability improvements，官方 changelog 未列具體項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.226)）|
+| **anthropic-sdk-python v0.121.0** | 2026-08-07 | Features：新增 `mid-conversation-tool-changes-2026-07-01` beta——可在對話進行中的系統訊息附加工具異動（新增／移除工具）而不使既有 prompt cache 失效；另新增 session budgets、advisor tool、pinned inference location、GitHub skills 自動載入等 API 支援（2026-08-10 查證，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0)）|
+| **anthropic-sdk-typescript google-cloud-sdk v0.0.7** | 2026-08-07 | Bug Fixes：client 改用固定字串作為 User-Agent，不再依賴 constructor 名稱；純相容性修正，無使用者端功能異動（2026-08-10 查證，見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.7)）|
+| **anthropic-sdk-typescript vertex-sdk v0.19.1** | 2026-08-07 | Bug Fixes，具體修復項目未在摘要中顯示，純修正無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.1)）|
+| **v2.1.224** | 2026-08-07 | 新增 `claude self-hosted-runner`（Team／Enterprise）；同版新增跨 session `SendMessage`＋`ListAgents`，見已知問題頁「📂 Session」組（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.224)）|
+| **v2.1.223** | 2026-08-06 | ⚠️ **安全修復**：一次修補 agentic 權限層 4 項邊界——Bash 指令可隱藏部分內容躲過權限掃描、tab／隱形 Unicode 填塞讓核准對話框看不出實際內容、workflow script 用動態 `import()` 逃出沙箱、`bypassPermissions` agent 定義無視組織政策停用 bypass 模式（2026-08-10 查證，見已知問題「🛡️ 安全與隱私」）|
+| **v2.1.222** | 2026-08-04 | ⚠️ **安全修復**：修復 worktree-isolated session 與其 subagent 可對主 checkout 執行破壞性 git 指令的隔離漏洞；隔離範圍擴大至每個 session 中的檔案編輯（file edits）與 Bash 執行，不再侷限於 git 層（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.222)）|
+| **v2.1.221** | 2026-08-04 | **[VSCode] 新增 Focus view**：chat-menu 切換選項，將工具活動摺疊為可展開的每輪摘要並附即時執行指示，可用 `Ctrl+Alt+F` 或選單切換（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.221)）|
 
 **懸置細節**
 - ⟨Q-14⟩ anthropic-sdk-python v0.122.0（2026-08-13）Features 區塊新增 API `output_behavior` 欄位支援：查證官方完整 changelog（[Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.122.0)，查證日 2026-09-20）確認原句為「add output_behavior to dream creation (create a new memory store or update the input store in place)」——先前因摘錄擷取不完整誤判為「於『dream cr』處截斷」，實際上官方原文完整、非截斷；`output_behavior` 用於控制 dream（記憶）建立時是否新建記憶庫或原地更新既有輸入庫，與 [[entities/managed-agents]] 的 Dreaming 記憶整合功能同屬一組 API。

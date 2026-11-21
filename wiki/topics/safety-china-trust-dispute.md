@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-26"
 last_news_update: "2026-07-11"
 status_main: "monitoring"
-days_since_news: 132
+days_since_news: 133
 parent: null
 children: "['topics/safety-china-trust-dispute-archive']"
 page_role: "hub"
-days_since_news_subtree: 132
+days_since_news_subtree: 133
 inbound_links: 17
 attribution_count: 0
 attribution_last: null
@@ -191,28 +191,30 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
-### 2026-07-10
+### 2026-07 時序
+
+#### 2026-07-10
 - Anthropic 首度公開否認中國官方「後門」指控（多家獨立媒體報導）；同日發布「Inviting hard questions」聲明，兩者關聯屬推論，尚未見官方證實或否證
 
-### 2026-07-09
+#### 2026-07-09
 - 中國「後門」指控延燒第二天：WSJ/Fox Business/TechRadar/Yahoo Tech 續報導，TechRadar 首次建議解除安裝
 
-### 2026-07-08
+#### 2026-07-08
 - 中國工業主管機關正式發布「後門」資安警示（8+ 媒體同步報導）；Yahoo Finance 將 Alibaba 禁令與本次警示並列為同一敘事線（推論）
 
-### 2026-07-07
+#### 2026-07-07
 - Anthropic 定調「embedded spyware」指控為內部「實驗」（Malwarebytes）；Alibaba 禁令補細節（改用 Qoder，PYMNTS/Benzinga/BeInCrypto）
 
-### 2026-07-06
+#### 2026-07-06
 - Alibaba 禁令經 qz.com/TechRadar/SDxCentral/digitimes 多媒體確認；Meta 同日被曝限制工程師使用 Claude（Yahoo Finance）
 
-### 2026-07-05
+#### 2026-07-05
 - The Indian Express 報導 Alibaba 將自 7 月 10 日起禁止員工使用 Claude Code（首報具體生效日）
 
-### 2026-07-03
+#### 2026-07-03
 - Alibaba 傳禁用 Claude Code（Reuters 獨家，HN score 313）；FT 同日報導 Anthropic 收緊政策封堵中國企業間接存取管道
 
-### 2026-07-01～07-02
+#### 2026-07-01～07-02
 - 同形字符隱寫術機制曝光（HN score 2263，thereallo.dev / 36Kr）；dev.to（adioof）獨立提出相似 steganography 指控（07-11 日報二次收錄）
 
 ### 2026-06（歷史摘要）

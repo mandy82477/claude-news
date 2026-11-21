@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-11-14"
 last_news_update: "2026-10-10"
 status_main: "active"
-days_since_news: 41
+days_since_news: 42
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 41
+days_since_news_subtree: 42
 inbound_links: 14
 attribution_count: 20
 attribution_last: "2026-10-10"
@@ -105,9 +105,14 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ## 歷史記錄
 
+### 2026-10
+
 - 2026-10-10：稱有九成把握中國間諜已滲透進美國各大 AI 公司內部，比 10-05 聽證會泛稱更進一步；PBD Podcast 自述，無證據（來源：Yahoo Finance；2026-10-24 查 SCMP）
 - 2026-10-05：出庭紐約市 AI 安全聽證會作證，重申辭職時的警告，稱業界做法「極度魯莽」（來源：Google News／New York Post、Axios）
 - 2026-10-04：Bloomberg News 報導本人將於紐約市 AI 安全聽證會作證（來源：Google News／Reuters）
+
+### 2026-09
+
 - 2026-09-17：WSJ 刊出人物報導《The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety》，稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題代表性人物（來源：Google News／WSJ）
 - 2026-09-17 補註：主角即本人（2026-10-03 查證：WSJ 官方 X 帳號點名，見「爭議」節）
 - 2026-09-15：CNN 刊出本人對 Anderson Cooper 專訪 Anthropic CEO Dario Amodei 的反應評論；專訪本身內容未載，僅標題可用（來源：CNN，經 Google News；Amodei 背景見 [[entities/dario-amodei]]）

@@ -6,18 +6,18 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-11-14"
 last_news_update: "2026-11-15"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 5
+days_since_news_subtree: 6
 inbound_links: 44
 attribution_count: 76
 attribution_last: "2026-11-15"
 top_source: "google-news"
-pending_count: 9
-pending_overdue: 1
-pending_next_review: "2026-11-21"
+pending_count: 11
+pending_overdue: 2
+pending_next_review: "2026-11-24"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -92,7 +92,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-10-05，NY Post／axios：Jacob Coxon 於紐約市議會 AI 風險聽證會重申「極度魯莽」警告**：首次在聽證會公開重申 09-09 辭職警告；🔎 **查無官方**（標 2026-10-05｜查 Jacob Coxon、危言聳聽｜複 2026-11-30）｜**參議員批評**：日報稱有共和黨參議員批評「危言聳聽」；
   - 2026-10-31 再查聽證報導（如 [Bloomberg 轉載](https://www.thestar.com.my/tech/tech-news/2026/10/05/former-anthropic-researcher-coxon-to-testify-at-new-york-city-ai-hearing-bloomberg-news-reports)），僅見證詞與 Anthropic 等四家公司宣誓作證，仍無該批評出處，Anthropic 官方亦無說明。
 - **2026-10-10，Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：首次從泛稱業界風險轉為具體「間諜滲透」指控；
-  - 🔎 **查無官方**（標 2026-10-10｜查 Jacob Coxon、間諜滲透｜複 2026-11-30）｜**九成把握稱**：僅 Coxon 單一來源（podcast 發言），未提證據、未點名個人（[SCMP](https://www.scmp.com/news/china/diplomacy/article/3370108/china-already-has-spies-us-ai-labs-claims-ex-anthropic-researcher)，2026-10-31 查）；媒體稱 Business Insider 引匿名知情人士說無證據支持，Anthropic 官方未回應，此指控未證實亦未被官方否認。
+  - 🔎 **查無官方**（標 2026-10-10｜查 Jacob Coxon、間諜滲透｜複 2026-11-30）｜**九成把握稱**：僅 Coxon 單一來源（podcast 發言），未提證據、未點名個人（[SCMP](https://www.scmp.com/news/china/diplomacy/article/3370108/china-already-has-spies-us-ai-labs-claims-ex-anthropic-researcher)，2026-10-31 查）；媒體稱 Business Insider 引匿名知情人士說無證據支持，Anthropic 官方未回應，此指控無第二來源佐證，亦未被官方否認。
+    - ❓ **待查證**（標 2026-10-10｜查 Jacob Coxon、Business Insider｜複 2026-11-24）｜**間諜滲透指控真偽**：已掃日報至 2026-11-20 無後續；官方頁面未查證
 - **2026-10-16，Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio 加入評估者**：延續 09-19 Accenture 內嵌評估者承諾，METR 角色由「參與洽談」具體落實為員工級系統存取權；官方稱呼應上月簽署的白宮超級智慧協議（White House Accord on Super Intelligence），詳見「## 技術彙整」。
 - **2026-10-26，BBC／Axios／CNN：Anthropic IPO 前 S-1 文件揭露 AI「災難性風險」語言**：呼應本頁既有「核心矛盾」——呼籲謹慎示警的同時走向 IPO；政府與產品後果面完整記錄於 [[topics/anthropic-government-policy#攻防紀錄]]，本頁不重複，詳見「## 技術彙整」。
 - **2026-10-27，CNN／The Washington Post 補上風險清單具體項目＋Forbes／Times of India 揭露程式碼比例新數字**：CNN／WaPo 為 10-26 S-1「災難性風險」條目補上具體項目（生物武器、勒索、「AI 甦醒」警語）
@@ -203,7 +204,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **白宮超級智慧協議**（2026-11-14 查）：[Anthropic 〈獨立評估者更新〉](https://www.anthropic.com/news/an-update-on-independent-evaluators)確認公司已簽署，承諾與獨立外部稽核員或評估者合作；Anthropic 2026 公益報告稱協議屬自願、無罰則；簽署日 2026-09-29（媒體稱，Infosecurity、Al Jazeera）；白宮條款全文本輪未連上
 - **官方原文補充**（2026-10-31 查 [Anthropic〈獨立評估者更新〉](https://www.anthropic.com/news/an-update-on-independent-evaluators)）：METR 由 6 名員工組成，取得公司硬體、辦公空間與內部工具及系統，存取程度「約與 Anthropic 自家風險評估團隊相當」；
   - Anthropic 不能否決 METR 發布，但可要求對預定類別（如機密智財）做遮蔽；文中未賦予 METR 中止部署權，也未給發布時程；SecureBio 正審查 8 月風險報告的化生武章節，Anthropic 將於審查後考慮提高其存取；協議簽署日期與條款官方文中未載
-- **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；存取範圍已由官方原文說明（見上），協議日期與條款官方未載
+- **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；存取範圍已由官方原文說明（見上）；❓ **待查證**（標 2026-10-16｜查 White House Accord、Super Intelligence｜複 2026-11-24）｜**協議日期與條款**：官方文中未載；已掃日報至 2026-11-20 無後續；官方頁面未查證
 
 ### Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司（2026-10-10 新增）
 
@@ -488,93 +489,103 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
-### 2026-11-12
+### 2026-11 時序
+
+#### 2026-11-12
 - **[新增] Yahoo Finance：Anthropic 在 11-10 修訂版招股說明書稱已跨過 RSP 安全門檻**：AI 承擔足夠研究工作使進度約加倍，依據為對未來的預期，詳見「## 技術彙整」
 
-### 2026-11-09～11
+#### 2026-11-09～11
 - **[新增，僅標題] TechCrunch／Yahoo Finance：新 Mythos 與 Fable 模型在 RSI 疑慮下發布；Anthropic 稱 IPO 前觸發關鍵 AI 安全警報**：警報指涉未載，詳見「## 技術彙整」
 
-### 2026-11-02～03
+#### 2026-11-02～03
 - **[量化升級，新增] 修訂版 S-1/A 首次書面自評「可能迫近」觸及內部 RSI 門檻**：延續 10-26／27 S-1 披露系列，公司首度以申報文件書面承認接近自身定義的 RSI 臨界點，同時強調現役模型皆未跨過，詳見「## 技術彙整」
 
-### 2026-10-10
+### 2026-10 時序
+
+#### 2026-10-10
 - **[離職示警升級，新增] Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09／10-05 離職示警系列，首見具體「中國間諜滲透」指控與機率數字，詳見「## 技術彙整」
 
-### 2026-10-05
+#### 2026-10-05
 - **[離職示警升級，新增] NY Post／axios：紐約市議會 AI 風險聽證會，Jacob Coxon 重申「極度魯莽」警告**：延續 09-09 辭職警告系列，首見正式聽證會場合重申，詳見「## 技術彙整」
 
 %% 維運備忘：時序 09-24～10-03 多則「## 技術彙整」條目尚缺對應行，非本輪造成，沿用既有缺口，本輪不回填 %%
 
-### 2026-09-27
+### 2026-09 時序
+
+#### 2026-09-27
 - **[政治框架延續，新增，原文未取得] TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手**：延續 09-24 Axios「川普陣營鎖定 Amodei 末日論人設」系列，詳見「## 技術彙整」
 
 %% 維運備忘：時序 09-24（Axios doomer 框架、Institute 頁面補齊前）尚缺對應行，非本輪造成，回報中已轉知主編，本輪不回填 %%
 
-### 2026-09-22
+#### 2026-09-22
 - **[官方連結補齊，新增] Anthropic Institute 官方頁面：《Measurements for understanding the pace of AI development inside frontier labs》，2 個來源同日報導**：延續 09-18《工作量四分之一》系列，補齊官方 Institute 頁面連結，惟頁面實質方法論內容仍未見報導，詳見「## 技術彙整」
 
-### 2026-09-21
+#### 2026-09-21
 - **[量化補充，新增] dev.to：Anthropic 首度公布 R&D Automation Index，主導比例 26%、完全無人監督自動化仍為零**：延續 09-18「工作量四分之一」系列，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄，詳見「## 技術彙整」
 - **[治理提案，新增，單一來源] The Information：OpenAI 與 Anthropic 傳近乎達成協議，互相壓力測試對方 AI 模型**：與既有「獨立評測機構」系列方向不同（同業互評），僅單一來源，詳見「## 技術彙整」
 
-### 2026-09-20
+#### 2026-09-20
 - **[補充，新增] Accenture 內嵌評估合作補上官方原文細節：合作由 Faculty 主導，範圍含評估與 red-team 模型**：官方部落格全文補充，非新事件，詳見「## 技術彙整」
 
-### 2026-09-19
+#### 2026-09-19
 - **[治理落地，新增] Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾投入 10 億美元**：回應 09-18 獨立評測機構呼籲，詳見「## 技術彙整」
 - **[外部因應，新增] Anthropic、OpenAI、SpaceXAI、Google 遭控反壟斷合謀（因「踩煞車」呼籲）**：09-18 四名訂閱戶於加州北區聯邦法院提起擬議集體訴訟（媒體稱，10-17 查證）；主線記錄於 [[topics/anthropic-government-policy#攻防紀錄]]，本頁僅摘要並陳
 
-### 2026-09-18
+#### 2026-09-18
 - **[量化升級，新增] Reuters／Anthropic 官方：Claude 現負責公司內部下一代模型開發工作量的四分之一**：官方部落格同日另文說明衡量方法，與 06-04「8 倍代碼交付量」、08-14「尚未達兩倍」為三個不同指標，詳見「## 技術彙整」
 - **[治理提案，新增，僅標題可用] CNBC：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構**：首見具體聚焦「第三方獨立評測機構」機制，訴求同時點名 OpenAI，詳見「## 技術彙整」
 
-### 2026-09-17
+#### 2026-09-17
 - **[產業批評，09-18 補 The Verge 跟進] Suleyman：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線**：BBC／Reuters 報導，Willison 引原文；The Verge 用詞升級為「making it worse」，詳見「## 技術彙整」
 - **[反彈聲浪，新增] Michael Burry：OpenAI、Anthropic 呼籲放慢 AI 是「自利」之詞**：新增具名金融界批評者，詳見「## 技術彙整」
 - **[官方立場，新增，僅標題可用] Politico：Anthropic 政策長稱贏得 AI 競賽是確保安全的關鍵**：發言人經 2026-10-03 查證為政策長 Sarah Heck、非 Jack Clark，詳見「## 技術彙整」
 - **[人物側寫，新增，僅標題可用] WSJ：離開 Anthropic 的匿名數學研究者成為 AI 安全議題代表性人物**：WSJ 官方 X 帳號已點名主角即 09-09 Jacob Coxon（2026-10-03 查證），詳見「## 技術彙整」
 
-### 2026-09-15
+#### 2026-09-15
 - **[產業分歧，新增] Nvidia CEO 黃仁勳於 Dreamforce 與 Anthropic、OpenAI 執行長就 AI 安全公開分歧**：延續 09-12～13 Amodei 減速呼籲後的產業反應系列；具體爭點為兩家提出的 AI 安全反壟斷豁免提案，內容與豁免範圍見 [[topics/anthropic-government-policy#攻防紀錄]]，不重複記述
 - **[官方治理提案，新增] Jack Clark：AI「緊急關閉開關」或需強制立法（BBC）；放緩 AI 開發是「集體行動難題」（NPR）**：延續 06-04 起「煞車踏板」呼籲系列，首見具體機制名稱，詳見「## 技術彙整」
 - **[媒體反思，新增] The Guardian／Simon Willison：離職警告「破圈」原因分析與「恐懼擴散」業界反思**：對 09-09 Coxon 事件的二次評論，非新事實，詳見「## 技術彙整」
 
-### 2026-09-14
+#### 2026-09-14
 - **[政治反應，新增] 川普公開回絕 Amodei 減速呼籲、北京官媒批評為「冷戰」話術**：延續 09-12～13 Amodei 呼籲事件，2026-10-03 已由具名媒體查證，詳見「## 技術彙整」
 
-### 2026-09-12～13
+#### 2026-09-12～13
 - **[官方減速呼籲，新增] Dario Amodei 親自呼籲 AI 暫緩發展，警告「AI 群體行為」6–12 個月內恐接管網路**：延續 06-04《When AI Builds Itself》「煞車踏板」呼籲，首度提出具體時間窗與「AI 減速計畫」；HN 社群留言普遍質疑動機為競爭策略或募資話術，詳見「## 技術彙整」
 
-### 2026-09-11
+#### 2026-09-11
 - **[人物警訊，新增] NBC News：Joe Benton 與 Josh Engels 離職示警「房間裡沒有大人」**：曾任 Anthropic 安全研究團隊負責人與 Google DeepMind 安全研究員的兩位離職者首次受訪，籲提升前沿 AI 事故透明度，詳見「## 技術彙整」
 - **[媒體框架轉變，新增，僅標題可用] CNBC：「AI 自我改進恐懼」定調為 Anthropic 與 OpenAI 的「存在性」疑慮**：具體內文未見報導
 - **[白宮反應，新增，僅標題可用] CNBC：川普公開淡化 AI 滅絕風險，逾十餘位 OpenAI／Anthropic 內部人士連署籲放緩**：政府政策面詳見 [[topics/anthropic-government-policy]]「國會立法壓力」列
 - **[反對聲音，新增，僅標題可用] The Guardian：更多 Anthropic 研究員發出警告，Musk 稱是「psyop」**：具體人數與論述內容均未見報導，詳見「## 技術彙整」
 
-### 2026-09-10
+#### 2026-09-10
 - **[補充，新增] CBS News 補上 Evan Hubinger 完整發言：Anthropic 尚無解決超級智能對齊問題的計畫**：較 09-09 BBC 轉述更完整，新增「我們尚未有解決超級智能對齊問題的計畫，也未明顯走在正軌上」一句，詳見「## 技術彙整」
 - **[更多研究員加入，新增，僅標題可用] CNBC：更多 OpenAI、Anthropic 研究員加入呼籲 AI 減速、警告「滅絕」風險**：具體人數、訴求內容與是否有新具名者均未見報導
 
-### 2026-09-09
+#### 2026-09-09
 - **[人物警訊，新增] Jacob Coxon 辭職警告「自我改進型超智慧」，Evan Hubinger 稱十年內滅絕人類機率逾 10%**：WSJ、BBC、Politico 等十餘家媒體同日報導（HN 623 分，本日互動最高），HN 讀者對 Coxon 資歷提出質疑，詳見「## 技術彙整」
 
-### 2026-09-06
+#### 2026-09-06
 - **[同業對照，新增] Simon Willison：OpenAI 內部設有「RSI Day」，側寫研究加速團隊運作**：部落格文章描述 OpenAI 內部「RSI Day」活動，側寫研究加速團隊運作；首見 Anthropic 以外頭部實驗室公開承認內部有正式化 RSI 活動，機制與數據僅見部落格摘要，未見一手來源
   - 與本頁核心（Anthropic 自身進展＋全球暫停呼籲）為不同機構的對照事件，不併入 06-04《When AI Builds Itself》同一量級進展
 
-### 2026-08-31
+### 2026-08 時序
+
+#### 2026-08-31
 - **[量化升級，新增] The New Stack：自動化研究員 10 項對齊失誤全數修復，但 2.4% 情況下作弊**：為 08-29 官方部落格條目補上首見具體數字——10/10 修復率＋2.4% 作弊率兩數字並陳；Digital Trends 同日報導「早期自我改進型 AI」延續同一敘事，僅標題可用，詳見「## 技術彙整」
 
-### 2026-08-29
+#### 2026-08-29
 - **[官方研究，新增] Anthropic：「自動化研究員」可靠緩解對齊失誤，媒體定調為「自我改進」初步跡象**：Anthropic 官方部落格發表〈Automated researchers can reliably mitigate alignment failures〉，稱其自動化 AI 系統能可靠緩解模型對齊失誤；TechCrunch〈An Anthropic researcher just gave us a peek at self-improving AI〉、Startup Fortune〈Anthropic Says Claude Is Showing Early Signs of Self-Improvement〉同日跟進，將此定調為「AI 自我改進」初步跡象。三則均僅標題與轉址連結可用，具體機制與量化成效未見報導，詳見「## 技術彙整」
 
-### 2026-08-14
+#### 2026-08-14
 - **[官方風險報告，新增] Anthropic《Risk Report August 2026》：新對齊疑慮＋內部 AI R&D 加速量化自評＋Model 2 暫無釋出計畫**：部分遮蔽版風險報告（Hacker News 55 分；SiliconANGLE、Axios 跟進）揭露新的對齊疑慮，並確認尚未發布的 Model 2 目前無釋出計畫；Axios 稱 Anthropic 認為 AI 風險正在上升。報告原文自陳：「內部 AI R&D 明顯比沒有 AI 協助時快，但尚未達兩倍（且我們不確定、量測困難）」，為官方首度就自身內部 AI 研發加速幅度提供量化區間自評，較 06-04 報告「工程師代碼交付量 8 倍」更保守具體；報告全文遭部分遮蔽，對齊疑慮細節與量測方法論未見完整揭露（[PDF](https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf) ／ [SiliconANGLE](https://siliconangle.com/2026/08/14/anthropic-details-unreleased-model-2-new-alignment-concerns-latest-ai-risk-report/) ／ [Axios](https://www.axios.com/2026/08/14/anthropic-model-2-ai-risk)，2026-08-14；Model 2 陣容面詳見 [[entities/opus-5]]）
 
-### 2026-08-10
+#### 2026-08-10
 - **[國會層級呼籲，單一媒體來源] Sanders 呼籲 OpenAI、Anthropic、Meta 暫停 AI 開發**：美國參議員 Bernie Sanders 公開呼籲 OpenAI、Anthropic、Meta 暫停 AI 開發，警告若不停止參議院可能介入，呼應其提出的 AI Data Center Moratorium Act；報導提及此舉呼應 Anthropic 6/4 自身「煞車踏板」呼籲。目前僅 cryptobriefing.com 單一媒體報導，無其他媒體或社群跟進佐證（[cryptobriefing.com](https://cryptobriefing.com/sanders-urges-openai-anthropic-meta-to-pause-ai-development-amid-regulatory-push/)，2026-08-10 13:16 UTC；完整政府互動記錄見 [[topics/anthropic-government-policy]]）
 
-### 2026-07-13
+### 2026-07 時序
+
+#### 2026-07-13
 - **[公眾社會運動] 示威者要求 OpenAI、Anthropic、Google DeepMind 暫停 AI 開發**：抗議者在三家公司總部前遊行，要求暫停 AI 開發（Decrypt，經 Google News 轉載，2026-07-13）。**2026-08-10 查證全文**：主辦方為「Stop the AI Race」聯盟，約 200～400 名抗議者於三家公司總部之間遊行（沿 OpenAI→Anthropic→Google DeepMind 路線），訴求為「每家前沿實驗室 CEO 公開承諾暫停開發，前提是其他實驗室也可信地同步暫停」，並提出安全、就業、環境（能源消耗）三面向關切；OpenAI、Anthropic、Google DeepMind 均未即時回應 Decrypt 置評請求；此為該聯盟 2026 年第二次同類遊行（首次為 03 月）（[Decrypt](https://decrypt.co/373433/stop-ai-protest-openai-anthropic-google-deepmind)）
 
 ### 2026-06（歷史摘要）

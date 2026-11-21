@@ -4,19 +4,19 @@ kind: "entity"
 type: "model"
 status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
-last_updated: "2026-11-19"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-19"
 status_main: "active"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 48
 attribution_count: 44
 attribution_last: "2026-11-19"
 top_source: "google-news"
-pending_count: 4
+pending_count: 3
 pending_overdue: 1
 pending_next_review: "2026-11-22"
 pending_signalled: 0
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-11-19
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-19
 
 > **穩定性事件**（2026-11-19）
@@ -69,9 +69,7 @@ Mythos 5.1 之後的下一代模型，目前只有一筆官方證實，其餘為
 
 ## 跟它怎麼說話
 
-❓ **待查證**（標 2026-11-09｜查官方 prompting 文件是否已補 Mythos 5.2 版本）｜**Mythos 5.2 專屬 prompting 指南尚未發布**：今日來源未帶 prompting 內容，下列仍為 5.1 版本。
-
-官方 prompting 指南與 [[entities/fable-5]] 共用一份：[Prompting Claude Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1)，標題明載涵蓋 Claude Mythos 5.1（查證 2026-10-03）。官方未另出 Mythos 專屬 prompting 頁。
+官方 prompting 指南與 [[entities/fable-5]] 共用一份：[Prompting Claude Fable 5.2](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2)，頁首說明逐字載明涵蓋 "Claude Fable 5.2 and Claude Mythos 5.2"（查證 2026-11-21）。官方未另出 Mythos 專屬 prompting 頁；5.2 相對 5.1 的差異逐條見 [[entities/fable-5#跟它怎麼說話]]。
 
 - **措辭面的調整與 Fable 5.1 同一套**：effort 要重跑 sweep、要刪「hold all findings for the final response」並設 `thinking.display: updates`、要加「你在自主執行」那段。
 - 同一套之二：要刪舊的反格式化規則、`low` effort 下搜尋觸發變少——逐條見 [[entities/fable-5]]「跟它怎麼說話」，本頁不複製。

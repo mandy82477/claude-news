@@ -3,14 +3,14 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-20"
+last_updated: "2026-11-21"
 last_news_update: "2026-11-20"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 81
 attribution_count: 319
 attribution_last: "2026-11-20"
@@ -18,7 +18,7 @@ top_source: "blog"
 pending_count: 9
 pending_overdue: 2
 pending_next_review: "2026-11-24"
-pending_signalled: 2
+pending_signalled: 3
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-20
+**最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-20
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
@@ -92,7 +92,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **跨模型路由（GitHub Copilot Fusion）會不會改變選 Claude Code 的成本論點？** 10-29 The New Stack 稱 Fusion 勝 Claude Code、成本減半。
   - 媒體稱數字源自 Artificial Analysis 的 Coding Agent Index：Fusion Max 60 分、每任務約 $5.59，對 Claude Code＋Opus 5.5 Max 62 分、約 $11.42（2026-11-14 查證）。
   - 「一半」是 API 每任務成本、不是訂閱價，不能拿來重算訂閱比價；見「對手雷達」Microsoft／GitHub 列。
-  - ❓ **待查證**（標 2026-11-01｜查 Copilot Fusion、The New Stack｜複 2026-11-15）｜**Fusion 成本與勝負的測試條件**：The New Stack、VentureBeat 皆稱出自 Artificial Analysis 指數（媒體稱，評測原頁未讀）；官方 changelog 只確認 10-28 GA。
+  - ❓ **待查證**（標 2026-11-01｜查 Copilot Fusion、The New Stack｜複 2026-11-15｜訊 2026-11-17）｜**Fusion 成本與勝負的測試條件**：The New Stack、VentureBeat 皆稱出自 Artificial Analysis 指數（媒體稱，評測原頁未讀）；官方 changelog 只確認 10-28 GA；11-17 官方 changelog 另公布兩個 Terminal-Bench 成績，與上述指數的對應未核對。
 
 ## 競品定價對照
 

@@ -9230,3 +9230,24 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：候選 8 筆（entities/claude-code-releases v2.1.305／307／309／311／312／316／317／318 共 8 項行為變化，含 Opus 4.8 fast mode 11-30 淘汰、Read 工具移除「檔案未變更」提示、DISABLE_COMPACT 改單向、claude ultrareview 改需工作區信任等）／手冊寫入 0 則（分類階段 0 則落入開發實務類；候選已 append `data/devpractice-candidates.jsonl`，待週更落地判斷）；基準線已推進至 ec1331c
 - market 判讀：新增 3 則（IPO 結算完成硬數字、掛牌次日股價重挫、Barclays／Citadel／BNY 金融業採用），標的表覆寫 2 列、新增 1 列（BNY），里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列（結算日見各子頁）
 - 📋 需使用者端設定：無
+
+### 2026-11-21 Lint 檢查點 1（進行中）
+
+- 已完成：A 段 1–5（六記者派工與收報兩層核對、語意分岔／新實體頁判定、overview 週更）、5a、5b
+- 下一步：5c（逾期待查證清算，清零制）
+- 回報行（暫存）：
+  - 收報核對：6/6 位一次過 4 位；退回 2 位（人物：3e 與 3h 自承「未逐頁檢查」卻同時給 ✅，含糊退回；安全政策：3e 警示條件自承未執行）——兩位補做後皆通過。行為層抽驗：擲骰（seed 2026-W47，N=29）抽中 #29「社群記者決策表五列加推薦細節」，主編開 `git diff` 核對 community-tech-tools.md，五列新增細節與對應工具列皆如實存在，**抽驗相符**
+  - 月度蒸餾：非本月首次 lint，跳過（11 月首次為 2026-11-14）
+  - 語意分岔／死案（步驟 3）：六記者皆回報無候選，無需判定
+  - 新實體頁（步驟 4）：掃近 30 天日報具名實體，達 3 次門檻且無專頁者 1 件（Claude Meetings，事實散在 product-matrix／tech-discussions／feature-radar／pricing-history 四頁）；雲端不動手，記本機承接。Code Mode 判定不另建頁（屬 Claude Code 功能，已有 experimental／radar／releases 三處落點）
+  - overview 週更（步驟 5）：全頁改寫，當前局勢 8 段、進行中議題 13 列、近期重大事件換成 11-15～11-21、商業／工具／情緒三節同步
+  - 熱度降溫（5a）：檢查 22 條（全覽表 ≥🔥🔥），降 0 條（逐條看命中原文，Claude Mods 與 Cowork 初查零命中係別名過窄，實際 4 週內皆有真實提及；Code Review 一列 5 天命中中僅 11-15 一天真指官方 Code Review，仍非零）；⏳ 逾期：9 條，處置（升 0／加註 1／已加註跳過 8，8 條本輪皆無新後續）；Claude Code 通道現值已寫入 claude-code 與 claude-code-releases（stable 2.1.311→**2.1.323**、latest 2.1.325→**2.1.330**，查證 2026-11-21），因 stable 跨過 2.1.314／319／321 三項會改到既有行為的版本，兩頁第二、三條同批改寫
+  - 跨家榜單週更（5b）：雲端 egress 未開，跳過（leaderboard 組 PARTIAL 1/12）
+  - 模型頁世代表（5l，提前於 A 段後執行）：fable-5 資料截至 2026-11-09（距今 12 天，未逾 60 天不觸發重查）／**護欄類別由四類改為三類**（官方文件改名為〈Why Claude switched models in your conversation with Fable models〉，明載涵蓋 Fable 5.2／5.1／5；攻擊性資安→Opus 4.8，雙重用途生物與窄範圍前沿 LLM 開發→Opus 5；distillation 不再是獨立切換類別，僅存於計費段）；opus-5 資料截至 2026-11-14（距今 7 天，不觸發）；跟它怎麼說話：5 頁齊全、**補寫 2 頁**（fable-5／mythos 換上官方 Fable 5.2 指南並逐條改寫三條差異）、重查 0 頁（其餘查證日皆未逾 90 天）
+- 主編判定（至今）：
+  - 安全政策記者回報兩個封存頁（ai-agent-safety-archive 897 行、anthropic-government-policy-archive 237 行）連續日期條目逾門檻、問要不要補月份分組 → **判定不補**：3e 的警示針對讀者入口頁的可掃描性，archive 是封存證據層、讀者不從它進站，改動分組等於動封存原文結構，收益不抵風險
+  - 功能記者指出 `shared.md` 規定記者不可碰 feature-radar.md，而本輪派工明文要他裁剪升級變更表 → **判定派工有效**：2026-11-20 主編已裁決該表列數裁剪留給本輪 lint，且裁剪動作限於該表、其 `%%` 備忘與表下說明句，未及 radar 其餘區塊；惟規則與實務的這個缺口要補（記本機承接）
+  - 社群記者 blender-skills 複核結論（兩個獨立 repo、僅同名，EL4CTEO 10-26 即有 522★ 早於 arjun988 首見，時間線不支持仿作）→ **採納**，2026-11-18 日報品質備註的疑慮解除；該工具已依門檻補進工具目錄
+- 本機承接（至今）：
+  - **建 `wiki/entities/claude-meetings` 實體頁**（步驟 4）：觸發標準＝近 30 天日報具名提及 ≥3 天且無專頁；判定建頁，理由＝11-10 beta 發布（Team／Enterprise）、HN 104 分，事實目前散在四頁且無單一家；雲端不動手（建新頁屬頁面結構改動）
+  - **`.claude/reporter-rules/shared.md` 的「記者不可碰 feature-radar.md」要補一個例外口徑**：主編於 lint 明文派工裁剪 radar 單一表格時應視為授權，否則每次都要記者先違規再由主編追認；雲端不改 `.claude/`

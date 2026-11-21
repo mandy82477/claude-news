@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-10-25"
 last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 31
+days_since_news: 32
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 31
+days_since_news_subtree: 32
 inbound_links: 5
 attribution_count: 3
 attribution_last: "2026-10-20"
@@ -95,16 +95,30 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 
 ## 歷史記錄
 
+### 2026-10
+
 - 2026-10-19：Link blog〈My obituary for programming〉轉引 Jeremy Scheff 的文章，談程式代理讓熱愛解邏輯謎題的職業程式設計師失去什麼；本庫僅取得開頭摘錄（細節未載），評論為 Scheff 所寫、非他本人表態（來源：Blog／Simon Willison）
 - 2026-10-06：部落格〈Scrimshaw Jukebox〉測試 Claude Opus 5.5 設計文字格式遊戲配樂並生成可播放 artifact；是否為新進能力他未對照舊模型，內容見 [[entities/opus-5-5]]（來源：Blog／Simon Willison）
 - 2026-10-06：轉引 Anthropic 工程師 Felix Rieseberg 說明 Cowork 本機 VM 架構轉雲端的原因，細節與社群追問見 [[entities/cowork]]（來源：Blog／Simon Willison）
+
+### 2026-09
+
 - 2026-09-28：Sonnet 5.5 發布當日依例以鵜鶘測試，「max」思考強度下圖示輸出異常；原文稱與 Opus 5.5 那次同一個 bug（Opus 5.5 那次的症狀本庫未見記載，2026-10-03 核）（來源：Blog／Simon Willison）
 - 2026-09-13：連續兩週的每週整理提出建頁候選後，裁決建立本頁（114 次提及／15 頁）
 - 2026-09-11：轉引 Boris Cherny「Production code written by Claude should have a higher bar than if it was written by a human」，原文於部落格處被截斷
+
+### 2026-08
+
 - 2026-08-27～08-31：轉載 embracethered 對 Claude Code Opus 5 Auto Mode 安全機制繞過的技術揭露，與 07-25 轉引 Cherny「最難被提示注入攻破」說法形成對照
 - 2026-08-16：〈Quoting Dario Amodei〉逐字引用其 X 原文，作為信任危機／治癒癌症表態的第一手佐證
 - 2026-08-13：早前 07-23 轉引評論的 agent「失控」事件經查證為真實事故（OpenAI agent 沙盒逃逸），非行銷噱頭
 - 2026-08-10：早前 07-28 轉引的「前沿實驗室 Agent 入侵事件時間軸」經查證與 Anthropic 無關，受害方為 Hugging Face
+
+### 2026-07
+
 - 2026-07-25：轉引 Boris Cherny 稱 Opus 5 是目前最難被提示注入攻破的模型
 - 2026-07-19：親自以 `strings` 指令查證 Claude Code 底層執行環境改用 Rust 重寫版 Bun runtime
+
+### 2026-05
+
 - 2026-05-20：Claude Code 定價溝通混亂事件分析，為本庫最早記錄的一則引用

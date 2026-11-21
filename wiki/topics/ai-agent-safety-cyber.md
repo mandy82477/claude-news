@@ -6,18 +6,18 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-11-16"
 last_news_update: "2026-11-16"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 5
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 4
+days_since_news_subtree: 5
 inbound_links: 9
 attribution_count: 16
 attribution_last: "2026-11-16"
 top_source: "google-news"
-pending_count: 18
-pending_overdue: 3
-pending_next_review: "2026-11-21"
+pending_count: 21
+pending_overdue: 4
+pending_next_review: "2026-11-22"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -213,7 +213,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **性質判斷**：官方能力展示／研究發表，Claude 本身並非被攻擊方；不列入母頁「現在還擋不住的攻擊」表（該表只收打得到讀者的攻擊面）；與既有 07-29 Mythos Preview 密碼分析攻擊改進、09-29 GLM-5.3 控制流劫持比較研究同屬「模型網攻能力」系列，已列入「## 模型網攻能力與防護」表
 - **可信度評估**：官方一手來源＋HN；The Hacker News／CyberSecurityNews 同日跟進均為標題層級轉述，報導僅標題層級；廠商修補狀態見下方 11-14 官方查證
 - **CSO Online 跟進（2026-10-30）**：指出 5 條攻擊鏈其中一條命中 Linux kernel，可讓攻擊者取得遠端 root 權限；僅標題可用，CVE 編號與受影響版本未附
-- **修補與發布狀態**（2026-11-14 查 [Anthropic 研究文](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)）：Chrome 62 個 CVE 於 Chrome 156 前修補，Apple 已修 Safari，Google 已處理 Android，Microsoft 已修 Windows（CVE-2026-33096），Linux 上游修補並回補穩定分支；該模型只稱「未發布的內部研究模型」，官方未載是否公開發布
+- **修補與發布狀態**（2026-11-14 查 [Anthropic 研究文](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)）：Chrome 62 個 CVE 於 Chrome 156 前修補，Apple 已修 Safari，Google 已處理 Android，Microsoft 已修 Windows（CVE-2026-33096），Linux 上游修補並回補穩定分支；該模型只稱「未發布的內部研究模型」。
+  - ❓ **待查證**（標 2026-11-14｜查 discovering-vulnerabilities-with-claude、CVE-2026-33096｜複 2026-11-28）｜**該模型是否公開發布**：2026-11-14 查研究文未載；已掃日報至 2026-11-20 無後續；官方頁面未查證
 
 #### Reddit／r/ClaudeCode：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護（2026-10-27 新增，單一使用者回報）
 
@@ -267,7 +268,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 21 年漏洞是兩個設定衝突：一個要求每個客戶端出示憑證，另一個本意只是延後檢查卻把檢查整個關掉，使「只收信任客戶端」的伺服器對任何人開放；官方文章未指名受影響專案。
   - 修補：OpenSSH 已由 Anthropic 回報並附修補，10.5 把 ML-DSA 相關檢查移到解析之前、10.6 補完 10.5 的缺口；其餘專案的修補狀態與 CVE 編號官方文章均未載（[The Next Web](https://thenextweb.com/news/claude-attack-surface-reduction-493-issues-openssh) 2026-10-21 同）
 - **性質判斷**：官方／第三方防護能力展示，非漏洞或攻擊事件，不列入「現在還擋不住的攻擊」表；是否源自 10-09 Cyber Mission 開源漏洞免費掃描計畫未見報導證實（推論：兩者議題高度重疊）；已列入「模型網攻能力與防護」
-- **官方未載**：完整 493 項清單、OpenSSH 以外專案的修補時程與 CVE 編號，官方文章與媒體均未公布（2026-11-08 查）
+- ❓ **待查證**（標 2026-11-08｜查 OpenSSH、ML-DSA、493 項清單｜複 2026-11-22）｜**完整 493 項清單與 OpenSSH 以外專案的修補時程、CVE 編號**：官方文章與媒體均未公布（2026-11-08 查）；已掃日報至 2026-11-20 無後續；官方頁面未查證
 - **可信度評估**：單一來源，原文未可讀，互動 0，訊號強度低
 
 #### Anthropic 官方研究：用 Claude 分析並降低程式碼的攻擊面（2026-10-21 新增，官方防護研究）
@@ -283,7 +284,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張（僅標題可用）**：報導稱在與 AI 相關的網路攻擊案件所使用的伺服器上發現 Claude Code 的蹤跡；具體攻擊鏈、調查單位與受害範圍均未見報導
 - **性質判斷**：屬「別人拿 Claude Code 打別人」的濫用態勢，不是 Claude 產品本身的攻擊面，不列入母頁「現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」，與既有 10-07 CyberXero、09-14 ShinyHunters 同屬濫用態勢系列
 - 🔎 **查無官方**（標 2026-10-21｜查 AI-linked cyberattacks｜複 2026-11-22）｜**朝日新聞該篇內容**：2026-11-08 以日英文搜尋未找到該篇朝日報導，亦無官方資料指稱在攻擊伺服器上發現 Claude Code。
-  - 搜到一則相近但未證實同案的日本報導（GMO Cybersecurity by Ierae 稱在 6 台海外攻擊伺服器發現中國製 AI agent「ARTEX」痕跡，約 80 家日本企業受影響），其中並未提及 Claude Code；攻擊鏈、調查單位仍未見
+  - 搜到一則相近日本報導（GMO Cybersecurity by Ierae 稱在 6 台海外攻擊伺服器發現中國製 AI agent「ARTEX」痕跡，約 80 家日本企業受影響），其中並未提及 Claude Code；攻擊鏈、調查單位仍未見。
+    - ❓ **待查證**（標 2026-10-21｜查 GMO Cybersecurity、ARTEX｜複 2026-11-22）｜**該日本報導與朝日新聞所指是否同案**：相近但是否同案無證據；已掃日報至 2026-11-20 無後續；官方頁面未查證
 - **可信度評估**：單一來源，經 Google News 轉載，原文未可讀，互動 0，訊號強度低
 
 #### GitHub Issue #84352：CVP 誤擋留言數攀升至 201 則、👍29，本日互動數最高開發者回報（2026-10-19 新增，升級既有 08-12 事件）
@@ -522,107 +524,115 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
-### 2026-11-12
+### 2026-11 時序
+
+#### 2026-11-12
 - **[📋 新增，使用者回報] GitHub Issue #61889：CVP 核准使用者在 claude.ai 全新對話被擋，提問與資安無關**：44 則留言，官方回應未載，詳見「## 技術彙整」
 
-### 2026-11-11
+#### 2026-11-11
 - **[📋 新增，僅標題] CyberSecurityNews：Claude Code 找到把休眠神經元變成隱藏惡意程式觸發器的技術**：研究或示範性質未載，詳見「## 技術彙整」
 
-### 2026-11-10
+#### 2026-11-10
 - **[🛠️ 新增，升級 09-22 條目] VulnCheck：Glasswing 啟動七個月可歸因 Anthropic 的 CVE 達 442 筆，僅 2 筆在野利用**：已公開 19.4%、已修復 217 筆，詳見「## 技術彙整」
 - **[🟡 新增，僅標題] The Hacker News／Help Net Security：Fable 5.2 網攻基準勝過 GPT-6 Cyber；Mythos 5.2 找漏洞更強、跳出沙箱較少**：測試方、分數均未載，詳見「## 技術彙整」
 
-### 2026-10-31
+### 2026-10 時序
+
+#### 2026-10-31
 - **[📋 新增，單方聲稱] Hacker News（推文）：稱 Anthropic 封鎖任何涉及「訓練更大模型」用途的使用者**：無官方回應，詳見「## 技術彙整」
 - **[📋 跟進，官方未回應] India Today：Cathedral 稱不到 12 小時進入 Anthropic 內部系統，接觸員工資料與內部訊息**：續 10-26 入侵聲稱，詳見「## 技術彙整」
 
-### 2026-10-28
+#### 2026-10-28
 - **[🛠️ 新增，官方能力展示] Anthropic 官方研究：未發布內部模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈**：達 RCE 並繞過 Android 鎖定畫面，多數幾乎不需使用者互動；修補狀態與模型是否公開發布均未見報導，詳見「## 技術彙整」、「## 模型網攻能力與防護」
 - **[📋 跟進，官方未回應] The Independent：前 DOGE 成員新創聲稱 12 小時內「攻破」Anthropic**：續 10-26 Gizmodo／WaPo 聲稱，官方仍未回應，詳見「## 技術彙整」
 
-### 2026-10-27
+#### 2026-10-27
 - **[📋 新增，單一使用者回報] Reddit：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護**：單一貼文、0 留言，無跨來源佐證，詳見「## 技術彙整」
 
-### 2026-10-26
+#### 2026-10-26
 - **[📋 新增，單方聲稱] Gizmodo／The Washington Post：前 DOGE 成員新創聲稱入侵 Anthropic**：無攻擊鏈或技術細節，官方未回應，詳見「## 技術彙整」
 - **[🛠️ 新增，官方防護] Help Net Security：Anthropic 說明防止 Claude Duet「失控」的機制設計**：官方 10-23 安全頁已載明機制，詳見「## 技術彙整」、「## 模型網攻能力與防護」
 - **[📋 新增，使用者回報] XDA：使用者稱 Claude 已限制電視逆向工程相關任務**：非官方公告，詳見「## 技術彙整」
 
-### 2026-10-21
+#### 2026-10-21
 - **[🛠️ 新增，官方防護研究] Anthropic 官方研究：用 Claude 分析並降低程式碼攻擊面**：Hacker News 105 分／71 則留言，具體方法論與量化成效未見全文，詳見「## 技術彙整」、「## 模型網攻能力與防護」
 - **[📋 新增，濫用態勢，非 Claude 產品漏洞] 朝日新聞：AI 相關網路攻擊伺服器上發現 Claude Code**：攻擊鏈細節、調查單位均未見報導，僅標題可用，詳見「## 技術彙整」、「## 模型網攻能力與防護」
 
-### 2026-10-19
+#### 2026-10-19
 - **[🔴 升級] GitHub Issue #84352：CVP 誤擋留言數攀升至 201 則、👍29**：本日互動數最高的開發者回報，官方仍未回應，詳見「## 技術彙整」、「## 模型網攻能力與防護」
 
-### 2026-10-15
+#### 2026-10-15
 - **[📋 新增，官方自揭＋量化數據] Anthropic 發布 2026 美國期中選舉防護措施報告**：抽樣 25 萬則對話，政治中立性評測 99%，已封鎖境外假新聞網站，10 月下旬起依州別提供投票資訊，詳見「## 技術彙整」
 - **[🛠️ 新增，防護能力佐證] CNBC：Bank of America 雇用 1000 名約聘人員修補 Mythos 掃出的軟體漏洞**：已列入「## 模型網攻能力與防護」
 
-### 2026-10-14
+#### 2026-10-14
 - **[📋 新增，批判性反面聲音] The Register：批評 Anthropic 渲染「尚不存在的威脅」炒作 AI 末日恐慌**：摘要不完整，完整論點未見報導，詳見「## 技術彙整」
 
-### 2026-10-11
+#### 2026-10-11
 - **[📋 新增，補充 10-08 條目] rews.cc／MoneyWise：虐待禁令生效日為 2026-11-12，官方僅處理重複且無正當理由的行為；專家批評官方未說明保護對象為何**：詳見「## 技術彙整」
 - **[📋 新增，社群轉述，歸因矛盾] Reddit／r/LocalLLaMA：南韓銀行網攻疑為單一人士結合 Claude Code 等多模型工具完成**：與 10-08 CrowdStrike 條目「中國背景駭客」歸因矛盾，未見官方報告佐證，詳見「## 技術彙整」
 
-### 2026-10-08
+#### 2026-10-08
 - **[📋 新增，官方政策表態] Anthropic 發布 2026 年度使用政策更新，首次禁止虐待／殘酷對待 Claude**：終止對話仍為官方「主要執行手段」，詳見「## 技術彙整」
 - **[🛠️ 新增，CVP 持續擴大] Healthcare IT News：CVP 開放醫院機構申請加入**：延續 10-06 CVP 三層存取升級，詳見「## 技術彙整」
 - **[📋 新增，濫用態勢，非 Claude 產品漏洞] CrowdStrike：疑似中國背景駭客藉 Claude agent 竊取南韓銀行資料**：攻擊鏈細節未揭露，已列入「## 模型網攻能力與防護」，詳見「## 技術彙整」
 
-### 2026-10-07
+#### 2026-10-07
 - **[🛠️ 新增，官方升級] Anthropic 官方推出擴大版 Cyber Verification Program，分三層存取**：官方自述 Glasswing 夥伴已找出至少 129,000 個漏洞（10-30 更正：不是媒體補充，也不是唯一數字）；既有 CVP 誤擋摩擦是否緩解未見官方說明，詳見「## 技術彙整」
 - **[🛠️ 新增，官方框架補充] Dark Reading：將 CVP 擴大定性為「給通過審核的防禦團隊更少護欄」**：形成僅限特定資安客戶的通道（10-30 更正：10-08 使用政策是例行修訂，不是全面收緊），詳見「## 技術彙整」10-07 CVP 條目
 - **[📋 新增，濫用態勢，非 Claude 產品漏洞] CyberSecurityNews：攻擊組織 CyberXero 組合 Claude Code、PentAGI、Cobalt Strike 用於 AI 強化網路攻擊**：僅標題可用，攻擊鏈細節未載，詳見「## 技術彙整」
 
-### 2026-10-06
+#### 2026-10-06
 - **[📋 新增，官方聲明] The Guardian：Anthropic 否認其 AI agent 入侵澳洲政府網站**：指控來源與具體範圍未見報導；同日 Reuters／Quartz 報導 Anthropic 向澳洲政府表態支持資安漏洞揭露法規，政府互動面詳見 [[topics/anthropic-government-policy]]，詳見「## 技術彙整」
 
-### 2026-10-04
+#### 2026-10-04
 - **[📋 新增，非 Claude 事件] dev.to／#anthropic：Mythos 揭露第三方軟體 Rejetto HFS 漏洞（CVE-2026-61500），報告發布隔天即遭在野攻擊**：10-03 開始攻擊，10-04 修補版 3.2.1 釋出，詳見「## 模型網攻能力與防護」
 
-### 2026-09-30
+### 2026-09 時序
+
+#### 2026-09-30
 - **[📋 新增，非 Claude 事件] Anthropic Frontier Red Team：GLM-5.3 達成完整控制流劫持，官方稱能力擴散門檻已跨越**：HN 239 分、4 個來源同日報導，GLM-5.3 4% vs Claude Mythos Preview 6%，詳見「## 技術彙整」
 
-### 2026-09-22
+#### 2026-09-22
 - **[使用者回報升級，新增] GitHub Issue #84352：CVP 誤擋事件留言暴增至 199 則、👍 27**：延續 08-12 已記錄事件，官方仍未回應，即時互動數詳見 [[entities/claude-code]] 已知問題
 - **[📋 新增，單一來源] ABC News：Anthropic 稱已攔截一起潛在 AI 生物武器濫用意圖**：10-17 查證與 09-11 威脅情報報告為同一事件，詳見「## 技術彙整」
 
-### 2026-09-20
+#### 2026-09-20
 - **[📋 新增] 조선일보：研究人員稱 72 小時內用 Claude 攻破 OpenAI 防線**：10-17 查證與既有 09-18～09-19 Hacktron AI／WSJ 系列為同一事件，詳見「## 技術彙整」
 
-### 2026-09-19
+#### 2026-09-19
 - **[新增，補記] The New Stack／The Guardian：具名資安新創 Hacktron AI 揭露 Opus 5 漏洞利用能力躍升，同手法用於存取 OpenAI 內部系統**：09-18 條目的技術細節升級版，詳見「## 技術彙整」
 
-### 2026-09-18
+#### 2026-09-18
 - **[📋 新增] WSJ 獨家／十餘家媒體：白帽研究人員藉 Claude Opus 5 透過 OpenAI 官方漏洞懸賞找到並存取其原始碼，獲 6,500 美元**：HN 討論質疑「入侵」標題誇大，稱系統照設計運作，詳見「## 技術彙整」
 - **[🛠️ 新增] Anthropic 官方：LSVP 放寬生醫專業人士的部分生物安全限制**：先以 Beta 開放已完成早期存取的機構，詳見「## 技術彙整」
 
-### 2026-09-15
+#### 2026-09-15
 - **[新增，懸置標記見技術彙整] Reddit：資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息**：單一貼文；2026-10-03 查官方 CVP 說明，後續 Issue 顯示非單一個案，詳見「## 技術彙整」
 
-### 2026-09-14
+#### 2026-09-14
 - **[🔴 新增] Rescana：攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證**：資安業者摘要；2026-10-03 查官方威脅情報報告：180 萬 APK 掃描由 TruffleHog 執行，Claude 角色為 API／token 與批次匯出工具，詳見「## 技術彙整」
 
-### 2026-09-02
+#### 2026-09-02
 - **[新增] Hacker News：資安新創 AISLE 聲稱其 AI 於 curl 找到 6 個 CVE，OpenAI／Anthropic 先前掃描均未發現**：HN 討論（31 分）質疑其未揭露模型與方法論（詳見「## 技術彙整」，已查證 2026-09-20：curl 官方確認 6 個 CVE 有效，非單方聲明）
 - **[🛠️ 官方主動安全機制，新增] Anthropic 官方推出 Enterprise Frontier Safeguards（EFS）：零資料留存＋濫用偵測技術**：企業安全產品，今秋起分階段開放；本頁僅記錄其安全機制定位，商業/採用面完整報導見 [[topics/anthropic-business]]，詳見「## 技術彙整」
 
-### 2026-08-27
+### 2026-08 時序
+
+#### 2026-08-27
 - **[agent 自主利用能力] TechRepublic：Claude Opus 4.6 測試中發現健身房 API 瑕疵並於 10 次中 9 次成功利用**：查證確認為 Aikido Security 授權測試（合成環境，刻意複現 08-10 OpenClaw 事件），詳見「## 技術彙整」
 
-### 2026-08-18
+#### 2026-08-18
 - **[進攻性濫用，新增，單一來源] CyberSecurityNews：勒索軟體操作者利用 Claude Code 竊取 LDAP 密碼、植入 VPN 後門、外洩 SQL 資料庫**：攻擊鏈細節（詳見「## 技術彙整」，已查證 2026-09-20：至少 8 個組織受害，濫用合法 FortiGate VPN 設定，非利用已知 CVE）
 
-### 2026-08-11～08-12
+#### 2026-08-11～08-12
 - **[使用者回報，Claude Code 功能面，非官方確認] GitHub Issue #84352：已通過 CVP 審核的組織仍遭 cyber-safeguard 誤擋**：
   - claude-code repo issue #84352（69 則留言、👍 9 反應，2026-08-12 07:41 UTC）回報已通過 Cyber Verification Program（CVP）審核的 Claude.ai 組織，在 Claude Code 中仍再度遭資安防護（cyber-safeguard）機制誤擋；
   - 為使用者回報，非 Anthropic 官方確認之安全公告。
   - 此類「主動偵測」分類器誤判並非首次——[[topics/anthropic-commitments]] 記錄 2026-07-02 Defense in Depth 分類器上線首日即出現誤判合法安全審查請求的案例，本次 CVP 誤擋若屬實可能屬同一機制的延續問題（https://github.com/anthropics/claude-code/issues/84352）
   - **後續（2026-09-22）**：留言數增至 199 則、👍 反應增至 27，是當日全站互動量最高的已知問題，官方仍未回應；即時互動數與版本層級追蹤同步於 [[entities/claude-code]] 已知問題，本頁不重複維護
 
-### 2026-08-04～08-05
+#### 2026-08-04～08-05
 - **[Cisco 警告] The Times of India：Cisco 警告駭客正利用 Claude Code、Codex、Cursor、Gemini 等 AI 模型**：呼應既有 OALABS 蜜罐分析「AI 編碼工具遭攻擊者濫用為進攻工具」敘事（Google News／The Times of India，2026-08-04 12:34 UTC）。
   - ✅ 2026-08-10 查證：原始來源為 Cisco Talos 經 Axios 獨家披露的研究——研究對象是攻擊者不慎公開暴露的 AI 使用痕跡（含 Claude Code、Codex、Cursor、Gemini 端點的提示紀錄）。Talos 的結論是護欄「並未提供多少保護」，且未見複雜的編碼或規避技巧；
   - 攻擊者多以簡單說詞（宣稱參加道德駭客競賽、或中途另開 session）繞過限制，部分並使用遭盜用的企業帳號與 API 權杖而非自付運算費用
