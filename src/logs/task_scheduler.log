@@ -1621,3 +1621,7 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [Saturday 2026/11/21 12:08:53.00] === Pipeline complete (agent) ===
 [cloud daily-news-pipeline-cloud ABORTED 2026-11-21T12:08:53Z] TARGET_DATE=2026-11-21 reason=gather_data_not_ready: src/gathered_archive/2026-11-21.json 不存在（cp 失敗），src/gathered_items.json 仍為舊資料 date=2026-11-20 items=74，非目標日期的新鮮資料，交由下一班（17:00 或 22:00 UTC）或 GitHub Actions 補齊後接手
 [cloud daily-news-pipeline-cloud STARTED 2026-11-21T17:08:09Z]
+[Saturday 2026/11/21 17:08:36.00] === Agent pipeline start (2026-11-21) ===
+[Saturday 2026/11/21 17:08:36.00] ABORTED: gathered_items.json date=2026-11-20 items=74，非目標日期的新鮮資料
+[Saturday 2026/11/21 17:08:36.00] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud ABORTED 2026-11-21T17:08:36Z] TARGET_DATE=2026-11-21 reason=gather_data_not_ready: src/gathered_archive/2026-11-21.json 不存在（cp 失敗），src/gathered_items.json 仍為舊資料 date=2026-11-20 items=74，非目標日期的新鮮資料，交由下一班（22:00 UTC）或 GitHub Actions 補齊後接手
