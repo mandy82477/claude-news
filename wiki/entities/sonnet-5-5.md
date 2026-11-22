@@ -7,12 +7,12 @@ domain: "🤖 模型"
 last_updated: "2026-11-16"
 last_news_update: "2026-11-16"
 status_main: "active"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 5
-inbound_links: 33
+days_since_news_subtree: 6
+inbound_links: 32
 attribution_count: 16
 attribution_last: "2026-11-16"
 top_source: "google-news"

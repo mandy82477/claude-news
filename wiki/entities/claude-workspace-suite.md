@@ -4,16 +4,16 @@ kind: "entity"
 type: "feature"
 status: "beta（Whiteboards、Sheets 為 beta；Claude Data 為正式版，認證查詢與即時分享仍 beta）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-15"
 status_main: "beta"
 matrix_role: "功能"
-days_since_news: 6
+days_since_news: 7
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 6
-inbound_links: 11
+days_since_news_subtree: 7
+inbound_links: 13
 attribution_count: 2
 attribution_last: "2026-11-15"
 top_source: "anthropic-official"
@@ -35,7 +35,7 @@ Anthropic 在 Claude 內建的三項團隊協作功能：共用白板、試算�
 **對照角色：** 功能（產出物；含 Whiteboards、Sheets、Data）
 **別名：** Claude Whiteboards, Claude Sheets, Claude Data, Claude Dashboards
 **首次出現：** 2026-11-10
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-15
 
 > **最新動態**（2026-11-21）
@@ -63,18 +63,14 @@ Anthropic 在 Claude 內建的三項團隊協作功能：共用白板、試算�
 
 ## 與 Claude Meetings 的關係
 
-Claude Meetings 與 Claude Sheets 同日（2026-11-10）見報：TechCrunch 稱 Meetings 把會議討論轉成計畫與任務，Reuters 稱 Claude 可進入 Google Meet 即時處理任務，VentureBeat 稱會議中可起草文件與白板（2026-11-12）。The Verge、Bloomberg 把這批產品形容為 Anthropic 自己的辦公套件、直接對上 Microsoft。
-
-**Meetings 已有官方介紹文（2026-11-21 更正）**：11-10 以 beta 推出，限 **Team／Enterprise**，Claude 以可見參與者身分加入視訊會議、邊聽邊動手；官方介紹文登上 Hacker News 首頁（104 分，11-14），討論串見 [[topics/community-tech-discussions]]。本頁此前寫「未見官方一手文章」已失效。
-
-**它仍不列為三件組成員**：三件組（Whiteboards／Sheets／Data）是同一篇官方文章一起介紹的，Meetings 是另一條產品線；計費面唯一的交集是「Meetings 通話中建立的 artifact 至 2027-02-10 前免費」，見 [[entities/pricing]]。本庫尚無 Meetings 專頁，事實目前散在本頁、[[topics/anthropic-product-matrix]] 與 [[topics/community-tech-discussions]]。
+Claude Meetings 是另一條產品線，不列為三件組（Whiteboards／Sheets／Data）成員；與 Sheets 同日（2026-11-10）見報，事實與計費交集都在 [[entities/claude-meetings]]。
 
 ## 時間線
 
 - 2026-11-15：ZDNET 實測稱 Claude Sheets 在四方面比用 Google Sheets 連接器更好用，具體四項與測試方法未載（僅標題可用）。
 - 2026-11-15：確認 Enterprise 預設值：Claude Data 11-20 起預設開，Whiteboards、Sheets 預設關（取自官方文章，非 11-19）
 - 2026-11-11：官方文章發布，HN 273 分；Dashboards 轉正式版更名 Claude Data
-- 2026-11-10：Claude Meetings 與 Sheets 見報；官方定價頁同步出現 Claude Sheets（beta）段落，異動見 [[entities/pricing-history]]
+- 2026-11-10：Sheets 見報（Meetings 同日，見 [[entities/claude-meetings]]）；官方定價頁同步出現 Claude Sheets（beta）段落，異動見 [[entities/pricing-history]]
 - 2026-10-08：Claude Dashboards（beta）與 Claude Motion 發布，見 [[entities/claude-design]]
 
 ## 尚未取得的細節

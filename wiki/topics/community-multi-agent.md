@@ -3,14 +3,14 @@ page: "topics/community-multi-agent"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-19"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 3
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 9
 attribution_count: 9
 attribution_last: "2026-11-19"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-19
 
 > **確定性 Agent 框架新增跨模型紀律移植案例：Gravitas 把 Claude Code 工作流程套用在 Gemini 上**（2026-11-19）
@@ -558,60 +558,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-07
 
-#### 本地合併佇列：讓多個平行 Claude Code agent 的 commit 依序落地、避免同時建置測試拖垮機器與 CI 帳單（2026-07-30）
-
-- **主線：** 並行規模
-- **核心模式：** 作者以 4–5 個平行 Claude Code agent 在 8GB MacBook Air 上每天推送近 90 次 commit，若各分支各自同時觸發建置與測試，機器資源會被拖垮當機；若每次推送都各自跑一輪 CI，90 次推送的 CI 分鐘費用也難以負擔。作者因此打造本地合併佇列，讓所有提交排隊依序落地，逐一完整建置測試後才合併下一筆，取代平行分支各自即時觸發 CI 的做法
-- **與既有模式的關係：** 補充本頁「Multi-agent 架構」「Agent 規模化」既有類別在「執行/協調」面向之外的「落地/整合」面向缺口——既有記錄（Claude Squad、ccteams、20-instance 崩潰分析等）多聚焦多 agent 如何並行工作與分派任務，本篇聚焦「多 agent 產出的大量 commit 如何序列化落地」這個下游整合瓶頸，是本頁首次出現針對本地資源與 CI 成本雙重限制設計的合併佇列做法
-- **來源：** 「Show HN: A local merge queue for parallel Claude Code agents」— Hacker News（score 39）
-- **成熟度：** ⏳ 新興（今日首見，單一開發者工具，尚待社群採用回饋）
-
-#### OtoDock：在自有伺服器上運行 Claude Code + Codex Agent 團隊（2026-07-15）
-
-- **主線：** 並行規模
-- **核心模式：** 開發者釋出 OtoDock，讓使用者能在自己的伺服器上，將 Claude Code 與 Codex 組成協作 agent 團隊運作，取代過去分別於終端機單獨呼叫兩工具的做法；作者提到自己過去長期單獨從終端機使用這兩款工具做編碼工作，此工具將其團隊化、伺服器化
-- **與既有模式的關係：** 屬本頁既有「Multi-agent 架構」類別的新實作，聚焦「自架伺服器 + 跨工具（Claude Code / Codex）團隊化部署」的形式，與 ccteams（套件化 subagent 團隊配置）同屬打包既有多工具工作流的思路
-- **來源：** 「Show HN: OtoDock, run Claude Code and Codex as a team of agents on your server」— Hacker News（score 2，跨來源報導）
-- **成熟度：** ⏳ 新興（今日首見，跨來源訊號但單一分數偏低，尚待社群後續採用回饋）
-
-#### ccteams：套件化管理 Claude Code Subagent 團隊（2026-07-11）
-
-- **主線：** 並行規模
-- **核心模式：** 開發者發布 npm 套件 ccteams，讓使用者以單一指令（`ccteams use go-api` / `next-ts` / `generalist`）將預先調校好的 builder + reviewer subagent 團隊套用到當前專案，取代過去每個新專案都需重新手寫相同 subagent 組合的重複勞動
-- **與既有模式的關係：** 與既有「Multi-agent 架構」「Skills 設計」重疊但聚焦點不同——不是設計新的協作邏輯，而是把已驗證良好的 subagent 配置打包成可跨專案安裝、可版本化的套件，類似把 npm 套件生態的可重用性延伸到 agent 團隊配置本身
-- **來源：** 「One command turns Claude Code into a full dev team」— dev.to（作者 toffy，原文發布 06-18）
-- **成熟度：** ⏳ 新興（單一作者 npm 套件已發布，尚無採用數據）
-
-#### 平行 Agent 即時對話地圖：讀取本機 JSONL Transcript 的可觀測性工具（2026-07-06）
-
-- **主線：** 並行規模
-- **核心模式：** 讀取 Claude Code / Codex 在本機留下的 JSONL transcript 檔案，即時解析並以視覺化「地圖」呈現多個平行 agent 的當前狀態與對話進度，解決「開了多個平行 agent 後不知道彼此進度」的協調痛點
-- **解決的問題：** 呼應既有「20-instance 崩潰分析」（2026-06-26）與「1000 Subagents Fan-out」（2026-07-01）已指出的規模化痛點——當平行 agent 數量增加，人工逐一切換視窗確認進度的成本迅速上升；此工具提供集中式可觀測層，補足官方尚未內建的多 agent 協調可視化
-- **與既有模式的關係：** 與「Agent 規模化」類別下既有子模式互補：既有模式聚焦「如何讓多 agent 穩定運作」（worktree 隔離、budget enforcement），此模式聚焦「運作中如何被人類即時看懂」；與 Grafana + Prometheus 企業監控（費用/用量導向）不同層次，此工具聚焦單機開發者的即時對話狀態，不涉及計費指標
-- **來源：** [Show HN: Orchestrate parallel Claude Code and Codex agents on a live map](https://github.com/Latand/live-log-viewer-next)（Hacker News Show HN，score 2）
-- **成熟度：** ⏳ 新興（單一低分 Show HN 專案，尚無採用數據；概念本身回應了規模化章節已反覆出現的真實痛點，值得後續觀察是否有更成熟工具跟進）
-
-#### Claude Code 動態工作流與 1000 Subagents Fan-out（2026-07-01）
-
-- **主線：** 並行規模
-- **核心模式：** 以 Claude Code 為主協調器，動態生成大量 subagent 並行執行子任務（宣稱可達 1000 個子代理級別）；fan-out 模式讓任務分解從靜態預設走向執行時動態派發，協調器根據任務複雜度即時決定分支數量
-- **實作方向：**
-  - 主 agent 先分析任務複雜度，動態決定分支數量與各子任務邊界
-  - 每個 subagent 在獨立 worktree 或容器中執行，防止資源競爭
-  - 協調器負責彙整所有子代理結果並進行一致性驗證
-  - 設計終止條件：子代理失敗閾值、超時機制、人工審查節點
-- **解決的問題：** 靜態多 agent 工作流難以應對動態任務規模；100+ subagent 場景下的協調與成本爆炸
-- **來源：** dev.to（Claude Code 動態工作流教學；07-01）
-- **注意事項：** 1000 子代理為理論上限，實際成本需搭配 AgentWatch 等 budget enforcement 工具；成本爆炸風險高，建議先從 10-20 個 subagent 驗證協調架構
-
-#### Git Worktree 多 Agent 並行：新佐證教學（2026-07-01）
-
-- **主線：** 並行規模
-- **核心模式：** 此為 git worktree 多 agent 並行模式的新佐證教學（既有模式見 2026-05-23「Git Worktrees 作為多 Agent 隔離原語」與 2026-06-24「Multi-agent 工作流轉型指南」），dev.to 教學文章提供具體步驟，使此模式從「社群實踐」進一步強化為「有文件可循的標準做法」
-- **新增細節：**
-  - 明確的 worktree 創建指令序列（`git worktree add`）與 Claude Code session 綁定方法
-  - 結果彙整策略：各 worktree 完成後的 merge 時機與衝突解決規範
-  - 與動態 fan-out 模式的組合使用：靜態 worktree 預先分配 vs 動態按需創建
-- **成熟度更新：** 多篇獨立教學、工具化（Claude Squad、Superset、Claudette）、企業場景驗證，此模式實際成熟度已達 ✅，模式概覽維持 ✅ 成熟確認
-- **來源：** dev.to（Git worktree 多 agent 並行教學；07-01）
-
+- **本地合併佇列（07-30，HN）：** 作者以 4–5 個平行 agent 在 8GB MacBook Air 上每天推近 90 次 commit；各分支同時建置會拖垮機器、每次推送都跑 CI 則帳單難負擔，改讓提交排隊、逐一完整建置測試後才合併。單一開發者，尚待採用回饋。
+- Git worktree 並行（07-01）：新增 dev.to 教學佐證；多篇獨立教學、Claude Squad、Superset、Claudette 工具化與企業場景，使此模式成熟度達 ✅。
+- 動態工作流（07-01）：以 Claude Code 為主協調器，執行時動態決定分支數，宣稱可 fan-out 到 1000 個 subagent。
+- 團隊化工具：ccteams（07-11，npm）以 `ccteams use go-api` 套用調校好的 builder 加 reviewer subagent 團隊；OtoDock（07-15）在自有伺服器上跑 Claude Code 加 Codex 團隊。
+- 平行 agent 即時對話地圖（07-06）讀本機 JSONL transcript，呈現各 agent 的進度。
+- 除 worktree 並行外皆為 ⏳ 新興、單一作者、無採用數據。
+- 原始條目見 [[topics/community-tech-patterns-archive#2026-07]]

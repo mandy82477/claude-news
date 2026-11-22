@@ -3,15 +3,15 @@ page: "topics/model-task-leaderboard"
 kind: "topic"
 status: "ongoing"
 domain: "🤖 模型"
-last_updated: "2026-11-15"
+last_updated: "2026-11-22"
 last_news_update: "2026-08-05"
 update_freq: "🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 108
+days_since_news: 109
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 108
+days_since_news_subtree: 109
 inbound_links: 22
 attribution_count: 0
 attribution_last: null
@@ -31,12 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **更新頻率：** 🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）
 **新鮮度豁免：** 本頁吃外部榜單而非新聞，週更規則明文不動「最後新聞更新」，以天數判停滯對它恆為真
 **開始日期：** 2026-08-05
-**最後更新：** 2026-11-15
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-08-05
 **蒐集邊界：** 每週抓取 12 個公開活榜單的領先者，抓不到的榜會在「本週註記」寫明；只涵蓋**模型**層排名，Codex CLI、OpenCode 這類工具（harness）不在榜上。帶跑分數字的第三方對照評測不在本站蒐集範圍，因此本頁沒有「Claude 對某家」的頭對頭實測。
 
-> **本週快照重點**（2026-11-15）
-> WebDev 榜由 11-09 發布的 Claude Fable 5.2 登頂，前三全是 Claude；文案聊天榜仍由 Gemini 4 Carbon 領先、Claude 最好的是第四名；音樂榜 ACE Music v1 新登頂。12 榜全數取得。
+> **本週快照重點**（2026-11-22）
+> WebDev 榜 Claude Fable 5.2 仍居首，但與 Opus 5.5 的差距由 23 分縮到 5 分；改圖榜由 MAI-Image-2.7 登頂；文案聊天榜前三全是 Gemini 4。12 榜全數取得。
 
 ## 摘要
 
@@ -52,24 +52,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想做的任務 | 本週前三名 | 資料日期 | 榜單 |
 |---|---|---|---|
-| [寫 code（agent 解 issue）](#eval-swebench) | Claude Fable 5（95.0%）> Claude Mythos Preview（93.9%）> Ember-1（92.2%）（Verified 子集，廠商自報；與上週同序） | 11-15（頁面自標） | [llm-stats SWE-bench](https://llm-stats.com/benchmarks/swe-bench-verified) |
-| [寫文案、聊天、翻譯](#eval-lmarena) | Gemini 4 Carbon（High，1526，榜頁標初步）> Gemini 4 Argon（High，1522）> Muse Wonder（Max，1511）（與上週同序） | 11-11（榜頁自標） | [Text Arena](https://arena.ai/leaderboard/text) |
-| [做網頁／前端](#eval-webdev) | Claude Fable 5.2（xHigh，1838）> Claude Opus 5.5（Max，1815）> Claude Sonnet 5.5（xHigh，1772）（Fable 5.2 新登頂，見註記） | 11-11（榜頁自標） | [WebDev Arena](https://arena.ai/leaderboard/code/webdev) |
-| [畫圖（文生圖）](#eval-image) | GPT Image 2.6 Sunburst max（1261）> GPT Image 2.5 Sunburst max（1229）> GPT Image 2.6 Flare max（1227）（二三名互換） | 榜頁未標日期（本次 11-15 抓取） | [AA 圖像榜](https://artificialanalysis.ai/image/leaderboard/text-to-image) |
-| [改圖（圖像編輯）](#eval-imageedit) | GPT Image 2.6 Sunburst max（1210）> GPT Image 2.6 Flare max（1206）> GPT Image 2.5 Sunburst max（1201）（與上週同序） | 榜頁未標日期（本次 11-15 抓取） | [AA 編輯榜](https://artificialanalysis.ai/image/leaderboard/editing) |
-| [生成影片](#eval-video) | Wan 3.0（1175）> Utopai X（1172）> MiniMax H3 768p（1161）（含音訊總榜；與上週同序） | 榜頁未標日期（本次 11-15 抓取） | [AA 影片榜](https://artificialanalysis.ai/video/leaderboard/text-to-video) |
-| [語音合成（TTS）](#eval-tts) | Eleven v4（1340）> Eleven v4 Turbo（1339）> Qwen-Audio-3.1-TTS-Plus（1300）（與上週同序） | 榜頁未標日期（本次 11-15 抓取） | [AA TTS 榜](https://artificialanalysis.ai/text-to-speech/leaderboard) |
-| [語音轉文字（逐字稿）](#eval-stt) | Fun-Realtime-ASR-preview（1.7% WER）> Scribe v3（1.9%）> MAI-Transcribe-2（2.0%）（Scribe v3 進前三，見註記） | 榜頁未標日期（本次 11-15 抓取） | [AA STT 榜](https://artificialanalysis.ai/speech-to-text) |
-| [電腦操作 agent](#eval-terminal) | GPT-5.6 Sol（Max，65.9%）> GPT-5.6 Sol（Medium，62.9%）＝ GPT-5.6 Terra（Xhigh，62.9%）（與上週同序） | 榜頁未標日期（本次 11-15 抓取） | [AA Terminal-Bench Hard](https://artificialanalysis.ai/evaluations/terminalbench-hard) |
-| [文件解析／OCR](#eval-docparse) | MiniMax M3（0.916）> Qwen3.7-Plus（0.914）> Qwen3.6 Plus（0.912）（與上週同值；頁面標示分數皆為自報） | 11-15（頁面自標） | [OmniDocBench](https://llm-stats.com/benchmarks/omnidocbench-1.5) |
-| [音樂生成](#eval-music) | ACE Music v1（1160）> Suno v6（1144）> Suno v6-mini（1132）（ACE Music v1 新登頂，見註記） | 榜頁未標日期（本次 11-15 抓取） | [AA Music Arena](https://artificialanalysis.ai/music/leaderboard/vocals) |
+| [寫 code（agent 解 issue）](#eval-swebench) | Claude Fable 5（95.0%）> Claude Mythos Preview（93.9%）> Ember-1（92.2%）（Verified 子集，廠商自報；與上週同序） | 11-22（頁面自標） | [llm-stats SWE-bench](https://llm-stats.com/benchmarks/swe-bench-verified) |
+| [寫文案、聊天、翻譯](#eval-lmarena) | Gemini 4 Carbon（1527）> Gemini 4 Argon（1520）> Gemini 4 Neon（1513）（Muse Wonder 1511 降第四） | 11-20（榜頁自標） | [Text Arena](https://arena.ai/leaderboard/text) |
+| [做網頁／前端](#eval-webdev) | Claude Fable 5.2（1824）> Claude Opus 5.5（1819）> Claude Sonnet 5.5（1772）（同序，前兩名差距由 23 分縮到 5 分） | 11-20（榜頁自標） | [WebDev Arena](https://arena.ai/leaderboard/code/webdev) |
+| [畫圖（文生圖）](#eval-image) | GPT Image 2.6 Sunburst max（1263）> GPT Image 2.5 Sunburst max（1230）> GPT Image 2.6 Flare max（1226）（與上週同序） | 榜頁未標日期（本次 11-22 抓取） | [AA 圖像榜](https://artificialanalysis.ai/image/leaderboard/text-to-image) |
+| [改圖（圖像編輯）](#eval-imageedit) | MAI-Image-2.7（1215）> GPT Image 2.6 Sunburst max（1211）> GPT Image 2.6 Flare max（1205）（MAI-Image-2.7 新登頂，見註記） | 榜頁未標日期（本次 11-22 抓取） | [AA 編輯榜](https://artificialanalysis.ai/image/leaderboard/editing) |
+| [生成影片](#eval-video) | Wan 3.0（1175）> Utopai X（1170）> MiniMax H3 768p（1162）（含音訊總榜；與上週同序） | 榜頁未標日期（本次 11-22 抓取） | [AA 影片榜](https://artificialanalysis.ai/video/leaderboard/text-to-video) |
+| [語音合成（TTS）](#eval-tts) | Eleven v4 Turbo（1340）＝ Eleven v4（1340）> StepAudio 3（1307）（StepAudio 3 進前三，見註記） | 榜頁未標日期（本次 11-22 抓取） | [AA TTS 榜](https://artificialanalysis.ai/text-to-speech/leaderboard) |
+| [語音轉文字（逐字稿）](#eval-stt) | Fun-Realtime-ASR-preview（1.7% WER）> Scribe v3（1.9%）> Xing-Audio4.0（2.0%）（MAI-Transcribe-2 降第四） | 榜頁未標日期（本次 11-22 抓取） | [AA STT 榜](https://artificialanalysis.ai/speech-to-text) |
+| [電腦操作 agent](#eval-terminal) | GPT-5.6 Sol（Max，65.9%）> GPT-5.6 Sol（Medium，62.9%）＝ GPT-5.6 Terra（Xhigh，62.9%）（與上週同序） | 榜頁未標日期（本次 11-22 抓取） | [AA Terminal-Bench Hard](https://artificialanalysis.ai/evaluations/terminalbench-hard) |
+| [文件解析／OCR](#eval-docparse) | MiniMax M3（0.916）> Qwen3.7-Plus（0.914）> Qwen3.6 Plus（0.912）（與上週同值；頁面標示分數皆為自報） | 11-22（頁面自標） | [OmniDocBench](https://llm-stats.com/benchmarks/omnidocbench-1.5) |
+| [音樂生成](#eval-music) | ACE Music v1（1160）> Suno v6（1145）> Suno v6-mini（1133）（與上週同序） | 榜頁未標日期（本次 11-22 抓取） | [AA Music Arena](https://artificialanalysis.ai/music/leaderboard/vocals) |
 | [讀文件不胡說（幻覺率低）](#eval-vectara) | finix_s1_32b（1.8%）> gpt-5.4-nano（3.1%）> gemini-2.5-flash-lite（3.3%）（與上週同值） | 10-22（榜頁自標） | [Vectara 幻覺榜](https://github.com/vectara/hallucination-leaderboard) |
 
 ## 本週註記（僅列異常）
 
-- **WebDev 榜 Claude Fable 5.2 登頂（11-15）**：11-09 發布的 Fable 5.2（xHigh，1838）超過 Opus 5.5（1815）居首，前三全是 Claude；GPT-6 Astra 掉到第五。
-- **音樂榜 ACE Music v1 登頂（11-15）**：ACE Music v1（1160）居首，Suno v6 降第二；Suno、Mureka 各款分數與上週相同。
-- **逐字稿榜 Scribe v3 進前三（11-15）**：ElevenLabs Scribe v3（1.9% WER）排第二，MAI-Transcribe-2 降第三。
+- **改圖榜 MAI-Image-2.7 登頂（11-22）**：MAI-Image-2.7（1215）超過 GPT Image 2.6 Sunburst（1211），GPT Image 系列首次失去改圖榜第一。
+- **TTS 榜 StepAudio 3 進前三（11-22）**：Eleven v4 Turbo 與 v4 同分並列，StepAudio 3（1307）排第三，Qwen-Audio-3.1-TTS-Plus 降第四。
+- **OmniDocBench 頁面自相矛盾（11-22）**：說明寫「越低越好」，排序卻是高分在前；本頁照頁面排序呈現。
 - **影片榜子榜已確認**：本週與上週抓到的都是 Text-to-Video 含音訊總榜，前後可比。
 - **電腦操作榜 Claude 掉出前三（11-01）**：10-25 第二名 Claude Fable 5（Max，62.9%）本次不在前三，前三皆為 GPT-5.6 系列；AA 頁只列前三、未標資料日期。
 - **2026-10-25 換榜（寫 code）**：SWE-bench 官方頁連 4 週讀不到，改看 llm-stats。Pro 子集前三為 Claude Opus 5.5（89.9%）> Claude Sonnet 5.5（81.3%）> Claude Fable 5（80.0%），高於該子集已知水位，僅供排序參考。

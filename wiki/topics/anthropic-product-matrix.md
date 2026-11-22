@@ -3,14 +3,14 @@ page: "topics/anthropic-product-matrix"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-20"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-20"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 3
 attribution_count: 43
 attribution_last: "2026-11-20"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** product matrix, 產品對照, product × feature
 **開始日期：** 2026-10-23
-**最後更新：** 2026-11-20
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-20
 
 > **最新動態**（2026-11-20）
@@ -288,7 +288,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude Code × Motion**：管理指南列為 artifact 範本、限 Team／Enterprise，Claude Code 文件沒提；需要 Team 帳號實測。
 - **Claude Duet × Motion**：Motion 只開 Team／Enterprise、Duet 還沒開放 Team／Enterprise，兩句合起來等於用不到，但官方沒直接寫，維持未公開。
 - **Claude Code × 語音**：Claude Code 有 /voice 語音輸入，說明中心另寫 voice mode（雙向對話）不在 Claude Code；本表把語音輸入算可用，兩者差別寫在格內。
-- ❓ **待查證**（標 2026-11-11｜查 Claude Sheets、Claude Whiteboards、Claude Meetings）｜**Meetings、Sheets、Whiteboards 未入表**：Sheets、Whiteboards 為 beta，專頁見 [[entities/claude-workspace-suite]]；Meetings 只見媒體標題；他產品欄未查
+- ❓ **待查證**（標 2026-11-11｜查 Claude Sheets、Claude Whiteboards、Claude Meetings）｜**Meetings、Sheets、Whiteboards 未入表**：專頁見 [[entities/claude-workspace-suite]]、[[entities/claude-meetings]]；他產品欄未查
 - **Claude app × 背景／排程任務的 Free 方案**：說明中心列付費方案，Free 沒寫；官方部落格曾說 Free「soon」。
 
 ## 相關實體
@@ -303,5 +303,5 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 ## 時序
 
 - **2026-10-23**：建頁。逐格查證 75 格；說明中心有「哪裡可用」逐列段落的功能照段落填，只寫「在 Claude 裡」的標用詞籠統。同日更正：語音在 Claude app 為 beta（說明中心），Claude in Chrome 在 Claude app 為可用（只有 Chrome 側邊欄仍 beta），Skills 在 Platform 為 beta。
-- **2026-11-11**：官方文章宣布 Dashboards 轉正式版、更名 Claude Data；Dashboards 列 Claude app 格由 beta 改 available。Whiteboards、Sheets（beta）與 Meetings 暫列下方「未定項目」節，未增列。
+- **2026-11-11**：官方文章宣布 Dashboards 轉正式版、更名 Claude Data；Dashboards 列 Claude app 格由 beta 改 available。Whiteboards、Sheets（beta）與 Meetings（見 [[entities/claude-meetings]]）暫列下方「未定項目」節，未增列。
 - **2026-11-20**：Help Center release notes 新增「Computer use (beta) for Team and Enterprise plans」段；電腦操作列 Claude app 格新增 Team／Enterprise（beta）。

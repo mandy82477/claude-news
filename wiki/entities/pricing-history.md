@@ -4,15 +4,15 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-14"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-12"
 status_main: "active"
-days_since_news: 9
+days_since_news: 10
 parent: "entities/pricing"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 9
-inbound_links: 5
+days_since_news_subtree: 10
+inbound_links: 6
 attribution_count: 9
 attribution_last: "2026-11-12"
 top_source: "official-docs"
@@ -33,7 +33,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-14
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-12
 
 > **最新動態**（2026-11-12）
@@ -84,7 +84,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 
 #### 2026-11-10：Plans & Pricing 頁新增 Claude Data／Sheets／Whiteboards（beta）段落，移除 Dashboards（beta）
 - 官方定價頁字數 23,768→23,984，新增 7 段（Claude Data，以及 Data 搭配 Motion、Sheets、Whiteboards 的組合），移除 3 段（Claude Dashboards、Claude Motion and Dashboards）（Official Docs 變更偵測）
-- 各組合歸哪個方案、是否另計費，抓取內容未列；同日 TechCrunch、Reuters、The Verge、Bloomberg 報導 Anthropic 推出 Claude Meetings、Sheets 等辦公產品
+- 各組合歸哪個方案、是否另計費，抓取內容未列；同日 TechCrunch、Reuters、The Verge、Bloomberg 報導 Anthropic 推出 Sheets 等辦公產品與 Claude Meetings（見 [[entities/claude-meetings]]）
 - 10-09 Dashboards（beta）曾載明算進方案用量；本次移除後該規則是否沿用至新產品未載
 
 #### 2026-11-09：Claude Fable 5.2／Mythos 5.2 發布，牌價降兩成；Plans & Pricing 頁同步擴大 Fast mode、換代 Batch 示範模型

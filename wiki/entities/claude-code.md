@@ -8,12 +8,12 @@ last_updated: "2026-11-21"
 last_news_update: "2026-11-21"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 128
+days_since_news_subtree: 1
+inbound_links: 129
 attribution_count: 855
 attribution_last: "2026-11-17"
 top_source: "github-issues"
@@ -48,7 +48,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-21 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（十組逐條） | [[entities/claude-code-known-issues]] | 2026-11-21 |
 | 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-21 |
 | hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-21 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |

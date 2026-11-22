@@ -4,14 +4,14 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-25"
+last_updated: "2026-11-22"
 last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 32
+days_since_news: 33
 parent: null
-children: "[]"
-page_role: "root"
-days_since_news_subtree: 32
+children: "['entities/simon-willison-archive']"
+page_role: "hub"
+days_since_news_subtree: 33
 inbound_links: 5
 attribution_count: 3
 attribution_last: "2026-10-20"
@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 評論媒體
 **為何追蹤：** 多位 Anthropic 人士發言原文經他部落格逐字轉引，並做模型首日實測
 **首次出現：** 2026-05-20
-**最後更新：** 2026-10-25
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-10-20
 **蒐集邊界：** 本站只收錄他與 Claude／Anthropic 生態相關的公開發言——部落格對其他人聲明的轉引、模型實測心得、AI agent 資安事件的具名轉載。不收錄他的個人生活，也不收錄他在 Claude／Anthropic 之外的其他技術工作（如 Datasette、SQLite 相關獨立專案）。
 
@@ -116,9 +116,8 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 
 ### 2026-07
 
-- 2026-07-25：轉引 Boris Cherny 稱 Opus 5 是目前最難被提示注入攻破的模型
-- 2026-07-19：親自以 `strings` 指令查證 Claude Code 底層執行環境改用 Rust 重寫版 Bun runtime
+- 2026-07（總結）：親自以 `strings` 指令查證 Claude Code 底層改用 Rust 版 Bun（07-19，見 [[entities/claude-code]]）；轉引 Boris Cherny 稱 Opus 5 最難被提示注入攻破（07-25，後續對照見上方「判斷紀錄」表）。原始條目見 [[entities/simon-willison-archive#2026-07]]
 
 ### 2026-05
 
-- 2026-05-20：Claude Code 定價溝通混亂事件分析，為本庫最早記錄的一則引用
+- 2026-05（總結）：Claude Code 定價溝通混亂事件分析，為本庫最早記錄的一則引用（05-20）。原始條目見 [[entities/simon-willison-archive#2026-05]]

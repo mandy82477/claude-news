@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-11-21"
 last_news_update: "2026-10-09"
 status_main: "active"
-days_since_news: 43
+days_since_news: 44
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 43
+days_since_news_subtree: 44
 inbound_links: 17
 attribution_count: 14
 attribution_last: "2026-10-09"
@@ -42,8 +42,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 現況
 
 - **自 2026-10-09 起無新動態**（2026-11-21 查核）：本頁被全庫 17 處引用，停滯是事實而非漏更新——Haiku 5.5 仍是現行 Haiku，官方自 10-09 後未再就它發布消息。
-
-**自 2026-10-09 起無新動態（2026-11-14 核）——仍是現行 Haiku，官方發布後未再有新消息；不是漏更新。**
 
 **2026-10-07 最新**：Anthropic 發布 Claude Haiku 5.5（API ID `claude-haiku-5-5`），為 Claude 5.5 家族第三款模型，繼 Opus 5.5（09-22）、Sonnet 5.5（09-28）之後。官方定位為「目前最便宜、最快、最具能力的小型模型」，面向高流量、成本敏感的工作（摘要、壓縮、資料庫查詢、分類），與 Opus 5.5／Sonnet 5.5 搭配作編碼任務的 subagent 效果好；官方稱它也是迄今最快的模型，適合即時客服、瀏覽器操作等延遲敏感場景。平均執行成本比 Haiku 4.5 低約 75%（[官方發布文](https://www.anthropic.com/claude-haiku-5-5)，2026-10-07）；這是平均值，>100K 的 prompt 另計，見〈實付成本〉。同批官方也將 Claude Sonnet 5.5 的快取讀取價砍半，定價細節見 [[entities/pricing]]。 自 2026-10-09 起無新動態（2026-10-31 核）；仍是現行 Haiku，停滯表示近三週沒有新增事實。
 

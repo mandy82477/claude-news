@@ -3,15 +3,15 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-17"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 5
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 4
-inbound_links: 7
+days_since_news_subtree: 5
+inbound_links: 8
 attribution_count: 18
 attribution_last: "2026-11-17"
 top_source: "github"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-17
 
 > **模型使用策略再添兩款：便宜模型配測試把關、跨廠商 CLI 橋接**（2026-11-17）
@@ -51,6 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 目前結論
 
 - **費用可觀測性從選配變必備**：2026-06 計費切割風波（該政策已於 2026-06-16 暫停）之後，帳單看得見成了工具的基本要求；工具清單見 [[topics/community-tech-tools]]。
+- **11 月中旬新冒出一批用量觀測品**：Model-share、Wake、Faros Desktop 等，見 [[topics/community-tech-tools]]「用量／token 觀測工具」。
 - **並行成本歸因是缺口**：額度監控工具都有，「這一批 subagent 花了多少、做出了什麼」沒有人答得出來（見下方機制細節）。
 - **省 token 的工具開始合體**：2026-11-12 Downshift 把指令輸出壓縮與 subagent 模型路由放進同一個工具（beta、單一作者，尚無量化節省）；11-02 的 Reddit「20 招」清單把零散做法收成對照表，11-04 一則公開帳單稱 17 個 bot 一個月只用一個 100 美元 Max 方案（單一案例、非第三方審計）。
 - **你的選項：** 先量再省——用額度監控工具看清楚是哪一類工作在燒；再挑上面三路之一，路由給便宜模型的降幅目前最高，但只有單一團隊的數字。合體工具等有人量出省多少再裝。
@@ -84,8 +85,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - [[topics/community-cost#yakuikai/tokentab：本機優先、免 API key 讀取三款 CLI session 算用量與成本（2026-10-13）|tokentab]]（10-13）
   - [[topics/community-cost#同日三款 Claude Code／Codex 用量監控工具：codenotch（macOS 選單列釘選）、Armada（跨帳號側欄）、token-tracker（狀態列＋熱力圖＋成本分析）（2026-09-25）|同日三款]]（09-25）；全是單一作者工具，彼此不比較準不準。
 - **暫停與恢復**
-  - [[topics/community-cost#resume-on-ratelimit.sh：以 PROGRESS.md + 20 行 shell script 自動恢復被限速中斷的 Claude Code Session（2026-08-04）|resume-on-ratelimit.sh]] 用 PROGRESS.md 加 20 行 shell 重試
-  - [[topics/community-cost#額度監控與自動恢復工具生態（2026-07-03）|07-03 自動恢復與監控兩類工具]]，是最早的同類
+  - [[topics/community-tech-patterns-archive#resume-on-ratelimit.sh：以 PROGRESS.md + 20 行 shell script 自動恢復被限速中斷的 Claude Code Session（2026-08-04）|resume-on-ratelimit.sh]] 用 PROGRESS.md 加 20 行 shell 重試
+  - [[topics/community-tech-patterns-archive#額度監控與自動恢復工具生態（2026-07-03）|07-03 自動恢復與監控兩類工具]]，是最早的同類
 - **預算圍欄**：社群端只有上列 agent-usage-guard 的 80% 門檻；官方 Spend Controls 屬 Enterprise 方案，有 75%／90% 警示、無自動暫停，見 [[topics/enterprise-cost-management]]。
 - **中轉與 gateway 比價**
   - [[topics/community-cost#Folkbench/folkbench：評測各家 AI API 中轉站可用率、延遲與價格並支援一鍵切換（2026-10-18）|Folkbench]] 量中轉站可用率與價格
@@ -93,8 +94,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - [[topics/community-cost#KarpelesLab/teamclaude：多帳號代理集中 Claude Max、Codex、API key 帳號池，額度用完自動輪替（2026-11-16）|teamclaude]] 多帳號額度池自動輪替
 - **成本拆解實測**
   - [[topics/community-cost#aidiveyt：逐 session 拆帳一個月用量，量出 subagent 佔全部 token 48.1%、寫了 64% 的輸出（2026-10-08）|aidiveyt]] 一個月 455 個 session 拆帳，subagent 佔 48.1%
-  - [[topics/community-cost#MCP Server 設計對每輪對話隱藏 token 成本的實測比較（2026-07-21）|MCP 隱藏成本]]：單一作者實測各設計每輪注入的 token
-  - [[topics/community-cost#headless Claude Code（`claude -p`）冷啟動實測：未加 `--bare` 約載入 15 萬 token（2026-08-07）|headless 冷啟動]]：未加 `--bare` 約載入 15 萬 token
+  - [[topics/community-tech-patterns-archive#MCP Server 設計對每輪對話隱藏 token 成本的實測比較（2026-07-21）|MCP 隱藏成本]]：單一作者實測各設計每輪注入的 token
+  - [[topics/community-tech-patterns-archive#headless Claude Code（`claude -p`）冷啟動實測：未加 `--bare` 約載入 15 萬 token（2026-08-07）|headless 冷啟動]]：未加 `--bare` 約載入 15 萬 token
 - **證據強度：** 六類全部是單一作者工具或自報數字，沒有一款有第二方重現；官方端只有 Enterprise 警示。
 
 **機制細節**
@@ -437,201 +438,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-08
 
-#### x1xhlol/system-prompts-and-models-of-ai-tools：彙整數十款 AI 編碼工具完整系統提示詞與模型設定（2026-08-29）
-
-- **主線：** —
-- **核心模式：** 彙整 Claude Code、Cursor、Devin AI、Replit 等數十款 AI 編碼工具的完整系統提示詞與模型設定；GitHub Search 累積 14.3 萬星
-- **與既有模式的關係：** 呼應「system prompt 版本追蹤」類別——phistory（08-08）鎖定四款 CLI 的版本快照自動保存；本則規模更大（涵蓋數十款工具，含非 CLI 類）且為靜態彙整檔案庫非自動追蹤，供橫向比較不同廠商設計取向
-- **可信度註記：** 星數（14.3 萬），僅取得 GitHub Search 星數，api.github.com 存取受限、無 forks／issues／近期 commit 佐證可查，未另行查證；因屬本庫首次收錄的既有大型 repo（已成名但本庫從未報導過的 repo），依內容具體程度（涵蓋範圍明確、可查證的公開 system prompt 文字）判斷收錄，星數本身不作為獨立驗證訊號
-- **來源：** GitHub Search（14.3 萬★，存量盤點｜2025-03-05 出生、本庫今日首次收錄）；[GitHub](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)
-- **成熟度：** ✅ 廣泛採用（14.3 萬星且已存在近 1.5 年，屬長期累積型參考資源而非新興工具）
-
-#### Show HN：Frugal Tokens——檢視跨 coding agent 用量與成本的自製工具（2026-08-19）
-
-- **主線：** —
-- **核心模式：** 作者釋出自製工具 Frugal Tokens，用於檢視自己各 coding agent session 的花費、cache miss 對成本的影響，提供依模型與快取狀態拆解的用量分析，並可逐一 session 檢視呼叫細節
-- **與既有模式的關係：** 呼應本頁「Token / 成本優化」類別既有多筆針對成本可視化與快取行為的工具（如 pxpipe、claude-thermos），本則補上跨 agent（非僅 Claude Code 單一工具）的成本／快取拆解視角；非大型 codebase 特有痛點，暫不歸入主線 [[topics/community-large-codebase-workflow]] 四條主線
-- **來源：** 「Show HN: Frugal Tokens – explore costs and usage across coding agents」— Hacker News（score 33）＋跨 2 來源；[demo.frugaltokens.com](https://demo.frugaltokens.com/)
-- **成熟度：** ⏳ 新興（今日首見，個人自製工具，尚無社群採用回饋）
-
-#### Show HN：Graft — Claude Code hooks 削減 grep 輸出 token，宣稱降幅 42%，惟 benchmark 段落遭質疑 AI 代寫（2026-08-15）
-
-- **主線：** Context 管理
-- **核心模式：** 開源專案 Graft 提供一組 Claude Code hooks，攔截並精簡 grep 搜尋產生的輸出內容，宣稱可將相關 token 用量削減 42%
-- **與既有模式的關係：** 呼應本頁「Token / 成本優化」類別既有多筆針對特定工具輸出裁剪的做法（CCN 只清 AI 遺留註解、pxpipe 圖片化 context 等），本篇補上 grep 輸出這個此前未被記錄過的裁剪對象；與 [[topics/community-large-codebase-workflow]] Context / Token 管理主線相關——grep 是大型 repo 搜尋的高頻高輸出來源
-- **可信度疑慮：** HN 討論串有留言指出 README 的 benchmark 段落「看起來像 Claude/Codex 代寫」，難以判斷 42% 宣稱是否成立，本頁不將此數字視為已驗證
-- **來源：** 「Show HN: Graft – Claude Code hooks that cut grep tokens by 42%」— Hacker News（score 39）＋跨 2 來源；[GitHub](https://github.com/NanoNets/Graft)
-- **成熟度：** ⏳ 新興（單一開源專案，宣稱數字未經第三方驗證，社群對 benchmark 真實性有疑慮）
-
-#### Simon Willison 轉介：以「假設性分類」（hallucinate classification）取代傳統分類流程的做法（2026-08-14）
-
-- **主線：** —
-- **核心模式：** Simon Willison 部落格轉介 softwaredoug 的文章，主張部分分類任務與其建置傳統分類器／embedding pipeline，不如直接讓 LLM「假設性」生成分類結果（hallucinate a classification）後再視需要校正，作為更輕量的替代做法
-- **與既有模式的關係：** 呼應本頁「Token / 成本優化」「Skills 設計」等類別既有「用更少工程換取可用結果」的取向，補上分類任務這個尚未見於既有節點的應用場景；性質偏概念性主張，非附帶量化驗證的第一手實作，非大型 codebase 特有痛點，暫不歸入主線 [[topics/community-large-codebase-workflow]] 四條主線
-- **來源：** 「Don't classify. Hallucinate!」— Simon Willison Blog（Blogroll 策展名單，具名知名開發者轉介，收錄即算）；[原文](https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/)
-- **成熟度：** ⏳ 新興（概念性主張，尚無量化驗證或社群跟進採用案例）
-
-#### phistory：跨 agent CLI（Claude Code／Codex／OpenClaw／Hermes）system prompt 版本快照自動保存工具（2026-08-08）
-
-- **主線：** —
-- **核心模式：** 開源工具 Phistory 自動追蹤並保存多款 agent CLI（Claude Code、Codex、OpenClaw、Hermes）的 system prompt 版本快照，讓使用者可跨版本比對各工具 system prompt 的變動歷程，而非侷限於單一工具的單次檢視
-- **與既有模式的關係：** 呼應本頁既有「作者 grep JSONL 逐字稿，發現隱藏標籤 `<ip_reminder>`」（07-29）等第一手偵測方法論，本工具系統化為跨工具、跨版本的自動保存與比對機制；屬單一工具除錯輔助，非大型 codebase 協作痛點，暫不歸入主線
-- **來源：** GitHub Search（今日日報「⭐ 重點話題」已收錄）；repo 為 [WEIFENG2333/phistory](https://github.com/WEIFENG2333/phistory)，星數已查證（2026-08-13，GitHub API）：519 星／forks 35（6.7%，略低於防刷基準）／open issues 4／最後 push 08-12——forks 比例偏低但有近期實質 commit 與少量 issue 往來，刷星可能性無法完全排除
-- **成熟度：** ⏳ 新興（星數佐證較弱，尚無第一手使用心得或社群討論佐證實際採用效果）
-
-#### headless Claude Code（`claude -p`）冷啟動實測：未加 `--bare` 約載入 15 萬 token（2026-08-07）
-
-- **主線：** Context 管理
-- **核心模式：** 作者實測 headless 模式（`claude -p`）在未加 `--bare` 旗標時，冷啟動會預先載入約 15 萬 token 的系統提示、工具定義與預設 context，構成每次呼叫的固定成本；加上 `--bare` 可跳過這些非必要載入，文章給出「何時該用 `--bare`」的具體判準，適合 CI pipeline、批次任務等大量 headless 呼叫場景
-- **與既有模式的關係：** 補充「Token / 成本優化」類別，聚焦「headless / 非互動呼叫」這個此前未被記錄過的固定成本來源，與 05-07「MCP Code Execution Token 效率」、06-21「MCP Server 信任邊界審查」（9 個 server = 每輪 38k tokens 冷啟動）同屬「摸清楚 Claude Code 各種呼叫模式底層固定成本」系列量化實測，這次對象是 headless 呼叫本身而非 MCP 配置；也與 [[topics/community-large-codebase-workflow]] Context / Token 管理主線相關，大量 headless 呼叫常見於多 agent pipeline 場景
-- **來源：** 「[claude -p: what headless Claude Code actually loads (and when --bare is the right call)](https://dev.to/rulestack/claude-p-what-headless-claude-code-actually-loads-and-when-bare-is-the-right-call-182c)」— dev.to（1 讚；依規則以第一手實測內容判斷，非讚數）；token 數已查證（2026-08-13）：作者原文明確報告冷啟動約 150,000 token（未執行任何工作前），成因為 `-p` 預設載入完整互動 session context（hooks、skills、plugins、MCP servers、auto memory、所有 CLAUDE.md 載入鏈），文中未標明測試的 Claude Code 版本號
-- **成熟度：** ⏳ 新興（今日首見，單一作者實測，尚無其他來源複現驗證）
-
-#### pxpipe：把文字 context 轉成圖片以降低 Claude Code token 用量（2026-08-05）
-
-- **主線：** Context 管理
-- **核心模式：** 將原本以文字形式送入的 context 改以圖片渲染後傳遞，藉此降低 Claude Code 的 token 用量——與本頁既有「HTML→Markdown 降 80% token」等既有做法方向相反（既有做法把非文字格式轉為更精簡文字，此作法反其道而行改用圖片承載資訊）
-- **與既有模式的關係：** 為「Token / 成本優化」類別補上一個尚未出現過的技巧方向；降耗比例與機制已查證（2026-08-13）：以本機 proxy 攔截 system prompt／工具定義／對話歷史，渲染成 PNG 圖片區塊送出，實測將約 25,000 text token 壓縮至約 2,700 image token，依情境不同整體帳單降幅約 59–70%（[GitHub teamchong/pxpipe](https://github.com/teamchong/pxpipe)、[explainx.ai 報導](https://explainx.ai/blog/pxpipe-cut-claude-code-tokens-image-context-proxy-2026)）
-- **來源：** GitHub Search 批次抓取（非今日新發布，星數為累積值）；星數 6,955，已查證 fork 598（比例 8.5%，接近防刷佐證基準）、open issues 25、累計 commit 402 次，corroboration 尚可，判斷非刷星
-- **成熟度：** ⏳ 新興（技巧方向具新意，但缺乏第一手使用心得、量化降耗數字或社群討論佐證實際效果）
-
-#### resume-on-ratelimit.sh：以 PROGRESS.md + 20 行 shell script 自動恢復被限速中斷的 Claude Code Session（2026-08-04）
-
-- **主線：** 除錯分工
-- **核心模式：** 針對「長任務跑到一半撞上 5 小時／7 天用量限制、process 以非零狀態退出、手動重啟又常忘記先前進度」的痛點，作者寫成 20 行的 resume-on-ratelimit.sh：搭配持續寫入進度的 PROGRESS.md，偵測到限速中斷後自動重試並帶著既有進度紀錄接續執行，取代人工守著電腦手動重啟
-- **與既有模式的關係：** 補充本頁「Token / 成本優化」類別既有做法在「限速中斷復原」面向的具體實作——既有記錄多聚焦事前的用量監控/節流，本篇聚焦「撞牆後如何自動接續」的下游解法
-- **來源：** 「How I Auto-Resume a Rate-Limited Claude Code Session with PROGRESS.md and Retries」— dev.to / bokuwalily（依 dev.to 內容判斷原則收錄：第一手實作記錄，含具體腳本與踩坑細節；3 讚不作為判斷依據）
-- **成熟度：** ⏳ 新興（單一開發者工具，20 行 shell script，尚待社群採用回饋）
-
-#### CCN：只清除程式碼中 AI 遺留註解、不動其他內容的清理工具（2026-08-02）
-
-- **主線：** —
-- **核心模式：** 針對 AI 模型常在程式碼留下大量註解、佔用 context 的問題，作者打造 CCN，只清除程式碼中的註解，不變動其他任何內容；作者聲稱經過 2,700 次迭代測試
-- **與既有模式的關係：** 補充本頁「Token / 成本優化」類別既有「HTML→Markdown 降 80% token」「Token Bloat 對策」等做法在「程式碼本體」面向的新實作——既有做法多聚焦工具輸出/文件層級的 token 精簡，本篇聚焦「AI 留下的程式碼註解本身」這個較少被關注的 context 膨脹來源
-- **來源：** 「Show HN: Nuking the crap Claude left in the codebase – CCN」— Hacker News（score 2；訊號強度弱，但具體清理機制與 2,700 次迭代測試的量化聲稱有具體技術實質，依內容判斷收錄）
-- **成熟度：** ⏳ 新興（今日首見，單一開發者工具，2,700 次迭代測試聲稱未經第三方驗證）
+- **兩則可量的成本機制：** headless `claude -p`（08-07）未加 `--bare` 冷啟動約載入 15 萬 token，是每次呼叫的固定成本，文章給出何時該加 `--bare` 的判準；Graft hooks（08-15）宣稱削減 grep 輸出 token 42%，但 benchmark 段落遭質疑 AI 代寫。
+- 限速恢復：resume-on-ratelimit.sh（08-04）以 PROGRESS.md 加 20 行 shell，在撞上 5 小時或 7 天限額後自動重試並接續進度。
+- 其他省 token 做法：pxpipe（08-05）把文字 context 轉成圖片，與「轉成更精簡文字」的既有做法方向相反；CCN（08-02）只清除 AI 遺留註解，作者稱經 2,700 次迭代測試。
+- 用量與提示詞可視化：Frugal Tokens（08-19）依模型與快取狀態拆解各 session 花費；phistory（08-08）自動保存各 agent CLI 的 system prompt 版本快照；x1xhlol/system-prompts-and-models-of-ai-tools（08-29）彙整數十款工具的系統提示詞，GitHub 累積 14.3 萬星。
+- Simon Willison 轉介 softwaredoug「假設性分類」（08-14）：部分分類任務直接讓 LLM 生成分類結果，取代傳統分類器或 embedding pipeline。
+- 皆為單一作者工具或自報數字，無第二方重現。
+- 原始條目見 [[topics/community-tech-patterns-archive#2026-08]]
 
 ### 2026-07
 
-#### 作者 grep 自己的 Claude Code JSONL 逐字稿，發現未見於官方文件的 `<ip_reminder>` 隱藏標籤（2026-07-29）
-
-- **主線：** —
-- **核心模式：** 作者未查閱官方文件，而是直接翻自己的 Claude Code session JSONL 逐字稿，找到一個名為 `<ip_reminder>` 的標籤在對話中途出現；此標籤未見於任何官方文件說明
-- **與既有模式的關係：** 呼應本頁既有「Local Reverse Proxy」「Context Window 診斷法」等「直接檢視 Claude Code 實際送出/收到內容」的第一手偵測方法論類別，補上「逐字稿逆向檢視」這個更輕量、免架設代理即可執行的檢視手段
-- **來源：** 「I Grepped My Own Claude Code Logs and Found the Hidden Tag Anthropic Never Shows You」— dev.to / nomurasan（依 dev.to 內容判斷原則收錄：第一手日誌挖掘，非行銷/SEO 稿；讚數不作為判斷依據）
-- **成熟度：** ⏳ 新興（單一開發者觀察，暫不歸入既有機制類別；原文已查證，見下方懸置細節 ⟨Q-05⟩）
-
-#### Anyclaude-SDK：讓 OpenAI/Anthropic 端點都能使用 Claude Code 風格 SDK（2026-07-28）
-
-- **主線：** —
-- **核心模式：** 開源 SDK，讓開發者可用 Claude Code 風格介面呼叫 OpenAI 或 Anthropic 端點，降低切換供應商時的介面改寫成本（僅有標題可考，具體實作細節未知）
-- **與既有模式的關係：** 呼應本頁「模型使用策略」類別既有多模型路由思路，但聚焦「介面層一致化」而非「路由決策」，補上供應商切換降低改寫成本的角度
-- **來源：** 「Show HN: Anyclaude-SDK – Claude Code-Style SDK for OpenAI/Anthropic Endpoints」— Hacker News（score 4）
-- **成熟度：** ⏳ 新興（今日首見，說明有限，暫記觀察）
-
-#### 只在需要頂尖判斷力任務用 Fable 5，其餘交給便宜 subagent 控制成本（2026-07-26）
-
-- **主線：** —
-- **核心模式：** 作者分享實務作法：僅在需要頂尖判斷力的任務（架構決策、疑難排解）呼叫 Fable 5，其餘實作、測試、雜務等交由較便宜的 subagent 處理，藉此控制整體 token 成本
-- **與既有模式的關係：** 呼應本頁「模型使用策略」類別既有「分層模型（Sonnet + Opus）」「依任務複雜度路由」思路，屬同一分層成本策略在 Fable 5 世代的具體延伸案例，非新機制
-- **來源：** 「Use Fable 5 where it pays for itself」— dev.to / #claudecode（依 dev.to 內容判斷原則收錄：第一手成本控制實作經驗，非行銷/SEO 稿；讚數 9 不作為判斷依據）
-- **成熟度：** ⚡ 活躍（既有分層模型策略的延伸案例）
-
-#### claude-thermos：保持 Claude session 快取熱度的工具，引發「成本轉嫁」爭議（2026-07-23）
-
-- **主線：** —
-- **核心模式：** 作者釋出 claude-thermos，透過定期送出保活請求維持 Claude session 的 prompt cache 不過期，避免快取到期後重新產生內容所帶來的高成本；HN 討論中同時揭露 Pro/Max 方案目前快取到期時間為 1 小時，此前一度退化至僅 5 分鐘
-- **與既有模式的關係：** 直接對應本頁「Token / 成本優化」類別既有觀察「快取不跨 session 是費用主因」——此工具是社群對該痛點的具體 workaround；但 HN 高分留言同時質疑「這只是把成本轉嫁給其他用戶」，認為此類保活行為可能變相佔用共享額度/基礎設施資源，工具本身與其正當性皆有爭議，尚無社群共識（爭議面詳見 [[topics/community-tech-discussions]] 同日收錄之討論）
-- **來源：** 「Show HN: Claude-thermos keeps your Claude session warm for you」— Hacker News（score 102）
-- **成熟度：** ⏳ 新興（今日首見，工具本身與其倫理正當性皆有爭議，尚待社群共識）
-
-#### 依任務類型分工選用 Claude 模型／Code／Cowork（2026-07-23）
-
-- **主線：** —
-- **核心模式：** 媒體報導使用者依任務性質分別選用不同 Claude 產品線（模型選擇、Claude Code、Cowork），依情境切換使用工具而非單一工具包辦所有任務（僅標題可考，具體判準細節未知）
-- **與既有模式的關係：** 呼應本頁「模型使用策略」類別既有「依任務複雜度路由」思路，但本篇聚焦人工決策層面的產品線分工，而非自動化路由機制，補上使用者側手動選型的案例角度
-- **來源：** 「I use Anthropic's Claude AI tools for very different jobs: How to pick between models, Code, and Cowork」— ZDNET（Google News；僅標題可用，內容細節未知，暫不深入推論）
-- **成熟度：** ⏳ 新興（媒體標題轉載，缺乏第一手操作細節，暫記以觀察後續是否有更詳細跟進報導）
-
-#### MCP Server 設計對每輪對話隱藏 token 成本的實測比較（2026-07-21）
-
-- **主線：** Context 管理
-- **核心模式：** 作者為 Claude Code 加裝多款不同設計的 MCP server，實測量化各設計注入每輪對話的隱藏 context token 量，比較不同工具清單/描述長度/回傳格式設計對 token 成本的具體影響，屬第一手量化測量而非單純教學或新聞轉述
-- **與既有模式的關係：** 補充既有「Token / 成本優化」類別下「MCP context bloat」（9 個 MCP 伺服器 = 每輪 38k tokens 冷啟動）與「Plugin / MCP 整合」類別「Plugin 反模式整理」的量化佐證，聚焦「MCP server 設計選擇」本身對 token 成本的影響，而非工具數量單一變因
-- **來源：** 「I added MCP servers to Claude Code. Here's what they cost in tokens.」— dev.to（1 讚；依 dev.to 收錄規則以內容判斷，屬第一手量化實測，非讚數）
-- **成熟度：** ⏳ 新興（單一作者實測，尚無其他來源複現比較數字）
-
-#### Fable 5 Orchestrates, Cheap Models Execute：社群轉載 46% 成本達 96% 效能的多模型工作流模式（2026-07-14）
-
-- **主線：** —
-- **核心模式：** Reddit 社群整理流傳的多模型工作流量化數字：由 Fable 5 負責任務協調（orchestrate）、便宜模型負責實際執行（execute）的分工架構，宣稱可在僅 46% 成本下達到 96% 的效能表現；此模式並非未來規劃，而是可直接在 Claude Code 中設定使用的現行做法
-- **與既有模式的關係：** 與既有「模型使用策略」類別下社群自建的分層模型路由（Sonnet + Opus）、Workweave Router 同屬「依任務複雜度分流節省成本」思路，差異在於本則提供具體量化數字（46% 成本／96% 效能），將社群長期實務直覺量化為可比較的基準；惟數字來源為 Reddit 整理轉載，非官方逐字確認的第一方發布
-- **來源：** Reddit r/ClaudeAI（週熱門，社群轉載，原始官方發布連結未見）；第三方查證（2026-08-13）：BrowseComp 上 Fable 5 orchestrator + Sonnet 5 executor 86.8%（Fable 5 單獨 90.8%），成本 $18.53 vs $40.56／題；細節見 [explainx.ai](https://explainx.ai/blog/fable-5-advisor-orchestrator-patterns-july-2026)、[Jon Krohn](https://www.jonkrohn.com/posts/2026/7/20/fable-5-as-advisor-anthropics-two-model-pattern-for-smarter-cheaper-agents)
-- **成熟度：** ✅ 成熟（社群轉載量化數字＋第三方查證，可直接複現於 Claude Code；原始官方發布連結未見，來源等級為社群轉載非官方基準，2026-09-07 更正，見 [[entities/fable-5]]）
-
-#### AWS Bedrock 執行 Claude Code 單日 $8.43 計費教訓（2026-07-12）
-
-- **主線：** —
-- **核心模式：** 開發者首次改用 AWS Bedrock 執行 Claude Code，記錄單日花費 $8.43 的實測計費細節與意外之處，作為「透過 Bedrock 用 Claude Code」路徑的第一手成本參考
-- **與既有模式的關係：** 補充既有「費用可觀測性工具」與「Token 路由與成本優化」類別中缺乏的 Bedrock 路徑具體數字，可與 API 直連、Claude Desktop 訂閱制的成本案例並列比較
-- **來源：** 「How My First Claude Code on AWS Bedrock Experiment Cost Me $8.43 in Just One Day」— dev.to（作者 aws-builders，原文發布 06-16）
-- **成熟度：** ⏳ 新興（單日單一案例，樣本量小）
-
-#### 「讓 Fable 5 物有所值」的分層模型路由實務（2026-07-12）
-
-- **主線：** —
-- **核心模式：** 作者主張僅在需要頂尖判斷力的任務上使用 Fable 5，其餘工作交給成本較低的 subagent 處理，以此讓 Fable 5 的高單價「物有所值」
-- **與既有模式的關係：** 屬「模型使用策略」類別下既有 Workweave Router／Dragoman 等成本感知路由思路的實務心法版，聚焦「何時該用旗艦模型」的判斷原則而非工具本身
-- **來源：** 「Use Fable 5 where it pays for itself」— dev.to（作者 toffy，原文發布 07-02）
-- **成熟度：** ⏳ 新興（單一作者實務分享，未見量化數據）
-
-#### Local Reverse Proxy：攔截並檢視 Claude Code 實際送出的請求內容（2026-07-10）
-
-- **主線：** —
-- **核心模式：** 因 Claude Code 不遵守 HTTP_PROXY 環境變數設定，作者自建一個跑在 loopback 的本地反向代理，即時攔截並檢視每次請求送往 Anthropic 的完整 prompt、token 用量與花費，補足官方缺乏的請求層可觀測性
-- **與既有模式的關係：** 與既有「費用可觀測性工具」類別（成本追蹤/預算工具）互補，差異在於此工具聚焦「請求內容本身」的透明度而非僅統計費用數字；也呼應 07-01「Claude Code 隱寫術」信任危機事件後，社群對「Claude Code 究竟送了什麼出去」的關注升高（見 [[topics/community-tech-discussions]]）
-- **來源：** 「I built a local reverse proxy to see what Claude Code actually sends to Anthropic」— dev.to（作者 houleixx，#claudecode，原文發布 06-10）
-- **成熟度：** ⏳ 新興（單一作者工具，未見開源 repo 連結或採用數據）
-
-#### InstantVideos：Claude + GLM-5.2 + Nano Banana 2 Lite + ffmpeg 多模型短影音自動化 pipeline（2026-07-07）
-
-- **主線：** —
-- **核心模式：** 開發者以 Claude（腳本/協調邏輯）搭配 GLM-5.2（文案/對話生成）、Nano Banana 2 Lite（圖像/畫面素材生成）與 ffmpeg（影片合成輸出）組成端到端自動化短影音生成與發布 pipeline，宣稱 30 秒內可產出一支短片
-- **與既有模式的關係：** 屬「模型使用策略」類別下的多模型路由思路在**內容生成領域**的新應用——既有 Dragoman / Workweave Router 聚焦編碼任務的成本路由，此案例改為依「任務類型」（文字/圖像/影音合成）分派給各自最擅長的專門模型，而非單一模型包辦全流程；反映多模型編排正從程式碼領域擴散至內容生產領域
-- **來源：** [Show HN: InstantVideos](https://instantvideos.org/)（Hacker News Show HN，23 分，跨 2 個獨立來源提及）
-- **成熟度：** ⏳ 新興（單一 Show HN 專案，尚無採用數據；多模型分工生成內容的具體組合方式值得後續觀察是否有其他工具跟進類似「依內容類型路由至專門模型」的架構）
-
-#### CaveMan Skill：單次回覆 Token 從 70 降至 20 的極簡輸出模式新實作（2026-07-06）
-
-- **主線：** —
-- **核心模式：** 開源 Claude Code skill「CaveMan」透過強制模型以極簡風格回應，聲稱可將單次回覆 token 使用量從約 70 降至約 20（降幅約 71%），延續「穴居人模式」（極簡輸出降低 token 消耗）的既有思路
-- **與既有模式的關係：** 與 2026-05-05 已記錄的「Caveman Skill 實測 65% 降耗」、2026-07-01「企業穴居人模式採用確認」（404 Media：OpenAI、Nvidia、GitHub 開發者採用）同屬同一模式家族的新實作版本；顯示極簡輸出降耗已從單一實測案例演變為社群持續產出的多個獨立實作
-- **來源：** [Claude Code with CaveMan (opensource skill) cuts token usage per response from 70 to 20](https://www.reddit.com/r/ClaudeCode/comments/1uox6ko/claude_code_with_cavemanopensoure_skill_cuts/)（Reddit r/ClaudeCode，07-06）
-- **成熟度：** ⚡ 活躍（沿用「穴居人模式」既有活躍分類；具體降幅為單一作者自述，未見第三方獨立複現數據）
-
-#### 本地小模型分流節省 Context：Fast Context Task Router 機制觀察（2026-07-05）
-
-- **主線：** Context 管理
-- **核心模式：** 將程式碼探索（code exploration）工作委派給本地執行的小型 LLM（local-Ollama task router）分流處理，僅將篩選後的精簡結果送回主 agent，藉此降低主 context window 的 token 消耗
-- **效果：** 使用者聲稱可節省 50–60% context token，代價是整體執行時間增加（本地小模型推論延遲 + 額外一層路由判斷）
-- **來源：** [Why did Microsoft pull Fast Context from public domain?](https://www.reddit.com/r/ClaudeCode/comments/1unz1s5/why_did_microsoft_pull_fast_context_from_public/)（Reddit r/ClaudeCode，07-05）；原專案（Microsoft）含 arXiv 論文、GitHub repo、自訓練模型，現已從公開領域下架，原因不明
-- **與既有模式的關係：** 與「模型使用策略」類別下的分層模型路由（Dragoman / Workweave Router）同屬「依任務複雜度分流降低成本」思路，差異在於此模式分流對象是 context 探索階段而非整個任務執行；下架爭議與機制本身的社群反思見 [[topics/community-tech-discussions]]
-- **成熟度：** ⏳ 已停擺（原專案 07-05 下架，逾 60 天無任何後續實作接手，機制僅存本則社群轉述，無可裝的現行版本；官方最接近的替代是 `CLAUDE_CODE_SUBAGENT_MODEL`，見 [[topics/community-pattern-trends]] 趨勢四）
-
-#### 額度監控與自動恢復工具生態（2026-07-03）
-
-- **主線：** —
-- **核心模式：** 針對 Fable 5 額度限制帶來的使用者焦慮，社群自發出現兩類輔助工具：① 自動恢復型——限制解除瞬間自動送出 continue，減少手動盯盤等待（呼應 06-27 已記錄的「quota 重置後需手動 continue」automation gap 痛點）；② 監控可視化型——在作業系統選單列即時顯示剩餘額度與使用比例，讓使用者在額度耗盡前主動調節任務節奏
-- **代表工具：**
-  - [CCLimitPing](https://github.com/wavever/CCLimitPing)（Show HN score 2）：5 小時限制解除的瞬間自動觸發 continue
-  - [LimitBar](https://mikaweiss6.gumroad.com/l/limitbar)（Show HN score 2，跨來源佐證）：macOS 選單列 app，即時顯示 Claude 用量限制
-- **解決的問題：** 額度耗盡後的手動恢復延遲、以及額度使用狀態缺乏即時可視性，兩者共同構成「額度感知能力不足」的體驗缺口；與既有 Tokenyst（任務層級 token 預算顯示）同屬費用/額度控管工具鏈，但聚焦於「限制與恢復時機」而非「花費金額」
-- **來源：** Hacker News Show HN（07-03，兩則均為個人專案，分數低於工具目錄一般所需分數）
-- **成熟度：** ⏳ 新興（單日兩個獨立小工具同時出現，尚無採用數據，回應的是同晚 Reddit 額度焦慮情緒串所反映的真實痛點，值得後續觀察是否有更成熟工具跟進）
-
-**懸置細節**
-- ⟨Q-05⟩ **ip_reminder 標籤**：原始文章已定位——[dev.to/nomurasan](https://dev.to/nomurasan/i-grepped-my-own-claude-code-logs-and-found-the-hidden-tag-anthropic-never-shows-you-17c0)（2026-07-27 發表，查證日 2026-09-20）。
-  - 作者 grep 自己的 JSONL session log 找到 `<ip_reminder>` 標籤，單一 session 比對出 151 行相符、437 次出現，判定為版權安全用途的系統層注入。
-  - **屬社群逆向工程發現、非官方確認**，且與先前查得的 `<system-reminder>` 標籤（GitHub issue #52018、#17601）不是同一個。
-
-%% 拆頁評估 2026-11-21：不拆，分不出群。正文約 610 行，剛過門檻；三類中 Agent 預算控制只有 1 則約 9 行（太薄），Token／成本優化約 208 行、模型使用策略約 173 行、額度監控與帳號橋接等其他約 180 行，讀者問題都是「怎麼少花錢、怎麼看見花在哪」，目前結論與「用量去向歸因」「用量窗口與配額守門」兩節共用同一組結論（subagent 既是用量來源又是路由對象），切開後每群都得借另一群的結論。模型使用策略受官方定價與模型發布影響最大，若之後一個月內有官方定價事件把路由與監控的讀者問題拉開，再評估切出。 %%
+- **分層模型路由是本月主軸。** 「Fable 5 orchestrates, cheap models execute」（07-14，Reddit 轉載）宣稱 46% 成本達 96% 效能；07-12 與 07-26 兩則作者實務主張相同：只在需要頂尖判斷力的任務用 Fable 5，其餘交給便宜 subagent。
+- 隱藏成本實測：MCP server 設計對每輪對話注入的 token 量（07-21，單一作者第一手量測）；Local Reverse Proxy（07-10）因 Claude Code 不遵守 HTTP_PROXY，自建 loopback 代理攔截完整 prompt、token 與花費。
+- 快取：claude-thermos（07-23）定期保活 prompt cache，HN 討論帶出 Pro/Max 快取到期現為 1 小時、曾短暫退到 5 分鐘，並引發「成本轉嫁」爭議。
+- 額度工具：07-03 出現自動恢復（限制解除即自動 continue）與監控可視化兩類工具，是同類工具最早的一批。
+- 省 token 做法：CaveMan Skill（07-06，單次回覆約 70 降到 20 token，作者自稱）；本地 Ollama task router 分流程式碼探索（07-05）。
+- AWS Bedrock 單日 $8.43（07-12）是 Bedrock 路徑的第一手計費參考。
+- 其餘：作者翻自己的 JSONL 發現官方文件未載的 `<ip_reminder>` 標籤（07-29，原文已查證，查證說明見原文）；InstantVideos 多模型短影音 pipeline（07-07）；Anyclaude-SDK（07-28）與依任務分工選用 Claude 產品線（07-23）僅標題可考。
+- 原始條目見 [[topics/community-tech-patterns-archive#2026-07]]

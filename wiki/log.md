@@ -9386,3 +9386,45 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：候選 1 筆（Postman 桌面版更新未經同意把外掛寫入 Claude Code／Codex 設定檔）／手冊寫入 0 則（候選已 append `data/devpractice-candidates.jsonl`，待週更落地判斷）；基準線已推進至 `31581f439b`
 - market 判讀：新增 2 則（IPO 板塊性賣壓定量為 4 兆美元、承銷商平倉避險倉位護盤），標的表覆寫 2 列（ANT／NVDA），里程碑登記 2 筆，回顧結算 ⏳ 新增 2 列（結算日 2026-12-05）
 - 📋 需使用者端設定：無
+
+## 2026-11-22 週度延伸回顧
+
+- 延伸（執行 5 項）：
+  - [模型] 新建 [[topics/claude-research-results]]：Claude 參與的科研與數學聲稱總表（08-11 zeta 零點下界、09-04 費馬、09-16／10-03 橢圓曲線、11-19 黑洞兩題、11-20 黎曼猜想草稿與 11-21 史丹佛人類證明草稿），逐列標驗證狀態；[[entities/fable-5]] 8 處改為一句指過去。記者為了「不讓全庫懸置標記總數減少」把一條重複的 ❓ 改寫成新題——新題（兩份草稿誰先通過獨立檢驗）本身成立故保留，但去重本來就該走 `--rebuild-count --reason`，不需以新題充數
+  - [社群] [[topics/community-tech-tools]] 新增「用量／token 觀測工具」子區塊 6 個工具（皆 ⏳），Tokendoctor 指向既有辯論條目；與 [[topics/community-cost]] 互連
+  - [功能] [[entities/claude-code-known-issues]] 自平台相容性組分出第十組「Cowork 與雲端排程可靠性」4 條（#100730、#76248、#47180、#27801，皆 🔴 未修復、官方未回應）；`features/pages.md` 同步改十組
+  - [商業] [[topics/anthropic-ipo]]「上市走到哪一格」改為上市後五問；「定價與首日結果」「上市後追蹤」補主編查證的官方結算公告與 NBC 11-20 報導（收盤價無一手來源，寫明未取得）；數字細節加發行規模三口徑對帳（813 億未含超額配售／935 億官方／1,195 億含同步私募；Bloomberg 1,073 億只有標題）；順手更正頁內三處 813 億誤作 81.3 億
+  - [主編] [[feature-radar]] Code Mode 熱度 🔥🔥🔥 → 🔥🔥🔥🔥（11-18 MarkTechPost、36氪，11-19 Dataconomy 三個獨立來源；v2.1.326 起可與 agent teams 並用），試用價值維持 ⏳（「最多省 77%」是媒體轉述）
+- 判定不做（10 項，理由）：
+  - [功能] known-issues「認證與登入」分組——同頁本輪已動一組，兩組並動 diff 不可讀；下次 known-issues 週更再做
+  - [模型] mythos「自主工程能力自述」小節——AMD 移植與 90% 程式碼是兩件不同主體的自述，硬併一節會讓可信度標記更糊
+  - [社群] patterns「多模型路由／多帳號池」新模式——patterns 母頁本輪剛拆子頁與讓位，等下輪 5k 再評
+  - [社群] secret redaction 工具群——3～4 個單點 Show HN，採用訊號不足
+  - [安全政策] 「安全品牌質疑」獨立子頁——多為評論，過收錄判準有疑慮；聯名文已在 [[topics/ai-agent-safety]]
+  - [安全政策] Bloomberg「模型把平民判為軍事目標」——只有標題、單一來源，查不到一手前不立節
+  - [人物] 創辦團隊／Daniela Amodei 側寫——五則多為殼層摘要，只有標題
+  - [人物] Altman「我不知道」併入質疑者脈絡、Alpöge 建頁——前者沒有具體論點，後者只有單一事件
+  - [商業] business-risks「ANT 跌會不會波及 Claude」子區塊——判讀屬 market-signals，事實已在 [[topics/anthropic-ipo]]
+  - [商業] pricing「第三方平台轉嫁 agent 用量」小段——Linked Billing 已有家，案例等 12-01 複查時一起補
+  - [讀者筆記] L35 維持 ⏳——#38536（團隊記憶）是功能請求、#31005（AGENTS.md／`.agents/skills/`）是指令檔格式，相鄰但不是有名字有規格的記憶格式；無 📌 雜記可清
+- 聚焦校準：11 月已於 11-01 執行（46.0%），本次跳過
+- 本機補跑（`/weekly` 步驟 0）：
+  - 5b 跨家榜單週更：12 榜全取得（haiku 直接抓取）。WebDev Fable 5.2 1824 仍居首、與 Opus 5.5 差距由 23 分縮到 5 分；改圖榜 MAI-Image-2.7 新登頂；TTS 榜 StepAudio 3 進前三；文案聊天榜前三全為 Gemini 4；OmniDocBench 頁說明與排序自相矛盾，記入註記
+  - 5c：雲端 11-21 已清零（53 筆），今日佇列 21 筆皆為今日剛到複查日、逾 0 天；依「雲端已完成的步驟不重跑」留給 11-28 lint
+  - lint 遺留事項已做（11-21 本機承接 9 項中 8 項＋11-14 兩項）：
+    - 建 [[entities/claude-meetings]]（事實自四頁收攏）
+    - [[topics/community-integrations]] 拆出 [[topics/community-creative-tools]]（母頁 731 → 484 行），patterns 路由表、community 三份規則檔與 `scripts/patterns_tree_audit.py` 子頁數同步 7 → 8
+    - 5k 讓位第一組（架構邊界合約 → 安全架構）
+    - 3h 蒸餾 16 提案全數執行：社群 8 段、商業 3、人物 3（新建 `entities/simon-willison-archive`）、功能 2、模型 2（新建 `entities/opus-5-archive`）；蒸餾原文照搬觸發讀者語言閘 3 筆，登 `data/reader-language-allow.json` 附理由
+    - `shared.md` 補 feature-radar 的 lint 裁剪例外
+    - 6i：3d／3f 降為月度
+    - 6e：`data/source_registry.json` 新增 `editor-verification`（主編查證通道），11-15 兩個臨時 slug 以 `slug_aliases` 歸位、歸因帳不改寫，`scripts/source_scorecard.py` 支援並補回歸測試
+    - 11-14 的 5g 宣告查核：`git log -S` 證實從未被覆寫，是三輪用不同字串搜不到而重複寫；兩頁各刪一份，sweeps.md 5g 改為「有就更新查核日」
+    - workaround「批次修補試點」到期結案：11-09 起 14 筆平均 45.7 回合，對基線 52.1 只降 12.3%；讀了 batch-edit.md 的 Edit 次數少（5.8 對 17.5）但回合反多（60.2 對 55.0），判定不推全體
+  - lint 遺留事項延後（理由）：`community-multi-agent` 缺口追蹤 12-08 才滿 60 天；patterns 母頁指向子頁 `#2026-07` 的錨點仍有效（子頁保留原標題當總結），改指 archive 留下輪 5k；對抗輪 C 的 20 項規則修訂（`docs/adversarial/2026-11-14-prompt-reviewer.md`）改規則量大，需獨立一輪；加拿大出版商訴訟仍缺訴狀；社群工具目錄 gh 實查（第三方 repo 403）；`devpractice_diff.py consume`
+  - 本輪另修：週報規格把 ⏰ 寫成「到期日已過 → 結案」，與 `check_weekly_ledger.py` 及 W31～W36 實際用法（⏰＝倒數中、續盯）相反，改規格對齊程式
+  - 開放迴路掃描（`open_loops.py`，開工時）：需收尾 2（未 commit `data/pending_queue_history.csv`＋逾期 workaround 1，本輪皆收）｜已跳票 32｜存量遷移 13｜人類質疑時效燈 ✅（20 天，門檻 21）
+- 需使用者端設定：
+  - claude.ai 雲端環境網路白名單改 Custom 並加入 leaderboard 組 12 個榜單網域與 `sec.gov`、`metr.org` 等（⏳ 已擱置 9 週）
+  - 雲端 routine 多 repo session 的專案 hook 全未載入：建議從 routine sources 移除 `anthropics/claude-code`（⏳ 已擱置 1 週）
+  - Reddit API 憑證（workaround 複查日 2026-12-08）

@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-11-21"
 last_news_update: "2026-09-28"
 status_main: "active"
-days_since_news: 54
+days_since_news: 55
 parent: null
 children: "['entities/sonnet-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 54
+days_since_news_subtree: 55
 inbound_links: 20
 attribution_count: 3
 attribution_last: "2026-07-31"
@@ -41,8 +41,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 現況
 
 - **自 2026-09-28 起無新動態**（2026-11-21 查核）：本頁仍被全庫 21 處引用，但停滯是事實而非漏更新——Sonnet 這一代的新消息都落在 [[entities/sonnet-5-5]]，拿它做選型決定前先看那一頁。
-
-**自 2026-09-28 起無新動態（2026-11-14 核）——它已是 Legacy，預設地位由 [[entities/sonnet-5-5]] 接手；本頁留著是因為仍有 21 個頁面指向它。**
 
 **2026-09-28 最新**：Anthropic 發布 [[entities/sonnet-5-5|Claude Sonnet 5.5]]，Claude Code v2.1.284 將其設為 **Anthropic API 預設 Sonnet 模型**；Terminal-Bench 4.0 由本代的 10.3% 升至 70.6%，牌價維持 $2/$10 不變（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。完整換代對照見 [[entities/sonnet-5-5]]。自 2026-09-28 起無新動態（2026-10-31 核）；本代已被 Sonnet 5.5 取代，停滯是事實而非漏更新。
 

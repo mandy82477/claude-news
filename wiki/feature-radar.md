@@ -80,7 +80,7 @@
 | **Enterprise Admin Console 組織登入**（`claude auth login` 自動套用受管組織設定與雲端供應商，v2.1.330） | 2026-11-20 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code Projects 改版**（對話式協調，自動拆解任務／平行協調多工作線，beta） | 2026-11-14 | 🔥🔥 | ⏳ 觀望 | Beta（Claude Code） |
 | **Claude Desktop Release Channel**（選擇 Desktop 更新走哪個版本頻道，Stable 維持現狀） | 2026-11-17 | 🔥 | ⏳ 觀望 | 正式發布 |
-| **Code Mode**（v2.1.323，實驗性選項，預設關閉，Claude 改寫 JavaScript 呼叫自己的工具；v2.1.326 起可與 agent teams 同時開啟） | 2026-11-12 | 🔥🔥🔥 | ⏳ 觀望 | Research Preview |
+| **Code Mode**（v2.1.323，實驗性選項，預設關閉，Claude 改寫 JavaScript 呼叫自己的工具；v2.1.326 起可與 agent teams 同時開啟） | 2026-11-12 | 🔥🔥🔥🔥 | ⏳ 觀望 | Research Preview |
 | **Claude Fable 5.2／Mythos 5.2 發布**（Fable 5.2 為新預設模型，1M context，降價兩成；Mythos 5.2 信任機構限定） | 2026-11-09 | 🔥🔥🔥🔥🔥 | ✅ 強烈推薦（自動套用，無需操作） | 正式發布 |
 | **Claude Whiteboards／Sheets／Data**（Whiteboards、Sheets beta；Dashboards 轉正式版並更名 Claude Data） | 2026-11-10 | 🔥🔥🔥 | ⚡有條件推薦 | Beta／GA（全付費方案） |
 | **Personal Finance**（beta，連結銀行/信用卡/貸款/投資帳戶供分析消費） | 2026-11-05 | 🔥🔥🔥 | ⏳ 觀望 | Beta（範圍未載） |

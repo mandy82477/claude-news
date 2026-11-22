@@ -3,14 +3,14 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-15"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 7
 parent: null
 children: "['topics/code-quality-decline-archive']"
 page_role: "hub"
-days_since_news_subtree: 6
+days_since_news_subtree: 7
 inbound_links: 47
 attribution_count: 55
 attribution_last: "2026-11-15"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-15
 
 > **Fable 5.2 上線後出現額度與 context 體感抱怨，皆為單一來源**（2026-11-15）
@@ -424,15 +424,11 @@ Fable 5.2 於 11-09 發布後，r/ClaudeCode 出現三則額度或 context 抱�
 #### 2026-07-01
 - **Claude Code 成本暴漲討論爆發**：Vincent Schmalbach 發文「Claude Code Just Got 5x More Expensive」登上 HN（score 53），同日 Reddit 出現獨立開發者單月燒 $62,021 token 的具名案例；社群懷疑與模型切換或計費方式變更有關；詳見 [[topics/community-tech-discussions]] 對應條目
 
-### 2026-06
+### 2026-06（總結；原始條目已移出）
 
-#### 2026-06-26
-
-- **自訂 Agent 編排路由失效**：用戶反映 Claude Code 無法可靠路由到自訂 orchestration 中的自訂 providers agents，OpenCode 同設定可穩定執行；問題指向 Claude Code 編排機制的行為不一致性，非模型能力問題；官方尚未回應（Reddit r/ClaudeAI）
-
-#### 2026-06-18
-
-- **LLM 無障礙偏差（Claude Code issue #56079）**：開發者 Aaron Gustafson 揭露：在 CLAUDE.md 已明確指定 WCAG 2.2 AA 規格的專案中，Claude Code 仍將無障礙修復視為可選取捨。模型自述原因是在追求「coding speed」時 accessibility 被降級；Aaron Gustafson 評論此為「值觀優先序偏差」而非知識不足。此偏差複製了人類工程師「稍後再修無障礙」的習慣，AI 未改善既有偏見（2026-06-20 持續追蹤中）
+- **這個月只有兩則，各指向不同層次。** 06-26 用戶反映 Claude Code 無法可靠路由到自訂 orchestration 中的自訂 providers agent，OpenCode 同設定可穩定執行；問題指向編排機制的行為不一致，不是模型能力，官方未回應（Reddit r/ClaudeAI）。
+- 06-18 開發者 Aaron Gustafson 揭露 Claude Code issue #56079：CLAUDE.md 已明確指定 WCAG 2.2 AA 的專案裡，模型仍把無障礙修復當可選取捨，自述原因是追求 coding speed 時降級；他評為優先序偏差而非知識不足（06-20 持續追蹤）。
+- 原始條目見 [[topics/code-quality-decline-archive#2026-06]]
 
 ### 2026-05（總結；原始條目已移出）
 

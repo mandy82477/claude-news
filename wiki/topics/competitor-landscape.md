@@ -3,14 +3,14 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-20"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 82
 attribution_count: 319
 attribution_last: "2026-11-20"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-20
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
@@ -632,69 +632,27 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Inherent**：TechCrunch 報導 DeepMind 校友創立的 Inherent 自宣其 AI「隊友」在複現研究任務上超越 Anthropic 與 OpenAI，未經第三方驗證（Google News/TechCrunch）
 - **灰市轉售**：the-decoder.com 報導中國以遠低於官方定價轉售 Claude API token 額度，管制實效面見 [[topics/anthropic-government-policy]]（Google News/the-decoder.com）
 
-#### 2026-08-22
-- **OpenAI**：36Kr 發表「Codex 是否開始反擊 Claude Code？」，與同日 HN 高分貼文呼應（Google News/36Kr）
+#### 2026-08-01～08-22（時段總結）
 
-#### 2026-08-21
-- **廠商鎖定成本**：Startup Fortune 分析 vendor-locked 編碼 agent 如何在未察覺下推升企業工程成本，無量化數字（Topic Watch）
-- **Slack Code**：VentureBeat 稱 Slack 要把 AI coding 從終端機拖進群組聊天（Google News/VentureBeat）
+- **Meta 進場**：Muse Code／Muse Spark 1.2 發布，明確對標 Claude Code 與 Codex（08-05、08-07）；08-11 開源旗艦 Muse Glimmer，戰線從產品層擴大到模型權重。
+- **中國陣營**：Alibaba 免費開放「最強」模型（08-04，即 Qwen3.8-Max）；Zhipu GLM-5.3 主打資安並點名 Anthropic、OpenAI（08-14～08-17）。
+- **DeepSeek**：公開組建團隊挑戰 Claude Code、V4 Pro 經 OpenRouter 上線（08-13）；開源工具定名 Harness、V4-Pro 開放 API 定價（08-14）。
+- **OpenAI 企業戰線**：新客戶資料隱私承諾（08-19）、「零資料保留」搶 Anthropic 企業客戶（08-20）；36Kr 提出「Codex 是否開始反擊」（08-22）。
+- **GitHub／Cursor／Slack**：Copilot 終結「無限量」方案（08-17）；Cursor 推出 Origin 託管平台（08-17）；Slack Code 讓 Claude 與 ChatGPT 進同一頻道（08-20、08-21）。
+- **定價與成本**：FT／The Information 稱中美定價戰成形（08-14，後續數字見「雷達細節」）；the-decoder 稱 Claude Code 最快但成本近最便宜對手三倍（08-06，已查證數字見「硬答案」）；Kiro、OpenCode 比較文（08-02、08-03）。
+- **評測與估算**：Supabase Evals、quasa.io 彙整（08-01，數字見「查證快照」）；SemiAnalysis 稱 Microsoft 每 GW 推理商機達千億美元（08-10，機構自家估算）。
+- xAI／Grok 新版的待查證標記仍在下方。
 
-#### 2026-08-20
-- **OpenAI**：The Register 報導「零資料保留」承諾正面搶攻 Anthropic 企業客戶；TechCrunch 另引新數據稱 OpenAI 正追近 Anthropic 企業用戶市場（Google News/The Register；Google News/TechCrunch）
-- **Slack Code**：The Next Web 報導 Slack Code 讓 Claude 與 ChatGPT 進入同一頻道協作（Google News/The Next Web）
+原始條目見 [[topics/competitor-landscape-archive#2026-08]]
 
-#### 2026-08-19
-- **OpenAI**：TechCrunch、WSJ 報導 OpenAI 推出新客戶資料隱私承諾，兩家均解讀為針對 Anthropic 隱私訴求的競爭回應（Google News/TechCrunch；WSJ）
-- **新創定價擠壓**：Startup Fortune 分析建構於底層模型 API 之上的新創在成本結構上遭遇的擠壓，僅標題可用（Google News/Startup Fortune）
 
-#### 2026-08-17
-- **GitHub**：Mshale 報導 Copilot 推出新計費模式，終結先前的「無限量」編碼方案，價格級距與生效時程未見（Google News/Mshale）
-- **Cursor**：VentureBeat 報導 Cursor 推出程式碼託管平台 Origin，藉 GitHub 中斷事件切入市場空隙（Google News/VentureBeat）
-- **Zhipu Z.AI**：The Register 稱 Zhipu 新模型抓 bug 能力優於 Anthropic 與 OpenAI，無方法論與分數（Google News/The Register）
-
-#### 2026-08-15
-- **Zhipu Z.AI**：VentureBeat 報導 GLM-5.3 發布主打資安能力，並稱已在 Cursor 找到一個「嚴重漏洞」（Google News/VentureBeat）
-
-#### 2026-08-14
-- **Zhipu Z.AI**：Bloomberg 報導 Z.ai 推出新程式碼生成模型，明確點名 Anthropic、OpenAI 為競爭對手（Google News/Bloomberg.com）
-- **DeepSeek**：VentureBeat 報導開源工具正式定名 Harness、以 Claude Code 直接競品定位問世，同步上線 API 定價較高的 V4-Pro（Google News/VentureBeat）
-- **中美定價戰**：FT 稱 OpenAI 與 Anthropic 因中國對手崛起涉入定價戰；The Information 引研究稱 Anthropic 在特定情境可能更便宜，均無數字（Google News/Financial Times；Google News/The Information）
-
-#### 2026-08-13
-- **DeepSeek**：TradingView、Bloomberg 報導 DeepSeek 公開組建團隊挑戰 Claude Code；KuCoin 與 Simon Willison 報導 V4 Pro 經 OpenRouter 以 API 上線，聲稱逼近 Claude 3 Opus、成本大幅降低（Google News；Blog/Simon Willison）
+#### 2026-08-13（懸置：xAI／Grok）
 - ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-12-14｜訊 2026-09-21）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 僅標題可用，能力提升內容仍未見（Google News/Barron's）
   - 09-21 日報：Grok 4.7 已上線 GitHub Copilot（GitHub changelog），主打 agentic coding——新版確有發布；媒體稱（Decrypt 等，2026-11-14 查）定價 $2／$6 per Mtok、context 50 萬 token，能力數字為 xAI 自報，xAI 官方頁 2026-11-14 連不上，未查證
 - 後續（依 09-07 日報）：版本號為 **Grok 4.5**，shattered.io 稱定價每百萬 token 輸入 2 美元／輸出 6 美元、優於 GPT-5 與 Claude；該說法僅見媒體標題，xAI 官方頁面未查
 - **訊 2026-09-07**：Grok 4.5 官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude（shattered.io，單一來源），為此前訊號補上版本號與定價，詳見「競品定價對照」與「對手雷達」新增列。
 - **訊 2026-09-21**：Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線，官方一手來源（GitHub Copilot Changelog），惟未提供 benchmark 或定價，未直接證實 Barron's 稱「加壓 Anthropic 與 OpenAI」的具體效果，詳見「對手雷達」新增列。
 
-#### 2026-08-11
-- **Meta**：CNBC 與 Simon Willison 報導 Meta 宣布開源其最強模型 Muse Glimmer，戰線從產品層擴大至模型層權重（Google News/CNBC；Blog/Simon Willison）
-
-#### 2026-08-10
-- **Microsoft**：Stocktwits 轉引 SemiAnalysis 討論 Microsoft 能否「Out-AI」OpenAI 與 Anthropic，估算每 GW 推理商機達千億美元（**該機構自家模型的估算，非財報數字**；方法論見 [[topics/anthropic-business]]）（Google News/Stocktwits）
-
-#### 2026-08-07
-- **Meta**：WSJ 報導 Meta 發布程式碼撰寫 agent「Muse Code」，明確對標 OpenAI 與 Anthropic（Google News/WSJ）
-
-#### 2026-08-06
-- **Claude Code 成本**：the-decoder.com 稱 Claude Code 是最快的 agent 框架但成本近最便宜對手三倍，已查證數字見「硬答案」（Google News/the-decoder.com）
-
-#### 2026-08-05
-- **Meta**：CNET、Basic Tutorials、Simon Willison 同日報導 Meta 官方發布 Muse Code 與 Muse Spark 1.2，明確對標 Claude Code 與 Codex（Google News；Blog/Simon Willison）
-
-#### 2026-08-04
-- **Alibaba**：Decrypt 報導阿里巴巴免費開放「最強」AI 模型，宣稱追平 Claude 與 ChatGPT，未指明模型名稱（Google News/Decrypt）
-
-#### 2026-08-03
-- **Kiro（AWS）**：tech-insider.org 發表 Kiro vs Claude Code 比較文，並列 80.8% SWE-bench 與 $200 費用上限兩項數字（Google News/tech-insider.org）
-
-#### 2026-08-02
-- **OpenCode**：tech-insider.org 比較 OpenCode 與 Claude Code 的下載量與定價（Free vs $20），稱 Claude Code 的 npm 下載量約為 OpenCode 的 5.4 倍（npm registry 30 天下載數）；脈絡見 [[entities/opencode]]（Google News/tech-insider.org）
-
-#### 2026-08-01
-- **Supabase Evals**：MarkTechPost 報導 Supabase 推出開源評測套件，以真實任務對 Claude Code、Codex、OpenCode 評分（Google News/MarkTechPost）
-- **OpenAI**：quasa.io 彙整已公開的程式碼測試結果比較 Claude Code 與 Codex，數字見「查證快照」（Google News/quasa.io）
 
 ---
 

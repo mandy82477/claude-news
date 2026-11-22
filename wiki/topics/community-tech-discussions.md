@@ -3,15 +3,15 @@ page: "topics/community-tech-discussions"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-17"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
-days_since_news_subtree: 4
-inbound_links: 55
+days_since_news_subtree: 5
+inbound_links: 57
 attribution_count: 206
 attribution_last: "2026-11-17"
 top_source: "hacker-news"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-17
 
 > **Show HN: Tokendoctor 分析 Claude Code token 浪費，留言為「省 token 未必更好」提反例**（2026-11-17）
@@ -156,7 +156,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
 | Show HN: Tokendoctor——分析 Claude Code token 浪費，留言為「省 token 未必更好」提反例 | 2026-11-17 · 2026-11-17 | 🔥 | ☄️閃現 | 開發者推出工具分析 token 浪費；留言反駁稱砍 token 可能犧牲品質，加大 context 反而減少重做（2026-11-17） | — |
-| Claude Meetings beta 公告登上 Hacker News 首頁 | 2026-11-14 · 2026-11-14 | 🔥🔥🔥 | ☄️閃現 | Claude Meetings（11-10 beta，Team／Enterprise）讓 Claude 以可見參與者身分加入視訊會議並同步做事；HN 104 分（單源，待社群接力） | — |
+| Claude Meetings beta 公告登上 Hacker News 首頁 | 2026-11-14 · 2026-11-14 | 🔥🔥🔥 | ☄️閃現 | 官方介紹文登 HN 首頁，功能本身見 [[entities/claude-meetings]]；HN 104 分（單源，待社群接力） | — |
 | Show HN: STE80 Humanizer——以簡化技術英文規則去除文字 AI 腔的工具 | 2026-11-10 · 2026-11-10 | 🔥🔥🔥 | ☄️閃現 | 有人指它是去 AI 化而非擬人化；另有留言稱 STE 風格寫進 Claude 全域指示後，Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述）；HN 102 分 | — |
 | r/ClaudeCode 週熱門：團隊一年前起 100% AI 強制令，如今沒人看得懂自己的程式碼 | 2026-11-07 · 2026-11-07 | 🔥 | ☄️閃現 | 團隊一年前要求全面改用 agent 寫程式、人工撰寫需附理由，前六個月出貨變快；呼應「現在吵到哪」第 1 列，該列由僵住轉回還在吵；Reddit r/ClaudeCode 週熱門（0 留言，無獨立佐證） | — |
 | Reddit r/ClaudeCode 週熱門：使用者擔心 agentic 能力終將被 Anthropic 收回限縮 | 2026-11-04 · 2026-11-04 | 🔥 | ☄️閃現 | 擔心未來 agentic 功能被收回或限縮，認為這項能力對一般使用者與中高階技術用戶過於有用；Reddit r/ClaudeCode 週熱門（0 留言，無獨立佐證） | — |
@@ -209,7 +209,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 **最近在討論什麼細節**
 
 - **Show HN: Tokendoctor——分析 Claude Code token 浪費的工具**：開發者推出工具分析使用者 Claude Code 的 token 用量中有多少被浪費；留言反駁稱一味砍 token 可能犧牲輸出品質，自己改用加大 context 換到更少需要重做的結果；HN score 31；[原文](https://github.com/localixai/tokendoctor)（HN）
-- **Claude Meetings beta 公告登上 Hacker News 首頁**：11-10 beta 發布（Team／Enterprise），Claude 可見參與者身分加入視訊會議、邊聽邊動手做事；未附留言內容；HN score 104（單源，待社群接力）；[原文](https://claude.com/resources/articles/claude-meetings)（HN）
+- **Claude Meetings beta 公告登上 Hacker News 首頁**：功能事實見 [[entities/claude-meetings]]；未附留言內容；HN score 104（單源，待社群接力）；[原文](https://claude.com/resources/articles/claude-meetings)（HN）
 - **Show HN: STE80 Humanizer——以 ASD-STE100 簡化技術英文規則去除文字 AI 腔**：HN score 102（2 個來源）；留言區認為它是去 AI 化、不是擬人化；有人把 STE 風格寫進 Claude 全域指示，稱 Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述，未附測試方法）；[原文](https://github.com/Dodaios/ste80-humanizer)（HN）
 - **Show HN: HackerBooks——找 Claude（Opus 5.5）寫出約 1.65 萬本 HN 推薦書的網站**：作者看到 Karpathy 的 HackerTube 後找 Claude 全程編寫，整理出至少兩位留言者提過的約 1.65 萬本書；HN score 105；[原文](https://hackerbooks.org)（HN）
 - **Show HN: BBRouter——Ben Eater 8 位元電腦 3D 虛擬麵包板，支援 MCP 讓 Claude 協助除錯**：作者做出逼真的虛擬麵包板編輯器，具並排 diff、電路圖自動同步、自動佈線；可透過 MCP 接上 Claude 協助除錯；HN score 43（2 個來源）；[原文](https://bbrouter.com/bbrouter/ben-eater-sap-1)（HN）
@@ -273,7 +273,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 #### Claude Meetings beta 公告登上 Hacker News 首頁，拿下 104 分討論（2026-11-14）
 
 - **來源：** 「Introducing Claude Meetings」（HN Repo Bridge，104 分）；[官方介紹](https://claude.com/resources/articles/claude-meetings)
-- **核心論點：** Claude Meetings 已於 11-10 以 beta 形式發布（Team／Enterprise 方案），讓 Claude 以可見參與者身分加入視訊會議、邊聽邊動手做事，會中可用語音或文字提問、預設以文字回答；本則為該公告於 Hacker News 拿到 104 分討論。
+- **核心論點：** 功能事實見 [[entities/claude-meetings]]；本則為該官方公告於 Hacker News 拿到 104 分討論。
 - **收斂結論：**（無）本次摘要未附留言內容，僅見官方公告文字與 HN 分數；屬官方功能公告獲高互動度，非觀念爭論。
 
 #### Anthropic 被指無預警拿掉 Claude Code 既有功能，留言稱此做法在 Claude Code 與 Kiro 已成常態（2026-11-13）
@@ -514,7 +514,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 - **來源：** Show HN: A Claude Code skill to analyze your chess games — Hacker News（74 分，2 個來源同日報導）；[原文](https://github.com/brumar/chess-postmortem-skills)
 - **核心論點：** 作者實驗讓 Claude 用視覺而非棋譜記號看棋局，證實可行；再讓 Claude 結合 Stockfish 解說對局，也證實可行；最終做出一套系統，輸入語音筆記與「分析我上一場 lichess 對局」之類的模糊指示，即可產出附講解的棋局影片，作者估算一局分析約耗費 15 美元 API 額度
 - **關鍵回響：**（2 個來源同日報導，本次摘要未提供留言區細節）
-- **收斂結論：**（無）單一團隊 skill 發布，尚無社群採用回饋數據；工具本身已同步收錄至 [[topics/community-integrations#2026-09]]「創意工具 Agent 整合」
+- **收斂結論：**（無）單一團隊 skill 發布，尚無社群採用回饋數據；工具本身已同步收錄至 [[topics/community-creative-tools#2026-09]]「創意工具 Agent 整合」
 
 #### Jevmem 發布引出兩條質疑：AI 寫的 README 說得清細節卻說不清核心價值；「舊記錄標過時不刪除」設計恐讓 context 累積過期資訊（2026-09-26）
 

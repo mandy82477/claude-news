@@ -4,14 +4,14 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-21"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/dario-amodei-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 35
 attribution_count: 60
 attribution_last: "2026-11-21"
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-21
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
@@ -250,22 +250,10 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 - 2026-09-13：接受 CNBC 專訪稱中國是其所提 AI 減速方案中「最棘手的兩難」（來源：Hacker News（10分）／CNBC）
 - 2026-09-13：公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持暫緩，安全治理角度完整討論見 [[topics/recursive-self-improvement]]（來源：Hacker News／BBC、VentureBeat，2026-09-13）
 
-### 2026-08
-
-- 2026-08-28：Business Insider 報導 Dario Amodei 公開回應外界對 AI 威脅論的疑慮，稱 Anthropic「無意摧毀任何人」（"not interested in destroying anyone"）；僅標題與轉址連結可用，發言的具體場合與完整脈絡未見報導，查證狀態見上方公開立場表格標記（來源：Google News／Business Insider）
-- 2026-08-26：與 Salesforce 董事長暨執行長 Marc Benioff 共同接受 CNBC《Closing Bell: Overtime》主持人 Jim Cramer 專訪，CNBC 公開完整逐字稿；日報僅載逐字稿已公開一事，未節錄任何具體發言內容，合作動態詳見 [[topics/anthropic-business]]（來源：Google News／CNBC）
-- 2026-08-24：Fortune 發表評論文章〈What Anthropic's Dario Amodei can learn from the airline industry's lesson on marketing and safety〉，以航空業在行銷與安全議題上的經驗為借鏡討論 Dario Amodei 可以從中學到什麼；僅標題可用，具體論點與建議內容未見報導，查證狀態見頁首標記（來源：Google News／Fortune）
-- 2026-08-17：Fidji Simo（非 Anthropic 人員）公開表態同意 Dario Amodei 稱「AI 可治癒所有疾病」的說法，呼應其 08-16 主張唯有具體科學突破才能扭轉大眾對 AI 不信任的論述（來源：Google News／Business Insider）
-- 2026-08-16：Dario Amodei 在 X 上發表兩則具名表態，均為本人第一手發言：（1）回應投資人 Gavin Baker（於 All-In podcast 及 X 上）批評其「過度悲觀描繪 AI」，稱大眾對 AI 的反彈「根本上是一場信任危機」（TechCrunch，另有 Google News 同題報導）；（2）稱扭轉大眾對 AI 不信任的唯一辦法是產業交出具體科學突破，並舉「治癒癌症」為例（Business Insider；同事件另有標題含「actually」一詞的 Google News／Business Insider 版本，交叉核對內容一致）。Simon Willison 部落格〈Quoting Dario Amodei〉引述其 X 原文全文：「I do agree that the public has a negative view of AI (and that this is a big problem), but I don't think it is primarily...」，作為此事件的第一手佐證來源（來源：Hacker News／Business Insider、Hacker News／TechCrunch、Google News／Business Insider、Simon Willison Blog，2026-08-16）
-
-> 🔎 **查無官方**（標 2026-08-10｜查 Axios、Yahoo Finance｜訊 2026-08-24｜複 2026-09-30）｜**人才招募疑慮延燒**（2026-08-07 報導）：Axios 報導（經 Yahoo Finance 轉載）稱 Dario Amodei 據稱憂心新進員工只為高薪而非公司使命加入 Anthropic，並對照公司同期開出年薪 32-40 萬美元的活動企劃負責人職缺，遠高於市場行情；為二手轉述，具體發言未經證實。**後續**（2026-08-24）：Axios 獨家報導（news/2026-08-24、2026-08-25 兩則跟進）證實 Anthropic 面試流程中會直接詢問候選人如何看待「使命」與「金錢」的優先順序，甚至問「若公司未來因安全考量放棄 AI 願景導致股票歸零，你會作何感受」；此為公司官方招募實務的獨立報導，與 08-07 憂慮傳言方向一致。**（2026-08-30 查證）**Anthropic 官方管道未刊載該發言，Axios 原文為付費牆二手轉述——**招募實務已由獨立報導證實，但 Dario 本人的具體發言場合與逐字稿查無官方紀錄**，改標查無官方。
-
-- 2026-08-07：Axios 報導（經 Yahoo Finance 轉載）稱 Dario Amodei 據稱憂心新進員工僅為薪資而非公司使命加入 Anthropic，與 08-03 Techmeme／The Next Web 報導同一主題的後續補充；報導另附帶對照——公司同期開出一則活動企劃負責人（brand marketing events lead）職缺，年薪達 32-40 萬美元，遠高於同類職位市場行情；具體發言場合與逐字稿仍未能取得（查證狀態見上方標記）（來源：Hacker News 50分／Yahoo Finance／Axios）
-> **The Information 深度剖析**（2026-08-06 報導）
-> 《How Dario Amodei Spread Anthropic's Religion and Stirred Up Silicon Valley》的論旨：Amodei 以小圈子決策、安全優先世界觀與高員工向心力領導公司，日常管理多半下放；這股信念造就成長最快的大型 AI 公司，但他對就業衝擊、生存風險與監管的示警，正在 IPO 前夕疏遠投資人、對手與部分美國政府（[The Information](https://www.theinformation.com/articles/dario-amodei-spread-anthropics-religion-stirred-silicon-valley)，經 Dealroom 摘要，2026-09-06 查證）。全文付費牆，逐字引述未取得。
-
-- 2026-08-06：The Information 發布深度剖析報導《How Dario Amodei Spread Anthropic's Religion and Stirred Up Silicon Valley》，探討其個人影響力對矽谷的攪動與外界對 Anthropic 企業文化的觀感；原文僅標題層級資訊可用（來源：Google News／The Information）。**後續（2026-09-06）：** 查得該文論旨——小圈子決策、安全優先、日常管理下放，而其對就業衝擊與監管的示警正在 IPO 前夕疏遠投資人、對手與部分美國政府；全文付費牆，逐字引述仍未取得
-- 2026-08-03：憂心部分員工是為金錢而非公司使命加入 Anthropic；Hacker News（經 Twitter/Techmeme，11 分）討論反應兩極——有人認為多數人本就為錢工作，也有人認為這是科技業近 30 年被資本侵蝕的縮影；The Next Web 同步以「Anthropic's CEO says staff want money over mission」為題報導，與 Techmeme 互為佐證（來源：Hacker News/Techmeme、The Next Web，2026-08-03）。**後續（2026-09-06）：** 查證確認此非公開發言，而是 Amodei 對同事的內部談話、由 Axios 引述知情人士轉述，故無場合與逐字稿可查
+- 2026-08（總結）：原始條目見 [[entities/dario-amodei-archive#2026-08]]
+  - 08-16 兩則 X 第一手表態：大眾反彈「根本上是信任危機」、須交出具體科學突破（如治癒癌症）才能扭轉不信任（Simon Willison 引原文；Fidji Simo 08-17 附議）
+  - 08-03～08-07 內部談話憂心員工為錢而來（Axios 引知情人士，非公開發言，無逐字稿）；08-06 The Information 深度剖析
+  - 08-24 Fortune 航空業評論、08-26 與 Benioff 接受 CNBC 專訪、08-28 稱「無意摧毀任何人」
 - 2026-07（總結）：原始條目見 [[entities/dario-amodei-archive#2026-07]]
   - 個人捐款 100 萬美元予 Public First，FEC 申報確認捐款人即本人（07-16，三筆捐款關係見 [[topics/anthropic-government-policy]]）
   - STAT News 專訪坦承「壓縮 21 世紀」願景目前還做不到（07-06）；Anthropic Blog 發表開源權重模型立場聲明（07-28）

@@ -3,14 +3,14 @@ page: "topics/competitor-landscape-archive"
 kind: "topic"
 status: "resolved（封存頁）"
 domain: "💼 商業"
-last_updated: "2026-10-25"
+last_updated: "2026-11-22"
 last_news_update: "2026-05-23"
 status_main: "resolved"
-days_since_news: 182
+days_since_news: 183
 parent: "topics/competitor-landscape"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 182
+days_since_news_subtree: 183
 inbound_links: 0
 attribution_count: 0
 attribution_last: null
@@ -29,13 +29,73 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/competitor-landscape]]
 **開始日期：** 2026-04-24
-**最後更新：** 2026-10-25
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-05-23
 
 > **原始條目封存**（2026-09-04）
 > 本頁為 [[topics/competitor-landscape]] 的時序原始條目封存，一字未刪；重點層（時段總結、競品定價對照、主要競品追蹤）見主頁。
 
 ---
+
+## 2026-08
+
+### 2026-08-22
+- **OpenAI**：36Kr 發表「Codex 是否開始反擊 Claude Code？」，與同日 HN 高分貼文呼應（Google News/36Kr）
+
+### 2026-08-21
+- **廠商鎖定成本**：Startup Fortune 分析 vendor-locked 編碼 agent 如何在未察覺下推升企業工程成本，無量化數字（Topic Watch）
+- **Slack Code**：VentureBeat 稱 Slack 要把 AI coding 從終端機拖進群組聊天（Google News/VentureBeat）
+
+### 2026-08-20
+- **OpenAI**：The Register 報導「零資料保留」承諾正面搶攻 Anthropic 企業客戶；TechCrunch 另引新數據稱 OpenAI 正追近 Anthropic 企業用戶市場（Google News/The Register；Google News/TechCrunch）
+- **Slack Code**：The Next Web 報導 Slack Code 讓 Claude 與 ChatGPT 進入同一頻道協作（Google News/The Next Web）
+
+### 2026-08-19
+- **OpenAI**：TechCrunch、WSJ 報導 OpenAI 推出新客戶資料隱私承諾，兩家均解讀為針對 Anthropic 隱私訴求的競爭回應（Google News/TechCrunch；WSJ）
+- **新創定價擠壓**：Startup Fortune 分析建構於底層模型 API 之上的新創在成本結構上遭遇的擠壓，僅標題可用（Google News/Startup Fortune）
+
+### 2026-08-17
+- **GitHub**：Mshale 報導 Copilot 推出新計費模式，終結先前的「無限量」編碼方案，價格級距與生效時程未見（Google News/Mshale）
+- **Cursor**：VentureBeat 報導 Cursor 推出程式碼託管平台 Origin，藉 GitHub 中斷事件切入市場空隙（Google News/VentureBeat）
+- **Zhipu Z.AI**：The Register 稱 Zhipu 新模型抓 bug 能力優於 Anthropic 與 OpenAI，無方法論與分數（Google News/The Register）
+
+### 2026-08-15
+- **Zhipu Z.AI**：VentureBeat 報導 GLM-5.3 發布主打資安能力，並稱已在 Cursor 找到一個「嚴重漏洞」（Google News/VentureBeat）
+
+### 2026-08-14
+- **Zhipu Z.AI**：Bloomberg 報導 Z.ai 推出新程式碼生成模型，明確點名 Anthropic、OpenAI 為競爭對手（Google News/Bloomberg.com）
+- **DeepSeek**：VentureBeat 報導開源工具正式定名 Harness、以 Claude Code 直接競品定位問世，同步上線 API 定價較高的 V4-Pro（Google News/VentureBeat）
+- **中美定價戰**：FT 稱 OpenAI 與 Anthropic 因中國對手崛起涉入定價戰；The Information 引研究稱 Anthropic 在特定情境可能更便宜，均無數字（Google News/Financial Times；Google News/The Information）
+
+### 2026-08-13
+- **DeepSeek**：TradingView、Bloomberg 報導 DeepSeek 公開組建團隊挑戰 Claude Code；KuCoin 與 Simon Willison 報導 V4 Pro 經 OpenRouter 以 API 上線，聲稱逼近 Claude 3 Opus、成本大幅降低（Google News；Blog/Simon Willison）
+### 2026-08-11
+- **Meta**：CNBC 與 Simon Willison 報導 Meta 宣布開源其最強模型 Muse Glimmer，戰線從產品層擴大至模型層權重（Google News/CNBC；Blog/Simon Willison）
+
+### 2026-08-10
+- **Microsoft**：Stocktwits 轉引 SemiAnalysis 討論 Microsoft 能否「Out-AI」OpenAI 與 Anthropic，估算每 GW 推理商機達千億美元（**該機構自家模型的估算，非財報數字**；方法論見 [[topics/anthropic-business]]）（Google News/Stocktwits）
+
+### 2026-08-07
+- **Meta**：WSJ 報導 Meta 發布程式碼撰寫 agent「Muse Code」，明確對標 OpenAI 與 Anthropic（Google News/WSJ）
+
+### 2026-08-06
+- **Claude Code 成本**：the-decoder.com 稱 Claude Code 是最快的 agent 框架但成本近最便宜對手三倍，已查證數字見「硬答案」（Google News/the-decoder.com）
+
+### 2026-08-05
+- **Meta**：CNET、Basic Tutorials、Simon Willison 同日報導 Meta 官方發布 Muse Code 與 Muse Spark 1.2，明確對標 Claude Code 與 Codex（Google News；Blog/Simon Willison）
+
+### 2026-08-04
+- **Alibaba**：Decrypt 報導阿里巴巴免費開放「最強」AI 模型，宣稱追平 Claude 與 ChatGPT，未指明模型名稱（Google News/Decrypt）
+
+### 2026-08-03
+- **Kiro（AWS）**：tech-insider.org 發表 Kiro vs Claude Code 比較文，並列 80.8% SWE-bench 與 $200 費用上限兩項數字（Google News/tech-insider.org）
+
+### 2026-08-02
+- **OpenCode**：tech-insider.org 比較 OpenCode 與 Claude Code 的下載量與定價（Free vs $20），稱 Claude Code 的 npm 下載量約為 OpenCode 的 5.4 倍（npm registry 30 天下載數）；脈絡見 [[entities/opencode]]（Google News/tech-insider.org）
+
+### 2026-08-01
+- **Supabase Evals**：MarkTechPost 報導 Supabase 推出開源評測套件，以真實任務對 Claude Code、Codex、OpenCode 評分（Google News/MarkTechPost）
+- **OpenAI**：quasa.io 彙整已公開的程式碼測試結果比較 Claude Code 與 Codex，數字見「查證快照」（Google News/quasa.io）
 
 ## 2026-07
 

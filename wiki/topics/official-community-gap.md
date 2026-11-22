@@ -3,15 +3,15 @@ page: "topics/official-community-gap"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-14"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 7
+days_since_news_subtree: 8
 inbound_links: 42
 attribution_count: 20
 attribution_last: "2026-11-14"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **開始日期：** 2026-05-17
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-14
 
 > **官方補了沒更新**（2026-11-14）
@@ -257,37 +257,15 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 - **新增矩陣列「Agent 間商業/支付基礎設施」**：internet-court-skill（2026-08-18 首見，5,317★）提出 agent-to-agent 經濟往來信任層方案（自然語言協議＋ERC-7710＋x402 支付＋爭議仲裁），官方無任何對應，新增 ❌ 無官方對應列；工具星數缺乏 forks/issues 佐證，證據強度標注保留。
 - **評估 dev.to「7 of My 8 Claude Code Agents Had Zero Calls」不新增矩陣列**：作者盤點自訂 subagent 使用紀錄、建立殭屍 agent 自動偵測機制，屬單一使用者第一手實測而非工具/repo，證據密度不足以獨立成列；與 ⟨G-09⟩ 多平行 agent 即時可觀測性談的「執行中誰卡住」不同層（本則談的是「哪些配置的 agent 從未被呼叫」），暫不歸入任何既有列，待更多獨立案例佐證同類「agent 使用率/生命週期監控」需求再評估。
 
-### 2026-08-25
-- **「跨 session 記憶持久化」新增兩個代表社群工具**：ambient-context（Show HN，score 51，Accessibility API 讀螢幕文字寫成 Markdown 日誌）與 mindmuxai/brain.md（GitHub Search，504★，零依賴檔案式跨 session「專案大腦」）；兩者取徑不同於既有 OKF／OzBrain，但均未觸及官方 Dreaming 尚未涵蓋的缺口，矩陣狀態維持 🧪 部分產品化。另評估同日新增的 rsmdt/the-startup（commands／skills／agents 打包套件）與 l3a0/claude-plugins 的 Kindle highlights OCR skill：前者屬既有「打包驗證過配置」取向的另一實例，非新工作模式，不對應任何矩陣列；後者為特定消費服務（Kindle）的個人化 OCR 應用，非可與官方 agent 工作模式路線圖比較的一般性痛點，兩者均不新增矩陣列。
+### 2026-08 時段總結
+- 「Agent 間直接通訊協定」列從媒體報導（08-08，❌ 升 🧪）到官方文件確認（08-09，v2.1.224 以上、macOS／Linux、`ListAgents`＋`SendMessage`），#24798 修復；跨機器 A2A（#28300）涵蓋範圍未載
+- 官方補強：v2.1.232 subagent forking 預設開啟（08-13）、v2.1.222 worktree session 隔離漏洞修復（08-04）；「跨 session 記憶」新增 OzBrain、ambient-context、brain.md 等社群工具，#14227 與 #34556 合計 96 則留言，狀態維持 ⏳／🧪
+- 原始條目見 [[topics/official-community-gap-archive#2026-08]]
 
-### 2026-08-23
-- **「跨 session 記憶持久化」代表社群工具新增 OzBrain**：2026-08-21 Show HN 發布，鎖定跨 agent／團隊共享知識庫（而非單一使用者跨 session 記憶），主張取代傳統筆記/任務管理工具；矩陣狀態維持 🧪 部分產品化（Dreaming 未觸及團隊共享面向）
-- **「Subagent 派工/編排」新增子項缺口回報**：GitHub issue #24316 反映自訂 `.claude/agents/` 定義無法加入 agent team 作為隊友；矩陣狀態維持 ✅ 已產品化，缺口分析欄補記此子項
-
-### 2026-08-13
-- **v2.1.232：Subagent forking 預設開啟**：帶 `subagent_type: "fork"` 的 subagent 現在預設繼承完整對話與 prompt cache；「Subagent 派工/編排」的官方對應再進一步降低手動設定門檻，矩陣狀態維持 ✅ 已產品化
-
-### 2026-08-09
-- **「Agent 間直接通訊協定」列官方文件確認（取代媒體報導階段）**：官方文件（code.claude.com/docs/en/cross-session-messaging）正式確認 Claude Code 跨 session 訊息互通功能，需 v2.1.224 以上版本、限 macOS／Linux，工具為 `ListAgents`＋`SendMessage`；已知問題 #24798 狀態由懸置轉為 ✅ 已修復 v2.1.224，矩陣狀態維持 🧪 部分產品化（同機通訊已確認，跨機器 A2A 需求 #28300 涵蓋範圍未載明）
-- **「跨 session 記憶」缺口新增獨立訴求範例**：GitHub issue #14227（跨 session 持久記憶，34 則留言）與既有 #34556（跨 compaction 記憶，62 則留言）合計 96 則留言，凸顯此缺口官方仍無直接對應；矩陣狀態維持 ⏳ 正在做但不夠
-
-### 2026-08-08
-- **「Agent 間直接通訊協定」列首度出現官方對應線索（未經 changelog 證實）**：MacRumors、The Mac Observer、biggo.com、Inshorts、9to5Mac 五家媒體同步報導 Claude Code 新增跨 session 訊息互通功能（macOS/Linux），直接呼應 issue #24798、#28300 的長期訴求；GitHub release 資料查無對應 changelog 條目，暫無法確認具體版本號，矩陣狀態從 ❌ 升為 🧪 部分產品化（媒體報導，未經官方 changelog 證實）
-
-### 2026-08-04
-- **v2.1.222：worktree session 隔離漏洞修復**：修復 worktree-isolated session 與其 subagent 可對主 checkout 執行破壞性 git 指令的問題，隔離範圍擴大至每個 session 的檔案編輯與 Bash 執行；「安全隔離」對照矩陣列的官方對應清單新增此修復，矩陣狀態維持 ✅ 高度對應
-
-### 2026-07-22
-- **v2.1.218：`/code-review` 改為背景 subagent 執行**：「多代理 PR/程式碼審查」的官方對應再進一步——審查工作不再佔用對話內容，且維持 stacked slash commands 作為審查對象；矩陣狀態維持 🧪 部分產品化，社群「adversarial 多模型審查」說法的對照數據仍缺
-
-### 2026-07-17
-- **v2.1.212：`/fork` 改為背景 session 化，`/subtask` 承接同 session 子 agent 語意**：「Subagent 派工/編排」的指令介面更明確拆分為「多開背景 session」與「同 session 委派」；「多平行 agent 即時可觀測性」缺口的列表管理面再進一步，但仍非即時依賴關係 live map，矩陣狀態維持 ❌ 無官方對應
-
-### 2026-07-15
-- **v2.1.211 新增 `--forward-subagent-text` 旗標，為「多平行 agent 即時可觀測性」缺口提供官方資料來源**：`stream-json` 輸出可包含 subagent 文字與思考內容，讓社群建構觀測/監控工具時不必自行拼湊資料來源；但官方仍未推出 live map 類產品，矩陣狀態維持 ❌ 無官方對應
-
-### 2026-07-08
-- **Claude Cowork 正式擴展至行動裝置與網頁版**：首波開放 Max 訂閱用戶，任務可雲端持續執行、涵蓋政府機構客戶；「平台可及性」缺口的輸入操作面首度正式填補（先前僅 Artifacts 覆蓋輸出面），矩陣狀態維持 ⚡ 部分對應（官方稱完整體驗仍限桌面版）
+### 2026-07 時段總結
+- 「Subagent 派工/編排」「多平行 agent 即時可觀測性」持續補強：v2.1.211 `--forward-subagent-text`（07-15）、v2.1.212 `/fork` 背景 session 化與 `/subtask`（07-17），但仍無 live map，維持 ❌；`/code-review` 改背景 subagent（v2.1.218，07-22）
+- Claude Cowork 擴展至行動裝置與網頁版（07-08，首波 Max），「平台可及性」輸入面首度填補，維持 ⚡
+- 原始條目見 [[topics/official-community-gap-archive#2026-07]]
 
 ### 2026-06 時段總結
 - 「平台可及性」缺口本月首度部分填補：Claude Code Artifacts（06-18，輸出共享）升矩陣狀態至 ⚡；官方研究揭露 40 萬場 session 顯示領域專業度是效能倍增器（06-26），並同步測試 Cowork 行動版

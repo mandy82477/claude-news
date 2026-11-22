@@ -4,15 +4,15 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-21"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
-inbound_links: 22
+days_since_news_subtree: 1
+inbound_links: 23
 attribution_count: 77
 attribution_last: "2026-11-21"
 top_source: "github-issues"
@@ -26,16 +26,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Code 已知問題：哪裡壞、修了沒、怎麼繞
 
-某個 bug 修了沒、誰會遇到、有沒有繞法：Claude Code 自身故障的逐條清單，依主題分九組。
+某個 bug 修了沒、誰會遇到、有沒有繞法：Claude Code 自身故障的逐條清單，依主題分十組。
 
 **類型：** product
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-21
-%% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
+%% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬（2026-11-22 另立第十組 Cowork 與雲端排程可靠性）；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
 > **最新動態**（2026-11-21）
 > - **互動數更新**：Cowork 工作區啟動失敗「VM service not running」，重開機未解（#27801，73 則留言、42 讚）。
@@ -367,12 +367,27 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（106 條未修復、3 條已修復、3 條查無官方）
+### ☁️ Cowork 與雲端排程可靠性（4 條未修復）
+
+> 症狀分三類：授權被擋、排程不記權限、工作區起不來。四條皆為 🔴，留言數快照日見各條，目前皆未見官方回應。
+
+**授權被擋**
+
+- 🔴 **未修復**｜**Cowork 雲端 session 的 auto mode 分類器擋下帳號擁有者自己的 `Cowork Run Routine Now` 排程與自己機器間的檔案傳輸（GitHub issue #100730，26 則留言，快照 2026-11-15）**：用 Cowork 排程或多機傳檔的人會被判成未授權而卡住；官方尚未回應；關聯 #97613。
+- 🔴 **未修復**｜**Cloud／Cowork 的 git proxy 以「not in this session's authorized repository set」擋下清單外 repo 的 push，自帶 PAT 亦失效（GitHub issue #76248，42 則留言、19 個讚，快照 2026-11-16）**：疑與 `CCR_TEST_GITPROXY` 調整有關；官方未回應。
+
+**排程不記權限**
+
+- 🔴 **未修復**｜**macOS 上 Cowork 排程任務忽略「Always allow」資料夾／工具權限，每次執行都重跳確認（GitHub issue #47180，41 則留言、48 個讚，快照 2026-11-16）**：無人值守排程每次觸發都卡在等人按確認；官方尚未回應。
+
+**工作區起不來**
+
+- 🔴 **未修復**｜**Cowork 顯示「Failed to start Claude's workspace」，VM service not running，重開機後依然（GitHub issue #27801，73 則留言、42 個讚，快照 2026-11-21）**：Windows 另有多起 Cowork VM 啟動失敗，見下方「平台相容性」組的 Windows 說明；官方尚未回應。
+
+### 🔌 平台相容性（102 條未修復、3 條已修復、3 條查無官方）
 
 - 🔴 **未修復**｜**VS Code 擴充套件無故遺失對話紀錄（GitHub issue #29017，累積 35 則留言、27 個讚，2026-11-18）**：依賴對話歷史接續任務的使用者受影響；官方尚未回應或提供修復時程。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援重新命名分頁（GitHub issue #11145，累積 33 則留言、94 個讚，2026-11-18）**：方便整理多個並行對話；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**Auto mode 分類器誤擋帳號擁有者自己的排程任務與跨機器檔案傳輸（Cowork 雲端 session，GitHub issue #100730，累積 26 則留言，2026-11-15）**：把擁有者自己排定的排程任務與機器間檔案傳輸都判定為需額外確認而擋下；官方尚未回應。
-  - 備註：與既有 auto mode 分類器誤擋已授權操作的回報（#97613）相關。
 - 🔴 **未修復**｜**功能請求：Claude Desktop 的 Code 分頁新增字體大小調整選項（GitHub issue #48237，累積 37 則留言、135 個讚，2026-11-15）**：反應數遠高於留言數，顯示訴求集中；常在 Desktop Code 分頁看程式碼、覺得字級不合用的人反映最多；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**Desktop 2.37337.1：側邊欄改版後 Code 分頁 Routines 區塊被隱藏，且每次重啟都重設回隱藏（GitHub issue #102142，累積 23 則留言、16 個讚，2026-11-15）**：靠 Routines 區塊管理排程任務的人每次重開都須手動叫出；官方尚未回應。
   - 備註：與既有側邊欄「Group by」自訂分組被移除（#102088）同屬同一輪側邊欄改版的回歸，但現象不同，暫分列。
@@ -396,10 +411,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 另有獨立 issue #16345（累積 33 則留言、58 個讚，2026-10-20）提出相同訴求，引用 Agent Skills 標準（agentskills.io）將 `.agents/skills/` 列為建議共用路徑；官方尚未回應。
 - 🔴 **未修復**｜**Desktop 2.37337.1：Code 分頁側邊欄「Group by」自訂分組選項被移除，session 現在只能按環境分組（GitHub issue #102088，累積 54 則留言、38 個讚，2026-10-16）**：桌面版更新後側邊欄不再提供自訂分組，同時管理大量 session 的使用者只能依環境分組；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件聊天面板拖放檔案失效，終端機 CLI 模式正常，回報為退化（GitHub issue #25128，累積 41 則留言、63 個讚，2026-10-15 首見，2026-11-19 互動數更新）**：拖放功能在終端機／CLI 模式完全正常，VS Code 擴充套件聊天面板卻完全無法使用，回報者指出為 regression；官方尚未回應。
-- 🔴 **未修復**｜**Cowork 排程任務在 macOS 無法套用「永遠允許」資料夾／工具權限，每次執行都重新跳出確認提示（GitHub issue #47180，累積 41 則留言、48 個讚，2026-10-15 首見，2026-11-16 互動數更新）**：macOS 上 Cowork 排程任務忽略使用者已設定的「永遠允許」權限，導致無人值守自動化仍須每次手動確認；官方尚未回應。
 - 🔴 **未修復**｜**Windows 11 Insider（MSIX）Cowork VM 完全無法使用，EXDEV 跨裝置重新命名錯誤未解（v1.1.4010，GitHub issue #27897，累積 36 則留言、15 個讚，2026-10-16）**：MSIX 封裝 EXDEV rename 錯誤，與既有 Cowork VM 啟動失敗同屬平台不穩定訊號；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件更新後所有工具呼叫跳出「tool use concurrency」400 錯誤（GitHub issue #20571，累積 133 則留言、183 個讚，2026-10-13）**：VS Code 版擴充套件近期更新後，每次工具呼叫皆觸發 API 400 錯誤；CLI 版不受影響；可暫時切換至 CLI 版繞過；官方尚未回應。
-- 🔴 **未修復**｜**Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，自帶 PAT 亦失效（GitHub issue #76248，累積 42 則留言、19 個讚，2026-11-16 互動數更新）**：疑與 `CCR_TEST_GITPROXY` 推送機制調整有關；官方尚未回應。
 - 🔴 **未修復**｜**Cowork Dispatch 在 macOS 無回應（GitHub issue #40283，累積 32 則留言、14 個讚，2026-10-08）**：使用者回報 Cowork Dispatch 功能在 macOS 上無回應；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援刪除與重新命名對話（GitHub issue #10747，累積 42 則留言、52 個讚，2026-10-07）**：VS Code 擴充套件目前無法刪除或重新命名既有對話，長期管理多個對話的使用者只能任由清單累積；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop（Windows）視窗永遠置頂（Always on Top）（GitHub issue #87895，累積 30 則留言、88 個讚，2026-09-30）**：使用者回報 Windows 版 Claude Desktop 視窗出現異常「永遠置頂」行為，無法如一般視窗般切換至背景；官方尚未回應。
@@ -465,7 +478,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork VM 在 Windows ARM64（Samsung Galaxy Book4 Edge、Snapdragon）無法啟動（GitHub issue #40198，累積 68 則留言／反應，2026-07-28 首見，2026-08-20 互動數更新）**：使用者回報在搭載 Snapdragon 處理器的 Windows ARM64 裝置（Samsung Galaxy Book4 Edge）上，Cowork VM 無法啟動；顯示 Cowork 對 Windows ARM64 架構的支援尚不完整，互動量自 7/28 首見的 13 個讚大幅攀升，官方尚未回應。
 - 🔴 **未修復**｜**Cowork 在 ARM64（Snapdragon X）裝置上，即使通過環境就緒檢查仍失敗（GitHub issue #50674，累積 44 則留言，2026-10-11）**：與上列 #40198 同屬 Windows ARM64／Snapdragon 相容性問題，此則回報環境已通過 readiness check 仍失敗，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**多起 API 連線錯誤彙整回報（API Error: Connection error.，GitHub issue #4297，累積 48 則留言／反應，環境：Windows 11、Anthropic API 平台，2026-08-20）**：GitHub Issue 彙集多起使用者回報的 API 連線錯誤（Connection error），環境集中於 Windows 11 搭配 Anthropic API 平台；官方尚未回應或說明成因。
-- 🔴 **未修復**｜**Cowork 工作區啟動失敗「Failed to start Claude's workspace」，VM service not running，重開機後問題依然存在（GitHub issue #27801，累積 73 則留言、42 個讚，2026-07-28 首見，2026-11-21 互動數更新）**：使用者回報 Cowork 嘗試啟動工作區時失敗，顯示 VM service not running 錯誤，即便重新開機仍無法解決；與既有 Windows 平台 Cowork 啟動障礙（issue #29941、#74649、#40198）同屬 Cowork VM 啟動失敗但成因與平台細節不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Linux（Ubuntu）無法從剪貼簿貼上圖片（GitHub issue #8324，累積 42 個 reactions、44 則留言，首見 2026-07-29，2026-08-19 互動數更新）**：使用者回報在 Linux（Ubuntu）環境下，無法透過剪貼簿貼上圖片至 Claude Code；官方尚未回應。
 - 🔴 **未修復**｜**Windows 桌面版開啟內建瀏覽器分頁時發生致命 GPU 當機（錯誤碼 0x060C201E），崩潰後 MSIX 應用卡在 appxState=2 需 Repair 才能修復（GitHub issue #80444，累積 17 個 reactions、111 則留言，2026-08-19 首見，2026-09-15 互動數更新）**：官方尚未回應。
   - 環境：Claude desktop app 1.24012.1（MSIX，Windows 11 Home 26200）；與既有「GPU process crash（exit code 101457950）」（issue #81698）同屬 GPU 穩定性問題但錯誤碼不同，暫分列追蹤。

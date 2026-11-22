@@ -3,15 +3,15 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-21"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
-inbound_links: 16
+days_since_news_subtree: 1
+inbound_links: 17
 attribution_count: 34
 attribution_last: "2026-11-21"
 top_source: "github"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-21
 
 > **Skills 設計新增抓漏合集與內容再製自驗收 Skill**（2026-11-21）
@@ -689,52 +689,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-07
 
-#### Claude Code Skills 清單字元預算機制：description 超額會讓既有 skill 悄悄失效（2026-07-28）
-
-- **主線：** —
-- **核心模式：** 拆解 Claude Code skills 清單載入的字元預算機制：單一 skill 的 description + when_to_use 合計上限 1,536 字元；整體 skills 清單的字元預算則依 context window 的 1% 計算——新增 skill 數量一多，既有 skill 可能悄悄被排出清單、不再被模型觸發使用，且過程中不會出現任何錯誤訊息
-- **與既有模式的關係：** 補充本頁「Skills 設計」類別既有「description 自動觸發」機制的邊界條件：過去記錄的是「怎麼設計 skill 讓它被觸發」，本篇補上「觸發預算有硬上限、超額會靜默失效」這項使用者需知曉的限制，屬機制補完而非全新類別
-- **來源：** 「Too many Claude Code skills? How the listing budget decides which descriptions Claude sees」— dev.to / rulestack（依 dev.to 內容判斷原則收錄：第一手技術實作拆解，非行銷/SEO 稿；讚數 2 不作為判斷依據）
-- **成熟度：** ⚡ 活躍（既有 Skills 設計類別的機制補完）
-
-#### nb2lite-skill-claude：以 Gemini Interactions API 打造有狀態圖片編輯 Claude Code Skill（2026-07-22）
-
-- **主線：** —
-- **核心模式：** 作者將 Google gemini-3.1-flash-lite-image 封裝為 Claude Code Skill 與 MCP server（nb2lite-skill-claude），支援多輪、有狀態的圖片編輯（版本追蹤與迭代修改，而非每次重新生成獨立圖片），並提供安裝指南與 dogfood 封面圖範例
-- **與既有模式的關係：** 延伸「Skills 設計」與「模型使用策略」類別中「跨模態內容生成分工（InstantVideos）」的既有做法——不同於單次生成或單向 pipeline，此技巧強調「有狀態」的多輪編輯迴圈，補上 Skills 生態中「圖像類多輪任務狀態管理」的具體實作案例
-- **來源：** 「Teaching Claude Code to Paint: A Stateful Image-Editing Skill Built on Gemini's Interactions API and MCP」— dev.to / #claudecode（3 讚；依規則以第一手實作內容判斷，非讚數）
-- **成熟度：** ⏳ 新興（今日首見，單一開發者第一手實作，尚待社群採用回饋）
-
-#### tpu-management：讓 Gemma 4 在 Cloud TPU 上運行的 Claude Code Skill（2026-07-22）
-
-- **主線：** —
-- **核心模式：** 作者釋出 Claude Code skill 搭配 MCP server 組合，可一鍵佈建 Google Cloud TPU、以 vLLM 服務 Gemma 4 模型、執行 benchmark，並在完成後自動拆除雲端資源，將原本繁瑣的 TPU 基礎設施佈建/拆除流程封裝為 Claude Code 可呼叫的 skill
-- **與既有模式的關係：** 屬「Skills 設計」類別新型態——既有 Skills 案例多聚焦知識框架化或流程封裝，本篇將其延伸至「雲端基礎設施生命週期管理」（佈建→服務→測試→拆除全流程自動化）；與「Agent 預算控制」類別（AgentWatch）同屬降低雲端資源浪費風險的思路，但聚焦點是基礎設施自動拆除而非請求層費用攔截
-- **來源：** 「tpu-management: a Claude Code skill for running Gemma 4 on Cloud TPUs」— dev.to（7 讚；依 dev.to 收錄規則以內容判斷，屬第一手實作記錄，非讚數）
-- **成熟度：** ⏳ 新興（今日首見，單一作者實作記錄，尚無其他來源複現）
-
-#### Sx 2.0：透過 Dropbox / Google Drive / iCloud 免 git 分享 Claude/Codex Skill（2026-07-14）
-
-- **主線：** —
-- **核心模式：** Sx 2.0 讓非技術團隊透過既有雲端硬碟（Dropbox、Google Drive、iCloud 等）分享 Claude/Codex 的 skill vault，不需依賴 git 版控知識；2.0 版新增 Mac/Windows/Linux 原生 app 與 Skill Evals 擴充系統，vault 格式重構為可直接作為 Claude 或 Codex plugin 使用
-- **與既有模式的關係：** 屬「Skills 設計模式」類別下新的**分享／分發**取向，與既有 ccteams（npm 套件化 subagent 團隊，2026-07-11）同屬「降低 skill/subagent 配置重複勞動」思路，差異在於 ccteams 面向技術團隊（npm 生態），Sx 2.0 面向非技術團隊（免 git、雲端硬碟同步）
-- **來源：** 「Show HN: Sx 2.0 – Share AI skills with your team through a Dropbox folder」— Hacker News（score 39）
-- **成熟度：** ⚡ 活躍（達 HN，2.0 版已有既有使用者基礎，但採用規模不明）
-
-#### Skill Linter 對 52k-Star Repo 的 84/100 診斷案例：Skill 品質共通模式（2026-07-12）
-
-- **主線：** —
-- **核心模式：** 作者自製 skill linter，對一個 52k star 高星 repo 中 24 個 skills 逐一檢測，量化出 84/100 品質分數，並歸納出多個 skill 撰寫的共通可修正模式（如缺乏明確邊界、指令模糊等）
-- **與既有模式的關係：** 呼應既有「Caliper：pass@k 指標的 Skill 可靠性測試方法」（2026-06-29），同屬「量化評估 skill 品質」思路的新工具，此案例聚焦靜態規則檢查（linter）而非執行時測試
-- **來源：** 「I Pointed a Skill Linter at a 52k-Star Repo. Here Is What 84/100 Looks Like.」— dev.to（作者 sayed_ali_alkamel，原文發布 06-13）
-- **成熟度：** ⏳ 新興（單一作者工具與案例，尚無其他來源複現）
-
-#### 用 Claude Code Skill 在 Reddit/LinkedIn 找潛在客戶而非同業（2026-07-12）
-
-- **主線：** —
-- **核心模式：** 作者建置自動搜尋潛在客戶的 Claude Code skill，早期版本曾誤抓同業競品作為目標，記錄調整篩選邏輯排除同業、聚焦真實潛在客戶的過程
-- **與既有模式的關係：** 新的應用領域案例——「Skill 設計模式」類別過去多聚焦開發流程本身，此案例將 skill 用於銷售/業務開發場景，補充 skill 應用場景多樣性的佐證
-- **來源：** 「I built a Claude Code skill that finds customers, not competitors, on Reddit & LinkedIn」— dev.to（作者 newan2001，原文發布 06-19）
-- **成熟度：** ⏳ 新興（單一作者工具，尚無採用數據）
-
-%% 拆頁評估 2026-11-21：不拆，分不出群。正文約 700 行，但 Skills 設計一類佔約 470 行（46 則）、可靠性測試只有 6 則約 59 行（每群太薄，<150，併回鄰群）、其餘 15 則多是週邊；Skills 設計內部是各領域 skill 清單（設計、影片、資安、SEO、金融、課程與合輯），讀者問題都是「有沒有現成的 X skill」，沒有各自的結論與節奏；寫法與觸發機制已集中在本頁「慣例與地雷」與「給 coding agent 的 Skill 與角色檔」兩節。下次評估觸發：可靠性測試連續兩個月累積過 150 行，或領域清單裡某一域（如影片 skill）自己長出第二個故事。 %%
+- **字元預算機制（07-28，⚡ 活躍）：** 單一 skill 的 description 加 when_to_use 合計上限 1,536 字元，整份 skills 清單的預算約為 context window 的 1%；skill 一多，既有 skill 會被悄悄排出清單、不再觸發，且沒有任何錯誤訊息。
+- Sx 2.0（07-14，HN）：透過 Dropbox、Google Drive、iCloud 免 git 分享 skill vault，新增三平台原生 app 與 Skill Evals，vault 可直接當 Claude 或 Codex plugin；採用規模不明。
+- Skill Linter（07-12）：對 52k star repo 的 24 個 skill 檢測得 84/100，歸納出邊界不明、指令模糊等共通可修正模式（單一作者）。
+- 領域 skill 三款：nb2lite-skill-claude（07-22，Gemini 有狀態圖片編輯）、tpu-management（07-22，Cloud TPU 佈建 Gemma 4 並自動拆除）、Reddit／LinkedIn 找潛在客戶（07-12，調整為排除同業競品）；皆單一開發者、無第二方重現。
+- 原始條目見 [[topics/community-tech-patterns-archive#2026-07]]

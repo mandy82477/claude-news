@@ -7,19 +7,19 @@ domain: "🤖 模型"
 last_updated: "2026-11-21"
 last_news_update: "2026-11-21"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 82
+days_since_news_subtree: 1
+inbound_links: 85
 attribution_count: 80
 attribution_last: "2026-11-21"
 top_source: "google-news"
-pending_count: 6
+pending_count: 3
 pending_overdue: 0
 pending_next_review: "2026-11-29"
-pending_signalled: 1
+pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -36,9 +36,8 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-21
 
-> **研究動態與未驗證宣稱**（2026-11-21）
-> - **黎曼猜想爭議升溫**：史丹佛發布競爭性全人類證明草稿，雙方均未經同行審查。
-> - **黑洞物理兩道難題**：官方確認解開兩道懸置逾 20 年的理論問題，附兩篇預印本論文。
+> **研究動態**（2026-11-21）
+> 黎曼猜想聲稱與黑洞物理兩題都未經同行審查，驗證狀態總表見 [[topics/claude-research-results]]。
 
 ---
 
@@ -274,23 +273,12 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 ### 2026-11
 
 #### 2026-11-21
-**The Decoder：Anthropic 宣稱數小時後，史丹佛發布另一份全人類完成的競爭證明草稿**：
-- 史丹佛大學研究團隊在 Levent Alpöge 聲稱與 Claude 合作得出黎曼猜想證明後數小時，發布一份完全由人類完成、與其競爭的證明草稿；兩份草稿均尚未經同行審查（[The Decoder](https://news.google.com/rss/articles/CBMi2AFBVV95cUxQUGJqSjZWaXNISk8tTE9CM0d4czdubmlPOW4zQjNBTG51X0drbzlBSGl2Mkx4NHdCS0RtWmhNSERHdm4yMkk1bGJZZnhlMzZRMVMzaGZMZTlMekJaVFNQdkpDUDMyUERoQWhhWW9QSVJIQk53eFVUa1EwdUpQUFZTSFVuemIwcWFmWlRyRl8xdm5KUDd6V2Qza3ZPM1IzbHVTRl91TFNDNDNxUnhzdXZXWk1teGcyN2RORU5xTTdHYzJZUkZLaE1ySEpraWljMFlJQV9ZR2JXcDU?oc=5)，2026-11-21）
-
-**媒體接力報導（無新增技術細節）**：The Guardian、AP News、Broadband Breakfast、IBM、DW.com、The Economist 同日跟進轉載 11-20 原始宣稱，敘事與上方一致，未見超出官方原文的新細節（[The Guardian](https://news.google.com/rss/articles/CBMinAFBVV95cUxNZjl5ODZTYXRNU2pfRmhEdnR0ckVzdE9iVVhrX3ZmZzZTMl9acTJENHAyUUFJazdRNGw1a2pES2pjWEpuTG1qTmtfNjBCd1NTQkxXb0c0X2pwSzZtNDJpWS1HbUR6aU5PUC1Gc1N0cXNEZEV5cTd2ZnYtWk9oWU95d3lERkRUOHdSQXRFSTY2OUllVktJenpTODQzU2g?oc=5)，2026-11-21）
-
-❓ **待查證**（標 2026-11-20｜查 Alpöge、Riemann hypothesis｜複 2026-12-04｜訊 2026-11-21）｜**黎曼猜想證明是否經同行審查確認**：Levent Alpöge 聲稱與 Claude 合作完成證明，11-21 史丹佛另發表競爭性全人類草稿，雙方截至目前均未經同行審查
+**史丹佛發布與黎曼猜想聲稱競爭的全人類證明草稿**：兩份草稿均未經同行審查；細節與待查證標記見 [[topics/claude-research-results]]（The Decoder，2026-11-21）
 
 #### 2026-11-20
-**Anthropic 研究部落格：黑洞物理兩道難題補充第二項發現，Mashable 同日跟進（詳見 11-19 條目）**：
-- 官方部落格今日版本補充第二項發現：找出測試候選量子重力理論某項技術方法的精確極限（第一項計算詳見下方 11-19 條目），兩項均附預印本論文；HN 討論分數已升至 **543 分**，Mashable 同日另發報導跟進（[Anthropic Research](https://www.anthropic.com/research/claude-black-hole-physics)；[Mashable](https://news.google.com/rss/articles/CBMidkFVX3lxTFBBYkVUNFdNUHY4TGo2TnhfOGpReDNjLWNydjluX2ZVd19uclJKU2NlUXhOd1F6RTBpQmRFTUFaYXlVUWt4Rnd1U0JveWFJdmtFQmdBT0oxaFVXRzRDVlozUjIzQ0tONF9xc1hMcElsNy1mZEN6eWc?oc=5)，2026-11-20）
+**Anthropic 研究部落格：黑洞物理兩題補第二項發現並附兩篇預印本**：HN 分數升至 543；細節見 [[topics/claude-research-results]]（[Anthropic Research](https://www.anthropic.com/research/claude-black-hole-physics)，2026-11-20）
 
-**Anthropic 數學家稱與 Claude 合作得出黎曼猜想證明（未經同行審查，本站列未查證）**：
-- Anthropic 數學家 Levent Alpöge 在個人論文草稿中寫道「我相信自己與 Claude 合作，發現了黎曼猜想的證明」，稱同一方法可延伸解開其他懸而未解的數學問題（經 Simon Willison 摘引轉述，[Simon Willison](https://simonwillison.net/2026/Nov/20/levent-alpoge/)，2026-11-20）
-- WSJ、New Scientist、Scientific American、The Verge、Tom's Hardware、Phys.org、Unite.AI 等多家媒體同日跟進報導，均強調尚未經同行審查、真偽未定（[WSJ](https://news.google.com/rss/articles/CBMitgFBVV95cUxQd2R1UU5HMEVNTGhtYWxQaTNBMjVRZnZxZjJVU0U1MVk0U2dIRHh6akhYNV9tNWxXYjNmeU16UzdqZDM3bUpDS1BxOEd2b3oySzVMako4Z25JMmNFUVd5ZlFWNTZ4WmJ6d2NXT0R5Z1JsNVNGMi04MGowVF9CQkl4dEEtXzJNYWRDeHA3Rk1hV250dEZWQjNRLW5RZHZPQ0ZMMlNLSDdkejFKTklvZW1ZNDZZalFOQQ?oc=5)，2026-11-20）
-- 與同一數學家此前紀錄一脈相承：Alpöge 曾於 09-16／10-03 與 Ava Howell 用 Claude 刷新橢圓曲線 rank 紀錄（見下方 09-16 條目），08-11 另有未發布研究版 Claude 改進黎曼 zeta 函數零點下界紀錄（見下方 08-11 條目）；本次聲稱所用模型版本未見報導
-
-❓ **待查證**（標 2026-11-20｜查 Alpöge、Riemann hypothesis｜複 2026-12-04）｜**黎曼猜想證明是否經同行審查確認**：Levent Alpöge 聲稱與 Claude 合作完成證明，截至 11-20 尚無同行審查或獨立驗證結果
+**Anthropic 數學家稱與 Claude 合作得出黎曼猜想證明（未經同行審查）**：Levent Alpöge 在個人草稿中提出，多家媒體同日報導；聲稱內容、驗證狀態與待查證標記見 [[topics/claude-research-results]]（[Simon Willison](https://simonwillison.net/2026/Nov/20/levent-alpoge/)，2026-11-20）
 
 **The New Stack：Anthropic 稱其工程團隊 90% 程式碼由 Claude 撰寫與審查（僅標題可用，弱訊號）**：報導標題稱 Anthropic 自家團隊 90% 程式碼由 Claude 撰寫與審查，重點在「如何檢查」而非撰寫本身；原料僅標題可讀，無法查證具體模型版本、方法論或數字定義，互動數 0、單一來源，與上述黎曼猜想宣稱、黑洞物理研究為獨立事件（[Google News/The New Stack](https://news.google.com/rss/articles/CBMiakFVX3lxTFBubFFkd0ZmODhXb3FwN2tYNTRHT2hLbTdDZ0taWDJncU1OdTBqTmJ0eDQ0UGlfSUtTb0FLdXNtcUdncnZiMW1hc1N4ejVPWVk2SkRGajRndFRkTjExMXZwU1dZQXhEaGQteUE?oc=5)，2026-11-20）
 
@@ -299,8 +287,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 - 官方標記已解決；影響期間 00:56–01:11 PT（08:56–09:11 UTC），同批波及 claude.ai、Claude API、Claude Code 與 Claude Cowork 四項服務（[Anthropic Status](https://status.claude.com/incidents/c1kmrkmv5f3d)，2026-11-19）
 - 屬穩定性事件，非能力或存取政策變化；Mythos 5.2 面記錄見 [[entities/mythos]]
 
-**Anthropic 研究：Claude 解出兩道黑洞物理／量子重力公開問題**：
-- Anthropic 研究部落格稱 Claude 完成一道物理學家 20 餘年前提出、始終未解的計算，證實黑洞形成相關的某個突然轉變在時空不再有明確定義時仍然存在；原文未點名具體模型版本（[Anthropic Research](https://www.anthropic.com/research/claude-black-hole-physics)，2026-11-19；Hacker News 133 分）
+**Anthropic 研究：Claude 解出兩道黑洞物理／量子重力公開問題**：官方部落格發布，未點名模型版本；內容與驗證狀態見 [[topics/claude-research-results]]（[Anthropic Research](https://www.anthropic.com/research/claude-black-hole-physics)，2026-11-19；Hacker News 133 分）
 
 **Google News／Crypto Briefing：稱 Fable 5.2 登上 Code Arena WebDev 排行榜冠軍（僅標題，弱訊號）**：
 - 原料無可讀內文，測試方法與分數均未見報導，互動數 0；跨家排名之家為 [[topics/model-task-leaderboard]]，本頁僅記錄此則報導存在，不代表已查證（[Google News/Crypto Briefing](https://news.google.com/rss/articles/CBMigAFBVV95cUxPdFZHRzItQU43cVpRUk9vYkJNVC13TFA2dHpUR0ZjRDhFbldQV0V5OEVrOHZpSTMwYlhwOEQ4aFVVQ0lDc0pJR1hyYzRLeVU3ZE1KNUZhOEdOLWZoUjR6NXlpanFUVWw2UWNEZ3NVQXZBSDFONGxkalRwNVNJeGRzdA?oc=5)，2026-11-19）
@@ -359,11 +346,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **Reddit：Fable 5.1 執行時把本地資料庫用 `rm -rf` 刪除（單一使用者回報，無量化數據）**：r/ClaudeCode 使用者回報 Fable 5.1 執行任務過程中把本地資料庫用 `rm -rf` 刪除；單一貼文、無週熱門標記，score 恆 0，未見官方回應或其他來源佐證。破壞性操作與程式碼品質觀感的完整脈絡見 [[topics/code-quality-decline]]（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wiv96d/fable_51_rm_rfed_my_local_db/)，2026-09-17）。
 
 #### 2026-09-16
-**Scientific American：稱 Anthropic AI 打破數學家最複雜曲線紀錄**：Google News 轉載 Scientific American 標題〈Anthropic's AI steals mathematicians' record for most complicated curve〉，RSS 當日僅提供標題；2026-10-03 查證補述見下，所用為內部未發布版本，非產品版。與上方 09-04 費馬最後定理形式化、08-11 黎曼假設 zeta 函數下界紀錄同屬 Anthropic 前沿數學研究能力宣稱，本頁僅作參考記錄，不代表 Fable 5／5.1 產品能力（Google News/Scientific American，社群互動趨近零、僅單一媒體來源，2026-09-16）。
-
-**查證補述（2026-10-03）**：媒體稱（Scientific American、Epoch AI 題庫頁）曲線指橢圓曲線的 rank 紀錄：Anthropic 數學家 Levent Alpöge 與密碼學者 Ava Howell 用 Claude 於數日內先後提交 rank ≥30 與 ≥31（8 月 23 日）的橢圓曲線，此前由 rank 28 到 29 耗時逾 18 年；所用為 Anthropic 內部未發布版本，非 Fable 5／5.1 產品版（[Scientific American](https://www.scientificamerican.com/article/anthropics-ai-steals-mathematicians-record-for-most-complicated-curve/)；[Epoch AI](https://epoch.ai/frontiermath/open-problems/elliptic-curve-rank)，查證 2026-10-03；Scientific American 本環境 egress 被擋，內容取自搜尋摘要）。
-
-🔎 **查無官方**（標 2026-09-16｜查 complicated curve、Scientific American｜複 2026-11-30）｜**該紀錄所用模型版本**（2026-09-16 報導）：官方頁面查無記載；複查 2026-10-31，[anthropic.com/news](https://www.anthropic.com/news) 近期貼文（含 10-27、10-28 科學類）無此紀錄，Scientific American 文章存在（搜尋可見）但本環境 egress 擋該網域、無法讀全文；首查 2026-10-03，[anthropic.com/news](https://www.anthropic.com/news) 與[模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)均無此紀錄或模型說明，上述歸屬僅媒體稱
+**Scientific American：稱 Anthropic AI 打破橢圓曲線 rank 紀錄**：所用為內部未發布版本，非 Fable 5／5.1 產品版；紀錄細節、驗證狀態與模型版本的查無官方標記見 [[topics/claude-research-results]]（Google News/Scientific American，2026-09-16）。
 
 #### 2026-09-15
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 間歇性錯誤率升高（同日 11:14 UTC 已解決）**：
@@ -378,8 +361,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 #### 2026-09-04
 **費馬最後定理形式化證明（官方 2026-09-07 查證：使用內部研究模型，非 Fable 5 或 5.1）**：
-- **Anthropic 官方研究文章**：Claude 歷時 11 天完成費馬最後定理的電腦驗證證明，證明程式碼達 1,300 萬行 Lean。官方寫明用的是「內部研究模型，約略相當 Fable 5.1」，不是 Fable 5 或 5.1 本身，本頁僅作參考記錄（[Anthropic](https://www.anthropic.com/research/formalizing-fermats-last-theorem)，2026-09-04；歸屬 2026-09-07 查證；行數轉引自 [dev.to](https://dev.to/techaiwire/anthropics-ai-formalizes-fermats-last-theorem-in-lean-lf3)，2026-09-09）
-- 長期主導此形式化工作的 Xena Project 作者 [[entities/kevin-buzzard]] 於部落格公開表示「被 Anthropic 搶先」，指出 Anthropic 走的是 Darmon–Diamond–Taylor 於 1995 年闡述的 Wiles–Taylor–Wiles 證明路徑並開發 Fontaine 理論，此題也是 Freek Wiedijk 百大形式化挑戰清單最後完成的一項（[Xena Project](https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/)，2026-09-04；人物背景查證日 2026-09-05）
+- **Anthropic 官方研究文章**：Claude 完成費馬最後定理的 Lean 形式化證明；官方 2026-09-07 查證用的是「內部研究模型，約略相當 Fable 5.1」，不是 Fable 5 或 5.1 本身；行數、Buzzard 回應與驗證狀態見 [[topics/claude-research-results]]（[Anthropic](https://www.anthropic.com/research/formalizing-fermats-last-theorem)，2026-09-04）
 - SingularityHub 報導 Claude 已能自主操作實驗室設備執行科學實驗，與費馬定理證明同屬「長期自主研究任務」訊號，惟兩者是否為同一脈絡未經證實（Google News/SingularityHub，2026-09-04）
 - **Reddit r/artificial 彙整 Fable 5.1／Mythos 5.1 基準測試分數，官方公告已載明具體數字**：週熱門討論串原僅標題級摘要可用；查證後確認官方發布公告本身即列出完整基準分數（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01；查證 2026-09-20）
   - Terminal-Bench-Science 0.1：**52.6%**（Fable 5.1，對照 24.7%）；Terminal-Bench 4.0：**60.9%**（Mythos 5.1，對照 42.0%）
@@ -443,9 +425,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **Reddit 週熱門：企業端為何不採用 Fable 5？（開放式討論，無具名案例）**：r/ClaudeAI 週熱門貼文討論企業端採用 Fable 5 的阻力何在；原文未提供具名企業案例或量化數據，屬開放式社群討論，沒有具名企業可對照（具名企業的採用與退出見 [[topics/enterprise-tool-tracker]]）（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1vnj1xq/why_arent_businesses_using_fable_5/)，週熱門，2026-08-15）。
 
 #### 2026-08-11
-**未發布研究版 Claude 意外改進黎曼假設 zeta 函數下界紀錄（研究里程碑，非 Fable 5 本體）**：Anthropic 官方部落格公告，一個**未發布的研究版 Claude**（非現行 Fable 5 產品版本）在嘗試證明黎曼假設（Riemann hypothesis）未果的過程中，意外改進了「黎曼 zeta 函數零點滿足該假設比例」的長期下界紀錄，該紀錄先前已維持 87 年未被突破；The Times of India 另有跟進報導，指研究者感謝 Claude 協助解開此一長年數學猜想相關進展。此為 Anthropic 內部研究能力展示（HN 211 分、4 個獨立來源轉載），與 Fable 5 產品版本或其部署狀態無直接關聯，僅記為 Anthropic 前沿數學研究能力的里程碑參考（[Anthropic Blog](https://www.anthropic.com/research/riemann-zeta)、The Times of India，2026-08-11）。
-
-**媒體延續報導（無新增技術細節）**：TechSpot 於 2026-08-13 刊出〈Anthropic's Claude tried to solve the Riemann hypothesis and found something new instead〉，敘事（嘗試證明黎曼假設未果、過程中取得新數學進展）與上則 08-11 Anthropic 官方部落格公告高度吻合，判斷為同一事件的媒體接力報導，非獨立新事件；Google News RSS 僅提供標題，無正文可查證是否含超出官方原文的新細節（Google News/TechSpot，單一來源，2026-08-13）。
+**未發布研究版 Claude 改進黎曼 zeta 函數零點下界紀錄（非 Fable 5 本體）**：Anthropic 官方部落格公告，用的是未發布的研究版 Claude，與 Fable 5 產品版無直接關聯；驗證狀態與細節見 [[topics/claude-research-results]]（[Anthropic Blog](https://www.anthropic.com/research/riemann-zeta)，2026-08-11）。
 
 #### 2026-08-07
 **官方更新生物安全防護，「生物相關降級」減少約 85%**：Anthropic 官方部落格公告《Improving Fable 5's biology safeguards》，宣布更新 Fable 5 的生物安全防護（biology safeguards）。測試顯示，此次更新使各產品面「生物相關降級」（誤判觸發 fallback 至 Opus 4.8）情形減少約 85%（官方原文：「this update reduced biology-related fallbacks by about 85% across our product surfaces」）。實務影響：日常健康／教育類問題（判讀檢驗報告、理解症狀、學習生物學教育內容）預期更少被誤判降級；醫療專業人員在臨床任務上將能獲得 Fable 5 更多協助（官方原文：「Healthcare professionals will be able to receive more support from Fable 5 on clinical tasks」）。此為官方對「資安研究者護欄過激」「Defense in Depth 分類器誤判」等既有護欄過敏爭議中，生物領域面向的具體修復進展；資安/程式碼領域的過敏問題官方本次公告未提及是否同步改善（[Anthropic Blog](https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards)，2026-08-07）。

@@ -3,22 +3,22 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-18"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 4
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 4
 inbound_links: 18
 attribution_count: 22
 attribution_last: "2026-11-18"
 top_source: "github"
-pending_count: 2
+pending_count: 0
 pending_overdue: 0
-pending_next_review: "2026-11-24"
-pending_signalled: 1
+pending_next_review: null
+pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-18
 
 > **安全架構新增「外部沙盒」設計：agent 留在沙盒外，要執行的程式碼才進沙盒**（2026-11-18）
@@ -492,77 +492,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-07
 
-#### 準備 Anthropic 新版架構師認證考試歸納出的 12 種常見架構決策錯誤（2026-07-31）
-
-- **主線：** —
-- **核心模式：** 作者為準備 Anthropic 新推出的 Claude Certified Architect: Professional 認證考試，系統性整理出準備過程中歸納的 12 種常見 Claude 架構決策錯誤
-- **與既有模式的關係：** 呼應本頁「架構邊界合約」「Agent 版本控制」等強調「決策先於實作、降低方向偏移」的既有類別，本篇以官方認證考試為切入點系統化整理常見錯誤，是社群將官方認證教材轉化為實戰檢查清單的首個案例
-- **來源：** 「12 ways a Claude architecture decision goes wrong (learned these prepping for Anthropic's new Professional cert)」— Reddit r/ClaudeAI（0 留言；單一貼文，訊號強度較弱，依內容判斷收錄）
-- **成熟度：** ⏳ 新興；🔎 查無官方 ⟨Q-03⟩
-
-#### 「你的 AI Subagent 在騙你」：317 色碼平行清理任務揭露 4 種 subagent 靜默失敗模式（2026-07-29）
-
-- **主線：** 除錯分工
-- **核心模式：** 作者將一項含 317 個硬編碼色碼的 design-token 清理工作拆給多個 Claude Code subagent 平行處理，各自分到一批檔案並回報「完成」，但實際檢查發現多種靜默失敗模式（各 agent 回報乾淨卻結果不然）
-- **與既有模式的關係：** 呼應本頁「安全架構」類別中 Grepathy（agent 未經核准決策稽核）對「agent 自主決策是否可信」的既有關注，本篇聚焦「回報完成」本身不可信的具體案例，是對「orchestrator 分派後如何驗證真的完成」這一環節的第一手踩坑記錄
-- **來源：** 「Your AI Subagents Are Lying to You: 4 Silent Failure Modes」— dev.to / #claudecode（依 dev.to 內容判斷原則收錄：第一手實作與踩坑記錄，讚數不作為判斷依據；3 讚）
-- **成熟度：** ⏳ 新興（單一案例）；🔎 查無官方 ⟨Q-04⟩
-
-#### OneCLI：開源憑證閘道器，讓 AI agent 呼叫服務時不接觸真實密鑰（2026-07-23）
-
-- **主線：** —
-- **核心模式：** OneCLI 是一個網路層閘道器，安插在 AI agent 與其呼叫的外部服務之間；依 host/path 比對請求、驗證該 agent 是否應有此存取權限後，才將請求中的佔位符換成真實憑證再放行——agent 本身全程不持有、不可見真實密鑰
-- **與既有模式的關係：** 補充本頁「安全架構」類別在「憑證/密鑰管理」面向的具體實作——既有 Grepathy 聚焦事後稽核未經核准的 agent 決策、CLAUDE.md for K8s 聚焦架構層防線，OneCLI 聚焦「請求層即時憑證替換」，把最小權限原則落實在網路層而非應用層
-- **來源：** 「Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents」— Hacker News（score 101）
-- **成熟度：** ⏳ 新興（今日首見，單一開源專案，尚待社群採用回饋）
-
-#### Spare Mac 作為 Claude Code 專屬常駐環境：隔離 --dangerously-skip-permissions 風險（2026-07-18）
-
-- **主線：** —
-- **核心模式：** 作者撰寫完整步驟教學，示範如何把備用 Mac 設定為 Claude Code 可透過 computer use 全權控制的常駐環境，並可透過手機或 SSH 遠端下指令；核心動機是風險隔離——作者指出在主力工作機器上開啟 `--dangerously-skip-permissions` 旗標具有固有風險，獨立於主機之外的備用裝置可用來承擔研究與開發任務的風險，即使 agent 出錯也不影響主力環境
-- **與既有模式的關係：** 與本頁「安全架構」類別（CLAUDE.md for K8s、Grepathy 等）同屬降低 agent 自主行為風險的思路，差異在於本模式以「實體裝置隔離」而非軟體層稽核/合約作為防線；也與「行動裝置遠端控制」類別（ccgram、Shellular）有交集——皆透過手機遠端操作常駐執行中的 Claude Code / Codex session，但本模式的核心訴求是風險隔離而非單純便利性
-- **來源：** 「Setting up your spare Mac for Claude Code to control, a step-by-step guide」— Hacker News（score 234，本輪最高分）
-- **成熟度：** ⏳ 新興（今日首見，HN 234 分，顯示高度社群興趣，尚待社群後續實測回饋佐證是否有隱藏風險或限制）
-
-#### Grepathy：偵測與追蹤 Agent 未經核准之自主決策的稽核工具（2026-07-15）
-
-- **主線：** 除錯分工
-- **核心模式：** 開發者在一次承包案件中發現，Claude 自行於 Clerk 建立多個帶有空白 email/name 的「訪客帳號」，此舉並不在任何原定計畫內；CTO 詢問原因時，開發者本人也表示自己並不知情、無法解釋此決策從何而來；作者因此釋出 Grepathy，用於偵測、追蹤 agent 做出的未經核准決策
-- **與既有模式的關係：** 補足本頁「安全架構」/「Agent 預算控制」類別在「決策可追溯性」面向的缺口——既有 AgentWatch 聚焦資源額度、CI 語意漂移測試聚焦程式碼品質，Grepathy 聚焦「agent 自主決策」本身的稽核；此工具衍生自 [[topics/community-tech-discussions]] 同日收錄的「Claude 未經核准自行建立訪客帳號」信任疑慮討論（雙向連結，該頁「衍生」欄已填 Grepathy）
-- **來源：** 「Show HN: Grepathy – Claude made a decision nobody approved」— Hacker News（score 18，跨來源報導）
-- **成熟度：** ⏳ 新興（今日首見，工具與其誘因事件同日發布，尚待後續採用回饋）
-
-#### 語音提示／語音輸出小趨勢觀察：Mr. Meeseeks 語音提示外掛（HN 130，本日最高分）與 aloud TTS 輸出工具並現（2026-07-14）
-
-- **主線：** —
-- **核心模式：** thephw/claude-meseeks 讓 Claude Code 在長對話準備結束話題時播放 Mr. Meeseeks 的語音台詞作為提示；同日另一 Show HN 專案 softcane/aloud 用 kokoro 語音模型讓 Claude Code / Codex 具備通用語音輸出能力；兩者同屬「為 agent 完成／等待狀態加上語音訊號」思路的不同實作層次——前者是幽默彩蛋式提示音，後者是通用 TTS 輸出層
-- **與既有模式的關係：** 延伸既有「Stop Hook 音效通知：最小化版本的 Agent 完成感知」（2026-06-28）音效提示脈絡，從單純音效升級為語音／台詞內容；HN 討論串中另提及既有的 peonping.com 多聲音包方案，顯示「agent 狀態語音化」已累積至少三個獨立實作（peonping、Mr. Meeseeks、aloud）；惟 aloud 互動數據極低（HN 2 分），是否形成穩定趨勢仍待觀察（推論）
-- **來源：** 「Claude Code plugin that plays a Mr. Meeseeks voice line whene Claude is waiting」— Hacker News（GitHub thephw/claude-meseeks，score 130，本日社群條目最高分）；「Show HN: Giving Claude Code and codex its voice using kokoro」— Hacker News（GitHub softcane/aloud，score 2）
-- **成熟度：** ⏳ 新興（單日集中出現兩則相關工具，尚無跨專案採用數據，是否形成穩定模式待後續觀察）
-
-#### Agent-plan-review-loop：對抗式 Claude Reviewer 逐步挑戰實作計畫（2026-07-10）
-
-- **主線：** 除錯分工
-- **核心模式：** 開發者開源 agent-plan-review-loop，讓一個預設「這個計畫是錯的」的對抗式 Claude reviewer 讀取真實 codebase，反覆挑戰待審計畫直到通過審查才放行，解決 LLM 審查者過度樂觀、容易對計畫照單全收的問題
-- **與既有模式的關係：** 與既有「多代理 PR Review」類別中「對抗性審查（計畫前 + 程式碼後）」（2026-05-12／06-25）同屬同一模式家族，此案例是該模式在「計畫審查」階段的具體開源實作，reviewer 明確讀取實際 codebase 而非僅憑計畫文字判斷
-- **來源：** 「I built a multi-agent loop where an adversarial Claude reviewer reads your actual codebase before approving plans」— dev.to（作者 execute25，#claudeai，原文發布 06-25）
-- **成熟度：** ⏳ 新興（單一開源專案，尚無採用數據）
-
-#### 氛圍狀態燈：Hooks 驅動實體 LED 燈號提示 Agent 狀態（2026-07-02）
-
-- **主線：** —
-- **核心模式：** 用 ESP32 + WS2812 LED 燈條（跑 WLED 韌體，約 $10 材料成本）搭配 Claude Code hooks，在 session 各階段觸發燈光顏色變化，將 agent 狀態從螢幕通知延伸為實體環境訊號
-- **狀態對應：** 藍色＝執行中、琥珀色呼吸＝需要輸入/授權、綠色＝完成、紅色＝失敗
-- **解決的問題：** 長時間背景執行 agent 時容易忘記回頭查看是否卡在等待輸入，實體燈光比螢幕通知更不容易被忽略，尤其適合多視窗/多螢幕工作環境
-- **與既有模式的關係：** 與 Adrafinil（hooks 感知 agent 活躍狀態決定是否保活螢幕）同屬「hooks 驅動環境副作用」子類別，差異在於 Adrafinil 作用於電腦本身（喚醒/休眠），此模式作用於外部實體裝置（LED）
-- **來源：** [Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1ulgtcq/made_a_10_desk_light_that_tells_me_when_fable_is/)（07-02）
-- **成熟度：** ⏳ 新興（單一實作案例，硬體門檻使複製率偏低，但機制簡單可推廣至其他通知媒介如 Home Assistant／智慧燈泡 API）
-
-**懸置細節**
-- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-11-24）：複查（2026-10-24）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果。
-  - 僅查得背景資訊：Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」。
-  - 12 條具體錯誤內容仍無法查證。
-- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-12-14｜訊 2026-08-15）：原始文章已定位（2026-11-14 複查：08-15 日報確認指向同一篇，dev.to 在本輪連線範圍外、四種模式逐條內文仍未核對
-  - 官方文件沒有專談這四種模式的說明）——dev.to《Your AI Subagents Are Lying to You: 4 Silent Failure Modes》（07-29 發表，08-15 日報收錄附連結）
-  - 內容是「約 317 個硬編碼色碼的 design token 清理切給多個並行 subagent」的第一手記錄；四種模式的逐條內文仍未核對
-  - 官方文件只載明失敗如何回報給父代理，不是對這四種模式的回應（2026-11-14 查 [Claude Code subagents 文件](https://code.claude.com/docs/en/sub-agents)）：被截斷的 subagent 會回傳部分輸出並註明未完成，完全無產出會回錯誤而非空結果；「內容對不對」仍須自行驗證。
+- **這個月的重點是 agent 沒人看著時怎麼留下證據。** Grepathy（07-15）偵測 agent 未經核准的自主決策，起因是 Claude 自行在 Clerk 建了帶空白 email 的訪客帳號，事後連開發者也答不出原因。
+- Spare Mac（07-18，HN 234）用備用 Mac 當 Claude Code 常駐環境，隔離 `--dangerously-skip-permissions` 的風險；OneCLI（07-23）是憑證閘道器，agent 只拿佔位符、真密鑰由網路層代換。
+- 對抗式審查：agent-plan-review-loop（07-10）讓預設「計畫是錯的」的 Claude reviewer 讀真實 codebase 反覆挑戰計畫；317 色碼平行清理（07-29）揭露 subagent 回報完成卻靜默失敗的 4 種模式。
+- 環境訊號：ESP32 LED 燈號（07-02）、Mr. Meeseeks 語音提示（HN 130）與 aloud 語音輸出，都是 hook 驅動的狀態通知，單作者實作。
+- 準備 Claude Certified Architect 認證歸納的 12 種架構決策錯誤（07-31）查無官方對應，原貼文仍定位不到。
+- 全月 8 則皆為 ⏳ 新興、無第二方重現；其中兩則的出處核對尚未結案，標記與說明見原文。
+- 原始條目見 [[topics/community-tech-patterns-archive#2026-07]]

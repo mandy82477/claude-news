@@ -3,18 +3,18 @@ page: "topics/community-tech-tools"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-20"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 57
-attribution_count: 15
-attribution_last: "2026-09-26"
+days_since_news_subtree: 2
+inbound_links: 58
+attribution_count: 21
+attribution_last: "2026-11-19"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-20
 
 > **目錄新增 34 個工具、14 列不再列入、14 列加註「此後未見後續報導」**（2026-11-21）
@@ -434,6 +434,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Caliber** | 工作流 | ⚡ | 2026-05-02 | 跨工具 AI config 統一管理（CLAUDE.md/.cursor/rules/AGENTS.md）；05-02 記到 888 stars，2026-09-22 查不到公開 repo 或產品頁 |
 | [**ness**](https://github.com/ness-dev/ness)（原名 Harness） | 多 Agent | ⚡ | 2026-04-29 | 多 Git worktree 並行管理多個 Claude Code agent；2026-11-01 查得已改名 ness、103★、12 forks，自述改為「給 agent 用的 IDE」，README 仍寫可同時跑十個 Claude |
 | [**Groundtruth**](https://github.com/vnmoorthy/groundtruth) | 工作流 | ⚡ | 2026-04-27 | Stop Hook，強制 Claude 提供可驗證執行證明才能宣告完成 |
+
+### 用量／token 觀測工具
+
+2026-11-14～11-19 的 Show HN 集中冒出一批「看用量」的新品，互動都在個位數（Tokendoctor 除外），皆無使用回報。想先挑一個：決策表的帳單列、額度列首選不變。
+
+| 工具 | 類型 | 採用 | 首次出現 | 簡介 |
+| --- | --- | --- | --- | --- |
+| [**Model-share**](https://github.com/shubhamverma8991/claude-model-share) | 費用監測 | ⏳ | 2026-11-14 | Show HN：看每週額度被哪些 Claude 模型用掉；HN 1 分，原料無內文 |
+| [**AgentMon Live**](https://github.com/codenotary/agentmon-live) | 費用監測 | ⏳ | 2026-11-16 | Show HN：本機監看 Claude Code、Codex、Kiro Crew 的 session，資料不離機、預設只開 localhost；HN 1 分 |
+| [**Agent-Otel-Kit**](https://github.com/s3onghyun/agent-otel-kit) | 費用監測 | ⏳ | 2026-11-16 | Show HN：給 Claude Code、Codex、Gemini CLI 的 OpenTelemetry 儀表板；HN 1 分，原料無內文 |
+| [**Wake**](https://rcruz.dev/wake/) | 費用監測 | ⏳ | 2026-11-17 | Show HN：免費開源 macOS app，看 Claude Code 訂閱 token 花在哪；作者自述大 context 下一次可由 0.50 美元壓到 0.02 美元；HN 2 分 |
+| [**Faros Desktop**](https://news.ycombinator.com/item?id=50535157) | 費用監測 | ⏳ | 2026-11-17 | Show HN：Mac app，用本機 session 紀錄畫出 AI coding 工具的使用軌跡並給省額度建議；HN 4 分，連結為討論串 |
+| [**AI Usage Ball**](https://github.com/aiusageball/ai-usage-ball) | 費用監測 | ⏳ | 2026-11-19 | Show HN：把 Claude、Codex、Antigravity 的剩餘額度做成 Mac 桌面浮球；HN 1 分，原料無內文 |
+| **Tokendoctor** | 費用監測 | ⏳ | 2026-11-17 | 列在上表（HN 31 分）；留言的「省 token 會不會變差」之爭見 [[topics/community-tech-discussions]] |
+
+- **讀者提醒：這些工具只報用量，不量省了之後結果有沒有變差**（推論）：七款的簡介都只談花費或額度，沒有一款提到輸出品質對照；Tokendoctor 串裡的反例正是這個缺口。
+- 同類做法的成本面脈絡見 [[topics/community-cost]]。
 
 **收錄註記**（表內「見收錄註記」的一筆）
 - **headcount、skilldock 已不在上表**（2026-11-14）：兩個 GitHub repo 在 2026-11-13 的連結檢查都回 404，點不進去；原始條目仍留在 [[topics/community-skills]]，原文已標失效。

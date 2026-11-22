@@ -3,14 +3,14 @@ page: "topics/community-interfaces"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-21"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 1
 attribution_count: 29
 attribution_last: "2026-11-21"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-21
 
 > **行動裝置遠端控制新增桌面動態島整合 Claude Code 核准推播**（2026-11-21）
@@ -473,51 +473,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-07
 
-#### Agenta：開源、可自架模型的 Claude Cowork 替代品，支援任意 harness（2026-07-28）
-
-- **主線：** —
-- **核心模式：** 開源專案 Agenta 提供與 Claude Cowork 相似的協作體驗，但可搭配自架（self-hosted）模型與任意 harness，不綁定單一廠商模型
-- **與既有模式的關係：** 呼應本頁「介面元件複用」「模型使用策略」等類別中「降低廠商鎖定」的既有關注，是社群對官方 Cowork 產品提出開源平替方向的首個具體實作
-- **來源：** 「Agenta: an open-source Claude Cowork alternative where you can use self-hosted models (and any harness)」— Reddit r/LocalLLaMA · 週熱門
-- **成熟度：** ⏳ 新興
-
-#### 開源手寫畫布：Claude 回應顯示於使用者手寫筆記旁（2026-07-17，補記技術做法）
-
-- **主線：** —
-- **核心模式：** 開發者釋出開源畫布工具，讓 Claude 的回應直接顯示在使用者手寫筆記旁，將 AI 輔助思考與紙本手寫筆記工作流結合，而非侷限於純聊天視窗介面
-- **與既有模式的關係：** 與 [[topics/community-tech-discussions]] 07-15 記錄的「r/ClaudeAI 週熱門三則大型個人專案展示」為同一專案（手寫畫布），本頁首次以「模式」角度補記其技術做法；概念上與「介面元件複用」類別（Brainless）同屬 AI coding 工具介面美學探索，但本模式聚焦「手寫 + AI 回應並置」的新互動形式，而非既有元件封裝
-- **來源：** 「I built an open-source canvas where Claude responds beside your handwritings」— Reddit r/ClaudeAI（週熱門，已達標；原貼 2026-07-17）
-- **成熟度：** ⏳ 新興（單一開源專案展示，尚無其他採用案例佐證）
-
-#### Brainless：模仿 Claude Code / Codex / Grok 介面風格的 shadcn 元件庫（2026-07-15）
-
-- **主線：** —
-- **核心模式：** 開發者釋出 shadcn 元件庫 Brainless，收錄模仿 Claude Code、Codex、Grok 等 AI coding 工具介面外觀風格的可安裝 UI 元件（如 pricing block），透過 `bunx shadcn add brainless/pricing` 等單一指令即可加入專案；把「AI coding 工具介面美學」封裝為可直接複用的前端元件
-- **與既有模式的關係：** 本頁尚未有「前端 UI 元件複用」類別，屬新出現的類型，與既有 Skills/Plugin 的「封裝可複用單元」思路相通，差異在於封裝對象是視覺元件而非邏輯/流程
-- **來源：** 「Brainless: Shadcn components that look like Claude Code, Codex and Grok」— Hacker News（score 124，本日社群條目最高分）
-- **成熟度：** ⏳ 新興（今日首見，HN 124 分，顯示高度社群興趣，尚待後續採用回饋）
-
-#### Devthropology：GitHub Repo 貢獻者互動與程式碼健康度視覺化（2026-07-10）
-
-- **主線：** —
-- **核心模式：** Show HN 工具 Devthropology 分析 GitHub PR 資料，提供貢獻者互動關係與程式碼健康度的視覺化洞察，供團隊了解協作模式與潛在瓶頸
-- **與 Claude Code 生態的關係：** 非 Claude Code 專屬工具，但屬於「AI 輔助開發團隊如何觀察協作健康度」的鄰接工具類別，可作為 agent 大量產出 PR 後的團隊層可觀測性補充（推論）
-- **來源：** [Show HN: Devthropology – Better Insights for GitHub Repos](https://devthropology.com/demo)（原文已失效）（Hacker News Show HN，34 分）
-- **成熟度：** ⏳ 新興（單一 Show HN 專案，尚無採用數據；HN≥30分）
-
-#### AI 思考表徵編輯器：視覺化並編輯模型回答前的內部推理（2026-07-10）
-
-- **主線：** —
-- **核心模式：** 開發者受 Anthropic 論文《Verbalizable Representations Form a Global Workspace in Language Models》啟發，做出可視覺化並編輯開源模型內部推理表徵（thinking representation）的網頁工具，讓使用者在模型正式作答前介入調整其「思考」內容
-- **與既有模式的關係：** 呼應既有「Extended Thinking 為摘要而非真實推理」討論（見 [[topics/community-tech-discussions]]）對「thinking blocks 究竟代表什麼」的持續關注；此工具提供社群一個實驗性介面直接操作內部表徵，而非僅停留在文本層辯論
-- **來源：** [Show HN: I built a web tool to see and edit what an AI thinks before it answers](https://lucid.earthpilot.ai)（Hacker News Show HN，31 分）；相關論文亦見於同日 MIT Technology Review 報導「Anthropic found a hidden space where Claude puzzles over concepts」
-- **成熟度：** ⏳ 新興（單一 Show HN 專案，尚無採用數據；HN≥30分）
-
-#### Shellular：從手機遠端操作本機 Claude Code / Codex Session（2026-07-08）
-
-- **主線：** —
-- **核心模式：** 開發者發布 Shellular，讓使用者從手機遠端連線至自有機器，操作正在執行的 Claude Code、Codex 等 coding agent 與終端機、開發伺服器
-- **與既有模式的關係：** 與 ccgram（2026-06-28，透過 Telegram 遠端控制 Claude Code）、Android Remote Control MCP（Plugin 設計模式一節）同屬「行動裝置遠端操作 agent session」模式家族的第三個獨立實作；三者共同顯示「手機作為 agent 控制介面」是社群反覆出現的需求，各自選擇不同傳輸層（Telegram bot、MCP、專屬 web app）
-- **來源：** [Show HN: Shellular – run Claude Code, Codex, Pi from your phone](https://shellular.dev/)（Hacker News Show HN，32 分，跨 2 來源報導）
-- **成熟度：** ⏳ 新興（單一 Show HN 專案，尚無採用數據；但屬第三個獨立佐證同一需求的實作，模式本身已具跨案例重複出現的訊號）
-
+- **本月 6 則都是單一專案展示，沒有採用數據。** Brainless（07-15，HN 124）是 shadcn 元件庫，模仿 Claude Code、Codex、Grok 的介面外觀，`bunx shadcn add brainless/pricing` 一行安裝。
+- 開源手寫畫布（07-17，r/ClaudeAI 週熱門）讓 Claude 的回應顯示在手寫筆記旁，與 [[topics/community-tech-discussions]] 07-15 記的是同一專案。
+- Shellular（07-08，HN 32）從手機遠端操作本機 Claude Code 與 Codex，與 ccgram（Telegram，06-28）、Android Remote Control MCP 同屬「手機當 agent 控制介面」，是第三個獨立實作。
+- Agenta（07-28，r/LocalLLaMA）是開源 Cowork 替代品，可接自架模型與任意 harness。
+- Devthropology（07-10，HN 34）把 GitHub PR 的貢獻者互動與程式碼健康度視覺化；AI 思考表徵編輯器（07-10，HN 31）受 Anthropic 論文啟發，可檢視並編輯開源模型作答前的內部表徵。
+- 原始條目見 [[topics/community-tech-patterns-archive#2026-07]]

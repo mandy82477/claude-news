@@ -51,7 +51,7 @@
 | [[entities/claude-science]] | product | 🛠️ 工具/功能 | beta | Claude Science：科學家專用桌面 app（公開 beta），可稽核 artifact、本機／HPC／雲端 VM 皆可跑；Anthropic 宣布自行開發藥物 |
 | [[entities/claude-code]] | product | 🛠️ 工具/功能 | active | Claude Code 母頁：現在什麼沒修好、該跟哪版；已知問題、版本、功能用法各一子頁　↳ 子故事：[[entities/claude-code-archive]]、[[entities/claude-code-features]]、[[entities/claude-code-known-issues]]、[[entities/claude-code-releases]]、[[entities/claude-mods]] |
 | [[entities/opus-5-5]] | model | 🤖 模型 | active | Claude Opus 5.5：2026-09-22 發布的現行 Opus，$4/$20、快取讀取 $0.20，官方稱多數工作追平 Fable 5.1；v2.1.280 起為 Claude Code 預設模型 |
-| [[entities/opus-5]] | model | 🤖 模型 | active（Legacy） | Claude Opus 5：2026-09-22 起官方改列 Legacy 仍可用，$5/$25；預設 Opus 已由 [[entities/opus-5-5]] 接手 |
+| [[entities/opus-5]] | model | 🤖 模型 | active（Legacy） | Claude Opus 5：2026-09-22 起官方改列 Legacy 仍可用，$5/$25；預設 Opus 已由 [[entities/opus-5-5]] 接手　↳ 子故事：[[entities/opus-5-archive]] |
 | [[entities/opus-4-8]] | model | 🤖 模型 | active（Legacy） | Opus 4.8：SWE-bench Pro 69.2%、1M context、Fast Mode 1/3 費用；官方已列 Legacy、退役不早於 2027-05-28，建議遷移至 [[entities/opus-5]]　↳ 子故事：[[entities/opus-4-8-archive]] |
 | [[entities/opus-4-7]] | model | 🤖 模型 | active（Legacy）| Opus 4.7 發布細節、思考深度爭議、cache 問題 |
 | [[entities/pricing]] | policy | 💼 商業 | active | 訂閱方案（含月度 API 額度）、牌價與乘數、計費規則現況；額度掉得快先看分流　↳ 子故事：[[entities/pricing-archive]]、[[entities/pricing-history]]、[[entities/pricing-incidents]] |
@@ -59,6 +59,7 @@
 | [[entities/bugcrawl]] | feature | 🛠️ 工具/功能 | beta | Anthropic 測試中的 Claude Code 漏洞偵測工具 |
 | [[entities/claude-design]] | feature | 🛠️ 工具/功能 | active | Anthropic AI 設計工具（10-08 脫離 beta、獨立站 12-14 關）；同頁收 Motion（beta），Dashboards 已轉為 Claude Data |
 | [[entities/claude-workspace-suite]] | feature | 🛠️ 工具/功能 | beta | Claude 內建的團隊協作三件組：Whiteboards、Sheets（beta）與 Claude Data（原 Dashboards，正式版）；Enterprise 的 Claude Data 有預設開啟日 |
+| [[entities/claude-meetings]] | feature | 🛠️ 工具/功能 | beta | Claude 以可見參與者身分加入 Google Meet、邊開會邊整理紀錄與待辦的 beta（Team／Enterprise，Auto-join 暫停中） |
 | [[entities/claude-security]] | product | 🛠️ 工具/功能 | beta | Claude Security 資安產品，情境化安全評估，整合於 Claude Code 開發環境　↳ 子故事：[[entities/claude-security-archive]] |
 | [[entities/openclaw]] | product | 💼 商業 | active | 第三方 agentic 工具，歷經禁令後 6/15 起恢復允許但改走信用池 API 費率計費　↳ 子故事：[[entities/openclaw-archive]] |
 | [[entities/google-investment]] | event | 💼 商業 | resolved | Google 投資 400 億美元歷史記錄，含循環算力交易結構　↳ 子故事：[[entities/google-investment-archive]] |
@@ -92,7 +93,7 @@
 | [[entities/jacob-coxon]] | person | 👤 人物 | active（單一來源）| 前 OpenAI／Anthropic pretraining 研究員；2026-09-09 指控兩家公司衝向自我改進超級智能，2026-10-10 稱九成把握中國間諜已滲透美國 AI 公司 |
 | [[entities/joe-benton]] | person | 👤 人物 | active | 前 Anthropic 安全研究團隊負責人；2026-09-10 接受 NBC News 首次專訪，警告先進 AI 研究進展恐失控 |
 | [[entities/josh-engels]] | person | 👤 人物 | active | 前 Google DeepMind AI 安全研究員；2026-09-10 接受 NBC News 首次專訪，稱「這裡面沒有大人在把關」|
-| [[entities/simon-willison]] | person | 👤 人物 | active | 獨立開發者／部落客，全站引用最多的第一手觀點來源（114 次／15 頁）；多筆 Boris Cherny、Dario Amodei 聲明的原文轉引管道 |
+| [[entities/simon-willison]] | person | 👤 人物 | active | 獨立開發者／部落客，全站引用最多的第一手觀點來源（114 次／15 頁）；多筆 Boris Cherny、Dario Amodei 聲明的原文轉引管道　↳ 子故事：[[entities/simon-willison-archive]] |
 | [[entities/mustafa-suleyman]] | person | 👤 人物 | active | Microsoft AI 執行長；2026-09-16 批評 Anthropic 對 Claude「類人化」論述有「災難性影響」風險，並抨擊其 AI 意識說法（Bloomberg／BBC／Axios）|
 | [[entities/michael-burry]] | person | 👤 人物 | active | 知名放空交易員（《大賣空》原型人物）；2026-09-17 在 X 批評 OpenAI、Anthropic 等公司高層呼籲放慢 AI 發展是「自利」之詞 |
 | [[entities/sridhar-vembu]] | person | 👤 人物 | active（單一來源） | Zoho 共同創辦人；2026-09-23 稱 Anthropic 等「可以自己放慢」，批的是要別人停、自己照投（Economic Times 轉載） |
@@ -120,6 +121,7 @@
 | 頁面 | 領域 | 狀態 | 摘要 |
 |------|------|------|------|
 | [[topics/claude-code-experimental]] | 🛠️ 工具/功能 | ongoing | Claude Code 實驗功能追蹤：出貨 build 裡先出現、還沒公告的旗標，四階狀態機（出現→有人談→官方承認→出貨/移除），每階要證據；09-15 建頁，基線 2.1.272 |
+| [[topics/claude-research-results]] | 🤖 模型 | ongoing | Claude 參與的科研與數學聲稱兌現了幾次、哪些被獨立驗證過（黎曼猜想草稿、黑洞兩題、橢圓曲線紀錄等） |
 | [[topics/model-comparison]] | 🤖 模型 | ongoing | 模型選型對照：「我該用哪個 Claude 模型、換一個實付差多少」單一入口——快速選型表、情境推薦、換代成本換算；跨家排名指向榜單頁 |
 | [[topics/model-task-leaderboard]] | 🤖 模型 | ongoing | 🗓️ 週更 任務 × 跨家模型領先者快照：「做某類任務目前哪家最強」——18 類任務的活榜單每週速讀＋各榜評比方式索引；跨家排名的終點在這頁，Claude 家內選型見模型選型對照 |
 | [[topics/anthropic-commitments]] | 🏛️ 政策/安全 | monitoring | 承諾兌現追蹤：「Anthropic 說過要做的事做了嗎」——官方承諾/拒絕建檔，狀態變化時每日更新 |
@@ -127,7 +129,7 @@
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | 11-19 Google Gemini 4 Neon 發布躍居對手雷達首位（稱追平 Opus 5.5、API 價低 25%）；Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
 | [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
-| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：21 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |
+| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：21 類依讀者會問的問題分成 8 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-creative-tools]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 8 場：4 場還在吵、4 場僵住、暫無已吵出共識，每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |

@@ -3,14 +3,14 @@ page: "topics/ai-talent-flow-archive"
 kind: "topic"
 status: "resolved（封存頁）"
 domain: "💼 商業"
-last_updated: "2026-09-13"
+last_updated: "2026-11-22"
 last_news_update: "2026-06-29"
 status_main: "resolved"
-days_since_news: 145
+days_since_news: 146
 parent: "topics/ai-talent-flow"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 145
+days_since_news_subtree: 146
 inbound_links: 0
 attribution_count: 0
 attribution_last: null
@@ -29,10 +29,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/ai-talent-flow]]
 **開始日期：** 2026-06-21
-**最後更新：** 2026-09-13
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-06-29
 
 > 本頁是 [[topics/ai-talent-flow]] 的原始條目封存，重點層（摘要、對各公司的影響）都在主頁。
+
+## 2026-07
+
+#### 2026-07-13
+- **[跨界執行層人才，非典型 AI 實驗室流動] Anthropic 新聘 Monzo 共同創辦人 [[entities/tom-blomfield|Tom Blomfield]]**：Business Insider 報導 Anthropic 聘請英國數位銀行 Monzo 共同創辦人 Tom Blomfield，背景涉及 AI compute 與 Y Combinator。**對商業的意涵**：與本頁核心追蹤的「Google DeepMind → Anthropic 研究員流動」模式不同，Blomfield 出身金融科技創業與加速器生態，而非競爭 AI 實驗室；若屬執行層人才佈局（而非研究職），可能反映 Anthropic 在 IPO 前加強營運/擴張團隊縱深的策略，與近期 [[entities/teresa-carlson|Teresa Carlson]]（前 Microsoft/AWS 高管）加入公部門業務團隊的模式類似（推論，具體職位與職責未見報導）（Business Insider https://www.businessinsider.com/anthropic-hires-monzo-cofounder-tom-blomfield-ai-compute-y-combinator-2026-7）
 
 ## 2026-06
 

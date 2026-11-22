@@ -3,14 +3,14 @@ page: "topics/ai-talent-flow"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-18"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-18"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 4
 parent: null
 children: "['topics/ai-talent-flow-archive']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 4
 inbound_links: 23
 attribution_count: 31
 attribution_last: "2026-11-18"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-06-21
-**最後更新：** 2026-11-18
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-18
 
 > **最新動態**（2026-11-18）
@@ -177,10 +177,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### 2026-08-05／08-06（補記於 2026-08-13）
 - **Google DeepMind 高層轉任＋核心研究員出走創業，Alphabet 股價重挫**：Demis Hassabis 卸任 Google DeepMind CEO，轉任 Alphabet 首席科學家兼 DeepMind 董事長——**留任 Alphabet 集團，非離職**。同時 Jeff Dean（Google 27 年資深、首席科學家）、Sanjay Ghemawat（Google Brain 共同創辦人）、Oriol Vinyals、Quoc Le 離開 Google，共同創辦自動化科學研究新創 **Discovery Loop**；《Attention Is All You Need》八位作者至此全數離開 Google。Alphabet 股價盤中一度下跌約 5%（各家媒體估市值影響 1,600–2,000 億美元，屬盤中估算區間、非定值）。**Discovery Loop 為 public benefit corporation，Dean 出任 CEO，投資方含 Radical Ventures 與 Khosla Ventures 共同領投、Kleiner Perkins、Lightspeed、Doerr Capital，以及 Alphabet 本身**——集團同時是「被離開方」與「出資方」，此案性質介於人才流失與集團支持的 spin-out 之間（推論）。同期 Koray Kavukcuoglu 升任 DeepMind SVP。**與本頁核心追蹤格局的關係**：此波離職者流向獨立新創 Discovery Loop，非流向 Anthropic 或其他前沿實驗室，故不直接改變「Google DeepMind 淨流失、Anthropic 主要承接」的既有格局，但顯示 Google 高層與技術核心的動盪已從「單點人才流失」擴大至「創業出走潮」層級（推論）；流向 Anthropic 的研究員（Adler、Pritzel、Jumper）為更早的獨立批次，非本次事件的一部分。已於 2026-08-13 以 TechCrunch 原始報導交叉查證創辦人名單、公司結構與投資方（CNBC／Axios 原文無法讀取，改以 TechCrunch 一手報導與多方彙整佐證；市值數字各家不一致故以區間記錄）。（[TechCrunch（一手查證）](https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/)；其餘起點來源：[CNBC](https://www.cnbc.com/2026/08/05/google-is-expanding-its-ai-empire-and-losing-the-people-who-built-it.html)；[Axios](https://www.axios.com/2026/08/06/googles-ai-leadership-shuffle)）
 
-### 2026-07
+### 2026-07（時段總結）
 
-#### 2026-07-13
-- **[跨界執行層人才，非典型 AI 實驗室流動] Anthropic 新聘 Monzo 共同創辦人 [[entities/tom-blomfield|Tom Blomfield]]**：Business Insider 報導 Anthropic 聘請英國數位銀行 Monzo 共同創辦人 Tom Blomfield，背景涉及 AI compute 與 Y Combinator。**對商業的意涵**：與本頁核心追蹤的「Google DeepMind → Anthropic 研究員流動」模式不同，Blomfield 出身金融科技創業與加速器生態，而非競爭 AI 實驗室；若屬執行層人才佈局（而非研究職），可能反映 Anthropic 在 IPO 前加強營運/擴張團隊縱深的策略，與近期 [[entities/teresa-carlson|Teresa Carlson]]（前 Microsoft/AWS 高管）加入公部門業務團隊的模式類似（推論，具體職位與職責未見報導）（Business Insider https://www.businessinsider.com/anthropic-hires-monzo-cofounder-tom-blomfield-ai-compute-y-combinator-2026-7）
+- **跨界執行層人才**：07-13 Business Insider 報導 Monzo 共同創辦人 [[entities/tom-blomfield|Tom Blomfield]] 加入 Anthropic，非研究員流動；與 [[entities/teresa-carlson|Teresa Carlson]] 加入公部門業務同屬營運縱深佈局（推論，職位未載）。
+
+原始條目見 [[topics/ai-talent-flow-archive#2026-07]]
 
 ### 2026-06
 

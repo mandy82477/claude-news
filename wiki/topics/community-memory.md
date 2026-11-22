@@ -3,14 +3,14 @@ page: "topics/community-memory"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 last_news_update: "2026-11-21"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 7
 attribution_count: 17
 attribution_last: "2026-11-21"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-21
 
 > **記憶與知識管理新增 Obsidian 當記憶後端的「AI 第二大腦」**（2026-11-21）
@@ -490,51 +490,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-07
 
-#### 官方 context engineering 新規則：Anthropic 移除逾 80% Claude Code 系統提示詞（2026-07-26）
-
-- **主線：** Context 管理
-- **核心模式：** Anthropic 部落格〈Claude 5 世代模型的 context engineering 新規則〉揭露官方已移除逾八成的 Claude Code 系統提示詞，並給出把同一原則套用到自訂 agent 的建議
-- **與既有模式的關係：** 為本頁「Context 管理」類別長期累積的「少即是多、只給最小必要 context」社群直覺，補上第一份廠商側的一手依據；同日的 Opus 5 硬編碼工具限制爭議見 [[entities/claude-code]]，社群辯論見 [[topics/community-tech-discussions]]
-- **來源：** 〈Claude 5 世代模型的 context engineering 新規則〉— Anthropic Blog（Hacker News 393 分）
-- **成熟度：** ✅ 成熟（官方一手，社群跨平台延燒）
-
-#### CLAUDE.md 載入順序：四層記憶範圍完整拆解（2026-07-31，補記）
-
-- **主線：** —
-- **核心模式：** 作者指出「Claude Code 忽略我的規則」的常見根因是規則寫在 Claude Code 根本沒有載入的檔案裡；文章依官方文件（2026-07-31 查證）整理四種記憶範圍與其載入順序，並指出兩個容易忽略的細節：CLAUDE.local.md 在同層級的共用 CLAUDE.md 之後載入，適合放個人化覆寫（沙盒網址、個人測試篩選條件）而不動團隊共用檔案；受管理原則檔（managed policy file）在 Linux／Windows 上也存在，位置不同於 macOS
-- **與既有模式的關係：** 補充本頁「CLAUDE.md 管理」類別既有「精簡規則策略」「防腐爛機制」之外的載入機制層細節——既有記錄多聚焦「該寫什麼、多寫會怎樣」，本篇補上「寫了會不會真的被讀到」這個更上游的前提，與 2026-08-04 已收錄的「四層寄放地判斷內容歸屬」互補（該篇談歸屬判準，本篇談載入順序機制）
-- **來源：** 「Which CLAUDE.md Files Claude Code Actually Loads (and in What Order)」— dev.to / rulestack（依 dev.to 內容判斷原則收錄：對照官方文件查證的第一手技術拆解，非行銷稿；0 讚不作為排除理由）
-- **成熟度：** ✅ 成熟（記憶範圍機制為官方既有設計，本篇是查證後的完整說明整理）
-
-#### CodeAlmanac：從與 Claude Code / Codex 對話自動更新的 Karpathy 風格程式碼庫 Wiki（2026-07-22）
-
-- **主線：** 索引記憶
-- **核心模式：** YC S26 團隊釋出開源工具 CodeAlmanac，會隨著使用者與 Claude Code / Codex 的對話內容自動更新程式碼庫 wiki，取代過去需手動維護的 MANUAL.md、DESIGN.md 等文件；強調本地執行、免費、自動維護，降低文件與程式碼庫實際狀態脫節的心力
-- **與既有模式的關係：** 補充「記憶與知識管理」類別在「團隊/專案層級知識沉澱」面向的新做法——既有 ltm/NanoBrain/OKF 聚焦 agent 跨 session 記憶，CodeAlmanac 聚焦「程式碼庫本身的說明文件」隨對話自動同步；也與「CLAUDE.md 管理」類別「防腐爛機制」精神相通，皆試圖解決文件隨時間腐化的問題
-- **來源：** 「Show HN: CodeAlmanac – Karpathy-style codebase wiki from your conversations」— Hacker News（score 54，YC S26 團隊）
-- **成熟度：** ⏳ 新興（今日首見，YC 新創團隊產品，尚待社群採用回饋）
-
-#### Context 分支與合併：精準控制 Claude 對話可見範圍的手動 Context 管理工具（2026-07-15）
-
-- **主線：** Context 管理
-- **核心模式：** 開發者釋出應用程式，讓使用者能從任一則歷史訊息分支（branch）出新對話、並可將多個對話串合併（merge），藉此精準控制 Claude 在後續互動中實際看到的 context 範圍；核心訴求與既有「Context Rot 修復」「Just-in-Time @-file Retrieval」同屬「限制/裁剪 context 輸入」思路，差異在於以對話樹狀分支/合併作為使用者可視化操作介面，而非工具層自動裁剪
-- **與既有模式的關係：** 補充「Context 管理」類別在使用者互動層（非工具自動化層）的手動控制選項；同一貼文，跨來源出現，視為具一定訊號強度，但尚無公開 repo/demo 連結可查證實作細節
-- **來源：** 「I built an app where you control exactly what context Claude sees: branch from any message, merge whole chats. Free to try.」— Reddit r/ClaudeCode
-- **成熟度：** ⏳ 新興（今日首見，免費試用產品，尚待社群後續採用回饋佐證）
-
-#### session-indexer：本地 SQLite 索引 Claude Code 逐字稿供跨 Session 語意搜尋（2026-07-12）
-
-- **主線：** 索引記憶
-- **核心模式：** Go 工具 session-indexer 讀取 Claude Code session transcript，索引進本地 SQLite 資料庫，讓開發者能跨 session 語意搜尋過去對話與程式碼決策，避免「跨專案記憶消失」問題
-- **與既有模式的關係：** 同屬「本機持久化記憶架構」與「Session 記憶與搜尋工具生態」（2026-05-05）模式家族的新實作版本，聚焦本地 SQLite 索引而非雲端或純 Markdown
-- **來源：** 「session-indexer: giving Claude Code a memory that doesn't die with the project next door」— dev.to（作者 valpere，原文發布 07-04）
-- **成熟度：** ⏳ 新興（單一作者工具，尚無採用數據）
-
-#### Context Window 診斷法：先測量再究責 MCP（2026-07-10）
-
-- **主線：** Context 管理
-- **核心模式：** 作者觀察到 agent 在長 session 中途「變笨」，最初直覺懷疑是某個 MCP server 佔用過多 context，但實際測量 context window 使用量後才找到真正原因（並非 MCP 本身），提供「先測量、再歸咎工具」的可複用診斷流程，避免不必要的除錯繞路
-- **與既有模式的關係：** 呼應既有「Context 管理生命週期」與「Context Rot 修復五法」（見 [[topics/community-tech-discussions]]）已建立的共識——「越用越笨」多為 context 腐蝕而非模型或工具退步；此案例補充具體診斷步驟（測量優先於歸因），而非直接假設某個外部工具是元凶
-- **來源：** 「My AI agent got dumber mid-session. I measured the context window before blaming MCP.」— dev.to（作者 rapls，#claudecode，原文發布 06-17）
-- **成熟度：** ⏳ 新興（單一作者第一手診斷經驗，尚無其他來源複現）
-
+- **官方一手依據：** Anthropic 部落格〈Claude 5 世代模型的 context engineering 新規則〉（07-26，HN 393）揭露官方已移除逾八成 Claude Code 系統提示詞，並建議自訂 agent 套用同一原則；補上社群「只給最小必要 context」直覺的第一份廠商側依據。
+- CLAUDE.md 載入順序（07-31，依官方文件查證）：「Claude 忽略我的規則」的常見根因是規則寫在沒被載入的檔案；四層記憶範圍中，CLAUDE.local.md 在同層共用 CLAUDE.md 之後載入，適合放個人專屬設定。
+- Context Window 診斷法（07-10）：長 session 中途變笨時先量 context 用量再究責，實測後原因並非 MCP（單一作者）。
+- 工具三款：CodeAlmanac（07-22，YC S26）隨對話自動更新程式碼庫 wiki；session-indexer（07-12）把逐字稿索引進本地 SQLite 供跨 session 語意搜尋；Context 分支與合併（07-15）可從任一則訊息分支對話。
+- 除官方與載入順序兩則外，皆為 ⏳ 新興、單一作者、無採用數據。
+- 原始條目見 [[topics/community-tech-patterns-archive#2026-07]]
