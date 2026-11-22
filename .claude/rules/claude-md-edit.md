@@ -112,4 +112,4 @@ Stop hook `.claude/hooks/check_rules_on_stop.py` 會在收工時比對規則檔 
 **判斷標準：**
 > 所有引用這個檔案的 command / skill，在修改後還能正確找到所需的規則或格式嗎？若否，先修引用再收工。
 
-> **沿革檔：** `docs/rules-changelog/claude-md-edit.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）
+> **沿革檔：** `docs/rules-changelog/claude-md-edit.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍）

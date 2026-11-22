@@ -83,4 +83,4 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 - `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」；wiki 檔案只能建立或修改在 `wiki/`（repo 根下）路徑內。
 - 驗證閘：步驟 8 的 log 每一欄都有值、`gate_web_build.py` 綠（或已走完至多 2 輪修復迴圈並在心跳寫明）、單一 push 成功，才算完。
 
-> **沿革檔：** `docs/rules-changelog/wiki-lint.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）
+> **沿革檔：** `docs/rules-changelog/wiki-lint.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍）

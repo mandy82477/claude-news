@@ -40,4 +40,4 @@
 
 ## 回報格式
 
-照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」八欄；`feature-radar 新增` 欄恆填「無」（時效性項目如促銷到期、政策生效日，改在「同步自查」欄請主編同步 feature-radar「⏰ 倒數中」）。
+照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」九欄；`feature-radar 新增` 欄恆填「無」（時效性項目如促銷到期、政策生效日，改在「同步自查」欄請主編同步 feature-radar「⏰ 倒數中」）。

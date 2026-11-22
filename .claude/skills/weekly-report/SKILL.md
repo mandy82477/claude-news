@@ -67,7 +67,7 @@ disable-model-invocation: true
 **沒有這一步，週報只會躺在工作目錄裡**：未 commit、未 build（web reader 的「週報」分頁仍顯示「尚無週報」）、未 push（線上看不到）。
 
 - commit 範圍與訊息：`git -C REPO_ROOT add weekly/` → `commit -m "weekly: YYYY-Wnn 週報"`；web commit 訊息用 `"web: rebuild YYYY-Wnn 週報上站"`
-- **其餘照 `.claude/skills/web-publish/SKILL.md` 的 `Step 4`／`Step 5` 形狀做，不另寫一套**：測試閘（`run_tests.py` 失敗 → 跳過 build，仍推送已完成的 weekly commit，回報標「Tests FAILED - build skipped」）、`build_web.py` → add `web_reader/` → commit、**單一 push**、push 失敗重試（`pull --rebase` 上限 2 次）
+- **其餘照 `.claude/skills/web-publish/SKILL.md` 的 `Step 4`／`Step 5` 做，本檔不另寫一套**：build 前的閘是 `PYTHON REPO_ROOT\scripts\gate_web_build.py`（**不另外自己跑 `run_tests.py` 再判斷**），擋下時走該檔「gate 擋下時的修復迴圈」（至多 2 輪），放行後的 `build_web.py` → add `web_reader/` → web commit、**單一 push** 與 push 失敗重試（`pull --rebase` 上限 2 次）全部以該檔為準；回報的 gate 欄抄 `gate_web_build.py` 輸出的最後一行摘要，不自己改寫措辭
 - **與排程的關係**：`/weekly` 沒有雲端排程，不會與 `daily-news-pipeline-cloud`（每日 12/17/22 UTC 三班）或 `weekly-wiki-lint-cloud`（每週六 03:00 UTC）衝突；產出檔在 `weekly/`，與那兩者會動的 `news/`、`wiki/` 不重疊
 
 ---
@@ -87,10 +87,10 @@ disable-model-invocation: true
 - 由本機 session 執行（`/weekly` 帶起或單獨補跑）；外查要網路，無網路環境產出時改寫素材自足的題，並在檔尾註明。
 - 繁體中文為主；`news/` 唯讀，不可修改日報內容；不自行改 `wiki/reader-notes.md` 的狀態。
 - 契約字串一律以 `.claude/skills/weekly-report/references/contracts.md` 為準，改任何一格必須同步該表右欄消費端。
-- 驗證閘：`scripts/check_weekly_ledger.py`（掛在 `scripts/run_tests.py` 內）綠了才算完；單獨執行時測試失敗則跳過 build，仍推送已完成的 commit。
+- 驗證閘：`scripts/check_weekly_ledger.py`（掛在 `scripts/run_tests.py` 內）綠了才算完；單獨執行時 build 前的閘是 `gate_web_build.py`，擋下則跳過 build 與 web commit，仍推送已完成的 weekly commit。
 
 ## 後續（不在本次範圍）
 
 - 第二期 `scripts/weekly_stats.py`：把「檔尾數字」的管線型數字改為腳本自動計算，取代人工盤點；本體裁先跑 2–3 週確認值得讀，再投資腳本化
 
-> **沿革檔：** `docs/rules-changelog/weekly-report.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）
+> **沿革檔：** `docs/rules-changelog/weekly-report.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍）

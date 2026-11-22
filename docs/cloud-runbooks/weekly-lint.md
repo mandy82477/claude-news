@@ -30,7 +30,7 @@
 | `wiki-lint-sweeps` `5g. 高引用但停滯（signal 消費端，主編親做）` | 自主執行（`gen_wiki_frontmatter.py --list-signal` 純本地；每頁二選一派對應記者確認） `[加入: 2026-09-04]` |
 | `wiki-lint-sweeps` `5h. 投資訊號回顧環（主編親查）` | 自主執行 `[加入: 2026-09-12]`：催化劑半邊純本地；股價半邊走 WebSearch（不經沙盒 egress），該環境無 WebSearch 工具時才跳過記「本機承接」 |
 | `wiki-lint-sweeps` `5i. 安全政策兩頁結論表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
-| `wiki-lint-sweeps` `5j. 商業健康度四表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
+| `wiki-lint-sweeps` `5j. 商業健康度五表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
 | `wiki-lint-sweeps` `5k. 社群三張結論表退場複查（主編派社群記者）` | 自主執行 `[加入: 2026-09-13]`，派工帶 明寫 `model` |
 | `wiki-lint-sweeps` `5l. 模型頁世代表複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：讀該頁「資料截至」判斷是否需重查；**需重查時才受 egress 限制**，此時記「本機承接」留待本機 `/weekly` |
 | `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh api repos/anthropics/claude-code/issues/<n>`（REST；`gh issue view` 走 GraphQL 在雲端一律 403）；`PARTIAL`／`BLOCKED` 才跳過並記「本機承接」；routine `sources` 已含 `anthropics/claude-code`（2026-10-18），MCP 仍回 not configured 代表 sources 被改掉 → 寫「repo 授權不足，跳過」並對照鏡像 JSON，不擴權 |

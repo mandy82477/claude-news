@@ -1,6 +1,6 @@
 # 批次修改（apply_edits.py）
 
-試點中，目前只有功能記者在每日派工被要求讀本檔。
+選用，目前只有功能記者在每日派工被要求讀本檔（觸發條件在 `.claude/agents/wiki-reporter-features.md`「開始前必讀」第 5 項）。試點已結案、不推其他記者，量測與結論登記在 `docs/workaround-register.md`「已收斂」段——本檔不重抄。
 
 每個 Edit 是一回合、每回合重算整個 context；把多處修改寫成一個 JSON 一次套用，回合數從幾十降到個位數。
 

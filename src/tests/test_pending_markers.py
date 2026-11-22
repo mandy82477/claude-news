@@ -83,6 +83,26 @@ class TestShortMarkerExcludedFromLegacy(unittest.TestCase):
         self.assertEqual(hit.cls, "M")
 
 
+class TestMarkerChildBulletsExcludedFromLegacy(unittest.TestCase):
+    """新語法標記底下緊接的縮排子條列是同一筆懸置的細節，裡面的「官方未載」不是另一筆舊標記。
+
+    2026-11-22 三位記者回填「舊語法」時發現被抓的全是這種子條列，只好改措辭繞過檢查器。"""
+
+    MARKER = "- 🔎 **查無官方**（標 2026-11-01｜查 OpenSSH、ML-DSA｜複 2026-12-06）｜**清單**：官方只載修補\n"
+
+    def test_indented_child_bullet_not_counted(self):
+        text = self.MARKER + "  - 完整清單官方未載，CVE 編號未證實\n"
+        self.assertEqual(mod.iter_legacy(text), [])
+
+    def test_unindented_line_after_marker_still_counted(self):
+        text = self.MARKER + "- 另一則：官方未載\n"
+        self.assertEqual(len(mod.iter_legacy(text)), 1)
+
+    def test_child_span_stops_at_first_unindented_line(self):
+        text = self.MARKER + "  - 細節未證實\n\n另一段待查證\n"
+        self.assertEqual([h.word for h in mod.iter_legacy(text)], ["待查證"])
+
+
 class TestLegacyExemptions(unittest.TestCase):
     """口徑豁免：這四類回填成新語法不會變好，算進存量只會讓數字永遠歸不了零。
 

@@ -644,12 +644,37 @@
       "files": [
         ".claude/skills/web-publish/SKILL.md",
         ".claude/skills/wiki-lint/SKILL.md",
-        ".claude/commands/weekly.md"
+        ".claude/commands/weekly.md",
+        ".claude/skills/weekly-report/SKILL.md",
+        ".claude/skills/wiki-weekly-review/SKILL.md"
       ],
       "patterns": [
         "scripts.gate_web_build\\.py"
       ],
-      "_note": "2026-08-01 加入。web build 的放行判準集中在腳本裡；任一處退回自己跑 run_tests.py 再判斷，兩處就會失步（日更放行、週更擋下之類）。 2026-10-04 加入 weekly.md（/weekly 收尾原自寫一套繞過 gate）。"
+      "_note": "2026-08-01 加入。web build 的放行判準集中在腳本裡；任一處退回自己跑 run_tests.py 再判斷，兩處就會失步（日更放行、週更擋下之類）。 2026-10-04 加入 weekly.md（/weekly 收尾原自寫一套繞過 gate）。 2026-11-14 加入兩個子 skill：10-03 只修了總指揮，子 skill 單獨執行（weekly.md 使用方式明文允許）仍走舊閘與舊措辭。"
+    },
+    {
+      "name": "頂部 delta-first callout 的規則端節名：規格端（daily-contracts.md）與三個消費端的指路字串同步（節名或檔案搬家只改一側，被點名的記者會被導去不存在的節）",
+      "assertion": "all_contain",
+      "files": [
+        "scripts/check_callout_coverage.py",
+        "scripts/check_reader_digest.py",
+        "scripts/check_reader_language.py"
+      ],
+      "patterns": [
+        "daily-contracts\\.md`?「頂部 delta-first callout」"
+      ],
+      "_note": "2026-11-14 對抗輪 C #10：三支腳本仍指向已搬走的 page-templates.md 該節（check_rules 檢查 2 只驗檔存在、不驗節存在）。reviewer 原案另列 build_reader_digest.py，但該檔不含此節名（它指的是「脫離頁面也要讀得懂」），故不列。規格端另一條看守。"
+    },
+    {
+      "name": "頂部 delta-first callout 規格端仍住 daily-contracts.md（上一條三支腳本的指路目標；節名改了要同批改那三支）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/reporter-rules/daily-contracts.md"
+      ],
+      "patterns": [
+        "\\*\\*頂部 delta-first callout 格式：\\*\\*"
+      ]
     },
     {
       "name": "weekly-report/references/contracts.md 第(3)段兩張表的欄名 <-> build_web.py 解析錨點（欄名改動會讓該表整張不進 JSON、在網站上靜默消失）",
@@ -753,13 +778,15 @@
       "files": [
         ".claude/skills/web-publish/SKILL.md",
         ".claude/skills/wiki-lint/SKILL.md",
-        ".claude/commands/weekly.md"
+        ".claude/commands/weekly.md",
+        ".claude/skills/weekly-report/SKILL.md",
+        ".claude/skills/wiki-weekly-review/SKILL.md"
       ],
       "patterns": [
         "Tests FAILED - (web )?build skipped"
       ],
       "max": 0,
-      "_note": "2026-08-01 加入。舊 log 措辭對應「測試失敗一律跳過 build」的舊規則，留著會讓 agent 抄回舊行為。 2026-10-04 pattern 放寬為 (web )? 並納入 weekly.md：weekly.md 用「Tests FAILED - build skipped」少一個 web 字而躲過看守。"
+      "_note": "2026-08-01 加入。舊 log 措辭對應「測試失敗一律跳過 build」的舊規則，留著會讓 agent 抄回舊行為。 2026-10-04 pattern 放寬為 (web )? 並納入 weekly.md：weekly.md 用「Tests FAILED - build skipped」少一個 web 字而躲過看守。 2026-11-14 加入兩個子 skill：10-03 只修了總指揮，子 skill 單獨執行（weekly.md 使用方式明文允許）仍走舊閘與舊措辭。"
     },
     {
       "name": "wiki/index.md 為純路由表：異動日誌區塊不得再長回來（2026-08-02 瘦身：83% 是 log.md 的重複副本，路由成本 42k→8k）",
@@ -819,7 +846,7 @@
       "patterns": [
         "逾期待查證清算",
         "5i\\. 安全政策兩頁結論表退場複查",
-        "5j\\. 商業健康度四表退場複查",
+        "5j\\. 商業健康度五表退場複查",
         "5k\\. 社群三張結論表退場複查",
         "5l\\. 模型頁世代表複查"
       ],
@@ -1665,7 +1692,7 @@
         "5h\\. 投資訊號回顧環",
         "5m\\. code-quality-decline",
         "5i\\. 安全政策兩頁結論表退場複查",
-        "5j\\. 商業健康度四表退場複查",
+        "5j\\. 商業健康度五表退場複查",
         "5k\\. 社群三張結論表退場複查",
         "5l\\. 模型頁世代表複查",
         "5n\\. official-community-gap",

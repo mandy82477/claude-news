@@ -205,7 +205,7 @@ REPO_ROOT\src\logs\task_scheduler.log
 
 ### 📋 需使用者端設定
 
-摘要表之後**必接**此區塊，只放使用者才能做的動作：claude.ai 雲端環境網路設定、GitHub／帳號權限、憑證、付費設定。其餘事項主編當輪判定並處理完、理由寫進 `wiki/log.md`，不放這裡；摘要只寫做了什麼。
+摘要表之後**必接**此區塊，只放使用者才能做的動作：GitHub／帳號權限、憑證、付費設定（雲端網路白名單使用者已裁定不改，不列）。其餘事項主編當輪判定並處理完、理由寫進 `wiki/log.md`，不放這裡；摘要只寫做了什麼。
 
 作法：Grep `wiki/log.md` 中 TARGET_DATE 該次 ingest 紀錄的「📋 需使用者端設定」段落，逐條轉成一行（`- [要設什麼]：在哪設、設了之後解開什麼`）。同時 Grep 前 14 天的 ingest 紀錄，**同一項重複出現者標「⏳ 已擱置 N 天」**置頂。
 
@@ -227,4 +227,4 @@ REPO_ROOT\src\logs\task_scheduler.log
 
 ---
 
-> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）
+> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍）

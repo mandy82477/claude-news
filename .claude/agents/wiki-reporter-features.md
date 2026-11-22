@@ -23,22 +23,5 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 **書寫風格：** release notes 語氣、可操作性優先；feature 類型（熱度 ≥ 🔥🔥🔥）必含「快速上手」最小可用指令/配置範例（可執行形式）。delta-first；版本以表格、已知問題以 🔴/🟡/✅ 標記。
 **收錄切線：** 純 bug fix/reliability/內部基礎設施 → 只進 claude-code 版本表；研究/CSR/定價/合作/純策略表態 → 改投對應頁面，不進 feature-radar。
 
-- feature-radar 有新條目時，在回報中附上完整條目（格式見下方），讓主編寫入（不直接改 feature-radar.md / index.md / log.md）
-
-## feature-radar 條目格式（回報時附上）
-
-```markdown
-### 功能名稱
-**發布：** YYYY-MM-DD（版本號） | **狀態：** GA / Preview
-
-**是什麼：** 一句話描述功能用途。
-
-**為何熱：** 社群反應、討論來源、工具跟進情況。
-
-**快速上手：**
-\```
-最小可用指令或配置範例
-\```
-
-**注意事項：** 已知限制或使用前提。
-```
+- feature-radar 有新條目時，在回報中附上完整條目**與全覽表那一列**，讓主編寫入（不直接改 feature-radar.md / index.md / log.md）
+- **條目格式與全覽表列格式不抄在本檔**——單一家是 `.claude/reporter-rules/features/pages.md`「feature-radar」節的「新功能條目格式」與「新條目必須同時補全覽表一列」（有新條目要報時讀該節，讀法見上方第 3 項）。兩個家必漂：副本會落後於狀態值域與必填段。

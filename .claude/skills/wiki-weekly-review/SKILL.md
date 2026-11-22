@@ -68,7 +68,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 依序執行（`REPO_ROOT` = `git rev-parse --show-toplevel` 所得，`PYTHON` = PATH 上的 `python`（雲端為 `python3`））：
 
 1. `git -C REPO_ROOT add wiki/` → `git -C REPO_ROOT commit -m "wiki: weekly review YYYY-MM-DD"`（無變更則跳過）
-2. `PYTHON REPO_ROOT\scripts\run_tests.py`（失敗 → 跳過 build 與 web commit，仍執行步驟 4 推送 wiki commit）
+2. `PYTHON REPO_ROOT\scripts\gate_web_build.py`（**不另外自己跑 `run_tests.py` 再判斷**；擋下時走 `.claude/skills/web-publish/SKILL.md` Step 4「gate 擋下時的修復迴圈」，至多 2 輪仍擋下則跳過 build 與 web commit，仍執行步驟 4 推送 wiki commit）
 3. `PYTHON REPO_ROOT\scripts\build_web.py` → `git -C REPO_ROOT add web_reader/` → `git -C REPO_ROOT commit -m "web: rebuild YYYY-MM-DD（週度回顧上站）"`
 4. `git -C REPO_ROOT push`（單一 push，理由見 `.claude/skills/web-publish/SKILL.md` Step 5）
 
@@ -79,4 +79,4 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 - 由主 session 執行並派工六記者（明寫 `model`）；記者只回報，不直接修改頁面。
 - 繁體中文為主；`wiki/log.md` 只能 append，不可修改既有條目；`news/` 唯讀。
 - 步驟 3 每一項都要有主編判定（做／不做＋理由）；必做項不得判不做。
-- 單獨執行時步驟 6 的 `run_tests.py` 綠了才 build web；由 `/weekly` 帶起時步驟 6 跳過，收尾由總指揮負責。
+- 單獨執行時步驟 6 的 `gate_web_build.py` 放行才 build web；由 `/weekly` 帶起時步驟 6 跳過，收尾由總指揮負責。

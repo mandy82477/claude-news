@@ -18,7 +18,7 @@ check_callout_coverage.py — 讀者版日報涵蓋閘：當日吃進新聞的�
 只對 TARGET_DATE 當天跑才有意義：頁面隔天再被更新後，「最後新聞更新」就不再是那一天，歷史日期
 無法從 wiki 現版重驗，所以本閘不掃全部 daily/、不進 run_tests 的全庫檢查。
 
-規則端：`.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」。
+規則端：`.claude/reporter-rules/daily-contracts.md`「頂部 delta-first callout」。
 exit 0＝通過；1＝有頁漏了當日 callout（逐頁點名）；2＝用法錯誤。
 """
 from __future__ import annotations

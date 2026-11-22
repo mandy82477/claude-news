@@ -3,7 +3,7 @@
 
 立法依據：2026-09-05 競品頁健檢，冷讀者兩輪都抓到同一件事——讀者看不懂
 「12 列上限汰出」「不回訪」「已移交」「每日抄錄」「模式庫」「二手」。
-`.claude/reporter-rules/page-templates.md` 的「無維運術語洩漏」列與
+`.claude/reporter-rules/daily-contracts.md` 的「無維運術語洩漏」列與
 `.claude/reporter-rules/shared.md` 的「派工過程不上頁」早已明文禁止，
 但兩條都只是規則、沒有偵測器——本庫病史的標準形狀（承諾有了、執行點沒有）。
 本檔是那兩條規則的執行點。
@@ -167,7 +167,7 @@ TERMS: list[dict] = [
      "alt": "改成 [[頁#節]] 指路，或直接寫那一列講的事"},
     {"key": "整理語", "scope": "callout",
      "pattern": r"拆成兩頁|拆頁|併頁|獨立成新頁|新增主題頁|新增頁|本頁開張|概覽表|升為第一|留在原頁|表格升|換版面|改版面",
-     "why": "callout 要寫本頁讀者在乎的更新重點（外面發生了什麼），這句寫的是我們動了哪頁哪張表；讀者版日報直接抄 callout，整理紀錄會原樣上站（規格見 .claude/reporter-rules/page-templates.md「頂部 delta-first callout」，2026-09-13）",
+     "why": "callout 要寫本頁讀者在乎的更新重點（外面發生了什麼），這句寫的是我們動了哪頁哪張表；讀者版日報直接抄 callout，整理紀錄會原樣上站（規格見 .claude/reporter-rules/daily-contracts.md「頂部 delta-first callout」，2026-09-13）",
      "alt": "改寫成事件本身：誰發布／量測／說了什麼，頁面整理不寫進 callout"},
 ]
 

@@ -38,6 +38,21 @@ class TestStrip(unittest.TestCase):
         new, n = mod.strip_text("新增條文標 `[加入: YYYY-MM-DD]`，改寫標 `[改版: YYYY-MM-DD]`。\n")
         self.assertEqual(n, 2)
 
+    def test_moved_in_marker_and_paren_residue(self):
+        text = (
+            "❌ 日期後接說明）`[搬入: 2026-09-12，原住 wiki/CLAUDE.md]`\n"
+            "1. **先過時間閘**（`[加入: 2026-08-01]`）：候選池\n"
+            "（歷史敘事不進 agent 讀取範圍，`[加入: 2026-09-04]`）\n"
+            "正文裡本來就有的（）不動\n"
+        )
+        new, n = mod.strip_text(text)
+        self.assertEqual(n, 3)
+        lines = new.splitlines()
+        self.assertEqual(lines[0], "❌ 日期後接說明）")
+        self.assertEqual(lines[1], "1. **先過時間閘**：候選池")
+        self.assertEqual(lines[2], "（歷史敘事不進 agent 讀取範圍）")
+        self.assertEqual(lines[3], "正文裡本來就有的（）不動")
+
 
 if __name__ == "__main__":
     unittest.main()

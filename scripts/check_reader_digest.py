@@ -22,7 +22,7 @@ check_reader_digest.py — 讀者版日報（daily/YYYY-MM-DD.md）格式閘。
   6. 頂部 `## 📌 今日聚焦`／`## ⭐ 重點話題` 兩節合法，內容不查（它們是 news/ 的投影）
 
 內容本身（標籤字樣、字數、寫法）不查——那是各頁 callout 自己的事，規則在
-`.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」。
+`.claude/reporter-rules/daily-contracts.md`「頂部 delta-first callout」。
 
 行為：全過 exit 0；任何違規印出「檔案:行號 問題」後 exit 1。
 「今日 wiki 無新知」的空日檔一律視為合法（它是規格要求的寫法，不是失敗）。

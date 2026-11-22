@@ -34,4 +34,4 @@
 
 ## 回報格式
 
-照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」八欄；`feature-radar 新增` 欄恆填「無」。安全事件涉及 Claude Code 功能面時，「同步自查」欄註明「請主編轉知功能記者」。
+照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」九欄；`feature-radar 新增` 欄恆填「無」。安全事件涉及 Claude Code 功能面時，「同步自查」欄註明「請主編轉知功能記者」。

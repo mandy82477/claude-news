@@ -5,7 +5,7 @@ argument-hint: baseline | compare
 
 # Pipeline Change Check
 
-修改 `src/news_aggregator/`、`scripts/build_web.py`、`.claude/skills/news-digest/references/format.md`、`.claude/skills/news-digest/references/selection.md` 的日報格式與選材規格、或收錄門檻規則（`.claude/reporter-rules/shared.md` 互動門檻對照表）**之前與之後**執行，防止改版靜默劣化產出。依 `$ARGUMENTS` 分兩種模式。
+修改 `src/news_aggregator/`、`scripts/build_web.py`、`.claude/skills/news-digest/references/format.md`、`.claude/skills/news-digest/references/selection.md` 的日報格式與選材規格、或收錄門檻規則（`.claude/reporter-rules/shared.md` 互動門檻對照表）**之前與之後**執行，防止改版靜默劣化產出。依 `$ARGUMENTS` 分兩種模式。本指令的義務登記在 `.claude/rules/dev-done.md` 第 4 條（改上述檔時自動載入），不靠記得。
 
 ---
 
@@ -14,10 +14,11 @@ argument-hint: baseline | compare
 用 inline Python 從最新一份 `web_reader/data/digest/*.json` 計算：
 
 - `articleCount`（文章數）
-- `sourceStatus` 各來源 ok/count（來源分布；目前欄位可能為空陣列，仍須回報長度）
-- 各區塊條目數：`focus` / `topStories` / `techUpdates` / `mediaReports` / `discussions` / `billing`
+- `sourceStatus`：各來源 `{name, ok, count}`（來源分布；回報長度＋`ok=false` 的來源名）
+- 各區塊條目數（**與 `.claude/skills/news-digest/references/format.md` 的八個區塊 emoji 一一對應，新增區塊時兩邊同批加**）：`focus`(📌) / `topStories`(⭐) / `techUpdates`(🔧) / `billing`(💰) / `mediaReports`(📰) / `discussions`(💬) / `topicRadar`(🧭) / `sourceStatus`(📡，記長度)
+- `sedimentedToday` 長度與 `bulletin` 是否非空（讀者版投影面，改版常忘）
 - `discussions` 條目中含 `sentiment` 非空值的比率（格式健康 proxy）
-- 各區塊條目中 `body` 非空的比率（解析健康 proxy）
+- 各區塊條目中 `body` 非空的比率（解析健康 proxy）；`focus` 無 `body` 欄，改記 `ref_urls` 非空比率
 
 ---
 
@@ -40,7 +41,7 @@ argument-hint: baseline | compare
 4. **舊資料回歸（必做）：**
    - 執行 `python scripts/build_web.py`，確認成功不報錯
    - inline Python 迴圈 load 全部 `web_reader/data/digest/*.json`，確認每份都能正確解析、無一 JSONDecodeError 或例外
-5. 全部通過後在回報寫一行：「連續 3 天的文章數與來源分布由 `/wiki-lint` 6e 來源健康檢查接手。」
+5. 全部通過後在回報寫一行：「來源分布的連續 3 天趨勢由 `/wiki-lint` 6e 來源健康檢查接手（它讀 `sourceStatus`）；**文章數總量沒有週更接手端**，±30% 以上的變動在本步當輪歸因完畢，不得留給 6e。」
 
 ---
 

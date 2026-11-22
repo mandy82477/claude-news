@@ -28,8 +28,8 @@ from repo_walk import iter_files as _walk_files  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 TARGETS = [ROOT / "CLAUDE.md", ROOT / "wiki" / "CLAUDE.md", *sorted(_walk_files(ROOT / ".claude", ROOT, {".md"}))]
 
-# 方括號內：以「加入／改版／順序改版／改名／裁決／移入／擴充／使用者指示」開頭、含日期或 YYYY 佔位，可多段以全形逗號連接
-_KIND = r"(?:加入|改版|順序改版|改名|裁決|移入|擴充|使用者指示)"
+# 方括號內：以「加入／改版／順序改版／改名／裁決／移入／搬入／擴充／使用者指示」開頭、含日期或 YYYY 佔位，可多段以全形逗號連接
+_KIND = r"(?:加入|改版|順序改版|改名|裁決|移入|搬入|擴充|使用者指示)"
 _DATE = r"(?:\d{4}-\d{2}-\d{2}|YYYY-MM-DD)"
 MARK_RE = re.compile(
     r"[ 　]?`?\[" + _KIND + r":\s*" + _DATE + r"[^\]\n]*\]`?"
@@ -47,6 +47,9 @@ def strip_text(text: str) -> tuple[str, int]:
             new = re.sub(r"[ 　]{2,}", " ", new)
             new = re.sub(r" +(\r?\n)$", r"\1", new)
             new = re.sub(r"\*\* +：", "**：", new)
+            # 標記原本夾在括號裡時，刪完會剩空括號或「，）」殘骸
+            new = re.sub(r"（[ 　]*）", "", new)
+            new = re.sub(r"[，、][ 　]*）", "）", new)
         out_lines.append(new)
     return "".join(out_lines), n
 

@@ -470,13 +470,32 @@ def actionable(hits: list[LegacyHit]) -> list[LegacyHit]:
     return [h for h in hits if not h.exempt]
 
 
+_INDENTED_LINE_RE = re.compile(r"(?:[ ]{2,}|\t)\S")
+
+
+def _span_with_children(text: str, end: int) -> int:
+    """把標記範圍延伸到所在行尾，再吃掉緊接其後、縮排的子條列行。"""
+    nl = text.find("\n", end)
+    if nl == -1:
+        return len(text)
+    pos = nl + 1
+    while pos < len(text):
+        nxt = text.find("\n", pos)
+        line_end = nxt if nxt != -1 else len(text)
+        if not _INDENTED_LINE_RE.match(text, pos, line_end):
+            break
+        pos = line_end + 1 if nxt != -1 else len(text)
+    return pos
+
+
 def iter_legacy(text: str, path: Path | None = None) -> list[LegacyHit]:
     """掃描舊字樣並分類。已是新語法者不重複計入。
 
     回傳含口徑豁免項（`exempt` 欄非空）；只要真存量請套 `actionable()`。
     """
     doc = Doc(text, path)
-    new_spans = [(mk.start, mk.end) for mk in iter_pending(text, path)]
+    # 標記底下緊接的縮排子條列是同一筆懸置的細節（「官方未載」等字樣在那裡是描述，不是另一筆標記）
+    new_spans = [(mk.start, _span_with_children(text, mk.end)) for mk in iter_pending(text, path)]
     new_spans += [
         mm.span() for mm in SHORT_RE.finditer(text)
         if not doc.in_code(mm.start()) and not doc.in_frontmatter(mm.start())

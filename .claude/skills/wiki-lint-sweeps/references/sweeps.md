@@ -18,7 +18,7 @@
 | 5m | `python scripts/cloud_egress_check.py --group github` | `EGRESS: github OK` | 「code-quality-decline issue 狀態複查因雲端 egress 未開（github）跳過，留待本機 `/weekly`」 |
 | 5n | `python scripts/cloud_egress_check.py --group github` | `EGRESS: github OK` | 「official-community-gap「官方補了沒」表對官方一手因雲端 egress 未開（github）跳過，留待本機 `/weekly`」 |
 
-上表引號內的那句記進 lint 紀錄的「本機承接」行；該步回報那一行寫「雲端 egress 未開，跳過」。雲端網路白名單本身要開才解得掉的，另記「需使用者端設定」（在 claude.ai 環境設定加哪些網域）。
+上表引號內的那句記進 lint 紀錄的「本機承接」行；該步回報那一行寫「雲端 egress 未開，跳過」。使用者已裁定雲端網路白名單維持預設、不改 Custom：egress 擋下的步驟固定由本機 `/weekly` 步驟 0 補做，只記「本機承接」，**不記「需使用者端設定」**。探測照跑，環境哪天改了會自動轉為雲端執行。
 
 **探測通了、repo 卻沒授權（5m／5n）**：`EGRESS: github OK` 只證明網路通，不證明本 session 讀得到 `anthropics/claude-code`。雲端 session 讀得到哪些 repo 由 routine 定義的 `sources` 決定——`weekly-wiki-lint-cloud` 自 2026-10-18 起已把 `anthropics/claude-code`（sparse checkout `CHANGELOG.md`）列為第二個 source，GitHub MCP 與 `gh api`（REST）皆可讀；`gh auth status` 報 GH_TOKEN 失效屬誤報，不以它判定。若 GitHub MCP 仍回 `repository not configured for this session`，代表 routine 的 `sources` 被改掉了，先對照 `docs/cloud-runbooks/triggers/weekly-wiki-lint-cloud.json` 修 routine → **不擴權、不換別條路繞**，該步回報寫「repo 授權不足，跳過」，「本機承接」記「<步驟名>因 repo 授權不足（anthropics/claude-code）跳過，留待本機 `/weekly` 以 `gh` 補做」。本機 `/weekly` 步驟 0 照 `.claude/skills/weekly-local-catchup/SKILL.md` 承接。
 
@@ -244,7 +244,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ---
 
-## 5j. 商業健康度四表退場複查（主編親做）
+## 5j. 商業健康度五表退場複查（主編親做）
 
 `wiki/topics/anthropic-business.md` 的 `## 現在的數字`（上限 10 列）與 `## 上面提到的人是誰`（上限 8 人）、`topics/anthropic-business-risks` 的商業風險表（現名 `## 還沒過去的風險`）（上限 6 列）、`topics/anthropic-partnerships-compute` 的 `## 哪個合作會改到你用的 Claude`（上限 6 列）與 `## 跟三大雲各是什麼關係`（三列，覆寫）的退場與補位條文，本步即其週更觸發邊，複查規則見 `.claude/reporter-rules/commercial/pages.md`「topics/anthropic-business（母頁）與三子頁」第 1、4、5、6、12 條；母頁 `### 未歸類` 有條目時依第 0 條分派。
 
@@ -252,7 +252,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 **回報格式：**
 ```
-商業健康度四表健檢（5j）：指標 N 列（移除 a／補位 b）／風險 M 列（移除 c／補位 d）／合作 K 列／人物 P 人／通路快照資料截至 YYYY-MM-DD
+商業健康度五表健檢（5j）：指標 N 列（移除 a／補位 b）／風險 M 列（移除 c／補位 d）／合作 K 列／人物 P 人／三大雲 ✅ 無異動或已覆寫 Q 格／通路快照資料截至 YYYY-MM-DD
 ```
 
 ---

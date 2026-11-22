@@ -56,4 +56,4 @@
 
 ## 回報格式
 
-照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」八欄，本記者無專屬欄位差異；`feature-radar 新增` 欄填條目標題或「無」。
+照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」九欄，本記者無專屬欄位差異；`feature-radar 新增` 欄填條目標題或「無」。

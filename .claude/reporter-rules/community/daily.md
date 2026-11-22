@@ -86,4 +86,4 @@
 
 ## 回報格式
 
-照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」八欄；`feature-radar 新增` 欄恆填「無」（功能條目由功能記者提報）。
+照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」九欄；`feature-radar 新增` 欄恆填「無」（功能條目由功能記者提報）。

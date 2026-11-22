@@ -62,7 +62,7 @@ NEWS_H3_RE = re.compile(r"^###\s")
 MD_URL_RE = re.compile(r"\((https?://[^\s()]+)\)")
 NEWS_TOP_TITLE_RE = re.compile(r"^\*\*\[(.+?)\]\((https?://[^\s()]+)\)\*\*\s*$")
 NEWS_TOP_SOURCE_RE = re.compile(r"^`[^`]+`\s*·")
-# 頁內路標：callout 投影到日報後這些指涉沒有東西可指（規則端：page-templates.md「脫離頁面也要讀得懂」）
+# 頁內路標：callout 投影到日報後這些指涉沒有東西可指（規則端：`.claude/reporter-rules/daily-contracts.md`「頂部 delta-first callout」）
 # ⟨G-11⟩ 這類頁內編號、「見『## 節』」「詳見下方表格」、以及沒有頁名的同頁錨點 [[#節]]
 PAGE_INTERNAL_RE = re.compile(
     r"⟨[^⟩\n]{1,16}⟩"

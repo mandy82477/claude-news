@@ -49,7 +49,7 @@ python3 scripts/cloud_bootstrap.py
 
 上述腳本把那套手動修法固化：冪等（已存在就跳過）、不致命（失敗只印警告、退出碼恆為 0）。**它是 workaround 不是真解**——真解是雲端基礎映像預裝這些套件，見 `docs/workaround-register.md` 對應列。
 
-**egress 限制 `[改版: 2026-09-12]`：** 雲端環境的網路存取分四級（官方文件 `cloud-environments.md#network-access`）：None／**Trusted（預設，約 70 個網域白名單）**／Custom（使用者自填網域）／Full。本專案目前是 **Trusted**，所以 Reddit / HN / Google News / 官方文件站多半回 403 或 `EGRESS_BLOCKED`。這是**使用者可改的環境設定**（在 claude.ai 環境設定改成 Custom 並加入網域），不是永久事實。
+**egress 限制 `[改版: 2026-09-12]`：** 雲端環境的網路存取分四級（官方文件 `cloud-environments.md#network-access`）：None／**Trusted（預設，約 70 個網域白名單）**／Custom（使用者自填網域）／Full。本專案目前是 **Trusted**，所以 Reddit / HN / Google News / 官方文件站多半回 403 或 `EGRESS_BLOCKED`。這是使用者可改的環境設定，但**使用者已裁定維持 Trusted**：被擋的步驟固定由本機 `/weekly` 補做，不必再提請改設定。
 
 兩件事因此要分開看：
 
