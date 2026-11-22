@@ -9447,3 +9447,22 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **順手撞到並修**：market-signals 母頁與 IPO 子頁共 4 處把「其中約 916 億歸 Anthropic（扣承銷費用前）」寫成「公司實收」——官方公告只載毛額、未載淨額；三個母頁 callout（anthropic-business、market-signals、ai-agent-safety）跟上子頁查證結果
 - **仍未到期、照排程處理**：`entities/claude-code` 表格超限專項（12-08）、Reddit 與 GitHub 憑證（12-08）、官方頁監看的四項已知取捨（11-29）、GH Actions 排程延遲（12-13）、domain 信譽表（2027-01-16）、`community-multi-agent` 缺口追蹤（12-08）
 - 需使用者端設定：Reddit API 憑證（選配）、GitHub token（選配）、雲端 routine 多 repo session 的 hook 未載入（建議移除 `anthropics/claude-code` 這個 source）
+
+## 2026-11-22 Ingest
+
+- 來源日報：[[news/2026-11-22]]
+- 更新頁面：
+  - **人物**：entities/dario-amodei（IPO 財富效應：七位創辦人持股加總約 1,410 億美元、Times of India 員工百萬富翁估算）
+  - **功能**：entities/claude-code、entities/claude-code-known-issues（6 筆高互動 bug：Windows GPU 當機、Advisor API 無回應、MSIX 更新失敗、Chrome 擴充套件側邊面板、登入驗證信被攔、Plan Mode 被繞過）
+  - **商業**：topics/anthropic-partnerships-compute（第三方推算 Anthropic 2028 用電 87% 天然氣／11% 燃煤）、topics/anthropic-ipo（IPO 財富效應事實、WSJ／NPR／TribLIVE／Fox Business 事後分析）、topics/competitor-landscape（Cline vs Claude Code 定價懸置、OpenAI Perplexity 方法論專頁定向）、entities/pricing-incidents（Freebuff 灰色市場）、entities/pricing 與 topics/anthropic-business（僅子樹日期/callout 層級同步）
+  - **社群**：topics/community-multi-agent（facadecode，515★ VS Code 多 agent 協調工具）、topics/community-skills（fast-anything 驗證式 Rust 搬遷、dev.to CLAUDE.md vs Skill 優先序實測）、topics/community-tech-patterns（母頁 callout＋路由表同步）
+  - **模型**：無（NYT／Independent 黎曼猜想轉述判定不收，無新進展）
+  - **安全政策**：無（cybersecurity-skills 與 CLAUDE.md/Skill 實測兩筆待查證命中皆判證據不足不動）
+  - **投資分析**：無（IPO 財富快照未動 S-1 數字或風險因素，不開新判讀）
+- 新增頁面：無
+- 摘要：日報新內容清淡，主線延續 Anthropic IPO 財富效應（創辦人持股、員工身價）與媒體事後分析；社群面較熱，一天內出現 reanimate、facadecode、fast-anything 三款新工具與 6 則 claude-code 高互動 bug 回報；黎曼猜想爭議與股價賣壓皆為重複報導未收。
+- 呈現品質：全部通過；社群記者初次寫入 community-multi-agent／community-skills 各一處細節區條列超過 200 字元上限，主編依 ingest_gate 指名位置下沉改寫後轉綠
+- 品質備註：[主編] 📌 今日聚焦「Times of India」連結在撰寫日報時手動打斷成截斷 URL（指向不存在的頁面），已在收尾前以 `src/gathered_items.json` 原值修回 news/2026-11-22.md 與 entities/dario-amodei.md 兩處；提醒下次長 URL 一律用程式複製，不手key
+- 分類回退：追加派工 1 筆（[功能] Seedeo MCP Adds Suno, Kling and Veo → 社群；社群記者查證後判定純行銷稿、互動 0、兩來源同屬 Gannett 集團地方報，不符收錄門檻，不收錄）；駁回 0 筆
+- devpractice 沉澱：本日無候選（當日無「開發實務」類條目）
+- market 判讀：本日無訊號（已檢視 42 條，IPO 財富快照未動 S-1 數字，不開線）
