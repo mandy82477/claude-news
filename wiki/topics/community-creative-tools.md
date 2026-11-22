@@ -11,7 +11,7 @@ parent: "topics/community-integrations"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 6
+inbound_links: 5
 attribution_count: 0
 attribution_last: null
 top_source: null

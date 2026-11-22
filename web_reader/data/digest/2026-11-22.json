@@ -1,0 +1,639 @@
+{
+  "date": "2026-11-22",
+  "generatedAt": "2026-11-22 22:13 UTC",
+  "articleCount": 38,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Seedeo MCP Adds Suno, Kling and Veo to ChatGPT and Claude Connectors",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQN3M5SE00X0hicGN1TDJ0N3pJNVp3cGRJT1dDT2RpbG9mOXBWdWd1cl94TGZxY25YUnRUekIwOTN4RkpGYTFicEducWtsUnpJSnJmZXhDeXlmYTVOT2lWTFFkRnRWeE9yQ3VBQlRnUTBLMkpTc2dWeWJNZW9YZ3BFendzbEd5NFcwbWdLRzBiekFIRlhidXEwSFBQRGx5YUtEZUctVTlVdzVTb1pFTjAxbi1EMS1BdG9LSl9IWA?oc=5",
+      "source": "Google News / IndyStar ＋Google News / The Detroit News",
+      "time": "11/22 14:38",
+      "sentiment": "",
+      "body": "Seedeo 推出的 MCP 服務今天同時幫 ChatGPT 與 Claude 的 Connectors 介面接上 Suno、Kling、Veo 三款生成式媒體工具，IndyStar 與 Detroit News 兩個獨立來源同日報導。用 Claude Connectors 串接外部生成工具的人，這是今天新增的串接選項。",
+      "focusTags": []
+    },
+    {
+      "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+      "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+      "source": "Hacker News",
+      "time": "11/22 08:57",
+      "sentiment": "",
+      "body": "一篇分析部落格文章推算，Anthropic 到 2028 年的用電組合裡約 87% 來自天然氣、11% 來自燃煤，文章在 Hacker News 討論串今天衝上 543 分。關注 AI 資料中心能源足跡與 ESG 議題的人，這是目前流傳最廣的單篇估算，但仍屬第三方推算，非官方數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-partnerships-compute",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "官方文件更新：Claude Help Center release notes",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "source": "Official Docs",
+      "time": "11/22 17:55",
+      "sentiment": "",
+      "body": "Claude Help Center 的 release notes 頁面新增內容，說明 Claude Mobile 介面正逐步換上新外觀，先從 iOS 開始推出，聊天、專案等內容的呈現方式會隨之調整。用 Claude Mobile app 的人，接下來幾天介面可能會變。",
+      "focusTags": []
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "What Comes Next After Anthropic's Historic IPO",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMGhQYy1TNTdJcnJDbUg5RFFZRl91OE1OZHNvdTFfYm81NTFTR1JGLXRsR1RFTnhnajZMT1ZjNEFIMjlJX2pfS092R2JGLUFZb2ZhVE5fRU5DUHhub1ZKb3VQUkJUSUpuX2wwZ2ZpdmR1M1BNcTVYb0pBQXlZMVFmNkNVbElaUEg0a2c?oc=5",
+      "source": "Google News / WSJ",
+      "time": "11/22 15:55",
+      "sentiment": "",
+      "body": "WSJ 分析 Anthropic 完成史上規模最大的 IPO 之後，公司接下來要面對的課題，屬事後展望評論，未提出新的財務數字。持有或關注 Anthropic 概念股後續走向的人，這篇提供較完整的脈絡整理。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic had the largest IPO ever. What does that mean for their future — and ours? - NPR",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSXBXdzVRdkJMZW1ESjJiZkdrVHAxWGlSc2FUUEs3bW1WRUFpajZRS1EzT1VENUxaeUdtdWY0LTRCOE1UQzU2YnVGMUZRaTVta1d0dzVWSk1PSThMZU9RQmVfTGxCSDYxN05UbGJsN0xJTlg4SDNNUGwzQXU1VnluRUtKVldPcWFVX2FxWVFoWHcxa1RCaVlLVjE3SlVyZFJwd3RsLXVHeG9sUE9uRFNYUUtwQ1FWQkc4OHRRSEJ1c2JFR00?oc=5",
+      "source": "Google News / NPR",
+      "time": "11/22 13:12",
+      "sentiment": "",
+      "body": "NPR 同日也發文回顧 Anthropic 史上最大 IPO 對公司與整體 AI 產業可能帶來的影響，同屬事後分析角度。想從更廣的產業視角理解這次 IPO 意義的人，可以搭配上一則 WSJ 的分析一起看。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's record IPO raises hopes for a charitable windfall that has nonprofits preparing to scale - TribLIVE.com",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORFFLSnZVQWw1MWg5VUpyMUlUQ2drcDMwYnB3UWhFY29ZM0prNDNGTDBUa1Bpc0d2UXZGMmhRZXUyZ1BjQzZBVzk3QVowU3FmM0FEV0pzQjM3Z0QwRVNWNS1pb19qQXhFbHBhVTBKMEtHck83RFR6cEEzT0w4c0ZpZGpVbHBTcFh1UjhDQXRxRlJCUmRkSjVRRmoyMUlQNEl3N1c5V0U4RTQ5cU5IVzlrZVBsdHZnOG50c2o4bDBRemJ0dEQySzQzUjZVSFA?oc=5",
+      "source": "Google News / TribLIVE.com",
+      "time": "11/22 13:23",
+      "sentiment": "",
+      "body": "TribLIVE 報導，Anthropic 這次創紀錄的 IPO 讓依賴其捐助或合作的非營利組織開始準備擴大規模，期待隨之而來的慈善資金挹注。關注 AI 產業與非營利資金流動關係的人，這是今天新增的角度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic IPO signals 'beginning of a gold rush' for small businesses, biz tech CEO says - Fox Business",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMjVQWHNJMWw0Y21HYTVDN0lhX0ZYQS1FdzFCLV9nbVRzS09jNFN5UXRaanhHM2tXbGJkVGtlZVdMMnlTa2RTR29MUU1KbXVkekg1X19VeU5ISGJCbG9FRU5nSkNrZG1MWFJBaVZWY3pGUm5vUmZUWl96aWl6TVNDcUFCOXFxRmlYTFhRLTlqdTQ2S2FWTjJ4RWNBbnlVS2dtemlUSF9nOVlpZFpONElOdUhB0gG3AUFVX3lxTFBNVVBhQ1VSV2VIc0Z5OTJfSU1FUmc2UVFZNDJPX19TSjgteXV4QWxmbDZQWGQwa0M3S0tLUTY1V3ZTRXhUTmVNLTNBSk15QTRuQ1ZzSDY5VkFVT3laUl9XemZJVWZBVG9TU21UaW1US3JvWGZ3dGpiakppUDJobkQ2NW5lVGxEZUdCTlBnaGhEVWNvRE43ZTEySTBZaDJ6VzFuY08xN2FJRkFWUzI1Rkg0eEljUHl0OA?oc=5",
+      "source": "Google News / Fox Business",
+      "time": "11/21 17:54",
+      "sentiment": "",
+      "body": "Fox Business 引述一位科技業 CEO 的看法，稱 Anthropic 這次 IPO 象徵著中小企業導入 AI 工具的「淘金熱」才剛開始。經營中小企業、評估該不該加速導入 AI coding 工具的人，這是今天出現的產業觀察角度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "How to Install Claude Code on Android With Termux - HackerNoon",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8zOTRvWnNOVUtGRTU0ZlZTYzdlcENSU3ZaU3ZabUJnRXlRSDg5RkhId0pDVmxsMEExYmJFaEd1QlpxWVZxNTBlRU40ajNqNWhpdXF5cDhWcjJwa2hVbXBRRk53M19YcHJDX2pHeXhreURiaG9mYlhQWXlVMzY?oc=5",
+      "source": "Google News / HackerNoon",
+      "time": "11/22 16:35",
+      "sentiment": "",
+      "body": "HackerNoon 發布教學，說明如何透過 Termux 在 Android 手機上安裝並執行 Claude Code。想在手機上跑 Claude Code 的人，這篇提供了具體安裝步驟可以直接參考。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[Windows] Desktop app 1.24012.1: fatal GPU-process crash (0x060C201E) via in-app Browser tab; crash leaves MSIX package unlaunchable (appxState=2) until Repair",
+      "url": "https://github.com/anthropics/claude-code/issues/80444",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/22 14:15 UTC ·",
+      "sentiment": "😤",
+      "body": "Windows 版 Claude 桌面 app 1.24012.1 回報：透過內建瀏覽器分頁觸發 GPU 處理程序當掉後，MSIX 封裝會整個無法啟動，得跑「修復」才能救回來，這則回報累積 114 則留言、17 個 👍。用 Windows 桌面版、常開內建瀏覽器分頁的人目前得留意這個當機模式。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] No response from API error when Advisor is triggered",
+      "url": "https://github.com/anthropics/claude-code/issues/69238",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/22 15:02 UTC ·",
+      "sentiment": "😤",
+      "body": "回報指出，觸發 Advisor 功能（以 Opus 4.8 運作）時會出現「No response from API」錯誤、功能直接卡住，這則回報累積 69 則留言、121 個 👍，是今天留言串裡反應最熱烈的一則。有用 Advisor 功能的人，目前這條路徑可能不穩。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Windows (MSIX): update fails with 'Another program is currently using this file' — app unlaunchable until reboot (every update)",
+      "url": "https://github.com/anthropics/claude-code/issues/76357",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/22 14:15 UTC ·",
+      "sentiment": "😤",
+      "body": "Windows MSIX 版每次更新都會跳「另一個程式正在使用此檔案」錯誤，導致 app 無法啟動、得重開機才能解決，回報者說每次更新都會重演，這則累積 44 則留言、20 個 👍。用 Windows Store／MSIX 版的人，更新前可以先預期要重開機。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude in Chrome extension: Side panel closes when switching/opening tabs in Microsoft Edge on macOS",
+      "url": "https://github.com/anthropics/claude-code/issues/30873",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/22 02:19 UTC ·",
+      "sentiment": "😤",
+      "body": "在 macOS 上的 Microsoft Edge 裡，切換或開新分頁時 Claude in Chrome 擴充套件的側邊面板會自動關閉，這則回報累積 37 則留言、47 個 👍。在 macOS 用 Edge 搭配這個擴充套件的人，目前得留意側邊面板會被分頁操作中斷。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Cannot log in to Claude Code: verification emails suppressed for my address, support bot has no escalation path",
+      "url": "https://github.com/anthropics/claude-code/issues/79808",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/22 13:31 UTC ·",
+      "sentiment": "😤",
+      "body": "回報者反映自己的信箱收不到 Claude Code 的驗證信、導致無法登入，而客服機器人也沒有可用的轉人工升級管道，這則累積 32 則留言、7 個 👍。卡在登入驗證信這一關、求助無門的人不是只有自己遇到。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Plan mode: model made file edits despite plan mode being active",
+      "url": "https://github.com/anthropics/claude-code/issues/38255",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/22 05:16 UTC ·",
+      "sentiment": "😤",
+      "body": "回報指出，在 Plan Mode 開啟、系統多次提醒不應編輯檔案的情況下，Opus 4.6 仍直接修改了原始檔案，這則累積 30 則留言、38 個 👍。仰賴 Plan Mode 先規劃再動手的人，目前這個保護機制偶爾會被繞過。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "briiirussell/cybersecurity-skills",
+      "url": "https://github.com/briiirussell/cybersecurity-skills",
+      "source": "GitHub Search",
+      "time": "11/22 17:55 UTC ·",
+      "sentiment": "😊",
+      "body": "528 星的資安技能庫，專門給 Claude Code、Cursor、Codex 等 AI coding agent 用的資安相關 skills 集合。想讓 coding agent 多懂一點資安基本功的人可以看看這個庫。",
+      "focusTags": []
+    },
+    {
+      "title": "y5ez3g/facadecode",
+      "url": "https://github.com/y5ez3g/facadecode",
+      "source": "GitHub Search",
+      "time": "11/22 17:55 UTC ·",
+      "sentiment": "🤔",
+      "body": "515 星的 VS Code 多 agent 協調工具，可以同時跑 Claude Code、Codex 等多個 agent CLI，讓它們跨視窗、跨機器互相傳訊息、互相操作。想同時指揮多個 coding agent 協作的人可以看看這個工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-multi-agent",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "\"A Skill I Never Invoked Overruled My CLAUDE.md Anyway\"",
+      "url": "https://dev.to/enjoy_kumawat/a-skill-i-never-invoked-overruled-my-claudemd-anyway-144c",
+      "source": "dev.to / #claudecode",
+      "time": "11/21 12:47 UTC ·",
+      "sentiment": "🤔",
+      "body": "作者實測 AGENTS.md、CLAUDE.md 與 Skill 三者指示衝突時誰說話最大聲：用真的 `claude -p` 跑了一系列對照實驗，而不是憑印象猜。在專案裡同時放 CLAUDE.md 與 Skill、擔心規則互相打架的人，這篇提供了實測依據而非猜測。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Reviving a 2012 open-source password manager for modern Android",
+      "url": "https://jurakovic.github.io/passdroid/",
+      "source": "Hacker News",
+      "time": "11/21 23:23 UTC ·",
+      "sentiment": "😊",
+      "body": "作者主要靠 Claude Code 把一款 2012 年的開源 Android 密碼管理器重寫上線，新增 TOTP 二次驗證與指紋解鎖，並用 AES-256＋PBKDF2 600k 次迭代等方式強化安全性，全程無網路權限。想看 Claude Code 獨立做出一個完整、重視安全性的實際產品的人，這是一個完整案例。",
+      "focusTags": []
+    }
+  ],
+  "billing": [
+    {
+      "title": "Cline vs Claude Code: $9.99 vs $20 Plans",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KV3d0a3JrWGI3N2pxT3A0ZklFdHlWbnVOcDNianRtNnNtQS1RNzdTU0FmQTBhZjA0OC1pRHRkTzNRb1JkRXpRczU0ZXhQR2ZZM1FQOU5LeHJvVVl4bGJxeFkwYUxzRVl2MkZVY1ZIVkRPZw?oc=5",
+      "source": "Google News / shattered.io",
+      "time": "11/22 14:59",
+      "sentiment": "",
+      "body": "shattered.io 比較 Cline 與 Claude Code 的入門方案價格：Cline 開出每月 9.99 美元、Claude Code 為 20 美元。正在比較編碼助理訂閱該選哪家的人，這是今天新增的價格對照。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Use Claude Code for free? I test Freebuff, which promises virtually unlimited AI coding",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNkk4VjRnclRLMld0LUptUV9DUzd1MDIwYXJieGdUNWgwNlpJZzZEalBKbGU1Ql8wOFdkd1RnMm9obE1KTVRXaGhKbHl4TEVKSzhlQXA4aWVod3o5N3U5SVluR0JwRkdBZUw0T0VVajBxLWVIU1llOWw4VGVrT2w4MUV2OTMzMV9VUXQwY29iU1BoT2JuMjRtNVQxTUwyUWpjR3ZNVW02Wmx4d0VDcnNGd0JvZExvd1JQWmJGdm5zZERMU0lJcHlvWVV3?oc=5",
+      "source": "Google News / Notebookcheck",
+      "time": "11/22 14:30",
+      "sentiment": "",
+      "body": "Notebookcheck 實測號稱能讓 Claude Code 近乎無限使用的第三方服務 Freebuff，檢驗這個「免費」說法是否站得住腳。想省 Claude Code 費用、但擔心第三方方案可靠度的人，這篇實測值得看完整內容再決定要不要用。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing-incidents",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-20）Anthropic IPO 的財富效應今天多了具體數字：Business Insider 報導七位共同創辦人持股加總價值約 1,410 億美元；Times of India 另估算這波上市可能讓數千名員工成為百萬富翁。想了解 IPO 後 Anthropic 的財富分布、或追蹤創辦人持股動態的人，這是比 11-20 官方掛牌結算數字更進一步的個人財富細節。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxPemFDcTcyNmVvMzhJeFdLX2VQNFdHdGZFX01XbjYyTDBYbE5OOUs4NllpdHlDalluUHR5eGhQZW44S2ZmdGh4ME1Fd0VLN2RHclpxLWU2OTNvM1RJUkwyQmQtTjQydUduM05rQ25PemdYNmYxdXgzOXZmTXk3S0tBMmIwUEtpTlBMZEs4RzB5UGd1RUR5LUM0?oc=5",
+        "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNaHhBWHBNUW00OXBvRGt4NUsyRjRxam5tcGlVR0hRV2Jaa1R1bmZpbnFiVjE3aWk0aE1na0Fmd0xpWXpqemx5UTRGN2VpWHFzc2NVSnpGVHRNRXRwcXdZajZSVnpoLWVYelB6b0VHZEc3ak1XR0E1a3JfYU9RSFFETGpfWjdXdW82VS1aU3pjeVQ2QVRidlpVbG1tSXpRVVdKUzdKUXp2X1RGYVJWVU5zVDVOb0hIemxuUDNoUDRhUjBueGFVZXJiWTdET1RkWWpmS25IZXh2OHRrbDRteF9RTUx5UVIxYjltZGcwREZPc0VwZGQw0gH6AUFVX3lxTFBYbjdwcVZwYnR1aTY4ZUhQTVZRX1ZDSDd5ejVwTjNNRERncF9IT2NRMGxHZ0tXUm1kUWZaRXcxM2pNeTFNeUJQMUdHeFpyUW00TS0taWNyTHZvZ2VVQVhFMGdnSnBXbTNBMGMzTW1xOVhKeVhIY0JvbWx5SnNrdlVudWRuaThTNEw2Q3I2dklNOHJpNENCWmdBZWlJVmZxMTZ3RGkxQnJnOHVrdjlpTFlqS3dTMGZtM1hKYXBNX1BXTXJJOTBvWl91VU51MHVubmVpYmpvbVdxYVpmX0NaYlFLLTNuM3FyWTRIZmpQSEtYM2ZWOUdkLW5Xc1E?oc=5"
+      ],
+      "ref_names": [
+        "Business Insider",
+        "Times of India"
+      ]
+    },
+    {
+      "tag": "[新工具]",
+      "text": "reanimate 是一款能逐格拆解動畫、再驗證還原結果是否動作一致的 Claude Code skill，GitHub 星數衝破 2,149。想拿 Claude Code 做動畫逆向工程或素材比對的人，這是今天新上榜的工具。",
+      "ref_urls": [
+        "https://github.com/NiazMorshed2007/reanimate"
+      ],
+      "ref_names": [
+        "GitHub"
+      ]
+    }
+  ],
+  "topicRadar": [],
+  "sourceStatus": [
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 21
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 9
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 9
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 0
+    }
+  ],
+  "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：新回報：Windows MSIX 更新常跳「檔案使用中」須重開機（#76357），Chrome 擴充套件在 macOS Edge 切分頁會關閉側邊面板（#30873）。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "cowork",
+      "name": "Cowork",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "mythos",
+      "name": "Claude Mythos",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing-incidents",
+      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方放行",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-prompt-injection",
+      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-eval-boundary-incidents",
+      "name": "AI 評測越界事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business-risks",
+      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-partnerships-compute",
+      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-multi-agent",
+      "name": "社群做法：多 agent 怎麼分工與協調",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-compute",
+      "name": "算力與融資這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-customers",
+      "name": "定價、通路與客戶這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-legal",
+      "name": "官司、監管與政府這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-22",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **新回報**：Windows MSIX 更新常跳「檔案使用中」須重開機（#76357），Chrome 擴充套件在 macOS Edge 切分頁會關閉側邊面板（#30873）。\n- **互動數更新**：GPU當機（#80444）114 留言、Advisor 錯誤（#69238）121 讚、登入驗證信抑制（#79808）32 留言。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "topics/model-task-leaderboard",
+            "name": "任務 × 跨家模型領先者週快照",
+            "label": "本週快照重點",
+            "date": "",
+            "body": "WebDev 榜 Claude Fable 5.2 仍居首，但與 Opus 5.5 的差距由 23 分縮到 5 分；改圖榜由 MAI-Image-2.7 登頂；文案聊天榜前三全是 Gemini 4。12 榜全數取得。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **創辦人持股加總價值約 $1,410 億美元**（Business Insider 推算，較 11-20 官方掛牌結算數字更進一步的個人財富細節）"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%**（ZDNET／GeekWire／Kingy AI 轉述）——目前只有廠商數字與媒體轉述，沒有官方牌價或第三方跑分，先別照這個比例重算預算。\n- 🔴 **Gemini 4 Neon 發布，DeepMind 稱程式撰寫能力追平 Opus 5.5，OODA Loop 稱 API 價比 Opus 5.5 低 25%**——成本與能力宣稱同時出現，在意兩者的人都該重新比價，但基準與第三方跑分未查證。\n- 🟡 **GPT-6.2 Astra 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項**（BigGo Finance 轉述）——多工向任務先別急著換，但成本敏感的人有理由找機會實測對照。"
+          },
+          {
+            "page": "topics/anthropic-partnerships-compute",
+            "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **第三方推算：Anthropic 2028 年用電組合約 87% 天然氣、11% 燃煤**（BetterDataCenterProject／HN 543 分，非官方數字）"
+          },
+          {
+            "page": "entities/pricing-incidents",
+            "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Notebookcheck 實測第三方服務 Freebuff 宣稱可免費近乎無限使用 Claude Code，檢驗該說法是否站得住腳**（具體手法未見報導）"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **逾期查證清零**：AISI 事件報告對上「122 次評估中 43 次為 Mythos 5」；天然氣電廠交易、Schwab 席位補貼、音樂著作權兩案、聯邦採購與擬議法案門檻等查無官方一手，標為查無官方並排定複查（見 [[topics/market-signals-legal]]、[[topics/market-signals-compute]]）。\n\n前一輪（2026-11-21）：\n- **WSJ／Hacker News：掛牌跌幅定量為 AI 板塊蒸發 4 兆美元**：Nvidia 股價同步重挫（見 [[topics/market-signals-ipo]]）。\n- **Reuters：承銷商曾平倉避險倉位以穩定 ANT 股價**：操作規模與時點未載（見 [[topics/market-signals-ipo]]）。\n\n前一輪（2026-11-20）：\n- **官方：IPO 結算完成，發行量增至 1,127,000,000 股、毛額約 935 億美元**：其中約 916 億美元歸 Anthropic（扣承銷費用前）（見 [[topics/market-signals-ipo]]）。\n- **掛牌次日股價重挫逾 11%，那斯達克抹平全年漲幅**：S&P 500、道瓊一度進入修正區間（見 [[topics/market-signals-ipo]]）。\n- **Barclays、Citadel、BNY 將 Claude 導入金融業工作流**：Citadel、BNY 為新增具名金融機構（見 [[topics/market-signals-customers]]）。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新動態",
+            "date": "",
+            "body": "**查證結果**：Microsoft 安全部落格 10-19 證實 agent 遭提示注入劫持的案例，見 [[topics/ai-agent-safety-prompt-injection]]；越界率 0%→17.1% 的研究查到 arXiv 預印本，見 [[topics/ai-agent-safety-product-vulns]]；Claude Code 修補清單、OpenCode 餘額歸零等查無官方一手，已排定複查。\n\n前一輪（2026-11-20）：\n**提示注入**：紅隊測試常重複發現同一種提示注入，缺乏去重機制，見 [[topics/ai-agent-safety-prompt-injection#2026-11]]。**產品漏洞**：有團體偽裝個人試用濫用免費額度轉售 AI 用量（非 Claude 專屬），見 [[topics/ai-agent-safety-product-vulns#2026-11]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "可靠性測試新增規則優先序實測與效能熱點驗證案例",
+            "date": "",
+            "body": "- **fast-anything**：agent 搬效能熱點到 Rust 前，重放真實呼叫＋生成邊界案例證明行為一致後才啟用。\n- **「Skill 蓋過 CLAUDE.md」實測**：真實 `claude -p` 對照實驗顯示未叫用的 Skill 仍蓋過 CLAUDE.md／AGENTS.md。"
+          },
+          {
+            "page": "topics/community-multi-agent",
+            "name": "社群做法：多 agent 怎麼分工與協調",
+            "label": "Multi-agent 架構新增跨機器協調案例：facadecode 讓多款 agent CLI 跨視窗、跨機器互相操作",
+            "date": "",
+            "body": "y5ez3g/facadecode 是 VS Code 內建的多 agent 協調器，可同時跑 Claude Code、Codex 等 CLI 互傳訊息、互相操作；515 星。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "最新動態",
+            "date": "",
+            "body": "Business Insider 報導 Anthropic 七位共同創辦人（含本人）持股加總價值約 1,410 億美元，與馬斯克身家對照（僅標題可用）。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 11
+  },
+  "readerTopStories": [
+    {
+      "title": "Seedeo MCP Adds Suno, Kling and Veo to ChatGPT and Claude Connectors",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQN3M5SE00X0hicGN1TDJ0N3pJNVp3cGRJT1dDT2RpbG9mOXBWdWd1cl94TGZxY25YUnRUekIwOTN4RkpGYTFicEducWtsUnpJSnJmZXhDeXlmYTVOT2lWTFFkRnRWeE9yQ3VBQlRnUTBLMkpTc2dWeWJNZW9YZ3BFendzbEd5NFcwbWdLRzBiekFIRlhidXEwSFBQRGx5YUtEZUctVTlVdzVTb1pFTjAxbi1EMS1BdG9LSl9IWA?oc=5",
+      "source": "Google News / IndyStar ＋Google News / The Detroit News",
+      "time": "11/22 14:38",
+      "sentiment": "",
+      "body": "Seedeo 推出的 MCP 服務今天同時幫 ChatGPT 與 Claude 的 Connectors 介面接上 Suno、Kling、Veo 三款生成式媒體工具，IndyStar 與 Detroit News 兩個獨立來源同日報導。用 Claude Connectors 串接外部生成工具的人，這是今天新增的串接選項。",
+      "focusTags": []
+    },
+    {
+      "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+      "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+      "source": "Hacker News",
+      "time": "11/22 08:57",
+      "sentiment": "",
+      "body": "一篇分析部落格文章推算，Anthropic 到 2028 年的用電組合裡約 87% 來自天然氣、11% 來自燃煤，文章在 Hacker News 討論串今天衝上 543 分。關注 AI 資料中心能源足跡與 ESG 議題的人，這是目前流傳最廣的單篇估算，但仍屬第三方推算，非官方數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-partnerships-compute",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}

@@ -510,11 +510,6 @@
       "id": "pricing",
       "name": "Anthropic 訂閱方案與計費政策",
       "pageType": "entity"
-    },
-    {
-      "id": "community-multi-agent",
-      "name": "社群做法：多 agent 怎麼分工與協調",
-      "pageType": "topic"
     }
   ],
   "reader": {
