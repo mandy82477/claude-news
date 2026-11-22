@@ -2671,8 +2671,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12138966-release-notes": {
-    "hash": "f61f32dc9e38f968fc45d06ee90afdacd9831ddd310a08575695a22b985345c2",
-    "length": 33759,
+    "hash": "b4a35e0a2e5a546dfac5f937744a178dbc55731b5b14e7b05c19b61f0cdfbd4a",
+    "length": 34037,
     "segments": [
       "/security-review command",
       "/slash commands: Save your best-working prompts as shortcuts (/slash commands) and reuse these proven workflows instantly without retyping instructions to Claude.",
@@ -2680,6 +2680,8 @@
       "A new API tool that allows Claude to execute Python code in a secure, sandboxed environment. Refer to our docs for more information: Code execution tool .",
       "A new setting allows Team and Enterprise plan users to purchase more usage to continue chatting with Claude or using Claude Code after hitting their usage limit. See Extra Usage for Team and Enterprise Plans .",
       "A new way to reflect with Claude",
+      "A refreshed look for Claude Mobile",
+      "A refreshed look for Claude Mobile is rolling out gradually, starting with Claude for iOS. Your chats, projects, and plan stay the same. There&#x27;s nothing to turn on. Keep your app updated, and note that the new look needs iOS 26 or later.",
       "Ability to change monthly Team plan billing to annual",
       "Ability to search past conversations",
       "Access to Claude Fable 5 and Claude Mythos 5 restored",
