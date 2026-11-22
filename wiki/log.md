@@ -9466,3 +9466,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 分類回退：追加派工 1 筆（[功能] Seedeo MCP Adds Suno, Kling and Veo → 社群；社群記者查證後判定純行銷稿、互動 0、兩來源同屬 Gannett 集團地方報，不符收錄門檻，不收錄）；駁回 0 筆
 - devpractice 沉澱：本日無候選（當日無「開發實務」類條目）
 - market 判讀：本日無訊號（已檢視 42 條，IPO 財富快照未動 S-1 數字，不開線）
+- 更正（同日 Ingest 記錄）：上行「devpractice 沉澱：本日無候選」有誤——當日無「開發實務.md」官方指南包、不寫 `topics/coding-workflow-guide.md`，但 devpractice 記者仍依角色定義執行例行候選盤點：新增候選 6 筆（claude-code-known-issues Plan Mode 繞過、fast-anything／dev.to CLAUDE.md-Skill 實測各 1、community-cost 用量工具、community-tech-tools code-review-gate-skill、community-multi-agent facadecode），append 至 `data/devpractice-candidates.jsonl`，手冊寫入 0 則（候選留待週更落地），基準線 `data/devpractice_state.json` 已推進至 17ed0c56bc
