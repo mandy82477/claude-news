@@ -18,7 +18,7 @@
 
 ## topics/community-tech-patterns
 
-母頁回答「社群拿 Claude Code 玩出哪些做法、哪些已經站住腳、哪些還在試」，是 patterns 這棵樹的入口：結論層是母頁的 `## 模式概覽`、`## 每一類做法住哪一頁`（子頁路由表）與 `## 現在收斂到哪、哪些還在試`；逐則節點住七個子頁的 `## 技術彙整`（每日 prepend，不受本節拘束）。學術對照、誰負責拆分、缺口追蹤三張表住 `topics/community-multi-agent`（第 2–4 條）。**第 2–4 條的欄位規定取代原「multi-agent orchestration 學術對照維護」節；該節的「屬非新聞性更新，只動最後更新、不動最後新聞更新」與「論文查證屬主編、記者無 web 工具不得自行補文獻」兩條紀律繼續適用。**
+母頁回答「社群拿 Claude Code 玩出哪些做法、哪些已經站住腳、哪些還在試」，是 patterns 這棵樹的入口：結論層是母頁的 `## 模式概覽`、`## 每一類做法住哪一頁`（子頁路由表）與 `## 現在收斂到哪、哪些還在試`；逐則節點住八個子頁的 `## 技術彙整`（每日 prepend，不受本節拘束）。學術對照、誰負責拆分、缺口追蹤三張表住 `topics/community-multi-agent`（第 2–4 條）。**第 2–4 條的欄位規定取代原「multi-agent orchestration 學術對照維護」節；該節的「屬非新聞性更新，只動最後更新、不動最後新聞更新」與「論文查證屬主編、記者無 web 工具不得自行補文獻」兩條紀律繼續適用。**
 
 ### 0. patterns 樹的路由表（寫節點前先查）
 
@@ -29,7 +29,8 @@
 | `topics/community-cost` | Token / 成本優化、模型使用策略、Agent 預算控制 |
 | `topics/community-skills` | Skills 設計、可靠性測試 |
 | `topics/community-guardrails` | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發、架構邊界合約、Agent 版本控制 |
-| `topics/community-integrations` | Plugin / MCP 整合、MCP 長 Session 穩健化、創意工具 Agent 整合 |
+| `topics/community-integrations` | Plugin / MCP 整合、MCP 長 Session 穩健化 |
+| `topics/community-creative-tools` | 創意工具 Agent 整合 |
 | `topics/community-interfaces` | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 |
 
 - 關係行沒有逐字寫出任何類別名：依它補的是哪一種做法判最近的子頁（額度監控、帳號橋接、看見實際送出的內容→`topics/community-cost`；課程與合輯→`topics/community-skills`）；判不出就寫進母頁 `## 技術彙整` 的 `### 未歸類`，週更時分派。不設預設子頁（`.claude/reporter-rules/page-lifecycle.md`「路由」條）。
@@ -45,7 +46,7 @@
 
 - **判準句（三條全過才入表）：** ① 是一種**做法**不是一個工具——同一做法的多個實作合為一列，工具名只進「代表技巧」欄；② 「代表技巧」欄至少寫得出兩個具名實作，或一個實作加一句可複用的機制；③ **「最後動態」欄算得出日期**，算不出者不得留表。
 - **一個類別永遠只有一列。** 新節點只覆寫「代表技巧」與「最後動態」，不新增第二列。
-- **「最後動態」的定義（唯一口徑，判定與撈法同一句）：** 母頁與七個子頁的 `## 技術彙整` 中，**`**與既有模式的關係：**` 那一行逐字寫出表上該類別名**的節點裡，日期最新的那一則。撈法兩段式：先對第 5 條指令列的八個檔 `Grep "\*\*與既有模式的關係：\*\*"`，再在輸出中挑**逐字包含該類別名**的行（比對前只去空白、全形斜線轉半形），取日期最新者所屬節點的日期（同日多則取第 0 條路由表順序在前的子頁；同一頁內取行號最小者）。**同義說法不算**（例：關係行寫「Skill 生態多元化」不算「Skills 設計」）；**主線 tag 不算**——關係行裡標主線的那句（例：「主線填 Context 管理」）是分類標籤、不是類別關係，逐字命中也不計；關係行沒有逐字寫出類別名的節點不計；**archive 頁不在射程內**——搬走的條目不再撐一個類別留在表上。
+- **「最後動態」的定義（唯一口徑，判定與撈法同一句）：** 母頁與八個子頁的 `## 技術彙整` 中，**`**與既有模式的關係：**` 那一行逐字寫出表上該類別名**的節點裡，日期最新的那一則。撈法兩段式：先對第 5 條指令列的九個檔 `Grep "\*\*與既有模式的關係：\*\*"`，再在輸出中挑**逐字包含該類別名**的行（比對前只去空白、全形斜線轉半形），取日期最新者所屬節點的日期（同日多則取第 0 條路由表順序在前的子頁；同一頁內取行號最小者）。**同義說法不算**（例：關係行寫「Skill 生態多元化」不算「Skills 設計」）；**主線 tag 不算**——關係行裡標主線的那句（例：「主線填 Context 管理」）是分類標籤、不是類別關係，逐字命中也不計；關係行沒有逐字寫出類別名的節點不計；**archive 頁不在射程內**——搬走的條目不再撐一個類別留在表上。
 - **「代表技巧」欄末必附錨點，指「最後動態」那一則所在的子頁月份，一律寫全頁形式** `[[topics/<子頁 slug>#YYYY-MM]]`（例：`[[topics/community-skills#2026-10]]`）。**不可寫同頁簡寫 `[[#YYYY-MM]]`**——`scripts/build_web.py` 的 `ANCHORED_WIKILINK_RE`（L329）要求 `#` 前至少一個字元，同頁簡寫不會被 `check_wikilink_anchors()` 檢查到，等於沒有看守。
 - **排序：** 成熟度降序（✅ 成熟 → ⚡ 活躍 → ⏳ 新興），同級依最後動態新者在上，**同日者維持前一版的相對順序**。圖例一行固定放表下，不重寫。
 - **退場：** 距最後動態逾 60 天、**或依上述定義算不出最後動態**者移出表，降為表下一段（類別名＋代表技巧＋原始條目錨點）。✅ 與 ⚡ 不因時間退場，但逾 60 天須重判成熟度是否該降級。**跨線當週處理，不等下一次**：每次執行時先算「距今天幾天」，剛跨過 60 天的列當次移出（例：可靠性測試 2026-07-12 於 2026-09-10 跨線，該週 lint 即移出，不留到下週）。
@@ -73,7 +74,7 @@
 `**主線：**` 欄的分母**每輪現算，不得寫死**——節點數每天都在長，寫死的分母會讓進度百分比永久失真（2026-09-12 lint 抓到條文寫 115、實測已逾 140）。開工前跑：
 
 ```
-python -c "import io,re;fs=['wiki/topics/community-tech-patterns.md']+['wiki/topics/community-'+s+'.md' for s in ('multi-agent','memory','cost','skills','guardrails','integrations','interfaces')];a=[x for f in fs for x in re.findall(r'\*\*主線：\*\*\s*(\S)',io.open(f,encoding='utf-8').read())];print(len(a),'則節點，已填',sum(1 for x in a if x!='—'))"
+python -c "import io,re;fs=['wiki/topics/community-tech-patterns.md']+['wiki/topics/community-'+s+'.md' for s in ('multi-agent','memory','cost','skills','guardrails','integrations','creative-tools','interfaces')];a=[x for f in fs for x in re.findall(r'\*\*主線：\*\*\s*(\S)',io.open(f,encoding='utf-8').read())];print(len(a),'則節點，已填',sum(1 for x in a if x!='—'))"
 ```
 
 本節其餘條文照該次實測數字判讀，而週更整線重寫只撈填了非 `—` 的節點。**新節點一律必填**（規則見 `.claude/reporter-rules/community/daily.md`）；**存量補填每週 20 則、從最新往回補**，補到全數為止，進度寫進 lint 回報。判不出的填 `—` 並在「與既有模式的關係」寫一句理由，不留空。
@@ -88,11 +89,11 @@ python -c "import io,re;fs=['wiki/topics/community-tech-patterns.md']+['wiki/top
 
 ### 8. 蒸餾
 
-照 `.claude/reporter-rules/page-lifecycle.md`「時段蒸餾與封存（全站通用）」。**patterns 樹（母頁＋七個子頁）共用一個 archive：`topics/community-tech-patterns-archive`，掛母頁下**——archive 按月封存，與分群無關，不每個子頁各開一個。對象為七個子頁 `## 技術彙整` 的 `### YYYY-MM` 分組：同一個月份七個子頁一起蒸，原文都 append 進 archive 同一個 `## YYYY-MM`；各子頁該月份改成 ≤15 行時段總結，末行 `原始條目見 [[topics/community-tech-patterns-archive#YYYY-MM]]`；母頁 `### YYYY-MM` 分住段同批改成指 archive 的一行。**2026-05／06 已封存，2026-07 於 2026-10 起達 3 個月門檻**——搬走之前先做兩件事：(a) `## 模式概覽` 與表下段指向任一子頁 `#2026-07` 的錨點同批改指 archive；(b) 母頁 `## 摘要` 那句官方 context engineering 指路（現指 `topics/community-memory#2026-07`）同批改指 archive 對應錨點，本樹唯一的官方一手引用不能失去入口。
+照 `.claude/reporter-rules/page-lifecycle.md`「時段蒸餾與封存（全站通用）」。**patterns 樹（母頁＋八個子頁）共用一個 archive：`topics/community-tech-patterns-archive`，掛母頁下**——archive 按月封存，與分群無關，不每個子頁各開一個。對象為八個子頁 `## 技術彙整` 的 `### YYYY-MM` 分組：同一個月份八個子頁一起蒸，原文都 append 進 archive 同一個 `## YYYY-MM`；各子頁該月份改成 ≤15 行時段總結，末行 `原始條目見 [[topics/community-tech-patterns-archive#YYYY-MM]]`；母頁 `### YYYY-MM` 分住段同批改成指 archive 的一行。**2026-05／06 已封存，2026-07 於 2026-10 起達 3 個月門檻**——搬走之前先做兩件事：(a) `## 模式概覽` 與表下段指向任一子頁 `#2026-07` 的錨點同批改指 archive；(b) 母頁 `## 摘要` 那句官方 context engineering 指路（現指 `topics/community-memory#2026-07`）同批改指 archive 對應錨點，本樹唯一的官方一手引用不能失去入口。
 
 ### 9. 技術彙整書寫規則
 
-**月份分組（patterns 七個子頁與 discussions 的 `## 技術彙整` 皆適用；patterns 母頁的 `## 技術彙整` 只有 `### 未歸類` 與早期時段總結）：** 條目按 `### YYYY-MM` 月份標題分組，條目本身用 `####` 層級。此分組只提供跳轉導航；頁面拆不拆依 `.claude/reporter-rules/page-lifecycle.md`「一頁一故事」（正文逾 600 行須交代切法，依節點類別分群、不按月切）。
+**月份分組（patterns 八個子頁與 discussions 的 `## 技術彙整` 皆適用；patterns 母頁的 `## 技術彙整` 只有 `### 未歸類` 與早期時段總結）：** 條目按 `### YYYY-MM` 月份標題分組，條目本身用 `####` 層級。此分組只提供跳轉導航；頁面拆不拆依 `.claude/reporter-rules/page-lifecycle.md`「一頁一故事」（正文逾 600 行須交代切法，依節點類別分群、不按月切）。
 
 **格式：**
 ```markdown

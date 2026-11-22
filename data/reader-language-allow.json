@@ -104,6 +104,12 @@
   },
   {
    "page": "topics/community-tech-patterns-archive",
+   "term": "覆寫",
+   "line_contains": "CLAUDE.local.md",
+   "reason": "「CLAUDE.local.md 適合放個人化覆寫」是工具功能描述，非維運動詞；2026-11-22 蒸餾 community-memory 2026-07 時原文一字不刪搬入 archive（新位置新增命中）"
+  },
+  {
+   "page": "topics/community-tech-patterns-archive",
    "term": "主編",
    "line_contains": "自主編程",
    "reason": "「自主編程代理」的字面子串，非編輯部角色詞（第 8 波併入 timeline 原文，原文一字不刪搬家，原本已在 timeline 頁的白名單內）"
@@ -173,6 +179,18 @@
    "term": "門檻",
    "line_contains": "我們判定已達到這個門檻",
    "reason": "Yahoo Finance 引述修訂版招股說明書原話（RSP 安全門檻，正文概念非收錄門檻）；引號內原文不得改寫。2026-11-14 主編登記"
+  },
+  {
+   "page": "topics/official-community-gap-archive",
+   "term": "派工",
+   "line_contains": "Subagent",
+   "reason": "「Subagent 派工/編排」是缺口矩陣列名（任務委派功能），非編輯部派工；2026-11-22 蒸餾 2026-07／08 時段搬入 archive 時新位置新增命中，原文於主頁時已在基線"
+  },
+  {
+   "page": "topics/enterprise-tool-tracker-archive",
+   "term": "表格操作句",
+   "line_contains": "詳見上方使用現況表",
+   "reason": "封存頁原文照搬，「上方使用現況表」指主頁該表；2026-11-22 蒸餾 2026-08 時段搬入 archive 時新位置新增命中，原文於主頁時已在基線（一字不刪原則）"
   }
  ]
 }

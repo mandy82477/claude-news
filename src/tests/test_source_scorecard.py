@@ -171,6 +171,20 @@ class TestRegistryIntegrity(unittest.TestCase):
         self.assertIn("Hacker News", md)
         self.assertIn("mystery-slug", md)
 
+    def test_slug_aliases_count_under_canonical_slug(self):
+        """歸因帳 append-only：舊行的臨時 slug 由 registry 的 slug_aliases 歸到正名，不算未註冊。"""
+        registry = [{"name": "Editor Verification", "slug": "editor-verification",
+                     "slug_aliases": ["sec-edgar"], "curation_mode": "whitelist"}]
+        funnel = {"days": 1, "dates": ("2026-11-15", "2026-11-15"), "per_source": {}}
+        attribution = [
+            {"source": "sec-edgar", "item_url": "https://www.sec.gov/a"},
+            {"source": "editor-verification", "item_url": "https://claude.com/b"},
+        ]
+        result = sc.compute(registry, funnel, attribution, {})
+        ev = next(r for r in result["sources"] if r["slug"] == "editor-verification")
+        self.assertEqual(ev["wiki_hits"], 2)
+        self.assertNotIn("sec-edgar", result["unknown_slugs"])
+
 
 if __name__ == "__main__":
     unittest.main()

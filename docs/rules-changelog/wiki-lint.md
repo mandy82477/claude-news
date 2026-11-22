@@ -93,3 +93,9 @@
 - 雲端另寫 `[cloud weekly-wiki-lint-cloud CHECKPOINT …]` 到 `task_scheduler.log`；`scripts/daily_health_check.py` 把它當進度（不當結果），斷掉時推播說「停在檢查點 N 之後」，並點名斷掉的 routine 而非只給班數。
 - `.claude/skills/weekly-local-catchup/SKILL.md` 加第 0 項：有檢查點紀錄、無同日步驟 8 紀錄＝從檢查點的「下一步」接跑。
 - trigger 本體是薄殼，不需改。
+
+**2026-11-22**（3d／3f 降為月度）：11-21 lint 的 6i `hits report` 標出 3d（已解決議題收尾）與 3f（超長頁入口層健檢）連續 10 輪零命中，主編機械複核確認世界確實乾淨（非封存 resolved topics 僅 1 頁且齊備；> 500 行頁全有頂部 callout）。依 `wiki-lint-rules-health` 6i 條文「會紅但世界乾淨 → 排入 6h 評估降頻或合併」，本機 `/weekly` 判定降頻：`.claude/skills/wiki-lint-reporters/references/dispatch.md` 兩步加註「月度：只在本月首次 lint 做」。不合併進他步，因為兩者檢查對象不同（狀態欄 vs 頁面結構），合併會讓回報欄語意變糊。
+
+**2026-11-22**（6e 未註冊 slug 修在 registry）：11-21 lint 6e 報 `sec-edgar`／`anthropic-official` 未註冊。根因不在記者——是主編 11-15 週度回顧親手 append 歸因時臨時造的 slug。`data/source_registry.json` 新增 `editor-verification`（主編查證通道，`pipeline: false`），舊兩名列入新欄位 `slug_aliases`；`scripts/source_scorecard.py` 依此欄把舊行歸到正名（歸因帳 append-only，不改寫舊行），並補回歸測試 `test_slug_aliases_count_under_canonical_slug`。
+
+**2026-11-22**（5g 宣告句改為「有就更新、沒有才寫」）：11-14 lint 記「10-24／10-31 回報稱已宣告，本輪 grep 不到」，疑被後續 ingest 覆寫。本機以 `git log -S "無新動態"` 追兩頁歷史：從未被移除——10-24／10-31 把宣告寫在「最新」段句尾，11-14 用別的字串搜不到、另寫一句，11-21 又寫第三句，`sonnet-5`、`haiku-5-5` 各累積成兩到三份。刪去 11-14 那份、留 11-21 版；sweeps.md 5g 加「寫前先 grep 該頁的『無新動態』，已有就只更新查核日」。

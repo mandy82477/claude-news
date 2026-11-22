@@ -10,7 +10,7 @@
 
 | 頁面 | 觸發條件 |
 |------|---------|
-| `wiki/topics/community-tech-patterns.md`（母頁）＋七個子頁 | 工作流模式、multi-agent 設計、最佳實踐。**節點寫進子頁**：依節點「與既有模式的關係」第一個寫出的類別，查 `.claude/reporter-rules/community/pages.md`「topics/community-tech-patterns」第 0 條路由表；判不出寫母頁 `### 未歸類`。寫了節點的子頁覆寫它的 callout（括號日期＝TARGET_DATE），母頁 callout 同批覆寫成當天各子頁新做法的一句總覽並連子頁——母頁 callout 日期落後子頁「最後新聞更新」，`scripts/check_hierarchy.py`（L137）會紅。母頁其餘只准動路由表「最後動態」欄與既有懸置標記加 `訊`，「最後新聞更新」不動（page-lifecycle 母頁契約）。來源歸因的 page 一律填節點所在的子頁；母頁 callout 只是轉述，不報歸因（報了，`scripts/check_wiki_freshness.py` 第 1 類判母頁漏更）。例：同一則新聞改了子頁節點也改了母頁 callout → 歸因 1 筆，page 填子頁 |
+| `wiki/topics/community-tech-patterns.md`（母頁）＋八個子頁 | 工作流模式、multi-agent 設計、最佳實踐。**節點寫進子頁**：依節點「與既有模式的關係」第一個寫出的類別，查 `.claude/reporter-rules/community/pages.md`「topics/community-tech-patterns」第 0 條路由表；判不出寫母頁 `### 未歸類`。寫了節點的子頁覆寫它的 callout（括號日期＝TARGET_DATE），母頁 callout 同批覆寫成當天各子頁新做法的一句總覽並連子頁——母頁 callout 日期落後子頁「最後新聞更新」，`scripts/check_hierarchy.py`（L137）會紅。母頁其餘只准動路由表「最後動態」欄與既有懸置標記加 `訊`，「最後新聞更新」不動（page-lifecycle 母頁契約）。來源歸因的 page 一律填節點所在的子頁；母頁 callout 只是轉述，不報歸因（報了，`scripts/check_wiki_freshness.py` 第 1 類判母頁漏更）。例：同一則新聞改了子頁節點也改了母頁 callout → 歸因 1 筆，page 填子頁 |
 | `wiki/topics/community-tech-discussions.md` | HN / Reddit 熱門技術討論 |
 | `wiki/topics/code-quality-decline.md` | 「Claude 變笨了」的三條線：官方已結案的 2026-03～04 退步、06 月起的 token 消耗異常、Opus 5 上線後的品質觀感；以及模型釘選與自我量測。**單一模型自身的社群觀感歸模型記者的 [[entities/opus-5]]，逐個 issue 的缺陷歸功能記者的 [[entities/claude-code]]，本頁只記「線」的狀態** |
 | `wiki/topics/community-large-codebase-workflow.md` | 🗓️ **週更，每日 ingest 不寫此頁**——每日只在 patterns 節點標 `**主線：**` tag（見下方「主線 tag 規則」）；週更整線重寫規則見 `.claude/reporter-rules/community/weekly.md` |

@@ -2,7 +2,7 @@
 
   1. 母頁正文（扣 frontmatter 與 %% 備忘）≤ 300 行（page-lifecycle「一頁一故事」）
   2. 母頁 `## 技術彙整` 底下的 `####` 節點只准在 `### 未歸類`（事件流不回流母頁）
-  3. 七個子頁每則節點：「與既有模式的關係」第一個逐字寫出的類別名（口徑同 pages.md 第 1 條：去空白、
+  3. 八個子頁每則節點：「與既有模式的關係」第一個逐字寫出的類別名（口徑同 pages.md 第 1 條：去空白、
      全形斜線轉半形；「主線填…」「歸入主線…」那段不算）查 pages.md 第 0 條路由表，該住的子頁 ≠ 所在子頁即列出。
      關係行沒寫任何類別名的不判（那是記者判斷，未歸類照第 0 條處理）。
 路由表的家是 pages.md 第 0 條，本檔直接讀那張表，不另抄。
@@ -20,7 +20,7 @@ sec = rules[rules.index("### 0."):]
 sec = sec[:sec.index("\n### ", 5)]
 ROUTE = {m.group(1): [x.strip() for x in m.group(2).split("、")]
          for m in re.finditer(r"^\|\s*`topics/(community-[\w-]+)`\s*\|\s*([^|]+?)\s*\|", sec, re.M)}
-assert len(ROUTE) == 7, f"pages.md 第 0 條路由表讀到 {len(ROUTE)} 列，預期 7"
+assert len(ROUTE) == 8, f"pages.md 第 0 條路由表讀到 {len(ROUTE)} 列，預期 8"
 
 
 def norm(s):

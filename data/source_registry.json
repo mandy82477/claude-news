@@ -167,6 +167,17 @@
       "score_reliability": "none",
       "curation_mode": "content",
       "notes": "出貨前訊號（2026-09-15 立法）：每個新版 Claude Code 程式本體裡新增／消失的 CLAUDE_CODE_* 旗標，每版至多 1 則、score 恆 0。名字不是承諾，只進 topics/claude-code-experimental 第一階，升階要證據。"
+    },
+    {
+      "name": "Editor Verification",
+      "slug": "editor-verification",
+      "slug_aliases": ["sec-edgar", "anthropic-official"],
+      "active": true,
+      "category": "official",
+      "score_reliability": "none",
+      "curation_mode": "whitelist",
+      "pipeline": false,
+      "notes": "主編查證通道（2026-11-22 立法）：主編在週度回顧、lint 或 ingest 中以 web 工具直接查一手文件（SEC EDGAR、官方說明頁等）寫進 wiki 的事實。item_url 填該一手文件、item_title 填文件標題；與 user-query 的差別只在觸發者（主編自查 vs 使用者點名）。pipeline=false：非抓取來源。slug_aliases：2026-11-15 週度回顧寫入的 4 筆歸因用了臨時 slug，歸因帳 append-only 不改寫，由 scripts/source_scorecard.py 依此欄歸到本 slug；新寫入一律用 editor-verification。"
     }
   ]
 }

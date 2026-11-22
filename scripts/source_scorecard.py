@@ -164,10 +164,13 @@ def compute(registry: list[dict], funnel: dict, attribution: list[dict],
     total_emitted = sum(s["emitted"] for s in per_source.values())
     prior_emit = (total_emitted / total_gathered) if total_gathered else 0.0
 
+    # 歸因帳 append-only，舊行用錯的 slug 不能改寫；registry 以 slug_aliases 把舊名歸到正名
+    alias_to_slug = {a: src["slug"] for src in registry for a in src.get("slug_aliases", [])}
     hits_by_slug: dict[str, int] = defaultdict(int)
     buckets_by_slug: dict[str, dict] = defaultdict(lambda: defaultdict(int))
     for row in attribution:
         slug = row.get("source", "_unknown")
+        slug = alias_to_slug.get(slug, slug)
         hits_by_slug[slug] += 1
         buckets_by_slug[slug][pc1_bucket(lookup_pc1(row.get("item_url", ""), domain_scores))] += 1
     total_hits = sum(hits_by_slug.values())

@@ -106,3 +106,5 @@ W43 初稿頭條選了「2.1.309 補了沙盒與 deny 規則擋不住的洞」�
 
 使用者：「以後標題都用 opus 想」。W43 頭條三度改題（選題框架過時、一句塞三件事、「先拿自己的任務比一次」動作模糊），使用者連續指出看不懂。`headline.md` 加「誰定稿」：頭條與專文標題由 Opus 定稿，主 session 非 Opus 時派 `model: "opus"` agent 回兩三個候選並說明回答哪一句讀者問題、覆述出來是什麼；記者交的專文標題收稿時重審。標題規則補一句：寫事實或答案，不寫只有動詞沒有對象的指示。`columns.md` 專欄節加一行指過去。
 
+
+**2026-11-22**（⏰ 語意對齊程式）：W47 回收「Claude Data 11-20 預設開啟」時照 `.claude/skills/weekly-report/references/forecast.md` 生命週期表寫「⏰ 到期日已過 → 結案」，`check_weekly_ledger.py` 判為「未結案卻未寫續盯去向」。查證：程式自 2026-08-02（774d6f0b）起就把 ⏰ 定義為「到期日未到、倒數中」，列在 OPEN_MARKS 並豁免殭屍規則；W31～W36 的實際用法也都是「⏰ 剩 N 天 → 續盯至 Wnn」。寫錯的是規格兩處（`.claude/skills/weekly-report/references/contracts.md` 狀態符號列、`forecast.md` 範例列與生命週期表），改為 ⏰＝續盯、到期那週依判準改判 ✅／❌。程式不動。
