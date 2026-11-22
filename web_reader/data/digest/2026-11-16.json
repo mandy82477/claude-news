@@ -421,11 +421,6 @@
       "id": "sonnet-5-5",
       "name": "Claude Sonnet 5.5",
       "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-cyber",
-      "name": "模型網攻能力、濫用與防守方放行",
-      "pageType": "topic"
     }
   ],
   "reader": {

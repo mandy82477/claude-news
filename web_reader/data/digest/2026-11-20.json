@@ -427,34 +427,9 @@
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：互動數更新：Max 方案額度自 3 月起異常快速耗盡（#38335，876 則留言、545 讚）；畫面/終端機閃爍（#769，307 則留言、334 讚）；額度顯示 84% 卻收到已達上限（#19673，102 則留言、77 讚）。",
   "sedimentedToday": [
     {
-      "id": "cowork",
-      "name": "Cowork",
-      "pageType": "entity"
-    },
-    {
       "id": "vas-narasimhan",
       "name": "Vas Narasimhan",
       "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-product-vulns",
-      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
-      "pageType": "topic"
-    },
-    {
-      "id": "ai-agent-safety-prompt-injection",
-      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business-risks",
-      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-partnerships-compute",
-      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
-      "pageType": "topic"
     },
     {
       "id": "anthropic-product-matrix",
@@ -474,11 +449,6 @@
     {
       "id": "enterprise-tool-tracker",
       "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-customers",
-      "name": "定價、通路與客戶這則怎麼判",
       "pageType": "topic"
     }
   ],

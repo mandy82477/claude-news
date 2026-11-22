@@ -462,11 +462,6 @@
       "pageType": "entity"
     },
     {
-      "id": "market-signals-compute",
-      "name": "算力與融資這則怎麼判",
-      "pageType": "topic"
-    },
-    {
       "id": "model-comparison",
       "name": "Claude 模型選型對照",
       "pageType": "topic"
