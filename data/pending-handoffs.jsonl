@@ -462,3 +462,6 @@
 {"id": "H-cd3930", "opened": "2026-11-21", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "評估產品化矩陣新增列（本次新增節點：Claude-BugHunter、article2media、avenoxbeyin、blender-ai-mcp-addon 第三次出現、phonedriver、Fuyu）；官方功能負向對照：不適用", "status": "open"}
 {"id": "H-e04e94", "closed": "2026-11-21", "status": "done", "by": "功能", "result": "功能記者 2026-11-21 ingest 回報已處理"}
 {"id": "H-40c2b0", "closed": "2026-11-21", "status": "done", "by": "功能", "result": "功能記者 2026-11-21 ingest 回報已處理"}
+{"id": "H-afee03", "closed": "2026-11-22", "status": "done", "by": "主編", "result": "雷達破壞性變更表核對補到 v2.1.330，新增 6 列、移出 6 列至 releases（2026-11-22）"}
+{"id": "H-cd3930", "closed": "2026-11-22", "status": "done", "by": "功能", "result": "六節點皆過不了產品化矩陣入口判準，不新增列（2026-11-22）"}
+{"id": "H-be49fb", "closed": "2026-11-22", "status": "done", "by": "社群", "result": "canary、Gravitas、code-review-gate-skill 目錄列補「未推薦」，與手冊口徑一致（2026-11-22）"}

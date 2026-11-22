@@ -3,7 +3,7 @@ page: "topics/market-lessons"
 kind: "topic"
 status: "monitoring"
 domain: "💼 商業"
-last_updated: "2026-11-14"
+last_updated: "2026-11-22"
 last_news_update: "2026-10-22"
 update_freq: "🗓️ 週更（每週從 [[topics/market-signals]] 的判讀與結算沉澱一次；更新日期停留數天屬正常節奏）"
 status_main: "monitoring"
@@ -16,8 +16,8 @@ inbound_links: 11
 attribution_count: 0
 attribution_last: null
 top_source: null
-pending_count: 3
-pending_overdue: 1
+pending_count: 2
+pending_overdue: 0
 pending_next_review: "2026-11-24"
 pending_signalled: 0
 staleness_exempt: null

@@ -5,19 +5,19 @@ type: "model"
 status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
 last_updated: "2026-11-21"
-last_news_update: "2026-11-19"
+last_news_update: "2026-11-22"
 status_main: "active"
-days_since_news: 3
+days_since_news: 0
 parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 50
-attribution_count: 44
-attribution_last: "2026-11-19"
+attribution_count: 45
+attribution_last: "2026-11-22"
 top_source: "google-news"
 pending_count: 3
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-12-05"
 pending_signalled: 0
 staleness_exempt: null

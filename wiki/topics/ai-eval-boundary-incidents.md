@@ -4,23 +4,23 @@ kind: "topic"
 status: "monitoring（最後新聞更新 2026-10-27，之後無新評測越界事件，轉低頻觀察）"
 domain: "🏛️ 政策/安全"
 last_updated: "2026-11-14"
-last_news_update: "2026-10-27"
+last_news_update: "2026-11-22"
 status_main: "monitoring"
-days_since_news: 26
+days_since_news: 0
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 26
+days_since_news_subtree: 0
 inbound_links: 17
-attribution_count: 1
-attribution_last: "2026-10-27"
-top_source: "google-news"
+attribution_count: 3
+attribution_last: "2026-11-22"
+top_source: "editor-verification"
 pending_count: 2
-pending_overdue: 2
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-12-06"
 pending_signalled: 0
 staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # AI 評測越界事件

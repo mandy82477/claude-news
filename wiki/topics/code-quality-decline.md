@@ -15,9 +15,9 @@ inbound_links: 47
 attribution_count: 55
 attribution_last: "2026-11-15"
 top_source: "reddit"
-pending_count: 0
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-12-06"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"

@@ -10,7 +10,7 @@ days_since_news: 1
 parent: null
 children: "['topics/anthropic-business-archive', 'topics/anthropic-business-risks', 'topics/anthropic-ipo', 'topics/anthropic-partnerships-compute']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 135
 attribution_count: 514
 attribution_last: "2026-11-20"

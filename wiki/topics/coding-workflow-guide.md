@@ -12,13 +12,13 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 1
-inbound_links: 39
+inbound_links: 40
 attribution_count: 6
 attribution_last: "2026-11-06"
 top_source: "official-docs"
-pending_count: 1
+pending_count: 2
 pending_overdue: 0
-pending_next_review: "2026-12-14"
+pending_next_review: "2026-12-06"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
