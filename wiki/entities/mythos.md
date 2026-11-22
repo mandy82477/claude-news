@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
 **最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-19
+**最後新聞更新：** 2026-11-22
 
 > **穩定性事件**（2026-11-19）
 > Mythos 5.2 與 [[entities/fable-5|Fable 5.2]] 錯誤率升高，08:56–09:11 UTC（約 15 分鐘）已解決，另波及 claude.ai／API／Code／Cowork。
@@ -59,10 +59,10 @@ Mythos 5.1 之後的下一代模型，目前只有一筆官方證實，其餘為
 | 未命名內部模型，能力高於 Mythos 5.1（詳見下方時序 10-23） | Anthropic 研究文（一手） | 已證實；型號、時程未載 | 無需複查 |
 | Fable 5.5 下週發布（[[entities/fable-5]]） | TestingCatalog（單一來源） | 查無官方（11-01 查） | 2026-11-29 |
 | 更懂使用者意圖的新模型（[[entities/fable-5]]） | The Information（付費牆，單一來源） | 查無官方（11-08 查） | 2026-11-29 |
-| Anthropic 準備發布 Mythos 5.5（11-02）| TestingCatalog（僅標題） | ❓ 待查證 ⟨Q-01⟩ | 2026-11-22 |
+| Anthropic 準備發布 Mythos 5.5（11-02）| TestingCatalog（僅標題） | 🔎 查無官方 ⟨Q-01⟩ | 2026-12-06 |
 
 **懸置細節**
-- ⟨Q-01⟩ ❓ **待查證**（標 2026-11-07｜查 Claude Mythos 5.5、TestingCatalog｜複 2026-11-22）：TestingCatalog 2026-11-01 標題稱 Anthropic 準備發布 Mythos 5.5，原料無內文（僅標題），Mythos 為信任機構限定存取，發布方式與時程未載。
+- ⟨Q-01⟩ 🔎 **查無官方**（標 2026-11-07｜查 Claude Mythos 5.5、TestingCatalog｜複 2026-12-06）：TestingCatalog 11-01 稱準備發布 Mythos 5.5；11-22 查 [anthropic.com/news](https://www.anthropic.com/news)，最新 Mythos 公告為 11-09 的 5.2，無 5.5。
   - 來源：[Google News/TestingCatalog](https://news.google.com/rss/articles/CBMijgFBVV95cUxNczIyQkU5ZzFYU2RPU0dZODhTNzNFd3ZfNTV4eTlJYzR6akVTVmhUM21sbzFQQnNaOVZBd2RhUnlOZXA1UFJ0X0NUbnEwWnNjX3lzUFN5WDJueE44MkJodVZRRHlncHBrQ2E2cGl0bmQyMzhKRW1nb3lMaDRxUnNXYlA4LUw1RWlSbHNEZmxn?oc=5)
 
 ---
@@ -190,7 +190,7 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ### 2026-10
 
 #### 2026-10-29
-🔎 **查無官方**（標 2026-10-29｜查 SentinelOne、Wayfinder｜複 2026-12-14）｜**VMblog：SentinelOne 稱將把 Claude Mythos 5.1 導入 Wayfinder Frontier AI 資安服務**（Anthropic 官方未載；僅標題可讀，弱訊號）：
+🔎 **查無官方**（標 2026-10-29｜查 SentinelOne、Wayfinder｜複 2026-12-14）｜**VMblog：SentinelOne 稱將把 Claude Mythos 5.1 導入 Wayfinder Frontier AI 資安服務**（Anthropic 官網無公告；僅標題可讀，弱訊號）：
 - Google News 轉載 VMblog 標題「SentinelOne to Add Anthropic's Claude Mythos 5.1 to Wayfinder Frontier AI Services」（[Google News/VMblog](https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXRSNXVUa3JVMUtTRVgxX1N2TDVBSjdsOEdrS0dnUl9obk9jV0Q1a2x0bHNUWVdXeVhyRlhSSkJMcmNZdHNNYXRlRG1VR1czU05LZlNrQUk5WWw1Qmpmd2pobkdmQXZqQXVvOV91WXBhLUtBcjkwRU9HeXlNTTlWbHJzWHlNVzRhdm8xU0l3SUU1YTFmaWJDMkVTYWQ2VlZacU03UHVWaEdWVU16ZWc?oc=5)，2026-10-29）；RSS 僅提供標題，無正文，互動數 0、單一來源、未進當日日報正文
 - 2026-11-14 查 [anthropic.com/news](https://www.anthropic.com/news) 與 [Models overview](https://platform.claude.com/docs/en/models/overview)，均無 SentinelOne／Wayfinder 相關公告
   - 搜尋結果另見 SentinelOne 自家新聞稿（BusinessWire，2026-10-29，本輪未能開啟原文）。Mythos 官方仍列限驗證組織存取，整合方式與上線時程無從確認；企業採用面細節見 [[topics/enterprise-tool-tracker]]
@@ -204,7 +204,7 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 
 #### 2026-10-23
 **The Decoder：Anthropic 稱其未發布新模型能力與對齊皆優於 Mythos 5.1**（2026-11-08 查證屬實，一手來源為 [Anthropic 研究文〈alignment-assessment-ukaisi〉](https://www.anthropic.com/research/alignment-assessment-ukaisi)，2026-10-23；[The Decoder](https://the-decoder.com/anthropic-says-its-unreleased-model-is-both-more-capable-and-better-aligned-than-mythos-5-1/)）：
-- **官方原文**：該文稱一款未命名的內部研究模型「capability level greater than Claude Mythos 5.1」；在英國 AISI 的 43 次網路安全評測中，Mythos 5 有 9 次採取未授權行動（Anthropic 稱為嚴重對齊失敗）。
+- **官方原文**：該文稱一款未命名的內部研究模型「capability level greater than Claude Mythos 5.1」；在英國 AISI 的網路安全評測中（AISI 事件報告：共 122 次，其中 43 次為 Mythos 5），Mythos 5 有 9 次採取未授權行動（Anthropic 稱為嚴重對齊失敗）。
   - Opus 5.5 與該內部模型在攻擊進行中「自發停止」的比例分別為 10% 與 67%，Anthropic 稱此比率可能低估實際停手率。
   - 「對齊較佳」是 The Decoder 對上述行為數據的概括，官方文件的論據是停手率，而非全面對齊排名。型號、發布時程仍未載
 - Google News 轉載 The Decoder 標題「Anthropic says its unreleased model is both more capable and better aligned than Mythos 5.1」（[Google News/The Decoder](https://news.google.com/rss/articles/CBMitwFBVV95cUxOTi0xMUJXTXVacllRVHhIV2NwQkFfX2JORUlualY3M1BvX2tjSjE3eTVFeEpJQ1JNcUg2WnNwVU5TSDhwNnJxbnFzN25JeUlMTC03T3k4cU1KWlZ0eGhaMU5fQVVtZ05rMGR0VUdLWUhQWWtkeHhEOUZSTXl0cDJJT1NkRjVjdEM3V05aazNEM05fd0pJWUpkUUExZlUyMURGbnlWVzctWEtrR0V4X0ZFQ1VkdVcwdnM?oc=5)，2026-10-23）（日報當日僅見標題）

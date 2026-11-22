@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
 **最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後新聞更新：** 2026-11-22
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
@@ -282,7 +282,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 21 年漏洞是兩個設定衝突：一個要求每個客戶端出示憑證，另一個本意只是延後檢查卻把檢查整個關掉，使「只收信任客戶端」的伺服器對任何人開放；官方文章未指名受影響專案。
   - 修補：OpenSSH 已由 Anthropic 回報並附修補，10.5 把 ML-DSA 相關檢查移到解析之前、10.6 補完 10.5 的缺口；其餘專案的修補狀態與 CVE 編號官方文章均未載（[The Next Web](https://thenextweb.com/news/claude-attack-surface-reduction-493-issues-openssh) 2026-10-21 同）
 - **性質判斷**：官方／第三方防護能力展示，非漏洞或攻擊事件，不列入「現在還擋不住的攻擊」表；是否源自 10-09 Cyber Mission 開源漏洞免費掃描計畫未見報導證實（推論：兩者議題高度重疊）；已列入「模型網攻能力與防護」
-- ❓ **待查證**（標 2026-11-08｜查 OpenSSH、ML-DSA、493 項清單｜複 2026-11-22）｜**完整 493 項清單與 OpenSSH 以外專案的修補時程、CVE 編號**：官方文章與媒體均未公布（2026-11-08 查）；已掃日報至 2026-11-20 無後續；官方頁面未查證
+- 🔎 **查無官方**（標 2026-11-08｜查 OpenSSH、ML-DSA、493 項清單｜複 2026-12-06）｜**完整 493 項清單與 OpenSSH 以外專案的修補時程、CVE 編號**：2026-11-22 重讀官方 [attack surface reduction](https://www.anthropic.com/research/attack-surface-reduction)（2026-10-20）仍未載
+  - 官方文中只交代 OpenSSH 回報並附修補（10.5、10.6），其餘專案無揭露或修補狀態
 - **可信度評估**：單一來源，原文未可讀，互動 0，訊號強度低
 
 #### Anthropic 官方研究：用 Claude 分析並降低程式碼的攻擊面（2026-10-21 新增，官方防護研究）
@@ -297,9 +298,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Google News／朝日新聞（2026-10-21 04:04 UTC，互動 0；只有摘要，原文無可讀內文，以標題判讀）
 - **核心主張（僅標題可用）**：報導稱在與 AI 相關的網路攻擊案件所使用的伺服器上發現 Claude Code 的蹤跡；具體攻擊鏈、調查單位與受害範圍均未見報導
 - **性質判斷**：屬「別人拿 Claude Code 打別人」的濫用態勢，不是 Claude 產品本身的攻擊面，不列入母頁「現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」，與既有 10-07 CyberXero、09-14 ShinyHunters 同屬濫用態勢系列
-- 🔎 **查無官方**（標 2026-10-21｜查 AI-linked cyberattacks｜複 2026-11-22）｜**朝日新聞該篇內容**：2026-11-08 以日英文搜尋未找到該篇朝日報導，亦無官方資料指稱在攻擊伺服器上發現 Claude Code。
-  - 搜到一則相近日本報導（GMO Cybersecurity by Ierae 稱在 6 台海外攻擊伺服器發現中國製 AI agent「ARTEX」痕跡，約 80 家日本企業受影響），其中並未提及 Claude Code；攻擊鏈、調查單位仍未見。
-    - ❓ **待查證**（標 2026-10-21｜查 GMO Cybersecurity、ARTEX｜複 2026-11-22）｜**該日本報導與朝日新聞所指是否同案**：相近但是否同案無證據；已掃日報至 2026-11-20 無後續；官方頁面未查證
+- 🔎 **查無官方**（標 2026-10-21｜查 AI-linked cyberattacks｜複 2026-12-06）｜**朝日新聞該篇內容**：2026-11-22 再以日英文搜尋仍未找到該篇朝日報導；GMO 官方[報告](https://gmo-cybersecurity.com/blog/20261019/)只載 ARTEX，未提 Claude Code。
+  - 搜到一則相近日本報導（GMO Cybersecurity by Ierae 稱在 6 台海外攻擊伺服器發現中國製 AI agent「ARTEX」痕跡，約 20 家日本企業為目標，2026-11-22 對照 GMO 官方報告修正），其中並未提及 Claude Code；攻擊鏈、調查單位仍未見。
+    - 🔎 **查無官方**（標 2026-10-21｜查 GMO Cybersecurity、ARTEX｜複 2026-12-06）｜**該日本報導與朝日新聞所指是否同案**：2026-11-22 查 GMO 官方報告與 ScanNetSecurity，兩者均未提 Claude Code 或朝日新聞，同案與否仍無證據
 - **可信度評估**：單一來源，經 Google News 轉載，原文未可讀，互動 0，訊號強度低
 
 #### GitHub Issue #84352：CVP 誤擋留言數攀升至 201 則、👍29，本日互動數最高開發者回報（2026-10-19 新增，升級既有 08-12 事件）

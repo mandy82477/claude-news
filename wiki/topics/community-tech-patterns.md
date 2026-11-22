@@ -45,7 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 社群拿 Claude Code 玩出哪些做法、哪些已經站住腳、哪些還在試。二十一類做法依讀者會問的問題分成八個子頁，每頁有自己的目前結論與逐則證據，入口在下方「每一類做法住哪一頁」；本頁只留總覽：模式概覽表標每一類的成熟度與最後動態，「現在收斂到哪」寫跨類的結論。
 
-已經定案的四類是 Skills 設計、Multi-agent 架構、CLAUDE.md 管理、Hooks 與自動化，定案的是四句話：隔離用 worktree、規則用 Hooks 強制、流程封裝成 skill、CLAUDE.md 寫規則不寫建議。還在試的十七類全數在 2026-10-01 起有新動靜（Agent 預算控制於 2026-10-23、可靠性測試於 2026-11-03、確定性 Agent 框架於 2026-11-07、跨 Repo 依賴可視化於 2026-11-06、安全架構於 2026-11-17 回到概覽表）。官方唯一一則一手依據是 Anthropic 2026-07-26 移除逾 80% Claude Code 系統提示詞那則，住 [[topics/community-memory#2026-07]]。
+已經定案的四類是 Skills 設計、Multi-agent 架構、CLAUDE.md 管理、Hooks 與自動化，定案的是四句話：隔離用 worktree、規則用 Hooks 強制、流程封裝成 skill、CLAUDE.md 寫規則不寫建議。還在試的十七類全數在 2026-10-01 起有新動靜（Agent 預算控制於 2026-10-23、可靠性測試於 2026-11-03、確定性 Agent 框架於 2026-11-07、跨 Repo 依賴可視化於 2026-11-06、安全架構於 2026-11-17 回到概覽表）。官方唯一一則一手依據是 Anthropic 2026-07-26 移除逾 80% Claude Code 系統提示詞那則，住 [[topics/community-tech-patterns-archive#2026-07]]。
 
 已經收斂成方向的做法怎麼一步步走到今天、你現有設計可以回頭檢查什麼，見 [[topics/community-pattern-trends]]（那頁是策展過的結論，本頁與子頁是原始證據）。工具該裝哪個見 [[topics/community-tech-tools]]，**社群在吵哪些觀念、哪些吵出共識**見 [[topics/community-tech-discussions]]「現在吵到哪」，大型 codebase 的四條主線見 [[topics/community-large-codebase-workflow]]。
 
@@ -98,7 +98,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 成熟度：✅ 成熟（社群廣泛實踐）／⚡ 活躍（持續演進中）／⏳ 新興（近期出現，尚在探索）
 
-**三類已超過 60 天或算不出最近的動靜，原始條目仍在：**Agent Loop 終止條件（Loop exit condition 設計模式，最後動態 2026-08-19，已逾 60 天移出，原始條目見 [[topics/community-multi-agent#2026-08]]）、Agent 版本控制（ADR 注入、架構決策文件先於實作，最後動態 2026-07-31，已逾 60 天移出，原始條目見 [[topics/community-guardrails#2026-07]]）、跨環境 Agent 記憶（Core Memory Packet，代表技巧與「記憶與知識管理」重疊，已併入該列）。
+**三類已超過 60 天或算不出最近的動靜，原始條目仍在：**Agent Loop 終止條件（Loop exit condition 設計模式，最後動態 2026-08-19，已逾 60 天移出，原始條目見 [[topics/community-multi-agent#2026-08]]）、Agent 版本控制（ADR 注入、架構決策文件先於實作，最後動態 2026-07-31，已逾 60 天移出，原始條目見 [[topics/community-tech-patterns-archive#2026-07]]）、跨環境 Agent 記憶（Core Memory Packet，代表技巧與「記憶與知識管理」重疊，已併入該列）。
 
 **三類仍在 60 天內、暫未列入概覽表：**Agent 記憶保護（AGENTS.md 輸出持久化片段，最後動態 2026-10-08，原始條目見 [[topics/community-memory#2026-10]]）、架構邊界合約（HERO-Anti-OverDefense、ANMA YAML contracts、ISO 29148 規格驅動等，最後動態 2026-10-18，原始條目見 [[topics/community-guardrails#2026-10]]）、MCP 長 Session 穩健化（dev.to 三種隱性失效模式排查清單重新出現代表技巧，最後動態 2026-11-17，原始條目見 [[topics/community-integrations#2026-11]]）。
 
@@ -172,7 +172,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-07
 
-2026-07 的原始條目依類別分住各子頁：[[topics/community-multi-agent#2026-07]]、[[topics/community-memory#2026-07]]、[[topics/community-cost#2026-07]]、[[topics/community-skills#2026-07]]、[[topics/community-guardrails#2026-07]]、[[topics/community-integrations#2026-07]]、[[topics/community-creative-tools#2026-07]]、[[topics/community-interfaces#2026-07]]。
+2026-07 的完整記錄依類別分段，見 [[topics/community-tech-patterns-archive#2026-07]]；各子頁該月只留時段總結。
 
 %% 拆頁評估 2026-10-09：已依讀者問題拆成七個子頁（第 18 波）。本節與上方「缺口追蹤」h3 兼作過渡錨點，給 coding-workflow-guide 的 #2026-07 與 official-community-gap 的 #缺口追蹤 兩條舊連結落腳；兩張轉知單結案後刪 h3，本節在 2026-07 蒸餾時改成時段總結。 %%
 

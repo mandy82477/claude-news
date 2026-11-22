@@ -51,16 +51,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 我的症狀 | 先裝這個 | 什麼時候改裝別的 | 證據 |
 |---|---|---|---|
-| 帳單爆了，看不到錢花在哪 | ⌨️ [**tare**](https://github.com/kelviq/tare) | 要桌面常駐、不想開終端 → 🖥️ [TokenEater](https://github.com/AThevon/TokenEater)（僅 macOS）；想比較多個 coding agent 的花費 → 🖥️ [Frugal Tokens](https://github.com/dpclark4/frugal-tokens) | 🟡（判 08-27｜查 09-22，287★） |
-| 額度快用完，想在斷線前被提醒 | ⌨️ [**Claude-Code-Usage-Monitor**](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor) | 要跨平台、作者還在更新 → ⌨️ [claude-usage-widget](https://github.com/bozdemir/claude-usage-widget)（53★）；用 Windows、想自己設到幾 % 就叫你 → 🖥️ [usage-monitor-for-claude](https://github.com/jens-duttke/usage-monitor-for-claude) | ⚪（判 09-22｜查 09-22，8,713★、07-05 後未更新） |
-| context 一直被工具輸出撐爆 | 🔌 [**pxpipe**](https://github.com/teamchong/pxpipe) | 不能接受請求過代理層 → 🧩 [Graft](https://github.com/trailhq/Graft)（數字有爭議，見細節）；還不確定是誰在撐爆 → 先跑 ⌨️ [PrismoDev](https://github.com/shanirsh/prismodev) 診斷 | 🟡（判 08-05｜查 09-22，7,426★） |
+| 帳單爆了，看不到錢花在哪 | ⌨️ [**tare**](https://github.com/kelviq/tare) | 要桌面常駐、不想開終端 → 🖥️ [TokenEater](https://github.com/AThevon/TokenEater)（僅 macOS）；想比較多個 coding agent 的花費 → 🖥️ [Frugal Tokens](https://github.com/dpclark4/frugal-tokens) | 🟡（判 08-27｜查 11-22，307★、08-28 後未更新） |
+| 額度快用完，想在斷線前被提醒 | ⌨️ [**Claude-Code-Usage-Monitor**](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor) | 要跨平台、作者還在更新 → ⌨️ [claude-usage-widget](https://github.com/bozdemir/claude-usage-widget)（53★）；用 Windows、想自己設到幾 % 就叫你 → 🖥️ [usage-monitor-for-claude](https://github.com/jens-duttke/usage-monitor-for-claude) | ⚪（判 09-22｜查 11-22，8,814★、07-05 後未更新） |
+| context 一直被工具輸出撐爆 | 🔌 [**pxpipe**](https://github.com/teamchong/pxpipe) | 不能接受請求過代理層 → 🧩 [Graft](https://github.com/trailhq/Graft)（數字有爭議，見細節）；還不確定是誰在撐爆 → 先跑 ⌨️ [PrismoDev](https://github.com/shanirsh/prismodev) 診斷 | 🟡（判 08-05｜查 11-22，7,985★、11-20 仍在推送） |
 | 接手沒碰過的大 repo，agent 讀不懂 | 🧩 [**graphify**](https://github.com/Graphify-Labs/graphify) | 要讓**人**看懂而非 agent → [Understand-Anything](https://github.com/Egonex-AI/Understand-Anything)；要把架構畫成圖交付 → [archify](https://github.com/tt-a1i/archify)；改 code 要索引自動同步 → [codegraph](https://github.com/colbymchenry/codegraph) | 🟢（判 05-02 起多來源｜查 11-20，15.1 萬★） |
-| 每開新 session 都要重講一遍 | ⌨️ [**brain.md**](https://github.com/mindmuxai/brain.md) | 要團隊共享而非單機 → 🖥️ [OzBrain](https://ozbrain.com)（付費服務）；已在用 Obsidian → VIR | 🟡（判 08-25｜查 09-22，552★） |
+| 每開新 session 都要重講一遍 | ⌨️ [**brain.md**](https://github.com/mindmuxai/brain.md) | 要團隊共享而非單機 → 🖥️ [OzBrain](https://ozbrain.com)（付費服務）；已在用 Obsidian → VIR | 🟡（判 08-25｜查 11-22，721★、11-13 仍在推送） |
 | 多個 agent 在同一 repo 互相覆蓋 | 🖥️ [**ness**](https://github.com/ness-dev/ness)（原名 Harness） | 已經用 worktree 隔離、只差 commit 落地不打架 → 🧩 [Claude Code Merge Queue](https://github.com/funador/claude-code-merge-queue)；要跨 harness 統一協作邏輯 → [omnigent](https://github.com/omnigent-ai/omnigent) | 🟢（判 04-29 起多來源｜查 11-01，103★、10-30 仍在推送） |
-| 一堆 agent 在跑，看不到誰卡住 | ⌨️ [**Omar**](https://github.com/omar-os/omar) | 只跑 3–5 個、不想多花一毛 token → [HUD](https://github.com/adrida/hud-mode)（走官方 event stream）；要 GUI 主控台 → 🖥️ [episko](https://github.com/respeak-io/episko)（原名 Cockpit） | 🟡（判 05-02｜查 09-22，48★） |
-| 它說做完了，但根本沒做 | 🧩 [**Groundtruth**](https://github.com/vnmoorthy/groundtruth) | 要留可稽核證據給團隊審 → [Proof Loop](https://github.com/LeoStehlik/proof-loop)（建構者／驗證者分離） | 🟡（判 04-27｜查 11-01，7★、最後推送 07-20 未更新） |
+| 一堆 agent 在跑，看不到誰卡住 | ⌨️ [**Omar**](https://github.com/omar-os/omar) | 只跑 3–5 個、不想多花一毛 token → [HUD](https://github.com/adrida/hud-mode)（走官方 event stream）；要 GUI 主控台 → 🖥️ [episko](https://github.com/respeak-io/episko)（原名 Cockpit） | 🟡（判 05-02｜查 11-22，52★、11-22 仍在推送） |
+| 它說做完了，但根本沒做 | 🧩 [**Groundtruth**](https://github.com/vnmoorthy/groundtruth) | 要留可稽核證據給團隊審 → [Proof Loop](https://github.com/LeoStehlik/proof-loop)（建構者／驗證者分離） | 🟡（判 04-27｜查 11-22，7★、最後推送 07-20 未更新） |
 | CLAUDE.md 寫了它不聽 | —（答案是機制不是工具，見細節） | 規則多到耗 token → Writ；跨工具設定碎片化 → Caliber | —（這一列沒有工具可評，理由見細節） |
-| 不想被單一供應商綁死 | 🔌 [**Workweave Router**](https://github.com/weave-os/router) | 只想改用本地模型、不動主配置 → claudely；想繞過計量計費 → clarp（⚠️ 政策風險，見細節） | 🟡（判 06-27｜查 09-22，4,735★） |
+| 不想被單一供應商綁死 | 🔌 [**Workweave Router**](https://github.com/weave-os/router) | 只想改用本地模型、不動主配置 → claudely；想繞過計量計費 → clarp（⚠️ 政策風險，見細節） | 🟡（判 06-27｜查 11-22，5,621★、11-22 仍在推送） |
 
 **圖例**——證據：🟢 多來源實測／🟡 單一實測（多為作者自測）／⚪ 僅星數。括號裡兩個日期：**判**＝下這個判斷的那天，**查**＝最近一次確認這個專案還在不在、多大的那天；判很舊而查很新，代表結論是舊的但專案還活著，要拿它做決定前自己再看一眼 repo。安裝：🧩 skill/plugin（一行安裝隨時可拔）／⌨️ CLI／🖥️ 桌面 app（注意平台鎖定）／🔌 proxy·MCP（**流量過第三方層，裝前先評估安全**）。
 
@@ -84,7 +84,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Nekot 與 syrtis 是額度告警的新選項，都沒有使用回報**（10-24～10-28）：Nekot（Show HN，iPhone app）在用量即將觸頂前提醒，HN 1 分、單一來源；syrtis（501★）是 macOS 選單列、追蹤 25 種以上 agent 的用量，偏事後歸因而非事前告警。這一列首選不變。
 - **context 撐爆這一列多了 context-mode**（11-02）：本機沙箱加 SQLite FTS5，輸出不進 context、不經代理層，宣稱省 99%（自述）；33,266★，11-18 仍有真人 commit（11-21 查 GitHub），首選 pxpipe 不變。
 - **Nomos 對應「說做完了但沒做」，仍無使用回報**（Show HN，11-02）：Go 靜態執行檔，擋 agent 用刪測試、回傳假值讓編譯過關；Sentient 與 intent-lens 解的是「動手前先看清」，不對應任何症狀列，首選 Groundtruth 不變。
-- **claim-check 與 Groundtruth 解同一個症狀**（dev.to，11-12）：claim-check 的 Stop hook 在「fixed」「tests pass」缺證據時退回；作者自測 0.2.0 擋 86 則、手查 24 則中 18 則屬實，僅單一作者；Groundtruth 07-20 後未更新，下輪複查，首選暫不換。
+- **claim-check 與 Groundtruth 解同一個症狀**（dev.to，11-12）：claim-check 的 Stop hook 缺證據時退回；作者自測擋 86 則、手查 24 則中 18 則屬實；11-22 複查：claim-check 2★、11-18 仍推送；Groundtruth 7★、07-20 後未更新；皆無第三方回報，首選不換。
 - **盯 agent 狀態的新品都只有單一來源**（11-03～11-11）：Aq（Show HN，hooks 排注意力佇列）、capri-desktop（517★，旁白目前進度），首選 Omar 不變。
 - **archify 與 Understand-Anything 有了第一份第三方實測**（dev.to，11-06）：同一個跨語言專案上與 Floorplan 並排實測，單一使用者、單一專案；細節見 [[topics/community-interfaces]]，首選 graphify 不變。
 - **Groundtruth 只有 7★ 為什麼還是首選**：值錢的是它的做法（Stop hook 逼 agent 先出示可驗證證明才准說做完），不是使用人數；09-22 查得 7★／0 forks、07-20 後未更新，次選 Proof Loop 11★。沒有更強的替代出現前不換。
@@ -96,7 +96,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **帳單爆了這一列多了 tokendoctor**（Show HN，11-17）：分析哪裡多花 token，HN 31 分；留言有人主張一味砍用量會犧牲品質，單一來源、無使用回報，首選 tare 不變。
 - **記憶類又兩個新品都沒有使用回報**（Show HN，11-14～11-17）：Memro 用 PostgreSQL 加 pgvector 經 MCP 共享記憶，Crosshead 處理 compaction 後的身分保留；首選 brain.md 不變。
 - **盯 agent 狀態的新品仍是單一來源**（Show HN，11-14～11-17）：Cyberviber 是 15 美元實體螢幕，Fardesk 是不經第三方伺服器的 iPhone app；首選 Omar 不變。
-- **「說做完了但沒做」多三個證據導向的新做法**（11-15～11-19）：canary（500★）附錄影與 trace 的 QA，code-review-gate-skill（504★）要求附證據的發現項，Gravitas（501★）把先查證才完工套到 Gemini；皆僅星數，首選 Groundtruth 不變。
+- **「說做完了但沒做」多三個證據導向的新做法**（11-15～11-19）：canary（500★）附錄影與 trace 的 QA，code-review-gate-skill（504★）要求附證據的發現項，Gravitas（501★）把先查證才完工套到 Gemini；皆僅星數。
+- **這三個都不推薦**：單一作者、僅星數、無第三方採用回饋，採用欄維持 ⏳ 觀望（與 [[topics/coding-workflow-guide]] 第 9 段同一口徑），首選 Groundtruth 不變。
 - **teamclaude 解的是額度用完後換帳號，不是提醒**（503★，11-16）：多帳號集中成帳號池並自動輪替，僅星數佐證；額度告警這一列首選不變，多帳號集中使用前先確認服務條款。
 
 ### AI 寫久了人會不會退化（只有現象，還沒有能推薦的工具）
@@ -173,7 +174,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | --- | --- | --- | --- | --- |
 | [**edenfunf/reelmimic**](https://github.com/edenfunf/reelmimic) | Skills | ⏳ | 2026-11-20 | 開源 2D 動畫風格克隆：餵參考影片或 YouTube 連結，Claude Code 或 Codex 重建節奏、鏡位與轉場；2,078 星，僅星數佐證 |
 | [**makenotion/claude-code-notion-plugin**](https://github.com/makenotion/claude-code-notion-plugin) | 整合工具 | ⏳ | 2026-11-20 | Notion 官方帳號放出的外掛，讓 Claude Code 直接讀寫 Notion；511 星 |
-| [**udaysharmadev/Gravitas**](https://github.com/udaysharmadev/Gravitas) | 工作流 | ⏳ | 2026-11-19 | 把 Claude Code 的「先讀檔、先規劃、再測試、拿證據才算完工」流程強制套到 Gemini 上；501 星，僅星數佐證 |
+| [**udaysharmadev/Gravitas**](https://github.com/udaysharmadev/Gravitas) | 工作流 | ⏳ | 2026-11-19 | 把 Claude Code 的「先讀檔、先規劃、再測試、拿證據才算完工」流程強制套到 Gemini 上；501 星；單一作者、無第三方採用回饋，未推薦 |
 | [**nexu-io/openmotion**](https://github.com/nexu-io/openmotion) | Skills | ⏳ | 2026-11-19 | 開源影片剪輯替代品，把參考影片轉成可編輯動態圖像；近 2 天新增約 1,954 星、累計 12,737 星，增速異常，僅星數佐證 |
 | [**NVIDIA/SkillEvaluator**](https://github.com/NVIDIA/SkillEvaluator) | Skills | ⏳ | 2026-11-19 | NVIDIA 官方帳號的 agent skills 評估框架：安全掃描、相容性檢查、語意重疊偵測；累計 4,067 星（近 2 天 +774），僅星數佐證 |
 | [**claude-md-census**](https://concepts.laxmena.com/concepts/claude-md-census/) | 其他 | ⏳ | 2026-11-19 | Show HN：拿近 4 萬份公開 repo 的 CLAUDE.md／AGENTS.md 統計（中位約 1,379 token），可貼自己的檔案比對百分位；HN 單來源 |
@@ -181,7 +182,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**nanocoai/nanoclaw**](https://github.com/nanocoai/nanoclaw) | 整合工具 | ⏳ | 2026-11-18 | 自架常駐個人 AI 助理，每個 agent 跑在自己的容器，可選 Claude Code／Codex／Cursor／OpenCode 當底層，從 Slack、Telegram 等管道對話；31,121 星（2026-01 出生），僅星數佐證 |
 | [**EL4CTEO/blender-skills**](https://github.com/EL4CTEO/blender-skills) | Skills | ⏳ | 2026-11-18 | Blender 5.3 工作流 Agent Skills（建模、UV、PBR、烘焙、骨架、動畫、匯出、QA）；2,187 星；與 arjun988/blender-skills 是不同帳號的兩個 repo，誰仿誰日報判不了 |
 | [**orwa-mahmoud/nightshift**](https://github.com/orwa-mahmoud/nightshift) | 工作流 | ⏳ | 2026-11-18 | 讓 Cursor、Codex、Claude Code 長時間自動跑且可復原、保留狀態，列出哪些工作完成、進行中或卡住；522 星，僅星數佐證 |
-| [**0xnyn/canary**](https://github.com/0xnyn/canary) | 工作流 | ⏳ | 2026-11-18 | Claude Code 專用 QA 工具：端對端測試並附螢幕錄影、console log、network HAR 與 Playwright trace；500 星，僅星數佐證 |
+| [**0xnyn/canary**](https://github.com/0xnyn/canary) | 工作流 | ⏳ | 2026-11-18 | Claude Code 專用 QA 工具：端對端測試並附螢幕錄影、console log、network HAR 與 Playwright trace；500 星；單一作者、無第三方採用回饋，未推薦 |
 | [**cynicalight/NeoRead**](https://github.com/cynicalight/NeoRead) | 其他 | ⏳ | 2026-11-18 | 本機優先的 EPUB／PDF 閱讀器，含註記與雙語對照，AI 輔助走 Claude Code、Codex CLI、Kimi CLI；516 星，僅星數佐證 |
 | [**RitualDev-Lab/AgentShield**](https://github.com/RitualDev-Lab/AgentShield) | 安全工具 | ⏳ | 2026-11-18 | Show HN：零依賴，替 Claude 的 shell 操作做機密遮罩與指令防火牆；HN 3 分、單一來源，無使用回報 |
 | [**Terminess/terminess**](https://github.com/Terminess/terminess) | 多 Agent | ⏳ | 2026-11-18 | Show HN：harness 同時跑官方 Claude Code 與 Codex CLI 並讓兩者協作；2 個來源同日報導，無使用回報 |
@@ -199,7 +200,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**leeguooooo/iphone-use**](https://github.com/leeguooooo/iphone-use) | 整合工具 | ⏳ | 2026-11-16 | 讓 Claude Code 等 MCP client 經 USB 或 Wi-Fi 操作真實 iPhone（讀畫面、點擊、輸入），可回放操作流程；502 星，僅星數佐證 |
 | [**tradermonty/claude-trading-skills**](https://github.com/tradermonty/claude-trading-skills) | Skills | ⏳ | 2026-11-15 | 股票與期貨交易研究 skills（市場分析、圖表、經濟日曆、篩選器）；近 8 天 +1,647 星、累計 5,324 星，僅星數佐證 |
 | [**andyhuo520/digital-human-koubo**](https://github.com/andyhuo520/digital-human-koubo) | Skills | ⏳ | 2026-11-15 | 一張照片生成數字人說話影片（Renoise MCP＋5 種剪輯風格）；1,993 星，僅星數佐證 |
-| [**kyy-logs/code-review-gate-skill**](https://github.com/kyy-logs/code-review-gate-skill) | 工作流 | ⏳ | 2026-11-15 | Claude Code／Codex 的可審查 code review skill：四個獨立探針、附證據發現項、由 JSON 推導的合併關卡；504 星，僅星數佐證 |
+| [**kyy-logs/code-review-gate-skill**](https://github.com/kyy-logs/code-review-gate-skill) | 工作流 | ⏳ | 2026-11-15 | Claude Code／Codex 的可審查 code review skill：四個獨立探針、附證據發現項、由 JSON 推導的合併關卡；504 星；單一作者、無第三方採用回饋，未推薦 |
 | [**Innei/ryugi**](https://github.com/Innei/ryugi) | 工作流 | ⏳ | 2026-11-15 | 讓 agent 產出物（mockup、設計文件、白板、驗證報告）可逐條留言並回送給 agent；501 星，僅星數佐證 |
 | [**imraywang/ray-sticker-shop**](https://github.com/imraywang/ray-sticker-shop) | Skills | ⏳ | 2026-11-15 | 一張照片或角色圖生成風格一致的動態表情包與微信投稿素材；500 星，僅星數佐證 |
 | [**baiblinocun1986/blender-ai-copilot-hub**](https://github.com/baiblinocun1986/blender-ai-copilot-hub) | 整合工具 | ⏳ | 2026-11-15 | Blender 多供應商 AI 副駕駛中樞，內建 27 個受監督場景工具與 MCP server；466 星、2 個來源 |

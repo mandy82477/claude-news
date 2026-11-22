@@ -9428,3 +9428,22 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - claude.ai 雲端環境網路白名單改 Custom 並加入 leaderboard 組 12 個榜單網域與 `sec.gov`、`metr.org` 等（⏳ 已擱置 9 週）
   - 雲端 routine 多 repo session 的專案 hook 全未載入：建議從 routine sources 移除 `anthropics/claude-code`（⏳ 已擱置 1 週）
   - Reddit API 憑證（workaround 複查日 2026-12-08）
+
+## 2026-11-22 擱置事項全面清查
+
+使用者裁示：雲端網路白名單維持預設、被擋步驟固定本機補做；其餘擱置事項全部清查。
+
+- **雲端白名單裁定**：規則改為 egress 擋下的步驟只記「本機承接」、不再列「需使用者端設定」（`wiki-lint-sweeps` egress 節、`wiki-lint` log 格式、`web-publish` 回報段、`docs/cloud-runbooks/_shared.md`）；workaround 對應列移入已收斂
+- **5c 逾期 21 筆清零**（五位記者帶查證授權並行）：查實移除 7 筆（Cowork 專案整理兩筆以說明中心專文、Nscale 兩筆以 Nscale S-1/A、product-vulns 越界率以 arXiv 預印本、prompt-injection 以 Microsoft 安全部落格、AISI 43／122 次以 AISI 事件報告）；改 🔎 查無官方 14 筆並排定 12-06 起複查。收尾 `--queue` 總逾期 0
+- **舊語法盲區 13 → 0**：根因是 `scripts/pending_markers.py` 的 `iter_legacy()` 只豁免標記那一行，標記底下縮排的細節子條列裡寫「官方未載」「未證實」就被算成舊標記——三位記者為此改措辭繞過檢查器。已修檢查器（標記範圍延伸到緊接的縮排子條列）並補 3 條回歸測試；以改動前（HEAD）內容驗證，那 8 筆在新檢查器下全數正確放過。記者改過的措辭語意不變，不回改。其餘 4 筆是「待查證標記見 [[…]]」這類指路句與小節標題，改用正式名稱「懸置標記」；opus-5 一筆三個月前的單一回報改寫成「未見第二人複現（單一回報）」
+- **轉知結案**：H-afee03（主編，逾 20 天）——雷達「升級前要知道的預設值與破壞性變更」表從核對到 v2.1.321 補到 v2.1.330，新增 330／328／327／326／325／323 六列，2.1.322 併入 321 列；守 12 列上限移出 309／305／302／283／280／277，事實先搬進 [[entities/claude-code-releases]]。H-cd3930（功能）——六個新節點皆過不了產品化矩陣入口判準，不新增列。H-be49fb（社群）——canary、Gravitas、code-review-gate-skill 目錄列補「未推薦」，與開發實務手冊口徑一致
+- **延後事項清掉**：
+  - [[entities/claude-code-known-issues]] 新增「認證與登入」分組 4 條；#36797 查證為回報者 08-30 自行關閉標 invalid，併入同症狀的開放 issue 註記，不再佔一列
+  - 加拿大新聞出版商著作權訴訟寫入 [[topics/anthropic-business-risks]] 訴訟表（CP、CBC 內文；法院與求償僅貿易媒體載，標「媒體稱」）
+  - 社群工具目錄逾 60 天 6 列 `gh api` 實查，無退場；決策表首選複查維持 Groundtruth
+  - patterns 母頁與開發實務手冊指向子頁 `#2026-07` 的錨點改指 [[topics/community-tech-patterns-archive]]
+  - `devpractice_diff.py consume`：候選帳本 367 行已處理 366 行，剩 1 筆是 11-21 新進，屬正常流程，不是擱置
+- **11-14 對抗輪 C 的 20 項規則修訂落地**（Opus 代執行、主編驗收）：落地 22 處中的 20 處，餘 2 處（web-publish 空括號殘骸、5j「四表」改「五表」含 registry 兩條錨點與雲端 runbook）主編接手補完；另清 8 處腳本與測試 docstring 指向 `page-templates.md` 已不存在的節。沿革見 `docs/rules-changelog/reporter-shared.md`
+- **順手撞到並修**：market-signals 母頁與 IPO 子頁共 4 處把「其中約 916 億歸 Anthropic（扣承銷費用前）」寫成「公司實收」——官方公告只載毛額、未載淨額；三個母頁 callout（anthropic-business、market-signals、ai-agent-safety）跟上子頁查證結果
+- **仍未到期、照排程處理**：`entities/claude-code` 表格超限專項（12-08）、Reddit 與 GitHub 憑證（12-08）、官方頁監看的四項已知取捨（11-29）、GH Actions 排程延遲（12-13）、domain 信譽表（2027-01-16）、`community-multi-agent` 缺口追蹤（12-08）
+- 需使用者端設定：Reddit API 憑證（選配）、GitHub token（選配）、雲端 routine 多 repo session 的 hook 未載入（建議移除 `anthropics/claude-code` 這個 source）

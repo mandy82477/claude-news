@@ -31,8 +31,8 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-20
-**最後新聞更新：** 2026-11-20
+**最後更新：** 2026-11-22
+**最後新聞更新：** 2026-11-22
 
 > **最新動態**（2026-11-20）
 > - **IPO 敲鐘現場外出現「別為 AI 泡沫紓困」抗議**（techpolicy.press）：示威者於那斯達克掛牌現場外表達對泡沫風險與紓困預期的疑慮
@@ -69,10 +69,11 @@ UTRF 專利訴訟（求償含禁制令）目前不在表上，訴訟仍在進行
 
 ### 訴訟案件對照
 
-一列一案，更新至 2026-11-14；除標明者外皆為媒體報導，訴狀全文未讀。
+一列一案，更新至 2026-11-22；除標明者外皆為媒體報導，訴狀全文未讀。
 
 | 原告 | 主張 | 求償或禁制令 | 目前階段 | 對 Claude 使用者的影響 |
 |---|---|---|---|---|
+| Postmedia、Torstar、環球郵報、加拿大通訊社（CP） | 用其新聞內容訓練 Claude 侵權；另控違反網站條款、規避技術保護措施、不當得利 | 媒體稱：法定賠償每件最高 $2 萬（替代主張，未標幣別）、懲罰性賠償、永久禁制令 | 10-06 於安大略高等法院提告；Anthropic 未回應，尚未提答辯狀 | 目前無直接影響；禁制令若成立，Claude 取用加拿大新聞內容可能受限（推論） |
 | 訂閱用戶（具名未見；與 06-16 集體訴訟是否同案屬推論） | Claude Max「5 倍、20 倍」用量廣告是否誤導消費者 | 金額未見報導 | 11-09 Reuters：法院裁定須繼續面對訴訟，進入審理，非駁回 | Max 訂閱戶日後可能涉退款；現階段不改用量規則 |
 | Sony Music、Warner Chappell 等 | 經 BT 下載盜版音樂訓練 Claude | 每首歌最高 $15 萬 | 08-29 提告；11-12 Ars Technica 舊案重新浮上，引員工聊天紀錄，非新提告 | 商業發行 Claude 產出前自行做版權檢查 |
 | 音樂出版商（Round Hill、Reservoir、ABG EPE 等） | 以歌詞與音樂訓練 AI 侵權 | Round Hill $10 億；ABG 涉 274 首、法定賠償最高約 $4,110 萬；Reservoir 涉 853 首 | 10-21 Reuters：雙方將提關鍵論點，進入實質審理 | 同上；無繞法 |
@@ -83,6 +84,10 @@ UTRF 專利訴訟（求償含禁制令）目前不在表上，訴訟仍在進行
 
 **商業風險細節**：表外的評論、單一來源與已移出表的風險都在這裡；唱空與估值質疑在 [[topics/anthropic-ipo#誰說撐不住：唱空與質疑]]。
 
+- **加拿大新聞出版商著作權訴訟（2026-10-06 提告，10-14～10-21 報導；2026-11-22 查證）**：原告含 Toronto Star、Metroland、環球郵報、Postmedia、PNI Maritimes、加拿大通訊社（CP），被告含 Anthropic 與其加拿大子公司；法院文件未取得，以下為具名媒體轉述訴狀。
+  - 兩家以上具名媒體一致：CP 稿（[Global News](https://globalnews.ca/news/12108024/anthropic-news-lawsuits-ontario/)）與 [CBC／Radio-Canada](https://ici.radio-canada.ca/rci/en/news/2294290/anthropic-sued-by-major-canadian-news-publishers-for-copyright-claims-in-ontario-court) 同載 10-06 提告、四項主張、Anthropic 未回應。
+  - 賠償與禁制令細節僅 [Broadcast Dialogue](https://broadcastdialogue.com/canadian-news-publishers-sue-anthropic-over-ai-copyright-infringement/)（10-14）載：一般損害賠償、返還獲利或法定賠償、懲罰性賠償、永久禁制令；涉案作品 2021 年起約 230 萬至 420 萬件，各家自列。
+  - 同批出版商與 CBC 2024 年已告 OpenAI，該案仍未和解。
 - **商標侵權新提告：「Mythos」模型名稱（2026-11-13，Reuters）**：Anthropic 因新模型名稱「Mythos」遭控商標侵權提告；原告身分與侵權主張細節未見報導，僅標題可用，與既有著作權、專利訴訟屬不同法律類型，首次出現在本頁。
 - **非營利組織提告求凍結「AI 軍備競賽」（2026-11-12，Politico／CBS News）**：一群非營利組織對 Anthropic、Google 等多家科技公司提告；CBS 標題稱這些開發商「無法控制自己的技術」，具體訴求條款與法院文件未見報導，僅標題可用；安全面見 [[topics/ai-agent-safety]]。
   - 訴狀主張的「AI 軍備競賽」框架與本庫遞迴自我改進那條線是同一套論述，見 [[topics/recursive-self-improvement]]

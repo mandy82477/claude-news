@@ -269,7 +269,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 - AWS 建議需 IL4／IL5 的工作負載預設用 Sonnet 5，定位為受監管與 ITAR 工作負載的 AI 輔助開發入口；前例見 [2025-05-23 公告](https://aws.amazon.com/about-aws/whats-new/2025/05/amazon-bedrock-models-fedramp-high-dod-il-4-5-govcloud/)（Claude 3.5 Sonnet v1、3 Haiku）。
 - **授權不等於採購**：IL4／IL5 是雲端合規資格，黑名單是國防部採購決定，兩者並存不衝突；同一套授權存在，國防部選擇不用（後者依 BBC 標題）。
 
-**待查後續：** 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就本案發布任何說明**。判決推理已由具名媒體補上：合議庭 2:1，主筆 Gregory Katsas 法官、Neomi Rao 法官加入，Karen LeCraft Henderson 法官異議（認為法條的 manipulate 指隱蔽或欺瞞式干預，不含公開執行的使用限制）；八月舊金山聯邦法官已推翻**另一項**認定，本次判決維持的是第二項。公司聲明僅稱「respectfully disagrees」、仍有信心、「正評估所有選項，包括進一步審理」（[CTV News](https://www.ctvnews.ca/world/article/federal-court-says-pentagon-can-label-anthropic-a-supply-chain-risk/)、[The Next Web](https://thenextweb.com/news/anthropic-pentagon-supply-chain-risk-appeals-court-ruling)，2026-09-25）。**仍未有答案的**：全院複審已有媒體報導——媒體稱（MLex、Law360 案件頁）Anthropic 於 2026-10-13 聲請全院重審，法院尚未裁定，未見最高法院聲請；國防部十月遷出計畫是否因本判決暫緩。❓ **待查證**（標 2026-10-13｜查 en banc、MLex、Law360｜複 2026-12-14）｜**全院重審聲請與裁定**：僅媒體轉述、官方未載；已掃日報至 2026-11-20 無後續；官方頁面未查證。
+**待查後續：** 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就本案發布任何說明**。判決推理已由具名媒體補上：合議庭 2:1，主筆 Gregory Katsas 法官、Neomi Rao 法官加入，Karen LeCraft Henderson 法官異議（認為法條的 manipulate 指隱蔽或欺瞞式干預，不含公開執行的使用限制）；八月舊金山聯邦法官已推翻**另一項**認定，本次判決維持的是第二項。公司聲明僅稱「respectfully disagrees」、仍有信心、「正評估所有選項，包括進一步審理」（[CTV News](https://www.ctvnews.ca/world/article/federal-court-says-pentagon-can-label-anthropic-a-supply-chain-risk/)、[The Next Web](https://thenextweb.com/news/anthropic-pentagon-supply-chain-risk-appeals-court-ruling)，2026-09-25）。**仍未有答案的**：全院複審已有媒體報導——媒體稱（MLex、Law360 案件頁）Anthropic 於 2026-10-13 聲請全院重審，法院尚未裁定，未見最高法院聲請；國防部十月遷出計畫是否因本判決暫緩。❓ **待查證**（標 2026-10-13｜查 en banc、MLex、Law360｜複 2026-12-14）｜**全院重審聲請與裁定**：僅媒體轉述、官方無相關頁面；已掃日報至 2026-11-20 無後續；官方頁面未查證。
 
 ### 🚫 出口管制：誰來管最強的模型
 
@@ -707,7 +707,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
     - 判決推理已由具名媒體補上：合議庭 2:1，主筆 Gregory Katsas 法官、Neomi Rao 法官加入，Karen LeCraft Henderson 法官異議（認為法條的 manipulate 指隱蔽或欺瞞式干預，不含公開執行的使用限制）；八月舊金山聯邦法官已推翻**另一項**認定，本次判決維持的是第二項。
     - 公司聲明僅稱「respectfully disagrees」、仍有信心、「正評估所有選項，包括進一步審理」（[CTV News](https://www.ctvnews.ca/world/article/federal-court-says-pentagon-can-label-anthropic-a-supply-chain-risk/)、[The Next Web](https://thenextweb.com/news/anthropic-pentagon-supply-chain-risk-appeals-court-ruling)，2026-09-25）。
     - **仍未有答案的**：全院複審已有媒體報導——媒體稱（MLex、Law360 案件頁）Anthropic 於 2026-10-13 聲請全院重審，法院尚未裁定，未見最高法院聲請；國防部十月遷出計畫是否因本判決暫緩
-    - ❓ **待查證**（標 2026-10-13｜查 en banc、MLex、Law360｜複 2026-12-14）｜**全院重審聲請與裁定**：僅媒體轉述、官方未載；已掃日報至 2026-11-20 無後續；官方頁面未查證
+    - ❓ **待查證**（標 2026-10-13｜查 en banc、MLex、Law360｜複 2026-12-14）｜**全院重審聲請與裁定**：僅媒體轉述、官方無相關頁面；已掃日報至 2026-11-20 無後續；官方頁面未查證
 - **[🌐] Reuters：Anthropic 投資人 Joe Lonsdale 稱 AI 公司渲染風險是為了影響政策走向**：與同日法院裁定同日出現，詳見「## 攻防紀錄」
 - **[🏛️] Bloomberg／Politico：白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查**：Politico（09-24）與 Bloomberg（09-25）為同一政策動作的跨媒體報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」
   - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就此發布任何說明**；2026-11-21 再查 AISI 官網與搜尋仍無官方說明；英方存取恢復的具名媒體與部長說法見下一條。

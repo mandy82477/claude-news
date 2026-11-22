@@ -62,7 +62,7 @@ wiki/
 
 ---
 
-## 連結慣例 `[搬入: 2026-09-12，原住根目錄 CLAUDE.md]`
+## 連結慣例
 
 wiki 正文的連結寫法以 web reader 解析器（`web_reader/assets/app.js` 的 `parseWikilink()`）吃得下的為準——下表以外的 Obsidian 語法在 Obsidian 正常、在網站上壞掉，一律不得寫入 `wiki/`：
 

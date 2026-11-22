@@ -641,7 +641,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **GitHub／Cursor／Slack**：Copilot 終結「無限量」方案（08-17）；Cursor 推出 Origin 託管平台（08-17）；Slack Code 讓 Claude 與 ChatGPT 進同一頻道（08-20、08-21）。
 - **定價與成本**：FT／The Information 稱中美定價戰成形（08-14，後續數字見「雷達細節」）；the-decoder 稱 Claude Code 最快但成本近最便宜對手三倍（08-06，已查證數字見「硬答案」）；Kiro、OpenCode 比較文（08-02、08-03）。
 - **評測與估算**：Supabase Evals、quasa.io 彙整（08-01，數字見「查證快照」）；SemiAnalysis 稱 Microsoft 每 GW 推理商機達千億美元（08-10，機構自家估算）。
-- xAI／Grok 新版的待查證標記仍在下方。
+- xAI／Grok 新版的懸置標記仍在下方。
 
 原始條目見 [[topics/competitor-landscape-archive#2026-08]]
 

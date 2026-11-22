@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 目前結論
 
 - **隔離已定案**：每個 agent 開一個 git worktree，官方已內建（subagent 設 `isolation: worktree` 就拿到一份獨立的 repo 副本）。agent teams 這邊沒有隔離（見下方缺口追蹤「協調與衝突解決」那一列）。
-- **戰線已經從「怎麼隔離」移到「隔離之後怎麼協調」**：worktree 解決了互相覆蓋，但沒有解決誰先合併、誰驗收（見下方缺口追蹤「協調與衝突解決」那一列）。**你的選項：** 用本地合併佇列（[[topics/community-multi-agent#2026-07]]）自己排序，或維持人工把關，或等官方補。
+- **戰線已經從「怎麼隔離」移到「隔離之後怎麼協調」**：worktree 解決了互相覆蓋，但沒有解決誰先合併、誰驗收（見下方缺口追蹤「協調與衝突解決」那一列）。**你的選項：** 用本地合併佇列（[[topics/community-tech-patterns-archive#2026-07]]）自己排序，或維持人工把關，或等官方補。
 - **開到多大**：超過 10 個並行 agent 要獨立 worktree 加一層協調；官方 session 預設同時跑到 20 個 subagent 時再開新的會失敗，上限可用 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 調（官方 sub-agents 文件，2026-10-09 查證）。
 - **怎麼停下來**：「怎麼停」比「怎麼跑起來」更難，要寫顯式終止條件；目前只有一則做法（2026-08-19），之後兩個月沒有新做法，已移出概覽表。
 - **接下來看什麼：** 官方 agent teams 何時脫離實驗性、會不會補上隔離；社群控制平面（amux、cezar、Offrun 這一路）有沒有人拿出跨工具比較。

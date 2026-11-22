@@ -33,7 +33,7 @@
 
 ## ⚠️ 升級前要知道的預設值與破壞性變更
 
-找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.321，2026-11-20；v2.1.289–v2.1.294、v2.1.296–v2.1.299、v2.1.301、v2.1.303 區間尚未逐版核對，待下次補齊），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250／315／320 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
+找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.330，2026-11-22；v2.1.289–v2.1.294、v2.1.296–v2.1.299、v2.1.301、v2.1.303 區間尚未逐版核對，待下次補齊），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250／315／320 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
 
 %% 2026-11-21 週度整理：本表由 22 列裁到 12 列（破壞性變更 8 列全留，預設值改變留 321／302／283／280 四列）；移出 317／312／307／304／300／295／285／284／261／260，事實已搬進 [[entities/claude-code-releases]]（307、260 補新列，其餘列於表格細節）。 %%
 
@@ -41,18 +41,18 @@
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
-| v2.1.321 | Claude Fable 5.2 成為預設 Fable 模型（取代 Fable 5.1），1M context、每 Mtok 輸入 $8／輸出 $40 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Fable 5.1 既有行為的排程任務先確認 |
+| v2.1.330 | `deniedMcpServers` 名稱項只擋該 claude.ai connector；排程與 `/loop` 壽命 7 天改 30 天；更多指向根目錄、家目錄的 `rm` 改需核可 | 破壞性變更 | 要全擋某 MCP 改填精確 URL；無人值守腳本確認 `rm` 沒被擋 |
+| v2.1.328 | 被拒絕的工具呼叫不再觸發 managed `PostToolUse` hook；`/code-review` 多數模型只報 bug 與 CLAUDE.md 違規 | 破壞性變更 | 靠 PostToolUse 記拒絕事件的稽核 hook 改看別處；要重構建議另跑 `/simplify` |
+| v2.1.327 | auto 忽略更多可執行任意套件的 allow 規則（如 `pnpm dlx *`）；讀工作目錄外的限制對更多 Bash 指令詢問 | 破壞性變更 | 改在 allow 明列指令；`.mcp.json` 頂層列伺服器時 `claude mcp add --scope project` 會停下 |
+| v2.1.326 | 組織政策未載入時改從 auto 起跑；bypass 下更多呼叫被問或拒；恆回 `"decision": "block"` 的 hook 更常擋下 | 破壞性變更 | 要手動確認就設 `permissions.defaultMode`；managed `autoMode.environment` 要含 `"$defaults"` |
+| v2.1.325 | 沙箱內 Bash 改走一般權限流程、不再自動放行；排程與 `/loop` 遇宣告 `allowed-tools` 的 skill 改先問；`pluginDigests` 失效 | 破壞性變更 | 要免詢問設 `sandbox.autoAllowBashIfSandboxed: true`；排程用的 skill 在 allow 加 `Skill(名稱)` |
+| v2.1.323 | 移除 `subagentStatusLine`（使用者回報 2.1.326 起恢復並提示棄用）；移除 v1 MCP client；只設 `ALL_PROXY` 時抓不到組織設定 | 破壞性變更 | 補設 `HTTPS_PROXY`；未知模型 ID 的 context 假設改 1M，要 200K 設 `CLAUDE_CODE_DISABLE_1M_CONTEXT=1` |
+| v2.1.321 | Fable 5.2 成為預設 Fable 模型（1M context、$8／$40）；2.1.322 起存過的 Fable 5.1 選擇也自動改指 5.2 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Fable 5.1 既有行為的排程任務先確認 |
 | v2.1.319 | auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway 使用）：伺服器無法檢查的呼叫一律詢問或拒絕，不再退回內建傳統分類方式，無遷移期 | 破壞性變更 | 用 LLM gateway 或關閉遙測跑 Claude Code 的團隊，升級後遇到被詢問或拒絕的呼叫是預期行為，不是故障 |
 | v2.1.318 | 復原 2.1.288 的修正，恢復對話不再保留先前 thinking；新建 managed agent 預設給 auto 權限政策 | 破壞性變更 | 依賴恢復對話仍保留 thinking 行為的人會發現已失效；新建代理人要自行確認權限模式 |
 | v2.1.316 | Opus 4.8 fast mode 10-30 起列為淘汰，11-30 將移除；移除後請求直接回錯誤、不退回標準 Opus 4.8 | 破壞性變更 | 用 Opus 4.8 fast mode 的人請在 11-30 前遷移到 Opus 5.5 以保留加速效果 |
 | v2.1.314 | permissions.blockWritesOutsideWorkingDirectories 在所有權限模式下都會擋 Write/Edit/NotebookEdit 寫到工作目錄外 | 破壞性變更 | 原本靠 bypass 模式寫工作目錄外檔案的腳本或 hook，升級後會被直接擋下 |
 | v2.1.311 | DISABLE_COMPACT 只能關閉壓縮、不能再重新打開 | 破壞性變更 | 曾經用這個環境變數動態開關壓縮的腳本，升級後只能關不能開 |
-| v2.1.309 | claude ultrareview 改為需要工作區信任；bypass 模式下危險的 rm／rmdir 改直接拒絕（非再提示） | 破壞性變更 | CI 或自動化若靠 bypass 模式跑這兩種指令，升級後會被直接擋下 |
-| v2.1.305 | allowedMcpServers 不再過濾 managed-mcp.json 裡只在 env 用 `${VAR}` 的 stdio 伺服器，原本被排除的伺服器升級後會載入 | 破壞性變更 | 靠這個白名單規則讓某些 MCP 伺服器保持停用的管理員，要改用 `deniedMcpServers` 才能繼續停用 |
-| v2.1.302 | `claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑；fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟 | 預設值改變 | CI 要 auto 就加 `--permission-mode auto`；不要 fork 設 `CLAUDE_CODE_FORK_SUBAGENT=0` |
-| v2.1.283 | 沒設權限模式時，互動 session 一律從 auto 模式開始（2.1.283 擴及第三方供應商與關 telemetry，2.1.284 擴及所有方案） | 預設值改變 | 要每步手動確認的人，在設定寫 `permissions.defaultMode` |
-| v2.1.280 | `default` 模型改指 Claude Opus 5.5（Foundry 仍 Sonnet 4.5）；未指定模型的 session、routines 與排程任務跟著換 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或原本跑 Sonnet 的排程用 `/model sonnet` 固定 |
-| v2.1.277 | 移除 TaskOutput 工具，`taskOutputMaxChars` 與 `TASK_MAX_OUTPUT_LENGTH` 失效；背景任務輸出改用 Read 讀檔 | 破壞性變更 | 引用 TaskOutput 的 hook、skill 或權限規則要改寫 |
 
 **與版本無關、已經生效的一件**：8/14 起 auto 已是 Pro／Max／Team 的預設權限模式，不論你裝哪一版都已套用。靠手動確認做安全把關的人，到 `/permissions` 的 Auto 分頁看一次。
 
@@ -61,7 +61,7 @@
 - **CLI 之外**：anthropic-sdk-python v1.0.0（2026-08-20）把 client 升到 httpx2，影響的是用該 SDK 寫的整合程式碼，不是 CLI 升版本身。
 - **與版本無關的未修問題**：升不升版都在，而且各自只發生在特定產品或平台上，見 [[entities/claude-code]]「現在還沒修好的」。**上表你都對不上號，版本面就沒有東西擋著你升級。**
 - **其餘預設值改變**（2.1.217–219 巢狀子代理深度、2.1.218、2.1.221、2.1.224、2.1.229、2.1.251），以及 2.1.270 後只影響窄場景的變更（如 2.1.275 npm 來源外掛不再跑安裝腳本），見[官方 changelog](https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md)。
-- **因上限 12 列移出的門檻**：2.1.317／312／307／304／300／295／285／284／261／260
+- **因上限 12 列移出的門檻**：2.1.309／305／302／283／280／277（2026-11-22）、2.1.317／312／307／304／300／295／285／284／261／260
   - 皆為預設值改變，屬窄場景或已被較新版本涵蓋
   - 事實已先搬進 [[entities/claude-code-releases]] 才移出
 

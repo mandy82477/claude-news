@@ -273,12 +273,12 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 ### 2026-11
 
 #### 2026-11-21
-**史丹佛發布與黎曼猜想聲稱競爭的全人類證明草稿**：兩份草稿均未經同行審查；細節與待查證標記見 [[topics/claude-research-results]]（The Decoder，2026-11-21）
+**史丹佛發布與黎曼猜想聲稱競爭的全人類證明草稿**：兩份草稿均未經同行審查；細節與懸置標記見 [[topics/claude-research-results]]（The Decoder，2026-11-21）
 
 #### 2026-11-20
 **Anthropic 研究部落格：黑洞物理兩題補第二項發現並附兩篇預印本**：HN 分數升至 543；細節見 [[topics/claude-research-results]]（[Anthropic Research](https://www.anthropic.com/research/claude-black-hole-physics)，2026-11-20）
 
-**Anthropic 數學家稱與 Claude 合作得出黎曼猜想證明（未經同行審查）**：Levent Alpöge 在個人草稿中提出，多家媒體同日報導；聲稱內容、驗證狀態與待查證標記見 [[topics/claude-research-results]]（[Simon Willison](https://simonwillison.net/2026/Nov/20/levent-alpoge/)，2026-11-20）
+**Anthropic 數學家稱與 Claude 合作得出黎曼猜想證明（未經同行審查）**：Levent Alpöge 在個人草稿中提出，多家媒體同日報導；聲稱內容、驗證狀態與懸置標記見 [[topics/claude-research-results]]（[Simon Willison](https://simonwillison.net/2026/Nov/20/levent-alpoge/)，2026-11-20）
 
 **The New Stack：Anthropic 稱其工程團隊 90% 程式碼由 Claude 撰寫與審查（僅標題可用，弱訊號）**：報導標題稱 Anthropic 自家團隊 90% 程式碼由 Claude 撰寫與審查，重點在「如何檢查」而非撰寫本身；原料僅標題可讀，無法查證具體模型版本、方法論或數字定義，互動數 0、單一來源，與上述黎曼猜想宣稱、黑洞物理研究為獨立事件（[Google News/The New Stack](https://news.google.com/rss/articles/CBMiakFVX3lxTFBubFFkd0ZmODhXb3FwN2tYNTRHT2hLbTdDZ0taWDJncU1OdTBqTmJ0eDQ0UGlfSUtTb0FLdXNtcUdncnZiMW1hc1N4ejVPWVk2SkRGajRndFRkTjExMXZwU1dZQXhEaGQteUE?oc=5)，2026-11-20）
 

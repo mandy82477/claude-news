@@ -200,6 +200,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **v2.1.285**：背景 Bash／PowerShell 指令加時限（預設 30 分、最長 2 小時），到時自動停止；v2.1.288 起只套用在無人值守 session，長建置用 `timeout` 明設。
 - **v2.1.261**：`keybindingFlavor` 設定失效，鍵位一律改成 Bash 式；設過 readline 模式者可刪該設定。
 - **v2.1.260**：subagent 背景指令的 1 小時上限移除，長跑代理不再被自動截斷，改用自己的逾時控制。
+- **2026-11-22 再移出 6 版（表核對到 v2.1.330 後新增 6 列）**：
+- **v2.1.305**：`allowedMcpServers` 不再過濾 managed-mcp.json 裡只在 env 用 `${VAR}` 的 stdio 伺服器，原本被排除的會載入；要保持停用改用 `deniedMcpServers`。
+- **v2.1.302**：`claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑；fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開。
+- **v2.1.283**：沒設權限模式時，互動 session 一律從 auto 開始（2.1.284 擴及所有方案）；要每步手動確認在設定寫 `permissions.defaultMode`。
+- **v2.1.280**：`default` 模型改指 Opus 5.5（Foundry 仍 Sonnet 4.5），未指定模型的 session、routines 與排程跟著換。
+- **v2.1.277**：移除 TaskOutput 工具，`taskOutputMaxChars` 與 `TASK_MAX_OUTPUT_LENGTH` 失效，背景任務輸出改用 Read 讀檔。
 - **v2.1.304／300／295／284**：tool search 預設開、gzip 與 hook `updatedInput` 驗證、CountTokens 需 `bedrock:CountTokens` IAM 權限、Sonnet 5.5 成 API 預設 Sonnet，各自見上方版本列。
 - **vertex-sdk-v1.0.0 的 API 版本依據（查證日 2026-11-08）**：[API 版本說明](https://platform.claude.com/docs/en/api/versioning)；SDK 預設送該版本，見[發布說明](https://platform.claude.com/docs/en/release-notes/overview)。
 

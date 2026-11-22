@@ -32,12 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（已併入 Claude app）
 **首次出現：** 2026-05（本庫日報最早提及 2026-05-03；官方正式推出日期未見報導）
-**最後更新：** 2026-11-20
-**最後新聞更新：** 2026-11-20
+**最後更新：** 2026-11-22
+**最後新聞更新：** 2026-11-22
 **蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code-known-issues]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
 
 > **最新動態**（2026-11-20）
-> 「用專案整理任務」段 11-10 移除後、11-20 第五度新增；❓ **待查證**（標 2026-11-10｜查 用專案整理任務｜訊 2026-11-20）｜**功能是否穩定存在**：見核心功能。
+> Cowork 專案（projects）功能經官方說明中心文章證實存在（2026-11-22 查證）：每個專案有獨立檔案、指示、排程任務與記憶。
 
 ---
 
@@ -71,7 +71,8 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 - **Chrome 側邊欄執行**（官方 2026-08-12 部落格）：可在瀏覽器側邊欄直接操作 Cowork，不需切到桌面應用程式。
 - **內建瀏覽器**：多家媒體轉述交叉確認，尚未取得官方原文。
 - **第三方 LLM 接入**（2026-05-04，社群自行發現、官方未曾公告）：Cowork／Desktop 可接任意第三方模型，含 OpenAI、Gemini、本地模型與企業閘道（Bedrock／Vertex／Foundry）。
-- ❓ **待查證**（標 2026-11-08｜查 用專案整理任務｜複 2026-11-22｜訊 2026-11-20）｜**「用專案整理任務」段反覆出現**：11-07 新增、11-08 移除、11-09 再新增、11-10 再移除、11-20 第五度新增；功能是否存在或僅文件搬移，內容仍未載，待官方查證。
+- **專案（projects）整理任務**：相關任務放進獨立工作區，各有檔案、指示、排程任務與記憶；可從零建立、匯入聊天專案或用本機資料夾。新建專案存到帳號、跨裝置；桌面版全付費方案，網頁／行動版 Pro 以上（Team beta）；Claude Code 尚不支援（[官方說明中心](https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork)，2026-11-22 查證）。
+- **release notes 條目反覆增減屬文件編排**：「用專案整理任務」段 11-07 至 11-20 五度新增／移除，功能本身以上述官方文章為準；2026-11-22 查 release notes 頁僅在相關文章列出該文，無獨立段落。
 
 ## 相關議題
 
@@ -89,6 +90,7 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 - [Quoting Felix Rieseberg](https://simonwillison.net/2026/Oct/5/felix-rieseberg/)（Blog／Simon Willison，2026-10-05，轉引 Anthropic 工程師說明架構轉雲端原因）
 - [r/ClaudeAI：本機 Cowork VM 何時移除](https://www.reddit.com/r/ClaudeAI/comments/1wz56ih/will_claude_desktop_eventually_remove_the_local/)（2026-10-06，0 留言）
 - [Claude Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes)（官方文件變更偵測，2026-11-07、2026-11-08 查，非新聞報導；另見 2026-09-25 查）
+- [Organize your tasks with projects in Claude Cowork](https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork)（官方說明中心，2026-11-22 查證）
 - [官方部落格：Claude Cowork and chat are now one Claude](https://claude.com/blog/cowork-is-now-claude)（2026-09-17；HN Repo Bridge 收錄，HN 討論 226 分；Simon Willison 部落格轉引）
 - Google News／Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld（2026-09-17，同事件媒體報導，僅標題／框架可用）
 - Help Center release notes（2026-08-25，跨介面記憶）
@@ -101,10 +103,11 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 
 | 日期 | 事件 |
 |------|------|
-| 2026-11-20 | Help Center release notes「用專案整理任務」段第五度新增；❓ **待查證**（標 2026-11-10｜查 用專案整理任務｜訊 2026-11-20）｜**功能存續** |
-| 2026-11-10 | Help Center release notes「用專案整理任務」段再度移除（與「模型設定」「模型切換」兩段同批）；❓ **待查證**（標 2026-11-10｜查 用專案整理任務）｜**功能存續** |
-| 2026-11-09 | Help Center release notes「用專案整理任務」段再度新增；❓ **待查證**（標 2026-11-09｜查 用專案整理任務）｜**功能存續** |
-| 2026-11-08 | Help Center release notes「用專案整理任務」段 11-07 新增後僅一天即移除；❓ **待查證**（標 2026-11-08｜查 用專案整理任務）｜**功能存續** |
+| 2026-11-22 | 官方查證：「用專案整理任務」功能存在，說明中心專文載明建立方式、帳號同步與方案門檻（[來源](https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork)），release notes 段落反覆增減僅屬文件編排 |
+| 2026-11-20 | Help Center release notes「用專案整理任務」段第五度新增 |
+| 2026-11-10 | Help Center release notes「用專案整理任務」段再度移除（與「模型設定」「模型切換」兩段同批） |
+| 2026-11-09 | Help Center release notes「用專案整理任務」段再度新增 |
+| 2026-11-08 | Help Center release notes「用專案整理任務」段 11-07 新增後僅一天即移除 |
 | 2026-11-07 | Help Center release notes 新增「用專案整理任務」段落（僅標題，細節未載） |
 | 2026-10-23 | 官方查證：Chrome 側邊欄仍 beta；Pro／Max 各介面皆雲端、10-06 起新任務一律雲端；Team beta、Enterprise 需管理員開（[來源](https://support.claude.com/en/articles/15520349)） |
 | 2026-10-06 | Simon Willison 部落格轉引 Anthropic 工程師 Felix Rieseberg 說明架構轉雲端原因（省硬碟電池、闔筆電不中斷）；r/ClaudeAI 使用者追問本機殘留 VM 何時釋放硬碟空間，官方未答 |

@@ -33,7 +33,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-20）
+> **最新動態**（2026-11-22）
+> **查證結果**：Microsoft 安全部落格 10-19 證實 agent 遭提示注入劫持的案例，見 [[topics/ai-agent-safety-prompt-injection]]；越界率 0%→17.1% 的研究查到 arXiv 預印本，見 [[topics/ai-agent-safety-product-vulns]]；Claude Code 修補清單、OpenCode 餘額歸零等查無官方一手，已排定複查。
+>
+> 前一輪（2026-11-20）：
 > **提示注入**：紅隊測試常重複發現同一種提示注入，缺乏去重機制，見 [[topics/ai-agent-safety-prompt-injection#2026-11]]。**產品漏洞**：有團體偽裝個人試用濫用免費額度轉售 AI 用量（非 Claude 專屬），見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 ---
 

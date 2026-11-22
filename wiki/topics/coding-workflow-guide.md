@@ -411,7 +411,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 「不再詢問」存進 repo 的密鑰已有官方修補：v2.1.323 起含密鑰的允許規則只在本次 session 有效、不寫檔，`settings.local.json` 改全域忽略；曾被存進 repo 的金鑰仍須換，見 [[topics/ai-agent-safety-product-vulns]]。
 
-兩個跟憑證有關的做法：收到求職或外包方寄來的程式測試題 repo，先自己看過程式碼再執行，別直接丟給 agent 跑或裝依賴（Binance 63 億美元竊案源頭即偽裝面試的測試題 repo，主流媒體報導，攻擊鏈細節待查證，2026-11-03）；設 MCP 伺服器時用 `claude mcp add-json <name> -` 從 stdin 讀 JSON，token 不留在 shell 歷史（v2.1.327 起，目前只在 `latest`，`stable` 2.1.323 沒有），見 [[entities/claude-code-releases]]。
+兩個跟憑證有關的做法：收到求職或外包方寄來的程式測試題 repo，先自己看過程式碼再執行，別直接丟給 agent 跑或裝依賴（Binance 63 億美元竊案源頭即偽裝面試的測試題 repo，主流媒體報導，2026-11-03）。❓ **待查證**（標 2026-11-03｜查 Binance、偽裝面試｜複 2026-12-06）｜**攻擊鏈細節**：僅見媒體報導，細節未載；設 MCP 伺服器時用 `claude mcp add-json <name> -` 從 stdin 讀 JSON，token 不留在 shell 歷史（v2.1.327 起，目前只在 `latest`，`stable` 2.1.323 沒有），見 [[entities/claude-code-releases]]。
 
 硬擋層還有兩個寫法上的坑：`permissions.deny` 要覆蓋同一動作的各種寫法——Reddit 一則回報稱對 `git push` 設的 deny 擋不住 `git -C . push`（單一來源，2026-10-14），見 [[topics/community-guardrails]]；v2.1.300 起 hook 回傳的 `updatedInput` 依 schema 驗證，靠 hook 改寫 schema 以外欄位的寫法，升版後會失效，見 [[entities/claude-code]]。
 
@@ -510,7 +510,7 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 
 **社群目前的結構性做法是把 TDD 從「寫在規則裡」改成「寫進流程指令裡」**：Pilot Shell 的 `/spec` 指令把完整 TDD 流程做成單一指令觸發，不依賴 Claude 自己記得規則（2026-05-04）；EvanFlow 的 TDD 驅動迴圈進一步在每個步驟設人工確認節點、不自動 commit，用人在迴圈中把關取代對規則遵守率的信任（2026-04-27）。兩者細節見 [[topics/community-tech-tools]] 工具目錄。
 
-**規模化之後，測試瓶頸從「測不測」轉移到「CI 撐不撐得住」**：多個平行 Claude Code agent 同時觸發建置與測試，會拖垮低規格機器、推高 CI 帳單（作者實測 4–5 個平行 agent 每天推近 90 次 commit）；社群做法是本地合併佇列——commit 排隊逐一完整測試後才合併，取代各分支各自即時觸發 CI（Hacker News「A local merge queue for parallel Claude Code agents」，2026-07-30，見 [[topics/community-multi-agent#2026-07]]）。
+**規模化之後，測試瓶頸從「測不測」轉移到「CI 撐不撐得住」**：多個平行 Claude Code agent 同時觸發建置與測試，會拖垮低規格機器、推高 CI 帳單（作者實測 4–5 個平行 agent 每天推近 90 次 commit）；社群做法是本地合併佇列——commit 排隊逐一完整測試後才合併，取代各分支各自即時觸發 CI（Hacker News「A local merge queue for parallel Claude Code agents」，2026-07-30，見 [[topics/community-tech-patterns-archive#2026-07]]）。
 
 訊號強度：TDD 審計為單一作者、單一 30 天樣本，量化但未見第三方複測；merge queue 為單一開發者工具（2026-07-30），尚無社群採用回饋；Pilot Shell／EvanFlow 為既有工具的既定設計，非針對本問題的新實測。
 

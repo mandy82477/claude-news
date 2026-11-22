@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-08-26
 **最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-20
+**最後新聞更新：** 2026-11-22
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：定價改版、企業採用等 16 條線 25 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
 > ⚠️ **教學型事件研究，非投資建議**
@@ -581,10 +581,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 已查證（2026-11-14，[Claude 定價文件](https://platform.claude.com/docs/en/about-claude/pricing)、[Haiku 5.5 公告](https://www.anthropic.com/news/claude-haiku-5-5)）｜**Managed Agents 毫秒計費、Haiku 5.5 分級計價與美國資料落地加成的費率**：官方文件均已載明費率，淨毛利效果官方未說明。
   - Managed Agents 另收 session 運行時間 $0.08／session-hour，只在 running 狀態計、精度到毫秒（idle 不計，取代 code execution 容器小時計費）；token 照模型牌價。
   - inference_geo 設 "us" 套 1.1 倍乘數（Managed Agents 釘 us 時 token 同樣 1.1 倍）；Haiku 5.5 提示 100K token 內 $0.10／$0.50、超過 $0.50／$2.50（每百萬 token 輸入／輸出），官方稱比 Haiku 4.5 平均便宜約 75%。
-- 🔎 **查無官方**（標 2026-10-24｜查 Schwab、小型顧問｜複 2026-11-22）｜**Schwab 追加 20 席門檻的理由與生效時間是否經官方說明**：RIABiz 報導僅標題可用，門檻生效時間、是否分階段放寬、Orion 是否跟進均未見報導。
+- 🔎 **查無官方**（標 2026-10-24｜查 Schwab、小型顧問｜複 2026-12-22）｜**Anthropic 是否降低企業方案 20 席下限、Schwab 額度 11-30 到期後如何安排是否經官方說明**：RIABiz 報導僅標題可用；Anthropic 官方站無相關貼文（2026-11-22 查）。
   - 2026-11-08 查證（[InvestmentNews](https://www.investmentnews.com/transformation/schwab-offers-4800-credit-to-cover-claude-enterprise-seat-cost-for-rias/268779)）：**更正前提——20 席是 Anthropic 企業方案的最低席位，不是 Schwab 追加的門檻**。
     - Schwab 的角色是提供 4,800 美元額度（等於 20 席一年 $20／席／月），僅限新簽企業方案者，11 月 30 日止（原文 available through Nov. 30）；token 用量費另計。
     - 約 1.1 萬家、佔近 1.7 萬家 RIA 的小型事務所常不足 20 位顧問。生效日期、降席位計畫、Orion 是否跟進：報導均未載。
+    - 2026-11-22 查證（InvestmentNews 10-28）：Schwab AI 主管 Alison Dooher 稱企業方案的合規與安全功能對顧問較合適；Anthropic 未就 20 席下限發官方說明。
+    - 媒體稱（聚合媒體 aichatdaily 轉述，原文未取得）：Anthropic 人員一說無意取消 20 席下限、另一說正研究降低，口徑互相矛盾。
 - 🔎 **查無官方**（標 2026-10-17｜查 Replit、終止合作｜複 2026-11-30）｜**Replit 終止合作的說法有爭議，Anthropic 與 Replit 皆無正式聲明**：
   - [TechCrunch](https://techcrunch.com/2026/10/20/replit-is-no-longer-working-with-anthropic-ceo-says/) 載 Replit 執行長 Masad 在 Disrupt 稱已不再與 Anthropic 合作（理由成本、合作與效能，偏好 OpenAI），但知情人士稱合作仍在，Replit 模型選單仍列 Claude；Anthropic 官方站無回應（2026-10-31 查）。只能當「執行長單方說法」。
 - 🔎 **查無官方**（標 2026-10-16｜查 Accenture、支出上限｜複 2026-11-30）｜**Accenture $29 月上限屬媒體報導，Accenture 與 Anthropic 皆無官方說明**：404 Media 看過內部公告（The Next Web 轉述）：

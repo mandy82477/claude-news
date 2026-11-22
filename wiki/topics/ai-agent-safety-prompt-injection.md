@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-07
 **最後更新：** 2026-11-20
-**最後新聞更新：** 2026-11-20
+**最後新聞更新：** 2026-11-22
 **蒐集邊界：** 以 Claude 與 Claude Code 讀進外部內容被塞指令的事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的注入事件只在補上新載體或新防法時收，其餘會漏。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-11-14：該拆，切出「他家 agent 事件與業界論述／防護指南」子頁（技術彙整約 230 行加對應時序與「產業級攻擊面」表約 20 行）；母頁留 Claude 系注入事件約 150 行、自我複製節約 90 行、摘要結論、時序約 130 行，須再去重時序才進 300 行以內；落選：另切自我複製（約 90 行，低於 150 太薄）。雲端不拆，交本機頁面健檢波。 %%
@@ -204,7 +204,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有敘事的關係**：延續「## 提示注入已不是單點漏洞，是產業級攻擊面」既有收斂觀察——可信輸入邊界已依序擴至 `.git` 設定檔（09-02）、`llms.txt`（08-29）；本則若屬實，規則檔會是再一個被濫用的可信輸入類型，惟僅標題可用，訊號強度不足以更動該表（已滿 8 列）
 - 🔎 **查無官方**（標 2026-11-02｜查 Homeland411、malicious rules｜複 2026-12-21）｜**規則檔類型、受影響產品與是否涉及 Claude Code**：2026-11-21 搜尋找不到 Homeland411 該文，亦無官方回應。
   - 同主題既有公開研究：Pillar Security「Rules File Backdoor」（2025-03，以零寬字元與雙向文字標記在規則檔藏指令，示範對象 GitHub Copilot 與 Cursor）。
-  - 學術論文〈Your AI, My Shell〉（arXiv 2509.22040）稱廠商已承認類似漏洞，含 Claude Code CVE-2025-65099；Homeland411 是否即指此類，未證實。
+  - 學術論文〈Your AI, My Shell〉（arXiv 2509.22040）稱廠商已承認類似漏洞，含 Claude Code CVE-2025-65099；Homeland411 是否即指此類，查無佐證。
 - **可信度評估**：單一來源（Homeland411），互動未載，原文層級未知，訊號強度低
 %% 本則為「AI coding 工具安全」定向抓取補收，與本頁一般的 Claude/Anthropic 關聯門檻判準不同 %%
 
@@ -249,11 +249,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### Microsoft 官方警告：AI agent 可能透過 prompt injection 遭挾持（2026-10-20 新增，跨類別，非 Claude 專屬）
 
 - **揭露來源**：Google News／GBHackers News（2026-10-20 05:54 UTC，互動 0；提示注入定向補抓，只有摘要，原文經轉址無法讀取全文，僅標題可用）
-- **核心主張（僅標題可用）**：Microsoft 官方警告 AI agent 可能遭 prompt injection 挾持；具體受影響產品範圍、攻擊鏈細節與緩解建議均未見報導
+- **核心主張（2026-11-22 對照官方一手）**：Microsoft 官方警告 AI agent 可能遭 prompt injection 挾持，屬原則性警告，未點名特定產品或攻擊鏈；緩解建議見下方官方查證條目
 - **與既有敘事的關係**：延續「## 提示注入已不是單點漏洞，是產業級攻擊面」既有收斂敘事，本則為另一家大廠（非 Anthropic）官方層級對同一攻擊面的警告；該訊號表已滿 8 列，本輪未列入
 - **收錄說明**：跨廠商提示注入案例，不套用一般 Claude／Anthropic 關聯門檻
-- 🔎 **查無官方**（標 2026-10-20｜查 Microsoft、prompt injection、hijack｜複 2026-11-22）｜**Microsoft 警告內容**：2026-11-08 搜尋未找到 2026-10-20 前後的對應 Microsoft 官方警告或 GBHackers 原文。
-  - 搜到的 Microsoft 同類警告皆早於本則（AutoJack 2026-06、投毒 MCP 工具描述 2026-06-30、Semantic Kernel 2026-05），不能認定為同一則；產品範圍、攻擊鏈、緩解建議仍未見
+- **Microsoft 警告內容（2026-11-22 查實官方一手）**：對應 Microsoft Security Blog〈[Agents are your newest insiders. Security must move at their speed.](https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/)〉（Nadim Abdo，2026-10-19）。
+  - agent 會隨上下文或輸入改變行為：費用 agent 讀到外部文件的提示注入，設定未變、風險已變，故應假設其可能失效並持續監看
+  - 緩解建議：盤點所有 agent（含本機）並給獨立身分、沙箱化執行環境、仲介工具／API／MCP 呼叫、預設零權限且限時、依風險分級回應（先擋寫入，高風險才隔離或停止）、以模型之外的控制執行安全；先前 Microsoft 同類警告（AutoJack 2026-06、投毒 MCP 工具描述 2026-06-30、Semantic Kernel 2026-05）屬不同則
 - **可信度評估**：具名官方廠商警告，但經 Google News 聚合層級轉載，原文未可讀，僅標題可用，互動 0
 
 #### 《AI Agent Prompt Injection: What the Evidence Actually Shows》彙整提示注入實證研究現況（2026-10-17 新增，教育/論述層訊號）

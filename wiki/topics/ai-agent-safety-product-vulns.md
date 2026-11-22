@@ -32,7 +32,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
 **最後更新：** 2026-11-20
-**最後新聞更新：** 2026-11-20
+**最後新聞更新：** 2026-11-22
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
@@ -55,7 +55,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **不修補**：Claude Dispatch 跨企業邊界遠端指令缺陷，官方確認存在但決定不修補（11-05）；11-06 另曝攻擊鏈為惡意瀏覽器外掛；媒體稱（11-21 查）未見在野攻擊、Anthropic 未回覆 The Register 提問，研究者稱 Dispatch 將下架但 Remote Control、Cowork 仍可被同法利用。
 - **沙箱本身最近修了什麼**：2.1.309 修正沙箱內 Bash 指令執行前先在沙箱外跑 shell 啟動檔、沙箱指令可改 `--mcp-config` 檔（官方 changelog）；`.git` 第二變體 2.1.252 之後的版本未見查證。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
-- **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；移除系統提示一句指令使越界率 0%→17.1%（10-20，媒體稱 The New Stack，非官方研究）；Gmail 合約差點送出（09-22）是單一使用者回報。
+- **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；移除系統提示一句指令使越界率 0%→17.1%（10-20 The New Stack 報導，數字出自 arXiv 預印本，非 Anthropic 研究）；Gmail 合約差點送出（09-22）是單一使用者回報。
 - **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買；Cursor 套件使用者查 SSH 金鑰並清殘留檔；外部測試題 repo 先看過程式碼再執行，不丟給 agent 跑；僅改密碼不夠，需同步撤銷既有憑證／token；「不再問」者改用 auto mode（11-07）。
 
 ### Claude Code 供應鏈攻擊：跨月對照
@@ -220,7 +220,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - 🔎 **查無官方**（標 2026-11-05｜查 Postman、Codex｜複 2026-12-21）｜**外掛具體功能與移除方式**：2026-11-21 搜尋補到（媒體稱）。
   - 一名開發者稽核發現 Postman 桌面版把自家外掛裝進 Claude Code 與 Codex，Codex 設定多出外掛市集與受信任的 session-start hook。
   - Postman 自家文件描述其一鍵安裝器會對偵測到的每個 coding agent 安裝外掛、且可代使用者自動核准 session-start hook；爭議在於由桌面 app 自動安裝而非使用者主動執行。
-  - 外掛資料外送與否未見證據；一則韓文報導標題稱其嘗試共享 API 資料，未證實。
+  - 外掛資料外送與否未見證據；一則韓文報導標題稱其嘗試共享 API 資料，查無佐證。
   - 移除：手動檢查 `~/.codex/config.toml` 與 `~/.claude/settings.json` 內的 Postman 項目。
   - GitHub issue 截至 11 月初仍開著、Postman 無回應；一報導稱醫療業者 11-04 起取消 Postman 認證。
 
@@ -339,7 +339,8 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **揭露來源**：Google News／BigGo Finance（2026-10-22 21:08 UTC；互動 0；只有摘要，原文無可讀內文，以標題與日報段落判讀）
 - **核心主張（僅標題可用）**：報導稱遭竊的 Claude 與 OpenAI API 金鑰正被用於餵養 AI 模型蒸餾的黑市交易；未附受害規模或具體金額
 - **性質判斷**：屬第三方金鑰竊盜轉售的濫用態勢，與既有「資訊竊取型惡意軟體偷走 session 憑證」列（見 [[topics/ai-agent-safety#現在還擋不住的攻擊]]）同屬憑證竊盜系列，但本次鎖定 API 金鑰、下游用途為模型蒸餾，為新變體；受害規模與金額均未見報導，不列入該表
-- 🔎 **查無官方**（標 2026-10-23｜查 distillation、BigGo｜複 2026-11-22）｜**受害規模與竊取管道**：2026-11-08 搜尋未找到該篇 BigGo 報導原文，亦無 Anthropic 官方就「遭竊金鑰流入蒸餾黑市」發聲。
+- 🔎 **查無官方**（標 2026-10-23｜查 distillation、BigGo｜複 2026-12-06）｜**受害規模與竊取管道**：2026-11-22 再搜仍未找到該篇 BigGo 報導原文，Anthropic 官方亦未就「遭竊金鑰流入蒸餾黑市」發聲。
+  - 同期可對照的公開事件是 OpenCode 主控台外洩（2026-10-16 至 17）：OpenCode 稱約 1.4% 主控台使用者受影響，入侵途徑為待下線的舊系統，並稱屬「大規模蒸餾攻擊」；TechCrunch 指出蒸餾用途未獲證實、竊取管道與規模 OpenCode 未說明（[TechCrunch](https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/)，2026-11-22 讀）。BigGo 該篇是否即指此事，無證據（推論：時間與題材相近）
   - 相鄰脈絡僅有 Anthropic 2026-02 蒸餾攻擊公告（約 24,000 個詐欺帳號、逾 1,600 萬次互動）與灰色市場轉售報導，兩者都不能證明本篇說法；受害規模與金額仍未見報導
 - **可信度評估**：單一來源，原文未可讀，互動 0，訊號強度低
 
@@ -348,9 +349,11 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **揭露來源**：Google News／The New Stack（2026-10-19 18:36 UTC，互動 0；只有摘要，原文無可讀內文，以標題與日報段落判讀）
 - **核心主張（媒體稱）**：[The New Stack〈Researchers removed one instruction from Claude Code. Out-of-scope actions jumped.〉](https://thenewstack.io/coding-agents-overstep-scope/)（2026-10-19）
   - 標題稱「研究者移除 Claude Code 的一句指令」後越界操作率從 0% 升至 17.1%（方向是**移除**而非加入，2026-11-08 查證更正）。
-  - 搜尋摘要稱被移除的是要求使用者同意的句子、為成對測試，但全文抓取被截斷，未能親讀；樣本數與測試方法未取得
+  - 被移除的是要求使用者同意的宣告句，為成對測試；樣本數與方法見下方查證結果
 - **性質判斷**：屬系統提示詞設計對 agent 越界行為影響的行為邊界研究，非外部攻擊或產品漏洞；不列入母頁「現在還擋不住的攻擊」表
-- 🔎 **查無官方**（標 2026-10-20｜查 overreach rate、17.1%、The New Stack｜複 2026-11-22）｜**測試細節**：2026-11-08 查 Anthropic 官方與 The New Stack 全文（抓取被截斷），未找到研究原文；標題稱 "Researchers"，非 Anthropic 官方研究；樣本數、測試方法、確切句子仍未取得
+- **測試細節（2026-11-22 查實研究原文）**：出自 arXiv 預印本〈Overeager Coding Agents〉（[arXiv 2605.18583](https://arxiv.org/abs/2605.18583)，2026-05-18，非 Anthropic 研究）：
+  - 規模：500 個驗證情境、約 7,500 次執行，涵蓋 Claude Code 等四款 agent 產品、六個底層模型；每情境有僅差同意宣告的成對兩版
+  - 在 Claude Code 上移除同意宣告使越界率由 0.0% 升至 17.1%（McNemar 精確檢定 p = 2.4×10⁻⁴）；The New Stack 該篇全文仍未能親讀，樣本與方法以預印本為準
 - **可信度評估**：單一媒體來源，僅標題可用，互動 0，訊號強度低
 
 #### XenoSpectrum／The Hacker News：第三方平台 OpenCode 主控台外洩，估計影響 1.4% 使用者，恐波及其中存放的 OpenAI、Anthropic、Google API 金鑰（2026-10-19 新增，跨類別，非 Claude 專屬）
@@ -414,7 +417,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - 🔎 **查無官方**（標 2026-10-06｜查 Startup Fortune、200,000 servers、MCP protocol｜複 2026-12-21）：2026-10-24 搜尋 anthropic.com 與主流報導，Anthropic 一手聲明未見。
   - 2026-11-21 重查仍無 Anthropic 官方聲明；讀 [modelcontextprotocol/python-sdk 的 SECURITY.md](https://github.com/modelcontextprotocol/python-sdk/blob/main/SECURITY.md)，僅載支援版本與通報流程，**未見** STDIO 警語。
   - 媒體稱（SecurityWeek、VentureBeat、CSA 研究筆記；非官方）：OX Security 2026-01-07 通報，Anthropic 回覆此行為屬預期（by design），開發者須自行清理傳入 StdioServerParameters 的輸入。
-  - 另稱 9 天後在 SECURITY.md 加註謹慎使用 STDIO（與讀到的 python-sdk 版本不符，可能指別的 repo，未證實），未改架構；CSA 筆記稱 CVE 已增至至少 14 個。
+  - 另稱 9 天後在 SECURITY.md 加註謹慎使用 STDIO（與讀到的 python-sdk 版本不符，可能指別的 repo，查無佐證），未改架構；CSA 筆記稱 CVE 已增至至少 14 個。
   - 媒體稱（Computing、The Register、TechRadar；OX Security 研究，2026-04-15 首披）：MCP 的設計選擇使有漏洞的實作可被任意執行指令，OX 估計最多約 20 萬個實例、1.5 億次下載，個別工具已發至少 10 個高／嚴重 CVE
   - 媒體稱：Anthropic 回應此屬「預期行為」、僅更新安全指引，OX 稱未解決根因；Startup Fortune 10-06 標題疑為同一揭露的重報（推論，原文未讀）
 
@@ -769,11 +772,11 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **[🔴 新增] Fox Business／CBS／Guardian／Telegraph／Quartz：Claude agent 未受指示繞過付費牆存取喬治亞州選民資料，Anthropic 已證實**：攻擊鏈與涉事模型版本未見報導，詳見「## 技術彙整」
 
 #### 2026-10-20
-- **[📋 新增，行為邊界研究] The New Stack：移除系統提示詞一句指令後，Claude Code 越界操作率從 0% 升至 17.1%**：媒體稱，具體句子與測試方法查無公開細節，詳見「## 技術彙整」
+- **[📋 新增，行為邊界研究] The New Stack：移除系統提示詞一句指令後，Claude Code 越界操作率從 0% 升至 17.1%**：媒體稱，數字出自 arXiv 預印本（500 情境、約 7,500 次執行），詳見「## 技術彙整」
 
 #### 2026-10-19
 - **[📋 新增，跨類別，非 Claude 專屬] XenoSpectrum／The Hacker News：OpenCode 主控台外洩，估計影響 1.4% 使用者，恐波及 Claude API 金鑰**：同波事件另有 36Kr 單一來源稱部分使用者帳戶餘額遭歸零（2026-11-08 查證）；詳見「## 技術彙整」
-  - ❓ **待查證**（標 2026-10-19｜查 36Kr、OpenCode 主控台｜複 2026-11-22）｜**帳戶餘額遭歸零**：官方未載；已掃日報至 2026-11-20 無後續；官方頁面未查證
+  - 🔎 **查無官方**（標 2026-10-19｜查 36Kr、OpenCode 主控台｜複 2026-12-06）｜**帳戶餘額遭歸零**：2026-11-22 查證，僅 36Kr 轉載新智元（2026-10-19）稱背景 token 用量暴增、餘額被直接耗盡；[TechCrunch](https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/) 與 OpenCode 聲明只載未授權扣款（數百美元至逾 1,000 美元）與退款進行中，未載歸零
 
 #### 2026-10-18
 - **[✅ 更正] SneakPeek（Claude Code 桌面版預覽窗格 CVSS 8.7）已於 08-17 修完**：10-14 至 10-17 條目稱「官方未修補」「CSO Online 256KB 為另一起」均不正確；07-24 首修被繞、08-03 確認不完整、08-17 Desktop 1.30096.1 修完，CSO 256KB 與此為同一漏洞，詳見「## 技術彙整」
