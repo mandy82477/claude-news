@@ -330,8 +330,18 @@
       "pageType": "topic"
     },
     {
+      "id": "claude-research-results",
+      "name": "Claude 原創科研成果與驗證狀態",
+      "pageType": "topic"
+    },
+    {
       "id": "coding-workflow-guide",
       "name": "程式開發實戰手冊",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-creative-tools",
+      "name": "社群做法：讓 agent 操作影片、3D、遊戲引擎等創作工具",
       "pageType": "topic"
     },
     {

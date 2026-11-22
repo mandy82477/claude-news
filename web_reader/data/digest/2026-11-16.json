@@ -126,6 +126,10 @@
         {
           "id": "claude-code-known-issues",
           "pageType": "entity"
+        },
+        {
+          "id": "claude-meetings",
+          "pageType": "entity"
         }
       ]
     }
@@ -398,6 +402,11 @@
   ],
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：新增已知問題：既有有效訂閱帳號登入 claude.ai 被導回 onboarding 迴圈（#36797）；Anthropic Status 新增 Claude Meetings（beta）Auto-join 持續暫停、Claude Sonnet 5.5／Fab",
   "sedimentedToday": [
+    {
+      "id": "claude-meetings",
+      "name": "Claude Meetings",
+      "pageType": "entity"
+    },
     {
       "id": "claude-tag",
       "name": "Claude Tag",
