@@ -32,11 +32,11 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-19
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-19）
+> **最新計費政策異動**（2026-11-22）
 > - **官方定價文件新增 Managed Agents 計費依據與各平台乘數規則細項**，並移除舊版 Google Cloud 定價與每千次搜尋 $10 的 web search 定價行（細節見下方「當前生效的計費規則」；移除後的替代寫法尚未核對）
 > - **Max 方案 1M context 誤判需加購**：GitHub Issue #45390 回報，選用 Opus 4.6（1M context）即使用量遠低於需要加購的量仍顯示「Extra usage required」，官方尚無回應，詳見 [[entities/pricing-incidents]]
 > - **Linked Billing 公開測試上線**：第三方平台可把自己的計費系統接上 Claude API 用量帳務，Python／TypeScript SDK 同日新增 `billing_policy` 參數與對應錯誤碼；Railway、Harness（Cosmos）同日宣布已支援
@@ -57,7 +57,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[entities/pricing-incidents]] | 帳單出錯、額度掉得快：官方認了沒、現在還在不在、你能先做什麼 | 2026-11-02 |
+| [[entities/pricing-incidents]] | 帳單出錯、額度掉得快：官方認了沒、現在還在不在、你能先做什麼 | 2026-11-22 |
 | [[entities/pricing-history]] | 價格、方案與促銷什麼時候變的，最近三個月改了什麼 | 2026-11-12 |
 
 2026-04～06 的原始條目與已暫停的計費切割風波在 [[entities/pricing-archive]]。

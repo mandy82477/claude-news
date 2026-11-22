@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **開始日期：** 2026-04
 **最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-20
+**最後新聞更新：** 2026-11-22
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-20）
+> **本週衝擊**（2026-11-22）
 > - 🔴 **Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%**（ZDNET／GeekWire／Kingy AI 轉述）——目前只有廠商數字與媒體轉述，沒有官方牌價或第三方跑分，先別照這個比例重算預算。
 > - 🔴 **Gemini 4 Neon 發布，DeepMind 稱程式撰寫能力追平 Opus 5.5，OODA Loop 稱 API 價比 Opus 5.5 低 25%**——成本與能力宣稱同時出現，在意兩者的人都該重新比價，但基準與第三方跑分未查證。
 > - 🟡 **GPT-6.2 Astra 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項**（BigGo Finance 轉述）——多工向任務先別急著換，但成本敏感的人有理由找機會實測對照。
@@ -136,6 +136,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **久未更新（2026-10-13，表滿 12 列換手，讓位給 Gemini 4 Argon、Muse Wonder Full）**：Antigravity（Google）Free／Pro ~$20／Ultra ~$100／Ultra Max $200，依附 Google AI 訂閱框架（2026-07-23，2026-08-13 查證）。
 - **久未更新（2026-11-18，表滿 12 列換手，讓位給 MAI Code 2、GPT-6.2 Astra）**：GPT-5.6（OpenAI，07-30 查證，已被 GPT-6.2 世代取代）、Kiro（AWS，08-13 查證）、OpenCode（08-01，完整脈絡見 [[entities/opencode]]）。
 - Cline 免費工具、token 費用另計，介於 Claude Code 與 Copilot 間的免費替代（2026-07-22，Google News/tech-insider.org）。兩者均訂閱制／免費工具，不可按 token 換算 vs Claude。
+- ❓ **待查證**（標 2026-11-22｜查 Cline、9.99｜複 2026-12-06）｜**Cline 疑似新增 $9.99／月付費層**：shattered.io 稱 Cline $9.99／月、Claude Code $20／月，與 09-20 已查證官方 FAQ（免費＋token 費）矛盾，新方案未見官方頁（僅標題，2 來源）
 - **pi-coding-agent**：低成本編碼 agent 的成本數字已升格為「硬答案」條目（Databricks，2026-08-13 查證）。
 - **GLM-5.2 外部榜單佐證**：FrontierSWE 74.4 vs Opus 4.8 75.1、Terminal-Bench 2.1 81.0、SWE-bench Pro 62.1；單一外部來源、非日報進料，使用者 2026-07-17 手動查證，詳見 [[log]] 該日 Query 條目。
 
@@ -270,6 +271,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-22
+- **OpenAI（分析文，非編碼工具）**：官方部落格文章〈Perplexity and Intelligence〉探討以 perplexity 指標衡量模型進展、能否成為業界共通評測基準；非產品或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-11-20
 - **未具名競爭對手**：TechCrunch 報導一家 Anthropic 競爭對手主張多數企業其實不需要用最貴的旗艦模型即可滿足需求；標題未點名該對手，具體論據與數字未見報導，僅標題可用（Google News/TechCrunch）

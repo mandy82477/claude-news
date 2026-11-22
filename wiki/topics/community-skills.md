@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
 **最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-21
+**最後新聞更新：** 2026-11-22
 
-> **Skills 設計新增抓漏合集與內容再製自驗收 Skill**（2026-11-21）
-> - **Claude-BugHunter**：抓漏與紅隊用 skill 合集，82 個 skill、15 個斜線指令，含 681 個已揭露報告範式。
-> - **article2media**：文章／影片一鍵轉社群圖文與配音短影音，21 套主題，產出前自動驗收。
+> **可靠性測試新增規則優先序實測與效能熱點驗證案例**（2026-11-22）
+> - **fast-anything**：agent 搬效能熱點到 Rust 前，重放真實呼叫＋生成邊界案例證明行為一致後才啟用。
+> - **「Skill 蓋過 CLAUDE.md」實測**：真實 `claude -p` 對照實驗顯示未叫用的 Skill 仍蓋過 CLAUDE.md／AGENTS.md。
 ---
 
 ## 摘要
@@ -96,6 +96,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### EL4CTEO/fast-anything：驗證式把程式碼效能熱點搬成 Rust，agent 動手寫、工具重放真實呼叫證明結果一致才啟用（2026-11-22）
+
+- **主線：** —
+- **核心模式：** `fast-anything go --agent claude -- <跑程式>` 一條指令跑完迴圈：側寫找出耗時函式，讓 agent 把它搬成 Rust crate，重放最多 500 筆真實呼叫＋生成邊界案例，數值與錯誤對得上才啟用該版本。
+- **與既有模式的關係：** 補上「可靠性測試」一個「啟用前先重放真實呼叫＋生成邊界案例證明行為一致」取向——既有代表技巧測的是測試本身的失敗原因，本則測的是 agent 改寫的程式碼是否真的行為等價，也呼應「規格驅動開發」（先產出一份 TASK.md 規格再讓 agent 實作）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Hacker News 136 分＋GitHub Search，共 2 來源，非單憑星數；`git clone` 查核 CHANGELOG 列 0.6.1–0.7.0 多版演進、多位具名外部貢獻者與對應 issue，非單日灌水；14×–116× 加速數字為作者自測，非本站複現。
+- **來源：** Hacker News ＋HN Repo Bridge；[GitHub](https://github.com/EL4CTEO/fast-anything)
+- **成熟度：** ⚡ 活躍（多版本演進、有外部貢獻者與對應 issue，惟加速數字僅作者單方量測）
+
+#### enjoy_kumawat：用真實 `claude -p` 跑對照實驗，證明一個沒被叫到的 Skill 仍蓋過 CLAUDE.md 與 AGENTS.md 的指示（2026-11-21）
+
+- **主線：** —
+- **核心模式：** 作者在獨立於真實專案的拋棄式 fixture 裡，同時放 AGENTS.md、CLAUDE.md 與一個 Skill 三份互相衝突的指示，用真實 headless `claude -p` 跑一系列對照實驗；結果顯示即使沒有明確叫用該 Skill，它仍蓋過 CLAUDE.md 與 AGENTS.md 的指示——不是憑印象猜測，是跑出來的對照結果。
+- **與既有模式的關係：** 補上「可靠性測試」一個「規則優先序實測」取向——既有代表技巧（canary 證據鏈、requirement failure／test coupling 判讀框架）測的是程式碼或測試本身對不對，本則測的是 agent 到底聽哪一份指示，也呼應「CLAUDE.md 管理」；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** dev.to 僅 4 讚，依本類別「內容判斷、不看讚數」規則收錄——內容為可複現的第一手對照實驗（拋棄式 fixture＋真實 `claude -p` 呼叫），非 SEO 彙整文；具體觸發路徑與 Skill 內容細節未見完整引述（細節未載）。
+- **來源：** dev.to／#claudecode；[原文](https://dev.to/enjoy_kumawat/a-skill-i-never-invoked-overruled-my-claudemd-anyway-144c)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者實驗，未見第三方複現）
 
 #### elementalsouls/Claude-BugHunter：抓漏與紅隊用 Claude Code skill 合集，82 個 skill、15 個斜線指令，含 681 個已揭露報告範式（2026-11-21）
 

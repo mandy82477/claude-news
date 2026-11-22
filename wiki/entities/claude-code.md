@@ -32,13 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-22
+**最後新聞更新：** 2026-11-22
 
-> **最新動態**（2026-11-21）
-> - **版本**：v2.1.330 新增登入 Enterprise Admin Console 管理組織支援，見 [[entities/claude-code-releases]]。
-> - **互動數更新**：Cowork 工作區啟動失敗「VM service not running」（#27801，73 則留言、42 讚），見 [[entities/claude-code-known-issues]]。
-> - **文件**：桌面版新增 Code tab Computer use 方案限制、Dispatch 不再開放新使用者，見 [[entities/claude-code-features]]。
+> **最新動態**（2026-11-22）
+> - **已知問題**：新增 Windows MSIX 更新失敗、Chrome 側邊面板異常等回報，互動數同步更新，見 [[entities/claude-code-known-issues|已知問題]]。
 
 ---
 
@@ -48,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（十組逐條） | [[entities/claude-code-known-issues]] | 2026-11-21 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（十一組逐條） | [[entities/claude-code-known-issues]] | 2026-11-22 |
 | 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-21 |
 | hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-21 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |

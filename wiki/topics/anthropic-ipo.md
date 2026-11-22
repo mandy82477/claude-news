@@ -31,11 +31,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-22
+**最後新聞更新：** 2026-11-22
 
-> **最新動態**（2026-11-21）
-> - **上市後賣壓擴大為全 AI 板塊性賣壓，市值蒸發達 $4 兆，Nvidia 同步重挫；承銷商曾平倉避險倉位穩定 ANT 股價**（WSJ／Axios／Reuters）
+> **最新動態**（2026-11-22）
+> - **創辦人持股加總價值約 $1,410 億美元**（Business Insider 推算，較 11-20 官方掛牌結算數字更進一步的個人財富細節）
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -195,6 +195,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 
 | 訊號 | 說明 | 來源 | 來源等級 |
 |------|------|------|------|
+| 七位共同創辦人持股加總價值約 $1,410 億美元 | 較 11-20 官方掛牌結算數字更進一步的個人財富細節；Times of India 另估算這波上市可能讓數千名員工成為百萬富翁 | Google News/Business Insider，2026-11-22 | 一級媒體（推算） |
 | Futurism：獲利宣稱「未計入模型開發成本」 | 評論文章，與 09-14 已記錄之 HN 討論同一批評角度，非新增數字 | Google News/Futurism，2026-09-15 | 一級媒體 |
 | CNBC：Anthropic 超越 OpenAI 成最熱門 AI 新創 | 分析相應股市贏家輸家；與同日 The Information 報導方向一致 | Google News/CNBC，2026-08-19 | 一級媒體 |
 | The Information：Anthropic 營收領先幅度仍在擴大 | OpenAI 安全政策面追上，但營收差距持續擴大 | Google News/The Information，2026-08-19 | 一級媒體 |
@@ -210,6 +211,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 %% 維運備忘：累積封頂 20 列，滿了汰除來源日期最舊者，被汰者留在細節區；已在「現在的數字」表有列的指標本表不重複寫數值，只留來源與等級（訂閱補貼倍數列已改）。 %%
 
 **這些數字是誰說的·細節**
+- **創辦人持股加總價值約 $1,410 億美元**：Business Insider 報導 Anthropic 七位共同創辦人持股加總市值約 1,410 億美元；Times of India 另估算這波 IPO 可能讓數千名員工成為百萬富翁；兩者均為第三方依掛牌股價推算的財富快照，非官方揭露數字，持股結構與既得兌現時程未見報導。
 - **CNBC：超越 OpenAI 成最熱門新創**：CNBC 報導稱 Anthropic 商業地位已超越 OpenAI，市場視其為當前最熱門的 AI 新創企業，並分析此趨勢下的股票市場贏家與輸家；與同日 The Information「Anthropic 營收領先幅度擴大」報導方向一致，共同延續本頁既有「業績優於 OpenAI」敘事，僅標題層級可用，具體股票標的、漲跌幅未見報導（推論）。
 - **The Information：營收領先幅度擴大**：報導稱 OpenAI 安全政策面正追上 Anthropic（安全政策面另見 [[topics/ai-agent-safety]]），本頁僅記錄「Anthropic 營收領先幅度仍在擴大」的商業面訊號；與同日 CNBC、既有 08-19「OpenAI 第二季業績落後 Anthropic」多來源報導方向一致，屬同一敘事的持續延伸，非新增獨立事件；僅標題層級可用，具體營收領先倍數或金額未見報導（推論）。
 - **OpenAI Q2 業績落後 Anthropic**：WSJ（經 Hacker News 分享，18 分，另有一家媒體同步報導）報導 OpenAI 第二季營收成長遲緩，不如 Anthropic；HN 討論串留言稱「多數認識的開發者已改用 GPT-5.6」（單一留言，非量化調查，僅供參考）。CoinDesk、SiliconANGLE 同角度報導 OpenAI 虧損持續擴大，且 Altman 據稱暫停前沿 AI 訓練。呼應本頁 08-17/18 的 ARR 站上 $650 億美元、Vercel token 營收份額最高等既有訊號，共同構成「Anthropic 業績優於 OpenAI」的敘事（推論）。**⚠️ 相反訊號，不擇一呈現**：The Information 同期報導稱 OpenAI 在 OpenRouter 平台的客戶占比正在回升，方向與上述「落後」敘事相反，可能反映不同衡量指標（整體財報成長率 vs 特定平台客戶占比）各自成立、非互斥。四則均僅標題／HN 留言層級可用，具體營收數字、虧損金額、訓練暫停細節與 OpenRouter 占比數字均未見報導。
@@ -384,6 +386,11 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-22
+- **[IPO前瞻，僅標題可用] WSJ／NPR：IPO 落幕後的事後展望評論**：WSJ 探討 Anthropic 完成史上最大 IPO 後接下來面對的課題；NPR 同日回顧此次 IPO 對公司與整體 AI 產業的影響；兩篇均未提出新財務數字（Google News/WSJ；Google News/NPR）
+- **[IPO前瞻，僅標題可用] Fox Business：科技業 CEO 稱 IPO 象徵中小企業導入 AI 工具「淘金熱」才剛開始**：具體產業數據與論據未見報導（Google News/Fox Business）
+- **[IPO前瞻，僅標題可用] TribLIVE：依賴 Anthropic 捐助的非營利組織為潛在慈善資金挹注籌備擴大規模**：具體金額與承諾時程未見報導（Google News/TribLIVE.com）
 
 #### 2026-11-15
 - **[公司治理] Bloomberg：Madonna 經紀人經營之創投公司持 Anthropic 股權達 $70 億**：標題未附持股比例或入股時間（Google News/Bloomberg.com）

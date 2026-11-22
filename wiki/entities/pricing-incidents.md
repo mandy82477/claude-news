@@ -33,11 +33,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-22
+**最後新聞更新：** 2026-11-22
 
-> **最新動態**（2026-11-18）
-> - **新 GitHub Issue #45390：Max 方案啟用 1M context 時被誤判為需要加購用量**，累積 34 則留言、27 個 👍 反應，官方尚無回應。
+> **最新動態**（2026-11-22）
+> - **Notebookcheck 實測第三方服務 Freebuff 宣稱可免費近乎無限使用 Claude Code，檢驗該說法是否站得住腳**（具體手法未見報導）
 
 ---
 
@@ -336,6 +336,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 灰色市場與轉售現象
 
+- Notebookcheck 實測第三方服務 Freebuff，檢驗其宣稱可免費近乎無限使用 Claude Code 的說法是否成立；具體技術手法、是否涉及規避官方限制或分享帳號憑證均未見報導（Google News/Notebookcheck，2026-11-22）。
 - 조선일보報導中國境內存在規避封鎖使用 Claude 的黑市交易，顯示官方封鎖未完全阻絕當地需求，規模與定價未見報導（Google News/조선일보，2026-10-04）；地緣政治執法面見 [[topics/ai-agent-safety]]。（區域存取政策本身的動態見 [[topics/anthropic-government-policy]]「現在有哪幾條線在動」第 1 列）
 - 轉售商以最高 90% 折扣轉賣 Claude／Codex API 存取權，違反 Anthropic 消費者條款（禁止 resell、禁止分享帳號憑證）。
 - 灰市管道「Poison Claude」已被兩獨立媒體證實會讓中間營運者讀取客戶傳送的全部 prompt——安全事件細節與可信度評估見 [[topics/ai-agent-safety]]。

@@ -32,10 +32,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
 **最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-19
+**最後新聞更新：** 2026-11-22
 
-> **確定性 Agent 框架新增跨模型紀律移植案例：Gravitas 把 Claude Code 工作流程套用在 Gemini 上**（2026-11-19）
-> Gravitas 強制 Gemini 編輯前先檢視檔案、規劃變更、測試自己的工作，並要求每次「完成」附實際證據；501 星。
+> **Multi-agent 架構新增跨機器協調案例：facadecode 讓多款 agent CLI 跨視窗、跨機器互相操作**（2026-11-22）
+> y5ez3g/facadecode 是 VS Code 內建的多 agent 協調器，可同時跑 Claude Code、Codex 等 CLI 互傳訊息、互相操作；515 星。
 
 ---
 
@@ -139,6 +139,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### y5ez3g/facadecode：VS Code 多 agent 協調工具，跨視窗、跨機器啟動並操作 Claude Code、Codex 等多款 agent CLI（2026-11-22）
+
+- **主線：** 並行規模
+- **核心模式：** VS Code 內建的多 agent 協調器，可同時啟動 Claude Code、Codex 等多款 agent CLI，讓它們互相發訊息、互相操作，協調範圍跨視窗、跨機器；515 星。
+- **與既有模式的關係：** 補上「Multi-agent 架構」一個「協調範圍跨機器」取向——既有代表技巧（ccteams、OtoDock、omnigent 等）多在單機或單伺服器內協調多 agent，本則把協調拉到跨機器層級；多 agent 協作工具即使不限 monorepo 也先天撞並行規模這面牆，主線填並行規模。
+- **可信度註記：** 僅 GitHub Search 星數（515★），forks／issues 未查；`git clone` 查核：11 月近乎每日有合併、非單日灌水；作者含真人與其驅動的 Codex agent，無外部多貢獻者佐證。
+- **來源：** GitHub Search；[GitHub](https://github.com/y5ez3g/facadecode)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者專案，commit 活躍但尚無第三方採用或複現數據）
 
 #### udaysharmadev/Gravitas：把 Claude Code 的「讀檔→規劃→測試→拿證據」流程強制套用在 Gemini 上（2026-11-19）
 

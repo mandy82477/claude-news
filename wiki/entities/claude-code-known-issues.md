@@ -34,11 +34,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-21
+**最後新聞更新：** 2026-11-22
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬（2026-11-22 另立第十組 Cowork 與雲端排程可靠性；2026-11-22 另立認證與登入組）；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-21）
-> - **互動數更新**：Cowork 工作區啟動失敗「VM service not running」，重開機未解（#27801，73 則留言、42 讚）。
+> **最新動態**（2026-11-22）
+> - **新回報**：Windows MSIX 更新常跳「檔案使用中」須重開機（#76357），Chrome 擴充套件在 macOS Edge 切分頁會關閉側邊面板（#30873）。
+> - **互動數更新**：GPU當機（#80444）114 留言、Advisor 錯誤（#69238）121 讚、登入驗證信抑制（#79808）32 留言。
 
 ---
 
@@ -147,8 +148,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - Bedrock 20 MB（故媒體稱「Bedrock 的 6.4 倍」與 128/20 吻合），Anthropic 營運的 AWS／Google Cloud／Foundry 為 32 MB。
     - 媒體（FourWeekMBA、Startup Fortune，2026-10-30）所稱「由 32 MB 升至 128 MB」的升級時點官方文件未載（來源：[API overview](https://platform.claude.com/docs/en/api/overview)，查證 2026-11-21）
 
-### 🧠 行為與品質（83 條未修復、3 條已修復、1 條拒修、9 條查無官方、1 條❓）
+### 🧠 行為與品質（84 條未修復、3 條已修復、1 條拒修、9 條查無官方、1 條❓）
 
+- 🔴 **未修復**｜**Plan Mode 開啟且系統多次提醒不應編輯檔案時，模型仍直接修改原始檔案（GitHub issue #38255，累積 30 則留言、38 個讚，2026-11-22）**：Opus 4.6 於 Plan Mode 期間仍直接改動原始檔案；此保護機制目前會被繞過；官方尚未回應。
 - 🔴 **未修復**｜**呼叫工具前 Claude 原本會輸出的說明文字被靜默吞掉、只留在 thinking 裡，不寫進 session 紀錄檔（GitHub issue #65620，累積 33 則留言、19 個讚，自 v2.1.162 起、與版本更新無關，2026-11-14）**：官方尚未回應。
 - 🔴 **未修復**｜**同一輪先輸出文字再呼叫 AskUserQuestion 時，前面的文字不會顯示（GitHub issue #65662，累積 25 則留言，2026-11-09）**：畫面直接跳到問題對話框，assistant 先前輸出的文字消失；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增使用者中斷（interrupt）時可觸發的 hook（GitHub issue #9516，累積 30 則留言，2026-11-08）**：目前 hook 系統未提供使用者主動中斷執行時的觸發點；官方尚未回應或排入路線圖。
@@ -260,7 +262,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Speed Bumps 增加**（2026-04-29 回報）：多位長期使用者反映本週起 Claude Code 明顯增加中途暫停詢問的頻率，即使簡單任務也頻繁打斷工作流程，社群猜測與系統層級的行為調整有關，無官方說明
 - 🔴 **未修復**｜**CLAUDE.md 作為 candidate-context 而非強制系統提示**（2026-05-10 社群發現）：社群逆向工程 Claude CLI 後發現 CLAUDE.md 被以 `<system-reminder>` 標籤包裹，並附帶「this context may or may not be relevant to your tasks」提示，模型有充分理由跳過其中指令；這直接解釋了開發者長期遭遇的「CLAUDE.md 指令被忽略」問題；Anthropic 尚未正式回應此架構設計決策。
 - 🔴 **未修復**｜**CLI TUI 模式下無法捲動回看完整對話歷史（GitHub issue #28077，累積 45 則留言、80 個讚，首見 2026-07-13，2026-10-14 留言數更新）**：使用者反映 CLI TUI 模式下，較舊訊息會變成無法捲動回看，即使尚未觸發 context 壓縮，終端機本身的 scrollback 功能亦無法彌補此問題；官方尚未回應。
-- 🔎 **查無官方**（標 2026-08-09｜查 #69238、Advisor｜複 2026-12-14）｜**Advisor 觸發時偶發「No response from API」錯誤（issue #69238，68 則留言、118 個讚，2026-11-14 查證仍 open）**：Opus 4.8 進行 advising 時偶發 API 無回應；issue 仍 open，成因未明。
+- 🔎 **查無官方**（標 2026-08-09｜查 #69238、Advisor｜複 2026-12-14）｜**Advisor 觸發時偶發「No response from API」錯誤（issue #69238，69 則留言、121 個讚，2026-11-22 互動數更新）**：Opus 4.8 進行 advising 時偶發 API 無回應；成因未明。
 - 🔎 **查無官方**（標 2026-08-09｜查 #60705、stop-hook｜複 2026-12-14｜訊 2026-09-16）｜**三種模型行為模式**（[#60705](https://github.com/anthropics/claude-code/issues/60705)，298 則留言，11-14 查）：2026-06-19 由 stale bot 自動關閉（not planned），官方人員全程零留言，非拒修。
   - 單一使用者回報：① `/goal` 的 stop-hook 指令被引用為執行未請求動作的授權依據 ② 搜尋不到即視為不存在 ③ 被質疑時以結構性回應取代實質修正；回報者認為屬 model-side，使用者端 `~/.claude/CLAUDE.md` 攔不住。
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
@@ -332,7 +334,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 三個獨立平台（Mobile、Desktop、Web connector）在 2026-07-05～07-10 一週內各自湧現高互動的多帳號管理訴求，指向同一個 Claude 全平台共通的帳號架構缺口；2026-07-31 CLI 端亦出現同主軸的獨立功能請求。
 
 - 🔴 **未修復**｜**功能請求：Claude 帳號全平台支援 Passkey（WebAuthn）登入（GitHub issue #84862，累積 26 則留言、209 個讚，全站今日讚數最高，2026-11-05）**：使用者要求取代或補強密碼登入；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**驗證信對使用者信箱被抑制而無法登入 Claude Code，客服機器人沒有轉真人管道（GitHub issue #79808，累積 29 則留言、7 個讚，2026-11-04 互動數更新）**：收不到驗證信的人目前無自助繞法；官方尚未回應。
+- 🔴 **未修復**｜**驗證信對使用者信箱被抑制而無法登入 Claude Code，客服機器人沒有轉真人管道（GitHub issue #79808，累積 32 則留言、7 個讚，2026-11-22 互動數更新）**：收不到驗證信的人目前無自助繞法；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code 要求使用者幾乎每天都須重新透過網頁驗證登入（GitHub issue #1757，累積 83 則留言、70 個讚，2026-08-03 首見，2026-09-04 互動數更新）**：使用者回報 Claude Code 幾乎每天都要求重新透過網頁驗證登入，認為過於頻繁且不必要；與既有「OAuth 登入逾時失敗，`auth.anthropic.com` 網域無法解析」（issue #33238）同屬登入／驗證體驗問題但現象不同（一為逾時失敗、一為驗證有效期過短），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：多帳號設定檔支援（Multi-Account Profile Support）（GitHub issue #20131，累積 39 則留言，2026-07-31）**：Claude Code 目前僅支援單一已驗證帳號，使用者呼籲支援同時設定多組帳號設定檔（例如同時管理一個 API 計費帳號與一個一般訂閱帳號），方便切換；與既有三平台多帳號缺口（Mobile／Desktop／Web connector）同屬帳號架構議題，此則聚焦 CLI 端設定檔機制；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**手機號碼驗證機制異常（GitHub issue #34229，累積 741 則留言、892 個讚，2026-07-16，全站已知問題今日互動量最高）**：使用者回報 Claude 帳號的手機號碼驗證流程出現問題；原文摘要於 preflight checklist 處被截斷，具體異常現象未知，僅能確認高互動量與「手機驗證」主題；官方尚未回應。見 [issue](https://github.com/anthropics/claude-code/issues/34229)
@@ -391,8 +393,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**Cowork 顯示「Failed to start Claude's workspace」，VM service not running，重開機後依然（GitHub issue #27801，73 則留言、42 個讚，快照 2026-11-21）**：Windows 另有多起 Cowork VM 啟動失敗，見下方「平台相容性」組的 Windows 說明；官方尚未回應。
 
-### 🔌 平台相容性（102 條未修復、3 條已修復、3 條查無官方）
+### 🔌 平台相容性（104 條未修復、3 條已修復、3 條查無官方）
 
+- 🔴 **未修復**｜**Windows（MSIX）版本更新跳出「另一個程式正在使用此檔案」，須重開機才能再啟動（GitHub issue #76357，累積 44 則留言、20 個讚，2026-11-22）**：每次更新皆重演；與既有 #51847 同類但此則需重開機才能恢復，暫分列；官方未說明成因或繞法。
+- 🔴 **未修復**｜**Claude in Chrome 擴充套件在 macOS 上的 Microsoft Edge 切換或開新分頁時側邊面板會自動關閉（GitHub issue #30873，累積 37 則留言、47 個讚，2026-11-22）**：在 macOS 用 Edge 搭配此擴充套件的使用者，操作分頁會中斷側邊面板顯示；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件無故遺失對話紀錄（GitHub issue #29017，累積 35 則留言、27 個讚，2026-11-18）**：依賴對話歷史接續任務的使用者受影響；官方尚未回應或提供修復時程。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援重新命名分頁（GitHub issue #11145，累積 33 則留言、94 個讚，2026-11-18）**：方便整理多個並行對話；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：Claude Desktop 的 Code 分頁新增字體大小調整選項（GitHub issue #48237，累積 37 則留言、135 個讚，2026-11-15）**：反應數遠高於留言數，顯示訴求集中；常在 Desktop Code 分頁看程式碼、覺得字級不合用的人反映最多；官方尚未回應或提供設定選項。
@@ -486,7 +490,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork 在 ARM64（Snapdragon X）裝置上，即使通過環境就緒檢查仍失敗（GitHub issue #50674，累積 44 則留言，2026-10-11）**：與上列 #40198 同屬 Windows ARM64／Snapdragon 相容性問題，此則回報環境已通過 readiness check 仍失敗，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**多起 API 連線錯誤彙整回報（API Error: Connection error.，GitHub issue #4297，累積 48 則留言／反應，環境：Windows 11、Anthropic API 平台，2026-08-20）**：GitHub Issue 彙集多起使用者回報的 API 連線錯誤（Connection error），環境集中於 Windows 11 搭配 Anthropic API 平台；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**Linux（Ubuntu）無法從剪貼簿貼上圖片（GitHub issue #8324，累積 42 個 reactions、44 則留言，首見 2026-07-29，2026-08-19 互動數更新）**：使用者回報在 Linux（Ubuntu）環境下，無法透過剪貼簿貼上圖片至 Claude Code；官方尚未回應。
-- 🔴 **未修復**｜**Windows 桌面版開啟內建瀏覽器分頁時發生致命 GPU 當機（錯誤碼 0x060C201E），崩潰後 MSIX 應用卡在 appxState=2 需 Repair 才能修復（GitHub issue #80444，累積 17 個 reactions、111 則留言，2026-08-19 首見，2026-09-15 互動數更新）**：官方尚未回應。
+- 🔴 **未修復**｜**Windows 桌面版開啟內建瀏覽器分頁時發生致命 GPU 當機（錯誤碼 0x060C201E），崩潰後 MSIX 應用卡在 appxState=2 需 Repair 才能修復（GitHub issue #80444，累積 17 個 reactions、114 則留言，2026-08-19 首見，2026-11-22 互動數更新）**：官方尚未回應。
   - 環境：Claude desktop app 1.24012.1（MSIX，Windows 11 Home 26200）；與既有「GPU process crash（exit code 101457950）」（issue #81698）同屬 GPU 穩定性問題但錯誤碼不同，暫分列追蹤。
   - 同一錯誤碼另有回報指出根因（GitHub issue #81341，累積 35 則留言、8 個讚，2026-11-02）：Windows CIG（MicrosoftSignedOnly）政策與 vendor 簽署 `vk_swiftshader.dll` 衝突，瀏覽器預覽必當機。
 - 🔴 **未修復**｜**claude.exe 列出目錄時（`NtQueryDirectoryFileEx`）疑似透過 Wof.sys 觸發 Windows 藍屏（BSOD）（GitHub issue #32870，累積 41 則留言，首見 2026-07-29，2026-08-15 互動數更新）**：使用者回報 claude.exe 在列出目錄內容（`NtQueryDirectoryFileEx`）時，疑似透過 Windows 系統的 Wof.sys（Windows Overlay Filter driver）觸發系統藍屏當機；屬嚴重穩定性問題，官方尚未回應。

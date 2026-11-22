@@ -32,12 +32,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-11-22
 **最後新聞更新：** 2026-11-18
 
-> **Skills 設計添抓漏合集；記憶新增 Obsidian 第二大腦；MCP 整合添手機操控；行動裝置添動態島推播**（2026-11-21）
-> - **Skills 設計**：Claude-BugHunter（82 個 skill 抓漏合集）與 article2media（內容再製自驗收 skill），見 [[topics/community-skills#2026-11]]。
-> - **記憶與知識管理**：avenoxbeyin 以 Obsidian 整合 Claude Code 做跨 session 持久記憶，見 [[topics/community-memory#2026-11]]。
-> - **Plugin / MCP 整合**：phonedriver 讓 agent 操控手機，見 [[topics/community-integrations#2026-11]]。
-> - **創意工具 Agent 整合**：同名 Blender 外掛第三度換帳號出現，疑似假星數手法，見 [[topics/community-creative-tools#2026-11]]。
-> - **行動裝置遠端控制**：Fuyu 把 Claude Code 核准請求併入桌面動態島推播到手機，見 [[topics/community-interfaces#2026-11]]。
+> **Multi-agent 架構添跨機器協調；Skills 可靠性測試添規則優先序實測與效能熱點驗證**（2026-11-22）
+> - **Multi-agent 架構**：facadecode 讓多款 agent CLI 跨視窗、跨機器互傳訊息、互相操作，見 [[topics/community-multi-agent#2026-11]]。
+> - **可靠性測試**：fast-anything 驗證式把效能熱點搬成 Rust，真實 `claude -p` 實測證明未叫用的 Skill 仍蓋過 CLAUDE.md，見 [[topics/community-skills#2026-11]]。
 
 ---
 
@@ -55,10 +52,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
-| [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、確定性 Agent 框架 | 2026-11-19 |
+| [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、確定性 Agent 框架 | 2026-11-22 |
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理 | 2026-11-21 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-17 |
-| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-21 |
+| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-22 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、多代理 PR Review、規格驅動開發、架構邊界合約 | 2026-11-18 |
 | [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦 | Plugin / MCP 整合 | 2026-11-21 |
 | [[topics/community-creative-tools]] | agent 能不能接進影片剪輯、Blender 3D、遊戲引擎、音效與設計軟體 | 創意工具 Agent 整合 | 2026-11-21 |
