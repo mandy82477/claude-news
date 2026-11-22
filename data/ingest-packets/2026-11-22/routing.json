@@ -1,0 +1,348 @@
+{
+  "https://support.claude.com/en/articles/12138966-release-notes": {
+    "title": "官方文件更新：Claude Help Center release notes",
+    "source": "Official Docs",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/NiazMorshed2007/reanimate": {
+    "title": "NiazMorshed2007/reanimate",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/": {
+    "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/briiirussell/cybersecurity-skills": {
+    "title": "briiirussell/cybersecurity-skills",
+    "source": "GitHub Search",
+    "categories": [
+      "社群",
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/wataru-maeda/react-native-boilerplate": {
+    "title": "wataru-maeda/react-native-boilerplate",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/y5ez3g/facadecode": {
+    "title": "y5ez3g/facadecode",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/amurgola/LumaBrowser": {
+    "title": "amurgola/LumaBrowser",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/EL4CTEO/fast-anything": {
+    "title": "Fast-Anything: Don't rewrite it in Rust. Rewrite the 5% that's slow",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "摘要未見 Claude/Anthropic 字樣，請記者自行開連結查證關聯後再決定收不收"
+  },
+  "https://github.com/anthropics/claude-code/issues/80444": {
+    "title": "[Windows] Desktop app 1.24012.1: fatal GPU-process crash (0x060C201E) via in-app Browser tab; crash leaves MSIX package unlaunchable (appxState=2) until Repair",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/69238": {
+    "title": "[BUG] No response from API error when Advisor is triggered",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/76357": {
+    "title": "[BUG] Windows (MSIX): update fails with 'Another program is currently using this file' — app unlaunchable until reboot (every update)",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/30873": {
+    "title": "Claude in Chrome extension: Side panel closes when switching/opening tabs in Microsoft Edge on macOS",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/79808": {
+    "title": "Cannot log in to Claude Code: verification emails suppressed for my address, support bot has no escalation path",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/38255": {
+    "title": "Plan mode: model made file edits despite plan mode being active",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/android2linux/android2linux": {
+    "title": "Show HN: It's now easy to install Linux on an Android Phone – Android2linux",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://dev.to/enjoy_kumawat/a-skill-i-never-invoked-overruled-my-claudemd-anyway-144c": {
+    "title": "\"A Skill I Never Invoked Overruled My CLAUDE.md Anyway\"",
+    "source": "dev.to / #claudecode",
+    "categories": [
+      "社群",
+      "功能",
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://nestdaddy.com/memory": {
+    "title": "Show HN: NestDaddy Memory, one memory shared by ChatGPT, Claude and Cursor",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/relaticle/relaticle": {
+    "title": "Show HN: Relaticle, an open-source CRM that Claude and ChatGPT can work in",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://jurakovic.github.io/passdroid/": {
+    "title": "Show HN: Reviving a 2012 open-source password manager for modern Android",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/mquan/llmao": {
+    "title": "Show HN: Type prompts directly in terminal shell to kickoff Claude and codex",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://databasedmcp.com/": {
+    "title": "Show HN: Custom SQLites for agents (a remote MCP)",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMihgFBVV95cUxPbXRrZlEtWkVBV0hhMGRjMlVNalR3dlUtVUN4QzhDazFCWWNrQkxaWndTRGZkcWloajZsdkZmTlNvU3EzemlnZFAwa29WTnozcG1jUTFQOTAyM2hYbkM1c1ppcXRJTFUyRW9oTTgxYW84X3V5WUlZcm5YbExkWTFWdkhqUWMzZw?oc=5": {
+    "title": "Claude vs ChatGPT Cliché Test: 12 Steps, 80 Min - shattered.io",
+    "source": "Google News / shattered.io",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTnliTkVvRWFBQ3NScjZ6bUlDT1plNFM3d3hDcWFsLVF2dnhnQW05QWZEc2tuaU5Ha2Y1b3g1bFdlSUd1eXF2b2VvT3hrNHN2dTJrRmZhN2QyWkhtY053UTlZN3dfQlpkMVBEclkxU0ZnMDFZanI4YTRWQ1F2YXhBd2Z3RVR5MXptR0poX3hYN0lMUQ?oc=5": {
+    "title": "Anthropic mathematician claims to have proved Riemann hypothesis with help of Claude - The Independent",
+    "source": "Google News / The Independent",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMifEFVX3lxTE8zOTRvWnNOVUtGRTU0ZlZTYzdlcENSU3ZaU3ZabUJnRXlRSDg5RkhId0pDVmxsMEExYmJFaEd1QlpxWVZxNTBlRU40ajNqNWhpdXF5cDhWcjJwa2hVbXBRRk53M19YcHJDX2pHeXhreURiaG9mYlhQWXlVMzY?oc=5": {
+    "title": "How to Install Claude Code on Android With Termux - HackerNoon",
+    "source": "Google News / HackerNoon",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMGhQYy1TNTdJcnJDbUg5RFFZRl91OE1OZHNvdTFfYm81NTFTR1JGLXRsR1RFTnhnajZMT1ZjNEFIMjlJX2pfS092R2JGLUFZb2ZhVE5fRU5DUHhub1ZKb3VQUkJUSUpuX2wwZ2ZpdmR1M1BNcTVYb0pBQXlZMVFmNkNVbElaUEg0a2c?oc=5": {
+    "title": "What Comes Next After Anthropic’s Historic IPO - WSJ",
+    "source": "Google News / WSJ",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMickFVX3lxTE5KV3d0a3JrWGI3N2pxT3A0ZklFdHlWbnVOcDNianRtNnNtQS1RNzdTU0FmQTBhZjA0OC1pRHRkTzNRb1JkRXpRczU0ZXhQR2ZZM1FQOU5LeHJvVVl4bGJxeFkwYUxzRVl2MkZVY1ZIVkRPZw?oc=5": {
+    "title": "Cline vs Claude Code: $9.99 vs $20 Plans - shattered.io",
+    "source": "Google News / shattered.io",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMieEFVX3lxTE5hMUtBY1JVVkhTenFoNG5ndjRQU1dRRzVheU9sUFg3WXdQTFVXdG1HMnlhY0twWmcwb1VYcWE0STRTcENWM2NJcVN0UlVwdnNuR2J0WjJtMlp4eGttN1FrX0k4cnVOZkRvUHdmRVAtMTlVTnVEYTJ1UQ?oc=5": {
+    "title": "Tech sell-off hits Nvidia, Anthropic and Nasdaq - Fox News",
+    "source": "Google News / Fox News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMivAFBVV95cUxQN3M5SE00X0hicGN1TDJ0N3pJNVp3cGRJT1dDT2RpbG9mOXBWdWd1cl94TGZxY25YUnRUekIwOTN4RkpGYTFicEducWtsUnpJSnJmZXhDeXlmYTVOT2lWTFFkRnRWeE9yQ3VBQlRnUTBLMkpTc2dWeWJNZW9YZ3BFendzbEd5NFcwbWdLRzBiekFIRlhidXEwSFBQRGx5YUtEZUctVTlVdzVTb1pFTjAxbi1EMS1BdG9LSl9IWA?oc=5": {
+    "title": "Seedeo MCP Adds Suno, Kling and Veo to ChatGPT and Claude Connectors - IndyStar",
+    "source": "Google News / IndyStar",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNkk4VjRnclRLMld0LUptUV9DUzd1MDIwYXJieGdUNWgwNlpJZzZEalBKbGU1Ql8wOFdkd1RnMm9obE1KTVRXaGhKbHl4TEVKSzhlQXA4aWVod3o5N3U5SVluR0JwRkdBZUw0T0VVajBxLWVIU1llOWw4VGVrT2w4MUV2OTMzMV9VUXQwY29iU1BoT2JuMjRtNVQxTUwyUWpjR3ZNVW02Wmx4d0VDcnNGd0JvZExvd1JQWmJGdm5zZERMU0lJcHlvWVV3?oc=5": {
+    "title": "Use Claude Code for free? I test Freebuff, which promises virtually unlimited AI coding - Notebookcheck",
+    "source": "Google News / Notebookcheck",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMizAFBVV95cUxORFFLSnZVQWw1MWg5VUpyMUlUQ2drcDMwYnB3UWhFY29ZM0prNDNGTDBUa1Bpc0d2UXZGMmhRZXUyZ1BjQzZBVzk3QVowU3FmM0FEV0pzQjM3Z0QwRVNWNS1pb19qQXhFbHBhVTBKMEtHck83RFR6cEEzT0w4c0ZpZGpVbHBTcFh1UjhDQXRxRlJCUmRkSjVRRmoyMUlQNEl3N1c5V0U4RTQ5cU5IVzlrZVBsdHZnOG50c2o4bDBRemJ0dEQySzQzUjZVSFA?oc=5": {
+    "title": "Anthropic’s record IPO raises hopes for a charitable windfall that has nonprofits preparing to scale - TribLIVE.com",
+    "source": "Google News / TribLIVE.com",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSXBXdzVRdkJMZW1ESjJiZkdrVHAxWGlSc2FUUEs3bW1WRUFpajZRS1EzT1VENUxaeUdtdWY0LTRCOE1UQzU2YnVGMUZRaTVta1d0dzVWSk1PSThMZU9RQmVfTGxCSDYxN05UbGJsN0xJTlg4SDNNUGwzQXU1VnluRUtKVldPcWFVX2FxWVFoWHcxa1RCaVlLVjE3SlVyZFJwd3RsLXVHeG9sUE9uRFNYUUtwQ1FWQkc4OHRRSEJ1c2JFR00?oc=5": {
+    "title": "Anthropic had the largest IPO ever. What does that mean for their future — and ours? - NPR",
+    "source": "Google News / NPR",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMilwFBVV95cUxPemFDcTcyNmVvMzhJeFdLX2VQNFdHdGZFX01XbjYyTDBYbE5OOUs4NllpdHlDalluUHR5eGhQZW44S2ZmdGh4ME1Fd0VLN2RHclpxLWU2OTNvM1RJUkwyQmQtTjQydUduM05rQ25PemdYNmYxdXgzOXZmTXk3S0tBMmIwUEtpTlBMZEs4RzB5UGd1RUR5LUM0?oc=5": {
+    "title": "Anthropic's IPO made its 7 founders' stakes worth about $141 billion. How that stacks up against Elon. - Business Insider",
+    "source": "Google News / Business Insider",
+    "categories": [
+      "商業",
+      "人物"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNaHhBWHBNUW00OXBvRGt4NUsyRjRxam5tcGlVR0hRV2Jaa1R1bmZpbnFiVjE3aWk0aE1na0Fmd0xpWXpqemx5UTRGN2VpWHFzc2NVSnpGVHRNRXRwcXdZajZSVnpoLWVYelB6b0VHZEc3ak1XR0E1a3JfYU9RSFFETGpfWjdXdW82VS1aU3pjeVQ2QVRidlpVbG1tSXpRVVdKUzdKUXp2X1RGYVJWVU5zVDVOb0hIemxuUDNoUDRhUjBueGFVZXJiWTdET1RkWWpmS25IZXh2OHRrbDRteF9RTUx5UVIxYjltZGcwREZPc0VwZGQw0gH6AUFVX3lxTFBYbjdwcVZwYnR1aTY4ZUhQTVZRX1ZDSDd5ejVwTjNNRERncF9IT2NRMGxHZ0tXUm1kUWZaRXcxM2pNeTFNeUJQMUdHeFpyUW00TS0taWNyTHZvZ2VVQVhFMGdnSnBXbTNBMGMzTW1xOVhKeVhIY0JvbWx5SnNrdlVudWRuaThTNEw2Q3I2dklNOHJpNENCWmdBZWlJVmZxMTZ3RGkxQnJnOHVrdjlpTFlqS3dTMGZtM1hKYXBNX1BXTXJJOTBvWl91VU51MHVubmVpYmpvbVdxYVpmX0NaYlFLLTNuM3FyWTRIZmpQSEtYM2ZWOUdkLW5Xc1E?oc=5": {
+    "title": "The Claude payday: How Anthropic’s IPO could make thousands of staff millionaires - The Times of India",
+    "source": "Google News / The Times of India",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://openai.com/index/perplexity-and-intelligence": {
+    "title": "Perplexity and Intelligence",
+    "source": "Blog / OpenAI News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "topic=competitor-landscape 專頁定向，直接路由"
+  },
+  "https://simonwillison.net/2026/Nov/21/muru/": {
+    "title": "Muru",
+    "source": "Blog / Simon Willison",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "內文未見 Claude 字樣，請記者自行判斷關聯度"
+  },
+  "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMjVQWHNJMWw0Y21HYTVDN0lhX0ZYQS1FdzFCLV9nbVRzS09jNFN5UXRaanhHM2tXbGJkVGtlZVdMMnlTa2RTR29MUU1KbXVkekg1X19VeU5ISGJCbG9FRU5nSkNrZG1MWFJBaVZWY3pGUm5vUmZUWl96aWl6TVNDcUFCOXFxRmlYTFhRLTlqdTQ2S2FWTjJ4RWNBbnlVS2dtemlUSF9nOVlpZFpONElOdUhB0gG3AUFVX3lxTFBNVVBhQ1VSV2VIc0Z5OTJfSU1FUmc2UVFZNDJPX19TSjgteXV4QWxmbDZQWGQwa0M3S0tLUTY1V3ZTRXhUTmVNLTNBSk15QTRuQ1ZzSDY5VkFVT3laUl9XemZJVWZBVG9TU21UaW1US3JvWGZ3dGpiakppUDJobkQ2NW5lVGxEZUdCTlBnaGhEVWNvRE43ZTEySTBZaDJ6VzFuY08xN2FJRkFWUzI1Rkg0eEljUHl0OA?oc=5": {
+    "title": "Anthropic IPO signals ‘beginning of a gold rush’ for small businesses, biz tech CEO says - Fox Business",
+    "source": "Google News / Fox Business",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMipAFBVV95cUxOb3UwVjJjanJYWGIwb3l2UEo4aHo3dFdDeVFyb1BBODlfbF9hU0N2cERseWxxU3QxNlZPRUZBQWFhQ0dJN1V3MEd4LW9XbnFYZTJuMmJvcVFtODM2alVmWXQ2bjBaSVZBWUQ4alpsaTJuOHlGaFROdzh4NTFBQWNUY1BmVnYyeGF5a1Y2cE9NMlBrOWlJUWo4X0dxNzlKSGs0YVhTXw?oc=5": {
+    "title": "AI stocks lose their shine as Anthropic debuts | CNN Business - CNN",
+    "source": "Google News / CNN",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMU96R3pxbVo0NDIzSUl5Szd6T0VkZzRUY1F3RE9NUnRPWU1tbnBRZkVPOWNDclpHX3hUTXo1QndXdENHb2Q1cFU2WnVwLWp0eG00dDFWcTBNR042Y3NFdUdtZGY4ODZUSnRTMFZGUnNFNFYyRGdvaHJCdVNra2k0T2NTeDZnbTdHcE83WQ?oc=5": {
+    "title": "Anthropic Mathematician Claims to Solve Riemann Hypothesis With Help From Claude - The New York Times",
+    "source": "Google News / The New York Times",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  }
+}
