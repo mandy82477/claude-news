@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-11-23
 
 > **Claude Code 傳新增即時成本控管功能**（2026-11-23）
-> Techzine Global 報導開發者編碼過程中可即時監看並控制用量花費，不必等帳單才知道超支；是否即 10-29 TechCrunch 已報導但未載名稱的支出能見度新工具，待官方文件確認，詳見「缺口 vs 官方對應」表。
+> Techzine Global 報導開發者編碼過程中可即時監看並控制用量花費，不必等帳單才知道超支；是否即 10-29 TechCrunch 已報導但未載名稱的支出能見度新工具，待官方文件確認，詳見 [[topics/enterprise-cost-management#缺口 vs 官方對應]]。
 
 ---
 

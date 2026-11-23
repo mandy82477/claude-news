@@ -35,7 +35,7 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **最後新聞更新：** 2026-11-23
 
 > **最新動態**（2026-11-23）
-> - **GitHub Issue 216 留言要求印度盧比計價方案，點名 Claude Code**：Pro 已有印度在地化定價，但訴求明確點名 Claude Code 仍以美元計價，官方未回應，是今日留言數最高的一條（見下方「商業模式」）
+> - **GitHub Issue 216 留言要求印度盧比計價方案，點名 Claude Code**：Pro 已有印度在地化定價，但訴求明確點名 Claude Code 仍以美元計價，官方未回應，是今日留言數最高的一條（見 [[topics/anthropic-business-risks#商業模式]]）
 > - **WSJ：Anthropic 已承諾約 $9,000 億資本支出，華爾街預期舉債評等為垂圾級**：呼應既有 BB 級預期，細節見 [[topics/anthropic-ipo#上市後追蹤]]
 > - **IPO 敲鐘現場外出現「別為 AI 泡沫紓困」抗議**（techpolicy.press）：示威者於那斯達克掛牌現場外表達對泡沫風險與紓困預期的疑慮
 > - **Claude Code 撐起 IPO 敘事，公司下一步要找新成長動能**（Business Insider／The New Stack）：內部逾 90% 程式碼由 Claude 撰寫與審查，重點在「怎麼檢查」這道關卡
