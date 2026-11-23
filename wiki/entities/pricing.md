@@ -4,17 +4,17 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-19"
+last_updated: "2026-11-23"
+last_news_update: "2026-11-23"
 status_main: "active"
-days_since_news: 3
+days_since_news: 0
 parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 195
-attribution_count: 179
-attribution_last: "2026-11-19"
+inbound_links: 197
+attribution_count: 180
+attribution_last: "2026-11-23"
 top_source: "google-news"
 pending_count: 3
 pending_overdue: 0
@@ -32,11 +32,12 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-19
+**最後更新：** 2026-11-23
+**最後新聞更新：** 2026-11-23
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-22）
+> **最新計費政策異動**（2026-11-23）
+> - **官方定價頁 Pro／Max 文案重新明確列出 Fable 與 API credits 條款**：Pro 條列寫「Fable，以用量額度支付」、Max 條列寫「Fable 內含，最多可用到每週用量的一半」與「每月 $100 美元 API 額度可在 Claude Platform 上開發」；三項與本頁既有規則一致，屬官方頁面文案重新確認，非新規則（[claude.com/pricing](https://claude.com/pricing)，2026-11-23）
 > - **官方定價文件新增 Managed Agents 計費依據與各平台乘數規則細項**，並移除舊版 Google Cloud 定價與每千次搜尋 $10 的 web search 定價行（細節見下方「當前生效的計費規則」；移除後的替代寫法尚未核對）
 > - **Max 方案 1M context 誤判需加購**：GitHub Issue #45390 回報，選用 Opus 4.6（1M context）即使用量遠低於需要加購的量仍顯示「Extra usage required」，官方尚無回應，詳見 [[entities/pricing-incidents]]
 > - **Linked Billing 公開測試上線**：第三方平台可把自己的計費系統接上 Claude API 用量帳務，Python／TypeScript SDK 同日新增 `billing_policy` 參數與對應錯誤碼；Railway、Harness（Cosmos）同日宣布已支援
@@ -82,6 +83,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 ### 方案細節
 
+- **定價頁文案重新列出既有規則（2026-11-23）**：Pro 條列寫明「Fable 以用量額度支付」、Max 寫明「Fable 內含（至多半週額度）」與「每月 $100 API 額度」；與本頁表格數字一致，屬文案重新確認、非新規則（[claude.com/pricing](https://claude.com/pricing)）
 - **Plans & Pricing 頁新增 Extensions「Claude in Chrome」段落（2026-10-21 diff，同日查證）**：僅「Claude for Chrome」改名，方案可用範圍（Pro 以上）與定價不變
 - **同次 diff：「Models Mythos」改名「Mythos (including Fable)」、新增 Managed Agents 連結**：均為命名／導覽調整，Managed Agents 費率仍是既載 $0.08／session-hour，非新費率
 - **Team 年繳最低 20 席（2026-10-15 生效）**：小型團隊年繳前先確認席數達標；其他席位與付款摩擦見 [[entities/pricing#方案可用性與帳務摩擦]]

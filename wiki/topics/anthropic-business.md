@@ -3,10 +3,10 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-21"
+last_updated: "2026-11-23"
+last_news_update: "2026-11-23"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['topics/anthropic-business-archive', 'topics/anthropic-business-risks', 'topics/anthropic-ipo', 'topics/anthropic-partnerships-compute']"
 page_role: "hub"
@@ -30,14 +30,14 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-23
+**最後新聞更新：** 2026-11-23
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-22）
+> **最新動態**（2026-11-23）
+> - **Anthropic 股價逆勢下滑**：Jensen Huang 回任 Nvidia 的消息帶動本週科技股普遍反彈，Anthropic 股價卻未能跟上、劇烈震盪，WSJ 另報導其 9,000 億美元支出承諾使華爾街預期債券評等落在垂圾級，見 [[topics/anthropic-ipo]]
 > - **加拿大主要新聞出版商在安大略對 Anthropic 提起著作權訴訟**（CP、CBC 報導），已列入訴訟對照表，見 [[topics/anthropic-business-risks]]
 > - **Nscale 的 S-1/A 揭露與 Anthropic 的 GPU 協議最多約 44.6 億美元**，媒體稱的 450 億美元未見於文件，見 [[topics/anthropic-partnerships-compute]]
-> - 上週：上市後賣壓擴大為全 AI 板塊，見 [[topics/anthropic-ipo]]
 
 ---
 
@@ -81,9 +81,9 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-22 |
+| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-23 |
 | [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-22 |
-| [[topics/anthropic-business-risks]] | 哪裡會出事、你能先做什麼，以及它怎麼賺錢 | 2026-11-20 |
+| [[topics/anthropic-business-risks]] | 哪裡會出事、你能先做什麼，以及它怎麼賺錢 | 2026-11-23 |
 
 #### 算力與資金從哪來
 這一節現在在 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]。

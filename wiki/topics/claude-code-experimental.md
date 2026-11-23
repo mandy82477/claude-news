@@ -3,19 +3,19 @@ page: "topics/claude-code-experimental"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-21"
-last_news_update: "2026-11-21"
+last_updated: "2026-11-23"
+last_news_update: "2026-11-23"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 24
-attribution_count: 46
-attribution_last: "2026-11-21"
+days_since_news_subtree: 0
+inbound_links: 26
+attribution_count: 47
+attribution_last: "2026-11-23"
 top_source: "build-flags"
 pending_count: 0
 pending_overdue: 0
@@ -32,20 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-23
+**最後新聞更新：** 2026-11-23
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-11-21）
-> 2.1.330（自 2.1.329 起）新增 10 個候選旗標（名單見追蹤表），皆第一階、無代號旗標；另 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目自身，暫不升第二階。
+> **最新動態**（2026-11-23）
+> 2.1.331（自 2.1.330 起）新增 13 個候選旗標，原料僅列出 11 個名稱：`CLAUDE_CODE_DISABLE_SHIP`、`CLAUDE_CODE_DISABLE_DESKTOP_SHIP` 與同日發布的「Claude Ship」功能名稱吻合，升第三階；`CLAUDE_CODE_ELEGANT_MIST` 為代號旗標；其餘 8 個第一階。已回報 [[feature-radar]]。
 
 ---
 
 ## 摘要
 
+- **2.1.331（11-23，自 2.1.330 起）新增 13 個候選旗標，原料僅列出 11 個名稱**（名單見追蹤表）；`CLAUDE_CODE_DISABLE_SHIP`、`CLAUDE_CODE_DISABLE_DESKTOP_SHIP` 升第三階，見本頁追蹤表；已回報 [[feature-radar]]。
 - **2.1.330（11-21，自 2.1.329 起）新增 10 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.329（11-20，自 2.1.328 起）新增 7 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；對帳僅命中來源條目自身，暫不升第二階。
   - 消失 8 個皆為測試用旗標（`MOCK_TRIAL`、`TEST_ALLOW_REAL_NETWORK`、`TEST_FIXTURES_ROOT`、`TEST_FORCE_DENY` 等；含 2 個 `ULTRAREVIEW_*_FIXTURE`），先前已過濾未入表，不另立列。
@@ -83,6 +84,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_DISABLE_SHIP` | 2.1.331（11-23） | 3 | 官方同日發布「Claude Ship」功能（自動審查／修復／核准 PR），[官方文件](https://code.claude.com/docs/en/claude-ship.md)；名稱吻合疑為對應旗標，官方文件未逐字列出旗標名，暫不升第 4 階 | — | 2.1.331（11-23）官方發布 Claude Ship 功能，疑為對應旗標 |
+| `CLAUDE_CODE_DISABLE_DESKTOP_SHIP` | 2.1.331（11-23） | 3 | 同上，疑為 Claude Ship 桌面版對應的關閉旗標 | — | 2.1.331（11-23）官方發布 Claude Ship 功能，疑為對應旗標 |
+| `CLAUDE_CODE_BRIDGE_CHILD_HELD_TO_AUTO` | 2.1.331（11-23） | 1 | — | — | 2.1.331 仍在（比對日 11-23） |
+| `CLAUDE_CODE_CHROME_SIDE_PANEL` | 2.1.331（11-23） | 1 | — | — | 2.1.331 仍在（比對日 11-23） |
+| `CLAUDE_CODE_DISABLE_REDIRECT_CHECK` | 2.1.331（11-23） | 1 | — | — | 2.1.331 仍在（比對日 11-23） |
+| `CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION` | 2.1.331（11-23） | 1 | — | — | 2.1.331 仍在（比對日 11-23） |
+| `CLAUDE_CODE_FETCH_PERSONAL_CLOUD_CONFIGURATION` | 2.1.331（11-23） | 1 | — | — | 2.1.331 仍在（比對日 11-23） |
+| `CLAUDE_CODE_HOST_STARTED_AHEAD` | 2.1.331（11-23） | 1 | — | — | 2.1.331 仍在（比對日 11-23） |
+| `CLAUDE_CODE_LAZY_WORKTREE` | 2.1.331（11-23） | 1 | — | — | 2.1.331 仍在（比對日 11-23） |
+| `CLAUDE_CODE_SENDS_VIA_SESSION_SERVICE` | 2.1.331（11-23） | 1 | — | — | 2.1.331 仍在（比對日 11-23） |
 | `CLAUDE_CODE_COWORK_SHELL_CHECK` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
 | `CLAUDE_CODE_DISABLE_REDIRECT_DENY_RECHECK` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
 | `CLAUDE_CODE_FULL_SIGN_IN_LINK` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
@@ -404,6 +415,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 動靜 |
 |---|---|
+| `CLAUDE_CODE_ELEGANT_MIST` | 2.1.331（11-23）出現 |
 | `CLAUDE_CODE_PEPPY_STARLIGHT` | 2.1.328（11-19）出現 |
 | `CLAUDE_CODE_CRYPTIC_HORIZON` | 2.1.319（11-06）出現 |
 | `CLAUDE_CODE_DEEP_TWILIGHT` | 2.1.317（11-03）出現 |
@@ -456,6 +468,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-11-23 | 2.1.331 新增 13 候選旗標（11 名；1 代號）；`DISABLE_SHIP`、`DISABLE_DESKTOP_SHIP` 與 Claude Ship 名稱吻合升 3 階；其餘 8 第一階，僅命中來源條目 |
 | 2026-11-21 | 2.1.330 新增 10 個第一階候選旗標（名單見追蹤表），無代號旗標；1 設定類不列；本輪無消失旗標；對帳僅命中來源條目自身，暫不升第二階 |
 | 2026-11-19 | 2.1.328 新增 8 個候選旗標：7 第一階＋代號旗標 `PEPPY_STARLIGHT`；消失 1 個：`CCR_SKIP_NEEDLESS_STARTUP_READS`（首見 2.1.323）列 4 階；僅命中來源條目，暫不升二階 |
 | 2026-11-18 | 2.1.327 新增 10 個第一階候選旗標；2 設定類不列；消失 2 個：`CONSENT_POINTERLESS`、`SPARE_KEEPS_BOOT_SESSION_ID`；僅命中來源條目，暫不升二階 |

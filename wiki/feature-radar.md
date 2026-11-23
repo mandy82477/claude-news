@@ -2,10 +2,10 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-23
 
-> **本日新增重大發布**（2026-11-09）
-> Claude Fable 5.2 與 Claude Mythos 5.2 發布，Claude Code v2.1.321 起 Fable 5.2 為預設 Fable 模型（1M context、降價兩成）；多家外媒同日報導，HN 討論達 614 分。
+> **本日新增重大發布**（2026-11-23）
+> Claude Ship 發布：Claude 自動審查 pull request、修好問題並依團隊規則核准變更（含 Claude Approvals／PR Steward 兩套子機制）；官方文件索引同日新增 16 頁，Reuters（3 個來源同日報導）、The Verge 等至少 10 家獨立媒體跟進。
 
 ---
 
@@ -14,6 +14,8 @@
 - **Claude Fable 5.2／Mythos 5.2 發布**：新旗艦雙發布，Fable 5.2 已自動成為預設模型（1M context、降價兩成）。**怎麼開始：** `/model claude-fable-5-2` 確認版本，細節見 [[entities/fable-5]]、[[entities/mythos]]。
 
 %% 11-09 重算：候選池＝發布日距今 ≤30 天或本輪熱度/試用價值有變動者。原三件（Sonnet 5.5 09-28、Haiku 5.5 10-07、Mods 10-01）距今 33～42 天，均已出時間閘，且本輪熱度/試用價值皆未變動，不在候選池內；候選池內僅新發布的 Fable 5.2／Mythos 5.2（🔥🔥🔥🔥🔥、✅，今日發布）一項，故本節僅列 1 件，非湊滿三格。
+
+11-23：今日新增 Claude Ship（🔥🔥🔥🔥、⏳ 觀望，今日發布），熱度達標但試用價值未達 ✅／⚡ 門檻，不進候選池；維持現有推薦不動，距最後輪替 14 天，未達 7 天霸榜檢查門檻但已逾——下次 /weekly 覆核時應連同 Fable 5.2／Mythos 5.2 熱度是否仍站得住一併檢查。
 
 11-13 重算：今日新增 Code Mode（🔥、⏳ 觀望），熱度未達 🔥🔥🔥🔥 門檻，不進候選池；本輪掃過 10-14～11-12 全部 🆕 最新功能條目，🔥🔥🔥🔥 以上且 ✅／⚡ 者仍僅 Fable 5.2／Mythos 5.2 一項（Claude Duet 🔥🔥🔥🔥🔥 但試用價值 ⏳ 觀望、未達 ✅／⚡ 門檻，不合格），維持現有推薦不動；距最後輪替僅 4 天，未達 7 天霸榜檢查門檻。 %%
 
@@ -77,6 +79,7 @@
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Ship**（自動審查 PR、修復問題並依團隊規則核准變更；含 Claude Approvals／PR Steward 兩套子機制） | 2026-11-23 | 🔥🔥🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Enterprise Admin Console 組織登入**（`claude auth login` 自動套用受管組織設定與雲端供應商，v2.1.330） | 2026-11-20 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code Projects 改版**（對話式協調，自動拆解任務／平行協調多工作線，beta） | 2026-11-14 | 🔥🔥 | ⏳ 觀望 | Beta（Claude Code） |
 | **Claude Desktop Release Channel**（選擇 Desktop 更新走哪個版本頻道，Stable 維持現狀） | 2026-11-17 | 🔥 | ⏳ 觀望 | 正式發布 |
@@ -239,6 +242,28 @@
 ---
 
 ## 🆕 最新功能（2026-11）
+
+### Claude Ship
+**發布：** 2026-11-23（官方公告） | **狀態：** 正式發布
+
+**是什麼：** Claude 自動審查 pull request、修好問題，並依團隊設定的規則核准變更；由 Claude Approvals（核准規則／policy file）與 PR Steward（PR 存取範圍管理）兩套子機制組成。
+
+**為何熱：** 官方文件索引同日新增 16 頁設定與疑難排解文件；Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少 10 家獨立媒體同日跟進報導。
+
+**現在要試嗎：** 常手動審 PR、想讓 Claude 代勞初審與修補的團隊可以開始設定；具體核准範圍與風險控管建議先讀官方疑難排解頁，目前無獨立實測報告。
+
+**快速上手：**
+```
+依序讀官方設定文件：
+- Set up Claude Approvals（核准規則設定）
+- Claude Approvals policy file reference（policy file 語法）
+- Set up PR Steward（PR 存取範圍設定）
+```
+（官方文件僅標題可用，具體指令與語法內文未載，故快速上手只能給設定文件路徑，無法給可執行指令，待後續查證補齊）
+
+**注意事項：** 具體設定步驟與核准範圍限制僅標題可用，內文未載；Build Flags 同日新增 `CLAUDE_CODE_DISABLE_SHIP`、`CLAUDE_CODE_DISABLE_DESKTOP_SHIP` 兩個關閉用候選旗標，疑為對應本功能的開關，詳見 [[topics/claude-code-experimental]]。
+
+---
 
 ### Claude Code v2.1.330：Enterprise Admin Console 組織登入
 **發布：** 2026-11-20（v2.1.330） | **狀態：** 正式發布

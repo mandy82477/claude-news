@@ -4,17 +4,17 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-21"
-last_news_update: "2026-11-21"
+last_updated: "2026-11-23"
+last_news_update: "2026-11-23"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 14
-attribution_count: 28
-attribution_last: "2026-11-21"
+attribution_count: 31
+attribution_last: "2026-11-23"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-23
+**最後新聞更新：** 2026-11-23
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-21）
-> - **v2.1.330**：新增登入由 Enterprise Admin Console 管理的組織支援——`claude auth login` 後套用該組織設定並使用其雲端供應商。build 同時新增 10 個候選旗標，見 [[topics/claude-code-experimental]]。
+> **最新動態**（2026-11-23）
+> - **v2.1.331**：Code Mode 支援擴及 Amazon Bedrock、Google Cloud 的 Agent Platform、Microsoft Foundry，以及 AWS 上的 Claude Platform 終端 session 環境；SSO 新增 `oidc.groups_jsonpath` 設定。SDK TS sdk-v1.13.0／Python v2.13.0 同步：Message Batches 新增錯誤碼、Admin API beta 版 External Storage、新增外部儲存失敗與復原 webhook 事件。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -71,6 +71,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.331** | 2026-11-23 | Code Mode 擴及 Bedrock／GCP／Foundry／AWS Claude Platform；SSO 增 `oidc.groups_jsonpath`（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.331)）|
+| **anthropic-sdk-typescript sdk-v1.13.0** | 2026-11-23 | Features：Message Batches 建立新增錯誤碼；Admin API 新增 beta 版 External Storage；新增外部儲存失敗與復原 webhook 事件（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.13.0)）|
+| **anthropic-sdk-python v2.13.0** | 2026-11-23 | 同步 TypeScript SDK：Message Batches 新增錯誤碼、Admin API beta 版 External Storage、外部儲存失敗與復原 webhook 事件（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.13.0)）|
 | **v2.1.330** | 2026-11-20 | 新增登入 Enterprise Admin Console 管理的組織支援：執行 `claude auth login` 後套用該組織設定並使用其雲端供應商（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.330)）|
 | **anthropic-sdk-typescript sdk-v1.12.0** | 2026-11-20 | Features：新增 `image_dimensions_too_large` 錯誤碼；Bug fix：修正 `ANTHROPIC_CUSTOM_HEADERS` 合併 bug（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.12.0)）|
 | **anthropic-sdk-python v2.12.0** | 2026-11-20 | Features：同步新增 `image_dimensions_too_large` 錯誤碼；Bug fix：修正 Amazon Bedrock 情境下 `user_profile_id` 未正確送入請求內文（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.12.0)）|
@@ -228,6 +231,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-23 | **v2.1.331**：Code Mode 擴及 Bedrock／GCP／Foundry／AWS；SSO 增 `oidc.groups_jsonpath`，見 [[topics/claude-code-experimental]]。 |
 | 2026-11-21 | **v2.1.330**：新增登入 Enterprise Admin Console 組織支援。旗標增10，見 [[topics/claude-code-experimental]]。 |
 | 2026-11-20 | **v2.1.329**：新增信任對話框警示（hooks 宣告位置）。旗標增7消8，見 [[topics/claude-code-experimental]]。SDK 新增錯誤碼。互動更新 #38335／#769／#19673。 |
 | 2026-11-19 | **v2.1.328**：Auto mode 擴及 Opus 4.6／Sonnet 4.6，免許可提示。旗標增8消1，見 [[topics/claude-code-experimental]]。互動更新 #31005／#25128。 |

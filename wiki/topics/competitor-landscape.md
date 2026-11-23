@@ -3,17 +3,17 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-22"
+last_updated: "2026-11-23"
+last_news_update: "2026-11-23"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 82
-attribution_count: 321
-attribution_last: "2026-11-22"
+inbound_links: 83
+attribution_count: 325
+attribution_last: "2026-11-23"
 top_source: "blog"
 pending_count: 10
 pending_overdue: 0
@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-22
+**最後更新：** 2026-11-23
+**最後新聞更新：** 2026-11-23
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-22）
+> **本週衝擊**（2026-11-23）
 > - 🔴 **Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%**（ZDNET／GeekWire／Kingy AI 轉述）——目前只有廠商數字與媒體轉述，沒有官方牌價或第三方跑分，先別照這個比例重算預算。
 > - 🔴 **Gemini 4 Neon 發布，DeepMind 稱程式撰寫能力追平 Opus 5.5，OODA Loop 稱 API 價比 Opus 5.5 低 25%**——成本與能力宣稱同時出現，在意兩者的人都該重新比價，但基準與第三方跑分未查證。
 > - 🟡 **GPT-6.2 Astra 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項**（BigGo Finance 轉述）——多工向任務先別急著換，但成本敏感的人有理由找機會實測對照。
@@ -271,6 +271,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-23
+- **Meta（分析文，非編碼工具）**：官方擴大學術合作，開放 Muse Glimmer、SAM3、DINOv3、Brain2Qwertyv2 供研究者投入醫學研究；非編碼能力或定價異動，不列入「對手雷達」表（Blog/Meta Newsroom）
+- **Google DeepMind（分析文，非編碼工具）**：官方發表以 agent 團隊與形式驗證尋找更快量子演算法的研究，應用於核融合、化學與酶學建模；非編碼能力或定價異動，不列入「對手雷達」表（Blog/Google DeepMind Blog）
+- **OpenAI（分析文，非編碼工具）**：官方發表法務團隊導入 AI 的連結智能案例，探討如何串連商業情境、建立可重複使用的工作流；屬廠商自宣客戶案例，不列入「對手雷達」表（Blog/OpenAI News）
+- **OpenAI（分析文，非編碼工具）**：官方客戶案例稱 Richpanel 以 GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna 讓客服自動化比例於 30 天內達 50%；屬廠商自宣客戶案例，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-11-22
 - **OpenAI（分析文，非編碼工具）**：官方部落格文章〈Perplexity and Intelligence〉探討以 perplexity 指標衡量模型進展、能否成為業界共通評測基準；非產品或定價異動，不列入「對手雷達」表（Blog/OpenAI News）

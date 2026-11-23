@@ -1,19 +1,19 @@
 ---
 page: "topics/enterprise-cost-management"
 kind: "topic"
-status: "monitoring"
+status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-21"
-last_news_update: "2026-11-05"
-status_main: "monitoring"
-days_since_news: 17
+last_updated: "2026-11-23"
+last_news_update: "2026-11-23"
+status_main: "ongoing"
+days_since_news: 0
 parent: null
 children: "['topics/enterprise-cost-management-archive']"
 page_role: "hub"
-days_since_news_subtree: 17
+days_since_news_subtree: 0
 inbound_links: 45
-attribution_count: 12
-attribution_last: "2026-11-05"
+attribution_count: 13
+attribution_last: "2026-11-23"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -25,14 +25,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 企業規模 Claude 成本管理
 
-**狀態：** monitoring
+**狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-01
-**最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-23
+**最後新聞更新：** 2026-11-23
 
-> **個人開發者具名成本案例：一次性資料任務花費 $1,070**（2026-11-05）
-> Show HN 揭露獨立開發者付 Claude $1,070 讀完 3 萬個住宿地點最差評論做成訂房避雷網站；10-29 官方傳的 AI 支出能見度新工具細節仍未見報導。
+> **Claude Code 傳新增即時成本控管功能**（2026-11-23）
+> Techzine Global 報導開發者編碼過程中可即時監看並控制用量花費，不必等帳單才知道超支；是否即 10-29 TechCrunch 已報導但未載名稱的支出能見度新工具，待官方文件確認，詳見「缺口 vs 官方對應」表。
 
 ---
 
@@ -59,7 +59,7 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 |------|------|------|------|------|
 | 部門 / 團隊層級預算分配與上限設定 | Uber 四個月燒光全年預算（Forbes，2026-05-17）；CFO.com 專文揭露 CFO 難以預測季度支出（2026-05-28）| Spend Controls（官方 blog，2026-07-02）| ✅ | 組織層 spend cap（75%／90% 警示）＋部門層用量報表 |
 | 細粒度 per-user token 消耗報表 | tokenflex.ing 排行榜、$4,200/月帳單審計揭示浪費模式（2026-05-23）| Spend Controls（同上）| ✅ | per-user 可見度與限額（75%／95% 通知）；10-29 TechCrunch 稱另有支出用途能見度新工具，名稱與範圍未載 |
-| 即時消費警報與自動暫停機制 | $6,000 /loop 徹夜運行事件（2026-05-22）；計費儀表板滯後問題（2026-05-01 起持續）| Spend Controls（官方 blog，2026-07-02）| 🧪 部分回應 | 有 75%／90%（組織層）與 75%／95%（每人）警示通知，**無自動暫停**——超過上限仍會繼續計費 |
+| 即時消費警報與自動暫停機制 | $6,000 /loop 徹夜運行事件（2026-05-22）；計費儀表板滯後問題（2026-05-01 起持續）| Spend Controls（官方 blog，2026-07-02）| 🧪 部分回應 | 有 75%／90%（組織層）與 75%／95%（每人）警示通知，**無自動暫停**——超過上限仍會繼續計費；11-23 Techzine Global 稱 Claude Code 新增即時成本控管，細節未經官方文件核對 |
 | API 費率 vs 訂閱方案的混合計費管理 | 6/15 計費結構改變爭議（[[entities/pricing]]，2026-05-14 起）；Agent SDK/CI/CD 用量脫離訂閱疑慮 | 無官方對應 | ❌ 無官方對應 | Spend Controls 報導聚焦支出管控，未提及混合計費規則調整 |
 
 %% 維運備忘：判讀原則——一缺口一列，狀態四選一（✅／🧪 部分回應／❌／⏸ 需求已消失）；標 🧪 逾 90 天無新細節者，備注須寫「官方已 N 天無進一步說明」。與 [[topics/official-community-gap]] 官方功能追蹤矩陣互為對照。 %%
@@ -245,6 +245,9 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-23
+- **[官方工具，媒體稱] Techzine Global：Claude Code 新增即時成本控管功能，開發者編碼過程中可即時監看並控制用量花費**：承接 10-29 TechCrunch 已報導但未載名稱的支出能見度新工具，今日報導可能為同一功能的進一步細節，官方文件尚未查證，詳見「缺口 vs 官方對應」表更新（Google News/Techzine Global）
 
 #### 2026-11-05
 - **[個人開發者具名成本案例] Show HN：獨立開發者付 Claude $1,070 讀完 3 萬個住宿地點最差評論，做成訂房避雷網站 okstays.com**：詳見「企業案例」新增段落；屬一次性資料處理任務的具名成本揭露，與既有訂閱/API 價差型案例成本來源不同（Hacker News，1 分）

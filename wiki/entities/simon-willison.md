@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-11-22"
 last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 33
+days_since_news: 34
 parent: null
 children: "['entities/simon-willison-archive']"
 page_role: "hub"
-days_since_news_subtree: 33
+days_since_news_subtree: 34
 inbound_links: 5
 attribution_count: 3
 attribution_last: "2026-10-20"

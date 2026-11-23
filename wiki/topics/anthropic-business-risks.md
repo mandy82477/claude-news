@@ -3,8 +3,8 @@ page: "topics/anthropic-business-risks"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-22"
+last_updated: "2026-11-23"
+last_news_update: "2026-11-23"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/anthropic-business"
@@ -12,8 +12,8 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 21
-attribution_count: 20
-attribution_last: "2026-11-22"
+attribution_count: 22
+attribution_last: "2026-11-23"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
@@ -31,10 +31,12 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-22
+**最後更新：** 2026-11-23
+**最後新聞更新：** 2026-11-23
 
-> **最新動態**（2026-11-20）
+> **最新動態**（2026-11-23）
+> - **GitHub Issue 216 留言要求印度盧比計價方案，點名 Claude Code**：Pro 已有印度在地化定價，但訴求明確點名 Claude Code 仍以美元計價，官方未回應，是今日留言數最高的一條（見下方「商業模式」）
+> - **WSJ：Anthropic 已承諾約 $9,000 億資本支出，華爾街預期舉債評等為垂圾級**：呼應既有 BB 級預期，細節見 [[topics/anthropic-ipo#上市後追蹤]]
 > - **IPO 敲鐘現場外出現「別為 AI 泡沫紓困」抗議**（techpolicy.press）：示威者於那斯達克掛牌現場外表達對泡沫風險與紓困預期的疑慮
 > - **Claude Code 撐起 IPO 敘事，公司下一步要找新成長動能**（Business Insider／The New Stack）：內部逾 90% 程式碼由 Claude 撰寫與審查，重點在「怎麼檢查」這道關卡
 
@@ -49,7 +51,7 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 | 音樂出版商著作權訴訟升級（2026-10-26） | 拿 Claude 產生近似受版權保護內容的人 | 沒有繞法。輸出用於商業發行前自行做版權檢查 | ⚠️ 高 | 一級媒體 |
 | 企業轉向開源模型分流訂單（2026-10-16） | 用量大到會被談價的企業客戶 | 續約前把開源自架的等值成本算出來當籌碼；也把「換過去實際能不能用」算進去，見 [[topics/community-cost]] | ⚠️ 高 | 一級媒體＋社群熱議 |
 | AI 相關損失恐超出保險業承保能力（2026-10-27） | 需為 AI 相關營運風險投保的企業採購方 | 評估現有保單是否涵蓋 AI 損失上限，不夠則另尋風險轉嫁方案 | ⚠️ 中 | 多家引 S-1＋一級媒體 |
-| 上市前的虧損、通路與算力長約（2026-10-26） | 全部使用者（供應商穩定性與定價走向） | 把關鍵工作流做成換得了模型供應商；簽長約前看 S-1 修正版與首份季報 | ⚠️ 中 | 一級媒體引公司或投資人（多家引 S-1） |
+| 上市前的虧損、通路與算力長約（2026-11-23） | 全部使用者（供應商穩定性與定價走向） | 把關鍵工作流做成換得了模型供應商；簽長約前看 S-1 修正版與首份季報 | ⚠️ 中 | 一級媒體引公司或投資人（多家引 S-1） |
 | Claude Code Projects 多 agent 併發推高用量（2026-09-17） | 同時開多個長任務 agent 的 Pro／Max 訂閱用戶 | 限制併發 agent 數量、盯緊用量儀表板，避免額度提前用罄 | ⚠️ 中 | 一級媒體 |
 | 訂閱補貼倍數是兩位數，收窄是進行式（2026-09-06） | 靠訂閱跑自動化工作流的重度使用者 | 先量自己的等值 API 花費，再決定要不要簽長約 | ⚠️ 中 | 社群估算 |
 
@@ -84,6 +86,7 @@ UTRF 專利訴訟（求償含禁制令）目前不在表上，訴訟仍在進行
 
 **商業風險細節**：表外的評論、單一來源與已移出表的風險都在這裡；唱空與估值質疑在 [[topics/anthropic-ipo#誰說撐不住：唱空與質疑]]。
 
+- **WSJ：$9,000 億資本支出承諾，華爾街預期舉債評等為垂圾級（2026-11-23）**：數字與既有「算力／採購承諾總額」$8,950 億同量級（見 [[topics/anthropic-business#現在的數字]]）；評等預期細節見 [[topics/anthropic-ipo#上市後追蹤]]，本頁僅記錄對供應商穩定性風險列的最後動態更新。
 - **加拿大新聞出版商著作權訴訟（2026-10-06 提告，10-14～10-21 報導；2026-11-22 查證）**：原告含 Toronto Star、Metroland、環球郵報、Postmedia、PNI Maritimes、加拿大通訊社（CP），被告含 Anthropic 與其加拿大子公司；法院文件未取得，以下為具名媒體轉述訴狀。
   - 兩家以上具名媒體一致：CP 稿（[Global News](https://globalnews.ca/news/12108024/anthropic-news-lawsuits-ontario/)）與 [CBC／Radio-Canada](https://ici.radio-canada.ca/rci/en/news/2294290/anthropic-sued-by-major-canadian-news-publishers-for-copyright-claims-in-ontario-court) 同載 10-06 提告、四項主張、Anthropic 未回應。
   - 賠償與禁制令細節僅 [Broadcast Dialogue](https://broadcastdialogue.com/canadian-news-publishers-sue-anthropic-over-ai-copyright-infringement/)（10-14）載：一般損害賠償、返還獲利或法定賠償、懲罰性賠償、永久禁制令；涉案作品 2021 年起約 230 萬至 420 萬件，各家自列。
@@ -171,6 +174,8 @@ Anthropic 的收入來自兩條軌道。原定 2026-06-15 生效的程式化用�
 
 **2026-11-05 新增：市場評論稱逾 9000 億美元支出終將面臨獲利壓力**：Barchart.com 報導 Anthropic 近 9000 億美元的 AI 相關支出，認為華爾街終將要求獲利；數字量級接近既有 S-1「算力／採購承諾總額」$8,950 億（見 [[topics/anthropic-business#現在的數字]]），具體支出口徑與時間窗未見報導，僅標題可用（Google News/Barchart.com）。
 
+**2026-11-23 新增：GitHub Issue 以 216 則留言要求印度盧比（INR）計價方案，點名 Claude 與 Claude Code**：[issue #17432](https://github.com/anthropics/claude-code/issues/17432) 比照 OpenAI、Google 已有的印度在地化方案，是今日留言數最高的一條（216 則留言、648 個 👍）。Pro 方案 2026-07-13 起已有印度盧比定價（Rs 2,000／月，見 [[entities/pricing#當前生效的計費規則]]），但該則訴求明確點名 Claude Code，顯示 Claude Code 使用者仍以美元計價換匯，官方尚未回應（來源：[GitHub Issues/claude-code](https://github.com/anthropics/claude-code/issues/17432)，2026-11-23）。對商業的意涵：印度市場在地化定價覆蓋不到 Claude Code，是尚未被滿足的需求訊號（推論）。
+
 **資料使用政策（官方既有規則，2026-10-27 經 Hacker News 100 分重新聚焦）**：官方隱私文件載明，Claude for Work、Anthropic API 等商業方案預設不用輸入輸出訓練模型，但使用者透過 👍👎 按鈕主動回報意見或另外選擇同意時，當次對話與程式開發過程可能被納入訓練。常用意見回饋按鈕的商業方案團隊可留意這點（[官方說明](https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training)；Hacker News）。
 
 > 更多計費細節見 [[entities/pricing]]
@@ -227,6 +232,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-23
+- **[商業模式] GitHub Issue（216 留言，648 👍）：要求 Claude／Claude Code 推出印度盧比計價方案**：詳見「商業模式」段新增說明；Pro 已有印度在地化定價但 Claude Code 未見，見 [[entities/pricing#當前生效的計費規則]]（GitHub Issues/claude-code，2026-11-23）
+- **[商業風險] WSJ：Anthropic 已承諾約 $9,000 億資本支出，華爾街分析師預期舉債評等為垂圾級**：數字與既有算力採購承諾總額同量級，評等細節見 [[topics/anthropic-ipo#上市後追蹤]]（Google News/WSJ）
 
 #### 2026-11-20
 - **[商業風險] techpolicy.press（HN 50 分）：Anthropic 高層在那斯達克敲鐘時，示威者在場外抗議「別為 AI 泡沫紓困」**：抗議訴求聚焦泡沫風險與企業紓困預期，具體組織名稱與人數未見報導（Hacker News／techpolicy.press）

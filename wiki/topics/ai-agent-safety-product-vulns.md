@@ -3,8 +3,8 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-20"
-last_news_update: "2026-11-22"
+last_updated: "2026-11-23"
+last_news_update: "2026-11-23"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/ai-agent-safety"
@@ -12,12 +12,12 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 24
-attribution_count: 70
-attribution_last: "2026-11-22"
+attribution_count: 71
+attribution_last: "2026-11-23"
 top_source: "google-news"
 pending_count: 25
-pending_overdue: 0
-pending_next_review: "2026-11-23"
+pending_overdue: 1
+pending_next_review: "2026-11-26"
 pending_signalled: 2
 staleness_exempt: null
 signal: "健康"
@@ -31,13 +31,13 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-20
-**最後新聞更新：** 2026-11-22
+**最後更新：** 2026-11-23
+**最後新聞更新：** 2026-11-23
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-20）
-> **試用濫用新手法**：Simon Willison 轉述 ChatPRD 創辦人揭露，有團體偽裝個人試用大量申請免費試用與促銷碼，再轉售 AI 用量牟利；單一創辦人訪談，非 Claude 專屬。
+> **最新動態**（2026-11-23）
+> **廣告冒充擴及 Mac**：Hackread 揭露假 Codex／Claude Code 下載頁的惡意 Google 廣告鎖定 Mac 用戶；下載前先核對官方網域，不點搜尋廣告連結。
 ---
 
 ## 摘要
@@ -65,7 +65,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 | 載體 | 日期 | 影響規模 | 如何自查 | 官方回應 |
 |---|---|---|---|---|
 | SEO 投毒假下載頁（冒充 Claude Code／Gemini 官方頁，投放資訊竊取程式） | 2026-05（EclecticIQ 揭露） | 未見受害數字 | 只從官方網域安裝，別點搜尋結果的下載連結。見 [[topics/ai-agent-safety-archive]] | 未見官方回應 |
-| Google 廣告木馬（廣告排名高於官網，PowerShell 指令植入木馬） | 2026-05-10 | 已有 Windows 用戶中招，無總數 | 安裝指令只從官網複製；廣告位的「官方」頁先看網域。見 [[topics/ai-agent-safety-archive]] | 未見官方回應 |
+| Google 廣告木馬（偽冒官方下載頁；11-23 擴及 Mac，偽裝 Codex／Claude Code） | 2026-05-10～11-23 | Windows 已有用戶中招；Mac 規模未載 | 安裝指令只從官網複製，不點搜尋廣告；Mac 用戶同樣先核對網域。見 [[topics/ai-agent-safety-archive]] | 未見官方回應 |
 | 637 個 npm 套件植入 SessionStart hook | 2026-05-19 攻擊，06-02 完整分析 | 39 分鐘內 323 套件受害，累計 637 套件（dev.to） | 檢查專案與使用者設定裡不是你加的 hook；見 [[topics/ai-agent-safety#現在還擋不住的攻擊]] | 第三方生態，無回應 |
 | 294,842 筆 secrets 外洩 | 2026-06-10 更新 | 6,943 台機器、294,842 個 secrets（Reddit 轉述，單一來源） | 裝過可疑套件的機器輪換 API 金鑰與憑證。見 [[topics/ai-agent-safety-archive]] | 未見官方回應 |
 | Keyv 蠕蟲（npm，植入 Claude Code 與 VS Code hook） | 2026-08-04 | 30 分鐘內擴散至 400+ 套件名稱 | 開啟不明目錄前先看 hook；見 [[topics/ai-agent-safety-product-vulns#2026-08-04～08-05]] | 第三方事件，官方未見回應 |
@@ -85,6 +85,14 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### Hackread：惡意 Google 廣告鎖定 Mac 用戶，偽冒 Codex 與 Claude Code 下載頁散布惡意程式（2026-11-23 新增，升級既有 2026-05-10 條目）
+
+- **揭露來源**：Google News／Hackread（11/23 18:22 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：一波針對 Mac 使用者的惡意 Google 廣告活動，廣告偽裝成 Codex 與 Claude Code 的官方下載頁面誘導下載惡意程式；惡意程式家族、受害規模與投放手法均未見報導
+- **與既有事件的關係**：與既有 2026-05-10「Google 廣告木馬」（PowerShell 木馬、鎖定 Windows）同屬「搜尋廣告冒充官方下載頁」手法，本則首見擴及 macOS 平台，已併入上方跨月對照表同一列
+- **你能先做什麼**：用 Mac、習慣直接點 Google 搜尋廣告下載 Claude Code 的人，下載前核對網域是否為官方
+- **可信度評估**：單一來源、原料無可讀內文，訊號強度低
 
 #### Simon Willison：ChatPRD 創辦人揭露，有團體偽裝個人試用大量申請免費試用與促銷碼，轉售 AI token 用量牟利（2026-11-20 新增，跨類別，非 Claude 專屬）
 
@@ -721,6 +729,9 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
 ### 2026-11 時序
+
+#### 2026-11-23
+- **[📋 新增，僅標題可用] Hackread：惡意 Google 廣告鎖定 Mac 用戶，偽冒 Codex 與 Claude Code 下載頁散布惡意程式**：與既有 05-10 Google 廣告木馬同屬搜尋廣告冒充官方下載頁手法，首見擴及 Mac，詳見「## 技術彙整」
 
 #### 2026-11-17
 - **[🟡 跟進] Dark Reading：Cursor 正式將 Claude Code 延伸套件惡意事故歸因於第三方資安漏洞**：詳見「## 技術彙整」；是否同案的懸置如下

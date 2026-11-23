@@ -4,17 +4,17 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-21"
-last_news_update: "2026-11-21"
+last_updated: "2026-11-23"
+last_news_update: "2026-11-23"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 8
-attribution_count: 19
-attribution_last: "2026-11-21"
+attribution_count: 23
+attribution_last: "2026-11-23"
 top_source: "official-docs"
 pending_count: 0
 pending_overdue: 0
@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-23
+**最後新聞更新：** 2026-11-23
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-21）
-> 桌面版文件新增：Code tab 的 Computer use 需 Pro／Max／Ultra 方案（macOS／Windows）；Dispatch 不再開放給新使用者；詳見 [[entities/claude-code-features#桌面版功能地圖]]「其他」「Dispatch 與 Claude 建議的任務」。
+> **最新動態**（2026-11-23）
+> 官方發布「Claude Ship」：Claude 自動審查 PR、修復問題並依規則核准變更，詳見 [[entities/claude-code-features#Claude Ship：自動審查、修復與核准 PR]]；桌面版文件同步新增「Walk through in changes」逐筆走查 diff 與 Auto-verify 預設開啟兩項對應能力，詳見 [[entities/claude-code-features#桌面版功能地圖]]。
 
 ---
 
@@ -74,9 +74,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 11-10 該段與切換說明再被移除，內容仍未載。
   - 11-15 再新增「Claude Code model configuration」與「為何對話中換成 Opus 5／5.5」兩段，同時移除「切換模型、effort 與 thinking 設定」與「訓練資料多新」兩段；段落在新增／移除間反覆第三次，具體設定內容仍未載。
 
+### Claude Ship：自動審查、修復與核准 PR
+
+**2026-11-23 官方發布**：Claude 自動審查 pull request、修好問題，並依團隊設定的規則核准變更；由 **Claude Approvals**（核准規則／policy file）與 **PR Steward**（PR 存取範圍管理）兩套子機制組成（[官方文件](https://code.claude.com/docs/en/claude-ship.md)）。
+
+官方文件索引同日新增 16 頁設定與疑難排解文件，含 [Approvals classifiers](https://code.claude.com/docs/en/approvals-classifiers.md)、[GitHub rules](https://code.claude.com/docs/en/approvals-github-rules.md)、[policy file reference](https://code.claude.com/docs/en/approvals-policy.md)、[在 PR 上使用 Approvals](https://code.claude.com/docs/en/approvals-pull-requests.md)、Set up／Troubleshoot Claude Approvals、Set up／What can access／Troubleshoot PR Steward；具體設定步驟、核准範圍與風險控管僅標題可用，內文未載。
+
+桌面版文件同日新增對應能力：「Walk through in changes」可逐筆走過 diff 裡的每個發現；Auto-verify 預設開啟，可在 `.claude/launch.json` 加 `"autoVerify": false` 關閉（見 [[#桌面版文件時序]]）。
+
+Build Flags 同日新增 `CLAUDE_CODE_DISABLE_SHIP`、`CLAUDE_CODE_DISABLE_DESKTOP_SHIP` 兩個候選旗標，名稱與本功能吻合，疑為對應的關閉開關（見 [[topics/claude-code-experimental]]）。
+
+Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少 10 家獨立媒體同日跟進報導。已回報 [[feature-radar]]。
+
 ### 桌面版功能地圖
 
 > 把下方「桌面版文件時序」的桌面版文件（`desktop.md`）異動依主題歸群；每條只收時序條目已記的事實，日期指向時序原條。官方文件 [desktop.md](https://code.claude.com/docs/en/desktop.md)，彙整日 2026-10-25。
+
+**Claude Ship／Auto-verify（桌面版）**
+- 11-23：「Walk through in changes」逐筆走查 diff 裡的每個發現；Auto-verify 預設開啟，`.claude/launch.json` 設 `"autoVerify": false` 可關閉；本機安裝的 plugin 不帶入 cloud session；側邊聊天視窗提問不寫入主對話紀錄。
 
 **SSH 遠端與離線續跑**
 - 11-20：主機顯示按鈕或清單時皆可新增 SSH connection（清單方式在最下方選取）；連線名稱可選填，留空用 SSH host 值；SSH／WSL 檔案在 Browser pane 開啟時預覽不執行腳本，腳本繪製的圖表／表格會是空的。
@@ -134,6 +149,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-23）：桌面版文件字數由 227,979 增至 228,099，新增 12 段（移除段落未列出）。
+  - **新增內容（原文列出的）**：「Walk through in changes」開啟 diff 畫面逐筆走過每個發現，為 Claude Ship 自動審查機制在桌面版的入口，見 [[#Claude Ship：自動審查、修復與核准 PR]]；本機安裝的 plugin 不會帶進 cloud session（[原文](https://code.claude.com/docs/en/desktop.md)）。
+  - 新增側邊聊天視窗可針對目前 session 提問，答案不寫入主對話紀錄；Auto-verify 預設開啟，可在 `.claude/launch.json` 加 `"autoVerify": false` 關閉（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-21）：桌面版文件字數由 227,349 增至 227,979，新增 5 段（移除段落未列出）。
   - **新增內容（原文列出的）**：Code tab 的 Computer use 需 Pro／Max／Ultra 方案，macOS／Windows 可用（其餘平台未列，原文截斷）；Dispatch 現在不開放給新使用者，未出現時另有替代做法（連結文字截斷）；使用前先在設定確認 Computer use 已開啟（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-20）：桌面版文件字數由 227,103 增至 227,349，新增 26 段、移除 21 段（移除段落僅存雜湊，無法列出原文）。

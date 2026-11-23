@@ -112,6 +112,7 @@
 | [[entities/claude-personal-finance]] | feature | 🛠️ 工具/功能 | beta | Claude Personal Finance：2026-11-05 推出，連結銀行/信用卡/貸款/投資帳戶供 Claude 分析消費狀況；方案範圍、資料邊界與安全機制官方尚未載明 |
 | [[entities/gary-marcus]] | person | 👤 人物 | active | AI 評論家；多次公開批評 Anthropic（估值敘事、IPO 流通股比例），2026-11-19 建頁彙整其歷次具名表態 |
 | [[entities/vas-narasimhan]] | person | 👤 人物 | active（單一來源） | Anthropic 董事會成員、Novartis 執行長；2026-11-20 公開表示看好用 AI 解決藥物研發「生物學延遲」問題 |
+| [[entities/satya-nadella]] | person | 👤 人物 | active（單一來源） | Microsoft 執行長；2026-11-22 公開承認 VS Code 稱霸十年後六個月內被 Claude Code 搶走存在感（Windows Latest，未附具名或數量佐證） |
 ---
 
 ## Topics（進行中議題）
@@ -141,7 +142,7 @@
 | [[topics/anthropic-agent-stack]] | 🛠️ 工具/功能 | ongoing | 官方 agent 積木總覽：八塊積木各自為什麼出、讓你多做出什麼、怎麼疊；選型表與六層架構收附錄　↳ 子故事：[[entities/managed-agents]]、[[entities/managed-agents-archive]] |
 | [[topics/anthropic-product-matrix]] | 🛠️ 工具/功能 | ongoing | 產品 × 功能對照表：Claude app、Claude Code、Tag、Platform、Duet 五欄 × 15 項功能，每格附官方來源；產品專屬功能與專用版另列 |
 | [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查 |
-| [[topics/enterprise-cost-management]] | 💼 商業 | monitoring | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；Bank of America 雇千名約聘人員修補 Mythos 掃出的漏洞　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
+| [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；11-23 新增即時成本控管功能報導　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
 | [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
 | [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 的錢現在怎樣：指標表與 IPO 一句；往下鑽合作與算力（含跟 Google／Amazon／Microsoft 的關係）、風險與商業模式、上市與財報　↳ 子故事：[[topics/anthropic-business-archive]]、[[topics/anthropic-business-risks]]、[[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]] |
 | [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日，判讀分四條子線）：先列買得到的標的，再照分析師六問逐則判，兩週後結算（教學型事件研究，非投資建議；事實在商業各頁）　↳ 子故事：[[topics/market-signals-compute]]、[[topics/market-signals-customers]]、[[topics/market-signals-ipo]]、[[topics/market-signals-legal]] |
