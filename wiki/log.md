@@ -9467,3 +9467,33 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：本日無候選（當日無「開發實務」類條目）
 - market 判讀：本日無訊號（已檢視 42 條，IPO 財富快照未動 S-1 數字，不開線）
 - 更正（同日 Ingest 記錄）：上行「devpractice 沉澱：本日無候選」有誤——當日無「開發實務.md」官方指南包、不寫 `topics/coding-workflow-guide.md`，但 devpractice 記者仍依角色定義執行例行候選盤點：新增候選 6 筆（claude-code-known-issues Plan Mode 繞過、fast-anything／dev.to CLAUDE.md-Skill 實測各 1、community-cost 用量工具、community-tech-tools code-review-gate-skill、community-multi-agent facadecode），append 至 `data/devpractice-candidates.jsonl`，手冊寫入 0 則（候選留待週更落地），基準線 `data/devpractice_state.json` 已推進至 17ed0c56bc
+
+## 2026-11-23 Ingest
+
+- 來源日報：[[news/2026-11-23]]
+- 更新頁面：
+  - **人物**：wiki/entities/satya-nadella.md
+  - **功能**：wiki/entities/claude-code.md、wiki/entities/claude-code-known-issues.md、wiki/entities/claude-code-releases.md、wiki/entities/claude-code-features.md、wiki/topics/claude-code-experimental.md（新增 Claude Ship／Claude Approvals／PR Steward 官方發布、9 則高互動 GitHub Issues、Build Flags 13 候選旗標、SDK TS/Python 新版、桌面版文件更新）
+  - **商業**：entities/pricing、topics/anthropic-business、topics/anthropic-ipo、topics/anthropic-business-risks、topics/enterprise-cost-management、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety-product-vulns、topics/ai-agent-safety（Mac 版惡意 Google 廣告偽冒下載頁，併入既有供應鏈攻擊跨月對照表）
+  - **模型**：無（Status 服務中斷未點名模型、VentureBeat 成本三倍報導僅殼層摘要，皆判證據不足不收）
+  - **社群**：無（22 則皆未達收錄門檻：6 則 GitHub Search 工具無法驗證防刷、12 則 Show HN 分數 1–4 遠低於低門檻、4 則 Google News 單一來源無具體機制）
+  - **投資分析**：本日無訊號（已檢視 2 條，VentureBeat 成本訊號僅標題可用不達硬度門檻）
+- 新增頁面：wiki/entities/satya-nadella.md
+- feature-radar：新增「Claude Ship」（🔥🔥🔥🔥、⏳ 觀望，正式發布）；本日新增重大發布 callout 與全覽表同步更新；⭐ 候選池判定記入 %% 備忘（熱度達標、試用價值未達門檻，不進三件）
+- index.md：新增 satya-nadella（👤 人物，active（單一來源））；topics/enterprise-cost-management 狀態 monitoring → ongoing
+- 摘要：今日最大新聞為 Anthropic 推出「Claude Ship」自動 PR 審查／修復／核准功能（官方文件 16 頁＋10+ 家媒體同日報導），同時 Anthropic 股價隨 Jensen Huang 回任 Nvidia 的科技股反彈逆勢下滑、WSJ 報導 $9,000 億支出承諾使華爾街預期舉債評等垂圾級，另有 Mac 版惡意廣告偽冒 Claude Code 下載頁與 Satya Nadella 公開承認 VS Code 被 Claude Code 搶走存在感兩則獨立話題。
+- 呈現品質：全部通過
+- 品質備註：
+  - [主編] 本次雲端排程今天第三班（22:00 UTC）才拿到當日原料——前兩班（12:00／17:00 UTC）因 `src/gathered_archive/2026-11-23.json` 尚未由 GitHub Actions 產出而正確中止（已各留 ABORTED 心跳），GitHub Actions 延遲至本班開跑瞬間（22:08 UTC）才完成抓料，屬正常時間緩衝內的延遲
+  - [主編] 功能記者批次編輯時誤執行 `python scripts/build_web.py`（非乾跑），產生涵蓋其他日期 digest 的非預期 web_reader/ 重建；已 `git checkout -- web_reader/` 還原 tracked 檔並 `rm` 清掉兩個 untracked 產物，確認工作樹乾淨後才進彙整。正式建置留給 Step 4 統一跑一次
+  - [主編] feature-radar「⭐ 現在值得跟的三件」区块原有的 %%…%% 備忘註解在我新增一段時不慎提早插入閉合 `%%`，導致下一段既有備忘（11-13 重算）短暫外洩到讀者可見正文；`ingest_gate.py` 的讀者語言閘當場抓到並已修回單一完整 %% 區塊
+  - [主編] entities/pricing.md、index.md、topics/anthropic-ipo.md 三處新增內容首次撰寫時超過字元上限機械閘（245／141／573 字元），已下沉改寫至門檻內
+- 分類回退：無
+- 轉知帳本：H-d8557d（社群→商業，Anthropic 官方 API 定價出現負向第三方對照；社群記者原寫轉知對象為功能記者，主編依分類表「計費政策/成本案例屬商業」改派商業記者，尚待下一輪商業記者查證）
+- 主編待辦（本機承接，非本輪阻塞項）：
+  - 功能記者同步自查：評估 `topics/anthropic-product-matrix.md` 是否要為 Claude Ship／Claude Approvals／PR Steward 新增一列——判定不需：Claude Ship 是 Claude Code 單一產品內的子功能，尚無跨 Claude app／Tag／Platform／Duet 的對應實例可供跨產品比較，不符該表「同一功能跨產品對照」的收錄形狀；待官方把它擴及其他產品時再議
+  - 商業記者同步自查：⚠️ 需查證官方說明中心，Techzine Global 所稱「即時成本控管功能」是否即 10-29 TechCrunch 已報導但未載名稱的支出能見度工具——留待下次本機 session 以 web 工具查證
+  - 安全政策記者同步自查：⚠️ The Next Web／Startup Fortune 兩則企業資料治理報導是否為既有 EFS（Enterprise Frontier Safeguards）進入秋季分階段上線的新進度——兩則僅標題可用，留待下次本機 session 查證一手來源後再議
+- devpractice 沉澱：候選 3 筆（entities/claude-code-features 的 Claude Ship 官方發布＋桌面版 Walk-through/Auto-verify、entities/claude-code-known-issues 的 #95354 PreToolUse hook 卡住、topics/enterprise-cost-management 的 Techzine Global 即時成本控管），手冊寫入 0 則（當日無「開發實務」官方指南包，候選留待週更落地），基準線已推進至 333d731
+- market 判讀：本日無訊號（已檢視 2 條：VentureBeat／Crypto Briefing 成本三倍報導僅標題可用不達硬度門檻；Anthropic Status 服務中斷不屬六類任何一類）
