@@ -3,19 +3,19 @@ page: "topics/claude-research-results"
 kind: "topic"
 status: "ongoing"
 domain: "🤖 模型"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-21"
+last_updated: "2026-11-24"
+last_news_update: "2026-11-24"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 8
-attribution_count: 1
-attribution_last: "2026-11-21"
+attribution_count: 5
+attribution_last: "2026-11-24"
 top_source: "google-news"
-pending_count: 3
+pending_count: 4
 pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 1

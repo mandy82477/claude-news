@@ -4,17 +4,17 @@ kind: "entity"
 type: "model"
 status: "active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）"
 domain: "🤖 模型"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-24"
+last_news_update: "2026-11-24"
 status_main: "active"
-days_since_news: 21
+days_since_news: 0
 parent: null
 children: "['entities/opus-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 21
+days_since_news_subtree: 0
 inbound_links: 36
-attribution_count: 32
-attribution_last: "2026-11-02"
+attribution_count: 33
+attribution_last: "2026-11-24"
 top_source: "google-news"
 pending_count: 3
 pending_overdue: 0

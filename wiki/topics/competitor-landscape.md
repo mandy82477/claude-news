@@ -3,8 +3,8 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-23"
-last_news_update: "2026-11-23"
+last_updated: "2026-11-24"
+last_news_update: "2026-11-24"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,12 +12,12 @@ children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 83
-attribution_count: 325
-attribution_last: "2026-11-23"
+attribution_count: 327
+attribution_last: "2026-11-24"
 top_source: "blog"
 pending_count: 10
-pending_overdue: 0
-pending_next_review: "2026-11-24"
+pending_overdue: 1
+pending_next_review: "2026-12-05"
 pending_signalled: 2
 staleness_exempt: null
 signal: "健康"

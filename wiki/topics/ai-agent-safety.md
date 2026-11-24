@@ -3,15 +3,15 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-23"
+last_updated: "2026-11-24"
 last_news_update: "2026-11-12"
 status_main: "ongoing"
-days_since_news: 11
+days_since_news: 12
 parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-agent-safety-cyber', 'topics/ai-agent-safety-product-vulns', 'topics/ai-agent-safety-prompt-injection', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 132
+inbound_links: 133
 attribution_count: 304
 attribution_last: "2026-11-12"
 top_source: "google-news"

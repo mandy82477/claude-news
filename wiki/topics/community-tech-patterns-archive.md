@@ -6,18 +6,18 @@ domain: "🌐 社群"
 last_updated: "2026-11-22"
 last_news_update: "2026-06-30"
 status_main: "resolved"
-days_since_news: 146
+days_since_news: 147
 parent: "topics/community-tech-patterns"
 children: "['topics/community-tech-timeline']"
 page_role: "archive"
-days_since_news_subtree: 146
+days_since_news_subtree: 147
 inbound_links: 25
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 5
-pending_overdue: 0
-pending_next_review: "2026-11-24"
+pending_overdue: 4
+pending_next_review: "2026-12-14"
 pending_signalled: 1
 staleness_exempt: null
 signal: "⚠️ 高引用但停滯"
