@@ -394,24 +394,9 @@
       "pageType": "entity"
     },
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "mythos",
       "name": "Claude Mythos",
       "pageType": "entity"
-    },
-    {
-      "id": "pricing-incidents",
-      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-cyber",
-      "name": "模型網攻能力、濫用與防守方放行",
-      "pageType": "topic"
     },
     {
       "id": "ai-agent-safety-prompt-injection",

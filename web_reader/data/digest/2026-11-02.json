@@ -479,13 +479,7 @@
     }
   ],
   "preview": "Claude Code：MSIX GPU 當機找到根因：新回報（#81341）指出錯誤碼 0x060C201E 源自 Windows CIG（MicrosoftSignedOnly）政策與 vendor 簽署 vk_swiftshader.dll 衝突，每次開啟瀏覽器預覽都會當機，與既有 #80444 合併追蹤。",
-  "sedimentedToday": [
-    {
-      "id": "opus-5",
-      "name": "Claude Opus 5",
-      "pageType": "entity"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-11-02",
     "summary": "",

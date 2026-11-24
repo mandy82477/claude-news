@@ -290,11 +290,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-research-results",
-      "name": "Claude 原創科研成果與驗證狀態",
-      "pageType": "topic"
-    },
-    {
       "id": "coding-workflow-guide",
       "name": "程式開發實戰手冊",
       "pageType": "topic"
@@ -317,16 +312,6 @@
     {
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-ipo",
-      "name": "IPO 與財務揭露這則怎麼判",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
       "pageType": "topic"
     }
   ],
