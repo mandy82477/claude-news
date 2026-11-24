@@ -1665,3 +1665,5 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [cloud watchdog-push STARTED 2026-11-24T01:31:40Z]
 [cloud daily-news-pipeline-cloud STARTED 2026-11-24T12:08:55Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-11-24T12:08:55Z] TARGET_DATE=2026-11-24 ABORTED: gathered_items.json date=2026-11-23 items=70，非目標日期的新鮮資料（src/gathered_archive/2026-11-24.json 不存在，上游 GitHub Actions 抓料尚未到齊，交由後續班次接手）
+[cloud daily-news-pipeline-cloud STARTED 2026-11-24T17:08:23Z]
+[cloud daily-news-pipeline-cloud ABORTED 2026-11-24T17:10:00Z] TARGET_DATE=2026-11-24 ABORTED: gathered_items.json date=2026-11-23 items=70，非目標日期的新鮮資料（src/gathered_archive/2026-11-24.json 不存在，上游 GitHub Actions 抓料尚未到齊，交由後續班次接手）
