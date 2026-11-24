@@ -466,3 +466,4 @@
 {"id": "H-cd3930", "closed": "2026-11-22", "status": "done", "by": "功能", "result": "六節點皆過不了產品化矩陣入口判準，不新增列（2026-11-22）"}
 {"id": "H-be49fb", "closed": "2026-11-22", "status": "done", "by": "社群", "result": "canary、Gravitas、code-review-gate-skill 目錄列補「未推薦」，與手冊口徑一致（2026-11-22）"}
 {"id": "H-d8557d", "opened": "2026-11-23", "from": "社群", "to": "商業", "page": "entities/pricing", "note": "Anthropic 官方 API 定價出現負向第三方對照（來源：Hacker News「Show HN: Zhuan – one API key for Claude and GPT at ~25% of official prices」https://zhuan.xyz/，2026-11-23 12:38 UTC；證據等級：單一 HN 貼文 2 分，無測試方法佐證，第三方轉售服務真實性未查證；社群記者原寫轉知對象為功能記者，主編依分類表「計費政策/成本案例屬商業」改派商業記者）", "status": "open"}
+{"id": "H-d8557d", "closed": "2026-11-24", "status": "void", "by": "主編", "result": "商業記者核實：Show HN「Zhuan」第三方 API 轉售服務單一貼文僅 2 分、無獨立佐證，證據強度未達 entities/pricing-incidents 新增個案門檻，既有「轉售商最高 90% 折扣」結論已泛指此類現象，不另開個案"}

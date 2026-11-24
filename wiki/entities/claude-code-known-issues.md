@@ -33,13 +33,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-23
-**最後新聞更新：** 2026-11-23
+**最後更新：** 2026-11-24
+**最後新聞更新：** 2026-11-24
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬（2026-11-22 另立第十組 Cowork 與雲端排程可靠性；2026-11-22 另立認證與登入組）；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-23）
-> - **新回報**：VS Code 擴充套件歷史 session 消失（#9258），PreToolUse hook 回傳後工具卡住不派發（#95354，2.1.220／Windows），Skills 上傳跳 Internal server error（#26310）。
-> - **互動數更新**：Desktop 重啟孤兒程序（#42776）208 則留言、印度計價請求（#17432）216 則留言、跨機器可攜記憶（#25739）36 則留言、`autoMemoryEnabled` 記憶前言（#63903）48 則留言。
+> **最新動態**（2026-11-24）
+> - **新回報**：CLAUDE.md 700 行規則契約在 4.5 小時 session 內被整套忽視、含 9 個捏造理由（#90542），VS Code／Cursor 外掛留下鎖定分頁群組（#20324），resume session 只能在當初啟動的目錄下進行（#5768）。
+> - **Anthropic Status**：Claude Haiku 5.5 錯誤率升高 18 分鐘已解決；Claude for Microsoft 365 外掛部分個人 Microsoft 帳號用戶的 Mac 版消失，調查中。
+> - **互動數更新**：Passkey 全平台登入請求（#84862）52 則留言、AGENTS.md 支援請求（#6235）410 則留言。
 
 ---
 
@@ -148,8 +149,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - Bedrock 20 MB（故媒體稱「Bedrock 的 6.4 倍」與 128/20 吻合），Anthropic 營運的 AWS／Google Cloud／Foundry 為 32 MB。
     - 媒體（FourWeekMBA、Startup Fortune，2026-10-30）所稱「由 32 MB 升至 128 MB」的升級時點官方文件未載（來源：[API overview](https://platform.claude.com/docs/en/api/overview)，查證 2026-11-21）
 
-### 🧠 行為與品質（86 條未修復、3 條已修復、1 條拒修、9 條查無官方、1 條❓）
+### 🧠 行為與品質（87 條未修復、3 條已修復、1 條拒修、9 條查無官方、1 條❓）
 
+- 🔴 **未修復**｜**700 行 CLAUDE.md 規則契約被整套忽視：9 個捏造理由、過期狀態當現狀、驗收步驟被跳過（issue #90542，29 留言，Opus 5，2026-11-24）**：與 #2544（規則不具強制力）同類但記錄單次具體失效模式；官方尚未回應。
 - 🔴 **未修復**｜**PreToolUse hook 回傳後工具不再派發，session 卡在對話中途（GitHub issue #95354，累積 31 則留言，2.1.220／Windows，2026-11-23）**：有自訂 PreToolUse hook、在 Windows 上跑的人升級前宜留意；與 #6305 同屬 hooks 可靠性問題但情境不同；官方尚未回應。
 - 🔴 **未修復**｜**Skills 上傳在 Claude Web 與 Desktop 跳「Internal server error」（GitHub issue #26310，累積 30 則留言、20 個讚，2026-11-23）**：想上傳自訂 Skill 的使用者卡在上傳這一步；官方尚未回應。
 - 🔴 **未修復**｜**Plan Mode 開啟且系統多次提醒不應編輯檔案時，模型仍直接修改原始檔案（GitHub issue #38255，累積 30 則留言、38 個讚，2026-11-22）**：Opus 4.6 於 Plan Mode 期間仍直接改動原始檔案；此保護機制目前會被繞過；官方尚未回應。
@@ -270,7 +272,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（29 條未修復、2 條已修復、3 條拒修、1 條查無官方）
+### 📂 Session 與資料管理（30 條未修復、2 條已修復、3 條拒修、1 條查無官方）
 
 **Session 保存與記憶生命週期（彙整，細節見各原條目）**
 
@@ -282,6 +284,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 Windows Desktop 靜默清除紀錄：見母頁「現在還沒修好的」表列（#80444 等）與下方靜默資料遺失條目。
 - 讀者可做的事：靠 session 歷史回溯過去工作的人，自行定期備份 `~/.claude/projects`。
 
+- 🔴 **未修復**｜**Resume session 只能在當初啟動 session 的那個目錄下進行，換到別的目錄後無法恢復（GitHub issue #5768，累積 26 則留言、63 個讚，Claude CLI 1.0.80，2026-11-24）**：常切換專案目錄、靠 session 恢復接續工作的人要留在原目錄才能續；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：團隊共享記憶（Shared Team Memory），取代現行僅限個人的記憶系統（GitHub issue #38536，累積 34 則留言、14 個讚，2026-11-14）**：多人共用同一 repo 的團隊無法互通知識，須反覆向 Claude 重新說明；官方尚未回應。
   - 備註：與既有跨 session 持久記憶（⛔ #14227）同屬記憶延續性缺口，但聚焦多人共享而非單人跨 session，暫分列。
 - 🔴 **未修復**｜**功能請求：讓 Claude 可在自動化工作流程中視狀況自行呼叫 `/compact`（conditional /compact，GitHub issue #19877，累積 26 則留言、25 個讚，2026-11-15）**：跑長時間自動化流程、常被 context 塞滿打斷的人目前只能靠人手動觸發；官方尚未回應。
@@ -335,7 +338,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 三個獨立平台（Mobile、Desktop、Web connector）在 2026-07-05～07-10 一週內各自湧現高互動的多帳號管理訴求，指向同一個 Claude 全平台共通的帳號架構缺口；2026-07-31 CLI 端亦出現同主軸的獨立功能請求。
 
-- 🔴 **未修復**｜**功能請求：Claude 帳號全平台支援 Passkey（WebAuthn）登入（GitHub issue #84862，累積 26 則留言、209 個讚，全站今日讚數最高，2026-11-05）**：使用者要求取代或補強密碼登入；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：Claude 帳號全平台支援 Passkey（WebAuthn）登入（GitHub issue #84862，累積 52 則留言、317 個讚，全站今日讚數最高，2026-11-05 首見，2026-11-24 互動數更新）**：使用者要求取代或補強密碼登入；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**驗證信對使用者信箱被抑制而無法登入 Claude Code，客服機器人沒有轉真人管道（GitHub issue #79808，累積 32 則留言、7 個讚，2026-11-22 互動數更新）**：收不到驗證信的人目前無自助繞法；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code 要求使用者幾乎每天都須重新透過網頁驗證登入（GitHub issue #1757，累積 83 則留言、70 個讚，2026-08-03 首見，2026-09-04 互動數更新）**：使用者回報 Claude Code 幾乎每天都要求重新透過網頁驗證登入，認為過於頻繁且不必要；與既有「OAuth 登入逾時失敗，`auth.anthropic.com` 網域無法解析」（issue #33238）同屬登入／驗證體驗問題但現象不同（一為逾時失敗、一為驗證有效期過短），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：多帳號設定檔支援（Multi-Account Profile Support）（GitHub issue #20131，累積 39 則留言，2026-07-31）**：Claude Code 目前僅支援單一已驗證帳號，使用者呼籲支援同時設定多組帳號設定檔（例如同時管理一個 API 計費帳號與一個一般訂閱帳號），方便切換；與既有三平台多帳號缺口（Mobile／Desktop／Web connector）同屬帳號架構議題，此則聚焦 CLI 端設定檔機制；官方尚未回應或排入路線圖。
@@ -395,8 +398,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**Cowork 顯示「Failed to start Claude's workspace」，VM service not running，重開機後依然（GitHub issue #27801，73 則留言、42 個讚，快照 2026-11-21）**：Windows 另有多起 Cowork VM 啟動失敗，見下方「平台相容性」組的 Windows 說明；官方尚未回應。
 
-### 🔌 平台相容性（105 條未修復、3 條已修復、3 條查無官方）
+### 🔌 平台相容性（106 條未修復、3 條已修復、3 條查無官方）
 
+- 🔴 **未修復**｜**VSCode／Cursor 外掛開新分頁時，若已開其他檔案會建立新的鎖定分頁群組，影響分頁管理（GitHub issue #20324，累積 26 則留言、19 個讚，2026-11-24）**：習慣在 VS Code 同時開多個檔案搭配 Claude Code 的人會碰到，屬介面體驗問題，不影響功能本身；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件歷史 session 無故消失（GitHub issue #9258，累積 48 則留言、51 個讚，2026-11-23）**：在 VS Code 擴充套件裡仰賴歷史紀錄回溯對話的使用者，session 歷史會無預警消失；官方尚未回應。
 - 🔴 **未修復**｜**Windows（MSIX）版本更新跳出「另一個程式正在使用此檔案」，須重開機才能再啟動（GitHub issue #76357，累積 44 則留言、20 個讚，2026-11-22）**：每次更新皆重演；與既有 #51847 同類但此則需重開機才能恢復，暫分列；官方未說明成因或繞法。
 - 🔴 **未修復**｜**Claude in Chrome 擴充套件在 macOS 上的 Microsoft Edge 切換或開新分頁時側邊面板會自動關閉（GitHub issue #30873，累積 37 則留言、47 個讚，2026-11-22）**：在 macOS 用 Edge 搭配此擴充套件的使用者，操作分頁會中斷側邊面板顯示；官方尚未回應。
@@ -515,7 +519,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 2026-11-21 複查：官方 [Claude Desktop on Linux (beta)](https://code.claude.com/docs/en/desktop-linux) 載有 Cowork 啟動需求（KVM、vhost 等），但未提此故障
   - 社群診斷同類失敗（`cowork-vm-service.js` 未啟動、`.sock` 不存在）根因為服務未自動喚起並有手動 workaround，非官方確認；07-07 擴展至行動/網頁版後是否延伸待觀察。
   - 2026-10-24 再複查：[說明中心沙箱文章](https://support.claude.com/en/articles/14479288)只述 macOS 與 Windows 本機虛擬機，未載 Linux 支援或本案診斷，查無官方。
-- ✅ **已修復** v2.1.277（2026-09-18）｜**AGENTS.md 支援上線（issue #6235，396 則留言、6643 個讚，全站讚數最高）**：無 `CLAUDE.md` 時原生改讀 [AGENTS.md](https://agents.md/)；社群回報 `.agents/skills` 未涵蓋；三個邊界見 [[topics/official-community-gap]] ⟨G-08⟩。
+- ✅ **已修復** v2.1.277（2026-09-18）｜**AGENTS.md 支援上線（issue #6235，410 留言、6696 讚，全站最高，11-24 更新）**：無 `CLAUDE.md` 時原生改讀 [AGENTS.md](https://agents.md/)；社群回報未涵蓋 `.agents/skills`；三個邊界見 [[topics/official-community-gap]] ⟨G-08⟩。
   **09-22 補（HN 327 分）**：關掉 telemetry 讀不到本機 AGENTS.md 這件事（既有邊界）成因是載入器卡在遠端 feature flag 後、且無警告；官方 issue #95690 已追蹤並標記修復，版本號未見於 changelog，此邊界暫視為未解。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，208 則留言、97 讚，2026-11-23 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
 - 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020、AppModel-Runtime EventID 215/208，issue #53247，110 則留言、38 讚，11-13 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
@@ -528,8 +532,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（14 條未修復、9 條已修復）
+### 🌐 服務穩定性（15 條未修復、10 條已修復）
 
+- ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Haiku 5.5 錯誤率升高（2026-11-24 17:09–17:27 UTC，約 18 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/fbvlx4wx4zx5)
+- 🔴 **未修復（調查中）**｜**Claude for M365 外掛在部分個人帳號 Mac 版 Excel／Word／PowerPoint 消失（2026-11-24 更新，調查中）**：個人 Microsoft 帳號登入、在 Mac 用這三款軟體的人可能遇到外掛消失；官方尚未給修復時程。[來源](https://status.claude.com/incidents/3vbyqgnswwxq)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：多個模型錯誤率升高（2026-11-23 09:39–09:56 UTC，約 17 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/yzs0s90d8fm8)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Mythos 5.2、Claude Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-19 08:56–09:11 UTC，約 15 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/c1kmrkmv5f3d)
 - ✅ **已修復**｜**Anthropic Status：Google Docs connector 編輯文件錯誤，影響 claude.ai／Code／Cowork（11-17 16:19 PT 起，11-18 已解決）**：這段時間編輯文件失敗即屬此次事故，現已恢復。[來源](https://status.claude.com/incidents/6prv10gjdpz1)

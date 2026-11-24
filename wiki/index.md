@@ -113,6 +113,7 @@
 | [[entities/gary-marcus]] | person | 👤 人物 | active | AI 評論家；多次公開批評 Anthropic（估值敘事、IPO 流通股比例），2026-11-19 建頁彙整其歷次具名表態 |
 | [[entities/vas-narasimhan]] | person | 👤 人物 | active（單一來源） | Anthropic 董事會成員、Novartis 執行長；2026-11-20 公開表示看好用 AI 解決藥物研發「生物學延遲」問題 |
 | [[entities/satya-nadella]] | person | 👤 人物 | active（單一來源） | Microsoft 執行長；2026-11-22 公開承認 VS Code 稱霸十年後六個月內被 Claude Code 搶走存在感（Windows Latest，未附具名或數量佐證） |
+| [[entities/max-tegmark]] | person | 👤 人物 | active（單一來源） | MIT 物理學教授、Future of Life Institute 創辦人；2026-11-24 稱 Anthropic 員工私下談論「奪取世界」（Novara Media，未附具體對話紀錄或第二方證實） |
 ---
 
 ## Topics（進行中議題）

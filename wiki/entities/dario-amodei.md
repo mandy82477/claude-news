@@ -4,8 +4,8 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-22"
+last_updated: "2026-11-24"
+last_news_update: "2026-11-24"
 status_main: "active"
 days_since_news: 1
 parent: null
@@ -34,20 +34,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-22
+**最後更新：** 2026-11-24
+**最後新聞更新：** 2026-11-24
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **最新動態**（2026-11-22）
-> Business Insider 報導 Anthropic 七位共同創辦人（含本人）持股加總價值約 1,410 億美元，與馬斯克身家對照（僅標題可用）。
+> **立場對照：曾言失業民眾會憤怒，今警告 AI 將消滅工作**（2026-11-24）
+> Times of India 回顧報導稱 Amodei 過去曾主張大量失業會激怒民眾，對照他近來持續公開警告 AI 將大規模取代工作的立場；具體舊發言出處與時間未見報導（僅標題可用）。
 
 ---
 
 ## 現況
 
-2026-11-22，Business Insider 報導 Anthropic 七位共同創辦人（含本人）持股加總價值約 1,410 億美元，並與馬斯克身家對照；Times of India 另估算此次上市可能讓數千名員工成為百萬富翁（均僅標題可用）。2026-11-21，WSJ 刊出人物側寫，描述 Dario Amodei 與妹妹 Daniela Amodei（Anthropic 總裁）執掌公司之餘，想在壯大、推動史上最大規模 IPO 之後仍保留創辦初期的「獨特」風格（僅標題可用）。
+2026-11-24，Times of India 回顧報導稱 Amodei 過去曾主張大量失業會激怒民眾，對照他近來持續公開警告 AI 將大規模取代工作的立場；具體舊發言出處與時間未見報導（僅標題可用）。2026-11-22，Business Insider 報導 Anthropic 七位共同創辦人（含本人）持股加總價值約 1,410 億美元，並與馬斯克身家對照；Times of India 另估算此次上市可能讓數千名員工成為百萬富翁（均僅標題可用）。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；09-27 白宮晚餐為本人與 Trump 首次公開重新互動的跡象，10-01 Trump 公開表態「喜歡」Amodei 本人，為關係解凍添一實質訊號，惟是否完全修復仍未見報導證實。
 
@@ -57,6 +57,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 | 日期 | 立場 | 來源 |
 |------|------|------|
+| 2026-11-24 | Times of India 回顧：Amodei 曾言大量失業會激怒民眾，對照近期持續警告 AI 將消滅工作（僅標題，立場轉折） | Google News／Times of India |
 | 2026-11-22 | Business Insider：七位共同創辦人（含本人）持股加總約 1,410 億美元，與馬斯克身家對照；Times of India：上市或讓數千名員工成百萬富翁（均僅標題） | Google News／Business Insider、Google News／Times of India |
 | 2026-11-21 | WSJ 側寫 Dario 與妹妹 Daniela Amodei（Anthropic 總裁）執掌公司，欲在壯大、史上最大 IPO 之後仍保留創辦初期風格（僅標題） | Google News／WSJ |
 | 2026-11-16 | Yahoo Finance：未具名資深科技投資人稱藉 IPO「自我造勢」；Bloomberg：稱已成 AI 業界「頭號代言人」（均僅標題） | Google News／Yahoo Finance、Google News／Bloomberg.com |
@@ -152,6 +153,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Anthropic CEO Dario Amodei, who keeps warning AI will wipe out jobs, once argued that angry jobless people...](https://news.google.com/rss/articles/CBMitwJBVV95cUxQeXV3MGhwQjFWcXRwLWVRbVRyMEU4VFFhUUNveG9ZRmhRbXFTYmVVeFB5dkJ1TkljRUZYV1E5czJrSUxHT011QkxrMGw1dnhwa3pYYmRRZDZMZkc3WDhiQzBla3FNd2ZGNmtzTjFja0hiMWY1T2o4bjlJMDFIVXk5UktYR2R6UElxM3RJSFJYS2FjUkw4MFF3TkgxMFJzTWs2WEU4VWNDNE9RREtrMU42OFh5WV9yTFc1b1UzUXl6bnE1N0UwcjBkUlRoS0pjWFB5cE5fdDlLbVl1Z3VFNXVjUWpnMkN2NGtNYnRVVnZzS2didjhmSjdTdjYyX3dadzdLeFpPZllTVzc4VXhmX0I2eE16bVZHTWF0MUI4QVFJREFpcmR1Y1ZsZ3Q5N2dNZFpPdWhLSHVFa9IBvAJBVV95cUxPTE9YVFI2aDB2Ql9tV1k4ZlNLRVQtelhUWTJzYUN0YkVpcWJxN2pZQ2YyQ3JtbEszZFFWN2FMejNaUHZlTTNQbFplak1QTDlNU2IxYm5sRW9najFFZ2hHVEt4UjBMQkpacnB2c25ORVE5VHJCeHFYbFNaQV85d3pTb2NGcEp5ZGdDVlplXzFrY1FfRDAxbzNUeHBvd3VNcFhoN3JvVkIzYlpoTjd5Z25MX1hCa0RfXzhjYlJaeWJ5TW42MXVrbWgtdGxDbXYxdFVTTnB3VDhXamtjRWdoblNjMTlWdVV5U2M5S0FsMFZEbFhpVzZ3RXVKV0ZpTjlPUzJYQnh0UjlLdzM2RzFJVE5EYU5QQ1E5dGp5UnpuQWllS1ZvMjJaa0dMWXBDVDktU25lQ2pVUnAwMHkxODdz?oc=5) — Google News／The Times of India，2026-11-24（僅標題可用，立場轉折對照）
 - [Anthropic's IPO made its 7 founders' stakes worth about $141 billion. How that stacks up against Elon.](https://news.google.com/rss/articles/CBMilwFBVV95cUxPemFDcTcyNmVvMzhJeFdLX2VQNFdHdGZFX01XbjYyTDBYbE5OOUs4NllpdHlDalluUHR5eGhQZW44S2ZmdGh4ME1Fd0VLN2RHclpxLWU2OTNvM1RJUkwyQmQtTjQydUduM05rQ25PemdYNmYxdXgzOXZmTXk3S0tBMmIwUEtpTlBMZEs4RzB5UGd1RUR5LUM0?oc=5) — Google News／Business Insider，2026-11-22（僅標題可用，個人持股拆分未載）
 - [Times of India：Anthropic IPO 或讓數千名員工成為百萬富翁](https://news.google.com/rss/articles/CBMi9AFBVV95cUxNaHhBWHBNUW00OXBvRGt4NUsyRjRxam5tcGlVR0hRV2Jaa1R1bmZpbnFiVjE3aWk0aE1na0Fmd0xpWXpqemx5UTRGN2VpWHFzc2NVSnpGVHRNRXRwcXdZajZSVnpoLWVYelB6b0VHZEc3ak1XR0E1a3JfYU9RSFFETGpfWjdXdW82VS1aU3pjeVQ2QVRidlpVbG1tSXpRVVdKUzdKUXp2X1RGYVJWVU5zVDVOb0hIemxuUDNoUDRhUjBueGFVZXJiWTdET1RkWWpmS25IZXh2OHRrbDRteF9RTUx5UVIxYjltZGcwREZPc0VwZGQw0gH6AUFVX3lxTFBYbjdwcVZwYnR1aTY4ZUhQTVZRX1ZDSDd5ejVwTjNNRERncF9IT2NRMGxHZ0tXUm1kUWZaRXcxM2pNeTFNeUJQMUdHeFpyUW00TS0taWNyTHZvZ2VVQVhFMGdnSnBXbTNBMGMzTW1xOVhKeVhIY0JvbWx5SnNrdlVudWRuaThTNEw2Q3I2dklNOHJpNENCWmdBZWlJVmZxMTZ3RGkxQnJnOHVrdjlpTFlqS3dTMGZtM1hKYXBNX1BXTXJJOTBvWl91VU51MHVubmVpYmpvbVdxYVpmX0NaYlFLLTNuM3FyWTRIZmpQSEtYM2ZWOUdkLW5Xc1E?oc=5) — Google News／Times of India，2026-11-22（僅標題可用）
 - [They Run Anthropic. They Want to Keep It Weird. They're Brother and Sister. - WSJ](https://news.google.com/rss/articles/CBMihwFBVV95cUxOZGJyNGh6cktKS0FsM3FIbF9LbjFqVThfY3MyRURJREVmd1JqVGtVX3pTV1FuQzBUUUI3VDdXVHdUYkpKTDk1Ml9vZzdoN1p5T0pVZ3g1eGpwQ1NfVFp6VlhJX1FSXzZ6ajVDYjVKazF5N2FGbXVHLUdjN05YRzVQZnRYaVZtMkE?oc=5) — Google News／WSJ，2026-11-21（僅標題可用）
@@ -221,6 +223,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ### 2026-11
 
+- 2026-11-24：Times of India 回顧報導稱 Amodei 過去曾主張大量失業會激怒民眾，對照他近來持續公開警告 AI 將大規模取代工作的立場，形成前後對照；具體舊發言出處與時間未見報導（僅標題可用）（來源：Google News／The Times of India）
 - 2026-11-22：Business Insider 報導 Anthropic 七位共同創辦人（含本人）持股加總價值約 1,410 億美元，與馬斯克身家對照；Times of India 估算此次上市或讓數千名員工成為百萬富翁；個人持股拆分未見報導（僅標題可用）（來源：Google News／Business Insider、Google News／Times of India）
 - 2026-11-21：WSJ 刊出人物側寫，描述 Dario Amodei 與妹妹 Daniela Amodei（Anthropic 總裁）在公司壯大、推動史上最大規模 IPO 之後仍想保留創辦初期的「獨特」風格；具體內容未見報導（僅標題可用）（來源：Google News／WSJ）
 - 2026-11-18：OpenAI 執行長 Sam Altman 受訪被問 Anthropic 是否安全開發 AI，答「我不知道」，列入公開批評者對照（來源：Google News／ADWEEK、Google News／TheWrap）

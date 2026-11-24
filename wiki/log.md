@@ -9497,3 +9497,33 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - 安全政策記者同步自查：⚠️ The Next Web／Startup Fortune 兩則企業資料治理報導是否為既有 EFS（Enterprise Frontier Safeguards）進入秋季分階段上線的新進度——兩則僅標題可用，留待下次本機 session 查證一手來源後再議
 - devpractice 沉澱：候選 3 筆（entities/claude-code-features 的 Claude Ship 官方發布＋桌面版 Walk-through/Auto-verify、entities/claude-code-known-issues 的 #95354 PreToolUse hook 卡住、topics/enterprise-cost-management 的 Techzine Global 即時成本控管），手冊寫入 0 則（當日無「開發實務」官方指南包，候選留待週更落地），基準線已推進至 333d731
 - market 判讀：本日無訊號（已檢視 2 條：VentureBeat／Crypto Briefing 成本三倍報導僅標題可用不達硬度門檻；Anthropic Status 服務中斷不屬六類任何一類）
+
+## 2026-11-24 Ingest（雲端，第 3 班 22:00 UTC）
+
+- 來源日報：[[news/2026-11-24]]
+- 更新頁面：
+  - **人物**：entities/dario-amodei、entities/satya-nadella；新增 entities/max-tegmark
+  - **功能**：entities/claude-code-known-issues、entities/claude-code、entities/claude-code-features
+  - **商業**：topics/anthropic-ipo、topics/anthropic-business、entities/pricing、entities/pricing-incidents、topics/anthropic-business-risks、topics/competitor-landscape
+  - **安全政策**：topics/recursive-self-improvement、topics/ai-agent-safety-cyber、topics/ai-agent-safety
+  - **模型**：topics/claude-research-results、entities/opus-5、entities/opus-4-8
+  - **投資分析**：topics/market-signals-ipo（＋母頁 topics/market-signals）
+  - **社群**：無（13 則全數未達收錄門檻，5 款 GitHub 外掛因防刷疑慮無法查證，其餘 8 則低於 HN 低門檻）
+  - **開發實務**：無候選
+- 新增頁面：wiki/entities/max-tegmark.md（MIT 物理學教授、Future of Life Institute 創辦人；單一來源待查證）
+- feature-radar：新增「Artifact 安裝為獨立應用程式」（🔥、⏳ 觀望，Beta）、「Background Tasks 正式 GA」（🔥🔥、⚡ 有條件推薦）；Claude Ship 熱度 🔥🔥🔥🔥 → 🔥🔥🔥🔥🔥（兩日媒體跟進逾 10 家，已達上限）；Reflect with Claude（Monthly Recap）狀態 Preview → 正式發布；⭐ 現在值得跟的三件候選池今日無合格新項，維持 Fable 5.2／Mythos 5.2 不動，已連續第 3 次複查無替補，標記建議檢討 🔥🔥🔥🔥 門檻
+- index.md：新增 entities/max-tegmark（👤 人物，active（單一來源））
+- 摘要：Anthropic 股價今天正式跌破 83 美元 IPO 發行價（掛牌以來首次，CNBC 稱重挫 8%、Reuters 估市值蒸發近 2,000 億美元），同時 Anthropic 與 OpenAI 搶先發布互相矛盾的 VP≠VNP 證明優先權爭議，官方另宣布 MCP SDK 下載破 7 億次、Background Tasks 轉正式版，Claude Ship（11-23 發布）兩日內媒體跟進逾 10 家。
+- 呈現品質：全部通過（彙整時 `ingest_gate.py` 首輪抓到 3 道閘紅，主編同輪修到綠，見下方品質備註）
+- 品質備註：
+  - [主編] `scripts/collect_reporter_reports.py` 的 `parse_report()` 只取檔內「最後一個」`## [類別] 記者回報` 表頭——功能、商業兩類本輪各有一次分類回退補派，若把補派回報以獨立第二個表頭接在同一份 `reports/<類別>.md` 檔尾，會讓腳本整段丟棄原輪回報的來源歸因（首次 dry-run 只抓到 15 行、功能/商業各剩 1 行）。已改為把兩次回報合併進單一表頭的欄位後重跑，51→53 行全數歸因；日後分類回退補派一律合併寫入同一份報告檔，不得另起表頭。
+  - [主編] `topics/recursive-self-improvement.md:141` 寫入時出現「經記者轉述」字樣，`check_reader_language.py` 判定洩漏本庫角色名，已改寫為「Tegmark 受訪時的轉述說法」
+  - [主編] `entities/claude-code-known-issues.md` 三處細節區條列（#90542、AGENTS.md、M365 外掛消失，208～227 字元）、`entities/satya-nadella.md` 參考來源一則（243 字元）超出 200 字元上限，已縮寫至門檻內
+  - [主編] `topics/competitor-landscape.md`「最後新聞更新」停留 11-23，但當日歸因（Meta Muse UK 上線、OpenAI iFood 案例）已落地此頁，`check_wiki_freshness.py` 判漏更；已補為 2026-11-24。商業記者原意是以不覆寫此欄位來通過 `check_callout_coverage.py`（因今日新增內容判定為⚪級、非對手雷達等級變動），但 `daily-contracts.md`「頂部 delta-first callout」明文「今日有實質更新的任何頁，callout 括號日期必須寫成 TARGET_DATE」，與新鮮度閘要求一致，無例外空間；已把頁頂 callout 日期同步覆寫為 2026-11-24 並補一句說明今日兩則為非雷達等級變動，兩道閘同時轉綠
+  - [主編] 社群記者回報 5 款 GitHub 外掛（spritecast／claude-code-lsps／exo／traxagent-claude-plugin／atlas）同日衝上星數，依規則需查 forks／issues／commit 佐證才可收但其本身無 web 工具；主編嘗試以 `curl api.github.com` 直接查證，確認此 session 的 GitHub 存取範圍僅限 `mandy82477/claude-news`，對外部 repo 需逐一 `add_repo` 掛載才能呼叫 API——為單純核實星數真實性擴張 5 個不相關 repo 的存取範圍代價過高，未執行，維持記者原判斷不收，待有獨立佐證時再議
+- 分類回退：追加派工 2 筆（皆成立，無駁回）
+  - [分類複核記者] 官方文件更新：Claude Code 桌面版 → 排除改功能（新增 Windows ARM64 安裝版下載連結為新平台支援資訊非純版面調整），已補派功能記者收錄進 entities/claude-code-features
+  - [人物記者] Steve Eisman「OpenAI 與 Anthropic 共謀末日敘事」→ 人物改商業（Eisman 歷次唱空言論一律併入既有 topics/anthropic-ipo 市場評論敘事），已補派商業記者併入該頁「誰說撐不住」既有條目
+- 轉知帳本：H-d8557d 已 void（商業記者核實：Show HN「Zhuan」第三方 API 轉售服務單一貼文僅 2 分、無獨立佐證，證據強度未達 entities/pricing-incidents 新增個案門檻，既有結論已泛指此類現象，不另開個案）
+- devpractice 沉澱：本日無候選（已檢視 3 頁新增行：anthropic-business-risks 印度盧比計價議題非本類、enterprise-cost-management 與既有帳本條目同一事實不重複記、skill-interest-watch 40 行皆純星數快照無新敘事），基準線已推進至 42f23cf
+- market 判讀：判讀 1 則（第 2 類：Anthropic 股價首度跌破 $83 發行價，CNBC／Reuters，IPO 進程 ▸ 第 38 則），「買得到的標的」ANT 方向由 ⚖️ 兩面 → 📉 負面，新增里程碑登記（股價能否站回 $83 以上，複查 2026-12-08）

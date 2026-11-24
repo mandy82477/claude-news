@@ -28,16 +28,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-23
+**最後更新：** 2026-11-24
 **最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-23）
-> **產品漏洞**：Hackread 揭露惡意 Google 廣告偽冒 Codex／Claude Code 下載頁，鎖定 Mac 用戶散布惡意程式，見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+> **最新動態**（2026-11-24）
+> **網攻防護研究**：WIRED 報導 Anthropic 架設蜜罐，誘捕 AI 代理在無監督情況下做出不當行為，見 [[topics/ai-agent-safety-cyber#2026-11]]。
 >
-> 前一輪（2026-11-22）：
-> **查證結果**：Microsoft 安全部落格 10-19 證實 agent 遭提示注入劫持的案例，見 [[topics/ai-agent-safety-prompt-injection]]；越界率 0%→17.1% 的研究查到 arXiv 預印本，見 [[topics/ai-agent-safety-product-vulns]]；Claude Code 修補清單、OpenCode 餘額歸零等查無官方一手，已排定複查。
+> 前一輪（2026-11-23）：
+> **產品漏洞**：Hackread 揭露惡意 Google 廣告偽冒 Codex／Claude Code 下載頁，鎖定 Mac 用戶散布惡意程式，見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 ---
 
 ## 摘要
@@ -56,7 +56,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|
 | [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-20 |
 | [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-23 |
-| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-16 |
+| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-24 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
 %% 判不出歸哪一頁的事件先放本頁「技術彙整」的「未歸類」，週更時分派（規則見 safety-policy/pages.md 第 0 條） %%

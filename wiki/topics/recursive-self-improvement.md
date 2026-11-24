@@ -28,13 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-24
+**最後新聞更新：** 2026-11-24
 
-> **非營利組織提告「凍結 AI 軍備競賽」**（2026-11-13）
-> Politico 與 CBS News 同日報導，一群非營利組織對 Anthropic、Google 等多家科技公司提告，主張凍結所謂的「AI 軍備競賽」；CBS 標題稱這些 AI 開發商「無法控制自己的技術」。兩篇報導均未附具體訴求條款或法院文件連結，是本頁「全球暫停呼籲」系列首見訴訟層級行動。
+> **員工私下示警再添兩則**（2026-11-24）
+> - **未發布模型太危險**：Axios 獨家，逾 24 位匿名消息來源稱 Anthropic、OpenAI 內部模型已強到員工不信任能安全釋出。
+> - **Tegmark 轉述「奪取世界」說法**：Novara Media 專訪引述 Max Tegmark，稱員工私下談論推翻政府／奪取世界；僅單一轉述，無逐字紀錄佐證。
 >
-> 詳見 [[topics/recursive-self-improvement#目前結論]]。
+> 詳見 [[topics/recursive-self-improvement#技術彙整]]。
 ---
 
 ## 摘要
@@ -103,6 +104,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - The Independent 另引述示警可能變得「極端」危險；METR 原文保留 Anthropic 遮蔽權，稱最高層級結論不受影響。
 - **2026-11-10，修訂版招股說明書改寫為「已跨過」門檻（11-12 收錄，Yahoo Finance 摘要）**：接 11-02～03 的「可能迫近」，此次公司稱已判定跨過該 RSP 安全門檻，依據是對未來模型與進展速度的預期；官方原文與門檻的具體量化定義未讀，防護升級內容未載（見「## 技術彙整」）
 - **2026-11-12，非營利組織對 Anthropic、Google 等公司提告，要求凍結「AI 軍備競賽」**：Politico／CBS News 報導，CBS 稱 AI 開發商「無法控制自己的技術」；本頁「全球暫停呼籲」系列首見訴訟層級行動，詳見「## 技術彙整」
+- **2026-11-24，Axios／Yahoo Finance：逾 24 位匿名消息來源稱 Anthropic、OpenAI 員工不信任未發布模型能安全釋出**：本頁「離職示警」系列首次聚焦「未發布模型能力」本身，消息來源規模大於既有具名個案，惟全數匿名、無官方確認，詳見「## 技術彙整」
+- **同日，Novara Media：Max Tegmark 轉述稱 Anthropic 員工私下談論「奪取世界」**：與上則同日出現同類敘事，但僅 Tegmark 單一轉述、無逐字紀錄或第二方佐證，可信度層級低於上則，詳見「## 技術彙整」
 
 ---
 
@@ -122,6 +125,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Axios／Yahoo Finance：逾 24 位匿名消息來源稱 Anthropic、OpenAI 員工不信任未發布模型能安全釋出（2026-11-24 新增）
+
+- **揭露來源**：Hacker News 與 Google News／Axios（11/24 17:46 UTC），Yahoo Finance 同日轉載，2 個來源同日報導，互動合計 14
+- **核心主張**：Axios 獨家報導引述逾 24 位匿名消息來源，稱 Anthropic 與 OpenAI 內部未發布模型的能力已強到許多員工不再相信能安全釋出；報導未點名具體模型或能力項目
+- **與既有敘事的關係**：延續 09-09 Coxon、09-11 Benton／Engels 等離職員工示警系列，首見以「未發布模型能力」為焦點、消息來源規模最大的匿名爆料；與本頁「RSP 安全門檻」系列（11-02～11-12）同屬「公司內部如何評估自身風險」敘事，但口徑不同，不可互證
+- **可信度評估**：Axios 獨家調查報導，Yahoo Finance 同日轉載；消息來源全為匿名，無 Anthropic 或 OpenAI 官方回應，具體模型能力與「太危險」的判斷依據均未見原始文件
+
+### Novara Media（經 Hacker News）：Max Tegmark 稱 Anthropic 員工私下談論「奪取世界」（2026-11-24 新增）
+
+- **揭露來源**：Hacker News（179 分）轉引 Novara Media 對 Max Tegmark 的專訪（11/24 17:10 UTC）
+- **核心主張**：Tegmark 受訪時稱，Anthropic 員工私下討論「推翻美國政府」「奪取世界」之類話題；報導未附具體對話紀錄、員工姓名或第二方證實
+- **與既有敘事的關係**：與上則 Axios 報導同日出現，同屬「實驗室內部對 AI 風險的私下態度」敘事，但本則為 Tegmark 單一轉述，無逐字紀錄佐證
+- **可信度評估**：單一聲稱（Tegmark 受訪時的轉述說法），無逐字對話紀錄、無具名員工、無 Anthropic 官方回應，宜保留判斷
 
 ### RSP 門檻：招股書揭露時間線
 
@@ -496,6 +513,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11 時序
+
+#### 2026-11-24
+- **[新增] Axios／Yahoo Finance：逾 24 位匿名消息來源稱 Anthropic、OpenAI 員工不信任未發布模型能安全釋出**：詳見「## 技術彙整」
+- **[新增，單一轉述] Novara Media：Max Tegmark 稱 Anthropic 員工私下談論「奪取世界」**：無逐字紀錄佐證，詳見「## 技術彙整」
 
 #### 2026-11-12
 - **[新增] Yahoo Finance：Anthropic 在 11-10 修訂版招股說明書稱已跨過 RSP 安全門檻**：AI 承擔足夠研究工作使進度約加倍，依據為對未來的預期，詳見「## 技術彙整」

@@ -31,12 +31,12 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-23
-**最後新聞更新：** 2026-11-23
+**最後更新：** 2026-11-24
+**最後新聞更新：** 2026-11-24
 
-> **最新動態**（2026-11-23）
-> - **股價連日承壓，延續 11-21 賣壓**：本週科技股隨 Jensen Huang 回任 Nvidia 消息普遍反彈，ANT 逆勢下滑；選擇權交易同日登場，熱度穩健但不及 SpaceX 紀錄（Reuters／Bloomberg／Yahoo Finance／Business Insider／Investor's Business Daily，2026-11-23，跌幅與收盤價數字未載）
-> - **創辦人持股加總價值約 $1,410 億美元**（Business Insider 推算，較 11-20 官方掛牌結算數字更進一步的個人財富細節）
+> **最新動態**（2026-11-24）
+> - **股價正式跌破 $83 IPO 發行價，為掛牌以來首次**：CNBC 稱當天重挫 8%、分析師仍普遍偏多，Reuters 估市值蒸發近 $2,000 億（Reuters／CNBC）
+> - **知名空頭 Eisman 稱 OpenAI、Anthropic 合謀渲染末日敘事，批「全是胡說」；延續 09-24「假造危機」說法（Yahoo Finance）**
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -50,7 +50,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 |---|---|---|---|
 | 成交價與股數 | **$83／股，1,127,000,000 股 A 類**（含超額配售 147,000,000 股）；11-19 以 ANT 在 Nasdaq 開始交易 | [Anthropic 官方公告](https://www.anthropic.com/news/ipo-close)（11-20） | 官方一手 |
 | 募到多少 | 毛額約 $935 億美元（扣承銷折扣前），約 $916 億歸 Anthropic；加同步私募 $260 億，合計約 $1,195 億 | Anthropic 官方（11-20） | 官方一手 |
-| 現在股價離 $83 多遠 | 首日開盤 $111.50；11-20 當天跌 9%，只比發行價高幾美元；未取得一手收盤價 | [NBC](https://www.nbcnews.com/business/markets/anthropic-shares-markets-selloff-nasdaq-rcna610394)（11-20）；11-19 日報 | 一級媒體 |
+| 現在股價離 $83 多遠 | **11-24 正式跌破發行價 $83，為掛牌以來首次**；CNBC 稱當天重挫 8%，Reuters 估市值蒸發近 $2,000 億 | Reuters／CNBC（11-24） | 一級媒體 |
 | 誰在賣 | 出售股東 23,648,646 股；鎖定期 180／365 天尚未到期；11-20 全 AI 板塊賣壓，非單賣 ANT | 官方（11-20）；WSJ／Axios／Reuters（11-21） | 官方一手／一級媒體 |
 | 下一個里程碑 | 鎖定期到期日、首份財報日期、信評、指數納入，皆待公布（見下方「上市後追蹤」） | — | — |
 
@@ -98,6 +98,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 
 ### 誰說撐不住：唱空與質疑
 
+- **正式跌破 $83 發行價，為掛牌以來首次（2026-11-24）**：CNBC 稱當天重挫 8%，分析師仍普遍偏多；Reuters 估市值蒸發近 $2,000 億；同日 Futurism／TechCrunch／Fast Company／Forbes 跟進報導，僅標題可用，無新增數字（[Reuters](https://www.reuters.com/business/anthropic-breaks-below-83-ipo-price-debut-rally-unravels-2026-11-24/)、[CNBC](https://news.google.com/rss/articles/CBMib0FVX3lxTE52N3pxbHMtWVo5dTFpRXlOOVhpd0hOdDFpSG5rODE0eU1hN1JuNzNvWFktTndsOFlrZ3JNS012UjBNUVhHdEVQbUZzMVlQLTNFcUZ4eS1Qdnk0N3hKMEZRbWJ0UXpjX1phX1ZURWlpMNIBdEFVX3lxTE9vUXY4VGJhUjFrckFDVFZsZUt5Sl92U2pIQlFxdmdNY0hMUzRZUDR4YmJBeHFubENiNjROTkZVQ3dpbWNOcTA5TVVlZHJLU2dTRzBRYXhVUUhJeDJMNV85d1RoMF93XzRuTjY0dE5QRHh3SV9G?oc=5)）
 - **賣壓延續至 11-23，選擇權交易首日登場（Reuters）**：ANT 選擇權首日登場，熱度穩健但不及 SpaceX 紀錄；同日 Bloomberg／Yahoo／Business Insider／IBD 稱股價隨 Jensen Huang 回任 Nvidia 帶動的科技股反彈逆勢下滑，延續 11-21 賣壓（五家均僅標題可用，無具體數字）（[Reuters](https://news.google.com/rss/articles/CBMijwFBVV95cUxQZzZBTkVsVXo2NVo5WmF4NXlRZnpidUVLNE1ZX25XbHFLUm1RamtHODdMRWJYTWJDSVlFRmlfSDI5dGVGVEQ1ZHItNVhoLWFhX0M2eGxVTHdtUExfMUxEc1p2S3ZTVkJuTVd0TUYxXy04UEJnOXFldDE2ZHMzMDEyeXcyMkNpdlpHamVDRmtpVQ?oc=5)）
 - **WSJ：$9,000 億支出承諾，華爾街預期舉債評等垂圾級（2026-11-23）**：與修訂版 S-1 的 $8,950 億採購承諾同量級（見 [[topics/anthropic-business#現在的數字]]），呼應下方「信評」既有 BB 級（垂圾級）預期
 - **上市後賣壓擴大為全 AI 板塊性賣壓，市值蒸發達 $4 兆（2026-11-21）**：WSJ 稱損失達 $4 兆；Axios 稱 Nvidia 股價同步重挫；Reuters 稱承銷商曾平倉避險倉位穩定 ANT 股價；CNBC／CNN 稱撞上科技股最差一週、Nasdaq 今年漲幅遭抹平（[WSJ](https://www.wsj.com/finance/stocks/anthropics-ipo-bust-punctuates-4-trillion-ai-wipeout-on-wall-street-f1f1ec90)、[Axios](https://news.google.com/rss/articles/CBMieEFVX3lxTE9lT3pUcFhra290UDVtQVlwcVBjeDdBX1NLX1lPMGVjM3lPRHZDZk04eHI3cDk1STFLejBDODdHZWYtVFJzRnd3Q2ZDLW5EdjN1RTZzT3ZLblNoa004bmN6bjRSWXF4Y0RoQWs1UGR4UThYR004a1hWcw?oc=5)、[Reuters](https://www.reuters.com/markets/us/anthropics-ipo-bank-closed-position-meant-stabilize-stock-removing-source-2026-11-20)、[CNBC](https://news.google.com/rss/articles/CBMicEFVX3lxTFBuZ3QwZ1Qzd0FwWVhzOWhhbWZ5YWEzNTI0anpyemhZQXF6LVM1d202X3VSVGthTFNUaE13UlNfWUx5VkNhTEduOHctbWZtVlloME45dGFBMDA3OGpWdDhXdTUxNFVhSFpya21aMnpGVHHSAXZBVV95cUxORlNoeVVtbW1fLU1EY01EellhNHg0VldaY0Y5R3Y5enVEaTdZZTZENDJMWFNrblBqTEtORGZFRlZacjBwOWQ2ZXNjSF9KZFNsNkQ4WEtTallYdnVHMm5JRVBMYWl5bHhlb19QUzlIcUZOTXh2U1hB?oc=5)、[CNN](https://news.google.com/rss/articles/CBMicEFVX3lxTE9mdllsNUVFYnVqeDVsNWpGX1U5ckw2RURWWUc0ZDdaWksyYzF0c3JJUjAxaHRCbFR2a3F6R1RsLVhSRjBoTngtZWNSRHVybWd4cUN0STB2VWhQSDVtZTBIVG9jMFp0WHBrSGpydlhNTWI?oc=5)）
@@ -113,6 +114,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 - **知名放空投資人唱空估值敘事**：Yahoo Finance 報導「Big Short」原型投資人 Steve Eisman 公開表示 Anthropic 與 OpenAI 是整體 AI 交易的「阿基里斯腱」（Achilles' heel）；屬市場觀察類評論，非官方財務數據或公司聲明，具體論據、部位規模未見報導。與同日出現的 CFO 早期 IPO 會議、投資人估值上看 2 兆美元等籌備信號同期並存，形成「籌備動作推進 vs 知名空頭唱空」的敘事張力（推論）。
   - **09-24 跟進**：Yahoo Finance 報導 Eisman 改稱 AI CEO 們在「假造」末日危機敘事，同時指 Anthropic 可能仍在加速布局；屬同一人物的市場評論延續，具體論據未見報導（Google News/Yahoo Finance）。
   - **10-31 跟進**：Eisman 再就 Anthropic IPO 受訪（YouTube，HN 10 分），影片論點未取得，僅見 HN 留言質疑其對 AI 的理解；見 [[topics/anthropic-ipo]]（Hacker News）。
+  - **11-24 跟進**：Yahoo Finance 報導 Eisman 稱 OpenAI、Anthropic 合謀製造「世界末日」陰謀論，直評「全是胡說」；延續 09-24「假造末日危機」說法，具體論據未見報導（Google News/Yahoo Finance）。
 - **評級機構給出「高風險」評等（2026-11-16 報告日）**：評級方是 **Morningstar Sustainalytics**，不是 ESG Dive（後者只是報導者，本頁原寫法 2026-11-21 更正）
   - 商業倫理「嚴重」、人力資本「高」、產品治理管理面評為強（媒體稱）
   - 同期聯名信〈The MisAnthropic Statement〉的具名簽署人與主張見 [[topics/ai-agent-safety]]
@@ -389,6 +391,9 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-24
+- **[IPO 追蹤] Reuters／CNBC：ANT 正式跌破 $83 發行價，為掛牌以來首次**：CNBC 稱當天重挫 8%，分析師仍普遍偏多；Reuters 估市值蒸發近 $2,000 億；Futurism／TechCrunch／Fast Company／Forbes 同日跟進，僅標題可用（[Reuters](https://www.reuters.com/business/anthropic-breaks-below-83-ipo-price-debut-rally-unravels-2026-11-24/)、Google News/CNBC）
 
 #### 2026-11-22
 - **[IPO前瞻，僅標題可用] WSJ／NPR：IPO 落幕後的事後展望評論**：WSJ 探討 Anthropic 完成史上最大 IPO 後接下來面對的課題；NPR 同日回顧此次 IPO 對公司與整體 AI 產業的影響；兩篇均未提出新財務數字（Google News/WSJ；Google News/NPR）

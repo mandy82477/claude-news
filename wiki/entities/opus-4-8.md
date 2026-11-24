@@ -30,17 +30,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（官方已列 Legacy，退役不早於 2027-05-28；次旗艦地位先由 Opus 5 接手，現行 Opus 為 [[entities/opus-5-5|Opus 5.5]]）
 **領域：** 🤖 模型
 **首次出現：** 2026-05-28
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-08-27
+**最後更新：** 2026-11-24
+**最後新聞更新：** 2026-11-24
 
-> **最新進展**（2026-08-27）
-> 官方已列 Legacy、退役不早於 2027-05-28，建議遷移 Opus 5（此後現行 Opus 已改為 [[entities/opus-5-5|Opus 5.5]]；[官方模型頁](https://platform.claude.com/docs/en/models/opus-4-8/overview)，2026-09-07 查證）。GitHub Issue 回報 Claude 4.7、4.8、5.0 與 Fable 日益預設重複修辭套路、難維持連貫散文，即使給明確風格指示仍難改善，跨模型代際共同問題（106 則留言、517 個反應）；完整記錄見 [[entities/opus-5]]。Opus 4.8 本身自 2026-07-25 起已由 [[entities/opus-5|Claude Opus 5]] 取代次旗艦地位（詳見下方「現況」）。
+> **新 GitHub Issue 稱推理能力退化**（2026-11-24）
+> GitHub #68780 稱 Opus 4.8、5.0 推理能力明顯下滑，43 則留言、35 個 👍，完整記錄見 [[entities/opus-5]]。
 
 ---
 
 ## 現況
 
-**2026-08-27 最新**：GitHub Issue #77136 回報 Claude 4.7、4.8、5.0 與 Fable 日益預設輸出重複修辭套路、難維持連貫散文，即使給明確風格指示仍難改善，跨模型代際共同問題，已累積 106 則留言、517 個反應，尚無官方回應。完整記錄與最新社群回饋見 [[entities/opus-5]]「歷史記錄」（GitHub Issue #77136，2026-08-27）。
+**2026-11-24 最新**：GitHub Issue #68780 回報 Opus 4.8、5.0 推理能力明顯退化，即使 Max effort 仍嚴重下滑，43 則留言、35 個 👍，官方尚無回應；完整記錄見 [[entities/opus-5]]「歷史記錄」（GitHub Issue #68780，2026-11-24）。
 
 **2026-07-25**：取代 Opus 4.8 成為次旗艦，並成為 Max／Team premium／Enterprise 隨用隨付／API 的預設 Opus（詳見 [[entities/opus-5#你現在拿到的是什麼]]）。近兩週的「Opus 5」傳聞（HackerNoon 07-24、TestingCatalog 07-23 等，見下方「下一代模型觀察」歷史記錄）就此獲得官方證實。Opus 4.8 本身能力與規格未變，仍是 Fable 5 護欄觸發時的 fallback 模型，但已不再是次高階公開模型的首選。官方模型總覽頁已將它標為 Legacy、載明退役不早於 **2027-05-28**，建議遷移至 [[entities/opus-5|Opus 5]]（2026-09-07 查證）
 
@@ -147,6 +147,8 @@ claude.ai 用戶現可調節 Claude 在任務上投入的努力程度，不再�
 - [[feature-radar]]（功能熱度追蹤）
 
 ## 參考來源
+- [GitHub Issue #68780：Opus 4.8/5.0 reasoning degradation, speed and performance regression](https://github.com/anthropics/claude-code/issues/68780)（2026-11-24）
+- [[news/2026-11-24]]
 - [[news/2026-05-29]]
 - [Claude Opus 4.8 官方公告](https://www.anthropic.com/news/claude-opus-4-8)
 - [Dynamic Workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)
@@ -154,11 +156,17 @@ claude.ai 用戶現可調節 Claude 在任務上投入的努力程度，不再�
 
 ## 歷史記錄
 
+**2026-11**
+
+| 日期 | 事件 |
+|------|------|
+| 2026-11-24 | GitHub Issue #68780（URGENT）：Opus 4.8、5.0 推理能力退化回報，43 則留言、35 個 👍，官方無回應；完整記錄見 [[entities/opus-5]] |
+
 **2026-08**
 
 | 日期 | 事件 |
 |------|------|
-| 2026-08-27 | GitHub Issue #77136：跨模型代際重複修辭套路問題（詳見上方「現況」與 [[entities/opus-5]]） |
+| 2026-08-27 | GitHub Issue #77136：跨模型代際重複修辭套路問題；完整記錄見 [[entities/opus-5]] |
 
 **2026-07**
 

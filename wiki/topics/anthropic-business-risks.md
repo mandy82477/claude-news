@@ -31,14 +31,11 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-23
-**最後新聞更新：** 2026-11-23
+**最後更新：** 2026-11-24
+**最後新聞更新：** 2026-11-24
 
-> **最新動態**（2026-11-23）
-> - **GitHub Issue 216 留言要求印度盧比計價方案，點名 Claude Code**：Pro 已有印度在地化定價，但訴求明確點名 Claude Code 仍以美元計價，官方未回應，是今日留言數最高的一條（見 [[topics/anthropic-business-risks#商業模式]]）
-> - **WSJ：Anthropic 已承諾約 $9,000 億資本支出，華爾街預期舉債評等為垂圾級**：呼應既有 BB 級預期，細節見 [[topics/anthropic-ipo#上市後追蹤]]
-> - **IPO 敲鐘現場外出現「別為 AI 泡沫紓困」抗議**（techpolicy.press）：示威者於那斯達克掛牌現場外表達對泡沫風險與紓困預期的疑慮
-> - **Claude Code 撐起 IPO 敘事，公司下一步要找新成長動能**（Business Insider／The New Stack）：內部逾 90% 程式碼由 Claude 撰寫與審查，重點在「怎麼檢查」這道關卡
+> **最新動態**（2026-11-24）
+> Microsoft CEO Satya Nadella 公開承認 VS Code 近半年因 Claude Code 崛起使用率下滑，部分開發者已不再打開 VS Code——對手自陳的開發者端 PMF 證據（Google News/Adafruit）。
 
 ---
 
@@ -194,6 +191,8 @@ Simon Willison（知名開發者博主）發表文章，認為 Anthropic 與 Ope
 
 **注意**：PMF 描述的是「產品找到市場需求」，不代表公司獲利。Anthropic 的 PMF 可能同時為真（開發者高度依賴）且未獲利（補貼規模過大）。
 
+**11-24 跟進（Google News/Adafruit，新事實）**：Microsoft CEO Satya Nadella 公開承認 VS Code 稱霸編輯器市場十年後，近半年因 Claude Code 崛起使用率下滑，部分開發者已不再打開 VS Code。與既有「開發者已嵌入核心工作流」論點同向，是對手自陳的開發者端流失訊號；具體流失比例與統計口徑未見報導，僅標題可用。
+
 ### 反面訊號：一般消費者採用面（2026-08-23，Financial Times）
 
 Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general consumer users）上，不敵定價較低的競品工具。**與既有 PMF 論述的關係**：Simon Willison 的 PMF 分析聚焦**開發者**工作流依賴度，本則聚焦**一般消費者**採用面，衡量對象不同、不構成矛盾，但共同呈現「開發者端 PMF 強、消費者端 PMF 弱」的分層圖像；與「定價強勢期」（企業客戶即使漲價仍留存，The Information 05-13）並置時可補一句：企業／開發者端定價強勢，與一般消費者端價格敏感流失，可能同時成立（推論）。具體流失規模、競品名稱、量化數字未見報導，僅標題可用。
@@ -232,6 +231,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-24
+- **[商業模式] Adafruit：Microsoft CEO Nadella 承認 VS Code 近半年因 Claude Code 崛起使用率下滑**：部分開發者已不再打開 VS Code，詳見 [[topics/anthropic-business-risks#產品市場契合度（PMF）觀察]]（Google News/Adafruit）
 
 #### 2026-11-23
 - **[商業模式] GitHub Issue（216 留言，648 👍）：要求 Claude／Claude Code 推出印度盧比計價方案**：詳見「商業模式」段新增說明；Pro 已有印度在地化定價但 Claude Code 未見，見 [[entities/pricing#當前生效的計費規則]]（GitHub Issues/claude-code，2026-11-23）

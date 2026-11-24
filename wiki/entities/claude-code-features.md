@@ -33,12 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-23
-**最後新聞更新：** 2026-11-23
+**最後更新：** 2026-11-24
+**最後新聞更新：** 2026-11-24
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-23）
-> 官方發布「Claude Ship」：Claude 自動審查 PR、修復問題並依規則核准變更，詳見 [[entities/claude-code-features#Claude Ship：自動審查、修復與核准 PR]]；桌面版文件同步新增「Walk through in changes」逐筆走查 diff 與 Auto-verify 預設開啟兩項對應能力，詳見 [[entities/claude-code-features#桌面版功能地圖]]。
+> **最新動態**（2026-11-24）
+> - **桌面版文件**：新增 Windows、macOS 下載卡片，Windows ARM64 另提供獨立安裝版下載連結，詳見 [[#桌面版功能地圖]]。
+> - **Claude Ship**：10+ 家媒體同日再跟進報導，Superpower Daily 稱其政策檢查不能取代人工 code owner 核准，詳見 [[#Claude Ship：自動審查、修復與核准 PR]]。
 
 ---
 
@@ -86,12 +87,17 @@ Build Flags 同日新增 `CLAUDE_CODE_DISABLE_SHIP`、`CLAUDE_CODE_DISABLE_DESKT
 
 Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少 10 家獨立媒體同日跟進報導。已回報 [[feature-radar]]。
 
+**11-24 增補**：Superpower Daily（僅標題）稱 Claude 的政策檢查（policy check）不能取代必要的人工 code owner 核准；Help Net Security、SiliconANGLE 等另有媒體同日跟進報導。熱度更新已回報 [[feature-radar]]。
+
 ### 桌面版功能地圖
 
 > 把下方「桌面版文件時序」的桌面版文件（`desktop.md`）異動依主題歸群；每條只收時序條目已記的事實，日期指向時序原條。官方文件 [desktop.md](https://code.claude.com/docs/en/desktop.md)，彙整日 2026-10-25。
 
 **Claude Ship／Auto-verify（桌面版）**
 - 11-23：「Walk through in changes」逐筆走查 diff 裡的每個發現；Auto-verify 預設開啟，`.claude/launch.json` 設 `"autoVerify": false` 可關閉；本機安裝的 plugin 不帶入 cloud session；側邊聊天視窗提問不寫入主對話紀錄。
+
+**下載與安裝**
+- 11-24：新增 Download for Windows、Download for macOS 兩個下載卡片；Windows ARM64 另提供獨立安裝版下載連結。
 
 **SSH 遠端與離線續跑**
 - 11-20：主機顯示按鈕或清單時皆可新增 SSH connection（清單方式在最下方選取）；連線名稱可選填，留空用 SSH host 值；SSH／WSL 檔案在 Browser pane 開啟時預覽不執行腳本，腳本繪製的圖表／表格會是空的。
@@ -149,6 +155,8 @@ Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-24）：桌面版文件字數持平（228,099→228,099），新增 3 段（移除段落未列出，淨增減互相抵銷）。
+  - **新增內容（原文列出的）**：新增 **Download for Windows**、**Download for macOS** 兩個下載卡片；Windows ARM64 另提供獨立安裝版下載連結（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-23）：桌面版文件字數由 227,979 增至 228,099，新增 12 段（移除段落未列出）。
   - **新增內容（原文列出的）**：「Walk through in changes」開啟 diff 畫面逐筆走過每個發現，為 Claude Ship 自動審查機制在桌面版的入口，見 [[#Claude Ship：自動審查、修復與核准 PR]]；本機安裝的 plugin 不會帶進 cloud session（[原文](https://code.claude.com/docs/en/desktop.md)）。
   - 新增側邊聊天視窗可針對目前 session 提問，答案不寫入主對話紀錄；Auto-verify 預設開啟，可在 `.claude/launch.json` 加 `"autoVerify": false` 關閉（[原文](https://code.claude.com/docs/en/desktop.md)）。

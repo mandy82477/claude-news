@@ -2,10 +2,10 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-23
+**最後更新：** 2026-11-24
 
-> **本日新增重大發布**（2026-11-23）
-> Claude Ship 發布：Claude 自動審查 pull request、修好問題並依團隊規則核准變更（含 Claude Approvals／PR Steward 兩套子機制）；官方文件索引同日新增 16 頁，Reuters（3 個來源同日報導）、The Verge 等至少 10 家獨立媒體跟進。
+> **本日新增重大發布**（2026-11-24）
+> Artifact 可安裝成 Mac／Windows 獨立應用程式（beta）；Background Tasks 正式轉為 GA，不再是 beta；Reflect with Claude（Monthly Recap）正式脫離 beta，開放 Free／Pro／Max／Ultra 的 web／desktop。另 Claude Ship（11-23 發布）兩日內媒體跟進累計逾 10 家，熱度升至 🔥🔥🔥🔥🔥。
 
 ---
 
@@ -16,6 +16,8 @@
 %% 11-09 重算：候選池＝發布日距今 ≤30 天或本輪熱度/試用價值有變動者。原三件（Sonnet 5.5 09-28、Haiku 5.5 10-07、Mods 10-01）距今 33～42 天，均已出時間閘，且本輪熱度/試用價值皆未變動，不在候選池內；候選池內僅新發布的 Fable 5.2／Mythos 5.2（🔥🔥🔥🔥🔥、✅，今日發布）一項，故本節僅列 1 件，非湊滿三格。
 
 11-23：今日新增 Claude Ship（🔥🔥🔥🔥、⏳ 觀望，今日發布），熱度達標但試用價值未達 ✅／⚡ 門檻，不進候選池；維持現有推薦不動，距最後輪替 14 天，未達 7 天霸榜檢查門檻但已逾——下次 /weekly 覆核時應連同 Fable 5.2／Mythos 5.2 熱度是否仍站得住一併檢查。
+
+11-24 重算：Claude Ship 熱度升至 🔥🔥🔥🔥🔥（媒體跟進累計 10+ 家）但試用價值仍 ⏳ 觀望，不合格；Background Tasks GA（🔥🔥、⚡ 有條件推薦）、Artifact 安裝為 app（🔥、⏳ 觀望）、Reflect/Monthly Recap 轉正式發布（🔥、⚡ 有條件推薦）三者熱度均未達 🔥🔥🔥🔥 門檻，不進候選池；候選池內仍僅 Fable 5.2／Mythos 5.2 一項，維持現有推薦不動。距最後輪替已 15 天、逾 7 天霸榜檢查門檻，已連續第 3 次複查無合格替補（11-13、11-23、11-24），依規則標記：⚠️ 本節連續 3 次複查無替補，建議檢討 🔥🔥🔥🔥 門檻是否過高，轉知主編於下次 /weekly 覆核時評估。
 
 11-13 重算：今日新增 Code Mode（🔥、⏳ 觀望），熱度未達 🔥🔥🔥🔥 門檻，不進候選池；本輪掃過 10-14～11-12 全部 🆕 最新功能條目，🔥🔥🔥🔥 以上且 ✅／⚡ 者仍僅 Fable 5.2／Mythos 5.2 一項（Claude Duet 🔥🔥🔥🔥🔥 但試用價值 ⏳ 觀望、未達 ✅／⚡ 門檻，不合格），維持現有推薦不動；距最後輪替僅 4 天，未達 7 天霸榜檢查門檻。 %%
 
@@ -79,7 +81,9 @@
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
-| **Claude Ship**（自動審查 PR、修復問題並依團隊規則核准變更；含 Claude Approvals／PR Steward 兩套子機制） | 2026-11-23 | 🔥🔥🔥🔥 | ⏳ 觀望 | 正式發布 |
+| **Artifact 安裝為獨立應用程式**（beta，可裝到 Mac／Windows 成獨立視窗 app） | 2026-11-24 | 🔥 | ⏳ 觀望 | Beta（Mac／Windows） |
+| **Background Tasks**（背景任務功能，正式轉為 GA，不再是 beta） | 2026-11-24 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Ship**（自動審查 PR、修復問題並依團隊規則核准變更；含 Claude Approvals／PR Steward 兩套子機制） | 2026-11-23 | 🔥🔥🔥🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Enterprise Admin Console 組織登入**（`claude auth login` 自動套用受管組織設定與雲端供應商，v2.1.330） | 2026-11-20 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code Projects 改版**（對話式協調，自動拆解任務／平行協調多工作線，beta） | 2026-11-14 | 🔥🔥 | ⏳ 觀望 | Beta（Claude Code） |
 | **Claude Desktop Release Channel**（選擇 Desktop 更新走哪個版本頻道，Stable 維持現狀） | 2026-11-17 | 🔥 | ⏳ 觀望 | 正式發布 |
@@ -168,7 +172,7 @@
 | **Claude Code v2.1.207**（Auto mode 在 Bedrock/Vertex/Foundry 改預設開啟、修復終端機凍結） | 2026-07-11 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code Desktop 內建瀏覽器**（AI 可在外部網站讀取/點擊/輸入文字，細節見下方詳情） | 2026-07-06 | 🔥 | ✅ 已確認 | 官方新功能，已正式發布（v2.1.202–2.1.206） |
 | **Claude Code v2.1.206**（`/cd` 目錄路徑建議、`/doctor` CLAUDE.md 精簡檢查） | 2026-07-10 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Reflect with Claude**（Settings 內使用模式儀表板，媒體廣泛報導但 HN 僅 29 分） | 2026-07-09 | 🔥 | ⚡ 有條件推薦 | Preview |
+| **Reflect with Claude**（即 Monthly Recap，Settings 內使用模式儀表板） | 2026-07-09 | 🔥 | ⚡ 有條件推薦 | 正式發布（Free／Pro／Max／Ultra，web／desktop） |
 | **Claude Cowork 行動版 / 網頁版**（雲端持續執行，闔上裝置任務不中斷，首波 Max 訂閱戶，涵蓋政府客戶） | 2026-07-07 | 🔥 | ⚡ 有條件推薦 | Preview（限 Max） |
 | **`/config` Dynamic workflow size**（v2.1.202，調整動態工作流 agent 規模 小/中/大，建議性引導值） | 2026-07-07 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Sonnet 5**（Claude Code v2.1.197 新預設，1M context，$2/$10 per Mtok 標準價，原 8/31 到期已於 08-10 永久化） | 2026-07-01 | 🔥🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
@@ -243,12 +247,45 @@
 
 ## 🆕 最新功能（2026-11）
 
+### Artifact 安裝為獨立應用程式
+**發布：** 2026-11-24（beta） | **狀態：** Beta（Mac／Windows）
+
+**是什麼：** 使用者可把 Claude 做的 artifact 安裝成 Mac 或 Windows 上的獨立應用程式，取得自己的視窗，不必留在瀏覽器或 Claude 介面裡開著。
+
+**為何熱：** 官方 Claude Help Center release notes 首發；9to5Mac 同日報導但僅標題可用，尚無社群實測或討論佐證。
+
+**現在要試嗎：** 想把常用 artifact（小工具、儀表板）變成獨立視窗的人可現在就試；企業控管、多人協作與更新機制官方尚未說明，建議先在個人帳號試用。
+
+**快速上手：**
+```
+Claude → 打開想安裝的 artifact →（選單）安裝為 app → Mac／Windows 出現獨立視窗應用程式
+```
+
+**注意事項：** 官方文件未載安裝後的更新機制、離線行為與組織管控範圍；beta 階段功能形態可能調整。
+
+---
+
+### Background Tasks 正式 GA
+**發布：** 2026-11-24（原為 beta） | **狀態：** 正式發布
+
+**是什麼：** Claude 的背景任務功能官方確認轉為全面上線（GA），不再是 beta；同日官方宣布 MCP SDK 單月下載量已突破 7 億次（此數字本身非具體操作，僅作背景說明）。
+
+**為何熱：** The Decoder、MLQ.ai、Unite.AI、Superpower Daily、explainx.ai 等至少 5 家媒體同日報導；多篇僅標題可用，細節薄弱。
+
+**現在要試嗎：** 跑多代理、依賴背景任務處理長流程的開發者可正式依賴此能力，不必再抱著 beta 心態使用；具體設定項與適用介面待官方一手文件補齊後再確認。
+
+**快速上手：** 官方原文僅標題可用，暫無法提供可執行範例，待後續查證補齊。
+
+**注意事項：** 證據強度偏弱——多數來源為標題層級轉述；Unite.AI 標題另提「Server-Supplied Skills」，因內文未取得，暫不另立條目，待官方一手文件（code.claude.com／docs）查證後再決定是否需要獨立功能卡。
+
+---
+
 ### Claude Ship
 **發布：** 2026-11-23（官方公告） | **狀態：** 正式發布
 
 **是什麼：** Claude 自動審查 pull request、修好問題，並依團隊設定的規則核准變更；由 Claude Approvals（核准規則／policy file）與 PR Steward（PR 存取範圍管理）兩套子機制組成。
 
-**為何熱：** 官方文件索引同日新增 16 頁設定與疑難排解文件；Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少 10 家獨立媒體同日跟進報導。
+**為何熱：** 官方文件索引同日新增 16 頁設定與疑難排解文件；Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少 10 家獨立媒體同日跟進報導；11-24 再有 dev.to＋7 則 Google News＋Help Net Security＋SiliconANGLE 共 10 則媒體跟進（累計兩日 10+ 家），熱度由 🔥🔥🔥🔥 升至 🔥🔥🔥🔥🔥（已達上限）；Superpower Daily 同日並澄清 Claude Ship 的 policy check 不能取代團隊既有的 code-owner 人工審核要求，見 [[topics/ai-agent-safety-cyber]]。
 
 **現在要試嗎：** 常手動審 PR、想讓 Claude 代勞初審與修補的團隊可以開始設定；具體核准範圍與風險控管建議先讀官方疑難排解頁，目前無獨立實測報告。
 
@@ -1680,20 +1717,20 @@ claude
 ---
 
 ### Reflect with Claude
-**發布：** 2026-07-09（測試版） | **狀態：** Preview
+**發布：** 2026-07-09（測試版，2026-11-24 正式脫離 beta） | **狀態：** 正式發布
 
-**是什麼：** Settings 內新增使用模式儀表板，讓使用者檢視自己如何使用 Claude（提問類型、時段、模式等）。
+**是什麼：** Settings 內新增使用模式儀表板（即 Monthly Recap），讓使用者檢視自己如何使用 Claude（提問類型、時段、模式等）。
 
-**為何熱：** 官方部落格首發，TechCrunch、Mashable、CNET、Axios、The Verge 等多家媒體同步報導，多數類比為「AI 版 Spotify Wrapped」或「螢幕使用時間」統計；TechCrunch 提出質疑角度，認為此舉實質是包裝成「自我反思」的使用引導設計；HN 獲 29 分，屬媒體廣度大於社群深度的訊號組合。2026-07-10 Axios、The Verge 再度跟進報導，媒體延燒持續第二天，熱度升至 🔥🔥🔥🔥。
+**為何熱：** 官方部落格首發，TechCrunch、Mashable、CNET、Axios、The Verge 等多家媒體同步報導，多數類比為「AI 版 Spotify Wrapped」或「螢幕使用時間」統計；TechCrunch 提出質疑角度，認為此舉實質是包裝成「自我反思」的使用引導設計；HN 獲 29 分，屬媒體廣度大於社群深度的訊號組合。2026-07-10 Axios、The Verge 再度跟進報導，媒體延燒持續第二天，熱度升至 🔥🔥🔥🔥。2026-11-24 官方 Claude Help Center release notes 確認 Monthly recap 正式脫離 beta，開放 Free、Pro、Max、Ultra 方案的網頁版與桌面版。
 
-**現在要試嗎：** 適合想了解自己 Claude 使用習慣、對隱私/資料分析無疑慮的使用者可直接在 Settings 打開看看；對「產品是否藉此變相鼓勵更多使用」有疑慮者，可留意 TechCrunch 的批評角度再決定是否啟用。
+**現在要試嗎：** 適合想了解自己 Claude 使用習慣、對隱私/資料分析無疑慮的使用者可直接在 Settings 打開看看；對「產品是否藉此變相鼓勵更多使用」有疑慮者，可留意 TechCrunch 的批評角度再決定是否啟用。現已對 Free、Pro、Max、Ultra 方案的網頁版與桌面版全面開放，不再是測試版限定範圍。
 
 **快速上手：**
 ```
-Claude → Settings → Reflect with Claude（測試版儀表板）
+Claude → Settings → Reflect with Claude（Monthly Recap，Free／Pro／Max／Ultra，web／desktop）
 ```
 
-**注意事項：** 測試版功能，範圍與資料呈現方式可能調整；目前無社群實測回饋佐證儀表板數據準確性或洞察深度。
+**注意事項：** 範圍與資料呈現方式仍可能調整；目前無社群實測回饋佐證儀表板數據準確性或洞察深度。
 
 ---
 

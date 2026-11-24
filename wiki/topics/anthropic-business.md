@@ -30,14 +30,12 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-23
-**最後新聞更新：** 2026-11-23
+**最後更新：** 2026-11-24
+**最後新聞更新：** 2026-11-24
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-23）
-> - **Anthropic 股價逆勢下滑**：Jensen Huang 回任 Nvidia 的消息帶動本週科技股普遍反彈，Anthropic 股價卻未能跟上、劇烈震盪，WSJ 另報導其 9,000 億美元支出承諾使華爾街預期債券評等落在垂圾級，見 [[topics/anthropic-ipo]]
-> - **加拿大主要新聞出版商在安大略對 Anthropic 提起著作權訴訟**（CP、CBC 報導），已列入訴訟對照表，見 [[topics/anthropic-business-risks]]
-> - **Nscale 的 S-1/A 揭露與 Anthropic 的 GPU 協議最多約 44.6 億美元**，媒體稱的 450 億美元未見於文件，見 [[topics/anthropic-partnerships-compute]]
+> **最新動態**（2026-11-24）
+> 股價正式跌破 $83 IPO 發行價，為掛牌以來首次：CNBC 稱當天重挫 8%，Reuters 估市值蒸發近 $2,000 億，詳見 [[topics/anthropic-ipo]]。
 
 ---
 
@@ -71,7 +69,7 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 ## IPO 走到哪一格
 
-**一句結論：** IPO 已完成並結算：2026-11-18 以每股 $83 正式定價，11-19 以代號「ANT」在 Nasdaq 開始交易，11-20 官方公告超額配售權全額行使，發行上修至 1,127,000,000 股，結算毛額約 $935 億美元、Anthropic 實收約 $916 億美元，為史上規模最大 IPO；市值估算各家不一，Reuters 稱盤中衝高近 $2 兆後回落約 $1.2 兆，WSJ 稱依股數口徑介於 $1.5 兆～2 兆；11-21 賣壓擴大為全 AI 板塊性賣壓，WSJ 稱市值蒸發達 $4 兆，Nvidia 同步重挫。五格表、S-1 揭露、結算細節見 [[topics/anthropic-ipo]]。
+**一句結論：** IPO 已完成並結算：2026-11-18 以每股 $83 正式定價，11-19 以代號「ANT」在 Nasdaq 開始交易，11-20 官方公告超額配售權全額行使，發行上修至 1,127,000,000 股，結算毛額約 $935 億美元、Anthropic 實收約 $916 億美元，為史上規模最大 IPO；上市後賣壓持續擴大，11-21 WSJ 稱全 AI 板塊市值蒸發達 $4 兆、Nvidia 同步重挫，**11-24 股價正式跌破發行價 $83，為掛牌以來首次**，CNBC 稱當天重挫 8%，Reuters 估市值蒸發近 $2,000 億。五格表、S-1 揭露、結算細節見 [[topics/anthropic-ipo]]。
 
 ---
 
@@ -81,7 +79,7 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-23 |
+| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-24 |
 | [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-22 |
 | [[topics/anthropic-business-risks]] | 哪裡會出事、你能先做什麼，以及它怎麼賺錢 | 2026-11-23 |
 

@@ -32,13 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-23
+**最後更新：** 2026-11-24
 **最後新聞更新：** 2026-11-23
 
-> **最新動態**（2026-11-23）
-> - **功能**：官方發布「Claude Ship」，Claude 自動審查 PR、修復問題並依規則核准變更，見 [[entities/claude-code-features|功能]]。
-> - **版本**：v2.1.331 把 Code Mode 支援擴及 Amazon Bedrock、Google Cloud Agent Platform、Microsoft Foundry、AWS 上的 Claude Platform，見 [[entities/claude-code-releases|版本]]。
-> - **已知問題**：新增 VS Code 歷史 session 消失、PreToolUse hook 卡住等回報，互動數同步更新，見 [[entities/claude-code-known-issues|已知問題]]。
+> **最新動態**（2026-11-24）
+> - **已知問題**：新增 CLAUDE.md 規則契約被整套忽視（#90542）、VS Code 留下鎖定分頁群組（#20324）、resume session 限回原目錄（#5768）等回報，另有 Haiku 5.5／Microsoft 365 外掛兩起 Status 事故，見 [[entities/claude-code-known-issues|已知問題]]。
+> - **功能**：Claude Ship 自動審查 PR 持續擴大媒體報導（10+ 家），見 [[entities/claude-code-features|功能]]。
 
 ---
 
@@ -48,7 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（十一組逐條） | [[entities/claude-code-known-issues]] | 2026-11-23 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（十一組逐條） | [[entities/claude-code-known-issues]] | 2026-11-24 |
 | 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-23 |
 | hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-23 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |
