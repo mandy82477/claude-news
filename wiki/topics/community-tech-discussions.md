@@ -3,17 +3,17 @@ page: "topics/community-tech-discussions"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-17"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
-days_since_news: 7
+days_since_news: 0
 parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
-days_since_news_subtree: 7
+days_since_news_subtree: 0
 inbound_links: 57
-attribution_count: 206
-attribution_last: "2026-11-17"
+attribution_count: 209
+attribution_last: "2026-11-25"
 top_source: "hacker-news"
 pending_count: 1
 pending_overdue: 1
@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 
-> **Show HN: Tokendoctor 分析 Claude Code token 浪費，留言為「省 token 未必更好」提反例**（2026-11-17）
-> 開發者推出 Tokendoctor 分析使用者的 Claude Code token 用量浪費在哪；HN 留言反駁：一味砍 token 可能犧牲輸出品質，自己改用加大 context 換到更少需要重做的結果。
+> **傳言稱實驗室可能破解多項式時間質因數分解；AI 熱度降溫反思再添一例**（2026-11-25）
+> - **Factoring in P 傳言**：r/singularity 貼文稱 OpenAI 或 Anthropic 可能找到方法，轉上 HN 拿 348 分，純傳言未經證實。
+> - **AI 熱度降溫**：Ask HN 原帖作者自述 15 年業界經驗，觀感正在冷卻，HN 32 分。
 
 ---
 
@@ -155,6 +156,9 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| 傳言：實驗室可能已破解多項式時間內質因數分解（Factoring in P） | 2026-11-25 · 2026-11-25 | 🔥🔥🔥 | ☄️閃現 | r/singularity 稱 OpenAI 或 Anthropic 可能找到方法，轉上 HN 348 分；留言稱 Anthropic 數月前已分解 RSA-896，未發現更快演算法；純傳言未經證實（2026-11-25） | — |
+| Simon Willison：過去 12 個月 LLM 的三個轉折點 | 2026-11-24 · 2026-11-24 | 🔥 | ☄️閃現 | Simon Willison 整理 AI Engineer Code Summit 演講，以三個轉折點回顧過去一年 LLM 發展關鍵轉變；具名表態，無社群延燒（2026-11-24） | — |
+| Ask HN：只有我覺得 AI 熱度正在明顯降溫嗎 | 2026-11-24 · 2026-11-24 | 🔥 | ☄️閃現 | 原帖作者自述 15 年以上業界經驗，描述對目前 AI 熱潮的觀感正在冷卻；HN score 32，個人反思型討論，未見跨平台延燒或具體共識（2026-11-24） | — |
 | Show HN: Tokendoctor——分析 Claude Code token 浪費，留言為「省 token 未必更好」提反例 | 2026-11-17 · 2026-11-17 | 🔥 | ☄️閃現 | 開發者推出工具分析 token 浪費；留言反駁稱砍 token 可能犧牲品質，加大 context 反而減少重做（2026-11-17） | — |
 | Claude Meetings beta 公告登上 Hacker News 首頁 | 2026-11-14 · 2026-11-14 | 🔥🔥🔥 | ☄️閃現 | 官方介紹文登 HN 首頁，功能本身見 [[entities/claude-meetings]]；HN 104 分（單源，待社群接力） | — |
 | Show HN: STE80 Humanizer——以簡化技術英文規則去除文字 AI 腔的工具 | 2026-11-10 · 2026-11-10 | 🔥🔥🔥 | ☄️閃現 | 有人指它是去 AI 化而非擬人化；另有留言稱 STE 風格寫進 Claude 全域指示後，Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述）；HN 102 分 | — |
@@ -208,6 +212,9 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
+- **傳言：實驗室可能已破解多項式時間內質因數分解（Factoring in P）**：Reddit r/singularity 稱 OpenAI 或 Anthropic 可能已找到方法，轉貼 HN 後拿下 348 分；留言稱 Anthropic 數月前已分解 RSA-896，但未發現更快演算法；純傳言未經證實；[原文](https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/)（HN，原載 r/singularity）
+- **Simon Willison：過去 12 個月 LLM 的三個轉折點**：Simon Willison 部落格整理自己在 AI Engineer Code Summit 的演講內容，以三個轉折點為框架回顧過去一年 LLM 發展的關鍵轉變；具名表態，無社群延燒；[原文](https://simonwillison.net/2026/Nov/24/llm-inflection-points/)（Blog）
+- **Ask HN：只有我覺得 AI 熱度正在明顯降溫嗎**：原帖作者自述有 15 年以上業界經驗，描述自己對目前 AI 熱潮的觀感正在冷卻；HN score 32，屬個人反思型討論，未見具體反方論述或跨平台延燒；[原文](https://news.ycombinator.com/item?id=50633601)（HN）
 - **Show HN: Tokendoctor——分析 Claude Code token 浪費的工具**：開發者推出工具分析使用者 Claude Code 的 token 用量中有多少被浪費；留言反駁稱一味砍 token 可能犧牲輸出品質，自己改用加大 context 換到更少需要重做的結果；HN score 31；[原文](https://github.com/localixai/tokendoctor)（HN）
 - **Claude Meetings beta 公告登上 Hacker News 首頁**：功能事實見 [[entities/claude-meetings]]；未附留言內容；HN score 104（單源，待社群接力）；[原文](https://claude.com/resources/articles/claude-meetings)（HN）
 - **Show HN: STE80 Humanizer——以 ASD-STE100 簡化技術英文規則去除文字 AI 腔**：HN score 102（2 個來源）；留言區認為它是去 AI 化、不是擬人化；有人把 STE 風格寫進 Claude 全域指示，稱 Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述，未附測試方法）；[原文](https://github.com/Dodaios/ste80-humanizer)（HN）
@@ -261,6 +268,26 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-11
+
+#### 傳言：實驗室可能已破解多項式時間內質因數分解（Factoring in P），社群憂政府徵用運算力（2026-11-25）
+
+- **來源：** 「Rumor that OpenAI or Anthropic found a way to factor numbers in polynomial time」（Hacker News，348 分，原載 Reddit r/singularity）；[原文](https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/)
+- **核心論點：** r/singularity 貼文稱 OpenAI 或 Anthropic 可能已找到多項式時間內質因數分解的方法；留言討論若屬實，美國政府是否可能動用國防生產法等緊急權力徵用相關 AI 公司的運算力應對衝擊。
+- **關鍵回響：**
+  - 📝 補充：有留言提及 Anthropic 數月前曾用既有方法成功分解 RSA-896，但官方當時強調並未發現更有效率的新演算法。
+- **收斂結論：**（無）純傳言，未經 OpenAI 或 Anthropic 任一方證實，暫不宜當作事實看待。
+
+#### Simon Willison：過去 12 個月 LLM 的三個轉折點（2026-11-24）
+
+- **來源：** Blog／Simon Willison（具名開發者第一手回顧）；[原文](https://simonwillison.net/2026/Nov/24/llm-inflection-points/)
+- **核心論點：** 作者整理自己在 AI Engineer Code Summit 的演講內容，以三個轉折點為框架回顧過去一年 LLM 發展的關鍵轉變。
+- **收斂結論：**（無）單篇長線回顧，三個轉折點的具體內容未見於摘要（僅標題可用）。
+
+#### Ask HN：只有我覺得 AI 熱度正在明顯降溫嗎（2026-11-24）
+
+- **來源：** 「Ask HN: Am I the only one whose AI hype is cooling down a lot?」（Hacker News，32 分）；[原文](https://news.ycombinator.com/item?id=50633601)
+- **核心論點：** 原帖作者自述有 15 年以上業界經驗，描述自己對目前 AI 熱潮的觀感正在冷卻。
+- **收斂結論：**（無）個人反思型討論，未見具體反方論述或跨平台延燒佐證。
 
 #### Show HN: Tokendoctor——分析 Claude Code token 浪費的工具，留言為「省 token 未必更好」提反例（2026-11-17）
 

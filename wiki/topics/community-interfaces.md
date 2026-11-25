@@ -3,17 +3,17 @@ page: "topics/community-interfaces"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-21"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 1
-attribution_count: 29
-attribution_last: "2026-11-21"
+attribution_count: 30
+attribution_last: "2026-11-25"
 top_source: "hacker-news"
 pending_count: 0
 pending_overdue: 0
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 
-> **行動裝置遠端控制新增桌面動態島整合 Claude Code 核准推播**（2026-11-21）
-> - **Fuyu**：Windows／macOS 動態島整合多通訊 App 通知，並把 Claude Code／Codex 狀態與核准請求推播到手機。
+> **介面元件複用新增 15 主題色回覆外觀 mod**（2026-11-25）
+> - **NahumLitvin/prismantis**：把 Claude Code 回覆的表格、程式碼、圖表、工具列逐一套上 15 種主題色，附複製按鈕，502 星。
 
 ---
 
@@ -75,6 +75,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### NahumLitvin/prismantis：15 種主題的 Claude Code 彩色回覆外觀，表格、程式碼、圖表、工具列皆可換色（2026-11-25）
+
+- **主線：** —
+- **核心模式：** Claude Code 回覆外觀 mod，把表格、程式碼、diagram、圖表與工具呼叫列都套上 15 種可選主題色，並加複製按鈕；GitHub Search 502 星。
+- **與既有模式的關係：** 補上「介面元件複用」既有代表技巧（Brainless、statuslin.es 等，[[topics/community-interfaces#2026-10]]）一個「多主題配色＋複製按鈕」取向——既有做法多聚焦狀態列或終端機整體美化，本則專注回覆內容各元素（表格／code／圖表／工具列）逐一上色；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（502★），無 forks／issues／近期 commit 佐證可查，未另行查證；與同日另外 4 款倉庫（506、502、136、130 星）同一時間點（19:59 UTC）同步衝上 GitHub 搜尋榜，疑似批次快照效應，真實熱度未能進一步驗證。
+- **來源：** GitHub Search；[GitHub](https://github.com/NahumLitvin/prismantis)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無第三方採用或複現數據）
 
 #### TixXin/Fuyu：Windows／macOS 動態島整合通訊 App 通知與 Claude Code／Codex 狀態、核准推播到手機（2026-11-21）
 

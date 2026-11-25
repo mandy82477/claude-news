@@ -3,18 +3,18 @@ page: "topics/community-creative-tools"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-21"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: "topics/community-integrations"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
-inbound_links: 5
-attribution_count: 0
-attribution_last: null
-top_source: null
+days_since_news_subtree: 0
+inbound_links: 6
+attribution_count: 2
+attribution_last: "2026-11-25"
+top_source: "github"
 pending_count: 1
 pending_overdue: 0
 pending_next_review: "2026-12-05"
@@ -31,12 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-integrations]]
 **開始日期：** 2026-07-23
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 
-> **創意工具整合每週都有新作；同名 Blender 外掛兩個月內第三度換帳號出現**（2026-11-21）
-> - **blender-ai-mcp-addon**：第三個帳號（bookwjitchieni1986）發布同名同描述外掛，前兩次（LiCinCan、hitkeeen）連結均已失效，疑似假星數手法。
-> - **十一月新作集中在影片**：openmotion（開源剪輯替代品）、ChatCut agent-plugin、opus-video-skills，另有 arjun988 的 94 個 Blender skill。
+> **新增兩款 3D／遊戲向 agent skill：可玩瀏覽器動作遊戲與 8 個 three.js 動畫技能**（2026-11-25）
+> - **op7418/guizang-game-skill**：從零生成可玩瀏覽器 3D 動作遊戲，附demo《霧鎖山門》，506 星。
+> - **Moh4696/open-3d-skills**：8 個 three.js／3D 動畫網站 skill，涵蓋場景生成到 60fps 錄製，502 星。
 
 ---
 
@@ -58,6 +58,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### op7418/guizang-game-skill：歸藏 Game Skill，Claude Code／Codex 從零生成可玩瀏覽器 3D 動作遊戲，附demo《霧鎖山門》（2026-11-25）
+
+- **主線：** —
+- **核心模式：** Agent skill 讓 Claude Code、Codex 從零生成可在瀏覽器執行的 3D 動作遊戲，AI 產生素材並以 three.js、單一 HTML 檔輸出；附可玩 demo《霧鎖山門》；GitHub Search 506 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」一個「skill 直接生成完整可玩遊戲」取向——既有做法多是接進既有創作軟體或輸出動畫／影片素材，本則輸出的是可互動的瀏覽器遊戲本體，與同日 Moh4696/open-3d-skills 同屬本輪新出現的「3D／遊戲向 skill」取向；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（506★），無 forks／issues／近期 commit 佐證可查，未另行查證；與同日另外 4 款倉庫（502、502、136、130 星）同一時間點（19:59 UTC）同步衝上 GitHub 搜尋榜，疑似批次快照效應，真實熱度未能進一步驗證。
+- **來源：** GitHub Search；[GitHub](https://github.com/op7418/guizang-game-skill)
+- **成熟度：** ⏳ 新興（本庫首次收錄，附可玩 demo，尚無第三方採用或複現數據）
+
+#### Moh4696/open-3d-skills：8 個 three.js／3D 動畫網站 agent skill，涵蓋場景生成到 60fps 錄製（2026-11-25）
+
+- **主線：** —
+- **核心模式：** 8 個針對 3D 與動畫網站的 agent skill：從程式碼生成 three.js 場景、捲動式影片（scroll film）、透明影片、游標裝置、爆炸視圖（exploded view）、AI 動態素材、瀏覽器檢查到 60fps 錄製；供 Claude Code、Codex、Cursor、Gemini CLI 使用；GitHub Search 502 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」一個「網頁 3D／動畫技能包」取向——既有做法多鎖定遊戲引擎本體，本則把瀏覽器 three.js 動畫從生成拆到錄製共 8 個獨立 skill；與同日 guizang-game-skill 同屬「3D／遊戲向 skill」取向；主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（502★），無 forks／issues／近期 commit 佐證可查，未另行查證；與同日另外 4 款倉庫（506、502、136、130 星）同一時間點（19:59 UTC）同步衝上 GitHub 搜尋榜，疑似批次快照效應，真實熱度未能進一步驗證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Moh4696/open-3d-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無第三方採用或複現數據）
 
 #### bookwjitchieni1986/blender-ai-mcp-addon：同名 Blender MCP 外掛兩個月內第三度換帳號出現（2026-11-21）
 

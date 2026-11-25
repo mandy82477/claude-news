@@ -3,8 +3,8 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-24"
-last_news_update: "2026-11-24"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,8 +12,8 @@ children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 83
-attribution_count: 327
-attribution_last: "2026-11-24"
+attribution_count: 328
+attribution_last: "2026-11-25"
 top_source: "blog"
 pending_count: 10
 pending_overdue: 1
@@ -28,16 +28,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-24
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-24）
+> **本週衝擊**（2026-11-25）
 > - 🔴 **Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%**（ZDNET／GeekWire／Kingy AI 轉述）——目前只有廠商數字與媒體轉述，沒有官方牌價或第三方跑分，先別照這個比例重算預算。
 > - 🔴 **Gemini 4 Neon 發布，DeepMind 稱程式撰寫能力追平 Opus 5.5，OODA Loop 稱 API 價比 Opus 5.5 低 25%**——成本與能力宣稱同時出現，在意兩者的人都該重新比價，但基準與第三方跑分未查證。
 > - 🟡 **GPT-6.2 Astra 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項**（BigGo Finance 轉述）——多工向任務先別急著換，但成本敏感的人有理由找機會實測對照。
-> - 11-24 新增 Meta 個人 AI 代理 Muse 英國上線、OpenAI 客戶案例 iFood，皆非編碼能力或定價異動，不算對手雷達等級變化，詳見 [[topics/competitor-landscape#時序]]。
+> - 11-24 新增 VS Code 電腦操作功能追趕側寫，皆非編碼能力或定價異動，不算對手雷達等級變化，詳見 [[topics/competitor-landscape#時序]]。
 
 ---
 
@@ -200,6 +200,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Microsoft／GitHub
 **現在的答案**
+- 11-24：Visual Studio Magazine 報導 VS Code 正在補強電腦操作（computer use）能力以追上 Claude 等既有工具；具體功能與時程未見報導。
 - 11-17：Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%（ZDNET／GeekWire／Kingy AI 轉述；Fello AI 另整理 benchmark 與定價），官方牌價與第三方跑分未見。
 - 11-04：Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段；Claude Code 目前無官方 Xcode 原生整合（GitHub 官方 changelog）。
 - 10-28／29：Copilot Fusion 跨模型智慧路由正式 GA；The New Stack 稱其基準測試勝 Claude Code、API 成本減半，測試條件未載。
@@ -274,6 +275,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 2026-11
 
 #### 2026-11-24
+- **Microsoft／GitHub（分析文，非編碼能力異動）**：Visual Studio Magazine 報導 VS Code 正在補強電腦操作（computer use）相關能力以追上 Claude 等既有工具；具體功能與時程未見報導，不列入「對手雷達」表（Google News/Visual Studio Magazine）
 - **Meta（分析文，非編碼工具）**：個人 AI 代理 Muse 正式於英國上線，可處理行事曆、退款、採購等任務型工作；非編碼能力或定價異動，不列入「對手雷達」表（Blog/Meta Newsroom）
 - **OpenAI（客戶案例，廠商自宣）**：官方案例稱外送平台 iFood 以 Remote Agents Platform 將工程任務轉為 API 呼叫、覆蓋 15,000 個程式庫，平均每次執行成本約 $0.04；方法論與可複製性未見獨立驗證，不列入「對手雷達」表（Blog/OpenAI News）
 

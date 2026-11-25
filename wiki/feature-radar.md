@@ -2,10 +2,10 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-24
+**最後更新：** 2026-11-25
 
-> **本日新增重大發布**（2026-11-24）
-> Artifact 可安裝成 Mac／Windows 獨立應用程式（beta）；Background Tasks 正式轉為 GA，不再是 beta；Reflect with Claude（Monthly Recap）正式脫離 beta，開放 Free／Pro／Max／Ultra 的 web／desktop。另 Claude Ship（11-23 發布）兩日內媒體跟進累計逾 10 家，熱度升至 🔥🔥🔥🔥🔥。
+> **本日新增重大發布**（2026-11-25）
+> Claude Code v2.1.332 新增 MCP 伺服器技能（beta）與 PreSkillShellCommand hook；Claude 新增檔案傳送／儲存＋已連接應用程式（beta）。另 Artifact 安裝為獨立應用程式（11-24 發布）今日再有 The Decoder、WSJ、Computerworld、Macworld、MacStories、Inc.com、SiliconANGLE 等至少 7 家媒體跟進、跨 2 天持續討論，熱度由 🔥 升至 🔥🔥🔥。
 
 ---
 
@@ -81,7 +81,9 @@
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
-| **Artifact 安裝為獨立應用程式**（beta，可裝到 Mac／Windows 成獨立視窗 app） | 2026-11-24 | 🔥 | ⏳ 觀望 | Beta（Mac／Windows） |
+| **Claude Code v2.1.332：MCP 伺服器技能**（beta，`/` 選單顯示 `server:skill`；同版新增 PreSkillShellCommand hook） | 2026-11-25 | 🔥 | ⏳ 觀望 | Beta（技能）／正式發布（hook） |
+| **檔案傳送／儲存＋已連接應用程式**（beta，雙向交換檔案） | 2026-11-25 | 🔥 | ⏳ 觀望 | Beta |
+| **Artifact 安裝為獨立應用程式**（beta，可裝到 Mac／Windows 成獨立視窗 app） | 2026-11-24 | 🔥🔥🔥 | ⏳ 觀望 | Beta（Mac／Windows） |
 | **Background Tasks**（背景任務功能，正式轉為 GA，不再是 beta） | 2026-11-24 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Ship**（自動審查 PR、修復問題並依團隊規則核准變更；含 Claude Approvals／PR Steward 兩套子機制） | 2026-11-23 | 🔥🔥🔥🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Enterprise Admin Console 組織登入**（`claude auth login` 自動套用受管組織設定與雲端供應商，v2.1.330） | 2026-11-20 | 🔥 | ⏳ 觀望 | 正式發布 |
@@ -247,12 +249,46 @@
 
 ## 🆕 最新功能（2026-11）
 
+### Claude Code v2.1.332：MCP 伺服器技能（beta）＋ PreSkillShellCommand hook
+**發布：** 2026-11-25（v2.1.332） | **狀態：** Beta（技能）／正式發布（hook）
+
+**是什麼：** 新增從 MCP 伺服器讀取技能的功能（beta），在 `/` 選單顯示為 `server:skill`，其他技能名稱不受影響；同版新增 `PreSkillShellCommand` hook 事件，可在技能執行 shell 指令前擋下該指令。
+
+**為何熱：** 官方 GitHub Release 首發；Tech Times（11-25）同日以「Skills Over MCP Beta」為題跟進報導。
+
+**現在要試嗎：** 想直接從 MCP 伺服器拿技能、不必另外安裝的人可試；想用 hook 管控技能內 shell 指令風險的人，這版多了一個掛點。
+
+**快速上手：**
+```
+升級至 Claude Code v2.1.332；MCP 伺服器提供的技能會自動出現在 `/` 選單，顯示為 `server:skill`
+在 hooks 設定中註冊 PreSkillShellCommand 事件，可在技能呼叫 shell 指令前核准或擋下
+```
+
+**注意事項：** MCP 伺服器技能仍為 beta；官方 Release Notes 未附完整設定語法，具體範例待官方文件補齊。
+
+---
+
+### Claude 檔案傳送／儲存＋已連接應用程式（beta）
+**發布：** 2026-11-25（Help Center release notes） | **狀態：** Beta
+
+**是什麼：** Claude 現在能把檔案送到使用者已連接的應用程式，或把該應用提供的檔案存下來，屬 beta 功能。
+
+**為何熱：** 官方 Claude Help Center release notes 首發，單一官方來源，尚無社群討論。
+
+**現在要試嗎：** 有串接外部應用、需要雙向交換檔案的人可現在就試；官方未載涵蓋哪些已連接應用程式與檔案類型限制，建議先在非關鍵資料上測試。
+
+**快速上手：** 官方 release notes 僅標題可用，具體操作路徑與涵蓋範圍待補。
+
+**注意事項：** 單一官方來源，涵蓋的連接應用範圍、檔案大小與類型限制均未載明。
+
+---
+
 ### Artifact 安裝為獨立應用程式
 **發布：** 2026-11-24（beta） | **狀態：** Beta（Mac／Windows）
 
 **是什麼：** 使用者可把 Claude 做的 artifact 安裝成 Mac 或 Windows 上的獨立應用程式，取得自己的視窗，不必留在瀏覽器或 Claude 介面裡開著。
 
-**為何熱：** 官方 Claude Help Center release notes 首發；9to5Mac 同日報導但僅標題可用，尚無社群實測或討論佐證。
+**為何熱：** 官方 Claude Help Center release notes 首發；9to5Mac 同日報導；11-25 The Decoder、WSJ、Computerworld、Macworld、MacStories、Inc.com、SiliconANGLE 等至少 7 家媒體跟進報導，跨 2 天持續討論。
 
 **現在要試嗎：** 想把常用 artifact（小工具、儀表板）變成獨立視窗的人可現在就試；企業控管、多人協作與更新機制官方尚未說明，建議先在個人帳號試用。
 

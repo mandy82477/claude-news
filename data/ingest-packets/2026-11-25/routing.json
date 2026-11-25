@@ -1,0 +1,722 @@
+{
+  "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.332": {
+    "title": "Claude Code 2.1.332 build 新增 6 個功能候選旗標（自 2.1.331 起）",
+    "source": "Build Flags",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://support.claude.com/en/articles/12138966-release-notes": {
+    "title": "官方文件更新：Claude Help Center release notes",
+    "source": "Official Docs",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://platform.claude.com/docs/en/about-claude/pricing": {
+    "title": "官方文件更新：API 模型定價（Platform Docs）",
+    "source": "Official Docs",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "為 USD 標示格式調整，非實際價格變動"
+  },
+  "https://code.claude.com/docs/en/desktop.md": {
+    "title": "官方文件更新：Claude Code 桌面版",
+    "source": "Official Docs",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://status.claude.com/incidents/yl30wkjblcm6": {
+    "title": "[Status] Elevated errors for multiple models",
+    "source": "Anthropic Status",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.332": {
+    "title": "[anthropics/claude-code] v2.1.332",
+    "source": "GitHub / anthropics/claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.14.0": {
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.14.0",
+    "source": "GitHub / anthropics/anthropic-sdk-typescript",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.14.0": {
+    "title": "[anthropics/anthropic-sdk-python] v2.14.0",
+    "source": "GitHub / anthropics/anthropic-sdk-python",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/op7418/guizang-game-skill": {
+    "title": "op7418/guizang-game-skill",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/NahumLitvin/prismantis": {
+    "title": "NahumLitvin/prismantis",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/Moh4696/open-3d-skills": {
+    "title": "Moh4696/open-3d-skills",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/": {
+    "title": "Rumors swirling that labs might have cracked Factoring in P",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "純傳言，未經任何一方證實"
+  },
+  "https://github.com/mutonby/openshorts-plugin": {
+    "title": "mutonby/openshorts-plugin",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/DevCrabs-Inc/yandex-metrika-mcp": {
+    "title": "DevCrabs-Inc/yandex-metrika-mcp",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/1757": {
+    "title": "[BUG] Claude code requires users to constantly login",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.anthropic.com/research/working-with-ai": {
+    "title": "Working with AI",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "Anthropic Research 官方報告，訪談 58 家企業客戶"
+  },
+  "https://github.com/anthropics/claude-code/issues/59248": {
+    "title": "Silent retention cleanup deletes session transcripts with no warning, opt-in, or recovery",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "資料遺失類 bug，無預警無法復原"
+  },
+  "https://www.forbes.com/sites/siladityaray/2026/11/24/anthropic-ceo-dario-amodei-sold-280-million-in-shares-as-part-of-record-ipo/": {
+    "title": "Anthropic CEO Dario Amodei and Sister Daniela Sold $561M in Stock During IPO",
+    "source": "Hacker News",
+    "categories": [
+      "人物",
+      "商業"
+    ],
+    "reason": "",
+    "note": "Dario Amodei 與 Daniela Amodei 出售股票"
+  },
+  "https://github.com/anthropics/claude-code/issues/39636": {
+    "title": "[BUG] Cowork VM guest kernel never boots on Snapdragon X Plus (ARM64) — connection timeout every attempt",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/66020": {
+    "title": "[BUG] macOS 26.5.1 kernel zone leak (data.kalloc.1024) from Claude Code CLI — claude.exe panics at ~20GB, leak rate scales 21→1027/sec with agent load",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.ycombinator.com/item?id=50633601": {
+    "title": "Ask HN: Am I the only one whose AI hype is cooling down a lot?",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-24-2026": {
+    "title": "Nasdaq Resumes Selloff as Nvidia, Anthropic Shares Slump",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://carry.md/": {
+    "title": "Show HN: Carry – Save every AI conversations as Markdown, in a folder you Own",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.wsj.com/finance/investing/anthropic-committed-to-spend-900-billion-wall-street-expects-its-debt-to-be-junk-5514d55d": {
+    "title": "Wall Street Expects Anthropic's Committed $900B Debt to Be Junk",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://checkmyapp.dev": {
+    "title": "Show HN: CheckMyApp – checks your live app with each deploy from coding agent",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 僅 4 分，低於低門檻"
+  },
+  "https://github.com/hyper-elements/hyper-elements": {
+    "title": "Show HN: Hyper Elements – Agents build emails, PDFs, images with 70% less tokens",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 僅 4 分，低於低門檻"
+  },
+  "https://github.com/mario12358/telesma": {
+    "title": "Show HN: Telesma – an autonomous development loop for Claude Code",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 僅 3 分且 [dead]"
+  },
+  "https://github.com/icons8/hub": {
+    "title": "Show HN: Hub, an open-source coordinator for Claude Code and Codex sessions",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 僅 2 分"
+  },
+  "https://warmy.dev/": {
+    "title": "Show HN: Warmy – keeps Claude's prompt cache warm while you're away",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 僅 1 分"
+  },
+  "https://github.com/raymond-van/animama": {
+    "title": "Show HN: Animama – Open-source AI desktop companion with 3D avatars",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 僅 1 分，且與 Claude 關聯薄弱（泛用 AI 桌寵）"
+  },
+  "https://github.com/Orcaryn/Apargon": {
+    "title": "Show HN: Apargon – Open-Source Claude \"Install as App\" for Any AI",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 僅 1 分且 [dead]"
+  },
+  "https://github.com/martianacademy/olympus-coder": {
+    "title": "Show HN: Olympus Coder – one desktop app for Claude Code, Codex and other agents",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 僅 1 分"
+  },
+  "https://kakatu.app/": {
+    "title": "Show HN: The ultimate companion for Claude Code",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 僅 1 分"
+  },
+  "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcGJNeV80cWZGX0xjQ3pORFBPcGZPVjctOGZ5UGZ6ZjZReWxDcnRYZENKTFptcG85THV2LXBqajJ3RFExUUNKUHNHYkdFTkJpNE5pNFRaU1BEajhNQTBJZWdBQm0yTGMzUExjSnBEMEk2ZlBBZDJOX2NFRDlBNzYwVy1MUm1PYlBHLWItLUVXOVNReHV2WDBra05sTndlSGhIS3JJRktlMndkZ3A5VVZqYl9OODc1Y01hNm1hUGVqMVI?oc=5": {
+    "title": "Anthropic’s Amodei Hits Back Against Critics On Giving AI Control - Forbes",
+    "source": "Google News / Forbes",
+    "categories": [
+      "人物"
+    ],
+    "reason": "",
+    "note": "Amodei 回應外界批評"
+  },
+  "https://news.google.com/rss/articles/CBMifEFVX3lxTE11SHBETmFkYWF4Z3d4VEluVmI3bW1ReGhyNU9iSExzOUZZeGVLdGpBTUc0WEFkYXh4VXJYTmM0R01kWVY0bjJUYlhsRFJ2TlB5ZUMzZ3dQcXphelRvSDZ1UU4teW5ZdGRIWFpsRGZWWUxPT0cwN3kyclQwNHc?oc=5": {
+    "title": "Anthropic’s New Millionaires Turbocharge San Francisco’s Red-Hot Housing Market - WSJ",
+    "source": "Google News / WSJ",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "IPO 財富效應外溢房市"
+  },
+  "https://news.google.com/rss/articles/CBMiogFBVV95cUxON21kUmNhekozcmhiVUZ4SnhjVFhYM2V3WEVLcnYtd01Ua3lxa0tKekdtXzZCdzRrclFMVXpxeWFkOEZXalZybkpDdktDcUQ0Z0tkUjRjdTJhR3dmTF9kRk4xZ3hlYkxZV1lQR1pkQ0xMR2Q3M1NvcXJEc2tZZGQwQm9jTUpGZ3NUemxpeE10VW1GX0RmNEdIT2tBSks5VjNraVE?oc=5": {
+    "title": "Is the Anthropic IPO to Blame for Bitcoin's Recent Downturn? The Answer Might Surprise You. - Yahoo Finance",
+    "source": "Google News / Yahoo Finance",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMikgFBVV95cUxONWprSmNQa2c3ckpWZTA3eU50VklIMnRaaDFWeHA4N2RlVlo3WjhVYkt0dXJ2aGllSDFSVUxfeG1kd2VlS0Iwel9VZTNLYkdaSGZVc2VTaWxXbDBFS3NpNHd5RnlQMDRqckxOTHlpYUllcFpLWExnb0ZzUXJGYTZ2OHlwSnZ1M2p3VEo1RlUybFdPQQ?oc=5": {
+    "title": "Anthropic's Claude Can Now Turn Your Workflows Into Desktop Apps. Here’s How to Get Started - Inc.com",
+    "source": "Google News / Inc.com",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Claude Artifacts 桌面應用程式（今日重大事件同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTFlLeVdXV0Q3U2lsUlVFNmtzekFOd0xLQ092OExYRzlCckFRb0RZVTJuWXdQQVpFNG1Td1ZaZHIyYy1RbGY1WTJIUDlLYWx1R2c4aDRqUERmZkNweW16NUk4a0tTajZhSF9pSUtBVG43VkxVcG1Qc0d1azlhSlliSV9wZ1VOeVcz?oc=5": {
+    "title": "Anthropic CEO pushes back on Axios reporting on AI and free will - Axios",
+    "source": "Google News / Axios",
+    "categories": [
+      "人物"
+    ],
+    "reason": "",
+    "note": "Amodei 回應自由意志報導"
+  },
+  "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaExBWHpZNEp6Um16cmZhbGdSMWlUNUtmUGd1eE10UUJDbThUaUNtNEt2eDZ3alBJSjE1Q3o3VDhsLVNjbXdkT3lvOV9oNXZOVDRLQkNMajRPUnhNaUh1d0I3dDBQU1VIUUx3M0VSS0FvWWVZbGwxaktVNW0tVFpBRWlzYUJkV0NreGF6eXhyYw?oc=5": {
+    "title": "Anthropic rewrites Claude's API in Rust, cutting CPU per request 70% - MLQ.ai",
+    "source": "Google News / MLQ.ai",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Messages API Rust 重寫（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMmNMM0doWElDVk9BdjNGZnJHakNCUFg1blQzSlk0eW9zeVduV3ZKcEtJd0hpUkxDMVhnRE9rY1lLUzF1eENZaFh0SUNKbmRjanN3YWtZakZud2RYUnlSRkk5b1RZT2VfbFJPXzhZVEVyYnFnRHBwYVlGdFQzaEt2Z2VjaGVXWUE0Qmd5bjZYandmR2M2QXBSY2tKem80OGNlSzh3?oc=5": {
+    "title": "AI stock rout deepens, with Anthropic hitting $74 - Reuters",
+    "source": "Google News / Reuters",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "股價跌至 74 美元"
+  },
+  "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRnpSRFdKX3o4ODkyWThUd0dJejNkRjJIeF84cmVtMnliVC1FOU1nYVphNU1OdzFBNWlkRUgtTm9DRUp1WHg0SDR5NHNKVlN5NEpnb2hGell1dHZIbG5DczFmTXR6U0hoR21XUmlTNjg2d0lxVjJRM05zWG5IWXR5UnlEYy0wcHI4VDFIWjNKZnBDc0VpLWJMQzNTVUw3M3VvYVZKeUloWGtRZExsYnhORg?oc=5": {
+    "title": "Archive Intel Unveils MCP Server and Claude Integration for Compliant AI Communications - FF News",
+    "source": "Google News / FF News",
+    "categories": [],
+    "reason": "第三方合規封存廠商（Archive Intel）自我宣傳稿：零互動、無技術內容，不符合任一類別收錄門檻（落在「商業合作宣傳」排除類）；功能與商業記者皆已核對並拒收，主編裁定不收（3b 一則最多一跳，本則已跳一次）",
+    "note": "",
+    "summary_override": "Archive Intel 發布 MCP 伺服器並整合 Claude，用於合規 AI 通訊存檔（FF News 報導，第三方企業公關稿，零互動、無技術細節）"
+  },
+  "https://news.google.com/rss/articles/CBMieEFVX3lxTE4zcEdJZmRLbWdycGdBbzRLMWpZVUVwZHhRRlZQNjlyNHVBaTBmbFhscXdLLXFVMEtaV2ttc2pfQ0JfLXVHRUE1cG1XaVdyeFBzdGpZbExDWHB4eE82cko0UHk0RDdWdEEwWnY0SzFzTDNRODN6SW9YbA?oc=5": {
+    "title": "A Closer Look at Claude’s Mac “Apps” - MacStories",
+    "source": "Google News / MacStories",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Claude Artifacts 桌面應用程式（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdHJEemF5NDZDbnJBeGxsMWRrT2J4RlRIMGU2aW9PY1o0VjgybmNhQWU4LTBMbkp0WVo0aW01QkVYQTlzbVpreTRfSUd6Sl85QWZIVF9lSGdJRUxjVERab2ZOUjRqMDVNYkJDSXNvdXR5cGt0YWNrQVIwUHJxWUVDcEpkWHhjYnJDYW1kZnJwWQ?oc=5": {
+    "title": "Anthropic Details Claude-Assisted Rust Migration of Messages API - Unite.AI",
+    "source": "Google News / Unite.AI",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Messages API Rust 重寫（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMijgFBVV95cUxQY0RyZG0xcmNabm9peHNIdV90RkZhbkc1Zk5Oem4yMWZDcmtkWkF2dHdKaUZveEdPWG9KUE93aDh0R3JteEtqR1ZPWlBQUFBrbjQtTWFDZ1NMaHBsVi1XQjNuMzZ3bUF3T0gwVDYtOWFUZnlCNW40bHlfSm1PTDFRZXZ4ZjdnT19FM3Vxa05B?oc=5": {
+    "title": "Anthropic’s $1 Trillion Market Value Is at Risk. So Much for the AI Hype. - Barron's",
+    "source": "Google News / Barron's",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "市值風險"
+  },
+  "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE91blh2eENvd0hsR25fTlhrSkktUlc3djUxb3NYdGo2dm1maGJfZlhvU3NhSS1rWk45WDczZnpiUzVrOEFWVVA1aDRfSXo3YkpfY0RuSzdESDVlU1FqN1VBV1N3Mm5ZdTQ?oc=5": {
+    "title": "Migrating our Messages API to Rust - Anthropic",
+    "source": "Google News / Anthropic",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "官方部落格：Messages API Rust 重寫"
+  },
+  "https://news.google.com/rss/articles/CBMidEFVX3lxTE1JTUxjMm1uVTZwcGl6VnpKSVF6b3pRb0dGSVBKbnlhODBtTklGbXVkRUdaSnhoWVJNT2ctbHM4ZTBGN0FkUjRGM2x1Qi1HX2J3UmVGdHNtVTFHQm9wMzE3ak00bmxPLWlienlWTWk2bW9HTXJz?oc=5": {
+    "title": "Anthropic reportedly testing next Opus model inside Claude Code - Crypto Briefing",
+    "source": "Google News / Crypto Briefing",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": "下一代 Opus 測試傳言"
+  },
+  "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZDFmOWxFWjlTR1FDN0w3d2VadFQxdm9nZVpBVFBQOU5STEw0eXgtOG5faEx4QUxWZzZHcW5xOUdxSnhtdTU4dVc4SjZmOTJWU012V2VHYjB1b2JOX3otUEtjRXY3YXNObmpFUFFCa3NKMTNHMmtWRjNjRXBmZmdxM29HVQ?oc=5": {
+    "title": "SpaceX Stock Has an Anthropic Problem - Barron's",
+    "source": "Google News / Barron's",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "SpaceX 與 Anthropic 股價連動報導"
+  },
+  "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWnFXQUktajV6cmdhc05MNGxPbUlzbk1MenZFUENscnBzV3JIYU1DUXJGdHlSQUpTaGE3ZUhhczNsdDUzSHJSQ0s2QzJmQXV1aFdhVk5Sb3hVR1lMZ0dBTWRxZWJObFgzTERMQlRRQksyNFBFcVRUQllWeUJIX1dnNnNmX3JTU2JWNTFHT3M4c2tkcUM4N042UF9hRFpFX0l3M2tyNTlhZE5HZnFu?oc=5": {
+    "title": "Anthropic is getting more AI from less compute. That's great for Anthropic and bad for everyone else. - Business Insider",
+    "source": "Google News / Business Insider",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "AI 算力效率對產業影響"
+  },
+  "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUmhSTTlBS1NQRjBhTm9pZ0NndVg0RlFDcjBPU05qN0FieGI5R0hYVUR1VWEwejVnaG8yVEc1LTVsTnctYmZSRWlMWkd1Y2FHNVVXUC1nSnJsUTd6Y1ZrdlBRQy1Fdlk1ZDlUTTRBM2JwdE9HRHhSZjR0VUtnMUtsQWlaNDk3dWNZTnVQTg?oc=5": {
+    "title": "Early outputs: Anthropic is A/B testing Claude Opus 5.6 - TestingCatalog AI News",
+    "source": "Google News / TestingCatalog AI News",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": "Opus 5.6 A/B 測試"
+  },
+  "https://news.google.com/rss/articles/CBMic0FVX3lxTE1JNGxjcmhiZXB5bHhvbUhvYXllTjVLSXFGSEFiSzJ4QTdXcUh4RmRaWEFPalp1Rjl0WnJqN0k4YjJsSy1xVDQ0dGpzTXkwZ180aVI0MFd3RWxLWUtXVXdHOHpadGdUNGtLZnJsSDZoWDUxSGs?oc=5": {
+    "title": "Anthropic moves its Messages API from Python to Rust with help from Claude - Crypto Briefing",
+    "source": "Google News / Crypto Briefing",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Messages API Rust 重寫（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMiREFVX3lxTE1TdW5SREM2NzZ5Z2sxSFZyWlplMXZGdkpqSFFGcTdCZFFHWGxNVmZOZVU1ZEtvT1dRV0dmUWZmNHFFRUVy?oc=5": {
+    "title": "Anthropic says Claude helped rewrite its Messages API in Rust. The tests weren’t enough. - Digg",
+    "source": "Google News / Digg",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Messages API Rust 重寫（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNTluN3NCeXBFdnNtdk9RUE0zN0xScVY3enlWaUl6ZFViRENLTWptMEFXblpoT2REdDZjUF9kQlgwdzJ0RDczTlBDYWQtS1ZHa3AxZkRnMk8zYkdOcTlwcVlHWHZQTmtHT1NBM0h0YmU2SEJna3pSNm41X3g5am4wSVhKWUo0TVgtRDBjdGFuaVk3bmJnMGdpSzRERzJkWUpzUHZJOFpFMnlQdw?oc=5": {
+    "title": "Anthropic lets you install Claude ‘artifacts’ as Mac apps - Computerworld",
+    "source": "Google News / Computerworld",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Claude Artifacts 桌面應用程式（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMidEFVX3lxTE40Qkk1c0cxQ1llaUhBaGNaQzhycVdBSk1PY1JCZWcxbVVBXzlSQXlla2hjT0VmSFVrV3E5SUJxcDRfYnlkQWdpQ2lLLWhwbW5ZZ3ZsbXRCd2VtekJsMzlST180VFpGdlZjRTZnX0tpTDdvSllK?oc=5": {
+    "title": "Claude Code settings.local.json Secrets Hit Docker Hub - GitGuardian Blog",
+    "source": "Google News / GitGuardian Blog",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "settings.local.json 密鑰外洩"
+  },
+  "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRXBXajVycG5vV2xMM3o2Q19XYTAxS0RjOXptak1vbGt2SG1tR25nTmhlNm1vYlhQU3FEaDhtM2JNRUF4WXJKOXotc3BqV0dIcEN1c2ZOV2NYUG1vZlRPT3lLR3F1REdwdk9ERGpyejU4TGhuQUhJa2tHNGZZQlFpNWFrWGViY3lTaWVvU0FfV0FoUGdsRFpYLXYxeU8wMFhJOVo0?oc=5": {
+    "title": "Anthropic Introduces Claude Ship With Agents That Can Sign Off GitHub Pull Requests - WinBuzzer",
+    "source": "Google News / WinBuzzer",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Claude Ship（同一事件，11-23 已報過）"
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPb0pyWndTN2d0MkpuNlBaQXFQS3g3Z0cwWHRVY281ck1FaTRGNnFLUTFRWC10b1NFRmZqSjVXX2NlRHRRY0FaVlVzcmlaUWdIQmgzQklyQjJxNElqM2xMS3ByV0JOaWh5WWRydnVsSllPTlQ0VVpfbjJhcmJWVlVYeU5raWEzc0Zq?oc=5": {
+    "title": "Anthropic’s Stock Debut Could Hurt Tech Start-Ups - The New York Times",
+    "source": "Google News / The New York Times",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "IPO 對新創公司的外溢影響"
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTE0yUTFpUHd4ZjZrS3lWdHF5OThKd0FtbVlsa0tCaTJyV1ItNzZ5OGZwR1ZHNkVvS3NGLVl6YTBPQzgtWmJ6NV9VVnp6VFJKRUljS184dzB1enF0LTVVbVpZd2RfenlCV3dfVURxQWFBQmluMnhhdTRyVjFRd2pjOWc?oc=5": {
+    "title": "‘Prof Oak’ is now lending his expertise to Anthropic - Endpoints News",
+    "source": "Google News / Endpoints News",
+    "categories": [
+      "人物"
+    ],
+    "reason": "",
+    "note": "具名人士加入／顧問 Anthropic，標題未提供更多細節"
+  },
+  "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaUpkLXo2VHY0Zm5CRlMzdmpnSFFCTnpJVTJ4LW5COTR4WW1SczUyRHc3UGJ3VHliWFduQVVQa2puX1p0eE95UktWbEMzNU54WHMyNzNsOVE0bGFFSjR0Q1NoVkozTWExNmpwcXRfUFR4MnVTLW9DYXFRTkJKUXEwSktmczlzdzVpRE1QOTctNERIRlA4bS1MQTgzblNqakJqUm5wYjQwTS0?oc=5": {
+    "title": "Anthropic Stock Falls 33% As $900 Billion AI Spending Raises Risks - Forbes",
+    "source": "Google News / Forbes",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "股價下跌 33%"
+  },
+  "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQ3h3NFdiOGRYQXEzaWU3SXYyRzVjMHNWc1Z0R0lBRFEwcENKdDhFYkN0c21yQW1oY0ZZQjBuakR6bkc3WllqMGxOVFFVSW9PcXQxM0ZqVkEtR0tWQWF4eFVVTWxBNENvaERUVElQVlY5OW9WN0tJdDliUFRyVDVsNzJvaUJWdXlpQXlYcG9vcU1tY0U?oc=5": {
+    "title": "Anthropic Launches Claude Ship For AI Code Reviews And Approvals - Dataconomy",
+    "source": "Google News / Dataconomy",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Claude Ship（同一事件，11-23 已報過）"
+  },
+  "https://news.google.com/rss/articles/CBMimgFBVV95cUxNLUJxLW9ZUWtVc0pTOVo1N3NOOExIUU5SQXJmQ2tsMEJOek4zdmFjWHFLM25FWW1scWRSaThpYkFhSjBaYVRYUmFzWFUwcW8tck1hellEMDRvTGN4TFlLemFCZ1FLellGRDZhSlFHWU1zUXQtdmw5SWI5UmlEcTJRVUpISENrMHVZZExSalJSLVBMMTdONk9yeGtB?oc=5": {
+    "title": "Anthropic’s Claude Output Can Be Installed as Software - WSJ",
+    "source": "Google News / WSJ",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Claude Artifacts 桌面應用程式（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOMkZ3R2JqVlJwZllwVm5BckhhSHZLNDlLVmVZNmpOVmxEVjVKYkk4T1lidzVyTWk2XzJ1LWREQlZRckVlUTMzUl9CVG02OGZXUHNWUmhfTzVlMFlTSWdhbnBYQkdhZ19IQTFmRXhpUTIwTFozTy1LSUpmeTVDM1M0c05DVnlYaUFGLWZuUHFKSjREM2pEYzN0UFY4SDhjLTFnLXJVOU1WVW50Qk80dllwdUZtSnc2Uk9ST1RscXJ4UDlXdDIwYXpzMUtrWjRTRlUtNE91WnE5UWVVUFZONndUbkhB?oc=5": {
+    "title": "Anthropic stock sinks further below IPO price as investors sour on the Amodei AI bet - Yahoo Finance",
+    "source": "Google News / Yahoo Finance",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "股價跌破 IPO 價"
+  },
+  "https://news.google.com/rss/articles/CBMivwFBVV95cUxNeDNydTNWTVZHMEZucTcxSGlSazY3V05DelY1U1M2SENMcndjZWc3ejEyYWhqeDk4TnZQSDdsckdBVkF2bUFabTdWSWgxVlF6U2V3UGNCNHFjTmNwV3h6ODA5ZmVsZ0xSM0x0cWIwUGhMYl95cjNaSzFRMGhraHlEMFJ2TFZ0bHU5OC1QajJMeFlueHJoX0k4T1NVTEFONEVrRmtvak1ueE03MkxpWXhyRGNrdHBGZjd2MkpkV0ltMA?oc=5": {
+    "title": "Not SpaceX, Not Anthropic: These Are the 2 AI Stocks I Bought During the Sell-Off - The Motley Fool",
+    "source": "Google News / The Motley Fool",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "投資人逆勢操作報導"
+  },
+  "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNnVCdzZXRGhuLUY1OC1PRUx1RmtCaEhkUW5tZEZNZjlPZzlBZmJyQU9oZWVjaUhEaDluOG9yNFBKemlGQlVpTEU5X2JUbGotekRVS19yT09mZjhSOHVqcEx3MHpHRHZfYUZoTy1MS0JzVGczZjU5OWlnWUtITjhMaHFDVVNRRmMwWEVBcUN0ZUllVHd0d3FaUGlFQzZ3S2lyeHVvMndzZlphRm43N01jZmZHYUE?oc=5": {
+    "title": "Anthropic Expands in Zurich to Tap City’s AI Talent Pool - Bloomberg",
+    "source": "Google News / Bloomberg",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "蘇黎世辦公室擴編"
+  },
+  "https://news.google.com/rss/articles/CBMingFBVV95cUxQc19aaVRtVnl4Z00zWkQ4MU0tVTI1bHlhNTM0VkpDTjBIWWFPQ3FNc1FtXzF5d05vNkxiNFI2bFltRTAyVnZjVDhtZGhra0ZxTnJDbW5Kb2VZVTdDUTk0WE4wNzRkM3ZQNmlQZlFYc0lqOExUZ1h3VnE5RkUtNjR3NmtLQkVoTVVzLVhZTnJiajd5b21qUk5fcTB4MmRPdw?oc=5": {
+    "title": "Anthropic’s Claude Misuse Beta: What Security Teams Can See - TechRepublic",
+    "source": "Google News / TechRepublic",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "Claude Misuse Beta 企業安全能見度功能"
+  },
+  "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbEJnTGpFRk1mZWtGdDc1UEZlVTJOallhSDdMNUhDQ2Z6TlByYTNTYmhlQThzZTFZN21vRjFmako4RjlXb1hJcFBmTDZHZW82bXVySjhyRk1GSGZLYmh0VlBHY2x3WTRodHlLdWt6YXFhd2tzeUdmUmxKc0o3ZEx4dl9uS3EyTmJMZlZQcTdVdnF2SDByTmk5VVQzb2czUnpFZTl1QnlCd3p5QjYyQ25xT1BKUlEwOTA?oc=5": {
+    "title": "I gave Claude Code, Codex, and Antigravity control of my desktop apps, and now I use them for much more than coding - XDA",
+    "source": "Google News / XDA",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "多代理桌面控制工作流心得"
+  },
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxOLVR2OXI5dkJUZ2U5UXNvWllBeTJXVGVyaG9ZZmhqLWFXcXVGNFdoRE9sTnhLaXVyZkZLQWZQVndpNnJtRzJiWmRiLWRKNThfQlZCRXd4dWliUndRVzV3M3Jib0hFc2tIUjhpMEdKLWJhcmpWV1UxdHFXRWlTNU9UN2dn?oc=5": {
+    "title": "Rival AI leaders push back against Anthropic vision of surrendering human agency to AI - Axios",
+    "source": "Google News / Axios",
+    "categories": [
+      "人物"
+    ],
+    "reason": "",
+    "note": "其他實驗室領袖對 Amodei 願景的回應"
+  },
+  "https://news.google.com/rss/articles/CBMirwFBVV95cUxPblY0RmpPeXFpeFhJOGNvNTFOdXdZWXVmSzNneWd5UFFDUDh1S215Vkl4WVdHaDFlUkpfTUhRMW9fX1hQQ0FiV3IwSHdtSVhudS1KTHZLakZwOHBNSUdzVzd1NnlIMDhrakJSNXJrZVd2QmY2R2dRM1Fkc2w4YVNxUVVlejQtamo3ZHZuNDlFSTZaWk5Ra2ZDS2FsamhNRFVQaXg4NGpIUVhDYzU2Mmc0?oc=5": {
+    "title": "Anthropic unveils Claude-powered easy button for making Mac apps - Macworld",
+    "source": "Google News / Macworld",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Claude Artifacts 桌面應用程式（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNeXRXdGtvQlVGVW4tbDBfMUpYNGZyTXdPX3lteWtzUzZSd3J0ajJpZU5iQnVyaWJvTGt6OERjTkY1RFdEdnVNYXJiWWJHMUhEdm5PMGhYSHk2NG8yXzduakVwWVlGbFNxenF5RWZNYkc3OW14Sk5nVFFOWEozWnVtMldxQW5PdUZmOU85bWlKMnlWWC1RNWVCby1OU3JmUC1GWndrUDhOWTJEcHVsaWJRanJEcm03b0Y2cHpSUXVkU1Y0OWF3dzhabWNWdGRQZklMOUk4SFhLbXpfRjJNaWItR3pQS0ZmQQ?oc=5": {
+    "title": "Anthropic Launches Skills Over MCP Beta: Server Skills Update Without Reinstall, Approval Unstated - Tech Times",
+    "source": "Google News / Tech Times",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Skills Over MCP Beta"
+  },
+  "https://news.google.com/rss/articles/CBMingFBVV95cUxNN0F0aS1DUUFrVHFpYUR4cEFGTDRBbnhXR2pfNmFMbGN3MHU5S05qUDJ3Q1cwSHNvTm9vS3hkVVQxeEFsTFVybEVja21nVHRySTlkU1lPWDVzbm1JR3pxWlJ0dU5tZVdGTG1BM0JqS3NpYS0xZWhlMG9RMGxWcmJrSVVhOVZmcGd3cjJxSFNtQlhYcmJTaUZZNmY3WVRTUQ?oc=5": {
+    "title": "Claude Opus 5.6 leaks with a 20% price cut, still unconfirmed - Pasquale Pillitteri",
+    "source": "Google News / Pasquale Pillitteri",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": "Opus 5.6 降價傳言，未證實"
+  },
+  "https://news.google.com/rss/articles/CBMitwFBVV95cUxNODJkYjl5N25OQk9laGc1VEp3eTE3Y1ZieXZiMmRleC0yRE9hN2p5U1ZKZ3VmU3EySHFEbUtvYTVmcTI5eWtJUWQ4QW9jZkFfTnV2MjUzZG9WV3NEMEJudDB1bjFMaFRzaDVzU0xab1YwTWJiRGtVUkFuZkU3N0JoOWJTZDJQd1FNLW5zVVZBU1JVMHM3bkdOVWpaZjBIdU1SU0NlN2swV29IaWt4ZWhhRFpscFplLUE?oc=5": {
+    "title": "Someone used Claude Code to make a KolibriOS-compatible OS that runs off an ESP32-P4 - XDA",
+    "source": "Google News / XDA",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "社群專案展示"
+  },
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWnJmY2hLTWlhTHcwN3pVSEhYOXlYUThYQXJ3RWxobVlPR2lweWpSQUY1NklSLVNVUHI4c0wwdnN3azBiV05wTVV6ZmRMTllRR1dvcmNYdjRheHZDOUNVaTBxUFpuS3BZUVBvZ2tpMlpTSS1oYWZ3SC16RVZEME51a0FB?oc=5": {
+    "title": "Scoop: Anthropic and OpenAI employees fear unreleased AI models are too unsafe to release - Axios",
+    "source": "Google News / Axios",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "員工擔憂未發布模型安全性"
+  },
+  "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNak95N3VGUTZral9OeUxMdTFPTmE5TWJ2VThkMmFOWDU4YzhGNDJYSEdFNHhyS1daTl9kVXB5S3hoMXpjdXhWM3Z6UzFydzBRWEYxYlE4QjJ0U2VDUGlGOERKdkcweDBUSlVSX2hvZEtnUExFU1owdC1MbUFUVF9CTnB1OGNRazFHTlg2bEFmQzhKSjlSVUFEemhpNjVNVWxVSDRGQW4xR0ZfQU1FLWZlNU5NTUZRT2J1MnJLU1otYXlTUQ?oc=5": {
+    "title": "Anthropic is trying to kill traditional desktop apps with Claude-generated desktop apps - SiliconANGLE",
+    "source": "Google News / SiliconANGLE",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "Claude Artifacts 桌面應用程式（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMilAFBVV95cUxOalpUOW9aM25NblMxbzVNRHhYVWc3ZDdXZjlsU3NTRnV3bWxlUXNzSHQxNnBQSHItN2Vlb0VCdmxuYmYwTWtNdU5ncmlKUzJCRzZQZUI2YjZVRUZfVUlYd0tRUEFCZl9hcXBvM0xnd2dhaUJQM1h0cGRxMDdvNk56aGxnaXlaWVA5M1R6NjFIYVpYMzRG?oc=5": {
+    "title": "Anthropic finds Claude agents bypass weakened sandbox limits in up to 32% of tests - Interesting Engineering",
+    "source": "Google News / Interesting Engineering",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "Siren 測試：弱化沙盒下代理突破比例"
+  },
+  "https://news.google.com/rss/articles/CBMioAFBVV95cUxPb2E4NzhoTDlDSU1Cc3lQUTRBcVE5aExyWHQ4cUZSb053VmJEY3UxREQwSElRT29NbTBqSEMyNmpKLXJiczNLWjJWVnJncEk2MkFJY3NNRFVISWZfRDQ5bWlORnlGYXdUc1FlOUJ1R2pvQWVpRVMtTHBUNFdLQlZzQjJuaDBrTUM0eUp3R2w4ckZ0dXdHeVdCQTFRUUFmRk56?oc=5": {
+    "title": "VS Code Tries To Catch Up with Claude & Co. in Computer Use - Visual Studio Magazine",
+    "source": "Google News / Visual Studio Magazine",
+    "categories": [
+      "功能",
+      "商業"
+    ],
+    "reason": "",
+    "note": "VS Code 競品追趕 computer use"
+  },
+  "https://simonwillison.net/2026/Nov/24/llm-inflection-points/": {
+    "title": "Three LLM inflection points in twelve months",
+    "source": "Blog / Simon Willison",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "技術部落格長線回顧"
+  },
+  "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUFlGbnVuVnBtSFJ4d1hzaTd3anYzS3kyQzVmU1JYRVBjUndkODBGMGdmXzc4YnpqWWFOU2xUbnZYOE9jUFV1Y2pFTWY5VS1oOXpxN2gtZ0FvR1pRQnB3U3lPTm1URzA5aE95YkFfdmRUX3hLRjlNcEhGZVRxZ1hxQjhYZkpLZ0N5T0M0SnVOaG1Ra0tra0RlX2ZQNHFacUNZTXFTbG5YVExXWUdhT1laczJlMzV0bFVqWVNn?oc=5": {
+    "title": "Anthropic’s Siren tests whether Claude models will break out of an insecure sandbox - SiliconANGLE",
+    "source": "Google News / SiliconANGLE",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "Siren 測試（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE56VEY4dnNmZTc2Z1NUbDVMSXU2dTFUNzFwUDF0Vnp3RUoxb3hQbkNYbHVLSE5zYnpzdVBXYm12aUxVV2tJcmFUX0M2WGs5LXNhaWd6NHp0Yw?oc=5": {
+    "title": "Claude Opus 5.6 Demos Show Stunning Code-Generated 3D Scenes - X",
+    "source": "Google News / X",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": "Opus 5.6 demo（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUXFWNzFTV1EyVzFQakxUU3RiU2lrWFBMR01YU3o1RWNmU3lRNS1lcW5Wem1Dc1FqNmN3d0ZQOHFWbWhyX0VtT1lucXJWSHpzVTBZVThDOW5idWx5QnRGT1hGM2FhVUpCV0NYMDNRVUJFaklRZ2hMMlJidEZzdTdKcWZ3aFBXNnhQVjZTR1JxRVNnSG9uaDdYc0djcG1lTEZGTnR3Rk5VbkkxeFBTMjR1UVlXTzhObjQ?oc=5": {
+    "title": "Archive Intel adds AI search for compliance records and archiving for Claude chats - Superpower Daily",
+    "source": "Google News / Superpower Daily",
+    "categories": [],
+    "reason": "第三方合規封存廠商（Archive Intel）自我宣傳稿：零互動、無技術內容，不符合任一類別收錄門檻（落在「商業合作宣傳」排除類）；功能與商業記者皆已核對並拒收，主編裁定不收（3b 一則最多一跳，本則已跳一次）",
+    "note": "",
+    "summary_override": "Archive Intel 新增 AI 搜尋功能用於合規記錄存檔與 Claude 聊天封存（Superpower Daily 報導，與 FF News 同一事件，第三方企業公關稿）"
+  },
+  "https://news.google.com/rss/articles/CBMivgFBVV95cUxNY2d6Tkh0dTFIMEJ0QW80OHlCZWRoWGtBN3Z1cUdTQV9rM3ZTU0JWdVBhM3NYcnJJaFlkcjYwaG5nczA2RHczQ2FpcXNMWDRyTFRYMFZ4dkZCaXdmaEdvU3dQb1B1d1N3RjZyX3ZRQS1rX3dDdzd4THlpYWJkeXh5dlB3ZXBqT01PeU0ycUdHUUpJaW9meThYTEY3NHRhUVdUYU55b2lpZGtiVFVpeFNPcVdCVXdwSVJaakRBcmx3?oc=5": {
+    "title": "OpenAI and Anthropic Employees Are Reportedly Clashing With Company Leaders Over AI Safety - Gizmodo",
+    "source": "Google News / Gizmodo",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "員工擔憂未發布模型安全性（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMikgNBVV95cUxPUDBvdGZPSXFmVHpDeGFIc1gyZTM2SDVpY1lsRF80djNqaDNzSkF5Uy1kbFdaT3ZFcG1abTRHVFFHYmFyZmVfMmVtUERkNVM0bU9xYlZUUF9qY3Vpa0tKRXlhZ2RqdVo2UmRvSjN1SklUOXA4anJfX2t4cURCLWQwTXJycUJURjNEZVB6ellRTUF4QWt4ZS1TOWZTNHNmUkN0elFXTFBNak5IMG5ONWpRM3QzUjZDTTAzcmgxcGFDMWFYd1NFc09LS1dDTTRvU1MwZ092ZEhsSkFHcW5zbTdpTjgxcmVzTHo2eUdZbUwta0VyT0h0am40MDhaMlZBeUJiUVluVy05TUlPbGRmdkptbDBUMHpLbFlBOFAweUR2OWlSUVN3R1NESHExdG5zOGE3U2pHWTdhOWFla040TUVHOWFRcXRaS2NGeV90MXFNd3NqMGRPRUlBR0tBcjAwMXlSTHJjOWVBM2dPZmdJd0VfNUtXNmcyQV91QTAtc0JGNU9kUTBKRXQ2VkpXUUo0aFBrOGc?oc=5": {
+    "title": "Frontier AI employees alarmed that unseen Open AI and Anthropic models are too powerful to release, report claims — worry spreads that executives are ‘out of touch’ with severity of risks, will choose profit over safety - Tom's Hardware",
+    "source": "Google News / Tom's Hardware",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "員工擔憂未發布模型安全性（同一事件）"
+  },
+  "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOWNqemhLS045MWw4U05TbV9TcXNzT29hRzBIRnpkWmdoenZhOGtCYzM5THh3dDdOYjMyWXQ3Mk56c3FuVFNpYldHcDYtUHhZY0E0Z0dGMWlvV0tUSGcwbFRYUnZDMlh2YWtHcjNyc2Y4Nllnc09keVlBUmJCWDJlTldaQWg5YlRmWWk3dWpuYjlNTDZMTkJRZUQ2WTN5ODZGNDJoOTdCTEdwWDZC?oc=5": {
+    "title": "Anthropic turns Claude Artifacts into standalone desktop apps for macOS and Windows - The Decoder",
+    "source": "Google News / The Decoder",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "官方：Claude Artifacts 變桌面應用程式"
+  }
+}

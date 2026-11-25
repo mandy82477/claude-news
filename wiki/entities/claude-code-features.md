@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-24"
-last_news_update: "2026-11-24"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "active"
 days_since_news: 0
 parent: "entities/claude-code"
@@ -13,8 +13,8 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 8
-attribution_count: 35
-attribution_last: "2026-11-24"
+attribution_count: 37
+attribution_last: "2026-11-25"
 top_source: "official-docs"
 pending_count: 0
 pending_overdue: 0
@@ -33,13 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-24
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-24）
-> - **桌面版文件**：新增 Windows、macOS 下載卡片，Windows ARM64 另提供獨立安裝版下載連結，詳見 [[#桌面版功能地圖]]。
-> - **Claude Ship**：10+ 家媒體同日再跟進報導，Superpower Daily 稱其政策檢查不能取代人工 code owner 核准，詳見 [[#Claude Ship：自動審查、修復與核准 PR]]。
+> **最新動態**（2026-11-25）
+> - **桌面版文件**：新增「為所有使用者部署技能」管理功能，詳見 [[entities/claude-code-features#桌面版功能地圖|本頁桌面版功能地圖]]。
+> - **Claude Code v2.1.332**：新增從 MCP 伺服器讀取技能（beta）、`PreSkillShellCommand` hook，詳見 [[entities/claude-code-features#核心功能|本頁核心功能]]。已回報 [[feature-radar]]。
 
 ---
 
@@ -55,6 +55,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **CLAUDE.md** — 專案級別的 AI 指令設定
 - **Hooks** — 在特定事件前後注入自定義邏輯（如：修改代碼後強制跑測試）
 - **Skills** — 可複用的任務封裝單元，Claude 透過描述自動觸發；官方產品線與生態詳見 [[entities/claude-skills]]
+- **MCP 伺服器技能（beta，v2.1.332）** — 從 MCP 伺服器讀取技能，`/` 選單顯示為 `server:skill`，其他技能名稱不受影響（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.332)）
 - **`/skill-doctor`**（v2.1.252+，查證日 2026-09-25，[官方 skills 文件](https://code.claude.com/docs/en/skills)）— 列出每個 skill 的 context 成本與叫用次數、標出從未叫用的並說在哪關；報告在 `/plugin` Stats 頁。只算用量，不評內容
   - 不含 bundled／enterprise skills；Remote Control 連線與跳過 feature-flag 抓取的 session 不可用
 - **Agent Teams** — 多 agent 協作，目前僅支援 Claude 實例（社群已有 workaround）
@@ -111,6 +112,7 @@ Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少
 - 09-25：本機與 SSH session 自動載入帳號已啟用的 skills／plugins。
 
 **dev box 與受管裝置**
+- 11-25：新增「為所有使用者部署技能」管理功能；Desktop session 預設不開啟實驗性 Code Mode；本機 session 設定依各使用者電腦、SSH session 依各遠端主機分別載入；伺服器管理設定載入前，設定項目全部顯示灰色。
 - 11-18：桌面版內建 Claude Code 版本比組織設定上限還新時，顯示提示訊息。
 - 11-12：管理員提醒——`forceLoginOrgUUID` 不宜單獨搭配 Console 組織 ID。
   - `browserExternalPageTools`、`disableMobileSimulatorTools`、`disableBrowserExternalNavigation` 三設定需新版 Claude Desktop（`disableMobileSimulatorTools` 首見 09-14）。
@@ -155,6 +157,8 @@ Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-25）：桌面版文件字數由 228,099 增至 229,480，新增 13 段（移除段落未列出）。
+  - **新增內容（原文列出的）**：新增「為所有使用者部署技能」管理員章節；Desktop session 預設不開啟實驗性 [[#核心功能|Code Mode]]；本機 session 的設定依使用者各自的電腦載入、SSH session 依各遠端主機載入；伺服器管理設定尚未載入完成前，所有設定項目顯示灰色（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-24）：桌面版文件字數持平（228,099→228,099），新增 3 段（移除段落未列出，淨增減互相抵銷）。
   - **新增內容（原文列出的）**：新增 **Download for Windows**、**Download for macOS** 兩個下載卡片；Windows ARM64 另提供獨立安裝版下載連結（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-23）：桌面版文件字數由 227,979 增至 228,099，新增 12 段（移除段落未列出）。
@@ -222,6 +226,7 @@ Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少
 | `Stop`／`SubagentStop` | 既有；v2.1.294 改善 `prompt` hook 行為 | 版本表 v2.1.294 |
 | `PreCompact`／`PostCompact`／`SessionStart`／`SessionEnd` | 官方確認四個都有（#47023 已關閉，2026-08-17） | 已知問題 #47023 |
 | `PreModelSwitch`／`PostModelSwitch` | v2.1.251 新增，可攔截、確認或標註模型切換 | 版本表 v2.1.251 |
+| `PreSkillShellCommand` | v2.1.332 新增，可在技能執行 shell 指令前擋下 | 版本表 v2.1.332 |
 | Claude Mods（原 Function Hooks） | v2.1.287 出貨，取代 function hooks | 已知問題 #91870、[[entities/claude-mods]] |
 | 使用者中斷時觸發的 hook | 尚無，功能請求未獲回應 | 已知問題 #9516 |
 

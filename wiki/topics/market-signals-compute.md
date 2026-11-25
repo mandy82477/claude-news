@@ -3,21 +3,21 @@ page: "topics/market-signals-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-22"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 4
 attribution_count: 7
 attribution_last: "2026-11-22"
 top_source: "google-news"
-pending_count: 16
-pending_overdue: 0
-pending_next_review: "2026-11-25"
+pending_count: 17
+pending_overdue: 1
+pending_next_review: "2026-11-28"
 pending_signalled: 3
 staleness_exempt: null
 signal: "健康"
@@ -31,18 +31,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-09-16
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-22
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：晶片商循環融資、Nscale 等 9 條線 14 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-11）
-> - **The Information：Anthropic 揭露與 Microsoft、Google 新增逾 100 億美元合約，與 Lambda 的交易可能取消**：標題同時有增有減，淨額未知；僅標題可用。
+> **最新判讀**（2026-11-25）
+> - **Anthropic 官方：Messages API 從 Python 改寫為 Rust，CPU 消耗降 70%**：硬度從 10-29 單一媒體轉述升級為官方公告。
 >
-> 前一輪（2026-11-08）：
-> - **FT／Reuters／Bloomberg：Anthropic 簽 34 億美元合約採購燃氣機組供應資料中心**：發電業者未具名，HN 討論聚焦溫室氣體排放爭議。
+> 前一輪（2026-11-11）：
+> - **The Information：Anthropic 揭露與 Microsoft、Google 新增逾 100 億美元合約，與 Lambda 的交易可能取消**：標題同時有增有減，淨額未知；僅標題可用。
 
 ---
 
@@ -57,6 +57,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 近期判讀
+
+### 💰 Anthropic 官方：Messages API 從 Python 改寫為 Rust，每請求 CPU 消耗降 70%（2026-11-25）
+
+**一眼**：📈 正面（數字型，動到內部算力成本結構，CPU 消耗降幅由 10-29 單一媒體轉述的 40～50% 升級為官方證實的 70%）｜誰有感：無（未上市，內部工程效益，無具名受益上市公司）｜硬度：官方一手（Anthropic 官方部落格；MLQ.ai、Unite.AI、Crypto Briefing、Digg 等多家媒體同日跟進）｜線：內部重建降低運算成本 ▸ 第 2 則
+
+**為什麼這樣判**：新資訊是官方部落格首次證實將 Messages API 從 Python 重建為 Rust、每次請求消耗的 CPU 降低 70%；此前 10-29（開線）僅有 BigGo Finance 單一標題轉述公司人員 Podcast 說法、稱降幅 40～50%，未經官方證實。判正面是因為官方一手確認把硬度從單一媒體轉述拉高到公司自己公告，降幅數字也比先前轉述更大；但這是工程端的技術指標，是否已反映進下一份財報的毛利率、適用範圍是否僅限 Messages API 一項服務，官方部落格均未說明。事實見 [[topics/anthropic-business]]。
+
+**下一個催化劑**：這項降本是否反映進下一份財報或路演說明的毛利率數字；官方是否公開更多技術細節佐證 70% 這個數字的量測口徑（如是否為生產流量實測）。
+
+**你的選項**：(a) 什麼都不做，70% 是工程端官方公告的技術指標，尚未見財報毛利率數字佐證；(b) 想追蹤成本結構線的讀者，把這則與既有 10-29 BigGo Finance 的 40～50% 轉述並列看，留意是否為同一項重建措施、口徑升級後的官方數字。
+
+**一課｜複習：內部降本不等於已入帳**
+- 這一則跟 10-29 不一樣在哪：那次是單一媒體轉述公司人員 Podcast 說法，這次是官方部落格親自公告，硬度從轉述升級為官方一手，數字也從 40～50% 改為確定的 70%。
+- 下次怎麼認：同一項內部降本措施第二次出現時，先比較硬度等級是否從轉述升級為官方公告，再看數字本身是否有變動。
 
 ### 💰 The Information：Anthropic 揭露與 Microsoft、Google 新增逾 100 億美元合約，與 Lambda 的交易可能取消（2026-11-11）
 
@@ -349,6 +363,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 判讀日 | 線 | 當時判斷 | 催化劑（結算日） | 兩週後 | 對錯 |
 |---|---|---|---|---|---|
+| 2026-11-25 | 內部重建降低運算成本 | 官方證實 CPU 消耗降 70% 📈（第 2 則） | 降本是否反映進下一份財報毛利率數字、量測口徑是否公開（12-09） | ⏳ | ⏳ |
 | 2026-11-11 | 雲端供應鏈承諾總額 | MSFT／GOOGL 對手方 ⚖️（第 3 則） | 下一版 S-1/A 或招股書的承諾總額與 Lambda 列是否改動、新增合約金額是否披露（11-25） | ⏳ | ⏳ |
 | 2026-11-08 | 燃氣發電採購 | 無（交易對手未具名）⚖️（開線） | 發電業者身分、合約期限與是否計入下一版 S-1/A 承諾總額是否披露（11-22） | ⏳ | ⏳ |
 | 2026-11-05 | TeraWulf 肯塔基資料中心融資 | WULF 違約情境換股風險 〰（第 2 則） | 擔保啟動條件、股權比例與觸發門檻是否經官方證實披露（11-19） | 未出現（2026-11-21）｜WULF 方向不可驗證｜❓ 待查證 ⟨Q-01⟩ | —（不可驗證：兩組公開報價互相矛盾） |
@@ -381,6 +396,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 追蹤中的里程碑
 
+- ❓ **待查證**（標 2026-11-25｜查 Messages API、Rust｜複 2026-12-09）｜**Messages API 改寫為 Rust 降低 CPU 消耗 70% 是否反映進下一份財報的毛利率數字；量測口徑是否公開**：官方部落格僅公告降幅本身，財報佐證與量測方法均未見官方進一步說明。
 - ❓ **待查證**（標 2026-11-11｜查 Lambda、新增合約、承諾總額｜複 2026-11-25）｜**新增 Microsoft、Google 逾 100 億美元合約的金額與期限，以及 Lambda 交易是否取消**：The Information 報導僅標題可用，合約內容、取消條件與對 8,950 億美元總額的淨影響均未見報導。
 - 🔎 **查無官方**（標 2026-11-08｜查 gas-fired、天然氣發電｜複 2026-12-22）｜**燃氣發電採購合約的發電業者身分、合約期限與是否計入下一版 S-1/A 承諾總額是否經官方披露**：官方 S-1 僅概述部分資料中心採專屬天然氣發電，未載本案；anthropic.com/news 無相關貼文（2026-11-22 查）。
   - 媒體稱（FT，[Fortune 11-10](https://fortune.com/2026/11/10/anthropic-3-4-billion-deal-gas-data-centers-ai-ipo/) 轉述，2026-11-22 查證）：賣方是德州設備商 OnePWR Solutions，不是發電業者；Anthropic 接手其向 Caterpillar 訂的燃氣發電機組，約 34 億美元、1.7GW，含工程與施工，預計兩年內到位。

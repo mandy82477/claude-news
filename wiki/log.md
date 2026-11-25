@@ -9527,3 +9527,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：H-d8557d 已 void（商業記者核實：Show HN「Zhuan」第三方 API 轉售服務單一貼文僅 2 分、無獨立佐證，證據強度未達 entities/pricing-incidents 新增個案門檻，既有結論已泛指此類現象，不另開個案）
 - devpractice 沉澱：本日無候選（已檢視 3 頁新增行：anthropic-business-risks 印度盧比計價議題非本類、enterprise-cost-management 與既有帳本條目同一事實不重複記、skill-interest-watch 40 行皆純星數快照無新敘事），基準線已推進至 42f23cf
 - market 判讀：判讀 1 則（第 2 類：Anthropic 股價首度跌破 $83 發行價，CNBC／Reuters，IPO 進程 ▸ 第 38 則），「買得到的標的」ANT 方向由 ⚖️ 兩面 → 📉 負面，新增里程碑登記（股價能否站回 $83 以上，複查 2026-12-08）
+
+## 2026-11-25 Ingest（雲端，第 3 班 22:00 UTC）
+
+- 來源日報：[[news/2026-11-25]]
+- 更新頁面：
+  - **人物**：entities/dario-amodei；新增 entities/daniela-amodei
+  - **功能**：entities/claude-code、entities/claude-code-known-issues、entities/claude-code-releases、entities/claude-code-features、topics/claude-code-experimental
+  - **商業**：topics/anthropic-ipo、topics/anthropic-business、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety-cyber、topics/ai-agent-safety（僅 callout＋路由表最後動態欄）、topics/recursive-self-improvement
+  - **模型**：entities/opus-5-5
+  - **社群**：topics/community-creative-tools、topics/community-interfaces、topics/community-tech-discussions、topics/community-tech-patterns
+  - **投資分析**：topics/market-signals-ipo、topics/market-signals-compute（＋母頁 topics/market-signals）
+  - **開發實務**：無（本日無「開發實務.md」包，未寫頁；候選 5 筆已入帳，基準線推進至 6a58892）
+- 新增頁面：wiki/entities/daniela-amodei.md（Anthropic 共同創辦人兼總裁；已登記 index.md 👤 人物）
+- feature-radar：新增「Claude Code v2.1.332：MCP 伺服器技能（beta）＋ PreSkillShellCommand hook」（🔥、⏳ 觀望）、「Claude 檔案傳送／儲存＋已連接應用程式（beta）」（🔥、⏳ 觀望）；Artifact 安裝為獨立應用程式熱度 🔥 → 🔥🔥🔥（跨 2 天、至少 7 家媒體跟進）；⭐ 現在值得跟的三件候選池今日無合格新項，維持 Fable 5.2／Mythos 5.2 不動
+- index.md：新增 entities/daniela-amodei（👤 人物，active）
+- 摘要：Anthropic 今天開放 Claude Artifacts 安裝為 macOS／Windows 獨立桌面應用程式（11-24 發布，今日再有 7 家媒體跟進）、官方部落格公布把 Messages API 改寫成 Rust 使 CPU 每請求降 70%；股價續探新低（Reuters：$74，Forbes：下跌 33%）、Dario 與 Daniela Amodei 合計於 IPO 期間出售 5.61 億美元股票；另有 GitHub issue 揪出 Claude Code 保留清理機制無預警刪除 session 記錄（68 則留言）、Anthropic 自家「Siren」測試顯示弱化沙盒下代理最高 32% 突破限制，以及 OpenAI／Anthropic 員工擔憂未發布模型過於危險而與高層起摩擦（Axios 獨家＋Gizmodo＋Tom's Hardware）。
+- 呈現品質：全部通過
+- 品質備註：
+  - [主編] WSJ「900-billion」支出承諾在日報初稿誤譯為「900 億美元」（少了一個量級，應為 $9,000 億／$900 billion），由投資分析記者判讀時比對既有 11-23 記錄（已正確記為 $9,000 億）發現數量級不一致並標記；已回頭修正 news/2026-11-25.md 兩處、wiki/topics/anthropic-business.md 兩處、wiki/topics/anthropic-ipo.md 三處，全數改為「9,000 億美元（$900 billion）」，market-signals-ipo.md 本身原已正確處理、未受影響
+  - [主編] 分類階段「Archive Intel Unveils MCP Server and Claude Integration」（含 Superpower Daily 同事件報導）原判商業，經商業記者回退；補派功能記者後功能記者亦回退（第三方合規封存廠商自我宣傳稿、零互動、無技術內容），3b 一跳上限已用盡，主編裁定不收，已派分類複核記者覆核確認排除成立
+  - [主編] `data/ingest-packets/2026-11-25/reports/功能.md` 首次手工彙整時誤用「**來源歸因：**」（冒號後多餘 `**`）與一處 URL 缺 `?oc=5` 查詢字串，造成 `collect_reporter_reports.py` dry-run 各噴一個解析警示；已修正格式並補全 URL，重跑後零警示、57 行歸因全數寫入
+- 分類回退：追加派工 1 筆（功能，成立但再回退，主編最終裁定不收，理由同上品質備註）；駁回 0 筆
+- 轉知帳本：H-2929ad（安全政策→功能，TechRepublic「Claude Misuse Beta」企業安全主控台新功能，請功能記者視需要補充 entities/claude-code-features；下一輪功能記者派工時接手）
+- devpractice 沉澱：候選 5 筆（entities/claude-code-known-issues 的 #90542 CLAUDE.md 規則被整套忽視、#5768 resume 需原目錄、entities/opus-5 的 Opus 4.8/5.0 推理退化回報 #68780、entities/claude-code-features 的 Claude Ship policy check 不能取代人工 code owner 核准、entities/pricing 的疑似蒸餾指控未獲證實），手冊寫入 0 則（當日無「開發實務」官方指南包，候選留待週更落地），基準線已推進至 6a58892
+- market 判讀：判讀 3 則（IPO 進程 第 39 則：Dario／Daniela Amodei 合計出售 5.61 億美元股票；第 40 則：股價續探底至約 $74，較首日高點跌 33%；內部重建降低運算成本 第 2 則：Messages API 改寫 Rust，CPU 降 70%），「買得到的標的」ANT 方向維持 📉 負面並更新細節，新增里程碑登記 3 筆（垃圾等級評等追蹤、既有股東售股拆分追蹤、Messages API 降本財報佐證追蹤）

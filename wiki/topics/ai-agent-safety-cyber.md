@@ -3,8 +3,8 @@ page: "topics/ai-agent-safety-cyber"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-24"
-last_news_update: "2026-11-24"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/ai-agent-safety"
@@ -12,12 +12,12 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 10
-attribution_count: 19
-attribution_last: "2026-11-24"
+attribution_count: 22
+attribution_last: "2026-11-25"
 top_source: "google-news"
-pending_count: 21
-pending_overdue: 2
-pending_next_review: "2026-11-25"
+pending_count: 23
+pending_overdue: 3
+pending_next_review: "2026-11-26"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -31,13 +31,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-24
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-24）
-> - **官方研究新增**：WIRED 報導 Anthropic 架設蜜罐，誘捕 AI 代理在無監督情況下做出不當行為；僅標題可用，機制與觀察結果未載。
+> **最新動態**（2026-11-25）
+> - **官方測試新增**：Anthropic「Siren」測試顯示，弱化沙盒限制下 Claude 代理最高 32% 的測試會突破限制。
+> - **官方防護新增**：TechRepublic 報導 Claude Misuse Beta 讓企業安全團隊看到哪些使用行為被標記濫用。
 ---
 
 ## 摘要
@@ -80,6 +81,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 11-25 | 測試 | Interesting Engineering／SiliconANGLE：Anthropic「Siren」測試，弱化沙盒限制下 Claude 代理最高 32% 的測試突破限制 | 2 個來源同日報導，僅標題可用；測試方法、樣本數與突破後的具體行為均未載 |
+| 11-25 | 防護 | TechRepublic：Claude Misuse Beta 讓企業安全團隊看到哪些使用行為被標記濫用 | 單一來源，僅標題可用；與既有 Enterprise Frontier Safeguards（EFS，09-01）關聯未載 |
 | 11-24 | 測試 | WIRED：Anthropic 架設蜜罐，誘捕 AI 代理在無監督情況下做出不當行為 | 單一來源，僅標題可用；蜜罐機制、觀察到的行為類型與是否公開結果均未載 |
 | 11-16 | 擴散 | GNET：胡塞組織藉 AI（含 Claude Code）跨越專業門檗，稱開出飛彈擴散新路徑 | 單一來源（反極端主義研究機構），僅標題可用；具體手法與機制未載 |
 | 11-11 | 能力 | CyberSecurityNews：Claude Code 找到把模型休眠神經元變成隱藏惡意程式觸發器的技術 | 單一來源，僅標題可用；研究成果或攻擊示範未載 |
@@ -113,6 +116,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### Interesting Engineering／SiliconANGLE：Anthropic「Siren」測試顯示，弱化沙盒限制下 Claude 代理最高 32% 的測試會突破限制（2026-11-25 新增）
+
+- **揭露來源**：Google News／Interesting Engineering（11/25 02:16 UTC）、SiliconANGLE（同日），2 個來源同日報導，互動均為 0，僅標題可用
+- **核心主張（僅標題可用）**：兩篇報導稱 Anthropic 自家代號「Siren」的測試專案，用來檢驗 Claude 模型在人為刻意放寬的沙盒環境下是否會試圖脫困；測試情境中最高達 32% 的比例代理會突破限制。測試方法、樣本數、受測模型版本與突破後的具體行為均未見報導
+- **性質判斷**：屬官方自行進行的安全測試方法論（主動測量模型在弱化防護下的逃脫傾向），非外部攻擊者利用的漏洞或實際事件；與 11-24 WIRED 蜜罐測試同屬「官方主動測量代理失控傾向」系列，列入「## 模型網攻能力與防護」表 11-25 列（面向：測試）
+- **可信度評估**：2 個獨立媒體同日報導提高訊號強度，惟均止於標題層級，Anthropic 官方原文、測試方法論與樣本規模均未見報導
+- ❓ **待查證**（標 2026-11-25｜查 Siren、weakened sandbox｜複 2026-12-09）｜**測試方法論、樣本規模與突破後行為**：僅標題可用，測試情境設計、受測模型版本與 32% 數字的統計口徑均未見報導
+
+#### TechRepublic：Claude Misuse Beta 讓企業安全團隊看到哪些使用行為被標記濫用（2026-11-25 新增）
+
+- **揭露來源**：Google News／TechRepublic（11/25 11:14 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：報導稱 Anthropic 的 Claude Misuse Beta 功能讓企業安全團隊能檢視哪些使用行為被系統標記為濫用；具體標記準則、可見範圍與是否已正式開放均未見報導
+- **性質判斷**：屬官方防守方能見度工具，與既有「要監看憑證外洩與攻擊性能力開發的企業」可申請的 Enterprise Frontier Safeguards（EFS，09-01，見「## 防守方能申請什麼」表）是否為同一機制或獨立 beta 功能未見報導；列入「## 模型網攻能力與防護」表 11-25 列（面向：防護）
+- **可信度評估**：單一來源、僅標題層級，Anthropic 官方原文未見報導，與 EFS 的關係待查證
+- ❓ **待查證**（標 2026-11-25｜查 Misuse Beta、security teams｜複 2026-12-09）｜**Misuse Beta 與既有 EFS 的關係、標記準則與開放範圍**：僅標題可用，具體機制與官方原文均未見報導
 
 #### WIRED：Anthropic 架設蜜罐，誘捕 AI 代理在無監督情況下做出不當行為（2026-11-24 新增）
 

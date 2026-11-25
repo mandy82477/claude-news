@@ -4,21 +4,21 @@ kind: "entity"
 type: "model"
 status: "active（現行 Opus；取代 [[entities/opus-5|Opus 5]] 成為各方案預設，Opus 5 官方已改列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-11-15"
-last_news_update: "2026-11-15"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "active"
-days_since_news: 9
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 9
+days_since_news_subtree: 0
 inbound_links: 35
-attribution_count: 41
-attribution_last: "2026-11-15"
+attribution_count: 45
+attribution_last: "2026-11-25"
 top_source: "google-news"
-pending_count: 0
+pending_count: 2
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-12-09"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -31,19 +31,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-11-15
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 
-> **官方：舊版提示習慣拖慢 Opus 5.5**（2026-11-15）
-> The Decoder 等 2 來源同日報導，Anthropic 表示不少人仍用舊版提示習慣對話，拖慢模型本可有的效能；僅標題可用，既有提示建議見「跟它怎麼說話」。
+> **Opus 5.6 傳言齊發**（2026-11-25）
+> TestingCatalog 稱 Anthropic 正 A/B 測試下一代 Opus 5.6；同日另傳降價 20%、社群傳 3D demo，三者均未經官方證實。
 
 ---
 
 ## 現況
 
-**2026-11-15**：Anthropic 表示，不少使用者仍用舊版提示習慣跟 Opus 5.5 對話，拖慢了模型本可有的效能（The Decoder 同日報導，另一來源同日跟進，2026-11-14）。原料僅標題與編輯摘要可用，無法複述官方原文或具體建議內容，既有官方 prompting 要點見 [[#跟它怎麼說話]]。本頁「LiveNerf／降智觀感」已累積多筆效能觀感回報，此次官方說法是否回應該爭議未見明載，不逕自連結。
+**2026-11-25**：❓ **待查證**（標 2026-11-25｜查 Opus 5.6、TestingCatalog｜複 2026-12-09）｜**下一代 Opus 傳言齊發**：Crypto Briefing 稱 Anthropic 正在 Claude Code 內測試下一代 Opus 模型，TestingCatalog AI News 稱該測試為 A/B 測試、代號 Opus 5.6。同日另有傳言稱降價 20%（Pasquale Pillitteri）與社群流傳 3D 場景生成 demo（X 貼文），定價傳言細節見 [[entities/pricing]]。四個來源同日圍繞同一款未發布模型，互動量均為 0，官方未證實。
 
-**2026-11-08**：Hacker News 貼文彙整近期 Reddit 上多篇 Opus 5.5「被削弱」回報（HN 23 分，2 個來源）；彙整者本身未附官方說明或量化對照，仍屬主觀觀感累積，與既有「LiveNerf／降智觀感」同類回報並陳，細節見該節。
+**2026-11-15**：Anthropic 表示，不少使用者仍用舊版提示習慣跟 Opus 5.5 對話，拖慢了模型本可有的效能（The Decoder 同日報導，另一來源同日跟進，2026-11-14）。原料僅標題與編輯摘要可用，無法複述官方原文或具體建議內容，既有官方 prompting 要點見 [[#跟它怎麼說話]]。本頁「LiveNerf／降智觀感」已累積多筆效能觀感回報，此次官方說法是否回應該爭議未見明載，不逕自連結。
 
 定價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]，資安防護機制與安全爭論脈絡見 [[topics/ai-agent-safety]]。
 
@@ -227,6 +227,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[news/2026-11-09]]
 - [Google News/The Decoder：Anthropic says outdated prompting habits are slowing down Claude Opus 5.5](https://news.google.com/rss/articles/CBMinwFBVV95cUxQTFM5cnNsaGNIMzZfVDNWZ19qWUg3c0UtNVZLdUdMbzc4ZS1uTGJ0VnN2dFItbVV5Q0VCMno4RGxNV05nQWd3ZDhlaVFIT3JZS0JMVFpMaUR0VlR5TGFROXpZMGwxUXBYdE9YUmtpZlZ5RVVSX0VYN1EzR2RTWW1UX0FGWHFxZVB0OUNvcEpPdDdvRUJMazNjdVRkM1RIdzA?oc=5)（2026-11-14）
 - [[news/2026-11-15]]
+- [Google News/Crypto Briefing：Anthropic reportedly testing next Opus model inside Claude Code](https://news.google.com/rss/articles/CBMidEFVX3lxTE1JTUxjMm1uVTZwcGl6VnpKSVF6b3pRb0dGSVBKbnlhODBtTklGbXVkRUdaSnhoWVJNT2ctbHM4ZTBGN0FkUjRGM2x1Qi1HX2J3UmVGdHNtVTFHQm9wMzE3ak00bmxPLWlienlWTWk2bW9HTXJz?oc=5)（2026-11-25）
+- [Google News/TestingCatalog AI News：Early outputs: Anthropic is A/B testing Claude Opus 5.6](https://news.google.com/rss/articles/CBMijAFBVV95cUxPUmhSTTlBS1NQRjBhTm9pZ0NndVg0RlFDcjBPU05qN0FieGI5R0hYVUR1VWEwejVnaG8yVEc1LTVsTnctYmZSRWlMWkd1Y2FHNVVXUC1nSnJsUTd6Y1ZrdlBRQy1Fdlk1ZDlUTTRBM2JwdE9HRHhSZjR0VUtnMUtsQWlaNDk3dWNZTnVQTg?oc=5)（2026-11-25）
+- [Google News/Pasquale Pillitteri：Claude Opus 5.6 leaks with a 20% price cut, still unconfirmed](https://news.google.com/rss/articles/CBMingFBVV95cUxNN0F0aS1DUUFrVHFpYUR4cEFGTDRBbnhXR2pfNmFMbGN3MHU5S05qUDJ3Q1cwSHNvTm9vS3hkVVQxeEFsTFVybEVja21nVHRySTlkU1lPWDVzbm1JR3pxWlJ0dU5tZVdGTG1BM0JqS3NpYS0xZWhlMG9RMGxWcmJrSVVhOVZmcGd3cjJxSFNtQlhYcmJTaUZZNmY3WVRTUQ?oc=5)（2026-11-25）
+- [Google News/X：Claude Opus 5.6 Demos Show Stunning Code-Generated 3D Scenes](https://news.google.com/rss/articles/CBMiV0FVX3lxTE56VEY4dnNmZTc2Z1NUbDVMSXU2dTFUNzFwUDF0Vnp3RUoxb3hQbkNYbHVLSE5zYnpzdVBXYm12aUxVV2tJcmFUX0M2WGs5LXNhaWd6NHp0Yw?oc=5)（2026-11-24）
+- [[news/2026-11-25]]
 
 ## 歷史記錄
 
@@ -236,6 +241,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-25 | 下一代 Opus 傳言齊發：Claude Code 內測試中、代號 Opus 5.6、傳降價 20%、3D demo 流傳，皆未經官方證實 ❓待查證 |
 | 2026-11-15 | Anthropic 向媒體表示，不少人仍用舊版提示習慣對話，拖慢 Opus 5.5 本可有的效能；The Decoder 等 2 來源同日報導，僅標題可用 |
 | 2026-11-08 | HN《Tell HN: A flood of reports》彙整四則 Reddit 貼文稱近兩週「降規」回報增多（23 分，2 個來源），彙整者未附測試方法或官方說明，弱訊號 |
 | 2026-11-07 | PCMag UK 實測一週末記錄 Claude 面對遊戲複刻請求的具體回應，承接 11-05 官方鬆綁一半措施；報導僅標題可用 |
@@ -266,6 +272,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-11**
 
+- **2026-11-25**：四個來源同日傳下一代 Opus（代號 Opus 5.6）在 Claude Code 內 A/B 測試，另傳降價 20%、社群流傳 3D demo；互動量均為 0，官方未證實（[[news/2026-11-25]]，連結見下方「參考來源」）。
+  - ❓ **待查證**（標 2026-11-25｜查 Opus 5.6、TestingCatalog｜複 2026-12-09）｜**下一代 Opus 是否確實存在、測試範圍、降價幅度計算基準與 demo 技術細節**：四則均為未經官方證實的線報，無法複述具體內容。
 - **2026-11-15**：Anthropic 表示不少人仍用舊版提示習慣對話，拖慢 Opus 5.5 本可有的效能；The Decoder 同日報導，另一來源跟進。僅標題可用，官方 prompting 要點見「跟它怎麼說話」；與「LiveNerf」既有回報是否相關未明說（[Google News/The Decoder](https://news.google.com/rss/articles/CBMinwFBVV95cUxQTFM5cnNsaGNIMzZfVDNWZ19qWUg3c0UtNVZLdUdMbzc4ZS1uTGJ0VnN2dFItbVV5Q0VCMno4RGxNV05nQWd3ZDhlaVFIT3JZS0JMVFpMaUR0VlR5TGFROXpZMGwxUXBYdE9YUmtpZlZ5RVVSX0VYN1EzR2RTWW1UX0FGWHFxZVB0OUNvcEpPdDdvRUJMazNjdVRkM1RIdzA?oc=5)，2026-11-14）。
 - **2026-11-08**：HN《A flood of reports of Opus 5.5 being nerfed》彙整四則 Reddit 貼文稱降規回報增多（23 分，2 個來源）；未附測試方法或官方說明，非獨立複測，完整連結與並陳見「LiveNerf／降智觀感」節（[Hacker News](https://news.ycombinator.com/item?id=50419019)，2026-11-08）。
 - **2026-11-07**：PCMag UK 實測一整個週末，記錄 Claude 面對遊戲複刻請求時的具體回應，承接 11-05 官方「鬆綁一半」改主動提議做同類型原創遊戲；報導僅標題可用，無法複述測試細節（[Google News/PCMag UK](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)，2026-11-07）。鬆綁機制狀態見 [[entities/claude-code-known-issues]]。

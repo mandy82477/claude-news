@@ -3,8 +3,8 @@ page: "topics/market-signals"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-24"
-last_news_update: "2026-11-24"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -30,22 +30,19 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-24
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-24）
+> **最新判讀**（2026-11-25）
+> - **Reuters／Forbes：股價續探底至約 $74，較首日高點跌 33%**：創辦人 Dario／Daniela Amodei 同遭 Forbes 揭露合計出售 5.61 億美元股票（見 [[topics/market-signals-ipo]]）。
+> - **Anthropic 官方：Messages API 改寫為 Rust，CPU 消耗降 70%**：硬度從單一媒體轉述升級為官方公告（見 [[topics/market-signals-compute]]）。
+>
+> 前一輪（2026-11-24）：
 > - **CNBC／Reuters：股價首度跌破 $83 發行價**：CNBC 稱當日重挫 8%，Reuters 估計市值蒸發近 2,000 億美元（見 [[topics/market-signals-ipo]]）。
->
-> 前一輪（2026-11-22）：
-> - **逾期查證清零**：AISI 事件報告對上「122 次評估中 43 次為 Mythos 5」；天然氣電廠交易、Schwab 席位補貼、音樂著作權兩案、聯邦採購與擬議法案門檻等查無官方一手，標為查無官方並排定複查（見 [[topics/market-signals-legal]]、[[topics/market-signals-compute]]）。
->
-> 前一輪（2026-11-21）：
-> - **WSJ／Hacker News：掛牌跌幅定量為 AI 板塊蒸發 4 兆美元**：Nvidia 股價同步重挫（見 [[topics/market-signals-ipo]]）。
-> - **Reuters：承銷商曾平倉避險倉位以穩定 ANT 股價**：操作規模與時點未載（見 [[topics/market-signals-ipo]]）。
 
 ---
 
@@ -65,7 +62,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 | 標的 | 跟 Anthropic 的關係 | 相關判讀（所在子頁見「近期判讀」表） | 現在方向 | 下一個催化劑 |
 |---|---|---|---|---|
-| Anthropic（NASDAQ: ANT） | 本體，2026-11-19 以每股 $83 定價掛牌 Nasdaq，11-20 官方確認結算完成、發行量增至 1,127,000,000 股（超額配售權全數行使） | IPO 進程線 ▸ 第 32～38 則 | 📉 負面，結算確認募資規模擴大，但掛牌後連續重挫，11-24 首度跌破 $83 發行價，見細節 | 股價能否重新站回發行價以上；這次破發的具體歸因是否經具名分析師確認；承銷費用與既有股東售股比例拆分是否揭露 |
+| Anthropic（NASDAQ: ANT） | 本體，2026-11-19 以每股 $83 定價掛牌 Nasdaq，11-20 官方確認結算完成、發行量增至 1,127,000,000 股（超額配售權全數行使） | IPO 進程線 ▸ 第 32～40 則 | 📉 負面，跌勢持續加深，11-25 已探底至約 $74、較掛牌首日高點跌 33%，見細節 | 股價能否止跌回穩；標普／穆迪／惠譽是否正式給出評等；其餘既有股東售股身分是否陸續拆分 |
 | Salesforce（NYSE: CRM） | 合作夥伴，「Claudeforce」深度整合進 CRM | 08-26 Claudeforce 一則 | 📈 正面，動到全年營收預測 | 下一份季報是否拆分 Claudeforce 貢獻 |
 | Alphabet（NASDAQ: GOOGL） | Anthropic 的投資人，IPO 後約與 Amazon 合計持股近 30%（Google 自身比例未單獨列出）；亦為 09-19 反壟斷合謀訴訟被告之一 | IPO 線、反壟斷訴訟、客戶集中度、Gemini 4 競品定價、雲端承諾、11-13 AI軍備競賽凍結訴訟、11-18 雲端夥伴持股揭露、11-19 Gemini 4 Neon 定價對標共十則被點到 | ⚖️ 兩面，11-18 持股比例首度揭露但未單獨列出 Google 份額，部分來自低換股價可轉換票面 | 可轉換票面具體條款與 Google 自身持股比例是否單獨揭露；8,950 億美元總額與先前口徑關係是否釐清；Gemini 4 Neon 的定價與編碼能力宣稱是否經社群獨立複現 |
 | Reddit（NYSE: RDDT） | 原告，對 Anthropic 提起資料爬取／授權訴訟，聯邦法官裁定大部分可續行 | 09-19 Reddit 資料訴訟一則 | ⚖️ 兩面 | 具體裁定理由與被駁回部分披露；雙方是否進入和解談判 |
@@ -95,7 +92,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 其他具名採用 Claude 的上市公司（ICON、Globant、Rubrik 等）的採用事實在 [[topics/enterprise-tool-tracker]]，目前都沒有帶金額的消息，本頁未判讀。
 
-**細節（ANT 列）**：11-19 官方公告定價每股 $83、980,000,000 股，較 11-10 的 $70～78 區間與 825,000,000 股雙雙擴大，今日起於 Nasdaq 掛牌；掛牌首日開盤約 $110，市值版本在 1.2～2 兆美元間分歧，收盤價尚無統一數字，見 [[topics/market-signals-ipo#💰 掛牌首日：開盤約 $110，市值版本在 1.2～2 兆美元間分歧，社群稱已跌至約 $97（2026-11-19）]]。11-20 官方確認結算完成、發行量增至 1,127,000,000 股、毛額約 935 億美元、其中約 916 億美元歸 Anthropic（扣承銷費用前），見 [[topics/market-signals-ipo#💰 官方：IPO 結算完成，發行量增至 1,127,000,000 股、毛額約 935 億美元、其中約 916 億美元歸 Anthropic（扣承銷費用前）（2026-11-20）]]；同日股價重挫逾 11%、拖累那斯達克與大盤，見 [[topics/market-signals-ipo#💰 掛牌次日股價重挫逾 11%，那斯達克抹平全年漲幅、S&P 500／道瓊一度進入修正區間（2026-11-20）]]；11-21 WSJ／Hacker News 將跌幅定量為 AI 板塊市值蒸發 4 兆美元、Nvidia 同步重挫，見 [[topics/market-signals-ipo#💰 WSJ／Hacker News：掛牌後跌幅定量為 AI 板塊市值蒸發達 4 兆美元，Nvidia 同步重挫（2026-11-21）]]；同日 Reuters 另揭露承銷商曾平倉避險倉位以穩定股價，操作規模未載，見 [[topics/market-signals-ipo#💰 Reuters：Anthropic IPO 承銷商曾平倉一筆避險倉位以穩定 ANT 股價（2026-11-21）]]；11-24 股價首度跌破 $83 發行價，CNBC 稱當日重挫 8%、Reuters 估計市值蒸發近 2,000 億美元，見 [[topics/market-signals-ipo#💰 CNBC／Reuters：股價首度跌破 $83 發行價，CNBC 稱當日重挫 8%、Reuters 估計市值蒸發近 2,000 億美元（2026-11-24）]]。
+**細節（ANT 列）**：11-19 官方公告定價每股 $83、980,000,000 股，較 11-10 的 $70～78 區間與 825,000,000 股雙雙擴大，今日起於 Nasdaq 掛牌；掛牌首日開盤約 $110，市值版本在 1.2～2 兆美元間分歧，收盤價尚無統一數字，見 [[topics/market-signals-ipo#💰 掛牌首日：開盤約 $110，市值版本在 1.2～2 兆美元間分歧，社群稱已跌至約 $97（2026-11-19）]]。11-20 官方確認結算完成、發行量增至 1,127,000,000 股、毛額約 935 億美元、其中約 916 億美元歸 Anthropic（扣承銷費用前），見 [[topics/market-signals-ipo#💰 官方：IPO 結算完成，發行量增至 1,127,000,000 股、毛額約 935 億美元、其中約 916 億美元歸 Anthropic（扣承銷費用前）（2026-11-20）]]；同日股價重挫逾 11%、拖累那斯達克與大盤，見 [[topics/market-signals-ipo#💰 掛牌次日股價重挫逾 11%，那斯達克抹平全年漲幅、S&P 500／道瓊一度進入修正區間（2026-11-20）]]；11-21 WSJ／Hacker News 將跌幅定量為 AI 板塊市值蒸發 4 兆美元、Nvidia 同步重挫，見 [[topics/market-signals-ipo#💰 WSJ／Hacker News：掛牌後跌幅定量為 AI 板塊市值蒸發達 4 兆美元，Nvidia 同步重挫（2026-11-21）]]；同日 Reuters 另揭露承銷商曾平倉避險倉位以穩定股價，操作規模未載，見 [[topics/market-signals-ipo#💰 Reuters：Anthropic IPO 承銷商曾平倉一筆避險倉位以穩定 ANT 股價（2026-11-21）]]；11-24 股價首度跌破 $83 發行價，CNBC 稱當日重挫 8%、Reuters 估計市值蒸發近 2,000 億美元，見 [[topics/market-signals-ipo#💰 CNBC／Reuters：股價首度跌破 $83 發行價，CNBC 稱當日重挫 8%、Reuters 估計市值蒸發近 2,000 億美元（2026-11-24）]]；11-25 股價續探底至約 $74、較掛牌首日高點跌 33%，見 [[topics/market-signals-ipo#💰 Reuters／Forbes：股價續探底至約 $74，較首日高點跌 33%（2026-11-25）]]；同日 Forbes 揭露創辦人 Dario／Daniela Amodei 合計出售 5.61 億美元股票，見 [[topics/market-signals-ipo#💰 Forbes：Dario Amodei 與妹妹 Daniela 合計在 IPO 期間出售價值 5.61 億美元股票（2026-11-25）]]。
 
 **細節（Amazon／Google 列）**：11-18 TechCrunch 披露申報文件細節，稱 IPO 後 Amazon 約持股 14.7%、與 Google 合計近 30%，部分來自換股價僅 $2.09～5.05 的可轉換票面，條款與 Google 單獨比例未見報導；11-19 GeekWire 另算出 Amazon 原 180 億美元投資掛牌後帳面市值衝上逾 2,000 億美元，見 [[topics/market-signals-ipo#💰 掛牌首日：開盤約 $110，市值版本在 1.2～2 兆美元間分歧，社群稱已跌至約 $97（2026-11-19）]]。
 
@@ -111,9 +108,9 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 | 你想知道 | 去哪頁 | 最新一則 |
 |---|---|---|
-| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-24 CNBC／Reuters：股價首度跌破 $83 發行價，當日重挫 8%、市值蒸發近 2,000 億美元 |
+| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-25 Reuters／Forbes：股價續探底至約 $74，較首日高點跌 33%；創辦人合計出售 5.61 億美元 |
 | 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 11-18 ZeroHedge：兩家遊說公司活動於國務卿 Rubio 辦公室，合計 163 萬美元，客戶列 NSC |
-| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-11 新增逾 100 億美元 Microsoft、Google 合約，Lambda 交易可能取消 |
+| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-25 官方：Messages API 改寫為 Rust，CPU 消耗降 70% |
 | 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 11-20 Barclays、Citadel、BNY 將 Claude 導入金融業工作流 |
 | 學過哪些課、未上市的消息線各走到哪 | [[topics/market-lessons]] | 每週更新 |
 

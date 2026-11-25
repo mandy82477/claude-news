@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-24"
-last_news_update: "2026-11-24"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "active"
 days_since_news: 0
 parent: "entities/claude-code"
@@ -13,8 +13,8 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 23
-attribution_count: 99
-attribution_last: "2026-11-24"
+attribution_count: 104
+attribution_last: "2026-11-25"
 top_source: "github-issues"
 pending_count: 21
 pending_overdue: 0
@@ -33,14 +33,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-24
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬（2026-11-22 另立第十組 Cowork 與雲端排程可靠性；2026-11-22 另立認證與登入組）；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-24）
-> - **新回報**：CLAUDE.md 700 行規則契約在 4.5 小時 session 內被整套忽視、含 9 個捏造理由（#90542），VS Code／Cursor 外掛留下鎖定分頁群組（#20324），resume session 只能在當初啟動的目錄下進行（#5768）。
-> - **Anthropic Status**：Claude Haiku 5.5 錯誤率升高 18 分鐘已解決；Claude for Microsoft 365 外掛部分個人 Microsoft 帳號用戶的 Mac 版消失，調查中。
-> - **互動數更新**：Passkey 全平台登入請求（#84862）52 則留言、AGENTS.md 支援請求（#6235）410 則留言。
+> **最新動態**（2026-11-25）
+> - **新回報**：Cowork VM guest kernel 在 Snapdragon X Plus（ARM64）上永遠無法開機，每次連線都逾時（#39636）；macOS 26.5.1 下 Claude Code CLI 出現核心記憶體區洩漏，agent 負載越重洩漏越快（#66020）。
+> - **Anthropic Status**：Claude Fable 5.2、Mythos 5.2、Opus 5.5、Sonnet 5.5、Haiku 5.5 一度錯誤率升高，已於 11-25 05:32 UTC 解決。
+> - **互動數更新**：幾乎每天要求重新登入（#1757）91 則留言、78 個讚；session 紀錄被 retention cleanup 無預警刪除（#59248）68 則留言、49 個讚。
 
 ---
 
@@ -302,7 +302,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Routines 每次執行留下一個 session，Desktop app 僅能逐一刪除**（[naw103/claude-routine-cleanup](https://github.com/naw103/claude-routine-cleanup)，2026-10-03）：單一使用者回報一個 routine 累積 618 個未清理 session；社群 skill 用官方工具批次刪（每批 25 筆走核准卡）繞過；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：跨 session 交接與延續（GitHub issue #11455，累積 37 則留言、25 個讚，2026-10-03）**：提案者希望 Claude Code 支援 session 交接，讓工作能在新 session 接續；本站來源未見官方回應。與跨 session 記憶（#14227）同屬延續性缺口。
 - 🔴 **未修復**｜**功能請求：Cowork 專案可移除已加入的本機資料夾（GitHub issue #40043，累積 32 則留言、103 個讚，2026-10-01）**：使用者呼籲 Cowork 專案的 context 能移除已加入的本機資料夾，目前僅能新增無法移除；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**靜默資料遺失：session 紀錄無預警消失、不可復原**：#22931 Cowork 存檔後對話消失；#26452 Desktop 登出重啟後全部消失；#59248 Cursor 擴充套件清理悄悄刪光紀錄（累積 47 則留言、36 讚，09-19 更新；#26452 最新 56 則留言、34 讚，11-23 更新）；官方未回應任一則。
+- 🔴 **未修復**｜**靜默資料遺失：session 紀錄無預警消失、不可復原**：#22931 Cowork 存檔後對話消失；#26452 Desktop 登出重啟後全部消失；#59248 Cursor 擴充套件清理悄悄刪光紀錄（累積 68 則留言、49 讚，11-25 更新；#26452 最新 56 則留言、34 讚，11-23 更新）；官方未回應任一則。
 - 🔴 **未修復**｜**功能請求：刪除 Claude Code session（GitHub issue #13514，累積 49 則留言、114 個讚，首見 2026-08-17，2026-10-24 互動數更新）**：使用者呼籲提供刪除既有 session 紀錄的機制，目前僅能保留或 resume，無法主動清除不需要的 session；長期未獲官方回應或排入路線圖的熱門請求之一。
 - ⛔ **官方拒修**（NOT_PLANNED，2026-05-25）｜**功能請求：跨 session 持久記憶（GitHub issue #14227，累積 34 則留言、11 個讚，2026-08-09）**：使用者反映 Claude Code 每次啟動皆從零開始，缺乏跨 session 記憶；與跨 compaction 記憶訴求（issue #34556）、彙整提案 #47023 同屬記憶延續性缺口；官方標記 NOT_PLANNED 不排入路線圖。
 - ✅ **已修復**（2026-08-17 CLOSED／COMPLETED）｜**提案：開放 compact／session 生命週期 hooks 供外部記憶層串接（GitHub issue #47023，累積 41 則留言、4 個讚，2026-08-04）**：彙整 5 個既有持久記憶 issue（含 #14227、#34556），呼籲官方開放 hook 供外部記憶層串接；官方答：`PreCompact`／`PostCompact`／`SessionStart`／`SessionEnd` 四個 hook 今天都有。
@@ -340,7 +340,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**功能請求：Claude 帳號全平台支援 Passkey（WebAuthn）登入（GitHub issue #84862，累積 52 則留言、317 個讚，全站今日讚數最高，2026-11-05 首見，2026-11-24 互動數更新）**：使用者要求取代或補強密碼登入；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**驗證信對使用者信箱被抑制而無法登入 Claude Code，客服機器人沒有轉真人管道（GitHub issue #79808，累積 32 則留言、7 個讚，2026-11-22 互動數更新）**：收不到驗證信的人目前無自助繞法；官方尚未回應。
-- 🔴 **未修復**｜**Claude Code 要求使用者幾乎每天都須重新透過網頁驗證登入（GitHub issue #1757，累積 83 則留言、70 個讚，2026-08-03 首見，2026-09-04 互動數更新）**：使用者回報 Claude Code 幾乎每天都要求重新透過網頁驗證登入，認為過於頻繁且不必要；與既有「OAuth 登入逾時失敗，`auth.anthropic.com` 網域無法解析」（issue #33238）同屬登入／驗證體驗問題但現象不同（一為逾時失敗、一為驗證有效期過短），暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**Claude Code 要求使用者幾乎每天都須重新透過網頁驗證登入（GitHub issue #1757，累積 91 則留言、78 個讚，2026-08-03 首見，2026-11-25 互動數更新）**：使用者回報 Claude Code 幾乎每天都要求重新透過網頁驗證登入，認為過於頻繁且不必要；與既有「OAuth 登入逾時失敗，`auth.anthropic.com` 網域無法解析」（issue #33238）同屬登入／驗證體驗問題但現象不同（一為逾時失敗、一為驗證有效期過短），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：多帳號設定檔支援（Multi-Account Profile Support）（GitHub issue #20131，累積 39 則留言，2026-07-31）**：Claude Code 目前僅支援單一已驗證帳號，使用者呼籲支援同時設定多組帳號設定檔（例如同時管理一個 API 計費帳號與一個一般訂閱帳號），方便切換；與既有三平台多帳號缺口（Mobile／Desktop／Web connector）同屬帳號架構議題，此則聚焦 CLI 端設定檔機制；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**手機號碼驗證機制異常（GitHub issue #34229，累積 741 則留言、892 個讚，2026-07-16，全站已知問題今日互動量最高）**：使用者回報 Claude 帳號的手機號碼驗證流程出現問題；原文摘要於 preflight checklist 處被截斷，具體異常現象未知，僅能確認高互動量與「手機驗證」主題；官方尚未回應。見 [issue](https://github.com/anthropics/claude-code/issues/34229)
 - 🔴 **未修復**｜**Claude 全平台共通的帳號架構缺口——三平台各自提出多帳號管理訴求**：Mobile（[#36151](https://github.com/anthropics/claude-code/issues/36151)，1006 讚，全站讚數新高）、Desktop（[#18435](https://github.com/anthropics/claude-code/issues/18435)，1,246 讚、228 則留言）、Web connector（[#27302](https://github.com/anthropics/claude-code/issues/27302)，636 讚、291 則留言，2026-10-31 更新）皆缺多帳號支援；官方尚未回應。
@@ -398,7 +398,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**Cowork 顯示「Failed to start Claude's workspace」，VM service not running，重開機後依然（GitHub issue #27801，73 則留言、42 個讚，快照 2026-11-21）**：Windows 另有多起 Cowork VM 啟動失敗，見下方「平台相容性」組的 Windows 說明；官方尚未回應。
 
-### 🔌 平台相容性（106 條未修復、3 條已修復、3 條查無官方）
+### 🔌 平台相容性（108 條未修復、3 條已修復、3 條查無官方）
 
 - 🔴 **未修復**｜**VSCode／Cursor 外掛開新分頁時，若已開其他檔案會建立新的鎖定分頁群組，影響分頁管理（GitHub issue #20324，累積 26 則留言、19 個讚，2026-11-24）**：習慣在 VS Code 同時開多個檔案搭配 Claude Code 的人會碰到，屬介面體驗問題，不影響功能本身；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件歷史 session 無故消失（GitHub issue #9258，累積 48 則留言、51 個讚，2026-11-23）**：在 VS Code 擴充套件裡仰賴歷史紀錄回溯對話的使用者，session 歷史會無預警消失；官方尚未回應。
@@ -495,6 +495,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：Claude Code Web 支援從非預設分支啟動 session（GitHub issue #10018，累積 59 則留言、162 個讚，2026-08-29，今日全站互動量最高功能請求）**：使用者呼籲 Claude Code Web 支援從 default branch 以外的分支啟動 session，目前僅能從預設分支開始；與既有「功能請求：支援與 main 以外分支進行 diff 比較」（issue #23626，聚焦比較差異而非啟動 session）同屬「非預設分支」相關訴求但層面不同，暫分列追蹤；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Cowork VM 在 Windows ARM64（Samsung Galaxy Book4 Edge、Snapdragon）無法啟動（GitHub issue #40198，累積 68 則留言／反應，2026-07-28 首見，2026-08-20 互動數更新）**：使用者回報在搭載 Snapdragon 處理器的 Windows ARM64 裝置（Samsung Galaxy Book4 Edge）上，Cowork VM 無法啟動；顯示 Cowork 對 Windows ARM64 架構的支援尚不完整，互動量自 7/28 首見的 13 個讚大幅攀升，官方尚未回應。
 - 🔴 **未修復**｜**Cowork 在 ARM64（Snapdragon X）裝置上，即使通過環境就緒檢查仍失敗（GitHub issue #50674，累積 44 則留言，2026-10-11）**：與上列 #40198 同屬 Windows ARM64／Snapdragon 相容性問題，此則回報環境已通過 readiness check 仍失敗，暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**Cowork VM guest kernel 在 Snapdragon X Plus（ARM64）上永遠無法開機，每次連線都逾時（GitHub issue #39636，累積 42 則留言、10 個讚，2026-11-25）**：與上列 #40198、#50674 同屬 Windows ARM64／Snapdragon 相容性問題但現象為開機逾時，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**多起 API 連線錯誤彙整回報（API Error: Connection error.，GitHub issue #4297，累積 48 則留言／反應，環境：Windows 11、Anthropic API 平台，2026-08-20）**：GitHub Issue 彙集多起使用者回報的 API 連線錯誤（Connection error），環境集中於 Windows 11 搭配 Anthropic API 平台；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**Linux（Ubuntu）無法從剪貼簿貼上圖片（GitHub issue #8324，累積 42 個 reactions、44 則留言，首見 2026-07-29，2026-08-19 互動數更新）**：使用者回報在 Linux（Ubuntu）環境下，無法透過剪貼簿貼上圖片至 Claude Code；官方尚未回應。
 - 🔴 **未修復**｜**Windows 桌面版開啟內建瀏覽器分頁時發生致命 GPU 當機（錯誤碼 0x060C201E），崩潰後 MSIX 應用卡在 appxState=2 需 Repair 才能修復（GitHub issue #80444，累積 17 個 reactions、114 則留言，2026-08-19 首見，2026-11-22 互動數更新）**：官方尚未回應。
@@ -506,6 +507,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Windows/MSIX 1.28929.0：跨 session 訊息停在目標輸入框不送出，該 session 從此無回應（GitHub issue #86069，41 則留言、9 個讚，2026-10-31）**：與已修復的跨 session 傳訊功能（#24798）同源但限 Windows/MSIX；官方未回應。
 - 🔴 **未修復**｜**進程記憶體洩漏，增長至 120GB+ 遭 OOM Killed（GitHub issue #4953，累積 98 則留言、77 個讚，2026-09-22 互動數更新）**：Claude Code 進程持續增長至 120GB 以上記憶體，最終遭系統 OOM killed，屬嚴重穩定性缺陷；長時間執行或大型專案場景風險較高，官方尚未回應或說明成因。
 - 🔴 **未修復**｜**獨立個案：虛擬記憶體洩漏至 129GB，拖垮整機並導致當機（GitHub issue #11315，累積 66 則留言、58 個讚，2026-09-19 首見，2026-10-12 互動數更新）**：與上則 #4953 同屬記憶體洩漏症狀但為獨立回報，暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**macOS 26.5.1 核心記憶體區洩漏，約 20GB 時 panic，洩漏速率隨 agent 負載升高（GitHub issue #66020，累積 35 則留言，2026-11-25）**：與 #4953、#11315 同屬洩漏症狀但發生在核心層、限定該版本，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**macOS 持續性 ECONNRESET 連線錯誤（GitHub issue #5674，累積 54 則留言、54 個讚，首見 2026-07-06，2026-09-21 互動數更新）**：僅在 macOS 上出現的持續性連線中斷問題（ECONNRESET），連線中斷導致任務被打斷，Windows 環境未見同樣狀況，疑為平台特定的網路層處理差異；官方尚未回應。
 - 🔴 **未修復**｜**Linux 上持續產生 Windows 換行（CRLF）檔案（GitHub issue #2805，累積 52 則留言、35 個讚，首見 2026-07-06，2026-08-25 互動數更新）**：即便 CLAUDE.md 已明確指示使用 LF 換行，Claude Code 在 Ubuntu Linux 上仍持續產生 CRLF 換行的檔案，跨平台團隊協作時易引發不必要的 diff 雜訊；官方尚未回應。
 - 🔴 **未修復**｜**Windows 執行工具時主控台視窗閃爍（GitHub issue #14828，累積 66 則留言、38 個讚，首見 2026-07-06，2026-11-13 互動數更新）**：Windows 版執行工具時主控台視窗會反覆閃爍，影響使用體驗，官方尚未回應。
@@ -532,8 +534,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（15 條未修復、10 條已修復）
+### 🌐 服務穩定性（15 條未修復、11 條已修復）
 
+- ✅ **已修復（服務已恢復）**｜**多模型錯誤率升高：Fable 5.2、Mythos 5.2、Opus 5.5、Sonnet 5.5、Haiku 5.5（2026-11-24 20:52 PT 起，2026-11-25 05:32 UTC 已解決）**：與下方 11-24 的 Haiku 5.5 事故為不同批次的獨立事件。[來源](https://status.claude.com/incidents/yl30wkjblcm6)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Haiku 5.5 錯誤率升高（2026-11-24 17:09–17:27 UTC，約 18 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/fbvlx4wx4zx5)
 - 🔴 **未修復（調查中）**｜**Claude for M365 外掛在部分個人帳號 Mac 版 Excel／Word／PowerPoint 消失（2026-11-24 更新，調查中）**：個人 Microsoft 帳號登入、在 Mac 用這三款軟體的人可能遇到外掛消失；官方尚未給修復時程。[來源](https://status.claude.com/incidents/3vbyqgnswwxq)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：多個模型錯誤率升高（2026-11-23 09:39–09:56 UTC，約 17 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/yzs0s90d8fm8)

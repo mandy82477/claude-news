@@ -3,14 +3,14 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
+last_updated: "2026-11-25"
 last_news_update: "2026-11-18"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 7
 parent: null
 children: "['topics/community-cost', 'topics/community-guardrails', 'topics/community-integrations', 'topics/community-interfaces', 'topics/community-memory', 'topics/community-multi-agent', 'topics/community-skills', 'topics/community-tech-patterns-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 54
 attribution_count: 272
 attribution_last: "2026-11-16"
@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-22
+**最後更新：** 2026-11-25
 **最後新聞更新：** 2026-11-18
 
-> **Multi-agent 架構添跨機器協調；Skills 可靠性測試添規則優先序實測與效能熱點驗證**（2026-11-22）
-> - **Multi-agent 架構**：facadecode 讓多款 agent CLI 跨視窗、跨機器互傳訊息、互相操作，見 [[topics/community-multi-agent#2026-11]]。
-> - **可靠性測試**：fast-anything 驗證式把效能熱點搬成 Rust，真實 `claude -p` 實測證明未叫用的 Skill 仍蓋過 CLAUDE.md，見 [[topics/community-skills#2026-11]]。
+> **創意工具添 3D／遊戲向 skill；介面元件複用添多主題回覆外觀 mod**（2026-11-25）
+> - **創意工具 Agent 整合**：guizang-game-skill、open-3d-skills 把 3D 場景生成拆成可玩遊戲與 8 個網頁動畫 skill，見 [[topics/community-creative-tools#2026-11]]。
+> - **介面元件複用**：prismantis 把回覆內容逐元素套上 15 種主題色，見 [[topics/community-interfaces#2026-11]]。
 
 ---
 
@@ -58,8 +58,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-22 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、多代理 PR Review、規格驅動開發、架構邊界合約 | 2026-11-18 |
 | [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦 | Plugin / MCP 整合 | 2026-11-21 |
-| [[topics/community-creative-tools]] | agent 能不能接進影片剪輯、Blender 3D、遊戲引擎、音效與設計軟體 | 創意工具 Agent 整合 | 2026-11-21 |
-| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 | 2026-11-21 |
+| [[topics/community-creative-tools]] | agent 能不能接進影片剪輯、Blender 3D、遊戲引擎、音效與設計軟體 | 創意工具 Agent 整合 | 2026-11-25 |
+| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 | 2026-11-25 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
 
@@ -82,15 +82,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | ****Token / 成本優化**** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、Haiku 5.5 價格閘門、tokentab、Apify MCP 成本實測（[[topics/community-cost#2026-11]]） | ⚡ 活躍 | 2026-11-12 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | ****記憶與知識管理**** | claude-mem、projectmem、memory-forge-rs、itechmeat/open-second-brain 等（[[topics/community-memory#2026-11]]） | ⚡ 活躍 | 2026-11-07 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | ****Context 管理**** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift、context antipattern 診斷清單等（[[topics/community-memory#2026-11]]） | ⚡ 活躍 | 2026-11-02 | 即時取回優於預先載入；避免 context 過早飽和 |
+| ****創意工具 Agent 整合**** | guizang-game-skill、open-3d-skills、blender-skills 等（[[topics/community-creative-tools#2026-11]]） | ⏳ 新興 | 2026-11-25 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| ****介面元件複用**** | prismantis、Brainless、statuslin.es 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-25 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | ****可靠性測試**** | canary 失敗證據鏈、requirement failure／test coupling 判讀框架等（[[topics/community-skills#2026-11]]） | ⏳ 新興 | 2026-11-19 | agent 測試失敗時先分清是需求沒做到、還是測試寫得太綁死實作細節 |
-| ****創意工具 Agent 整合**** | blender-skills、opus-video-skills、ChatCut agent-plugin 等（[[topics/community-creative-tools#2026-11]]） | ⏳ 新興 | 2026-11-19 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **確定性 Agent 框架** | AFK-surf/Comma、Agentic Orchestrator 混合架構（[[topics/community-multi-agent#2026-11]]） | ⏳ 新興 | 2026-11-19 | 自架、常駐、不設 session 邊界的通用 agent 框架，與把執行迴圈交給託管平台的取向相反 |
 | ****行動裝置遠端控制**** | nanoclaw、fardesk、ccgram、OpenMinis/iCTRL 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-18 | 手機當 agent 控制介面，各自選不同傳輸層；10 月起也出現反向（agent 操作手機）取向 |
 | ****Agent 規模化**** | Anthropic 官方驗證方法論、20-instance 崩潰分析、agent-channels、Omnara 託管式（[[topics/community-multi-agent#2026-11]]） | ⏳ 新興 | 2026-11-17 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層；官方指出驗證迴圈（測試證據）才是規模化前提 |
 | ****規格驅動開發**** | spec-kit、nick-vels/skills、sharptoolbox/ontology-driven-dev、Innei/ryugi（[[topics/community-guardrails#2026-11]]） | ⏳ 新興 | 2026-11-15 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | ****Agent 活動可視化**** | claude-office、agent-office、MioIsland、ccdeck、HachimoDock、capri-desktop 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-12 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **跨 Repo 依賴可視化** | Floorplan、Archify、Understand Anything、cross-repo blast radius 分析（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-06 | 多個 repo 的專案裡，用 Claude Code plugin 畫出跨 repo 的依賴與影響範圍圖 |
-| ****介面元件複用**** | Brainless、statuslin.es、dsh-TUI、coralline、baocode 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-03 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | ****Agent 預算控制**** | rbartoli/agent-usage-guard（[[topics/community-cost#2026-10]]） | ⏳ 新興 | 2026-10-23 | 以 hooks 在用量窗口超過門檻時防新 subagent，提前提示先壓縮再送出 |
 
 > 成熟度：✅ 成熟（社群廣泛實踐）／⚡ 活躍（持續演進中）／⏳ 新興（近期出現，尚在探索）

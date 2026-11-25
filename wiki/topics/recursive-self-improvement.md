@@ -3,8 +3,8 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-24"
-last_news_update: "2026-11-24"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,12 +12,12 @@ children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 46
-attribution_count: 79
-attribution_last: "2026-11-24"
+attribution_count: 81
+attribution_last: "2026-11-25"
 top_source: "google-news"
 pending_count: 11
-pending_overdue: 2
-pending_next_review: "2026-11-25"
+pending_overdue: 3
+pending_next_review: "2026-11-30"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -28,12 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-24
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 
-> **員工私下示警再添兩則**（2026-11-24）
-> - **未發布模型太危險**：Axios 獨家，逾 24 位匿名消息來源稱 Anthropic、OpenAI 內部模型已強到員工不信任能安全釋出。
-> - **Tegmark 轉述「奪取世界」說法**：Novara Media 專訪引述 Max Tegmark，稱員工私下談論推翻政府／奪取世界；僅單一轉述，無逐字紀錄佐證。
+> **員工示警再添「與高層衝突」框架**（2026-11-25）
+> Gizmodo／Tom's Hardware 跟進 11-24 Axios 獨家，首次補上員工與公司高層因 AI 安全起衝突、指高層「脫節」恐選利潤優先於安全的說法；僅轉述，未見具體衝突事件或高層回應。
 >
 > 詳見 [[topics/recursive-self-improvement#技術彙整]]。
 ---
@@ -106,6 +105,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-11-12，非營利組織對 Anthropic、Google 等公司提告，要求凍結「AI 軍備競賽」**：Politico／CBS News 報導，CBS 稱 AI 開發商「無法控制自己的技術」；本頁「全球暫停呼籲」系列首見訴訟層級行動，詳見「## 技術彙整」
 - **2026-11-24，Axios／Yahoo Finance：逾 24 位匿名消息來源稱 Anthropic、OpenAI 員工不信任未發布模型能安全釋出**：本頁「離職示警」系列首次聚焦「未發布模型能力」本身，消息來源規模大於既有具名個案，惟全數匿名、無官方確認，詳見「## 技術彙整」
 - **同日，Novara Media：Max Tegmark 轉述稱 Anthropic 員工私下談論「奪取世界」**：與上則同日出現同類敘事，但僅 Tegmark 單一轉述、無逐字紀錄或第二方佐證，可信度層級低於上則，詳見「## 技術彙整」
+- **2026-11-25，Gizmodo／Tom's Hardware 補上「與高層衝突」框架**：延續 11-24 Axios／Yahoo Finance 匿名爆料，兩家媒體同日跟進同一獨家，首次納入「員工與公司高層就 AI 安全起衝突」「高層脫節、恐選利潤優先於安全」的說法；僅轉述 Axios 獨家，未見具體衝突事件或高層回應，詳見「## 技術彙整」
 
 ---
 
@@ -132,6 +132,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張**：Axios 獨家報導引述逾 24 位匿名消息來源，稱 Anthropic 與 OpenAI 內部未發布模型的能力已強到許多員工不再相信能安全釋出；報導未點名具體模型或能力項目
 - **與既有敘事的關係**：延續 09-09 Coxon、09-11 Benton／Engels 等離職員工示警系列，首見以「未發布模型能力」為焦點、消息來源規模最大的匿名爆料；與本頁「RSP 安全門檻」系列（11-02～11-12）同屬「公司內部如何評估自身風險」敘事，但口徑不同，不可互證
 - **可信度評估**：Axios 獨家調查報導，Yahoo Finance 同日轉載；消息來源全為匿名，無 Anthropic 或 OpenAI 官方回應，具體模型能力與「太危險」的判斷依據均未見原始文件
+- **2026-11-25 跟進（Gizmodo／Tom's Hardware，新增「與高層衝突」框架）**：兩家媒體同日跟進同一 Axios 獨家，首次補上「員工與高層就安全起衝突、高層脫節恐選利潤優先」框架；均為轉述，未附具體衝突事件或官方回應
 
 ### Novara Media（經 Hacker News）：Max Tegmark 稱 Anthropic 員工私下談論「奪取世界」（2026-11-24 新增）
 

@@ -4,11 +4,11 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-24"
-last_news_update: "2026-11-23"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
@@ -32,12 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-23
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 
-> **最新動態**（2026-11-24）
-> - **已知問題**：新增 CLAUDE.md 規則契約被整套忽視（#90542）、VS Code 留下鎖定分頁群組（#20324）、resume session 限回原目錄（#5768）等回報，另有 Haiku 5.5／Microsoft 365 外掛兩起 Status 事故，見 [[entities/claude-code-known-issues|已知問題]]。
-> - **功能**：Claude Ship 自動審查 PR 持續擴大媒體報導（10+ 家），見 [[entities/claude-code-features|功能]]。
+> **最新動態**（2026-11-25）
+> - **已知問題**：新增 Cowork VM 在 Snapdragon X Plus（ARM64）永遠無法開機（#39636）、macOS 26.5.1 核心記憶體區洩漏（#66020）；Fable 5.2／Mythos 5.2／Opus 5.5／Sonnet 5.5／Haiku 5.5 一度錯誤率升高已解決，見 [[entities/claude-code-known-issues|已知問題]]。
+> - **功能**：v2.1.332 新增 MCP 伺服器技能（beta）與 `PreSkillShellCommand` hook，見 [[entities/claude-code-features|功能]]。
 
 ---
 
@@ -47,9 +47,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（十一組逐條） | [[entities/claude-code-known-issues]] | 2026-11-24 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-23 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-23 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（十一組逐條） | [[entities/claude-code-known-issues]] | 2026-11-25 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-25 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-25 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |
 
 ## 現在還沒修好的

@@ -3,14 +3,14 @@ page: "topics/community-integrations"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-21"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "['topics/community-creative-tools']"
 page_role: "hub+child"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 2
 attribution_count: 41
 attribution_last: "2026-11-21"
@@ -31,9 +31,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 
+> **子頁更新**（2026-11-25）：[[topics/community-creative-tools]] 新增兩款 3D／遊戲向 agent skill（可玩瀏覽器動作遊戲、8 個 three.js 動畫技能），詳見該頁。
 > **Plugin / MCP 整合新增手機操控 MCP 伺服器**（2026-11-21）
 > - **phonedriver**：MCP 伺服器＋CLI 讓 agent 讀手機畫面文字並操控 Android／iPhone。
 

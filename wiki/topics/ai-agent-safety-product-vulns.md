@@ -3,17 +3,17 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-23"
-last_news_update: "2026-11-23"
+last_updated: "2026-11-25"
+last_news_update: "2026-11-25"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 24
-attribution_count: 71
-attribution_last: "2026-11-23"
+attribution_count: 72
+attribution_last: "2026-11-25"
 top_source: "google-news"
 pending_count: 25
 pending_overdue: 1
@@ -31,13 +31,13 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-23
-**最後新聞更新：** 2026-11-23
+**最後更新：** 2026-11-25
+**最後新聞更新：** 2026-11-25
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-23）
-> **廣告冒充擴及 Mac**：Hackread 揭露假 Codex／Claude Code 下載頁的惡意 Google 廣告鎖定 Mac 用戶；下載前先核對官方網域，不點搜尋廣告連結。
+> **最新動態**（2026-11-25）
+> **settings.local.json 密鑰外洩事件再被提及**（GitGuardian Blog，無新數字；官方已於 v2.1.323 修補，詳見[[topics/ai-agent-safety-product-vulns#GBHackers News／The Hacker News／CyberSecurityNews／Cyber Press：Claude Code「是，並不要再問」選項外洩密碼與 API 金鑰至公開 GitHub 倉庫（2026-11-07 新增）|本頁密鑰外洩段]]）。前次：**廣告冒充擴及 Mac**（2026-11-23）：Hackread 揭露假 Codex／Claude Code 下載頁的惡意 Google 廣告鎖定 Mac 用戶；下載前先核對官方網域，不點搜尋廣告連結。
 ---
 
 ## 摘要
@@ -184,6 +184,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **外洩機制與官方修補（2026-11-14 查證）**：觸發路徑是「不再問」把含密鑰的允許規則存進 `settings.local.json`，該檔被 git 追蹤就跟著推上公開 repo。
   - 官方修補：[CHANGELOG v2.1.323](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)（11-12）起此類規則只在本次 session 有效、不寫檔，`settings.local.json` 改全域忽略；未發安全公告。
 - **2026-11-14 更新（來源溯源）**：Reddit／r/ClaudeCode 指出，11-07 報導引用的「1,122」數字原始研究單位是資安業者 Apiiro。
+- **2026-11-25 跟進（GitGuardian Blog，無新數字）**：同一外洩事件再被提及，僅標題可用，無新增細節，官方修補狀態未變（見上方 11-14 查證）。
 
 #### CyberSecurityNews／The Hacker News：Claude Dispatch 攻擊鏈曝光，惡意瀏覽器外掛可在已連接電腦執行程式碼（2026-11-06 新增，升級既有 11-05 條目）
 
