@@ -609,11 +609,6 @@
       "id": "community-cost",
       "name": "社群做法：token、成本與模型路由",
       "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
     }
   ],
   "reader": {

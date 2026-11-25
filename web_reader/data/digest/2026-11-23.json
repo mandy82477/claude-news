@@ -450,26 +450,6 @@
   "preview": "Claude Code 實驗功能追蹤：2.1.331（自 2.1.330 起）新增 13 個候選旗標，原料僅列出 11 個名稱：CLAUDE_CODE_DISABLE_SHIP、CLAUDE_CODE_DISABLE_DESKTOP_SHIP 與同日發布的「Claude Ship」功能名稱吻合，升第三階；CLAUDE_",
   "sedimentedToday": [
     {
-      "id": "claude-code-releases",
-      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-product-vulns",
-      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
-      "pageType": "topic"
-    },
-    {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
       "id": "enterprise-cost-management",
       "name": "企業規模 Claude 成本管理",
       "pageType": "topic"

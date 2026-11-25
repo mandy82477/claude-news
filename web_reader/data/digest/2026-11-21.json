@@ -295,21 +295,6 @@
       "pageType": "topic"
     },
     {
-      "id": "community-creative-tools",
-      "name": "社群做法：讓 agent 操作影片、3D、遊戲引擎等創作工具",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
-      "pageType": "topic"
-    },
-    {
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
       "pageType": "topic"
