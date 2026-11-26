@@ -2701,8 +2701,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12138966-release-notes": {
-    "hash": "83ca8a9896082c2a96277ab511b20c25959a0510503ec23c459fbbacaedacfd1",
-    "length": 35191,
+    "hash": "04cf996a88cc8b02b758a7e542c1d5042c7c163503720e640dbe423a1174331a",
+    "length": 35190,
     "segments": [
       "/security-review command",
       "/slash commands: Save your best-working prompts as shortcuts (/slash commands) and reuse these proven workflows instantly without retyping instructions to Claude.",
@@ -2831,7 +2831,6 @@
       "Edit Claude’s drafts in place",
       "Eligible Enterprise organizations can now tag projects with the codes they already use, like a charge code or client-matter number, and see most spend in those projects by tag. This feature is available in beta. For more information, see Track spend by cost code with project tags .",
       "Enable Trusted Devices for Remote Control",
-      "Enable US-only inference for your organization",
       "Enable or disable the extension org-wide",
       "Enabled project permissions and sharing for Team and Enterprise plans. See Organization-wide sharing for more information.",
       "Enterprise plans can manage admin permissions with custom roles",
@@ -2984,6 +2983,7 @@
       "Updated memory for Claude",
       "Usage Policy",
       "Usage analytics for Claude Cowork. For more information, see View usage analytics for Team and Enterprise plans .",
+      "Use Claude Cowork on web, desktop, and mobile",
       "Use Claude for Excel and PowerPoint with an LLM gateway",
       "Use Claude’s chat search and memory to build on previous context",
       "Use plugins in Cowork",
