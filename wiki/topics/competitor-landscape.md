@@ -37,7 +37,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > - 🔴 **Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%**（ZDNET／GeekWire／Kingy AI 轉述）——目前只有廠商數字與媒體轉述，沒有官方牌價或第三方跑分，先別照這個比例重算預算。
 > - 🔴 **Gemini 4 Neon 發布，DeepMind 稱程式撰寫能力追平 Opus 5.5，OODA Loop 稱 API 價比 Opus 5.5 低 25%**——成本與能力宣稱同時出現，在意兩者的人都該重新比價，但基準與第三方跑分未查證。
 > - 🟡 **GPT-6.2 Astra 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項**（BigGo Finance 轉述）——多工向任務先別急著換，但成本敏感的人有理由找機會實測對照。
-> - 11-25 新增 GitHub Copilot code review 計費政策改動（12-30 起未選計費方式者預設算組織帳）；11-26 新增 shattered.io 的 Claude Code vs Codex 定價對照（見下方「硬答案」），皆非對手雷達等級變化，詳見 [[topics/competitor-landscape#時序]]。
+> - 11-25 新增 GitHub Copilot code review 計費政策改動（12-30 起未選計費方式者預設算組織帳）；11-26 新增 shattered.io 的 Claude Code vs Codex 定價對照（見 [[topics/competitor-landscape#硬答案]]），皆非對手雷達等級變化，詳見 [[topics/competitor-landscape#時序]]。
 
 ---
 

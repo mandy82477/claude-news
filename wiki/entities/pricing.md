@@ -38,9 +38,9 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 > **最新計費政策異動**（2026-11-26）
 > - **Claude Code Max 方案同步湧現 4 份高熱度用量異常 GitHub Issue**（最熱一則 1,501 則留言），詳見 [[entities/pricing-incidents]]
-> - **開發者稱遭 Anthropic 以「蒸餾」（distillation）指控、須 24 小時內自證未訓練自有模型**：高頻率自動化測試／評測呼叫模式可能觸發誤判，詳見下方「方案可用性與帳務摩擦」（Hacker News，匿名案例未獲證實）
+> - **開發者稱遭 Anthropic 以「蒸餾」（distillation）指控、須 24 小時內自證未訓練自有模型**：高頻率自動化測試／評測呼叫模式可能觸發誤判，詳見 [[entities/pricing#方案可用性與帳務摩擦]]（Hacker News，匿名案例未獲證實）
 > - **官方定價頁 Pro／Max 文案重新明確列出 Fable 與 API credits 條款**：Pro 條列寫「Fable，以用量額度支付」、Max 條列寫「Fable 內含，最多可用到每週用量的一半」與「每月 $100 美元 API 額度可在 Claude Platform 上開發」；三項與本頁既有規則一致，屬官方頁面文案重新確認，非新規則（[claude.com/pricing](https://claude.com/pricing)，2026-11-23）
-> - **官方定價文件新增 Managed Agents 計費依據與各平台乘數規則細項**，並移除舊版 Google Cloud 定價與每千次搜尋 $10 的 web search 定價行（細節見下方「當前生效的計費規則」；移除後的替代寫法尚未核對）
+> - **官方定價文件新增 Managed Agents 計費依據與各平台乘數規則細項**，並移除舊版 Google Cloud 定價與每千次搜尋 $10 的 web search 定價行（細節見 [[entities/pricing#當前生效的計費規則]]；移除後的替代寫法尚未核對）
 > - **Max 方案 1M context 誤判需加購**：GitHub Issue #45390 回報，選用 Opus 4.6（1M context）即使用量遠低於需要加購的量仍顯示「Extra usage required」，官方尚無回應，詳見 [[entities/pricing-incidents]]
 > - **Linked Billing 公開測試上線**：第三方平台可把自己的計費系統接上 Claude API 用量帳務，Python／TypeScript SDK 同日新增 `billing_policy` 參數與對應錯誤碼；Railway、Harness（Cosmos）同日宣布已支援
 > - **claude.ai 購買與方案變更一度出錯、已解決**：官方狀態頁 11-14 通報，延遲款項與方案變更已補上，詳見 [[entities/pricing-incidents]]

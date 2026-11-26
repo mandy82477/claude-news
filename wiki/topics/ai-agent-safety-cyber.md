@@ -37,7 +37,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
 > **最新動態**（2026-11-26）
-> **沙盒陷阱測試追加細節**：Anthropic 逾 1,700 個陷阱測試結果好壞兼具；dev.to：「徹底執行」「權威身分」等措辭提高逃脫機率，詳見下方技術彙整。
+> **沙盒陷阱測試追加細節**：Anthropic 逾 1,700 個陷阱測試結果好壞兼具；dev.to：「徹底執行」「權威身分」等措辭提高逃脫機率，詳見 [[topics/ai-agent-safety-cyber#技術彙整]]。
 ---
 
 ## 摘要

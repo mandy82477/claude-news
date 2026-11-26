@@ -37,7 +37,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > **最新動態**（2026-11-26）
 > - **已知問題**：Max 方案用量消耗異常同時衝上 4 份高熱度 Issue（#16157 累積 1,501 則留言全站最高），見 [[entities/claude-code-known-issues|已知問題]]。
-> - **現況**：TestingCatalog 報導 Anthropic 據稱準備 Claude 的 Google Drive 檔案瀏覽功能，尚待官方佐證，見下方「近期報導」。
+> - **現況**：TestingCatalog 報導 Anthropic 據稱準備 Claude 的 Google Drive 檔案瀏覽功能，尚待官方佐證。
 
 ---
 
