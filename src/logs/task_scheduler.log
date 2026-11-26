@@ -1688,3 +1688,4 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [Wed 2026/11/25 23:26:40.00] 測試全綠 - web build 放行
 [Wed 2026/11/25 23:26:40.00] Single push done (news + wiki + web)
 [Wed 2026/11/25 23:26:40.00] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud STARTED 2026-11-26T12:08:33Z]
