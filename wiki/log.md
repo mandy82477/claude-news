@@ -9580,3 +9580,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：結案 H-2929ad（功能，TechRepublic「Claude Misuse Beta」已於本輪補上 entities/claude-code-features 一行 wikilink）；新開 H-2a4232（社群→功能，請功能記者評估 `topics/anthropic-product-matrix` 是否新增 mobile-agent-testers／gflow-cli 列）
 - devpractice 沉澱：本日無「開發實務.md」包，未派工（今日無官方使用指南類條目）
 - market 判讀：判讀 1 則（第 2 類：IPO 進程線第 41 則——股價單日反彈但連續第二天收在 $83 發行價之下，Bloomberg 另報導華爾街內部罕見分歧），「買得到的標的」ANT 方向由 📉 負面 → ⚖️ 兩面，新增回顧結算 ⏳ 1 列（判讀日 2026-11-26，結算日 2026-12-10）；今日反彈與既有 11-25 止跌／信評里程碑標記完全重疊，未另開新標記
+  - [主編] `gate_web_build.py` 擋下：`check_devpractice_state.py` 判定本輪 ingest commit 之後 `data/devpractice_state.json` 未跟進（今日無開發實務包，未派工，基準線停在 11-25）；已跑 `devpractice_diff.py mark` 推進基準線至本輪收尾 commit（07a320a0），確認 diff 內容僅為各頁 frontmatter `days_since_news` 欄位常規遞增、無真實候選漏記
