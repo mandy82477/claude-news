@@ -3,10 +3,10 @@ page: "topics/community-integrations"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-25"
+last_updated: "2026-11-26"
 last_news_update: "2026-11-25"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "['topics/community-creative-tools']"
 page_role: "hub+child"

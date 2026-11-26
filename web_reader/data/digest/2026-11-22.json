@@ -399,11 +399,6 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety-prompt-injection",
-      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-eval-boundary-incidents",
       "name": "AI 評測越界事件",
       "pageType": "topic"
@@ -411,16 +406,6 @@
     {
       "id": "anthropic-partnerships-compute",
       "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-multi-agent",
-      "name": "社群做法：多 agent 怎麼分工與協調",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-skills",
-      "name": "社群做法：Skills 怎麼寫",
       "pageType": "topic"
     },
     {

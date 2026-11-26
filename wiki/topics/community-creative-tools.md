@@ -12,8 +12,8 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 6
-attribution_count: 2
-attribution_last: "2026-11-25"
+attribution_count: 3
+attribution_last: "2026-11-26"
 top_source: "github"
 pending_count: 1
 pending_overdue: 0

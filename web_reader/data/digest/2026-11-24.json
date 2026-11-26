@@ -446,11 +446,6 @@
       "pageType": "entity"
     },
     {
-      "id": "pricing-incidents",
-      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
-      "pageType": "entity"
-    },
-    {
       "id": "pricing",
       "name": "Anthropic 訂閱方案與計費政策",
       "pageType": "entity"
@@ -463,11 +458,6 @@
     {
       "id": "anthropic-business-risks",
       "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
-      "pageType": "topic"
-    },
-    {
-      "id": "claude-research-results",
-      "name": "Claude 原創科研成果與驗證狀態",
       "pageType": "topic"
     }
   ],

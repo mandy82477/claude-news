@@ -3,8 +3,8 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-25"
-last_news_update: "2026-11-25"
+last_updated: "2026-11-26"
+last_news_update: "2026-11-26"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,8 +12,8 @@ children: "['topics/anthropic-business-archive', 'topics/anthropic-business-risk
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 136
-attribution_count: 518
-attribution_last: "2026-11-25"
+attribution_count: 521
+attribution_last: "2026-11-26"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0

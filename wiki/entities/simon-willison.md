@@ -4,24 +4,24 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-22"
-last_news_update: "2026-10-20"
+last_updated: "2026-11-26"
+last_news_update: "2026-11-26"
 status_main: "active"
-days_since_news: 36
+days_since_news: 0
 parent: null
 children: "['entities/simon-willison-archive']"
 page_role: "hub"
-days_since_news_subtree: 36
+days_since_news_subtree: 0
 inbound_links: 5
-attribution_count: 3
-attribution_last: "2026-10-20"
+attribution_count: 5
+attribution_last: "2026-11-26"
 top_source: "blog"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "休眠"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Simon Willison

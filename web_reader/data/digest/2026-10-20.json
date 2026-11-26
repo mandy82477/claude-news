@@ -334,11 +334,6 @@
       "id": "linus-torvalds",
       "name": "Linus Torvalds",
       "pageType": "entity"
-    },
-    {
-      "id": "simon-willison",
-      "name": "Simon Willison",
-      "pageType": "entity"
     }
   ],
   "reader": {

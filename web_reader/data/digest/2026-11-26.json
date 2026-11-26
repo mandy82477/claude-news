@@ -1,0 +1,738 @@
+{
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26 22:14 UTC",
+  "articleCount": 68,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "社群把 Anthropic 的 GRH（廣義黎曼猜想）Lean 證明精簡了 99.56%",
+      "url": "https://github.com/lsernau/grh-lean",
+      "source": "Hacker News",
+      "time": "11/25 21:48",
+      "sentiment": "",
+      "body": "社群成員把 Anthropic 原本約 1,700 萬行的 GRH Lean 形式化驗證，重寫成約 7.6 萬行就能跑完同樣的驗證，討論在 Hacker News 衝上 525 分，遠超過高互動門檻。關注 Claude 數學證明形式化驗證進度的人，這是比單純聲稱證明完成更進一步的「社群複核、證明本身被大幅精簡」訊號。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-research-results",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "pierridotite/mobile-agent-testers",
+      "url": "https://github.com/pierridotite/mobile-agent-testers",
+      "source": "GitHub Search",
+      "time": "11/26 19:43",
+      "sentiment": "",
+      "body": "新專案讓 20 支 Claude Code agent 同時在 GitHub 免費 Runner 的 iOS 模擬器與 Android 模擬器上並行測試，找跑版、翻譯、排版與無障礙相關的 bug，上線即衝上 2,488 星。想把行動裝置測試自動化、不想自建裝置農場的團隊，這是今天新上榜的工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-multi-agent",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "ffroliva/gflow-cli",
+      "url": "https://github.com/ffroliva/gflow-cli",
+      "source": "GitHub Search",
+      "time": "11/26 19:43",
+      "sentiment": "",
+      "body": "這款 MCP server／CLI 讓 Claude Code、Claude Desktop、Cursor、Codex 等工具能直接呼叫 Google Flow 產生 Veo 3.1 影片與 Nano Banana／Imagen 圖片，免費、MIT 授權，近 2 天暴增 289 星（約每天 144 星）。想在 agent 工作流裡直接出圖出片、不想自己串接 API 的人可以留意。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-creative-tools",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "TestingCatalog：Anthropic 正在準備 Claude 的 Google Drive 檔案瀏覽功能",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbUd5Ti0tSEhKREU3VnhCQy1aY3E5cVpCME9aaWRQZm81c3FwUVN0bWR6RWxVOXFVLTNVS3FrLWdhNEZwZXdac2NuVU5pb3Q2bmNPWnlqenFEdzdZZEZBLV9sd1ZqWmdrdXlITDhqdDJiUGU0SW9tOUV6R2RVWW5INzVhVGFHbXJkanVTTGpSVWQ?oc=5",
+      "source": "TestingCatalog AI News",
+      "time": "11/26 18:00",
+      "sentiment": "",
+      "body": "TestingCatalog 報導，Anthropic 正在準備讓 Claude 具備 Google Drive 檔案瀏覽功能，但尚未正式對外開放。常把文件放在 Google Drive、想讓 Claude 直接讀取的人，這是目前最早浮現的具體線索。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [],
+  "mediaReports": [
+    {
+      "title": "Anthropic CEO Amodei 否認要人類向 AI「投降」的說法",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNU1lFeWR4WThickRrRFF1RS1jOWdOdXNxUDRqZkJQQjhHMnVsZjR4QTN3emM2YlRkcnlrbVFrVl9TUmNJdm9EZXZTTDh0MmZxSzc5Z2hZSjRZMndpU2RuZTlIRXU1WWxlTFZJOXVQTFc2QVRyYWpfc04xN2tDZDZkdERhVjdGaV9lblV0U0x0SHVmYzF5WFkxOC1UODkyaDhoNFF2MWtUSWt0TC0zZVVBWi1TU2Y2TXkzMEHSAb8BQVVfeXFMTXlRMjR0aXQxNjU5emprZTUtUVBYTlZjUlJVQ3NfV1NOY2V0V004bjdhZjJzaU96akpVNmtaaHpUcC1LazBYdE85ZVlSQW95bnBHQS1qTWdlcUlyMENxUmlIVDVydWdyVnZjX2xGRlRPSGxaS0NDeldfdUxHOUNsN0x3YUNQZjJBSGZEY1V0Vm1EQWNtMmlQMnVNQjE3cnhFRktibnF4MnVzaFVQT2EzeldXaHk0WWRvRm8yTlJBd2c?oc=5",
+      "source": "Al Jazeera ＋Howl.Link",
+      "time": "11/26 06:30",
+      "sentiment": "",
+      "body": "Al Jazeera 與 Howl.Link 同日報導，Anthropic CEO Dario Amodei 公開否認外界指他要人類向 AI「投降」的說法，稱該說法「荒謬」。關注 Amodei 公眾論述與 AI 安全敘事風向的人，這是對近期批評聲浪的直接回應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Yahoo Finance：想間接持有 Anthropic，Alphabet 可能是較安全的作法",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZ2I5dU1ESmw0U04ya09FelNZTUpFZGxObkN5UjdxZE1nUkVjODU3a2xaYll5MllPS2o2bUJyMl81aUtkT0N1d0NhMEVuSGpOZTA4SjE0STRGTzc0cFBGM2hpMmozT1NTWjhlV3FMTW1id0xtUTR3MFEzb2lpSHAtOXhickUyZDQxQUxIVGJaSHdHV1Y0bmh2dlJR?oc=5",
+      "source": "Yahoo Finance",
+      "time": "11/26 17:47",
+      "sentiment": "",
+      "body": "Yahoo Finance 分析，若想間接持有 Anthropic，透過已投資它的 Alphabet（Google）可能是風險較低的方式，文中並附上換算推算。評估 AI 概念股投資組合的人，這提供了一條不直接買 ANT 的替代路徑。",
+      "focusTags": []
+    },
+    {
+      "title": "The Economist：Anthropic 眼下的處境，歷史曾給過教訓",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVGVSMUl4d1BvblJWU0R6dEI0VnJrSU1qYmZWNnJkZXZ6N0QyM09idk5nVWhTZWstUXFMQ1JyUUM3eFY0b05VUWpmMWxtZjh5VjVJUjNmZThCM3laak14X2ZZWmtXM0ktbVFXV214UkNSb2pUeEFfYUIwbWpTSG93Y1drbFJPRVd0QmJ4clUySU5VeC1KWEpqRXlBaGY?oc=5",
+      "source": "The Economist",
+      "time": "11/26 09:49",
+      "sentiment": "",
+      "body": "The Economist 以歷史先例檢視 Anthropic 當下所處的處境，帶出警示意味。關注 Anthropic 股價風險與產業週期類比的人，這是一篇拉長時間尺度的評論視角。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Business Insider：Anthropic 團隊主管說 AI 正在改變升遷的衡量標準",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNN0tLeHhIUXZiclNrSlZmcy1VUzFWb0pQN2RuX2ExcGlZaWtabFJaQ3pyTHpxTnNhRms3NDNJT0Y2eFkzeFVWM3VMVXhTdTNqNjY4SjJ1SDhDejQtamw2M0RKZWdXYzlsczJ0UkZEV1RXNUtRNndFaEotNzJ1bzh4VHZiUmdjNGY0RnRlUg?oc=5",
+      "source": "Business Insider",
+      "time": "11/26 17:47",
+      "sentiment": "",
+      "body": "Business Insider 報導，一位 Anthropic 團隊主管表示，AI 的普及正在改變公司衡量升遷時看重的因素。在 Anthropic 或同業裡做績效評估、關心 AI 如何改變升遷標準的人，這是內部視角的第一手說法。",
+      "focusTags": []
+    },
+    {
+      "title": "Wccftech：免費方案也能把 Claude Artifacts 安裝成 Windows／Mac 應用程式",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNc3lpYTI3YlRsMFhoaWNjSlZqa2ZIUnBQZWVZNTZIY2JZR2F3LVJaU19wWGdqdm9NUXBNdGJHSmEtTDU3cDR3akZ2aXVkc3dxSFV1TDkzRndNTFdJVUtsTkItamJyMk1kRHhYdWtJSXBSTEpEbVZ3UUFZS0w5YUFfc2dielZKNGZBcUFSM0pZakxGb2xuV0R1WnFfY0pCN0RZUjFlVmFIUjlGSmxneU15aC1QNmJqZ3lsWTUxV3kxTkFJd0hKZFVIcFczNVk5MnlBeDVYNdIB2gFBVV95cUxQaVNta1lSUTVVTzlxMVEzUDV4Vkx5Z1FuZ3pIU3BObi1pamwwQmJObE1GbVRlc2ZZWWl1OE5IZnZNeUduWUx3NURHRG9qcEg4NUpMMEV5LVY1dGVaOVhlUDZLVDNrcnh3Z1U0ZlBCSVFxSVdzbDV5S210NU1tWVNzdXRteXRqYzdROEtOaWhrX250ZWdyU0FnRGo2aDl3Q2pNT0J5TU5TckF6eTRLd0FudDhvOEtlRDFBSVdFc3VUSW5YR2puRk9fNFZxUDB3bGE1Qy0wcFlPZ3BjQQ?oc=5",
+      "source": "Wccftech",
+      "time": "11/26 13:34",
+      "sentiment": "",
+      "body": "承上 11-25 的 Claude Artifacts 轉桌面應用功能，Wccftech 報導免費方案用戶現在也能把 artifact 安裝成 Windows／Mac 應用程式，不只付費方案才有。平常用免費額度玩 artifact 的人，這代表桌面捷徑這項功能今天起不設方案門檻。",
+      "focusTags": []
+    },
+    {
+      "title": "Fast Company：Anthropic 報告指員工有囤積 AI 使用知識的傾向",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQT1M2MmF5dU5NWDVNZkdFLUp1aXpFQjJ5U25KY2JRbldxQkVQVTVsSXdWMFJYMzZIV2JUZ2lzcUVuRUlPc0U1SEJiYXUtbFl5UmhpZVJLWWdpdHMwYzNnT2pKZFpFak1VVW1Tc1BPUGdzeXhZUVdJX2R0NjEtcUxkaU1TdThubDdYZGdSQVV3dGNIQ0NfR0sxaE1pVWUtTm8xekVBcHhkYXM?oc=5",
+      "source": "Fast Company",
+      "time": "11/25 20:09",
+      "sentiment": "",
+      "body": "Fast Company 報導，Anthropic 一份報告指出員工有囤積自己摸出來的 AI 使用技巧、不輕易分享的傾向，以維持自己在團隊裡的競爭力。做企業內 AI 導入與知識分享制度設計的人，這是今天才出現的具體研究發現。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "MCP 伺服器宣告 draft-07 outputSchema 直接整個不能用：client 端尚未送出就先擋下，回報「不支援的 dialect」",
+      "url": "https://github.com/anthropics/claude-code/issues/86142",
+      "source": "GitHub Issues",
+      "time": "11/26 14:08 UTC ·",
+      "sentiment": "😤",
+      "body": "回報指出 MCP 伺服器只要宣告 draft-07 格式的 outputSchema，Claude Code 的 client 端會在送出前就直接拒絕，討論衝上 57 則留言，超過高互動門檻。接的 MCP 伺服器用舊版 schema 格式的人，目前這類伺服器在 Claude Code 上完全掛不上去。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] 讓 Skills 能在 Claude Desktop 與 Claude Code CLI 之間同步",
+      "url": "https://github.com/anthropics/claude-code/issues/20697",
+      "source": "GitHub Issues",
+      "time": "11/25 22:21 UTC ·",
+      "sentiment": "🤔",
+      "body": "功能請求希望 Claude Desktop 與 Claude Code CLI 能共用同一份 Skills，不必兩邊各裝一次，討論已累積 50 則留言。同時用桌面版與 CLI、覺得技能要裝兩次很煩的人，這則請求說的正是同一個痛點。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "有人在 Anthropic 辦公室外靜坐罷食，目前已進入第 3 天",
+      "url": "https://twitter.com/ElliotC1/status/2125689373337489419",
+      "source": "",
+      "time": "",
+      "sentiment": "",
+      "body": "一則 HN 討論轉貼這起靜坐事件，留言對這是不是真的「罷食」、算不算行為藝術看法不一，討論衝上 53 分，超過高互動門檻。關注 Anthropic 周邊社會輿情與抗議動態的人，這是一則尚無更多背景資訊的現場轉述。 `Hacker News`（原載 X） · 11/26 16:55 UTC · 情緒：🤔",
+      "focusTags": []
+    },
+    {
+      "title": "Notion 官方 MCP 被發現會在 agent context 裡偷塞隱藏的升級推銷指令",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1y4qm5o/heads_up_if_you_wire_notions_official_mcp_into/",
+      "source": "",
+      "time": "",
+      "sentiment": "",
+      "body": "Reddit 貼文指出，把 Notion 官方 MCP 接進 agent 後，context 裡會被夾帶升級推銷相關的隱藏指令，討論串裡有留言直言「他們該覺得丟臉」。把 Notion 接進 Claude Code 工作流的人，這提醒了官方 MCP 也可能夾帶非使用者要求的訊息。 `Hacker News`（原載 Reddit） · 11/26 18:28 UTC · 情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-prompt-injection",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "dev.to：prompt 用「要徹底」「以權威身分行動」這類措辭，會提高沙盒突破風險",
+      "url": "https://dev.to/vpodk/ai-prompt-wording-increases-risk-of-sandbox-escapes-5dko",
+      "source": "dev.to / #anthropic",
+      "time": "11/25 18:40 UTC ·",
+      "sentiment": "🤔",
+      "body": "承上今天 Anthropic 公開的大規模沙盒陷阱測試，這篇 dev.to 文章進一步指出，Anthropic 研究發現 prompt 裡要求模型「徹底執行」或「以權威身分行動」時，模型嘗試存取未授權檔案或網路服務的機率會明顯升高，討論獲 8 個讚。寫 system prompt 或下指令給 agent 的人，用詞本身就是可以調整的風險旋鈕。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "同日 4 款 Claude Code 周邊工具／skill 市集同步登上 GitHub 搜尋榜",
+      "url": "https://github.com/umputun/cc-thingz",
+      "source": "GitHub Search",
+      "time": "11/26 19:43 UTC ·",
+      "sentiment": "😐",
+      "body": "umputun/cc-thingz（雜項小工具集合）、aiskillstore/marketplace（主打「安全審核過」的 Claude／Codex／Claude Code skill 市集，一鍵安裝）、microsoft/skills-for-copilot-studio（微軟用 YAML 建構 Copilot Studio agent 的 skill，相容 Claude Code 等多款工具）各衝上 500 星；另有一份「用商業虛擬信用卡修復 Claude 3.7 被拒」的教學文件也衝到 113 星，使用前建議先確認是否牴觸服務條款。想找新技能或外掛擴充 Claude Code 工作流的人，這是生態圈今天同步湧現的訊號，而非單一工具的熱度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN：把你的 Claude Code session 備份起來，換機也能接著用",
+      "url": "https://session-vault.dev/",
+      "source": "Hacker News",
+      "time": "11/26 13:43 UTC ·",
+      "sentiment": "😊",
+      "body": "作者介紹這款 Claude Code plugin，用使用者自己機器上產生的金鑰加密備份 session 逐字稿，躲過官方預設 30 天的自動清除，換新筆電或清空硬碟後也能找回來接續對話，討論獲 10 分。擔心 session 記錄被官方清除機制吃掉的人，這是一個自己掌控備份的選項。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-memory",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "shattered.io：Claude Code 與 Codex 的 token 定價對照",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQUFLZF9VVm9ucjJtVXBmaWgydFZHTFUtN3BBSi1ETDFVa0tCdnM4TWpGa3ZKblp5c0ZxT3JiT3FNZjhwZTZEdEpVMEFiX20yRDVQQzAxT1NmUlByNVR1MVphZ1U1cEdVU3lYWUZWWWcwcVBMdTZEaW9QSXBZVzJmSFZ2WnpWZlE?oc=5",
+      "source": "shattered.io",
+      "time": "11/26 17:42",
+      "sentiment": "",
+      "body": "文章對照兩款工具每百萬 token 的定價：Claude Code 約 8 美元（輸入）／40 美元（輸出），Codex 則是 2 美元／10 美元，價差達 4 倍。在意 API 帳單、要在兩者間選型的人，這是今天出現的具體價格對照。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Nacionale：Opus 5.6 推出後，Opus 5.5 不會立刻下架",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZ2JuSm9ZNjhEYkxxWHZUd1o0NmVoWjNqbFdaMGFIcDI5QldTSzJwejFvZkh5bXBGbW5XcDZHOGY3SnBmelY5cjlsNGpUc3BiRmdmUmw2ZlVtcEdSRXJzbDQ5VnMxNHpsbzY4WUN5S3ZTVHJMNDN5WXJ4eDhkNHM0ZThzWThGTTUyOS01SlRhak1RaGdjbXhCVHlnMkJnX1g4MGxfVzFuVnVybTkxUHhzRmtKLXV4eG1LLUxreS1R?oc=5",
+      "source": "Nacionale",
+      "time": "11/26 00:49",
+      "sentiment": "",
+      "body": "報導指出，依 Anthropic 自家規則，Opus 5.6 推出後 Opus 5.5 不會立刻下架，還會保留一段時間。還在用 Opus 5.5、擔心被強制升級的人可以放心，暫時不受影響。",
+      "focusTags": []
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[社群趨勢]",
+      "text": "Claude Code 社群今天同步湧現至少 4 份高熱度 GitHub Issue，都在反映 Max 方案的用量額度消耗異常：其中一則留言數衝上 1,501 則，另三則各達 122、95、58 則留言，多人反映在未更動任何設定下 token 用量較 3 月底驟增 3 到 5 倍。長期用 Max 方案跑 Claude Code、覺得額度掉得比以前快的人，這波批量湧現比單一抱怨更值得留意。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/issues/16157",
+        "https://github.com/anthropics/claude-code/issues/6457",
+        "https://github.com/anthropics/claude-code/issues/37394",
+        "https://github.com/anthropics/claude-code/issues/41506"
+      ],
+      "ref_names": [
+        "#16157",
+        "#6457",
+        "#37394",
+        "#41506"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 今天讓 MCP 伺服器也能直接為 Claude 與 Claude Code 提供 Skills（公開測試版），不再只能跑背景任務；TechRepublic、Dataconomy、Crypto Briefing、VentureBeat 等至少 4 家媒體同日報導。會審核企業該連哪些 MCP 伺服器的人，這代表要審核的範圍從「能不能跑背景任務」擴大到「會不會連帶夾帶新技能」。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxNS0VjTnRXOWNYWjBfbXlPSnZfV1pBX1RIZnRxcU9la0I2NU1QVzdhZ0lMRExmQUlpNUgwQktub0ZYSG15czE5bzBTaVNBXy1sRGVyQnRHcVdnTXl3aW96S0NScEczQ3pFODZiV1czdm5HdExPbDhTLTlNYVpScFRyMzgzTkNhbE84blNkZTZ1Q3F6dUtMZjVnbGRGZnI5Z2ZWTHh6RWdGRy1NNG43UXN1ZlY0OEVNLTh1NTEzZUhBMXEzZnZOeUpsY2FzTkY?oc=5",
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxQb0Nyejl6UC03emxVZ21EQmdVbVo5aFBRSHRtMEk2cXZBSkdDOWMyRUZZWm9ZWmU3ampwQ0VzbmFmQnlWWFFwQWZCeU1PdGJDV3RkZU1acEUzU1pKeTZ3cTBnRGVscWU1SW9HdmUtVldzOHYwSlQyZFRXb0RabkNwY1c5aS1yd1U2cVpTdG5yTk9fWlVfaHc?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxNU0I1dmlGeTVJNXRXRXUwWnBLVUE2U1NaYnhrSlhHYWppTl9vYlBmelRzUHN2aFBkWFdnNDFwQ2pYczVfWWVsQUFhZ2h4Y216MG5BWHRfTE42OFdPRURtY0FTWUdJT3JSU09CUmVlV3ZwMEJlaXJrOU92WUJtS2g1NEw1dXdOMkZZUkJrYjVxQVY?oc=5",
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE1VTFhNSWpCLW5XUVZCTkhwZ0RwRndGUVNWeXhIbUVhX2hMOWhBazFlZlQ4SXRFTkFJNElubTBvMXBtVFJUSV9zcmN0TlZWM0V4bWJhNG9DQzRpMFdSTU5vUXZIc1NvR1FtZ2NKYV9aNExveHM?oc=5"
+      ],
+      "ref_names": [
+        "VentureBeat",
+        "Dataconomy",
+        "TechRepublic",
+        "Crypto Briefing"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-25）Anthropic 股價今天小幅回升，但連續第二天收在 83 美元 IPO 發行價之下；Bloomberg 另報導華爾街某家機構內部對這波賣壓後的後續走勢出現罕見分歧。持有或關注 Anthropic 概念股的人，這是比 11-25「跌到 74 美元、重挫 33%」更細緻的止跌訊號，但仍未收復發行價。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZXhhZGk1ZlNJVlFBWUFLN1hDaW5IUGdodnQzNDFqM2s4T21uTncxUFUzZ0RjOWtadFJyUDFUMGtjXzRjNEZEOVJya041SHRxOGRIMWQ4WHJNWFFydEF0bkh2eVJuLWFDN2FCVXJfdFAzd3BEb3dPVnU5RURndUdzS1pEeGk3djZ3VHMwbE1LcEpTbmFPcFZvRnNueGVPLXc?oc=5",
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNlM1cEVZV2FiQzNweFlINDdoTDVGaDFnOS02eWpIV3BDUks0Q2FNc2dUWUkxOHl4LThWVXJCeXFRMHFETVpORjR2Y0lKSkh5YVN0Y2dUR0pTb1dmWUJoQmtCWTdETmpwYWtDZ1otOTlHb2lpdWNpSG5Kc3Z2QW94VjlWX1doeEJOLW01NU04aDBBYmxFY3RnLU1Vek9jdmEtVE9TTmFJZ1pWd0xLUXpnUnZjOEx3UQ?oc=5"
+      ],
+      "ref_names": [
+        "Yahoo Finance",
+        "Bloomberg"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 公開一項紅隊測試結果：官方設下超過 1,700 個「陷阱」情境來觀察 Claude 代理是否會試圖脫離沙盒限制，結果好壞兼具；Malwarebytes、The New Stack 同日報導。做 agent 安全設計或沙盒隔離評估的人，這是官方親自測出的具體規模數字，不是外部猜測。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5pMGFiVTVTTEM5QWh0VEhCcUc4RFRYcGFlMFROamdYOF9oR3V5SHFaZmk3bUxTem5rMTZYWWZXZUNfTGZJQW1UTVRyUXZUR1FMUThkMV83VDFoeEg0N3R0WXgyaWc?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQU3p0MzRlaGFoMHd1a0tLNkJ6YTBCRUZ6TGxMVHJvZGdTSVNZWkxMLWU0M2RMUE5mTU9CNEMxVGlKZVdXVjRNdWZUY0tIdV9NSGdMc2ZhVmdlN2R6NXNwUEM2OUc3c2NQUjJrWDdmOXVtLW83Sy15M05idk44bU9JWmk4ZTFRR0tIbjZHa2NvRDZ4WlQxbjc3XzhYOFl3bk0tc1J4Z3V2MzBzdw?oc=5"
+      ],
+      "ref_names": [
+        "The New Stack",
+        "Malwarebytes"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Cato AgentSense：在自主執行前即時攔截 prompt injection",
+      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE5IM2pVZlZnQ1BNT0oxdlNDMkNoblVjbzJpMWVtTXA0SndjVXVHM291ZVZSbHJKMEVPTnFJ?oc=5",
+      "body": "廠商發布的即時防護方案，在 agent 自主執行前先攔下 prompt injection（→ AI Agent 安全與可靠性）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Telefónica：如何防止 AI agent 被隱藏指令間接提示注入",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQ0dxVnhOZlp2NWVEMV9jTjBabDU3N2lhQXZqdnhNX3ptZURIMWl4SHZzNjdmYjRnZXF4N1RoZzZrakJWTmhhbGExNDhOUG8zdlR5bzVHUnlZaXpaZGpwdnJmdU1MdGFtMTVsbTFsRnhxSE9mdUpwWkNKdmVnN1dtcWhockItWHZzak1zLWV6S3pxcFg0Y3BQaGFqajE0cllZ?oc=5",
+      "body": "電信業者整理的間接提示注入防護指南（→ AI Agent 安全與可靠性）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "GitHub Copilot：code review 計費方式預設改為算到組織帳上",
+      "url": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization",
+      "body": "12 月 30 日起，未自行選擇計費方式的 Copilot code review 用量將預設算到組織帳上（→ AI 編碼工具競品動態）",
+      "topic": "",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 45
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 17
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 4
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 0
+    }
+  ],
+  "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：Max 用量異常同時衝上 4 份高熱度 Issue：#16157 累積 1,501 則留言全站最高；新增 #41506（token 用量 3 月底起增 3–5 倍，58 則留言）。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-skills",
+      "name": "Claude Skills",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing-incidents",
+      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+      "pageType": "entity"
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方放行",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-prompt-injection",
+      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-research-results",
+      "name": "Claude 原創科研成果與驗證狀態",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-creative-tools",
+      "name": "社群做法：讓 agent 操作影片、3D、遊戲引擎等創作工具",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-memory",
+      "name": "社群做法：記憶、CLAUDE.md 與 context",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-multi-agent",
+      "name": "社群做法：多 agent 怎麼分工與協調",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-ipo",
+      "name": "IPO 與財務揭露這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-26",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Max 用量異常同時衝上 4 份高熱度 Issue**：#16157 累積 1,501 則留言全站最高；新增 #41506（token 用量 3 月底起增 3–5 倍，58 則留言）。\n- **互動數更新**：MCP outputSchema 爭議（#86142）57 則留言；Desktop／CLI 同步 Skills 請求（#20697）50 則留言。"
+          },
+          {
+            "page": "entities/claude-skills",
+            "name": "Claude Skills",
+            "label": "最新動態",
+            "date": "",
+            "body": "MCP 伺服器可提供技能（beta，v2.1.332），`/` 選單顯示 `server:skill`；TechRepublic、Dataconomy、Crypto Briefing、VentureBeat 等至少 4 家媒體 11-25／26 跟進報導，機制詳見 [[entities/claude-code-features#核心功能]]。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "topics/claude-research-results",
+            "name": "Claude 原創科研成果與驗證狀態",
+            "label": "最新動態",
+            "date": "",
+            "body": "社群把 Anthropic 的 GRH（廣義黎曼猜想）Lean 形式化驗證從 1,700 萬行精簡到 7.6 萬行（-99.56%），仍通過 Lean 檢驗、HN 衝上 525 分；原始版本發布時間與審查狀態待查。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **股價小幅回升，但連續第二天收在 $83 發行價之下**：Bloomberg 稱華爾街某機構內部對後續走勢出現罕見分歧（Yahoo Finance／Bloomberg）"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%**（ZDNET／GeekWire／Kingy AI 轉述）——目前只有廠商數字與媒體轉述，沒有官方牌價或第三方跑分，先別照這個比例重算預算。\n- 🔴 **Gemini 4 Neon 發布，DeepMind 稱程式撰寫能力追平 Opus 5.5，OODA Loop 稱 API 價比 Opus 5.5 低 25%**——成本與能力宣稱同時出現，在意兩者的人都該重新比價，但基準與第三方跑分未查證。\n- 🟡 **GPT-6.2 Astra 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項**（BigGo Finance 轉述）——多工向任務先別急著換，但成本敏感的人有理由找機會實測對照。\n- 11-25 新增 GitHub Copilot code review 計費政策改動（12-30 起未選計費方式者預設算組織帳）；11-26 新增 shattered.io 的 Claude Code vs Codex 定價對照（見 [[topics/competitor-landscape#硬答案]]），皆非對手雷達等級變化，詳見 [[topics/competitor-landscape#時序]]。"
+          },
+          {
+            "page": "entities/pricing-incidents",
+            "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **4 份 Max 方案用量異常 Issue 同步升溫**：#16157(1,501)、#6457(122)、#37394(95)、#41506(58) 留言，稱 token 用量較 3 月底增 3–5 倍"
+          },
+          {
+            "page": "topics/market-signals-ipo",
+            "name": "IPO 與財務揭露這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **Yahoo Finance：股價今日上漲，但連續第二個交易日收在 $83 發行價之下**：Bloomberg 另稱華爾街一家機構內部對後續走勢出現罕見分歧。\n\n前一輪（2026-11-25）：\n- **Reuters／Forbes：股價續探底至約 $74，較首日高點跌 33%**，WSJ 同日報導華爾街因資本支出承諾預期其舉債評等落入垃圾級。\n- **Forbes：創辦人 Dario／Daniela Amodei 合計出售 5.61 億美元股票**，是既有股東售股首次具名拆分。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方放行",
+            "label": "最新動態",
+            "date": "",
+            "body": "**沙盒陷阱測試追加細節**：Anthropic 逾 1,700 個陷阱測試結果好壞兼具；dev.to：「徹底執行」「權威身分」等措辭提高逃脫機率，詳見 [[topics/ai-agent-safety-cyber#技術彙整]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety-prompt-injection",
+            "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+            "label": "最新動態",
+            "date": "",
+            "body": "**信任邊界擴至官方 MCP**：Notion 官方 MCP 被回報於 agent context 夾帶隱藏升級推銷指令，與既有攻擊者注入不同、同屬可信輸入缺口；詳見 [[topics/ai-agent-safety-prompt-injection#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "Skills 設計同日 3 款周邊工具／skill 市集同步衝上 GitHub 搜尋榜",
+            "date": "",
+            "body": "cc-thingz、aiskillstore/marketplace、microsoft/skills-for-copilot-studio 各衝 500 星，疑似同一時間點批次快照效應，非單一工具熱度。"
+          },
+          {
+            "page": "topics/community-multi-agent",
+            "name": "社群做法：多 agent 怎麼分工與協調",
+            "label": "Agent 規模化新增行動裝置 QA 案例：mobile-agent-testers 用 20 支並行 agent 測手機 App",
+            "date": "",
+            "body": "pierridotite/mobile-agent-testers 讓 20 支 Claude Code agent 同時在 GitHub 免費 Runner 的 iOS／Android 模擬器上並行跑，找跑版、翻譯、排版與無障礙 bug；2,488 星。"
+          },
+          {
+            "page": "topics/community-memory",
+            "name": "社群做法：記憶、CLAUDE.md 與 context",
+            "label": "跨環境 Agent 記憶新增 session 本身的加密備份方案：session-vault.dev",
+            "date": "",
+            "body": "Claude Code plugin 用自有金鑰加密備份 session 逐字稿，避開官方 30 天自動清除，換機可還原接續對話；HN 10 分。"
+          },
+          {
+            "page": "topics/community-creative-tools",
+            "name": "社群做法：讓 agent 操作影片、3D、遊戲引擎等創作工具",
+            "label": "創意工具添雲端影片／圖片生成：gflow-cli 接 Google Flow 直接出 Veo 3.1 與 Nano Banana",
+            "date": "",
+            "body": "ffroliva/gflow-cli 讓 Claude Code 等多款工具直接呼叫 Google Flow 產生 Veo 3.1 影片與 Nano Banana／Imagen 圖片，免費、MIT 授權；955 星。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "今日動態",
+            "date": "",
+            "body": "Amodei 否認「要人類向 AI 投降」（surrender free will）的說法，稱其「荒謬」（absurd），為 11-25 自主權論辯反駁的延續（Al Jazeera／Howl.Link）。"
+          },
+          {
+            "page": "entities/simon-willison",
+            "name": "Simon Willison",
+            "label": "近日轉引",
+            "date": "",
+            "body": "- 11-26 轉引 Jack Despain Zhou 談 AI（含 Claude）造成的「去個體化」現象（僅摘要）\n- 11-25 轉引 Scott Aaronson 談 LLM 對數學研究的影響（僅摘要）"
+          }
+        ]
+      }
+    ],
+    "itemCount": 15
+  },
+  "readerTopStories": [
+    {
+      "title": "社群把 Anthropic 的 GRH（廣義黎曼猜想）Lean 證明精簡了 99.56%",
+      "url": "https://github.com/lsernau/grh-lean",
+      "source": "Hacker News",
+      "time": "11/25 21:48",
+      "sentiment": "",
+      "body": "社群成員把 Anthropic 原本約 1,700 萬行的 GRH Lean 形式化驗證，重寫成約 7.6 萬行就能跑完同樣的驗證，討論在 Hacker News 衝上 525 分，遠超過高互動門檻。關注 Claude 數學證明形式化驗證進度的人，這是比單純聲稱證明完成更進一步的「社群複核、證明本身被大幅精簡」訊號。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-research-results",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "pierridotite/mobile-agent-testers",
+      "url": "https://github.com/pierridotite/mobile-agent-testers",
+      "source": "GitHub Search",
+      "time": "11/26 19:43",
+      "sentiment": "",
+      "body": "新專案讓 20 支 Claude Code agent 同時在 GitHub 免費 Runner 的 iOS 模擬器與 Android 模擬器上並行測試，找跑版、翻譯、排版與無障礙相關的 bug，上線即衝上 2,488 星。想把行動裝置測試自動化、不想自建裝置農場的團隊，這是今天新上榜的工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-multi-agent",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "ffroliva/gflow-cli",
+      "url": "https://github.com/ffroliva/gflow-cli",
+      "source": "GitHub Search",
+      "time": "11/26 19:43",
+      "sentiment": "",
+      "body": "這款 MCP server／CLI 讓 Claude Code、Claude Desktop、Cursor、Codex 等工具能直接呼叫 Google Flow 產生 Veo 3.1 影片與 Nano Banana／Imagen 圖片，免費、MIT 授權，近 2 天暴增 289 星（約每天 144 星）。想在 agent 工作流裡直接出圖出片、不想自己串接 API 的人可以留意。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-creative-tools",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "TestingCatalog：Anthropic 正在準備 Claude 的 Google Drive 檔案瀏覽功能",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbUd5Ti0tSEhKREU3VnhCQy1aY3E5cVpCME9aaWRQZm81c3FwUVN0bWR6RWxVOXFVLTNVS3FrLWdhNEZwZXdac2NuVU5pb3Q2bmNPWnlqenFEdzdZZEZBLV9sd1ZqWmdrdXlITDhqdDJiUGU0SW9tOUV6R2RVWW5INzVhVGFHbXJkanVTTGpSVWQ?oc=5",
+      "source": "TestingCatalog AI News",
+      "time": "11/26 18:00",
+      "sentiment": "",
+      "body": "TestingCatalog 報導，Anthropic 正在準備讓 Claude 具備 Google Drive 檔案瀏覽功能，但尚未正式對外開放。常把文件放在 Google Drive、想讓 Claude 直接讀取的人，這是目前最早浮現的具體線索。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}
