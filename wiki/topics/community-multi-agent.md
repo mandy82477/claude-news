@@ -3,8 +3,8 @@ page: "topics/community-multi-agent"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-22"
+last_updated: "2026-11-26"
+last_news_update: "2026-11-26"
 status_main: "ongoing"
 days_since_news: 3
 parent: "topics/community-tech-patterns"
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-22
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 
-> **Multi-agent 架構新增跨機器協調案例：facadecode 讓多款 agent CLI 跨視窗、跨機器互相操作**（2026-11-22）
-> y5ez3g/facadecode 是 VS Code 內建的多 agent 協調器，可同時跑 Claude Code、Codex 等 CLI 互傳訊息、互相操作；515 星。
+> **Agent 規模化新增行動裝置 QA 案例：mobile-agent-testers 用 20 支並行 agent 測手機 App**（2026-11-26）
+> pierridotite/mobile-agent-testers 讓 20 支 Claude Code agent 同時在 GitHub 免費 Runner 的 iOS／Android 模擬器上並行跑，找跑版、翻譯、排版與無障礙 bug；2,488 星。
 
 ---
 
@@ -139,6 +139,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### pierridotite/mobile-agent-testers：20 支 Claude Code agent 並行跑 iOS／Android 模擬器找 App bug（2026-11-26）
+
+- **主線：** 並行規模
+- **核心模式：** 開源專案讓 20 支 Claude Code agent 同時在 GitHub 免費 Runner 的 iOS 模擬器與 Android 模擬器上並行測試同一個 App，找跑版、翻譯、排版與無障礙相關的 bug，取代自建裝置農場；GitHub Search 2,488 星。
+- **與既有模式的關係：** 補上「Agent 規模化」一個「把並行 agent 套進行動裝置 QA」的應用場景——既有代表技巧（20-instance 崩潰分析、agent-channels 等）多聚焦協調機制本身，本則把同一套並行模式接上具體測試任務與免費 CI runner；20 支 agent 同時並行是並行規模的直接案例，主線填並行規模。
+- **可信度註記：** 僅有 GitHub Search 星數（2,488★），forks／issues／近期 commit 佐證未查，未另行查證；20 支 agent 如何分工、個別執行時間與 runner 費用僅標題可用（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/pierridotite/mobile-agent-testers)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者專案，尚無第三方採用或複現數據）
 
 #### y5ez3g/facadecode：VS Code 多 agent 協調工具，跨視窗、跨機器啟動並操作 Claude Code、Codex 等多款 agent CLI（2026-11-22）
 

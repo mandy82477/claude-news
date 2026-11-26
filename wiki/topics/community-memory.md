@@ -3,8 +3,8 @@ page: "topics/community-memory"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-21"
+last_updated: "2026-11-26"
+last_news_update: "2026-11-26"
 status_main: "ongoing"
 days_since_news: 4
 parent: "topics/community-tech-patterns"
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-21
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 
-> **記憶與知識管理新增 Obsidian 當記憶後端的「AI 第二大腦」**（2026-11-21）
-> - **avenoxbeyin**：開源系統整合 Obsidian 與 Claude Code，提供跨 session 持久記憶。
+> **跨環境 Agent 記憶新增 session 本身的加密備份方案：session-vault.dev**（2026-11-26）
+> Claude Code plugin 用自有金鑰加密備份 session 逐字稿，避開官方 30 天自動清除，換機可還原接續對話；HN 10 分。
 
 ---
 
@@ -65,6 +65,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### session-vault.dev：Claude Code plugin 加密備份 session 逐字稿，跨機器接續對話（2026-11-26）
+
+- **主線：** —
+- **核心模式：** Claude Code plugin，用使用者自己機器產生的金鑰加密備份 session 逐字稿，避開官方預設 30 天自動清除，換新筆電或清空硬碟後可還原並接續對話；Show HN 當日，10 分。
+- **與既有模式的關係：** 第 0 條路由表「跨環境 Agent 記憶」補一個「備份並還原會被清除的 session 本身」取向——與 altsang/claude-tandem（[[topics/community-memory#2026-11]]，搬移帳號身分）不同層次；主線填 —。
+- **可信度註記：** Hacker News Show HN，10 分，單一來源；加密機制與金鑰保管方式僅作者自述，未見第三方稽核。
+- **來源：** Hacker News；[session-vault.dev](https://session-vault.dev/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者 plugin，Show HN 當日，尚無社群採用回饋數據）
 
 #### avenoxai/avenoxbeyin：Obsidian＋Claude Code 打造的「AI 第二大腦」，提供跨 session 持久記憶（2026-11-21）
 

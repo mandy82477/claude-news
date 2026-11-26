@@ -3,8 +3,8 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-22"
+last_updated: "2026-11-26"
+last_news_update: "2026-11-26"
 status_main: "ongoing"
 days_since_news: 3
 parent: "topics/community-tech-patterns"
@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-22
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 
-> **可靠性測試新增規則優先序實測與效能熱點驗證案例**（2026-11-22）
-> - **fast-anything**：agent 搬效能熱點到 Rust 前，重放真實呼叫＋生成邊界案例證明行為一致後才啟用。
-> - **「Skill 蓋過 CLAUDE.md」實測**：真實 `claude -p` 對照實驗顯示未叫用的 Skill 仍蓋過 CLAUDE.md／AGENTS.md。
+> **Skills 設計同日 3 款周邊工具／skill 市集同步衝上 GitHub 搜尋榜**（2026-11-26）
+> cc-thingz、aiskillstore/marketplace、microsoft/skills-for-copilot-studio 各衝 500 星，疑似同一時間點批次快照效應，非單一工具熱度。
 ---
 
 ## 摘要
@@ -96,6 +95,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### 同日 3 款 Claude Code 周邊工具／skill 市集同步衝上 GitHub 搜尋榜：cc-thingz、aiskillstore、skills-for-copilot-studio（2026-11-26）
+
+- **主線：** —
+- **核心模式：**
+  - umputun/cc-thingz：Claude Code 雜項小工具集合（500★）
+  - aiskillstore/marketplace：主打「安全審核過」的 Claude／Codex／Claude Code skill 市集，一鍵安裝（500★）
+  - microsoft/skills-for-copilot-studio：微軟官方釋出，用 YAML 建構 Copilot Studio agent 的 skill，含結構驗證與範本，相容 Claude Code 等多款工具（500★）
+  - 同日另有一份教人用商業虛擬信用卡修復 Claude 3.7 被拒的教學文件衝到 113 星，使用前應先確認是否牴觸服務條款，未單獨收錄為節點
+- **與既有模式的關係：** 補上「Skills 設計」一個「skill 市集／目錄站同日批量湧現」訊號——三個 500★ 倉庫同一時間點同步達標，疑似批次快照效應，非單一工具採用熱度；主線填 —。
+- **可信度註記：** 四者僅有 GitHub Search 星數，無 forks／issues／近期 commit 佐證可查，未另行查證；三個 500★ 倉庫同一時間點（19:43 UTC）同步達標，疑似批次快照效應，真實熱度未能進一步驗證。
+- **來源：** GitHub Search；[cc-thingz](https://github.com/umputun/cc-thingz)（500★）、[aiskillstore/marketplace](https://github.com/aiskillstore/marketplace)（500★）、[skills-for-copilot-studio](https://github.com/microsoft/skills-for-copilot-studio)（500★）
+- **成熟度：** ⏳ 新興（本庫首次收錄，三者皆為市集／目錄型 skill 收藏而非單一可複用技巧，尚無第三方採用回饋數據）
 
 #### EL4CTEO/fast-anything：驗證式把程式碼效能熱點搬成 Rust，agent 動手寫、工具重放真實呼叫證明結果一致才啟用（2026-11-22）
 

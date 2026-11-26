@@ -32,12 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-25
-**最後新聞更新：** 2026-11-25
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 
-> **最新動態**（2026-11-25）
-> - **已知問題**：新增 Cowork VM 在 Snapdragon X Plus（ARM64）永遠無法開機（#39636）、macOS 26.5.1 核心記憶體區洩漏（#66020）；Fable 5.2／Mythos 5.2／Opus 5.5／Sonnet 5.5／Haiku 5.5 一度錯誤率升高已解決，見 [[entities/claude-code-known-issues|已知問題]]。
-> - **功能**：v2.1.332 新增 MCP 伺服器技能（beta）與 `PreSkillShellCommand` hook，見 [[entities/claude-code-features|功能]]。
+> **最新動態**（2026-11-26）
+> - **已知問題**：Max 方案用量消耗異常同時衝上 4 份高熱度 Issue（#16157 累積 1,501 則留言全站最高），見 [[entities/claude-code-known-issues|已知問題]]。
+> - **現況**：TestingCatalog 報導 Anthropic 據稱準備 Claude 的 Google Drive 檔案瀏覽功能，尚待官方佐證，見下方「近期報導」。
 
 ---
 
@@ -47,7 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（十一組逐條） | [[entities/claude-code-known-issues]] | 2026-11-25 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（十一組逐條） | [[entities/claude-code-known-issues]] | 2026-11-26 |
 | 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-25 |
 | hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-25 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |
@@ -107,6 +107,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
+- ❓ **待查證**（標 2026-11-26｜查 Google Drive、file browser｜複 2026-12-10）｜**TestingCatalog 報導 Claude 將推出 Google Drive 檔案瀏覽功能**（2026-11-26，僅標題）：尚未正式開放；官方文件與 changelog 未見對應項目。
 - ❓ **待查證**（標 2026-11-17｜查 Claude Sheets）｜**財經媒體稱 Anthropic 推出「Claude Sheets」**（Google News／The Motley Fool，2026-11-17，殼層摘要、無可讀內文）：標題稱推出新產品並藉此質疑 Microsoft 股價，未附產品細節；非官方來源，官方文件與 changelog 未見對應名稱。
 - 🔎 **查無官方**（標 2026-11-07｜查 自動設定、API 金鑰｜複 2026-12-21）｜**Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰**（Google News／FourWeekMBA＋Pasquale Pillitteri，2026-11-07，僅標題）
   - 兩篇低流量轉述來源稱雲端開新任務可自動配置 repo 與 API 金鑰，省去手動初始化

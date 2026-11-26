@@ -31,12 +31,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-25
-**最後新聞更新：** 2026-11-25
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 
-> **最新動態**（2026-11-25）
-> - **賣壓未止，股價跌至 $74，Forbes 稱該波下跌達 33%**：WSJ $9,000 億支出承諾引發的垂圾債信評預期同步發酵（Reuters／Forbes／WSJ）
-> - **Dario／Daniela Amodei 在 IPO 期間合計出售約 $5.61 億美元股票**：約為其個人持股 1.4%（Forbes，11-24）
+> **最新動態**（2026-11-26）
+> - **股價小幅回升，但連續第二天收在 $83 發行價之下**：Bloomberg 稱華爾街某機構內部對後續走勢出現罕見分歧（Yahoo Finance／Bloomberg）
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -50,7 +49,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 |---|---|---|---|
 | 成交價與股數 | **$83／股，1,127,000,000 股 A 類**（含超額配售 147,000,000 股）；11-19 以 ANT 在 Nasdaq 開始交易 | [Anthropic 官方公告](https://www.anthropic.com/news/ipo-close)（11-20） | 官方一手 |
 | 募到多少 | 毛額約 $935 億美元（扣承銷折扣前），約 $916 億歸 Anthropic；加同步私募 $260 億，合計約 $1,195 億 | Anthropic 官方（11-20） | 官方一手 |
-| 現在股價離 $83 多遠 | **11-25 跌至 $74（Reuters）；Forbes 稱賣壓達 33%（基準未載）**，與 $9,000 億支出承諾引發的垂圾債信評預期同步 | Reuters／Forbes（11-25） | 一級媒體 |
+| 現在股價離 $83 多遠 | **11-26 小幅回升，但連續第二天收在 $83 之下**（11-25 曾跌至 $74，Forbes 稱賣壓達 33%）；Bloomberg 稱華爾街某機構內部對後續走勢出現罕見分歧（機構名未載） | Yahoo Finance／Bloomberg（11-26） | 一級媒體 |
 | 誰在賣 | 出售股東 23,648,646 股；其中 Dario／Daniela Amodei 合計出售約 $5.61 億美元（Forbes，11-24）；鎖定期尚未到期 | 官方（11-20）；WSJ／Axios／Reuters（11-21）；Forbes（11-24） | 官方一手／一級媒體 |
 | 下一個里程碑 | 鎖定期到期日、首份財報日期、信評、指數納入，皆待公布（見下方「上市後追蹤」） | — | — |
 
@@ -98,6 +97,8 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 
 ### 誰說撐不住：唱空與質疑
 
+- **股價連續第二天收在 $83 之下，Bloomberg 稱華爾街某機構內部對後續走勢出現罕見分歧（2026-11-26）**：Yahoo Finance 報導股價小幅回升但仍未收復發行價；Bloomberg 同日稱一家華爾街機構內部對後續走勢看法罕見分裂，具體機構名與分歧內容未見報導（Yahoo Finance／Bloomberg）。
+- **The Economist 以歷史先例點出 Anthropic 當下處境的警示（2026-11-26，僅標題可用）**：具體歷史先例、可比對象與量化論據均未見報導（Google News/The Economist）。
 - **賣壓未止，股價跌至 $74、Forbes 稱該波下跌達 33%（2026-11-25）**：Reuters 報導股價跌至 $74（基準未載）；WSJ $9,000 億支出承諾引發的垂圾債信評預期持續發酵（見下方 11-23 條跟進）（[Reuters](https://news.google.com/rss/articles/CBMiowFBVV95cUxNMmNMM0doWElDVk9BdjNGZnJHakNCUFg1blQzSlk0eW9zeVduV3ZKcEtJd0hpUkxDMVhnRE9rY1lLUzF1eENZaFh0SUNKbmRjanN3YWtZakZud2RYUnlSRkk5b1RZT2VfbFJPXzhZVEVyYnFnRHBwYVlGdFQzaEt2Z2VjaGVXWUE0Qmd5bjZYandmR2M2QXBSY2tKem80OGNlSzh3?oc=5)、[Forbes](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaUpkLXo2VHY0Zm5CRlMzdmpnSFFCTnpJVTJ4LW5COTR4WW1SczUyRHc3UGJ3VHliWFduQVVQa2puX1p0eE95UktWbEMzNU54WHMyNzNsOVE0bGFFSjR0Q1NoVkozTWExNmpwcXRfUFR4MnVTLW9DYXFRTkJKUXEwSktmczlzdzVpRE1QOTctNERIRlA4bS1MQTgzblNqakJqUm5wYjQwTS0?oc=5)）
 - **同日跟進報導，僅標題可用，無新增數字**：Barron's 稱 $1 兆市值承壓、另稱 SpaceX 股價受牽連；NYT 稱衝擊科技新創；Yahoo Finance 稱賣壓與比特幣跌勢相關、另稱跌破發行價；Motley Fool 稱投資人轉買其他 AI 股（[Barron's](https://news.google.com/rss/articles/CBMijgFBVV95cUxQY0RyZG0xcmNabm9peHNIdV90RkZhbkc1Zk5Oem4yMWZDcmtkWkF2dHdKaUZveEdPWG9KUE93aDh0R3JteEtqR1ZPWlBQUFBrbjQtTWFDZ1NMaHBsVi1XQjNuMzZ3bUF3T0gwVDYtOWFUZnlCNW40bHlfSm1PTDFRZXZ4ZjdnT19FM3Vxa05B?oc=5)、[SpaceX](https://news.google.com/rss/articles/CBMigwFBVV95cUxNZDFmOWxFWjlTR1FDN0w3d2VadFQxdm9nZVpBVFBQOU5STEw0eXgtOG5faEx4QUxWZzZHcW5xOUdxSnhtdTU4dVc4SjZmOTJWU012V2VHYjB1b2JOX3otUEtjRXY3YXNObmpFUFFCa3NKMTNHMmtWRjNjRXBmZmdxM29HVQ?oc=5)、[NYT](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPb0pyWndTN2d0MkpuNlBaQXFQS3g3Z0cwWHRVY281ck1FaTRGNnFLUTFRWC10b1NFRmZqSjVXX2NlRHRRY0FaVlVzcmlaUWdIQmgzQklyQjJxNElqM2xMS3ByV0JOaWh5WWRydnVsSllPTlQ0VVpfbjJhcmJWVlVYeU5raWEzc0Zq?oc=5)、[Yahoo Finance](https://news.google.com/rss/articles/CBMi4gFBVV95cUxOMkZ3R2JqVlJwZllwVm5BckhhSHZLNDlLVmVZNmpOVmxEVjVKYkk4T1lidzVyTWk2XzJ1LWREQlZRckVlUTMzUl9CVG02OGZXUHNWUmhfTzVlMFlTSWdhbnBYQkdhZ19IQTFmRXhpUTIwTFozTy1LSUpmeTVDM1M0c05DVnlYaUFGLWZuUHFKSjREM2pEYzN0UFY4SDhjLTFnLXJVOU1WVW50Qk80dllwdUZtSnc2Uk9ST1RscXJ4UDlXdDIwYXpzMUtrWjRTRlUtNE91WnE5UWVVUFZONndUbkhB?oc=5)、[Motley Fool](https://news.google.com/rss/articles/CBMivwFBVV95cUxNeDNydTNWTVZHMEZucTcxSGlSazY3V05DelY1U1M2SENMcndjZWc3ejEyYWhqeDk4TnZQSDdsckdBVkF2bUFabTdWSWgxVlF6U2V3UGNCNHFjTmNwV3h6ODA5ZmVsZ0xSM0x0cWIwUGhMYl95cjNaSzFRMGhraHlEMFJ2TFZ0bHU5OC1QajJMeFlueHJoX0k4T1NVTEFONEVrRmtvak1ueE03MkxpWXhyRGNrdHBGZjd2MkpkV0ltMA?oc=5)）
 - **正式跌破 $83 發行價，為掛牌以來首次（2026-11-24）**：CNBC 稱當天重挫 8%，分析師仍普遍偏多；Reuters 估市值蒸發近 $2,000 億；同日 Futurism／TechCrunch／Fast Company／Forbes 跟進報導，僅標題可用，無新增數字（[Reuters](https://www.reuters.com/business/anthropic-breaks-below-83-ipo-price-debut-rally-unravels-2026-11-24/)、[CNBC](https://news.google.com/rss/articles/CBMib0FVX3lxTE52N3pxbHMtWVo5dTFpRXlOOVhpd0hOdDFpSG5rODE0eU1hN1JuNzNvWFktTndsOFlrZ3JNS012UjBNUVhHdEVQbUZzMVlQLTNFcUZ4eS1Qdnk0N3hKMEZRbWJ0UXpjX1phX1ZURWlpMNIBdEFVX3lxTE9vUXY4VGJhUjFrckFDVFZsZUt5Sl92U2pIQlFxdmdNY0hMUzRZUDR4YmJBeHFubENiNjROTkZVQ3dpbWNOcTA5TVVlZHJLU2dTRzBRYXhVUUhJeDJMNV85d1RoMF93XzRuTjY0dE5QRHh3SV9G?oc=5)）

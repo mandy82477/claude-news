@@ -30,20 +30,20 @@ Claude 參與的科學與數學聲稱清單，逐項記錄是誰宣稱、有沒�
 **狀態：** ongoing
 **領域：** 🤖 模型
 **開始日期：** 2026-08-11
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-24
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 **蒐集邊界：** 只收 Anthropic 官方或媒體報導過的 Claude 科研／數學聲稱；第三方實驗室的獨立複驗只有在媒體報導時才會進來，漏收是常態。
 
-> **最新動態**（2026-11-24）
-> VP≠VNP形式化證明聲稱：Anthropic與OpenAI互爭優先權，GitHub commit時間戳記比對結果不一；黎曼猜想仍未經同行審查，另有標題稱證明『是個笑話』待查證。
+> **最新動態**（2026-11-26）
+> 社群把 Anthropic 的 GRH（廣義黎曼猜想）Lean 形式化驗證從 1,700 萬行精簡到 7.6 萬行（-99.56%），仍通過 Lean 檢驗、HN 衝上 525 分；原始版本發布時間與審查狀態待查。
 
 ---
 
 ## 摘要
 
-截至 2026-11-24，本站收到的七項聲稱中，沒有任何一項見到同行審查完成的報導。費馬最後定理的形式化有領域專家公開回應，橢圓曲線 rank 紀錄有第三方題庫登錄，其餘都只有宣稱方自己的說法。
+截至 2026-11-26，本站收到的八項聲稱中，沒有任何一項見到同行審查完成的報導。費馬最後定理的形式化有領域專家公開回應，橢圓曲線 rank 紀錄有第三方題庫登錄，GRH 形式化驗證經社群獨立重寫並通過 Lean 檢驗，其餘五項只有宣稱方自己的說法。
 
-最新的是 VP≠VNP 代數複雜度猜想形式化證明：Anthropic 11-23 發布 Claude 完成的版本，OpenAI 11-24 稱自家證明更早完成，雙方互貼 GitHub commit 時間戳記、討論串分別衝上 355 分與 77 分。黎曼猜想聲稱（11-20）仍未經同行審查，11-24 另有兩則標題稱證明達 25 萬頁、一名 Anthropic 數學家稱其「是個笑話」，原文均無法讀取，待查證。
+最新的是社群把 Anthropic 的 GRH（廣義黎曼猜想）Lean 形式化驗證從 1,700 萬行精簡到 7.6 萬行（-99.56%），仍通過 Lean 檢驗，HN 討論衝上 525 分（11-25）。VP≠VNP 代數複雜度猜想形式化證明方面，Anthropic 11-23 發布、OpenAI 11-24 稱自家更早完成，雙方互貼 GitHub commit 時間戳記；黎曼猜想聲稱（11-20）仍未經同行審查，11-24 另有兩則標題稱證明達 25 萬頁、一名 Anthropic 數學家稱其「是個笑話」，原文均無法讀取，待查證。
 
 zeta、rank、費馬三項明載用內部研究模型，黑洞、黎曼與 VP≠VNP 三項未見點名版本；都不能直接當成 [[entities/fable-5]] 產品版的能力。
 
@@ -51,6 +51,7 @@ zeta、rank、費馬三項明載用內部研究模型，黑洞、黎曼與 VP≠
 
 | 日期 | 成果 | 誰宣稱 | 審查／驗證狀態 | 來源 |
 |---|---|---|---|---|
+| 2026-11-25（社群精簡版） | GRH（廣義黎曼猜想）Lean 形式化驗證，社群由 1,700 萬行精簡至 7.6 萬行（-99.56%） | 原證明 Anthropic；精簡版由社群 lsernau 完成 | Lean 編譯器檢驗通過；非同行審查，原始發布時間與審查狀態待查 | [GitHub](https://github.com/lsernau/grh-lean) |
 | 2026-11-23 | VP≠VNP 代數複雜度猜想形式化證明 | Anthropic（Claude 完成）；OpenAI 稱自家證明更早完成 | 雙方均未見同行審查；GitHub commit 時間戳記互為佐證、孰先有爭議 | [Anthropic](https://github.com/anthropics/formal-math/tree/main/vp-vnp)、[OpenAI](https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026) |
 | 2026-08-11 | 黎曼 zeta 函數零點比例的下界紀錄（先前 87 年未破） | Anthropic 官方部落格 | 未見獨立驗證報導；僅媒體轉載 | [Anthropic](https://www.anthropic.com/research/riemann-zeta) |
 | 2026-08-23 起（09-16 報導） | 橢圓曲線 rank ≥30、≥31 紀錄 | Alpöge 與 Ava Howell；Scientific American 報導 | Epoch AI 題庫頁載有紀錄；未見同行審查 | [Epoch AI](https://epoch.ai/frontiermath/open-problems/elliptic-curve-rank) |
@@ -61,6 +62,7 @@ zeta、rank、費馬三項明載用內部研究模型，黑洞、黎曼與 VP≠
 
 ## 各項細節
 
+- **GRH 社群精簡版（11-25）**：社群開發者 lsernau 把 Anthropic 原本約 1,700 萬行的 GRH（廣義黎曼猜想）Lean 形式化驗證重寫至約 7.6 萬行，仍通過 Lean 檢驗、縮減 99.56%，HN 討論衝上 525 分；原始版本發布時間與管道未見報導，待查。（[GitHub](https://github.com/lsernau/grh-lean)，2026-11-25）
 - **VP≠VNP（11-23 Anthropic 發布、11-24 OpenAI 跟進）**：Anthropic 稱 Claude 完成代數複雜度理論猜想 VP≠VNP 的形式化證明（Lean），OpenAI 翌日公開聲稱自家證明更早完成（[Anthropic](https://github.com/anthropics/formal-math/tree/main/vp-vnp)；[OpenAI](https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026)，2026-11-23/24）。
 - **VP≠VNP 優先權的時間戳記佐證**：雙方於 Hacker News 互貼 GitHub commit 時間戳記（Anthropic 11-23 12:04、OpenAI 17:30，太平洋時間），討論串分別衝上 355 分與 77 分，孰先未有共識，均未見同行審查。
 - **黎曼猜想的 11-24 後續報導**：Interesting Engineering 與 The Register 同日標題稱 Alpöge 的證明長達 25 萬頁、一名 Anthropic 數學家稱其「是個笑話」；兩則原料均僅有標題與連結、無法讀取正文，是否為正式撤回或作者自嘲待查證（[Interesting Engineering](https://news.google.com/rss/articles/CBMikwFBVV95cUxOOWx2VGRIM0F6YkFpLWxRMnpfcERZcUF0MFVfcHVmcnl4Z1ZyUlJVNElJRDBNbFY1azBLQzd6ZUx1S0JJdmo2LTZoWEJleGFxVjBBM0kwekgtXzR2c29vdm1tWWdQZnNtQzZ5QmFJakxrMGZHblRSM1duWWlIbl92WHp2V2lKUnEwVjBuY0k3U3FzTVE?oc=5)；[The Register](https://news.google.com/rss/articles/CBMi6wFBVV95cUxPc1hFcE5MWURoX29EZXNEXzBaU1A4RC1VZGlzUHBBWTUwdXJGSUQyTzh0Rm9NU09qN3lxS2pvdVBlN1JxdjBzY3E3ZFZEMUN1aVhlR3NuWWlEWE5ncEdxV3A3Wl9zeFhEQWZfcXdua3puSkp3MkpkaGl6S3N6UzFLMGZna3JabWgwUFp5N3pFaWlkbDlXWXdGQzdTZWk5XzFUMktnOEFVSnk4aVpETEZXUGEzci1kb19hd0NOMHdJS01MLV9CRENMWWVXMHc2LUd1RktsWUdRRF8zc0xkaDZ1aENsUDlpcGFaSmdF?oc=5)，2026-11-24）。
@@ -83,6 +85,8 @@ zeta、rank、費馬三項明載用內部研究模型，黑洞、黎曼與 VP≠
 
 ## 懸置中的問題
 
+❓ **待查證**（標 2026-11-26｜查 grh-lean、lsernau｜複 2026-12-10）｜**Anthropic 原始 GRH Lean 證明的發布時間與管道**：社群 11-25 精簡版隱含存在一份約 1,700 萬行的 Anthropic 官方版本，本站未見該原始發布的報導，起始時間與審查狀態待查
+
 ❓ **待查證**（標 2026-11-24｜查 vp-vnp、formal-math｜複 2026-12-08）｜**VP≠VNP 證明優先權與同行審查狀態**：Anthropic 11-23 先發布，OpenAI 11-24 稱自家證明更早完成；HN 留言比對 GitHub commit 時間戳記（Anthropic 12:04、OpenAI 17:30，同日太平洋時間）結果互有解讀，孰先未有共識，雙方均未見同行審查報導
 
 ❓ **待查證**（標 2026-11-20｜查 Alpöge、Riemann hypothesis｜複 2026-12-04｜訊 2026-11-24）｜**黎曼猜想證明是否經同行審查確認**：Levent Alpöge 聲稱與 Claude 合作完成證明，11-21 史丹佛另發表競爭性全人類草稿；11-24 另有標題稱證明達 25 萬頁、一名 Anthropic 數學家稱其「是個笑話」，原文無法讀取，是否為正式撤回或自嘲待查證，雙方截至目前均未經同行審查
@@ -99,6 +103,7 @@ zeta、rank、費馬三項明載用內部研究模型，黑洞、黎曼與 VP≠
 
 ## 時序
 
+- **2026-11-25**：社群開發者把 Anthropic 的 GRH Lean 形式化驗證從 1,700 萬行精簡到 7.6 萬行（-99.56%），HN 衝上 525 分
 - **2026-11-24**：OpenAI 公開聲稱 VP≠VNP 證明完成時間早於 Anthropic，雙方互貼 GitHub commit 時間戳記；另有媒體標題稱 Anthropic 數學家稱黎曼猜想的 25 萬頁證明「是個笑話」，待查證
 - **2026-11-23**：Anthropic 發布 Claude 完成 VP≠VNP 代數複雜度猜想的形式化證明
 - **2026-11-21**：史丹佛發布全人類競爭證明草稿，雙方均未經同行審查

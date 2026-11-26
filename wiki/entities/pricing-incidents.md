@@ -33,11 +33,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-24
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 
-> **最新動態**（2026-11-24）
-> - **新 GitHub Issue #98134：透過 Apple 內購升級 Max 20x 後，系統仍顯示為 Pro 方案**（32 則留言，官方尚無回應）
+> **最新動態**（2026-11-26）
+> - **4 份 Max 方案用量異常 Issue 同步升溫**：#16157(1,501)、#6457(122)、#37394(95)、#41506(58) 留言，稱 token 用量較 3 月底增 3–5 倍
 
 ---
 
@@ -58,7 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Max 5x 升 Max 20x 付款持續失敗、客服未回應 | 🔴 未解 | 2026-10-24，Issue #56281，延續 #55266、#55982 | 升級前備妥備援付款方式、留錯誤截圖；別反覆重試 |
 | Apple 內購升級 Max 20x 後仍被判定為 Pro 方案 | 🔴 未解 | 2026-11-24，Issue #98134（32 則留言），官方尚無回應 | 升級後先核對 `Settings > Usage` 方案狀態是否正確，異常時保留購買憑證向客服申訴 |
 
-**還在發生、沒進上表的**（同一排序，新的在前）：#45390 Max 方案 1M context 誤判需加購用量（11-18，單一 issue，34 留言）、Fable 成 Max 標準模型起被誤判要先買 usage credits（#79337，10-24，07-20 起未修，單一 issue）、#16157 Max 幾乎一開工就撞上用量上限（09-17）、#38335 Max session 額度加速耗盡（09-16）；只有單一社群來源的：#62466 圖片處理失敗仍扣用量（11-02）、Reddit 用量暴增 8 倍（10-27）、Console 小數點多扣 100 倍（10-16）、成本顯示把 Haiku 5.5 算成 Opus 價（10-11）、#8327 設 API key 後組織遭停用（10-02）、#37394 Max 觸頂過快（09-21）、Reddit Max 20x 半小時 0%→100%（08-04）、Reddit Max 升級誤購 credits（07-02）。每件見下方「事故與爭議」同日條目。
+**還在發生、沒進上表的**（同一排序，新的在前）：#45390 Max 方案 1M context 誤判需加購用量（11-18，單一 issue，34 留言）、Fable 成 Max 標準模型起被誤判要先買 usage credits（#79337，10-24，07-20 起未修，單一 issue）、#16157 Max 幾乎一開工就撞上用量上限（11-26 更新至 1,501 留言、728 👍）、#6457 Max 用量異常回報（11-26 新見，122 留言，內容待查）、#38335 Max session 額度加速耗盡（09-16）、#37394 Max 觸頂過快（11-26 更新至 95 留言）；只有單一社群來源的：#62466 圖片處理失敗仍扣用量（11-02）、Reddit 用量暴增 8 倍（10-27）、Console 小數點多扣 100 倍（10-16）、成本顯示把 Haiku 5.5 算成 Opus 價（10-11）、#8327 設 API key 後組織遭停用（10-02）、Reddit Max 20x 半小時 0%→100%（08-04）、Reddit Max 升級誤購 credits（07-02）。每件見下方「事故與爭議」同日條目。
 
 表只寫 issue 號；留言數與讚數以 [[entities/claude-code-known-issues]] 為準，下方各條目裡的數字是當日快照。
 
@@ -73,6 +73,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### 🔴 2026-11-26：4 份 Max 方案用量異常 Issue 同步升溫，社群稱 token 用量較 3 月底增 3–5 倍
+
+- **同步升溫的四份 Issue**：#16157（1,501 留言、728 👍）、#6457（122 留言）、#37394（95 留言）、#41506（58 留言、33 👍）；多人反映在未更動設定下 token 用量較 3 月底驟增 3 到 5 倍，官方皆無回應。
+- **與既有紀錄的關係**：#16157、#37394、#41506 本頁已追蹤（互動量更新，見下方「還在發生、沒進上表的」與「配額與速率」09-21／07-10 條目）；#6457 為本頁新見 issue，具體內容未見日報細節，待查。
+- **你能先做什麼**：依現況實測用量，不要以官方宣稱的方案倍數為預算基準；詳見上表「Max 20x 實際用量與廣告宣稱落差」列。
 
 #### 🔴 2026-11-24：新 GitHub Issue #98134——Apple 內購升級 Max 20x 後仍被判定為 Pro 方案
 
@@ -329,6 +335,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **GitHub Issue #38335（792 留言，2026-07-10 查證）**：反映 Max 方案 CLI session 額度自 2026-03-23 起異常快速耗盡，為近期社群互動量最高的計費類 issue 之一；留言數 07-08（790）→ 07-09（791）→ 07-10（792）持續微幅增加，社群互動已趨於高原期，官方仍無明確回應（GitHub https://github.com/anthropics/claude-code/issues/38335）
 - **GitHub Issue #41506（54 留言/29 讚）**：反映 Max（$100/月）方案 token 消耗自 3 月底起增加約 3–5 倍，未見對應功能或用量增加可解釋此漲幅（GitHub https://github.com/anthropics/claude-code/issues/41506）
+- **後續（2026-11-26）**：留言數增至 58（+4）、👍 增至 33（+4），與同日另三份 Issue（#16157、#6457、#37394）同步升溫，見上方「事故與爭議」11-26 條目；官方仍無回應。
 - **Reddit r/ClaudeAI：「Claude Max 20x: Why did 27% of one session consume 7% of my entire weekly limit?」（2026-07-09）**：使用者具體質疑單一 session 中 27% 的時間消耗掉整週額度 7%，用量計量比例明顯失衡，與 GitHub #38335 反映的異常耗盡現象方向一致
 - **Reddit r/ClaudeCode：「Claude Max (20x) weekly limit exhausted in less than a day」**：使用者回報週額度不到一天即用盡（Reddit https://www.reddit.com/r/ClaudeCode/comments/1uqs99q/）
 - **對留存的意涵**：多則獨立訊號（2 個高互動 GitHub issue + 2 則 Reddit 貼文）方向一致，指向 Max 方案的用量計量或消耗速率可能存在系統性異常，而非個案；與既有 06-16 Max 集體訴訟（廣告 20 倍實測僅 6–8 倍）同屬「用量承諾與實際體驗落差」的信任問題，Anthropic 至今（07-09）尚未提供官方解釋或修復時程（推論）
@@ -341,6 +348,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 灰色市場與轉售現象
 
+- GitHub 上出現教學 repo，教人用商業虛擬信用卡（VCC）規避地區限制以使用 Claude／Claude Code（113 星，2026-11-26）；forks、issue 往來、近期 commit 均未查證，手法是否牴觸 Anthropic 商業條款的 resell／帳號分享禁令亦未見第三方驗證，本頁不附連結（GitHub Search）。
 - Notebookcheck 實測第三方服務 Freebuff，檢驗其宣稱可免費近乎無限使用 Claude Code 的說法是否成立；具體技術手法、是否涉及規避官方限制或分享帳號憑證均未見報導（Google News/Notebookcheck，2026-11-22）。
 - 조선일보報導中國境內存在規避封鎖使用 Claude 的黑市交易，顯示官方封鎖未完全阻絕當地需求，規模與定價未見報導（Google News/조선일보，2026-10-04）；地緣政治執法面見 [[topics/ai-agent-safety]]。（區域存取政策本身的動態見 [[topics/anthropic-government-policy]]「現在有哪幾條線在動」第 1 列）
 - 轉售商以最高 90% 折扣轉賣 Claude／Codex API 存取權，違反 Anthropic 消費者條款（禁止 resell、禁止分享帳號憑證）。

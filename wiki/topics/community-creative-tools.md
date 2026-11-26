@@ -3,8 +3,8 @@ page: "topics/community-creative-tools"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-25"
-last_news_update: "2026-11-25"
+last_updated: "2026-11-26"
+last_news_update: "2026-11-26"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/community-integrations"
@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-integrations]]
 **開始日期：** 2026-07-23
-**最後更新：** 2026-11-25
-**最後新聞更新：** 2026-11-25
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 
-> **新增兩款 3D／遊戲向 agent skill：可玩瀏覽器動作遊戲與 8 個 three.js 動畫技能**（2026-11-25）
-> - **op7418/guizang-game-skill**：從零生成可玩瀏覽器 3D 動作遊戲，附demo《霧鎖山門》，506 星。
-> - **Moh4696/open-3d-skills**：8 個 three.js／3D 動畫網站 skill，涵蓋場景生成到 60fps 錄製，502 星。
+> **創意工具添雲端影片／圖片生成：gflow-cli 接 Google Flow 直接出 Veo 3.1 與 Nano Banana**（2026-11-26）
+> ffroliva/gflow-cli 讓 Claude Code 等多款工具直接呼叫 Google Flow 產生 Veo 3.1 影片與 Nano Banana／Imagen 圖片，免費、MIT 授權；955 星。
 
 ---
 
@@ -58,6 +57,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### ffroliva/gflow-cli：MCP server／CLI 接 Google Flow，直接從 Claude Code 出 Veo 3.1 影片與 Nano Banana／Imagen 圖片（2026-11-26）
+
+- **主線：** —
+- **核心模式：** MCP server 與 CLI 雙形態，讓 Claude Code、Claude Desktop、Cursor、VS Code、Codex 或終端機能直接呼叫 Google Flow 產生 Veo 3.1、Omni 影片與 Nano Banana／Imagen 圖片；免費、MIT 授權，PyPI 上架；近 2 天新增約 289 星（約 144 星/日），累積 955 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」一個「接外部雲端生成服務而非本機創作軟體」取向——既有做法多接 Blender、Unity 等本機工具或 ComfyUI 本機 pipeline，本則直接呼叫 Google 雲端影像／影片生成 API；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（955★）與近 2 天星速，forks／issues／近期 commit 佐證未查，未另行查證；星速達每日 144 星，尚待下一輪連結健檢確認是否為正常採用或批次效應。
+- **來源：** GitHub Search；[GitHub](https://github.com/ffroliva/gflow-cli)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，MIT 授權已上架 PyPI，尚無第三方採用回饋數據）
 
 #### op7418/guizang-game-skill：歸藏 Game Skill，Claude Code／Codex 從零生成可玩瀏覽器 3D 動作遊戲，附demo《霧鎖山門》（2026-11-25）
 

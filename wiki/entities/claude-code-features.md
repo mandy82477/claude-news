@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-25
+**最後更新：** 2026-11-26
 **最後新聞更新：** 2026-11-25
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
@@ -336,6 +336,7 @@ Reuters（含 Investing.com 等 3 個來源同日報導）、The Verge 等至少
 
 ## 開發者須知
 
+- **Claude Misuse Beta（企業安全主控台新功能，2026-11-25 TechRepublic 報導）**：讓企業安全團隊檢視哪些使用行為被標記為濫用；標記準則、開放範圍與查證狀態見 [[topics/ai-agent-safety-cyber#2026-11]]。
 - **Help Center 新增「Preserved thinking」等三段（2026-11-10，Official Docs）**：標題稱 Messages API 調整處理 thinking blocks 的方式以防範蒸餾（僅標題）；另兩段為 Claude 如何標記 AI 生成內容、訓練資料更新程度。多輪帶 thinking blocks 的 API 使用者須開[原文](https://support.claude.com/en/articles/12138966-release-notes)確認行為。
 - **Help Center 新增 Enterprise 安全／管理功能段落（2026-11-05，Official Docs）**：新增標題僅列 security center、inference hooks、centralized management，僅標題可用，與既有 [[entities/claude-code#現況|Inference Hooks]] 的關係待開[原文](https://support.claude.com/en/articles/12138966-release-notes)確認。
 - **桌面版官方文件新增關閉本機 session、改走指定 SSH host 的組織設定（2026-10-12 查證，Official Docs）**：新增 `disableDesktopLocalSessions` 與 `sshHost`／`sshHostAllowlist`，供組織關閉本機 session、集中走指定 SSH host；雲端 session 不受影響。見[官方文件](https://code.claude.com/docs/en/desktop.md)。

@@ -28,16 +28,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-25
-**最後新聞更新：** 2026-11-25
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-25）
+> **本週衝擊**（2026-11-26）
 > - 🔴 **Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%**（ZDNET／GeekWire／Kingy AI 轉述）——目前只有廠商數字與媒體轉述，沒有官方牌價或第三方跑分，先別照這個比例重算預算。
 > - 🔴 **Gemini 4 Neon 發布，DeepMind 稱程式撰寫能力追平 Opus 5.5，OODA Loop 稱 API 價比 Opus 5.5 低 25%**——成本與能力宣稱同時出現，在意兩者的人都該重新比價，但基準與第三方跑分未查證。
 > - 🟡 **GPT-6.2 Astra 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項**（BigGo Finance 轉述）——多工向任務先別急著換，但成本敏感的人有理由找機會實測對照。
-> - 11-24 新增 VS Code 電腦操作功能追趕側寫，皆非編碼能力或定價異動，不算對手雷達等級變化，詳見 [[topics/competitor-landscape#時序]]。
+> - 11-25 新增 GitHub Copilot code review 計費政策改動（12-30 起未選計費方式者預設算組織帳）；11-26 新增 shattered.io 的 Claude Code vs Codex 定價對照（見下方「硬答案」），皆非對手雷達等級變化，詳見 [[topics/competitor-landscape#時序]]。
 
 ---
 
@@ -88,7 +88,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **便宜的 harness 真的省嗎？** 省，且差異多來自 harness 而非模型——Databricks 實測 GLM 5.2 省約 34%；Pi harness 在 Opus 4.8 high 下便宜約 2.08 倍，主因傳遞 context 量約為 Claude Code 的 1/3（2026-08-13 查證）。
 - **Kiro 標題那個 $200 是跟 Claude Max 比嗎？** 不是——那是 Kiro 自身 Power 方案的月費，非跨產品比較（2026-08-13 查證 kiro.dev）。
 - **Gemini CLI 還免費嗎？** 不是——2026-06-18 起免費／Pro／Ultra 帳號停止 Gemini CLI，併入 Antigravity CLI，個人開發者需轉付費 API key（2026-08-13 查證）。
-- **GitHub Copilot Pro+ $39 比 Claude 便宜嗎？** 名義月費較低，但 Opus 存取採 27 倍加價換算，重度使用時實際成本可能反超（2026-05-06 查證，此後未回訪）。
 - **Astra 6.2 比 Fable 5.2 便宜快，代表更強嗎？** 不一定——BigGo Finance 稱 OpenAI Astra 6.2 在速度與 API 成本上勝過 Claude Fable 5.2，但 12 項任務裡輸了 7 項；任務清單與方法論未附（2026-11-19 查證）。
 - **跨模型路由（GitHub Copilot Fusion）會不會改變選 Claude Code 的成本論點？** 10-29 The New Stack 稱 Fusion 勝 Claude Code、成本減半。
   - 媒體稱數字源自 Artificial Analysis 的 Coding Agent Index：Fusion Max 60 分、每任務約 $5.59，對 Claude Code＋Opus 5.5 Max 62 分、約 $11.42（2026-11-14 查證）。
@@ -97,6 +96,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
     - 官方 changelog 只確認 10-28 GA
     - 11-21 搜尋摘要顯示 GitHub 11-17 changelog 稱 Fusion Max 在 Terminal-Bench 4.1 為 71.2%（GitHub 自稱）、Coding Agent Index 為 60 分、較 Claude Code＋Opus 5.5 Max 低約 2 分而每任務成本約一半
     - Artificial Analysis 10-28 評測用的是 Terminal-Bench 4.0（71 分），兩版本不可直接比較（github.blog、artificialanalysis.ai 本輪 egress 不通，原頁未讀，數字不升格為官方確認）
+- **Claude Code 比 Codex 貴多少？** shattered.io 稱 Claude Code 每百萬 token 約 $8（輸入）／$40（輸出），Codex 約 $2／$10，價差達 4 倍；方法論、對應模型版本與是否與官方 Sonnet／Opus 牌價同一口徑均未載，單一來源（2026-11-26 查證）。
+
+%% 維運備忘 2026-11-26：本節累積上限 6 條，滿了依規則汰除查證日最舊者；汰除「GitHub Copilot Pro+ $39 比 Claude 便宜嗎」（2026-05-06 查證，此後未回訪），結論已見「競品定價細節」久未更新註記，未遺失事實。 %%
 
 ## 競品定價對照
 
@@ -273,6 +275,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-26
+- **OpenAI（Codex，比價分析文，僅標題可用）**：shattered.io 稱 Claude Code 每百萬 token 約 $8／$40（輸入／輸出），Codex 約 $2／$10，價差達 4 倍；方法論未附，見 [[#硬答案]]（shattered.io）
+
+#### 2026-11-25
+- **Microsoft／GitHub（計費政策，非編碼能力異動）**：GitHub Copilot Changelog 公告，12-30 起未自行選擇計費方式的 Copilot code review 用量將預設算到組織帳上；不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
 
 #### 2026-11-24
 - **Microsoft／GitHub（分析文，非編碼能力異動）**：Visual Studio Magazine 報導 VS Code 正在補強電腦操作（computer use）相關能力以追上 Claude 等既有工具；具體功能與時程未見報導，不列入「對手雷達」表（Google News/Visual Studio Magazine）

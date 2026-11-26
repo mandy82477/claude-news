@@ -35,8 +35,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 評論媒體
 **為何追蹤：** 多位 Anthropic 人士發言原文經他部落格逐字轉引，並做模型首日實測
 **首次出現：** 2026-05-20
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-10-20
+**最後更新：** 2026-11-26
+**最後新聞更新：** 2026-11-26
 **蒐集邊界：** 本站只收錄他與 Claude／Anthropic 生態相關的公開發言——部落格對其他人聲明的轉引、模型實測心得、AI agent 資安事件的具名轉載。不收錄他的個人生活，也不收錄他在 Claude／Anthropic 之外的其他技術工作（如 Datasette、SQLite 相關獨立專案）。
 
 > **本站引用最多的第一手觀點來源**（2026-09-13 建頁）
@@ -45,9 +45,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > **Sonnet 5.5 首日實測**（2026-09-28）
 > 發布當日依例以鵜鶘測試，「max」思考強度下圖示輸出異常；**他稱與 Opus 5.5 那次同一個 bug，但那次的具體症狀本庫未見記載，故不引為對照**。完整發布資訊見 [[entities/sonnet-5-5]]。
 
+> **近日轉引**（2026-11-26）
+> - 11-26 轉引 Jack Despain Zhou 談 AI（含 Claude）造成的「去個體化」現象（僅摘要）
+> - 11-25 轉引 Scott Aaronson 談 LLM 對數學研究的影響（僅摘要）
+
 ---
 
 ## 現況
+
+2026-11-26，部落格轉引 Jack Despain Zhou 的文章，談 AI（含 Claude）日漸造成大眾媒介內容「去個體化」的現象，僅部分摘要可用。前一日（11-25）另轉引 Scott Aaronson 談 LLM 對數學研究的影響，同樣僅部分摘要可用。
 
 2026-09-28（Sonnet 5.5 發布當日），依慣例以「畫一隻騎腳踏車的鵜鶘」測試新模型，發現「max」思考強度下圖示輸出異常。他稱這與 Opus 5.5 那次是同一個 bug，但 **Opus 5.5 那次的具體症狀本庫未見記載**，因此本頁不把它寫成已成立的對照；模型本身的發布細節見 [[entities/sonnet-5-5]]。
 
@@ -86,6 +92,8 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 
 ## 參考來源
 
+- [Quoting Jack Despain Zhou](https://simonwillison.net/2026/Nov/26/jack-despain-zhou/)（2026-11-26，轉引談 AI 去個體化現象）
+- [Quoting Scott Aaronson](https://simonwillison.net/2026/Nov/25/scott-aaronson/)（2026-11-25，轉引談 LLM 對數學研究的影響）
 - [My obituary for programming](https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/)（2026-10-19，轉引 Jeremy Scheff）
 - [Claude Sonnet 5.5](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/)（2026-09-28）
 - [Quoting Boris Cherny](https://simonwillison.net/2026/Sep/11/boris-cherny/)（2026-09-11）
@@ -94,6 +102,11 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 - Bun runtime 驗證方法：`strings ~/.local/bin/claude | grep -m1 'Bun v1'`（2026-07-19，見 [[entities/claude-code]]）
 
 ## 歷史記錄
+
+### 2026-11
+
+- 2026-11-26：Link blog〈Spitting in the Face of Glaude〉轉引 Jack Despain Zhou，談 AI（含 Claude）造成大眾媒介內容「去個體化」的現象；僅開頭片段可用，餘未載（來源：Blog／Simon Willison）
+- 2026-11-25：轉引 Scott Aaronson 部落格文章，談 LLM 對數學研究／複雜度理論的影響；僅開頭片段可用，餘未載（來源：Blog／Simon Willison）
 
 ### 2026-10
 

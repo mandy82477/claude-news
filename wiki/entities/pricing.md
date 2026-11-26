@@ -32,11 +32,12 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-24
+**最後更新：** 2026-11-26
 **最後新聞更新：** 2026-11-24
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-24）
+> **最新計費政策異動**（2026-11-26）
+> - **Claude Code Max 方案同步湧現 4 份高熱度用量異常 GitHub Issue**（最熱一則 1,501 則留言），詳見 [[entities/pricing-incidents]]
 > - **開發者稱遭 Anthropic 以「蒸餾」（distillation）指控、須 24 小時內自證未訓練自有模型**：高頻率自動化測試／評測呼叫模式可能觸發誤判，詳見下方「方案可用性與帳務摩擦」（Hacker News，匿名案例未獲證實）
 > - **官方定價頁 Pro／Max 文案重新明確列出 Fable 與 API credits 條款**：Pro 條列寫「Fable，以用量額度支付」、Max 條列寫「Fable 內含，最多可用到每週用量的一半」與「每月 $100 美元 API 額度可在 Claude Platform 上開發」；三項與本頁既有規則一致，屬官方頁面文案重新確認，非新規則（[claude.com/pricing](https://claude.com/pricing)，2026-11-23）
 > - **官方定價文件新增 Managed Agents 計費依據與各平台乘數規則細項**，並移除舊版 Google Cloud 定價與每千次搜尋 $10 的 web search 定價行（細節見下方「當前生效的計費規則」；移除後的替代寫法尚未核對）

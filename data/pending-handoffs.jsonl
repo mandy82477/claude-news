@@ -468,3 +468,5 @@
 {"id": "H-d8557d", "opened": "2026-11-23", "from": "社群", "to": "商業", "page": "entities/pricing", "note": "Anthropic 官方 API 定價出現負向第三方對照（來源：Hacker News「Show HN: Zhuan – one API key for Claude and GPT at ~25% of official prices」https://zhuan.xyz/，2026-11-23 12:38 UTC；證據等級：單一 HN 貼文 2 分，無測試方法佐證，第三方轉售服務真實性未查證；社群記者原寫轉知對象為功能記者，主編依分類表「計費政策/成本案例屬商業」改派商業記者）", "status": "open"}
 {"id": "H-d8557d", "closed": "2026-11-24", "status": "void", "by": "主編", "result": "商業記者核實：Show HN「Zhuan」第三方 API 轉售服務單一貼文僅 2 分、無獨立佐證，證據強度未達 entities/pricing-incidents 新增個案門檻，既有「轉售商最高 90% 折扣」結論已泛指此類現象，不另開個案"}
 {"id": "H-2929ad", "opened": "2026-11-25", "from": "安全政策", "to": "功能", "page": "entities/claude-code-features", "note": "TechRepublic報導 Claude Misuse Beta（企業安全主控台新功能），可能涉及 Claude 企業方案功能面，請視需要補充功能頁說明", "status": "open"}
+{"id": "H-2a4232", "opened": "2026-11-26", "from": "社群", "to": "功能", "page": "topics/anthropic-product-matrix", "note": "評估產品化矩陣新增列：mobile-agent-testers（並行 agent 行動裝置 QA，2,488★）、gflow-cli（MCP 接外部雲端生成服務 Google Flow，955★）", "status": "open"}
+{"id": "H-2929ad", "closed": "2026-11-26", "status": "done", "by": "功能", "result": "功能記者 2026-11-26 ingest 回報已處理"}
