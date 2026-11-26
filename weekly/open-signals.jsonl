@@ -353,3 +353,4 @@
 {"date": "2026-11-24", "week": "2026-W47", "forecast": "Claude Code 會不會支援 `.agents/skills/`：#31005 要求共用 AGENTS.md 與 skills 目錄，累積 643 個反應（11-18 快照）", "origin": "新立", "probe": "AGENTS.md", "entries": [{"title": "GitHub 功能請求：Claude Code 應跟進業界標準 AGENTS.md", "url": "https://github.com/anthropics/claude-code/issues/6235"}]}
 {"date": "2026-11-25", "week": "2026-W47", "forecast": "Code Mode 省下的 token 有沒有人量到：媒體轉述最多可省 77%，目前沒有使用者自己的對照數字", "origin": "新立", "probe": "Code Mode", "entries": []}
 {"date": "2026-11-25", "week": "2026-W47", "forecast": "Fable 5.2 開最高 effort 會不會讓用量變快：官方說 `xhigh`／`max` 時它會自開子 agent 審查自己", "origin": "續盯", "probe": "Fable 5.2", "entries": []}
+{"date": "2026-11-26", "week": "2026-W47", "forecast": "Claude 參與的黎曼猜想證明有沒有人驗過：Anthropic 數學家的草稿未經同行審查，史丹佛另發一份人類證明草稿", "origin": "新立", "probe": "黎曼", "entries": [{"title": "社群把 Anthropic 的 GRH（廣義黎曼猜想）Lean 證明精簡了 99.56%", "url": "https://github.com/lsernau/grh-lean"}]}
