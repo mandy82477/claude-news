@@ -9553,3 +9553,30 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：H-2929ad（安全政策→功能，TechRepublic「Claude Misuse Beta」企業安全主控台新功能，請功能記者視需要補充 entities/claude-code-features；下一輪功能記者派工時接手）
 - devpractice 沉澱：候選 5 筆（entities/claude-code-known-issues 的 #90542 CLAUDE.md 規則被整套忽視、#5768 resume 需原目錄、entities/opus-5 的 Opus 4.8/5.0 推理退化回報 #68780、entities/claude-code-features 的 Claude Ship policy check 不能取代人工 code owner 核准、entities/pricing 的疑似蒸餾指控未獲證實），手冊寫入 0 則（當日無「開發實務」官方指南包，候選留待週更落地），基準線已推進至 6a58892
 - market 判讀：判讀 3 則（IPO 進程 第 39 則：Dario／Daniela Amodei 合計出售 5.61 億美元股票；第 40 則：股價續探底至約 $74，較首日高點跌 33%；內部重建降低運算成本 第 2 則：Messages API 改寫 Rust，CPU 降 70%），「買得到的標的」ANT 方向維持 📉 負面並更新細節，新增里程碑登記 3 筆（垃圾等級評等追蹤、既有股東售股拆分追蹤、Messages API 降本財報佐證追蹤）
+
+## 2026-11-26 Ingest（雲端，第 3 班 22:00 UTC）
+
+- 來源日報：[[news/2026-11-26]]
+- 更新頁面：
+  - **人物**：entities/dario-amodei、entities/simon-willison
+  - **功能**：entities/claude-code-known-issues、entities/claude-code、entities/claude-code-features、entities/claude-skills
+  - **商業**：entities/pricing、entities/pricing-incidents、topics/anthropic-ipo、topics/anthropic-business、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety、topics/ai-agent-safety-prompt-injection、topics/ai-agent-safety-cyber
+  - **模型**：topics/claude-research-results
+  - **社群**：topics/community-tech-patterns、topics/community-integrations、topics/community-multi-agent、topics/community-creative-tools、topics/community-skills、topics/community-memory
+  - **投資分析**：topics/market-signals-ipo（＋母頁 topics/market-signals）
+- 新增頁面：無
+- feature-radar：無新條目；「Claude Code v2.1.332：MCP 伺服器技能」熱度 🔥→🔥🔥（TechRepublic／Dataconomy／Crypto Briefing／VentureBeat 等至少 4 家媒體跟進）；「Artifact 安裝為獨立應用程式」熱度 🔥🔥🔥→🔥🔥🔥🔥（11-26 起免費方案亦可安裝，Wccftech）
+- index.md：判斷不需更動——商業記者建議的鉤子內容（股價具體數字）屬快變事實，依 `wiki/CLAUDE.md`「資訊架構哲學」不進 index，已反映在 topics/anthropic-ipo 頁面正文與 callout；index.md 現有的 anthropic-business 列鉤子（「指標表與 IPO 一句」）為概括性描述，不因此失準
+- 摘要：Claude Code 社群今日同步湧現 4 份高熱度 GitHub Issue 反映 Max 方案用量異常（最熱 1,501 留言），Anthropic 推出 Skills over MCP 公開測試版（至少 4 家媒體同日報導）並公開逾 1,700 個沙盒陷阱紅隊測試結果；股價單日反彈但連續第二天收在 $83 發行價之下、Bloomberg 稱華爾街內部罕見分歧；另有 Dario Amodei 否認「投降」說、社群把 Anthropic 的 GRH Lean 證明精簡 99.56%。
+- 呈現品質：全部通過（彙整時 `ingest_gate.py` 首輪抓到 3 道閘紅，主編同輪修到綠，見下方品質備註）
+- 品質備註：
+  - [主編] `check_hierarchy.py` 判兩個 hub 落後：`entities/pricing`（子頁 pricing-incidents 今日有異動，母頁 callout 停 11-24）、`topics/community-integrations`（子頁 community-creative-tools 今日新增 gflow-cli，母頁 callout 停 11-25）；兩頁母頁本身無直接新內容，依 hub 慣例只補一行指向子頁的「子頁更新」/鉤子並把 callout 日期覆寫為 2026-11-26，母頁自身「最後新聞更新」欄不動（母頁沒有自己的新聞）
+  - [主編] `entities/pricing-incidents.md:351` 商業記者寫入「星數未達防刷佐證門檻」洩漏內部收錄判準用語，`check_reader_language.py` 判定命中，已刪除該片語改為單純列出未查證項目
+  - [主編] `topics/ai-agent-safety-cyber.md` 兩筆細節區條列（241、209 字元）、`topics/ai-agent-safety-prompt-injection.md` 一筆（201 字元）超過 200 字元上限，已縮寫至門檻內，事實不變
+  - [主編] 商業記者指出 `topics/competitor-landscape.md#硬答案` 本輪汰舊增新後仍有 8 條，超過規則上限 6 條（非本輪造成），留待 `/wiki-lint` 後續清理
+  - [主編] 功能記者（分類回退）判「Notion's official MCP inject hidden upsell instructions into agent context」應屬安全政策——查 `data/classification-log.jsonl`，該則原輪 `categories` 已含安全政策，安全政策記者本輪已處理（寫入 `topics/ai-agent-safety-prompt-injection`），依步驟 3b 規則①不追加派工
+- 分類回退：0 筆追加派工（唯一回退已由原輪安全政策記者處理，見上方品質備註）
+- 轉知帳本：結案 H-2929ad（功能，TechRepublic「Claude Misuse Beta」已於本輪補上 entities/claude-code-features 一行 wikilink）；新開 H-2a4232（社群→功能，請功能記者評估 `topics/anthropic-product-matrix` 是否新增 mobile-agent-testers／gflow-cli 列）
+- devpractice 沉澱：本日無「開發實務.md」包，未派工（今日無官方使用指南類條目）
+- market 判讀：判讀 1 則（第 2 類：IPO 進程線第 41 則——股價單日反彈但連續第二天收在 $83 發行價之下，Bloomberg 另報導華爾街內部罕見分歧），「買得到的標的」ANT 方向由 📉 負面 → ⚖️ 兩面，新增回顧結算 ⏳ 1 列（判讀日 2026-11-26，結算日 2026-12-10）；今日反彈與既有 11-25 止跌／信評里程碑標記完全重疊，未另開新標記
