@@ -429,11 +429,6 @@
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：Max 用量異常同時衝上 4 份高熱度 Issue：#16157 累積 1,501 則留言全站最高；新增 #41506（token 用量 3 月底起增 3–5 倍，58 則留言）。",
   "sedimentedToday": [
     {
-      "id": "claude-code-known-issues",
-      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-code",
       "name": "Claude Code",
       "pageType": "entity"
@@ -441,11 +436,6 @@
     {
       "id": "claude-skills",
       "name": "Claude Skills",
-      "pageType": "entity"
-    },
-    {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
       "pageType": "entity"
     },
     {
@@ -469,16 +459,6 @@
       "pageType": "topic"
     },
     {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-ipo",
-      "name": "Anthropic 上市與財報",
-      "pageType": "topic"
-    },
-    {
       "id": "claude-research-results",
       "name": "Claude 原創科研成果與驗證狀態",
       "pageType": "topic"
@@ -496,31 +476,6 @@
     {
       "id": "community-multi-agent",
       "name": "社群做法：多 agent 怎麼分工與協調",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-skills",
-      "name": "社群做法：Skills 怎麼寫",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-ipo",
-      "name": "IPO 與財務揭露這則怎麼判",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

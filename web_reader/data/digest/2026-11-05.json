@@ -520,13 +520,7 @@
     }
   ],
   "preview": "程式開發實戰手冊：usage-limits 文件新增建議：thinking 開關不需要加強推理時直接關掉；本頁「官方的 session 經營建議」段同步補上這則建議。",
-  "sedimentedToday": [
-    {
-      "id": "cat-wu",
-      "name": "Cat Wu",
-      "pageType": "entity"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-11-05",
     "summary": "",

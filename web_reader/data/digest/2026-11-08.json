@@ -362,11 +362,6 @@
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：服務事故（已解決）：Anthropic Status 記錄 Fable 5.1 效能降低，影響 claude.ai、Claude API、Claude Code、Cowork（08:18–08:32 UTC，約 14 分鐘），官方已標記解決（🌐 組）。",
   "sedimentedToday": [
     {
-      "id": "boris-cherny",
-      "name": "Boris Cherny",
-      "pageType": "entity"
-    },
-    {
       "id": "fiona-fung",
       "name": "Fiona Fung",
       "pageType": "entity"
