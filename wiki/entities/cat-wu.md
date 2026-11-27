@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-11-27
 
 > **最新動態**（2026-11-27）
-> 36Kr 專訪「Claude Code 核心負責人」談 vibe coding 未來，受訪者姓名未載；候選含本人（已轉任 OpenAI）與 [[entities/boris-cherny|Boris Cherny]]，待查證歸屬。詳情與卸任後動態見下方現況。
+> 36Kr 專訪「Claude Code 核心負責人」談 vibe coding 未來，受訪者姓名未載；候選含本人（已轉任 OpenAI）與 [[entities/boris-cherny|Boris Cherny]]，待查證歸屬。她本人已於 2026-11-05 確認卸任後轉往 OpenAI，具體職位未揭露。
 
 ---
 
