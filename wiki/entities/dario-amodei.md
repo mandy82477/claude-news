@@ -4,8 +4,8 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-26"
-last_news_update: "2026-11-26"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "active"
 days_since_news: 0
 parent: null
@@ -13,8 +13,8 @@ children: "['entities/dario-amodei-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 38
-attribution_count: 68
-attribution_last: "2026-11-26"
+attribution_count: 70
+attribution_last: "2026-11-27"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -34,22 +34,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-26
-**最後新聞更新：** 2026-11-26
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **今日動態**（2026-11-26）
-> Amodei 否認「要人類向 AI 投降」（surrender free will）的說法，稱其「荒謬」（absurd），為 11-25 自主權論辯反駁的延續（Al Jazeera／Howl.Link）。
+> **今日動態**（2026-11-27）
+> - **AI 治理立場**：投書 The Times〈Plato was wrong〉，公開反對「AI 暴政」式治理路線（The Times，11-26）
+> - **IPO 股票出售後續**：Yahoo Finance 以「失誤」（misstep）描述 11-25 曝光的 5.61 億美元股票出售，具體論述僅標題可用（Yahoo Finance，11-27）
 
 ---
 
 ## 現況
 
-2026-11-26，Al Jazeera 與 Howl.Link 同日報導，Amodei 公開否認外界指他要人類向 AI「投降」（surrender free will）的說法，稱該說法「荒謬」（absurd），延續 11-25 對自主權批評的反駁。
+2026-11-26，The Times 刊出 Amodei 投書〈Plato was wrong〉，公開反對「AI 暴政」式治理路線；僅標題可用，具體論述未見報導。
 
-2026-11-25，Axios／Forbes 多篇報導稱 Amodei 反駁外界對其「AI 與自由意志」、人類交出自主權願景的批評，其他 AI 實驗室領袖（未具名）公開表態不同意（均僅標題可用）。同日 Forbes（經 Hacker News，51分）報導 Amodei 與妹妹 [[entities/daniela-amodei|Daniela Amodei]] 在 IPO 期間合計出售價值 5.61 億美元股票，較 11-22 揭露的創辦人持股加總估值更進一步。
+2026-11-27，Yahoo Finance 標題稱 Amodei 與妹妹 [[entities/daniela-amodei|Daniela Amodei]] 可能犯下 5.6 億美元「失誤」（misstep）；僅標題可用，具體內容未知，金額與 11-25 揭露的 5.61 億美元 IPO 股票出售相近（推論同一事件）。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、[[entities/daniela-amodei|Daniela Amodei]] 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；09-27 白宮晚餐為本人與 Trump 首次公開重新互動的跡象，10-01 Trump 公開表態「喜歡」Amodei 本人，為關係解凍添一實質訊號，惟是否完全修復仍未見報導證實。
 
@@ -59,6 +60,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 | 日期 | 立場 | 來源 |
 |------|------|------|
+| 2026-11-26 | 投書 The Times〈Plato was wrong〉，公開反對「AI 暴政」式治理路線 | Google News／The Times |
 | 2026-11-26 | Amodei 否認外界指他要人類向 AI「投降」（surrender）的說法，稱該說法「荒謬」（absurd） | Al Jazeera ＋Howl.Link |
 | 2026-11-25 | Forbes（經 Hacker News，51分）：與妹妹 [[entities/daniela-amodei\|Daniela Amodei]] 合計出售 5.61 億美元 IPO 期間股票；HN 留言稱約為個人持股 1.4%（推論） | Hacker News（原載 Forbes） |
 | 2026-11-25 | Axios／Forbes：反駁外界對「AI 與自由意志」、人類交出自主權願景的批評；其他 AI 實驗室領袖公開表態不同意（均僅標題可用） | Google News／Axios、Google News／Forbes |
@@ -133,6 +135,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 | Yahoo Finance 報導（投資人未具名） | 11-16 | 稱 Amodei 藉 IPO「自我造勢」，資深科技投資人說法，身分未具名（僅標題） | 媒體報導，資深科技投資人身分未載 |
 | Sam Altman | 11-18 | 受訪被問 Anthropic 是否安全開發 AI，答「我不知道」 | OpenAI 執行長，同業 |
 | Elon Musk（對照：肯定而非批評） | 11-11（Times of India） | 標題稱 Musk 稱 Claude 為「masterpiece」（僅標題，內文未取得） | xAI／Grok 競爭者 |
+| Yahoo Finance 報導（作者未具名） | 11-27 | 標題稱可能犯下 5.6 億美元「失誤」（misstep）；僅標題可用，推論同指 11-25 揭露的 5.61 億美元股票出售（金額相近） | 媒體報導，具體批評內容未載 |
 
 各人原話與來源見各人物頁；論述層（減速呼籲與反彈聲浪）見 [[topics/recursive-self-improvement]]。
 
@@ -159,6 +162,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Anthropic boss: Plato was wrong. We mustn't succumb to AI tyranny - The Times](https://news.google.com/rss/articles/CBMiogFBVV95cUxOQng4Q2VPanJLNDZsQ1dNczNHRnAwRmxUZ09hOXdxQl9ibmZuN1lmSVVpNGhZbHo5Sm9ZWDNDaTQtTEhBTTRZWmpjcm01NlZNdml6Z2k3QUI5WmZYa2UtcGE3eGFuTWpVMXhOdHRickZBeUhUMUUyd0RsWWQ4NHctVWhJeG8wQmItSk1ZUThQN1I0UmllZzZvQTVCdElBYU91cHc?oc=5) — Google News／The Times，2026-11-26 19:16 UTC（僅標題可用）
+- [Anthropic's Dario and Daniela Amodei may have just made a $560 million misstep - Yahoo Finance](https://news.google.com/rss/articles/CBMizgFBVV95cUxOMEVyQjJDbk9hZFRvdVlWQ3pIZmdRNTJtVzdOMnBpY0ZQMlB6aS1mZmtBNU1VaUFqbmhQYV91SVZUU2Q2SldWWXRYaFVIdGllRWJXZkZENGtmNmhLaVQ2Q01Db3dPblMyUHNZTTdFaHhvMlVJUWgyZUpoemJDbVJkeVRoYnozN2kycWI1RHdOX21qSjVHdldjYWtwbU10cjNLU0xDQVB6SUZZemE3V2Y1RFBMN2sxbWFGbVFNTWVFQU9xbmdlNm5tUlpHZUJKUQ?oc=5) — Google News／Yahoo Finance，2026-11-27 14:13 UTC（僅標題可用，具體內容未知）
 - [Anthropic CEO Amodei denies wanting humanity to 'surrender' free will to AI - Al Jazeera](https://news.google.com/rss/articles/CBMiugFBVV95cUxNU1lFeWR4WThickRrRFF1RS1jOWdOdXNxUDRqZkJQQjhHMnVsZjR4QTN3emM2YlRkcnlrbVFrVl9TUmNJdm9EZXZTTDh0MmZxSzc5Z2hZSjRZMndpU2RuZTlIRXU1WWxlTFZJOXVQTFc2QVRyYWpfc04xN2tDZDZkdERhVjdGaV9lblV0U0x0SHVmYzF5WFkxOC1UODkyaDhoNFF2MWtUSWt0TC0zZVVBWi1TU2Y2TXkzMEHSAb8BQVVfeXFMTXlRMjR0aXQxNjU5emprZTUtUVBYTlZjUlJVQ3NfV1NOY2V0V004bjdhZjJzaU96akpVNmtaaHpUcC1LazBYdE85ZVlSQW95bnBHQS1qTWdlcUlyMENxUmlIVDVydWdyVnZjX2xGRlRPSGxaS0NDeldfdUxHOUNsN0x3YUNQZjJBSGZEY1V0Vm1EQWNtMmlQMnVNQjE3cnhFRktibnF4MnVzaFVQT2EzeldXaHk0WWRvRm8yTlJBd2c?oc=5) — Google News／Al Jazeera，2026-11-26 06:30 UTC
 - [Anthropic chief says claims that he wants humans to 'surrender' to AI are 'absurd' - Howl.Link](https://news.google.com/rss/articles/CBMiO0FVX3lxTE9RemVTT3dkQjlFSGxRUWt2RGRaUGVWN2VRWExSTTdFSE1VYmVIYS1rSUl5RU14eVhxRnJF?oc=5) — Google News／Howl.Link，2026-11-26 13:52 UTC（同日同事件另一篇報導）
 - [Anthropic CEO Dario Amodei and Sister Daniela Sold $561M in Stock During IPO](https://www.forbes.com/sites/siladityaray/2026/11/24/anthropic-ceo-dario-amodei-sold-280-million-in-shares-as-part-of-record-ipo/) — Hacker News（51分）／Forbes，2026-11-24 22:27 UTC
@@ -235,6 +240,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ### 2026-11
 
+- 2026-11-27：Yahoo Finance 標題稱 Amodei 與妹妹 [[entities/daniela-amodei|Daniela Amodei]] 可能犯下 5.6 億美元「失誤」（misstep）；僅標題可用，推論同指 11-25 揭露的 5.61 億美元 IPO 股票出售（金額相近）（來源：Google News／Yahoo Finance）
+- 2026-11-26：The Times 刊出 Amodei 投書〈Plato was wrong. We mustn't succumb to AI tyranny〉，公開反對「AI 暴政」式治理路線；僅標題可用，具體論述未見報導（來源：Google News／The Times）
 - 2026-11-26：Al Jazeera 與 Howl.Link 同日報導，Amodei 公開否認外界指他要人類向 AI「投降」（surrender free will）的說法，稱該說法「荒謬」（absurd），延續 11-25 自主權論辯的反駁（來源：Google News／Al Jazeera、Google News／Howl.Link）
 - 2026-11-25：Forbes（經 Hacker News，51分）報導 Amodei 與妹妹 [[entities/daniela-amodei|Daniela Amodei]] 在 IPO 期間合計出售價值 5.61 億美元股票，HN 留言討論聚焦此佔其個人持股比例是否偏高（來源：Hacker News（原載 Forbes））
 - 2026-11-25：Axios／Forbes 多篇報導稱 Amodei 反駁外界對其「AI 與自由意志」、人類交出自主權願景的批評，其他 AI 實驗室領袖（未具名）公開表態不同意；均僅標題可用（來源：Google News／Axios、Google News／Forbes）

@@ -4,21 +4,21 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-05"
-last_news_update: "2026-11-05"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "active"
-days_since_news: 21
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 21
-inbound_links: 14
-attribution_count: 6
-attribution_last: "2026-11-05"
+days_since_news_subtree: 0
+inbound_links: 17
+attribution_count: 7
+attribution_last: "2026-11-27"
 top_source: "google-news"
-pending_count: 0
+pending_count: 2
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-12-11"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -34,15 +34,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 工程產品
 **為何追蹤：** 任內 Claude Code 產品方向（AI 主動性）的公開論述；卸任後轉任 OpenAI，持續追蹤人才流向與對手布局
 **首次出現：** 2026-05-14
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 
-> **卸任後下一站確認為 OpenAI**（2026-11-05）
-> The Decoder、Business Insider 同步報導：卸任 Claude Code 產品負責人的 Cat Wu，下一站確認為 OpenAI；兩篇均未提及具體職位或負責項目。
+> **最新動態**（2026-11-27）
+> 36Kr 專訪「Claude Code 核心負責人」談 vibe coding 未來，受訪者姓名未載；候選含本人（已轉任 OpenAI）與 [[entities/boris-cherny|Boris Cherny]]，待查證歸屬。詳情與卸任後動態見下方現況。
 
 ---
 
 ## 現況
+
+2026-11-27，Google News 轉載 36Kr 報導稱其專訪「Claude Code 核心負責人」談 vibe coding 未來；受訪者具體姓名未見報導，候選含本人（已轉任 OpenAI）與 [[entities/boris-cherny|Boris Cherny]]（現任 Head of Claude Code，可能性較高），標記見下。
+
+❓ **待查證**（標 2026-11-27｜查 36Kr、vibe coding｜複 2026-12-11）｜**36Kr 專訪「Claude Code 核心負責人」談 vibe coding 未來**（2026-11-27 報導）：受訪者具體姓名未見報導；候選除本人外，另見 [[entities/boris-cherny|Boris Cherny]]；待具名來源出現再收斂歸屬。完整討論見 [[entities/boris-cherny]]。
 
 2026-11-05，The Decoder 與 Business Insider 同步報導 Cat Wu 卸任 Claude Code 產品負責人後的下一站確認為 OpenAI，為卸任後首次具體去向浮現；兩篇均未提及她在 OpenAI 的具體職位或負責項目。
 
@@ -100,6 +104,7 @@ Cat Wu 接受公開訪問，指出：
 
 ## 歷史記錄
 
+- 2026-11-27：❓ **待查證**（標 2026-11-27｜查 36Kr、vibe coding｜複 2026-12-11）｜36Kr 專訪「Claude Code 核心負責人」談 vibe coding 未來；候選含本人與 [[entities/boris-cherny|Boris Cherny]]（Google News／36Kr，2026-11-27）
 - 2026-11-05：The Decoder 與 Business Insider 同步報導 Cat Wu 卸任後下一站確認為 OpenAI，為卸任後首次具體去向浮現；兩篇均未提及具體職位或負責項目（來源：The Decoder、Business Insider）
 - 2026-11-03：Business Insider 綜合至少三家媒體報導證實 Cat Wu 任職兩年後卸任 Claude Code 產品負責人，Unite.AI 稱她為「Claude Code 的門面人物之一」；兩篇報導均未提及接任者（來源：Business Insider、Unite.AI）
 - **「prompt engineering 不那麼重要」發言者查實為 Boris Cherny，非 Cat Wu**（2026-07-30 報導，2026-09-02 查證）：[Search Engine Journal 原文](https://www.searchenginejournal.com/head-of-anthropics-claude-code-says-prompt-engineering-not-that-important/584286/)具名 [[entities/boris-cherny]]（YC Diana Hu 訪談）——「不需要花俏的東西，給模型任務、給它驗證輸出的方式，它就會完成」，並勸使用者「不要聽 LinkedIn 影響者」、改以經驗式方法互動。本頁保留此列僅為澄清歸屬；完整論述見 [[entities/boris-cherny]]。

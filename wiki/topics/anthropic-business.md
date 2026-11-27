@@ -3,8 +3,8 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-26"
-last_news_update: "2026-11-26"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -30,12 +30,12 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-26
-**最後新聞更新：** 2026-11-26
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-26）
-> 股價小幅回升但連續第二天收在 $83 發行價之下；Bloomberg 稱華爾街某機構內部對後續走勢出現罕見分歧，詳見 [[topics/anthropic-ipo]]。
+> **最新動態**（2026-11-27）
+> 股價全面收復 $83 發行價，為掛牌以來首次；Forbes 稱單日大漲 11%，詳見 [[topics/anthropic-ipo]]。
 
 ---
 
@@ -69,7 +69,7 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 ## IPO 走到哪一格
 
-**一句結論：** IPO 已完成並結算：2026-11-18 以每股 $83 正式定價，11-19 以代號「ANT」在 Nasdaq 開始交易，11-20 官方公告超額配售權全額行使，發行上修至 1,127,000,000 股，結算毛額約 $935 億美元、Anthropic 實收約 $916 億美元，為史上規模最大 IPO；上市後賣壓持續擴大，11-24 股價正式跌破發行價 $83 為掛牌以來首次，11-25 續跌至 $74（Forbes 稱該波下跌達 33%），**11-26 小幅回升但連續第二天收在 $83 之下**，Bloomberg 稱華爾街某機構內部對後續走勢出現罕見分歧。五格表、S-1 揭露、結算細節見 [[topics/anthropic-ipo]]。
+**一句結論：** IPO 已完成並結算：2026-11-18 以每股 $83 正式定價，11-19 以代號「ANT」在 Nasdaq 開始交易，11-20 官方公告超額配售權全額行使，發行上修至 1,127,000,000 股，結算毛額約 $935 億美元、Anthropic 實收約 $916 億美元，為史上規模最大 IPO；上市後賣壓持續擴大，11-24 股價正式跌破發行價 $83 為掛牌以來首次，11-25 續跌至 $74（Forbes 稱該波下跌達 33%），**11-27 全面收復發行價，為掛牌以來首次站回 $83 之上**（Forbes 稱單日大漲 11%，Coinpaper 估約 7%）。五格表、S-1 揭露、結算細節見 [[topics/anthropic-ipo]]。
 
 ---
 
@@ -79,8 +79,8 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-26 |
-| [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-22 |
+| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-27 |
+| [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-27 |
 | [[topics/anthropic-business-risks]] | 哪裡會出事、你能先做什麼，以及它怎麼賺錢 | 2026-11-23 |
 
 #### 算力與資金從哪來

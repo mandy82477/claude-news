@@ -4,11 +4,11 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-26"
+last_updated: "2026-11-27"
 last_news_update: "2026-11-26"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-26
+**最後更新：** 2026-11-27
 **最後新聞更新：** 2026-11-26
 
-> **最新動態**（2026-11-26）
-> - **已知問題**：Max 方案用量消耗異常同時衝上 4 份高熱度 Issue（#16157 累積 1,501 則留言全站最高），見 [[entities/claude-code-known-issues|已知問題]]。
+> **最新動態**（2026-11-27）
+> - **已知問題**：新增 sub-agent 檔案建立回報失真、Office 365 外掛 macOS 消失等 bug，行動版多帳號訴求衝上 1,096 讚，詳見 [[entities/claude-code-known-issues|已知問題]]。
 > - **現況**：TestingCatalog 報導 Anthropic 據稱準備 Claude 的 Google Drive 檔案瀏覽功能，尚待官方佐證。
 
 ---
@@ -47,7 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（十一組逐條） | [[entities/claude-code-known-issues]] | 2026-11-26 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（十一組逐條） | [[entities/claude-code-known-issues]] | 2026-11-27 |
 | 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-25 |
 | hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-25 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |

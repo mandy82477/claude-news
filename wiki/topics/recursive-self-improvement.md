@@ -3,19 +3,19 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-25"
-last_news_update: "2026-11-25"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 46
-attribution_count: 81
-attribution_last: "2026-11-25"
+attribution_count: 82
+attribution_last: "2026-11-27"
 top_source: "google-news"
-pending_count: 11
+pending_count: 12
 pending_overdue: 3
 pending_next_review: "2026-11-30"
 pending_signalled: 1
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-11-25
-**最後新聞更新：** 2026-11-25
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 
-> **員工示警再添「與高層衝突」框架**（2026-11-25）
-> Gizmodo／Tom's Hardware 跟進 11-24 Axios 獨家，首次補上員工與公司高層因 AI 安全起衝突、指高層「脫節」恐選利潤優先於安全的說法；僅轉述，未見具體衝突事件或高層回應。
+> **Amodei 投書反對「AI 暴政」式治理路線**（2026-11-27）
+> The Times 刊出 Dario Amodei 投書，標題稱反對以集中管控因應 AI 風險的治理路線；原文論點與具體提案均未見報導（僅標題可用）。
 >
 > 詳見 [[topics/recursive-self-improvement#技術彙整]]。
 ---
@@ -125,6 +125,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### The Times：Dario Amodei 投書反對「AI 暴政」式治理路線（2026-11-26 新增）
+
+- **揭露來源**：Google News／The Times（11/26 19:16 UTC）；互動 0，原料無可讀內文，僅標題可用
+- **核心主張（僅標題可用）**：The Times 刊出 Dario Amodei 投書，標題稱其引柏拉圖並表示不能向「AI 暴政」式治理路線妥協；具體治理主張、是否回應既有「煞車踏板」暫停呼籲均未見報導
+- **與既有敘事的關係（推論）**：延續本頁 Amodei 本人公開治理表態系列（09-12～13《We Must Pace the Frontier》減速呼籲、09-15 Jack Clark「緊急關閉開關」立法化提案）；本則標題聚焦反對集中式治理，與既有暫停呼籲方向是否一致，僅標題可用無法判斷
+- **可信度評估**：單一來源，僅標題可用，互動 0；原文論點、篇幅與是否回應既有監管俘獲質疑（09-24 Axios）均未見報導
+- ❓ **待查證**（標 2026-11-27｜查 Plato、tyranny｜複 2026-12-11）｜**投書具體論點與治理提案內容**：僅標題可用，反對的具體治理路徑與是否提出替代方案均未見報導
 
 ### Axios／Yahoo Finance：逾 24 位匿名消息來源稱 Anthropic、OpenAI 員工不信任未發布模型能安全釋出（2026-11-24 新增）
 

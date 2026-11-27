@@ -6,12 +6,12 @@ domain: "🌐 社群"
 last_updated: "2026-11-26"
 last_news_update: "2026-11-26"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-integrations"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
-inbound_links: 6
+days_since_news_subtree: 1
+inbound_links: 5
 attribution_count: 3
 attribution_last: "2026-11-26"
 top_source: "github"

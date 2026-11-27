@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-09-20"
 last_news_update: "2026-05-14"
 status_main: "resolved"
-days_since_news: 196
+days_since_news: 197
 parent: "entities/openclaw"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 196
+days_since_news_subtree: 197
 inbound_links: 0
 attribution_count: 0
 attribution_last: null

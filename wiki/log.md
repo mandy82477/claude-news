@@ -9581,3 +9581,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：本日無「開發實務.md」包，未派工（今日無官方使用指南類條目）
 - market 判讀：判讀 1 則（第 2 類：IPO 進程線第 41 則——股價單日反彈但連續第二天收在 $83 發行價之下，Bloomberg 另報導華爾街內部罕見分歧），「買得到的標的」ANT 方向由 📉 負面 → ⚖️ 兩面，新增回顧結算 ⏳ 1 列（判讀日 2026-11-26，結算日 2026-12-10）；今日反彈與既有 11-25 止跌／信評里程碑標記完全重疊，未另開新標記
   - [主編] `gate_web_build.py` 擋下：`check_devpractice_state.py` 判定本輪 ingest commit 之後 `data/devpractice_state.json` 未跟進（今日無開發實務包，未派工，基準線停在 11-25）；已跑 `devpractice_diff.py mark` 推進基準線至本輪收尾 commit（07a320a0），確認 diff 內容僅為各頁 frontmatter `days_since_news` 欄位常規遞增、無真實候選漏記
+
+## 2026-11-27 Ingest（雲端，第 3 班 22:00 UTC）
+
+- 來源日報：[[news/2026-11-27]]
+- 更新頁面：
+  - **人物**：entities/dario-amodei、entities/boris-cherny、entities/cat-wu
+  - **功能**：entities/claude-code-known-issues、entities/claude-code
+  - **商業**：topics/anthropic-ipo、topics/anthropic-business、topics/anthropic-business-risks、topics/anthropic-partnerships-compute、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety-product-vulns、topics/recursive-self-improvement（＋母頁 topics/ai-agent-safety callout 同步）
+  - **社群**：topics/community-cost、topics/community-skills、topics/community-tech-patterns
+  - **投資分析**：topics/market-signals-ipo（＋母頁 topics/market-signals）
+- 新增頁面：無
+- feature-radar：無新條目；「Code Mode」熱度 🔥🔥🔥🔥→🔥🔥🔥🔥🔥（社群首次出現開源重現實作 legend-of-alan/ghostmode，自測省 token 約 60%，確認官方方向可獨立複現）
+- index.md：無需更動（商業記者建議的鉤子內容為股價具體數字，依 `wiki/CLAUDE.md`「資訊架構哲學」屬快變事實不進 index，已反映在 topics/anthropic-ipo 頁面正文；index 現有 anthropic-business 列鉤子為概括性描述，不因此失準）
+- 摘要：Anthropic 股價今日收復 $83 IPO 發行價（上市以來首次），Claude Code 社群在行動版多帳號切換與 `MEMORY.md` 壓縮門檻兩則功能請求上出現高留言量，Claude Code 新增多筆 sub-agent／MCP／Office 整合類 bug 回報，社群首次開源重現官方 Code Mode 並驗證省 token 方向。
+- 呈現品質：全部通過（彙整時 `ingest_gate.py` 首輪抓到 1 道閘紅，主編同輪修到綠，見下方品質備註）
+- 品質備註：
+  - [主編] `check_hierarchy.py` 判 `topics/ai-agent-safety` hub 落後子頁 `ai-agent-safety-product-vulns`（callout 停 11-26、子頁已更新至 11-27）；已將 hub callout 覆寫為 2026-11-27、改指向今日唯一新增事實（Gmail MCP 追蹤連結事件），`last_updated` 同步，`gen_wiki_frontmatter.py` 已重算全站 156 頁 frontmatter（含 `days_since_news` 常規遞增，無內容異動）
+  - [主編] 商業記者「⚠️ 需主編查證」JERA 是否為可交易上市主體：WebSearch 查證確認 JERA 為 TEPCO Fuel & Power／Chubu Electric 各半的未上市合資公司，無獨立股票代碼；投資分析記者據此正確判斷不開新市場訊號線，商業記者寫入 `topics/anthropic-partnerships-compute` 的算力供應鏈角度維持不變
+  - [主編] 安全政策與社群記者分別對同一則 Notion MCP 隱藏推銷指令條目標「⚠️ 需主編轉知」給功能記者：不登帳：目標記者（功能）本輪 packet 本身已標「同時派給」同時收到該則並已處理，非跨輪轉知
+  - [主編] 社群記者對「Code Mode 負向對照數字」標「⚠️ 需主編轉知」功能記者：不登帳：目標記者（功能）本輪 packet 本身已標「同時派給」同時收到並已判斷非否定對照、未觸發反向對照欄位，非跨輪轉知
+  - [主編] 未回應清單 2 則（Apple Enters the AI Agent Race - Barchart〔商業〕、Notion MCP 條目〔安全政策，已由社群記者文字說明覆蓋〕）：前者判斷為純競爭框架敘述、title-only 無可驗證具體條款，不收錄，不視為漏跑
+- 分類回退：無
+- 轉知帳本：void H-2a4232（功能記者本輪判斷：mobile-agent-testers／gflow-cli 為第三方社群工具，非官方產品×功能範疇，且無官方一手來源佐證，暫不入列產品化矩陣；待未來有官方證據再評估）
+- devpractice 沉澱：本日無「開發實務.md」包，未派工（今日無官方使用指南類條目）
+- market 判讀：判讀 1 則（第 1 類／IPO 進程第 42 則：股價收復 $83 發行價，各家估單日漲幅 7～11%，首次全面收復），「買得到的標的」ANT 方向由 ⚖️ 兩面 → 📈 正面，新增回顧結算 ⏳ 1 列（判讀日 2026-11-27，結算日 12-11）；JERA 一線因標的不可交易，本輪未開新線（見上方品質備註）

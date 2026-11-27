@@ -3,17 +3,17 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-17"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "ongoing"
-days_since_news: 9
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 9
+days_since_news_subtree: 0
 inbound_links: 8
-attribution_count: 18
-attribution_last: "2026-11-17"
+attribution_count: 19
+attribution_last: "2026-11-27"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 
-> **模型使用策略再添兩款：便宜模型配測試把關、跨廠商 CLI 橋接**（2026-11-17）
-> - **cheap-ag**：便宜模型寫程式、測試結果決定上不上，宣稱讓訂閱用量延長 50 倍。
-> - **antigravity-for-claude-code**：把 Google Antigravity CLI（Gemini）接成 Claude Code 的協作子 agent，跨模型路由任務。
+> **開源版 Code Mode 獨立實測：官方宣稱 95%，自測約 60%**（2026-11-27）
+> 開發者自行重現官方上週發布的 Code Mode，用在自己的 Rust agent 專案實測降約 60% token 消耗，低於官方部分工作負載宣稱的 95%。
 
 ---
 
@@ -110,6 +109,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### legend-of-alan/ghostmode：開源重現官方 Code Mode，自家 Rust agent 實測降約 60% token 消耗（2026-11-27）
+
+- **主線：** —
+- **核心模式：** 針對上週官方發布的實驗性 [[entities/claude-code-features|Code Mode]]（工具呼叫改寫成程式碼而非冗長 JSON），作者自行寫了開源版本用在自己的 Rust agent 專案上，實測 token 消耗降約 60%。
+- **與既有模式的關係：** 補上「Token / 成本優化」一個「把官方 Code Mode 概念做成開源實作並獨立量測」取向——官方宣稱部分工作負載省 95%，作者引用非官方獨立研究稱普遍落在 60–70%，自己的 Rust agent 實測約 60%，三個數字互不相同；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** HN 僅 2 分，惟有 2 個來源且附可查核的開源 repo 與具體數字，非純主張；60% 為作者自測，未經第三方覆核，「60–70%」的獨立研究未附原始連結（細節未載）。
+- **來源：** Hacker News；[GitHub](https://github.com/legend-of-alan/ghostmode)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者實作，未見第三方複現）
 
 #### muaaz9329/cheap-ag：便宜模型寫程式、測試結果決定能不能上，MCP server 宣稱讓訂閱用量延長 50 倍（2026-11-17）
 

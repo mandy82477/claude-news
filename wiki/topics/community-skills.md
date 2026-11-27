@@ -3,8 +3,8 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-26"
-last_news_update: "2026-11-26"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/community-tech-patterns"
@@ -12,8 +12,8 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 17
-attribution_count: 38
-attribution_last: "2026-11-26"
+attribution_count: 39
+attribution_last: "2026-11-27"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-26
-**最後新聞更新：** 2026-11-26
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 
-> **Skills 設計同日 3 款周邊工具／skill 市集同步衝上 GitHub 搜尋榜**（2026-11-26）
-> cc-thingz、aiskillstore/marketplace、microsoft/skills-for-copilot-studio 各衝 500 星，疑似同一時間點批次快照效應，非單一工具熱度。
+> **Together AI 發布開源 agent 測試工具 Hurdle**（2026-11-27）
+> 專門測試 Claude Code、Codex 等 coding agent 表現，供評估自身 agent 工作流穩定性；至少 2 個來源同日報導。
 ---
 
 ## 摘要
@@ -95,6 +95,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### Together AI／Hurdle：開源工具，專門測試 Claude Code、Codex 等 coding agent 的表現（2026-11-27）
+
+- **主線：** —
+- **核心模式：** Together AI 發布開源工具 Hurdle，用於測試 Claude Code、Codex 等 coding agent 的表現，供開發者評估或 benchmark 自己的 agent 工作流穩定性。
+- **與既有模式的關係：** 補上「可靠性測試」一個「具名業者發布通用 agent 測試工具」取向——既有代表技巧多是個人作者單點量測，本則為已知 AI 業者發布的通用測試工具；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 原始互動數為 0，惟 eWeek 等至少 2 個獨立來源同日報導，非單一轉載；工具具體測試方法與涵蓋範圍未見報導（細節未載）。
+- **來源：** Google News／eWeek；[報導連結](https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQUJZcXotbDFFTGtSWFZOMzFVcGRqNElqaER6cHVvSWR4blpBNmduSlV5UXUwd2VXY0tLUUVfbjF3MWVNVUhlNjVTZldTYVRSeXdMaE5WWlNjRjRvTC1YQURaYU5mclZzWWFMZ0dNZXVGQm9NYmpYR3owd2pabmhkZTI1RlBYeGd3?oc=5)
+- **成熟度：** ⏳ 新興（本庫首次收錄，業者剛發布，尚無採用回饋數據）
 
 #### 同日 3 款 Claude Code 周邊工具／skill 市集同步衝上 GitHub 搜尋榜：cc-thingz、aiskillstore、skills-for-copilot-studio（2026-11-26）
 

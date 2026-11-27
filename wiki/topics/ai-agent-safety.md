@@ -3,10 +3,10 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-26"
+last_updated: "2026-11-27"
 last_news_update: "2026-11-12"
 status_main: "ongoing"
-days_since_news: 14
+days_since_news: 15
 parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-agent-safety-cyber', 'topics/ai-agent-safety-product-vulns', 'topics/ai-agent-safety-prompt-injection', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-26
+**最後更新：** 2026-11-27
 **最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-26）
-> **沙盒陷阱測試追加細節＋提示注入新載體**：Anthropic 逾 1,700 個陷阱測試好壞兼具，見 [[topics/ai-agent-safety-cyber#2026-11]]；Notion 官方 MCP 夾帶隱藏推銷指令，見 [[topics/ai-agent-safety-prompt-injection#2026-11]]。
+> **最新動態**（2026-11-27）
+> **Gmail MCP 改寫信件連結夾帶 Google 追蹤參數**：GitHub Issue 回報一天內累積 29 則留言，官方尚未回應，見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 ---
 
 ## 摘要

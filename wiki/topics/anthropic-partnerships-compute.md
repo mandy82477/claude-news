@@ -3,17 +3,17 @@ page: "topics/anthropic-partnerships-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-22"
-last_news_update: "2026-11-22"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 0
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 4
+days_since_news_subtree: 0
 inbound_links: 34
-attribution_count: 33
-attribution_last: "2026-11-22"
+attribution_count: 34
+attribution_last: "2026-11-27"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -31,11 +31,11 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-22
-**最後新聞更新：** 2026-11-22
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 
-> **最新動態**（2026-11-22）
-> - **第三方推算：Anthropic 2028 年用電組合約 87% 天然氣、11% 燃煤**（BetterDataCenterProject／HN 543 分，非官方數字）
+> **最新動態**（2026-11-27）
+> - **JERA 洽談在自家發電廠旁為 Anthropic 等 AI 業者建資料中心**，規模與時程未見報導（Nikkei Asia）
 
 ---
 
@@ -125,6 +125,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 **其餘合作（新的在上）** — 未列入上表者每筆一行：
 
+- **JERA**（2026-11-26）：日本電力公司 JERA 計畫在旗下發電廠附近為 Anthropic 等 AI 業者興建資料中心，規模與時程未見報導（Google News/Nikkei Asia）
 - **Tessera**（2026-11-17）：Business Wire 報導 Tessera 把 Linked Billing 接上 Claude Platform，為官方 beta 公開測試後首個具名落地的企業合作方；規模與條款未見報導（Google News/Business Wire）
 - **Infor**（2026-11-18）：Techzine Global 報導企業軟體商 Infor 把 Claude 整合進製造業 ERP 系統，整合細節未附（Google News/Techzine Global）
 - **TSMC**（2026-11-11）：WSJ 標題稱台積電核准最高 10 億美元投資計畫，對象為 Anthropic 與 OpenAI；分配與條件未見（Google News/WSJ）
@@ -300,6 +301,9 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-26
+- **[算力] Nikkei Asia：日本電力公司 JERA 計畫在自家發電廠附近為 Anthropic 等 AI 業者興建資料中心**：規模與時程未見報導，詳見「其餘合作」清單（Google News/Nikkei Asia）
 
 #### 2026-11-22
 - **[算力] BetterDataCenterProject／HN（543 分）：推算 Anthropic 2028 年用電組合約 87% 天然氣、11% 燃煤**：BYOP（自建電力）趨勢分析報告的單篇估算，非官方數字，具體計算方法未見轉載（Hacker News）

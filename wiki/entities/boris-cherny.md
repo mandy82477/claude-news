@@ -4,21 +4,21 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-08"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "active"
-days_since_news: 18
+days_since_news: 0
 parent: null
 children: "['entities/boris-cherny-archive']"
 page_role: "hub"
-days_since_news_subtree: 18
-inbound_links: 32
-attribution_count: 12
-attribution_last: "2026-11-08"
+days_since_news_subtree: 0
+inbound_links: 37
+attribution_count: 13
+attribution_last: "2026-11-27"
 top_source: "google-news"
-pending_count: 3
+pending_count: 5
 pending_overdue: 0
-pending_next_review: "2026-12-14"
+pending_next_review: "2026-12-11"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -34,12 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 工程產品
 **為何追蹤：** Claude Code 設計理念與工程實務最主要的公開發言來源
 **首次出現：** 2026-04-23（事後報告發布）
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 
-> **最新動態**（2026-11-08）
-> - **辭職傳聞**：10-26 單一來源標題稱「Claude Code 創作者正式辭職」，2026-11-14 查證官方與本人均未見離職說法，仍視為現任。
-> - **AI 責任論述**：TechRadar 該則的發言人經搜尋摘要為 Anthropic 工程師 [[entities/addy-osmani]]，與本頁人物無關，已移出本頁。
+> **最新動態**（2026-11-27）
+> 36Kr 刊出對「Claude Code 核心負責人」的專訪，談 vibe coding 接下來走向；受訪者姓名未見報導，待查證是否為本人（標記見下）。
 
 > 🔎 **查無官方**（標 2026-10-26｜查 Boris Cherny、eu.36kr.com、正式辭職｜複 2026-12-14）｜**辭職傳聞**（2026-11-14 查證）：Google News／eu.36kr.com 標題稱「Claude Code 創作者正式辭職」；anthropic.com 新聞室與本人公開發文均未見離職說法，不作為已確認事實，本頁維持「現任」。
 
@@ -47,12 +46,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**截至 2026-10-26**，Google News 轉載 eu.36kr.com 標題稱 Claude Code 創作者正式辭職；單一來源、無正文可用；2026-11-14 查證未見官方說法，標記見下。此前最近一次公開發言為 10-09 CTech 報導其提示工程心法——清楚說出需求、交給 AI 自行判斷，延續 10-07 Business Insider／Times of India「視 Claude 為同事」主張；技巧細節均未載，僅標題可用。
+**2026-11-27**，Google News 轉載 36Kr 報導稱其刊出對「Claude Code 核心負責人」的專訪，談 vibe coding 接下來走向；受訪者具體姓名未見報導，候選含本人與已轉任 OpenAI 的 [[entities/cat-wu|Cat Wu]]，標記見下。此前最近一次公開發言為 10-09 CTech 報導其提示工程心法——清楚說出需求、交給 AI 自行判斷，延續 10-07 Business Insider／Times of India「視 Claude 為同事」主張；技巧細節均未載，僅標題可用。
+
+❓ **待查證**（標 2026-11-27｜查 36Kr、vibe coding｜複 2026-12-11）｜**36Kr 專訪「Claude Code 核心負責人」談 vibe coding 未來**（2026-11-27 報導）：受訪者具體姓名未見報導；候選除本人外，另見 [[entities/cat-wu|Cat Wu]]（已轉任 OpenAI，可能性較低）；待具名來源出現再收斂歸屬。
 
 🔎 **查無官方**（標 2026-10-26｜查 Boris Cherny｜複 2026-12-14）｜**Google News／eu.36kr.com 標題稱 Claude Code 創作者正式辭職**（2026-10-26 報導，2026-11-14 查證）：Anthropic 官方新聞室、本人公開發文均未見離職說法；WebSearch 摘要稱同日 36 氪轉載的是新智元一篇 Claude Code 桌面版負責人 Anthony Morris 離職文章，標題所指未必是本人（原文因站外連線受限未能開啟，此說尚無佐證）；Latent Space 人物頁仍列其為 Head of Claude Code（[Latent Space](https://latent.space/wiki/boris-cherny/)）。無官方或當事人說法前，不寫成已離職。
-
-截至 2026-11-14，原列於本頁候選的 TechRadar「AI 寫程式仍須人類負責、技能不練會流失」論述，經搜尋摘要確認發言人為 Anthropic 工程師 [[entities/addy-osmani]]（TechRadar 原文因站外連線受限未能開啟），不是本頁人物，候選已撤。
-
 
 Boris Cherny 是 Anthropic Claude Code 的打造者與負責人（Head of Claude Code），也是產品方向最主要的公開代言人；其高頻率的公開聲明與工程分享長期引發開發者社群討論，被視為 Anthropic 技術文化的外部窗口。
 
@@ -199,6 +197,7 @@ Boris Cherny 的公開言論呈現兩種截然不同的社群反應：
 
 ## 歷史記錄
 
+- 2026-11-27：❓ **待查證**（標 2026-11-27｜查 36Kr、vibe coding｜複 2026-12-11）｜36Kr 專訪「Claude Code 核心負責人」談 vibe coding 未來；候選含本人與 [[entities/cat-wu|Cat Wu]]（Google News／36Kr，2026-11-27）
 - 2026-11-08：TechRadar 報導 Anthropic 工程師主張 AI 寫程式仍須人類負責、過度依賴流失技能；2026-11-14 經搜尋摘要確認發言人為 [[entities/addy-osmani]]，與本頁人物無關（TechRadar，2026-11-07）
 - 2026-10-26：🔎 **查無官方**（標 2026-10-26｜查 Boris Cherny、eu.36kr.com、正式辭職｜複 2026-12-14）｜**創作者辭職標題**：eu.36kr.com 標題稱創作者正式辭職；單一來源，官方與本人未見說法（Google News / eu.36kr.com，2026-10-26）
 - 2026-10-09：CTech 報導其提示工程心法「清楚說出想要什麼、交給 AI 自行判斷」，延續 10-07 BI／ToI「視 Claude 為同事」主張；原文僅標題可用（Google News / CTech，2026-10-09）

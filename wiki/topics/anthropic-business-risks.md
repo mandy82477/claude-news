@@ -3,17 +3,17 @@ page: "topics/anthropic-business-risks"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-24"
-last_news_update: "2026-11-24"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 21
-attribution_count: 23
-attribution_last: "2026-11-24"
+attribution_count: 26
+attribution_last: "2026-11-27"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
@@ -31,11 +31,12 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-24
-**最後新聞更新：** 2026-11-24
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 
-> **最新動態**（2026-11-24）
-> Microsoft CEO Satya Nadella 公開承認 VS Code 近半年因 Claude Code 崛起使用率下滑，部分開發者已不再打開 VS Code——對手自陳的開發者端 PMF 證據（Google News/Adafruit）。
+> **最新動態**（2026-11-27）
+> - **商業模式**：Anthropic、OpenAI 加快把工程師駐點客戶端，因應 AI 支出信心動搖（Barron's）
+> - **商業模式**：Claude 協助把 API 改寫 Rust，單次請求 CPU 用量降 70%，MIXED News 稱有助壓低服務成本（MIXED News／TradingKey）
 
 ---
 
@@ -173,6 +174,10 @@ Anthropic 的收入來自兩條軌道。原定 2026-06-15 生效的程式化用�
 
 **2026-11-23 新增：GitHub Issue 以 216 則留言要求印度盧比（INR）計價方案，點名 Claude 與 Claude Code**：[issue #17432](https://github.com/anthropics/claude-code/issues/17432) 比照 OpenAI、Google 已有的印度在地化方案，是今日留言數最高的一條（216 則留言、648 個 👍）。Pro 方案 2026-07-13 起已有印度盧比定價（Rs 2,000／月，見 [[entities/pricing#當前生效的計費規則]]），但該則訴求明確點名 Claude Code，顯示 Claude Code 使用者仍以美元計價換匯，官方尚未回應（來源：[GitHub Issues/claude-code](https://github.com/anthropics/claude-code/issues/17432)，2026-11-23）。對商業的意涵：印度市場在地化定價覆蓋不到 Claude Code，是尚未被滿足的需求訊號（推論）。
 
+**2026-11-27 新增：Claude 協助把 Messaging API 改寫為 Rust，單次請求 CPU 用量降 70%**：MIXED News 報導 Anthropic 稱此由 Claude 協助完成；同日 TradingKey 報導稱此舉有助壓低 Claude 服務成本，並預測股價可能進一步上看 $94（見 [[topics/anthropic-ipo#誰說撐不住：唱空與質疑]] 股價走勢）；具體生效範圍、是否已全面上線未見報導，僅標題可用（Google News/MIXED News；Google News/TradingKey）。對商業的意涵：若成本結構改善屬實，可能緩解近期利潤率與算力支出壓力的質疑（推論）。
+
+**2026-11-27 新增：Barron's 稱 Anthropic 與 OpenAI 加快把工程師派駐客戶端協助落地，因應市場對 AI 支出信心動搖**：報導稱兩家公司都在加速把工程師送到企業客戶現場協助導入，視為因應買氣疑慮的銷售策略；具體駐點規模、客戶名單未見報導，僅標題可用（Google News/Barron's）。
+
 **資料使用政策（官方既有規則，2026-10-27 經 Hacker News 100 分重新聚焦）**：官方隱私文件載明，Claude for Work、Anthropic API 等商業方案預設不用輸入輸出訓練模型，但使用者透過 👍👎 按鈕主動回報意見或另外選擇同意時，當次對話與程式開發過程可能被納入訓練。常用意見回饋按鈕的商業方案團隊可留意這點（[官方說明](https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training)；Hacker News）。
 
 > 更多計費細節見 [[entities/pricing]]
@@ -231,6 +236,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-27
+- **[商業模式] MIXED News／TradingKey：Claude 協助把 Messaging API 改寫為 Rust，單次請求 CPU 用量降 70%，TradingKey 稱有助壓低成本**：詳見「商業模式」段新增說明（Google News/MIXED News；Google News/TradingKey）
+- **[商業模式] Barron's：Anthropic 與 OpenAI 加快把工程師派駐客戶端協助落地，因應市場對 AI 支出信心動搖**：詳見「商業模式」段新增說明（Google News/Barron's）
 
 #### 2026-11-24
 - **[商業模式] Adafruit：Microsoft CEO Nadella 承認 VS Code 近半年因 Claude Code 崛起使用率下滑**：部分開發者已不再打開 VS Code，詳見 [[topics/anthropic-business-risks#產品市場契合度（PMF）觀察]]（Google News/Adafruit）

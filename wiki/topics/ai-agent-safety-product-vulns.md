@@ -3,19 +3,19 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-25"
-last_news_update: "2026-11-25"
+last_updated: "2026-11-27"
+last_news_update: "2026-11-27"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 25
-attribution_count: 72
-attribution_last: "2026-11-25"
+attribution_count: 73
+attribution_last: "2026-11-27"
 top_source: "google-news"
-pending_count: 25
+pending_count: 26
 pending_overdue: 2
 pending_next_review: "2026-11-30"
 pending_signalled: 2
@@ -31,13 +31,13 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-25
-**最後新聞更新：** 2026-11-25
+**最後更新：** 2026-11-27
+**最後新聞更新：** 2026-11-27
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-25）
-> **settings.local.json 密鑰外洩事件再被提及**（GitGuardian Blog，無新數字；官方已於 v2.1.323 修補，詳見[[topics/ai-agent-safety-product-vulns#GBHackers News／The Hacker News／CyberSecurityNews／Cyber Press：Claude Code「是，並不要再問」選項外洩密碼與 API 金鑰至公開 GitHub 倉庫（2026-11-07 新增）|本頁密鑰外洩段]]）。前次：**廣告冒充擴及 Mac**（2026-11-23）：Hackread 揭露假 Codex／Claude Code 下載頁的惡意 Google 廣告鎖定 Mac 用戶；下載前先核對官方網域，不點搜尋廣告連結。
+> **GitHub Issue：Gmail MCP 改寫信件連結夾帶 Google 追蹤參數**（2026-11-27）
+> 回報稱 Gmail MCP 會把信件裡的連結改寫成帶追蹤參數的網址，一天內累積 29 則留言；官方尚未回應。
 ---
 
 ## 摘要
@@ -85,6 +85,15 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### GitHub Issues／claude-code：Gmail MCP 將信件連結改寫成帶 Google 追蹤參數網址（2026-11-27 新增）
+
+- **揭露來源**：GitHub Issues／claude-code #66010（11/27 02:14 UTC）；累積 29 則留言、15 個讚
+- **核心主張**：回報稱 Gmail MCP 會把信件內文裡的連結改寫成帶 Google 追蹤參數的網址；具體觸發條件、受影響範圍與官方是否承認均未見報導
+- **性質判斷（推論）**：若屬實，屬 agent 在使用者未要求下對信件內容做出額外修改；與既有「agent 自己越界」類事件性質相近，惟本則是 Claude 官方 Gmail MCP 整合本身的行為
+- **你能先做什麼**：把 Gmail MCP 接進工作流、在意信件連結隱私的人，目前仍需手動核對轉寄或引用的連結
+- **可信度評估**：GitHub Issue 原始回報，24 小時內累積 29 則留言、15 個讚，惟官方尚未在 issue 中回應或排入修補
+- ❓ **待查證**（標 2026-11-27｜查 66010、tracking URL｜複 2026-12-11）｜**觸發機制與官方修補狀態**：僅回報內容可用，觸發條件、受影響版本範圍與官方回應均未見報導
 
 #### Hackread：惡意 Google 廣告鎖定 Mac 用戶，偽冒 Codex 與 Claude Code 下載頁散布惡意程式（2026-11-23 新增，升級既有 2026-05-10 條目）
 
