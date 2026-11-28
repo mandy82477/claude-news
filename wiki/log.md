@@ -9754,7 +9754,7 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 懸置語法 WARN：**無**（`check_pending_markers` 完整報告狀態 ✅，無語意反轉殘留、無探針偵測力退化；逾期 ⚠️ 44 筆已由 5c 全數清零）
 - 熱度降溫（5a）：檢查 **29 條**（🔥🔥 以上全覽），降 **2 條**——Code Review（GitHub App）GA 🔥🔥→🔥、Claude Cowork 與 Chat 合併＋Docs／Slides 🔥🔥→🔥；同步 entities 頁 **2 處**（`claude-docs`、`claude-slides` 社群熱度 🔥🔥→🔥）。⏳ 逾期：**10 條**，處置（升 **0**／降 **0**／加註 **2**：SendFeedback 工具、Model Hardware Standard；已加註跳過 8）。Claude Code 通道現值：stable **2.1.326**、latest **2.1.332**（npm dist-tags，查證 2026-11-28）
 - 高引用停滯（5g）：**4 頁** → 收尾 **3 頁**。處置：派記者確認 **0**／改引用方連結 **0**／主編親做更新停滯查核日 **3**（`entities/sonnet-5` 入鏈 20、61 天；`entities/haiku-5-5` 17、50 天；`entities/claude-security` 16、36 天——三頁皆已有「自 YYYY-MM-DD 起無新動態」句，依規則只更新句中查核日）／**宣告新鮮度豁免 1**（`topics/community-tech-patterns-archive`，入鏈 25、151 天）。確認無誤留原狀 **0**
-- 渲染層驗收：見下方「本輪渲染層驗收」行（步驟 10 的 3b）
+- 渲染層驗收：雲端無瀏覽器，改讀 build 產物。查本輪改動最多的 2 頁——`web_reader/data/wiki/community-tech-tools.json`（68,245 字元）與 `web_reader/data/wiki/anthropic-business-archive.json`（78,661 字元）。探針全部命中：tools 頁的本輪新增條目（`legend-of-alan/ghostmode`、`gflow-cli`）、新標的「（原文已失效）」、5c 新開的「懸置細節」區都在產物中；archive 頁 6l 改寫後的指路語（「列見」「Meta 列見」）也在。兩頁 `%%` 維運備忘皆已被建置剝除（產物中零出現）。`[[…]]` 在產物中保留屬正常——資料層不展開 wikilink，由 `web_reader/assets/app.js` 的 `parseWikilink()` 於渲染時處理，已拿本輪未大改的 `model-comparison.json` 對照確認同樣保留。未發現段落被解析器吞掉
 - overview.md：已更新
 - 規則版本：`b2e990b8`
 - 漏抓帳：本輪 `misses add` **2 筆**——
