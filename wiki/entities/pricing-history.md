@@ -73,7 +73,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 #### 2026-11-12：API 定價頁新增自架版 Managed Agents 定價說明——不公開，洽客戶團隊
 
 - **Official Docs 異動（diff 偵測）**：[API 模型定價](https://platform.claude.com/docs/en/about-claude/pricing) 字數 30,550→30,638，新增 1 段：自架版 Claude Managed Agents 的定價請洽 Anthropic 客戶團隊。
-- **背景**：同日 Help Net Security、Unite.AI 標題稱 Anthropic 讓客戶自架 Managed Agents，agent 憑證留在客戶環境（僅標題）；自架版沒有公開牌價；既有 $0.08／session-hour 是否適用未載（見 [[entities/pricing#當前生效的計費規則]]）。
+- **背景**：同日官方宣布客戶可自架 Managed Agents（private beta，經客戶團隊申請，[官方說明](https://claude.com/resources/articles/self-hosted-claude-managed-agents)，2026-11-28 查證）；自架版沒有公開牌價；既有 $0.08／session-hour 是否適用未載（見 [[entities/pricing#當前生效的計費規則]]）。
 
 #### 2026-11-11：usage credits 說明頁再改版——新增「Refunds」節，購買一律不可退款；「Monthly API credits」段落被移除
 

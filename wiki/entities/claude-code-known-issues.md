@@ -12,12 +12,12 @@ parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 23
+inbound_links: 25
 attribution_count: 117
 attribution_last: "2026-11-27"
 top_source: "github-issues"
-pending_count: 21
-pending_overdue: 1
+pending_count: 20
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 1
 staleness_exempt: null
@@ -151,7 +151,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - Bedrock 20 MB（故媒體稱「Bedrock 的 6.4 倍」與 128/20 吻合），Anthropic 營運的 AWS／Google Cloud／Foundry 為 32 MB。
     - 媒體（FourWeekMBA、Startup Fortune，2026-10-30）所稱「由 32 MB 升至 128 MB」的升級時點官方文件未載（來源：[API overview](https://platform.claude.com/docs/en/api/overview)，查證 2026-11-21）
 
-### 🧠 行為與品質（88 條未修復、3 條已修復、1 條拒修、9 條查無官方、1 條❓）
+### 🧠 行為與品質（89 條未修復、3 條已修復、1 條拒修、9 條查無官方）
 
 - 🔴 **未修復**｜**透過 Task tool 啟動的 sub-agent 回報 Write／Edit／MultiEdit 建立檔案成功，檔案實際未寫入檔案系統（GitHub issue #4462，累積 41 則留言、31 個讚，2026-11-27）**：靠 sub-agent 代寫檔案的人，動手前宜自行核對檔案是否真的存在；官方尚未回應。
 - 🔴 **未修復**｜**700 行 CLAUDE.md 規則契約被整套忽視：9 個捏造理由、過期狀態當現狀、驗收步驟被跳過（issue #90542，29 留言，Opus 5，2026-11-24）**：與 #2544（規則不具強制力）同類但記錄單次具體失效模式；官方尚未回應。
@@ -232,7 +232,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字（關聯已關閉的 issue #44829）（GitHub issue #63903，累積 48 則留言，首見 2026-07-23，2026-11-23 留言數更新）**：使用者回報將 `autoMemoryEnabled` 設為 `false` 後，系統確實不再嘗試寫入 auto-memory，但寫死的記憶體前導文字（memory preamble，約 11,000–16,000 token）仍未被抑制，設定未如預期完全生效；回報標題註明與先前已關閉的 issue #44829 相關；官方尚未回應。
 - 🔴 **未修復**｜**session 無法得知 auto-memory 索引完整載入、截斷還是未載入（issue #82056，51 則留言，08-28 首見，09-18 更新）**：出錯時使用者與 Claude 皆無從察覺記憶失真；與 #63903（停用未生效）不同面，暫分列；官方未回應。
 - 🔴 **未修復**｜**功能請求：`MEMORY.md` 自動記憶壓縮提醒門檻應可設定（GitHub issue #91188，累積 60 則留言，2026-09-08 首見，2026-10-30 互動數更新）**：使用者呼籲將壓縮提醒門檻改為可設定（或至少可個別關閉），現行為寫死固定值；與既有 auto-memory 成熟度缺口（#63903、#82056）同屬不同面向，暫分列；官方尚未回應。
-- ❓ **待查證**（標 2026-11-13｜查 109446）｜**社群指控官方無預警移除某項 Claude Code 功能**（Hacker News＋GitHub issue #109446，2026-11-13，HN 26 分）：留言稱此類無預警修改在 Claude Code 與 Kiro 已成常態；被移除的功能名稱與影響範圍未見報導。
+- 🔴 **未修復**｜**v2.1.323 移除 `subagentStatusLine`，無替代（[issue #109446](https://github.com/anthropics/claude-code/issues/109446)，15 則留言，11-28 查證仍 open）**：子代理列只剩預設外觀，原自訂的成本／模型顯示消失且啟動無警告；使用者回報 2.1.326 起恢復並提示棄用。
 - 🔴 **未修復**｜**「The model's tool call could not be parsed (retry also failed)」間歇性中斷 session（issue #63875，累積 77 則留言、116 個讚，2026-11-13 互動數更新；issue #62123，累積 63 則留言、113 個讚，皆 2026-07-13 回報，屬同一 bug 兩則獨立高互動回報，合併追蹤）**：session 進行中間歇性中斷並顯示「The model's tool call could not be parsed (retry also failed)」錯誤；issue #62123 回報者指出在 Opus 4.7 環境下多次發生；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效（GitHub issue #36168，2026-07-12 回報，regression）**：使用者回報 v2.1.77 之後的所有 Claude Code 版本，`--dangerously-skip-permissions`（跳過權限確認旗標）皆無法正常運作，影響依賴此旗標進行無人值守自動化的工作流；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**回應超過 32000 output token 上限觸發 API 錯誤（GitHub issue #24055，累積 137 則留言、85 個讚，2026-07-11）**：多名使用者回報回應長度超過 32000 output token 上限時觸發「API Error: Claude's response exceeded the 32000 output token maximum」；官方尚未回應。
@@ -545,10 +545,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Haiku 5.5 錯誤率升高（2026-11-24 17:09–17:27 UTC，約 18 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/fbvlx4wx4zx5)
 - 🔴 **未修復（調查中）**｜**Claude for M365 外掛在部分個人帳號 Mac 版 Excel／Word／PowerPoint 消失（2026-11-24 更新，調查中）**：個人 Microsoft 帳號登入、用這三款軟體的人可能遇到外掛消失；官方尚未給修復時程。另見 [#111275](https://github.com/anthropics/claude-code/issues/111275)（27 留言，疑似與桌面版／Cowork session 衝突）。[來源](https://status.claude.com/incidents/3vbyqgnswwxq)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：多個模型錯誤率升高（2026-11-23 09:39–09:56 UTC，約 17 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/yzs0s90d8fm8)
-- ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Mythos 5.2、Claude Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-19 08:56–09:11 UTC，約 15 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/c1kmrkmv5f3d)
+- ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude [[entities/mythos|Mythos 5.2]]、Claude Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-19 08:56–09:11 UTC，約 15 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/c1kmrkmv5f3d)
 - ✅ **已修復**｜**Anthropic Status：Google Docs connector 編輯文件錯誤，影響 claude.ai／Code／Cowork（11-17 16:19 PT 起，11-18 已解決）**：這段時間編輯文件失敗即屬此次事故，現已恢復。[來源](https://status.claude.com/incidents/6prv10gjdpz1)
 - 🔴 **未修復（已識別原因，修復中）**｜**Anthropic Status：部分使用者無法透過 Apple 帳號登入 claude.ai 與 Claude iOS App（2026-11-17 18:55 UTC 起調查，18:56 UTC 已識別原因）**：其他登入方式與既有 session 不受影響。[來源](https://status.claude.com/incidents/1lglzf469c0z)
-- ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Sonnet 5.5、Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-16 07:32–09:04 UTC，約 1.5 小時）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/r1b4f9bbnsx1)
+- ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude [[entities/sonnet-5-5|Sonnet 5.5]]、Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-16 07:32–09:04 UTC，約 1.5 小時）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/r1b4f9bbnsx1)
 - 🔴 **未修復（部分功能持續受影響）**｜**Anthropic Status：Claude Meetings（beta）部分通話仍無法加入，Auto-join 持續暫停（2026-11-16 18:10 UTC 更新）**：已在進行中的通話與其他 Claude 功能不受影響；排會議依賴 Auto-join 的使用者這幾天宜先改手動加入。[來源](https://status.claude.com/incidents/b5cq662qf2wm)
 - 🔴 **未修復（調查中）**｜**Anthropic Status：部分使用者無法在 Claude iOS App 用「使用 Apple 登入」註冊新帳號，主要影響新帳號（2026-11-14 07:11 UTC 起調查中）**：官方建議這段時間改用 Google 或 email 註冊。[來源](https://status.claude.com/incidents/ct4c2pwf2xpj)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：claude.ai／Claude API／Claude Code 錯誤升高，與 Microsoft 365 故障同時發生（2026-11-13，約 10:18 UTC 登記、15:38 UTC 解決）**：對應 HN 討論串 440 分；依賴 API 的自動化留意重試。[來源](https://status.claude.com/incidents/34wq7gxnxvvm)

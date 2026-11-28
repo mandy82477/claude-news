@@ -16,8 +16,8 @@ attribution_count: 41
 attribution_last: "2026-11-21"
 top_source: "github"
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-12-26"
 pending_signalled: 0
 staleness_exempt: null
 signal: "孤島"
@@ -479,7 +479,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **成熟度：** ⏳ 新興（今日首見，OAuth 使用風險尚待社群後續驗證）
 
 **懸置細節**
-- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-11-24）：複查（2026-10-24）原始 Reddit 貼文仍未能取得（reddit.com 網域對本工具封鎖擷取）。
+- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-12-26）：複查（2026-10-24、2026-11-28）原始 Reddit 貼文仍未能取得（reddit.com 網域對本工具封鎖擷取）；官方文件無對應說明。
   - 補充查得官方確有自動快照機制：[Checkpointing 文件](https://code.claude.com/docs/en/checkpointing)載明每次送出提示前自動快照檔案、`/rewind` 可還原至任一檢查點。
   - 但無法比對原貼文所指是否即為此機制。
 

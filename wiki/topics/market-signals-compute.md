@@ -3,7 +3,7 @@ page: "topics/market-signals-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-25"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-25"
 status_main: "ongoing"
 days_since_news: 3
@@ -11,12 +11,12 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 3
-inbound_links: 5
+inbound_links: 6
 attribution_count: 7
 attribution_last: "2026-11-22"
 top_source: "google-news"
 pending_count: 17
-pending_overdue: 4
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 3
 staleness_exempt: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-09-16
-**最後更新：** 2026-11-25
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-25
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：晶片商循環融資、Nscale 等 9 條線 14 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
@@ -42,7 +42,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > - **Anthropic 官方：Messages API 從 Python 改寫為 Rust，CPU 消耗降 70%**：硬度從 10-29 單一媒體轉述升級為官方公告。
 >
 > 前一輪（2026-11-11）：
-> - **The Information：Anthropic 揭露與 Microsoft、Google 新增逾 100 億美元合約，與 Lambda 的交易可能取消**：標題同時有增有減，淨額未知；僅標題可用。
+> - **The Information：Anthropic 揭露與 Microsoft、Google 新增逾 100 億美元合約，與 Lambda 的交易可能取消**：標題同時有增有減，淨額未知；僅標題可用（11-28 查：媒體稱引 S-1/A，Lambda 為「可終止、公司無意終止」而非已取消，見里程碑）。
 
 ---
 
@@ -50,7 +50,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **事實與數字**：住 [[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]]、[[topics/anthropic-business-risks]]，本頁只寫判讀。
 - **錢從三條路來**：晶片商與銀行安排的融資（Broadcom 630 億、Blackstone 雙位數殖利率私募信貸）、算力夥伴合約（Nscale、Akamai、SpaceX、TeraWulf）、S-1 揭露逾 5,000 億的雲端承諾。
-- **多數只有標題**：15 則裡多數硬度是單一標題或跨媒體轉述，方向多判兩面或未定；10-29 銀行延後出售德州資料中心債券（原標題讀為撤回，11-14 查證更正）是第一個實際受挫的訊號；評等面（KBRA 非投資級最高一檔、Blackstone 預期上市後 BB 級）在 [[topics/market-signals-ipo]]。
+- **多數只有標題**：15 則裡多數硬度是單一標題或跨媒體轉述，方向多判兩面或未定；評等面（KBRA 非投資級最高一檔、Blackstone 預期上市後 BB 級）在 [[topics/market-signals-ipo]]。
+  - **兩則「標題讀錯方向」的更正**：10-29 銀行延後出售德州資料中心債券（原標題讀為撤回，11-14 查證更正）；Lambda 的 11-10 修訂 S-1 措辭是「可終止、公司無意終止」而非已取消（2026-11-28 查證）。
 - **下一個會讓答案變清楚的事**：630 億融資定價發行、Nvidia 信用支持的條件、TeraWulf 擔保金額揭露。
 - 一眼、結算與里程碑的記號怎麼讀見 [[topics/market-signals#近期判讀]]；你買得到的標的見 [[topics/market-signals#買得到的標的]]。
 
@@ -364,8 +365,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 判讀日 | 線 | 當時判斷 | 催化劑（結算日） | 兩週後 | 對錯 |
 |---|---|---|---|---|---|
 | 2026-11-25 | 內部重建降低運算成本 | 官方證實 CPU 消耗降 70% 📈（第 2 則） | 降本是否反映進下一份財報毛利率數字、量測口徑是否公開（12-09） | ⏳ | ⏳ |
-| 2026-11-11 | 雲端供應鏈承諾總額 | MSFT／GOOGL 對手方 ⚖️（第 3 則） | 下一版 S-1/A 或招股書的承諾總額與 Lambda 列是否改動、新增合約金額是否披露（11-25） | ⏳ | ⏳ |
-| 2026-11-08 | 燃氣發電採購 | 無（交易對手未具名）⚖️（開線） | 發電業者身分、合約期限與是否計入下一版 S-1/A 承諾總額是否披露（11-22） | ⏳ | ⏳ |
+| 2026-11-11 | 雲端供應鏈承諾總額 | MSFT／GOOGL 對手方 ⚖️（第 3 則） | 下一版 S-1/A 或招股書的承諾總額與 Lambda 列是否改動、新增合約金額是否披露（11-25） | 出現（2026-11-10 修訂 S-1，媒體稱 Lambda 約 $34.9B 可終止非已取消、MSFT／GOOGL 合計新增約 $10B）｜MSFT ↓ −4.8%、GOOGL ↓ −6.9%| ❌（判未定，實際兩檔皆明顯下行）|
+| 2026-11-08 | 燃氣發電採購 | 無（交易對手未具名）⚖️（開線） | 發電業者身分、合約期限與是否計入下一版 S-1/A 承諾總額是否披露（11-22） | 未出現（2026-11-22 查證：結算日前日報零後續；11-27 另有 Nikkei 稱日本 JERA 計畫在自家發電廠旁為 Anthropic 等業者建資料中心，已逾結算日不計入本列）| ～ 仍懸 |
 | 2026-11-05 | TeraWulf 肯塔基資料中心融資 | WULF 違約情境換股風險 〰（第 2 則） | 擔保啟動條件、股權比例與觸發門檻是否經官方證實披露（11-19） | 未出現（2026-11-21）｜WULF 方向不可驗證｜❓ 待查證 ⟨Q-01⟩ | —（不可驗證：兩組公開報價互相矛盾） |
 | 2026-11-04 | TeraWulf 肯塔基資料中心融資 | WULF 新增標的 〰（開線） | 擔保金額與條件是否經官方證實披露（11-18） | 未出現（2026-11-21）｜WULF 方向不可驗證｜❓ 待查證 ⟨Q-02⟩ | —（不可驗證：兩組公開報價互相矛盾） |
 | 2026-11-02 | 雲端供應鏈承諾總額 | 本體不可買；AVGO／AMZN／GOOGL 間接關聯 📉（第 2 則） | 8,950 億美元口徑與先前總表關係是否經官方拆解（11-16） | 未出現（2026-11-21）：8,950 億美元口徑與先前總表的關係未見官方或具名媒體說明 | ～ 仍懸 |
@@ -397,7 +398,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 追蹤中的里程碑
 
 - ❓ **待查證**（標 2026-11-25｜查 Messages API、Rust｜複 2026-12-09）｜**Messages API 改寫為 Rust 降低 CPU 消耗 70% 是否反映進下一份財報的毛利率數字；量測口徑是否公開**：官方部落格僅公告降幅本身，財報佐證與量測方法均未見官方進一步說明。
-- ❓ **待查證**（標 2026-11-11｜查 Lambda、新增合約、承諾總額｜複 2026-11-25）｜**新增 Microsoft、Google 逾 100 億美元合約的金額與期限，以及 Lambda 交易是否取消**：The Information 報導僅標題可用，合約內容、取消條件與對 8,950 億美元總額的淨影響均未見報導。
+- 🔎 **查無官方**（標 2026-11-11｜查 Lambda、新增合約、承諾總額｜複 2026-12-26）｜**新增 Microsoft、Google 逾 100 億美元合約的金額與期限，以及 Lambda 交易是否取消**：The Information 報導僅標題可用，合約內容與對 8,950 億美元總額的淨影響均未見官方說法。
+  - 2026-11-28 查：anthropic.com 無相關官方稿；11-10 第二次修訂 S-1 原文（sec.gov）本環境連不上，未核對。
+  - 媒體稱（[FourWeekMBA](https://fourweekmba.com/ai-anthropics-34-9b-lambda-compute-deal-is-now-terminable/)、[Crypto Briefing](https://cryptobriefing.com/anthropic-lambda-compute-deal-terminable-lease/)，引該 S-1/A）：Lambda 約 349 億美元（$34.9B）的 08 月協議因 Lambda 未在期限內取得資料中心租約，雙方皆可終止；
+  - 截至招股書日無人送出終止通知，公司稱目前無意終止——是「可終止」而非「已取消」；Microsoft、Google 合計新增承諾約 100 億美元（$10B）。各報對兩家承諾總額口徑不一，不採用、不互相加總。
 - 🔎 **查無官方**（標 2026-11-08｜查 gas-fired、天然氣發電｜複 2026-12-22）｜**燃氣發電採購合約的發電業者身分、合約期限與是否計入下一版 S-1/A 承諾總額是否經官方披露**：官方 S-1 僅概述部分資料中心採專屬天然氣發電，未載本案；anthropic.com/news 無相關貼文（2026-11-22 查）。
   - 媒體稱（FT，[Fortune 11-10](https://fortune.com/2026/11/10/anthropic-3-4-billion-deal-gas-data-centers-ai-ipo/) 轉述，2026-11-22 查證）：賣方是德州設備商 OnePWR Solutions，不是發電業者；Anthropic 接手其向 Caterpillar 訂的燃氣發電機組，約 34 億美元、1.7GW，含工程與施工，預計兩年內到位。
   - 合約期限未載；是否計入 S-1 的總承諾額 Fortune 亦未說明。
@@ -419,9 +423,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 2026-11-21 查官方 [anthropic.com/news](https://www.anthropic.com/news) 至 11-20 貼文，無 Zero-Rust 或此項降本的公告，亦未見公司把它與毛利率掛鉤。
   - 媒體稱 CPU 降 40～50% 源自公司人員的 Podcast 訪談（10 月下旬）、非已發表量測，各報對是否為生產流量量測口徑不一，亦未見獨立驗證。
   - 毛利率二手數字各家口徑不同（約 44～60% 不等），均未把此項降本列為原因；S-1／S-1/A 原文本輪環境無法連 sec.gov、未讀，故不宣稱 S-1 無此說。
-- ❓ **待查證**（標 2026-10-27｜查 630 億美元、Blackstone｜複 2026-11-28）｜**630 億美元融資是否完成定價發行，Blackstone 具體利率與規模拆分是否披露**：路透社報導僅標題可用，補查見下方。
+- 🔎 **查無官方**（標 2026-10-27｜查 630 億美元、Blackstone｜複 2026-12-26）｜**630 億美元融資是否完成定價發行，Blackstone 具體利率與規模拆分是否披露**：路透社報導僅標題可用，補查見下方。
   - 2026-11-14 WebSearch 補：媒體稱（Reuters 10-26）Bank of America、Citi、Morgan Stanley 安排第一順位債務（約 $435 億、約 69%，官方稿未拆分），Blackstone 為第二順位承諾部分唯一提供者，由新設 SPV 購晶片租給 Anthropic。
   - 定價發行、利率與承銷團名單仍未見報導。
+  - 2026-11-28 再查：anthropic.com 無相關官方稿；媒體稱（Reuters 10-26，Khaleej Times、Finimize 等轉載）由新設 SPV 購買 Broadcom 晶片與網通設備租給 Anthropic，租金還款、晶片為擔保，預計 2027 年起部署；Broadcom 提供殘值支持（金額各報不同，約等於第一順位金額或最高約 430 億美元）；
+  - 先前 Bloomberg 報的 600 億美元被 630 億取代（單一消息來源）。第一順位約 435 億美元（約 69%）拆分、租賃利率與發行完成均未見獨立佐證。
 - **Anthropic 與 Nscale 第二筆算力合作：官方已載行使權利與 60 天磋商期，簽署與金額未載**（2026-11-22 查證）：
   - Nscale [S-1/A](https://www.sec.gov/Archives/edgar/data/2110365/000119312526458722/ck0002110365-20261112.htm)（11-12）載：08-25 簽 Anthropic GPU 服務協議，合計最多約 $446 億；Anthropic 09-29 行使第二棟（Building 2）權利，雙方有 60 天（可延長）善意磋商，破局則 Nscale 可另售；第三棟須第二棟簽署後 15 個工作日內行使。
   - 約 450 億美元為媒體稱（Bloomberg 10-19 起，[TNW](https://thenextweb.com/news/nscale-and-anthropic-reportedly-in-talks-over-second-45bn-deal) 轉述），S-1/A 未載第二棟金額；1,030 億為 Nscale 全部客戶總額，非 Anthropic 單筆。
@@ -432,9 +438,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - Anthropic 官方 [Higher usage limits and a SpaceX compute deal](https://www.anthropic.com/news/higher-limits-spacex)（2026-05-06）載使用 SpaceX Colossus 1 全部容量（逾 300MW、逾 22 萬顆 NVIDIA GPU），[Series H 公告](https://www.anthropic.com/news/series-h)列入 Colossus 1／2 的 GPU 容量協議。
     - 媒體稱（Business Insider 引 Anthropic 發言人、SpaceX IPO 文件）每月約 12.5 億美元、至 2029-05，任一方可提前 90 天終止。
     - WSJ 稱 Tom Brown 運用共和黨人脈促成，為 WSJ 單一說法，未獲第二家佐證。
-- ❓ **待查證**（標 2026-10-02｜查 Broadcom、debt financing、600億｜複 2026-11-28｜訊 2026-10-06）｜**Broadcom 600 億美元融資是否完成定價發行**：依 2026-10-06 日報（FT）：銀行已正式 launch（辛迪加階段）；10-07 至 10-25 日報無定價後續，承銷團與利率仍未見。本輪未查官方。
+- ❓ **待查證**（標 2026-10-02｜查 Broadcom、debt financing、600億｜複 2026-12-26｜訊 2026-10-27）｜**Broadcom 600 億美元融資是否完成定價發行**：依 2026-10-06 日報（FT）：銀行已正式 launch（辛迪加階段）；
+  - 依 2026-10-27 日報（Reuters）：規模改報 630 億美元（銀行與 Blackstone 安排），定價發行問題由上方「630 億美元融資」標記接續；10-07 至 10-25 與 10-28 後日報均無定價後續，承銷團與利率仍未見。本條依日報收斂，未查官方（官方查詢見 630 億標記）。
   - 2026-11-14：10-26／27 日報（Reuters）續報銀行與 Blackstone 安排 630 億美元融資供 Anthropic 向 Broadcom 採購晶片，事實層記為較 600 億的更新（見 [[topics/anthropic-partnerships-compute]]），仍未見定價發行。
-- ❓ **待查證**（標 2026-10-01｜查 Broadcom、晶片租賃、循環投資｜複 2026-11-28｜訊 2026-10-11）｜**Broadcom 貸款 Anthropic 420 億美元是否正式簽署**：Reuters 獨家取得文件稱「考慮」貸款；依 2026-10-11 日報，Barchart 把該案框成「420 億美元貸款」，屬單一媒體解讀。
+- ❓ **待查證**（標 2026-10-01｜查 Broadcom、晶片租賃、循環投資｜複 2026-12-26｜訊 2026-10-27）｜**Broadcom 貸款 Anthropic 420 億美元是否正式簽署**：Reuters 獨家取得文件稱「考慮」貸款；依 2026-10-11 日報，Barchart 把該案框成「420 億美元貸款」，屬單一媒體解讀；
+  - 依 2026-10-27 日報（Reuters），後續改為銀行與 Blackstone 安排 630 億美元融資，Broadcom 直接貸款 420 億美元的結構是否保留日報未載，簽署仍未見報導。本條依日報收斂，未查官方。
   - 2026-11-14 WebSearch 補：媒體稱（依文件的報導）Broadcom 同意提供最高 $420 億貸款；10-26 起銀行與 Blackstone 的 630 億美元融資改由新設 SPV 購買 Broadcom 晶片與網通設備再租給 Anthropic。
   - 簽署、條款與利率仍未見報導，且口徑與 10-02 的 600 億融資不同；本輪未查官方。
 - ❓ **待查證**（標 2026-09-25｜查 Akamai、10-Q、營收指引｜複 2026-12-05）｜**Akamai 是否在下一份財報／10-Q 揭露此合約的營收認列時程或反映進全年指引**

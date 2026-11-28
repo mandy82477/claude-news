@@ -3,7 +3,7 @@ page: "topics/community-creative-tools"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-26"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-26"
 status_main: "ongoing"
 days_since_news: 2
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-integrations]]
 **開始日期：** 2026-07-23
-**最後更新：** 2026-11-26
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-26
 
 > **創意工具添雲端影片／圖片生成：gflow-cli 接 Google Flow 直接出 Veo 3.1 與 Nano Banana**（2026-11-26）
@@ -48,6 +48,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 目前結論
 
 - **影片是最熱的一類**：十一月新節點以影片剪輯與生成工具為主（openmotion、ChatCut、ghost-editor、Kino AI 等），取向從「生成」延伸到「人機共用同一條時間軸」。
+- **輸出從素材延伸到整款遊戲與雲端生成**：2026-11-25 歸藏 Game Skill 讓 agent 從零產出可玩的瀏覽器 3D 遊戲、同日 open-3d-skills 收 8 個 three.js 動畫 skill；11-26 gflow-cli 讓 agent 直接呼叫 Google Flow 出 Veo 3.1 影片與圖片（955 星、近 2 天星速偏高，疑似批次效應）。
 - **3D 與遊戲引擎已三大引擎齊備**：Godot（GodotMaker）、Unity（unity-mcp-server）、Unreal（Epic 官方 skills）；Blender 生態最擠，也最常見疑似刷星的重複發布。
 - **採用證據仍薄**：全部節點皆為首次收錄、單一作者為主，未見採用回饋；看星數前先查帳號歷史與連結是否仍有效。
 - **你的選項：** 想讓 agent 碰創作軟體，先找該軟體官方或最多實作的那一款，再看它是 MCP 還是 skill 形態、會載入多少工具定義進 context。
@@ -91,7 +92,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心模式：** 與兩個月內另兩次同名同描述的 Blender MCP 外掛（hitkeeen 11-16、LiCinCan 10-18，原連結皆已失效）相同，本次由第三個帳號 bookwjitchieni1986 發布；近 2 天新增約 1,871 星，累積 2,075 星。
 - **與既有模式的關係：** 不計入「創意工具 Agent 整合」代表技巧——同一描述換帳號重發兩次後連結皆已失效，本次第三度出現星速異常，佐證為重複假帳號衝星數，非新做法；主線填 —。
 - **可信度註記：** ❓ **待查證**（標 2026-11-21｜查 blender-ai-mcp-addon、bookwjitchieni1986）｜**是否為重複假帳號衝星數手法**：星速偵測收錄（近 2 天 +1,871 星，約 936 星/日），無 forks／issues／近期 commit 佐證可查，待下一輪連結健檢確認是否重演。
-- **來源：** GitHub Search；[GitHub](https://github.com/bookwjitchieni1986/blender-ai-mcp-addon)
+- **來源：** GitHub Search；[GitHub](https://github.com/bookwjitchieni1986/blender-ai-mcp-addon)**（原文已失效）**
 - **成熟度：** ⏳ 新興（本庫首次收錄，同名專案第三度換帳號出現，疑似假星數手法，尚無第三方採用或複現數據）
 
 #### nexu-io/openmotion：開源 Claude Motion／CapCut 替代品，全端 agentic 影片工作室支援 22 款 agent（2026-11-19）

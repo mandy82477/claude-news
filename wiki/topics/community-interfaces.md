@@ -3,7 +3,7 @@ page: "topics/community-interfaces"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-25"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-25"
 status_main: "ongoing"
 days_since_news: 3
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-25
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-25
 
 > **介面元件複用新增 15 主題色回覆外觀 mod**（2026-11-25）
@@ -50,6 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **手機遠端**：官方已可遠端控制；社群五個以上實作各走一路，還沒有收斂，傳輸層有 bot、web-app、P2P 加密（ds-harness-remote，11-05）、反向隧道（cc-desk-tunnel，11-13）、自架 Tailscale 網路（fardesk，11-17）；星數最高的是 t3code（58,093 星）。
   - **接下來看什麼：** 有沒有人比較官方與社群做法在離線、通知、多 session 上的差別。
 - **介面與可視化**：各自單一實作居多，還在試；十一月新增兩個方向：並行 session 用等待佇列管理（Aq，11-12）與跨 repo 架構圖外掛的單人實測（Floorplan、Archify、Understand Anything，11-06，單一專案、單一實測者）；2026-10-09 起有人讓 agent 直接在桌面螢幕疊加箭頭與文字，社群同時示警繪圖層可能遮蔽權限彈窗，尚無開發者回應。
+- **介面元件複用**：2026-11-25 prismantis 把回覆的表格、程式碼、圖表與工具列逐一換成 15 種主題色並加複製按鈕（502 星、與同日四款倉庫同時點衝榜，疑似批次快照效應，不當採用證據）。
 - **你的選項：** 要從手機看進度先開官方遠端控制；要多 agent 總覽看 tools 頁「一堆 agent 在跑，看不到誰卡住」那一列。
 
 ---

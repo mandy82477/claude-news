@@ -3,7 +3,7 @@ page: "topics/anthropic-partnerships-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-27"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-27"
 status_main: "ongoing"
 days_since_news: 1
@@ -31,7 +31,7 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-27
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-27
 
 > **最新動態**（2026-11-27）
@@ -72,7 +72,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 | Broadcom | 貸款租賃晶片：最高 $420 億（10-01）；華爾街銀行＋Blackstone 安排 $630 億融資（10-26，較 10-02 的 $600 億更新） | 規模已確認，條款未見 | 目前無可見後果。下一個觸發點：條款或交付時程 |
 | Akamai | $116 億 7 年 CPU 算力，另有報導稱 $120 億（09-25） | 已簽，含認股權證約 770 萬股 | 目前無可見後果 |
 | Fluidstack | $500 億算力建置案，結構與時程未見（09-07） | 報導稱主導建置，簽署未載（僅標題） | 目前無可見後果 |
-| Nvidia（經 Lambda） | Lambda 簽 $350 億雲端運算合約；Hut 8 同額案推論為同一筆（09-01） | 已簽；11-10 The Information 標題稱可能取消（僅標題） | 目前無可見後果；循環融資質疑屬評論 |
+| Nvidia（經 Lambda） | Lambda 簽 $350 億雲端運算合約；Hut 8 同額案推論為同一筆（09-01） | 已簽；11-10 修訂 S-1 媒體稱「可終止、公司無意終止」（11-28，見 [[topics/market-signals-compute]]） | 目前無可見後果；循環融資質疑屬評論 |
 | Volta | 六年 $100 億，算力在挪威 Tydal（08-04） | 已簽 | 目前無可見後果 |
 | Riot Platforms | $90 億 20 年雲端運算協議（08-11） | 已簽 | 目前無可見後果 |
 | TeraWulf | $190 億 20 年肯塔基州園區租約（07-06）；Google 信用擔保支應該計畫，違約時 Google 可能取得 TeraWulf 股權，機制細節未見（11-05） | 已簽；新增 Google 信用擔保（含違約股權條款） | 目前無可見後果。下一個觸發點：擔保啟動條件揭露 |
@@ -112,10 +112,11 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 | Amazon Bedrock | 走 Bedrock 拿不到 50% Batch 折扣；compaction／context editing／task budgets 都不可用；首爾／新加坡新增境內推論；新增 structured outputs 支援 | 第一方 API 與訂閱席次不受影響 | 2026-10-20 |
 | Claude Platform on AWS | 組織固定在 Start 層不自動升級，月花費上限 $500，提額要聯繫客戶代表 | 費率仍是 Anthropic 標準價 | 2026-09-03 |
 | Google Cloud／Vertex AI | 新增走 GCP 帳單／帳戶權限的 Anthropic 代管 API 路線，處理器與功能選擇不同於標準 Vertex（MIXED News／OpenTools，10-26，單一來源各一）| 費率仍由 Google 自訂，第一方牌價不變 | 2026-10-26 |
-| AWS（模型上線） | Claude Fable 5.1 已在 AWS 平台可用 | 不改價 | 2026-09-02 |
 | Microsoft（Foundry／Copilot） | 走 CCU 後付，折扣以「同一筆用量換算出較少 CCU」呈現；Copilot 內的 Claude 模型資料處理新增納入歐盟資料邊界（EU Data Boundary） | 費率仍是 Anthropic 標準價 | 2026-11-05 |
 
 **通路的完整對照（誰營運、誰定價、計費單位）見 [[entities/pricing#通路：誰定價、怎麼開票]]，乘數見 [[entities/pricing#乘數：會互相疊乘]]。**
+
+**AWS 上的模型上線（Claude Fable 5.1 已可用，2026-09-02）本輪讓位到下方「其餘合作」清單**——它只影響可用性、不改價，且最後動態最舊。
 
 **這張表講的是 API 通路。** 訂閱席次（Claude Code、Team、Enterprise）不走上面這幾條通路，雲端合作不改變席次價格或可用性；席次現在包含什麼見 [[entities/pricing#我的方案現在有什麼]]。
 
@@ -124,12 +125,13 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 **資本支出的量級（本頁計算，2026-08-29）：** Nscale 單筆 450 億美元（08-28）是多年期合約總額、年期未見，不能拿去跟一年的營收（年化 650 億）直接相比；同月另有 AMD、Nvidia 兩筆算力布局、13 億美元私募信貸（08-19）與 Bastrop County 洽租（08-25）。循環融資質疑見 [[topics/anthropic-business-risks#還沒過去的風險]] 細節區。
 
 **其餘合作（新的在上）** — 未列入上表者每筆一行：
+- **AWS（模型上線）**（2026-09-02）：Claude Fable 5.1 已在 AWS 平台可用，不改價（本輪自上表讓位）%% 未列入合作表：表滿載，2026-11-28；留表優先序＝影響價格 ＞ 功能可用性 ＞ 資料落地，本列僅影響可用性且最後動態最舊 %%
 
 - **JERA**（2026-11-26）：日本電力公司 JERA 計畫在旗下發電廠附近為 Anthropic 等 AI 業者興建資料中心，規模與時程未見報導（Google News/Nikkei Asia）
 - **Tessera**（2026-11-17）：Business Wire 報導 Tessera 把 Linked Billing 接上 Claude Platform，為官方 beta 公開測試後首個具名落地的企業合作方；規模與條款未見報導（Google News/Business Wire）
 - **Infor**（2026-11-18）：Techzine Global 報導企業軟體商 Infor 把 Claude 整合進製造業 ERP 系統，整合細節未附（Google News/Techzine Global）
 - **TSMC**（2026-11-11）：WSJ 標題稱台積電核准最高 10 億美元投資計畫，對象為 Anthropic 與 OpenAI；分配與條件未見（Google News/WSJ）
-- **Microsoft、Google（新增合約）**（2026-11-10）：The Information 標題稱 Anthropic 揭露與兩家新增逾 100 億美元合約，並稱與 Lambda 的交易可能取消；合約內容未見（Google News/The Information）
+- **Microsoft、Google（新增合約）**（2026-11-10）：The Information 標題稱 Anthropic 揭露與兩家新增逾 100 億美元合約，並稱與 Lambda 的交易可能取消；合約內容未見官方，媒體稱引 S-1/A：Lambda 為「可終止、公司無意終止」，非已取消（2026-11-28；Google News/The Information）
 - **Stifel**（2026-11-10）：ThinkAdvisor 標題稱 Stifel 與 Anthropic 合作，把 Claude 帶給旗下理財顧問；規模與上線時程未見（Google News/ThinkAdvisor）
 - **IBM／Cisco（Mythos 5.2 導入計畫）**（2026-11-09）：IBM 宣布計畫將 Mythos 5.2 導入 Concert 平台做資安推理，Cisco AI Defense 同日宣布計畫用於紅隊測試；兩者均停在「宣布計畫」階段，未附具體上線時程（Google News/IBM；Google News/Cisco Blogs）。
   - Mythos 在資安面的用途與管控見 [[topics/ai-agent-safety-cyber#目前結論]]。

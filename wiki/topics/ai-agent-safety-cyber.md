@@ -11,12 +11,12 @@ parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 11
+inbound_links: 12
 attribution_count: 25
 attribution_last: "2026-11-26"
 top_source: "google-news"
-pending_count: 24
-pending_overdue: 5
+pending_count: 21
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 1
 staleness_exempt: null
@@ -186,15 +186,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張**：回報者稱已通過 CVP 核准，但在 claude.ai（非 Claude Code）開新對話問完全無害、非資安的問題仍被擋
 - **與既有敘事的關係**：與 #84352（Claude Code 端，201 則留言，08-12 起未解）同屬「通過審核仍被擋」；本則是 claude.ai 端首見，兩者是否同一機制未載。CVP 層級見「## 防守方能申請什麼」
 - **可信度評估**：使用者自述的單一 issue，官方回應與可重現情境未載；Claude Code 功能面見 [[entities/claude-code-features]]
-- ❓ **待查證**（標 2026-11-12｜查 #61889、CVP approved｜複 2026-11-26）｜**claude.ai 端誤擋是否已被官方確認**：issue 狀態與官方回覆未見報導
+- 🔎 **查無官方**（標 2026-11-12｜查 #61889、CVP approved｜複 2026-12-26）｜**claude.ai 端誤擋是否已被官方確認**：2026-11-28 實查 [#61889](https://github.com/anthropics/claude-code/issues/61889)，無維護者回覆
+  - 05-23 開立，44 則留言全為使用者；09-12 由 github-actions 以 inactive 自動關閉（`not_planned`，標籤 invalid／stale），11-12 自動鎖定
+  - 官方未確認 claude.ai 端誤擋，亦未見修復說明
 
 #### CyberSecurityNews：Claude Code 找到把模型休眠神經元變成隱藏惡意程式觸發器的技術（2026-11-11 新增）
 
 - **揭露來源**：Google News／CyberSecurityNews（11/11 11:57 UTC），互動 0，僅標題可用
-- **核心主張（僅標題可用）**：標題稱 Claude Code 找到一種把模型中休眠神經元變成隱藏惡意程式觸發器的技術；屬 Anthropic 研究、第三方用 Claude Code 做的示範，或對 Claude 自身的發現，標題未載
+- **核心主張（僅標題可用）**：標題稱 Claude Code 找到一種把模型中休眠神經元變成隱藏惡意程式觸發器的技術；2026-11-28 查實屬微軟研究、Claude Code 為發現工具（見下方查證），非對 Claude 自身的發現
 - **性質判斷**：（推論）屬模型後門類能力，觸發器在模型內部而非代理讀進來的內容，與提示注入不同；歸「能力」面向，不列入母頁「現在還擋不住的攻擊」
-- **可信度評估**：單一來源、原料無可讀內文，不改變既有結論
-- ❓ **待查證**（標 2026-11-11｜查 Dormant Model Neurons、Malware Triggers｜複 2026-11-25）｜**研究主體與對象模型**：標題未載研究團隊、受測模型與是否公開論文，是否涉及 Claude 自身權重未見報導
+- **可信度評估**：CyberSecurityNews 單一來源、原料無可讀內文，已由微軟官方文補強（見下方查證），不改變既有結論
+- **官方一手查證（2026-11-28）**：標題對應 [Microsoft Threat Intelligence 文](https://www.microsoft.com/en-us/security/blog/2026/11/10/detecting-sleeper-agents-hiding-in-ai-model-neurons/)（11-10）與論文 [arXiv 2611.15118](https://arxiv.org/abs/2611.15118)
+  - 研究主體是微軟；Claude Code（Opus 4.5）是發現工具，文稱其自主發現多數威脅
+  - 改寫少於 10 個休眠神經元即可把能力足夠的 agent 模型變成睡眠後門，需有權重檔寫入權限
+  - 文中未點名受測模型、未稱 Claude 權重被改；結論：第三方用 Claude Code 做出的發現，非 Claude 自身漏洞
 
 #### VulnCheck：Project Glasswing 啟動七個月，可歸因 Anthropic 的 CVE 達 442 筆，僅 2 筆在野利用（2026-11-10 新增，升級 [[topics/ai-agent-safety-product-vulns#2026-09]] 09-22 條目）
 
@@ -210,7 +215,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張（僅標題可用）**：The Hacker News 稱 Fable 5.2 在多階段網路攻擊基準測試中勝過 GPT-6 Cyber；Help Net Security 稱 Mythos 5.2 找漏洞的能力更強、跳出沙箱的行為較少。測試方、分數、基準名稱，以及「跳出沙箱」減少的比較對象與幅度，兩則標題均未載
 - **性質判斷**：屬「能力」面向的第三方量測與官方模型更新轉述，非濫用事件；模型發布本身見 [[entities/mythos]]，沙箱越界的評測事故見 [[topics/ai-eval-boundary-incidents]]
 - **可信度評估**：兩則均單一來源、僅標題層級；是否為官方發布文件所載或第三方獨立量測，未見說明
-- ❓ **待查證**（標 2026-11-10｜查 GPT-6 Cyber、Fable 5.2｜複 2026-11-24）｜**基準測試方與分數、沙箱行為改善幅度**：標題未載測試方、具體分數與比較基準，是否有官方 system card 對應數字均未見報導
+- **官方一手查證（2026-11-28）**：[Anthropic 發布文](https://www.anthropic.com/claude-fable-and-mythos-5-2)（11-09）稱 Fable 與 Mythos 為同一底層模型，Fable 加防護對所有人開放，Mythos 限驗證組織
+  - 網攻基準官方表名 CyScenarioBench（未用「多階段」字樣，是否同一基準為推論）：Mythos 5.2 無防護 76.3%、Mythos 5.1 61.7%、Opus 5.5 67.6%
+  - 表列 GPT-6 Cyber 61%，註腳稱各家基於各自任務，不可直接互比；The Hacker News 標題寫 Fable 5.2，官方表列的是 Mythos 5.2 無防護分數
+  - CVE Rediscovery（2026-10，1,829 筆 CVE）：Mythos 5.2 找到的漏洞比 Opus 5.5 多 10.2%、比 Mythos 5.1 多 14.4%
+  - 沙箱：刻意留弱點的 1,800+ 情境中，Mythos 5.2 使用沙箱外憑證或檔案占 3.1%（Opus 5.5 3.3%、Mythos 5.1 21%、Mythos 5 39%）
+  - 官方並稱逃逸嘗試少於任何受測模型；system card 本文本輪未開
 
 #### IBM／Cisco Blogs：IBM Concert 導入 Claude Mythos 做資安推理，Cisco AI Defense 同日宣布用於 AI 紅隊測試（2026-11-09 新增）
 
@@ -219,7 +229,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **性質判斷**：屬「防守方」陣營採用官方網攻能力做防禦／測試用途；模型層能力與 Mythos 5.2 發布本身見 [[entities/mythos]]，企業採用面見 [[topics/anthropic-business]]
 - **可信度評估**：兩則均為企業官方公告經 Google News 轉載，互動 0，僅標題層級可用，兩案均未附上線時程
 - **2026-11-11 更新（再報導）**：Network World（11/11 12:12 UTC）以〈Cisco boosts its AI Defense platform with Anthropic’s Claude Mythos〉再報導，無可讀內文，仍無上線時程
-- ❓ **待查證**（標 2026-11-09｜查 Concert、Cisco AI Defense｜複 2026-11-23）｜**上線時程與技術整合細節**：兩家公告均只稱「計畫」，整合方式、上線時間與是否已有實際部署均未見報導
+- 🔎 **查無官方**（標 2026-11-09｜查 Concert、Cisco AI Defense｜複 2026-12-26）｜**上線時程**：2026-11-28 查官方，IBM、Cisco 均只稱計畫，均未載上線日期
+  - [IBM 公告](https://www.ibm.com/new/announcements/ibm-plans-to-bring-anthropic-s-claude-mythos-cyber-reasoning-into-ibm-concert)：把 Mythos 程式碼掃描導入 Concert Protect，走「掃描、證明可利用、修補」，修補搭配 Red Hat Lightwell
+  - [Cisco 部落格](https://blogs.cisco.com/?p=499874)：AI Defense 紅隊測試框架將加入 Mythos 推理，只對已登記授權目標運作，客戶不直接接觸模型，「即將」限特定企業提供
 
 #### Moneycontrol／MediaNama：CERT-In 取得 Claude Mythos 存取權測試資安漏洞，同日專訪談 AI agent 事故通報義務與提示注入歸責（2026-11-04 新增）
 
@@ -262,7 +274,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **可信度評估**：官方一手來源＋HN；The Hacker News／CyberSecurityNews 同日跟進均為標題層級轉述，報導僅標題層級；廠商修補狀態見下方 11-14 官方查證
 - **CSO Online 跟進（2026-10-30）**：指出 5 條攻擊鏈其中一條命中 Linux kernel，可讓攻擊者取得遠端 root 權限；僅標題可用，CVE 編號與受影響版本未附
 - **修補與發布狀態**（2026-11-14 查 [Anthropic 研究文](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)）：Chrome 62 個 CVE 於 Chrome 156 前修補，Apple 已修 Safari，Google 已處理 Android，Microsoft 已修 Windows（CVE-2026-33096），Linux 上游修補並回補穩定分支；該模型只稱「未發布的內部研究模型」。
-  - ❓ **待查證**（標 2026-11-14｜查 discovering-vulnerabilities-with-claude、CVE-2026-33096｜複 2026-11-28）｜**該模型是否公開發布**：2026-11-14 查研究文未載；已掃日報至 2026-11-20 無後續；官方頁面未查證
+  - **是否公開發布**（2026-11-28 重讀[官方研究文](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)，文章 2026-10-27）：官方稱為「未發布的內部研究模型」，通篇未提公開發布；文中 Windows 項對應 CVE-2026-33096（Windows 核心 QUIC 實作越界讀取、遠端 DoS，Microsoft 已修補並編號）
 
 #### Reddit／r/ClaudeCode：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護（2026-10-27 新增，單一使用者回報）
 

@@ -17,8 +17,8 @@ inbound_links: 40
 attribution_count: 13
 attribution_last: "2026-11-12"
 top_source: "github"
-pending_count: 2
-pending_overdue: 2
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-11-12
 
 > **最新動態**（2026-11-12）
-> ❓ **待查證**（標 2026-11-12｜查 Self-hosted Managed Agents、agent credentials）｜**客戶自架 Managed Agents**：Help Net Security 與 Unite.AI 標題稱 Anthropic 讓客戶自架，agent 憑證留在客戶環境；原料無內文，方案、狀態、與既有自架沙箱的關係皆未載。
+> **客戶自架 Managed Agents 進入 private beta**：整套服務（harness、sandbox、憑證、session 歷史）可跑在客戶自己的雲或機房，客戶營運 Managed Agents 伺服器、資料庫與執行 shell／檔案工具的 worker；憑證由 sandbox 外的 proxy 附加到 MCP 工具與支援的 API 請求，也可存在客戶自己的 secrets manager；模型請求可直連 Anthropic、走 Bedrock／Google／Foundry 或客戶 gateway。透過 Anthropic 客戶團隊申請，未公開牌價（[官方說明](https://claude.com/resources/articles/self-hosted-claude-managed-agents)（2026-11-12 發布，2026-11-28 查證））。
 >
 > 10-23：
 > 官方查證 Proactive Workflows 底層已改稱 scheduled tasks（原 Routines）；社群出現負向對照——Show HN Omnara（98 分，4 個來源同日報導）自稱是開源替代方案，證據等級僅單一自述＋互動數字，尚無第三方測試數據。
@@ -139,7 +139,7 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 
 | 日期 | 事件 |
 |------|------|
-| 2026-11-12 | 兩家媒體報導客戶可自架（僅標題）；❓ **待查證**（標 2026-11-12｜查 Self-hosted Managed Agents、agent credentials）｜**與既有自架沙箱的關係**|
+| 2026-11-12 | 官方宣布完整自架 Managed Agents（private beta）：自架範圍從先前的自架沙箱擴及 harness、憑證與 session 歷史（[官方說明](https://claude.com/resources/articles/self-hosted-claude-managed-agents)（2026-11-12 發布，2026-11-28 查證））|
 | 2026-10-23 | 官方查證：Routines 已改名 scheduled tasks，狀態仍為研究預覽；routines 僅留於網址、別名、API 路徑（[來源](https://code.claude.com/docs/en/routines)） |
 | 2026-10-15 | **anthropic-sdk-python v1.14.0** 新增 Managed Agents 的 `execution_identity`，用法未載（TS vertex-sdk v0.21.0 同步，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0)）|
 | 2026-10-09 | **anthropic-sdk-python v1.13.0** 新增 Managed Agents 的 workflows、多代理設定與 thread 過濾型別，用法未載（TS SDK 同步，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.13.0)）|

@@ -3,7 +3,7 @@ page: "topics/community-tech-patterns-archive"
 kind: "topic"
 status: "resolved（封存頁）"
 domain: "🌐 社群"
-last_updated: "2026-11-22"
+last_updated: "2026-11-28"
 last_news_update: "2026-06-30"
 status_main: "resolved"
 days_since_news: 151
@@ -16,11 +16,11 @@ attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 5
-pending_overdue: 4
+pending_overdue: 0
 pending_next_review: "2026-12-14"
 pending_signalled: 1
-staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+staleness_exempt: "本頁是封存頁（`status: resolved`），收的是主頁搬離的原始條目與已結束時段的流水帳——它的維護動作是「接收搬離的條目」，不是「追新聞」，所以「最後新聞更新」永遠停在最後一批被搬入條目的日期，不代表漏更新。要看社群模式的現況去 [[topics/community-tech-patterns]]。"
+signal: "🗓️ 非新聞驅動"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
@@ -30,10 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-22
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-06-30
 
 > 本頁保存 [[topics/community-tech-patterns]] 被搬離主頁的原始條目，以及 2026-04-25～05-22 的社群時序流水帳（舊時序頁 [[topics/community-tech-timeline]] 已併回此處）。條目一字不刪，只是搬離主頁讓主頁讀得動。
+
+**新鮮度豁免：** 本頁是封存頁（`status: resolved`），收的是主頁搬離的原始條目與已結束時段的流水帳——它的維護動作是「接收搬離的條目」，不是「追新聞」，所以「最後新聞更新」永遠停在最後一批被搬入條目的日期，不代表漏更新。要看社群模式的現況去 [[topics/community-tech-patterns]]。
 
 ---
 
@@ -187,7 +189,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **成熟度：** ⏳ 新興（單一實作案例，硬體門檻使複製率偏低，但機制簡單可推廣至其他通知媒介如 Home Assistant／智慧燈泡 API）
 
 **懸置細節**
-- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-11-24）：複查（2026-10-24）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果。
+- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-12-26）：複查（2026-10-24）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果；複查（2026-11-28）官方僅載有 Claude Certified Architect 認證存在（[Claude Partner Network 認證](https://claude.com/resources/articles/four-role-based-claude-certifications)），未見貼文所述「12 種」說法的對應說明。
   - 僅查得背景資訊：Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」。
   - 12 條具體錯誤內容仍無法查證。
 - ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-12-14｜訊 2026-08-15）：原始文章已定位（2026-11-14 複查：08-15 日報確認指向同一篇，dev.to 在本輪連線範圍外、四種模式逐條內文仍未核對
@@ -838,7 +840,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 保留「最近 N 輪」原始內容以維持短期連貫性，更早的歷史則壓縮
 - **解決的問題：** 傳統 agent loop 設計將全量 transcript 傳遞，隨輪數增加 token 成本呈平方增長；大型多輪任務中成本不可控
 - **與既有模式的關係：** 呼應 Context Rot 修復五法中的「壓縮歷史」策略；比 /compact 指令更系統化，可程式化控制壓縮時機與粒度
-- **注意事項：** 摘要過於激進可能造成語意失真，需設計摘要品質驗證機制；🔎 **查無官方**（標 2026-08-10｜查 compact memory、context token｜複 2026-11-24）｜**大規模驗證**：已查證（2026-08-13，複查 2026-10-24 結論不變）原作者（dev.to/saihmadmin）該篇 benchmark 未見獨立第三方重現或引用，僅查得他人針對同類「agent loop token 呈平方增長」問題的獨立分析（如壓縮排程可省 22.7% token、SWE-bench 情境；本輪另查得該現象已是多方部落格廣泛討論的通用問題，如 Fireworks AI、Augment Code 等文章均獨立描述相同的 O(N²) 上下文累積機制），仍非本篇 benchmark 數字本身的驗證
+- **注意事項：** 摘要過於激進可能造成語意失真，需設計摘要品質驗證機制；🔎 **查無官方**（標 2026-08-10｜查 compact memory、context token｜複 2026-12-26）｜**大規模驗證**：已查證（2026-08-13，複查 2026-10-24、2026-11-28 結論不變，官方無對應說明）原作者（dev.to/saihmadmin）該篇 benchmark 未見獨立第三方重現或引用，僅查得他人針對同類「agent loop token 呈平方增長」問題的獨立分析（如壓縮排程可省 22.7% token、SWE-bench 情境；本輪另查得該現象已是多方部落格廣泛討論的通用問題，如 Fireworks AI、Augment Code 等文章均獨立描述相同的 O(N²) 上下文累積機制），仍非本篇 benchmark 數字本身的驗證
 - **來源：** "The Hidden O(N²) Tax in AI Agent Loops: Measured with a Benchmark You Can Run"（dev.to/saihmadmin，06-23）
 
 #### Hooks 強制執行取代 CLAUDE.md 規則：從建議層到強制層（2026-06-23）
@@ -929,7 +931,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **解決的問題：** 「Claude 越用越笨」現象；3 小時以上任務中途失憶、計劃漂移
 - **適用場景：** 長 session 的 agentic 任務、多工具協同工作流、CI/CD 自動化 agent
 - **注意：** 與 spec-driven development 結合效果更好——先有規格文件，再讓 agent 在精簡 context 下執行（dev.to/kenimo49；Reddit r/ClaudeAI）
-- **大型 Repo 優化（HN 9）：** Git Lazy Mount（github.com/mohsen1/git-lazy-mount）——AI session 按需 fetch 大型 repo，附 sgrep 繞過全量 grep；HN score 9，適用 1GB+ monorepo；🔎 **查無官方**（標 2026-08-10｜查 git-lazy-mount、monorepo｜複 2026-11-24）｜**採用訊號**：已查證（2026-08-13，GitHub API；複查 2026-10-24 結論不變）repo 現況星數 18、forks 2（2026-10-24 GitHub 頁面；較 08-13 的 15 星僅微增 3），規模極小，尚無擴散跡象，news 亦無後續報導。
+- **大型 Repo 優化（HN 9）：** Git Lazy Mount（github.com/mohsen1/git-lazy-mount）——AI session 按需 fetch 大型 repo，附 sgrep 繞過全量 grep；HN score 9，適用 1GB+ monorepo；🔎 **查無官方**（標 2026-08-10｜查 git-lazy-mount、monorepo｜複 2026-12-26）｜**採用訊號**：已查證（2026-08-13，GitHub API；複查 2026-10-24 結論不變；2026-11-28 repo 未授權、無法實查，官方無對應說明）repo 現況星數 18、forks 2（2026-10-24 GitHub 頁面；較 08-13 的 15 星僅微增 3），規模極小，尚無擴散跡象，news 亦無後續報導。
 
 #### Loop Engineering：條件觸發的 Claude 執行設計（2026-06-19，更新 2026-06-20）
 
@@ -1083,7 +1085,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Local stack MCP 整合、39ms 檢索**：開發者分享自建本機持久化記憶層：本地向量資料庫 + MCP 整合，實現 39ms 快速檢索；同時解決每次對話從零開始，以及記憶庫成長後大量消耗 token 的雙重痛點
 - **架構核心原則**：避免將全部記憶注入 context（token 消耗過高），改以語義查詢按需取回相關片段；本機方案同時解決雲端記憶的隱私疑慮，與 Memex 思路相近但強調自建可控性
 - **意義**：是對 Managed Agents Dreaming 官方解法的社群自建補充，在等待官方成熟前已形成可用架構
-- **輕量替代（HN 6）：** Iantha（kiloloop.com/iantha/）——純 Markdown + git 存儲，自動提取時間性任務跨 session 持久保存，無需向量 DB；HN score 6；🔎 **查無官方**（標 2026-08-10｜查 Iantha、kiloloop｜複 2026-11-24）｜**識別準確度**：已查證（2026-08-13，複查 2026-10-24 結論不變，kiloloop.com 本工具無法解析網域、公開搜尋仍無獨立報導——官方頁面 kiloloop.com/iantha/ 本身為純功能／設定說明頁，未提供準確度或第三方評測數據）公開搜尋未能定位該工具的獨立報導或後續討論，識別準確度仍無法查證。
+- **輕量替代（HN 6）：** Iantha（kiloloop.com/iantha/）——純 Markdown + git 存儲，自動提取時間性任務跨 session 持久保存，無需向量 DB；HN score 6；🔎 **查無官方**（標 2026-08-10｜查 Iantha、kiloloop｜複 2026-12-26）｜**識別準確度**：已查證（2026-08-13，複查 2026-10-24、2026-11-28 結論不變，官方無對應說明，kiloloop.com 本工具無法解析網域、公開搜尋仍無獨立報導——官方頁面 kiloloop.com/iantha/ 本身為純功能／設定說明頁，未提供準確度或第三方評測數據）公開搜尋未能定位該工具的獨立報導或後續討論，識別準確度仍無法查證。
 
 
 #### Managed Agents 架構模式（2026-05-07）

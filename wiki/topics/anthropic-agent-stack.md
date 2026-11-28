@@ -40,7 +40,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > **最近變動**（2026-11-17）
 > - **Agent teams 可與 Code Mode 同開**（v2.1.326）：已開啟 teams 的 session 升級後直接以 Code Mode 啟動，Code Mode 為 Claude 改寫 JavaScript 呼叫自己工具的實驗性選項，見 [[feature-radar]]。
 > - **新增積木：Claude Code Projects 改版**——描述目標後自動拆解任務、指派執行、平行協調多工作線，beta，見 [[feature-radar]]。
-> - **Managed Agents 傳出可由客戶自架**：兩家媒體標題稱 Anthropic 讓客戶自架、agent 憑證留在客戶環境；方案、狀態與既有自架沙箱的關係原料均未載，是否屬實仍不明，細節見子頁 [[entities/managed-agents]]。
+> - **Managed Agents 可由客戶自架（private beta）**：官方 2026-11-12 宣布，harness、sandbox、憑證與 session 歷史都在客戶環境，經客戶團隊申請（[官方說明](https://claude.com/resources/articles/self-hosted-claude-managed-agents)，2026-11-28 查證）；細節見子頁 [[entities/managed-agents]]。
 > - **排程觸發官方名稱改為 scheduled tasks**（10-23，原 Routines，仍為研究預覽）：本頁積木名稱不變，查證來源見子頁。
 
 ---

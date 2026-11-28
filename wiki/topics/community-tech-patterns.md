@@ -3,7 +3,7 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-27"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-18"
 status_main: "ongoing"
 days_since_news: 10
@@ -11,7 +11,7 @@ parent: null
 children: "['topics/community-cost', 'topics/community-guardrails', 'topics/community-integrations', 'topics/community-interfaces', 'topics/community-memory', 'topics/community-multi-agent', 'topics/community-skills', 'topics/community-tech-patterns-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 54
+inbound_links: 53
 attribution_count: 272
 attribution_last: "2026-11-16"
 top_source: "github"
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-27
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-18
 
 > **Token / 成本優化添開源 Code Mode 獨立實測；可靠性測試添業者發布的 agent 測試工具**（2026-11-27）
@@ -57,7 +57,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-27 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-27 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、多代理 PR Review、規格驅動開發、架構邊界合約 | 2026-11-18 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦 | Plugin / MCP 整合 | 2026-11-21 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦 | Plugin / MCP 整合 | 2026-11-25 |
 | [[topics/community-creative-tools]] | agent 能不能接進影片剪輯、Blender 3D、遊戲引擎、音效與設計軟體 | 創意工具 Agent 整合 | 2026-11-26 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 | 2026-11-25 |
 
@@ -72,23 +72,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
 | ****Skills 設計**** | oil-oil/draw-ui、codeswithroh/tastemaker、aaitor/skill-video-studio、cc-thingz 等（[[topics/community-skills#2026-11]]） | ✅ 成熟 | 2026-11-26 | description 自動觸發，把書籍與流程封裝成可複用 skill |
-| ****Multi-agent 架構**** | Anthropic Projects、Claude Squad、ccteams、OtoDock、omnigent 等（[[topics/community-multi-agent#2026-11]]） | ✅ 成熟 | 2026-11-14 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| ****Multi-agent 架構**** | Anthropic Projects、Claude Squad、ccteams、OtoDock、omnigent、y5ez3g/facadecode 等（[[topics/community-multi-agent#2026-11]]） | ✅ 成熟 | 2026-11-22 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| ****CLAUDE.md 管理**** | 精簡規則策略、Self-improving Rules、Gauge CLI、規則優先序對照實測等（[[topics/community-skills#2026-11]]） | ✅ 成熟 | 2026-11-21 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | ****Hooks 與自動化**** | PostToolUse 稽核、Git Hooks 品質門、精簡輸出外掛、routines 排程自動化、EricTechPro/super-board 等（[[topics/community-guardrails#2026-11]]） | ✅ 成熟 | 2026-11-12 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| ****CLAUDE.md 管理**** | 精簡規則策略、Self-improving Rules、Gauge CLI 等（[[topics/community-memory#2026-11]]） | ✅ 成熟 | 2026-11-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
+| ****Token / 成本優化**** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、Haiku 5.5 價格閘門、ghostmode（[[topics/community-cost#2026-11]]） | ⚡ 活躍 | 2026-11-27 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
+| ****Plugin / MCP 整合**** | reverse-engineer-marketing、ask-search、pipeboard、hridaya423/phonedriver 等（[[topics/community-integrations#2026-11]]） | ⚡ 活躍 | 2026-11-21 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
+| ****記憶與知識管理**** | claude-mem、projectmem、memory-forge-rs、itechmeat/open-second-brain、avenoxbeyin 等（[[topics/community-memory#2026-11]]） | ⚡ 活躍 | 2026-11-21 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | ****模型使用策略**** | 分層模型、多模型路由、cheap-ag、antigravity-for-claude-code、jev-router、Atticus 等（[[topics/community-cost#2026-11]]） | ⚡ 活躍 | 2026-11-17 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | ****安全架構**** | Grepathy、OneCLI、agent-scan、外部沙盒等（[[topics/community-guardrails#2026-11]]） | ⚡ 活躍 | 2026-11-17 | 把 agent 與憑證、執行環境隔開，並追溯 agent 自己做的決策 |
 | ****多代理 PR Review**** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin、PR 折疊呈現等（[[topics/community-guardrails#2026-11]]） | ⚡ 活躍 | 2026-11-15 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
-| ****Plugin / MCP 整合**** | reverse-engineer-marketing、ask-search、pipeboard 等（[[topics/community-integrations#2026-11]]） | ⚡ 活躍 | 2026-11-14 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
-| ****Token / 成本優化**** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、Haiku 5.5 價格閘門、ghostmode（[[topics/community-cost#2026-11]]） | ⚡ 活躍 | 2026-11-27 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
-| ****記憶與知識管理**** | claude-mem、projectmem、memory-forge-rs、itechmeat/open-second-brain 等（[[topics/community-memory#2026-11]]） | ⚡ 活躍 | 2026-11-07 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | ****Context 管理**** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift、context antipattern 診斷清單等（[[topics/community-memory#2026-11]]） | ⚡ 活躍 | 2026-11-02 | 即時取回優於預先載入；避免 context 過早飽和 |
+| ****可靠性測試**** | canary 失敗證據鏈、requirement failure／test coupling 判讀框架、Hurdle 等（[[topics/community-skills#2026-11]]） | ⏳ 新興 | 2026-11-27 | agent 測試失敗時先分清是需求沒做到、還是測試寫得太綁死實作細節 |
 | ****創意工具 Agent 整合**** | guizang-game-skill、open-3d-skills、blender-skills、gflow-cli 等（[[topics/community-creative-tools#2026-11]]） | ⏳ 新興 | 2026-11-26 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | ****Agent 規模化**** | Anthropic 官方驗證方法論、20-instance 崩潰分析、agent-channels、mobile-agent-testers（[[topics/community-multi-agent#2026-11]]） | ⏳ 新興 | 2026-11-26 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層；官方指出驗證迴圈（測試證據）才是規模化前提 |
 | ****介面元件複用**** | prismantis、Brainless、statuslin.es 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-25 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
-| ****可靠性測試**** | canary 失敗證據鏈、requirement failure／test coupling 判讀框架、Hurdle 等（[[topics/community-skills#2026-11]]） | ⏳ 新興 | 2026-11-27 | agent 測試失敗時先分清是需求沒做到、還是測試寫得太綁死實作細節 |
+| ****規格驅動開發**** | spec-kit、sharptoolbox/ontology-driven-dev、Innei/ryugi、fast-anything（[[topics/community-skills#2026-11]]） | ⏳ 新興 | 2026-11-22 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
+| ****行動裝置遠端控制**** | nanoclaw、fardesk、ccgram、OpenMinis/iCTRL、TixXin/Fuyu 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-21 | 手機當 agent 控制介面，各自選不同傳輸層；10 月起也出現反向（agent 操作手機）取向 |
 | **確定性 Agent 框架** | AFK-surf/Comma、Agentic Orchestrator 混合架構（[[topics/community-multi-agent#2026-11]]） | ⏳ 新興 | 2026-11-19 | 自架、常駐、不設 session 邊界的通用 agent 框架，與把執行迴圈交給託管平台的取向相反 |
-| ****行動裝置遠端控制**** | nanoclaw、fardesk、ccgram、OpenMinis/iCTRL 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-18 | 手機當 agent 控制介面，各自選不同傳輸層；10 月起也出現反向（agent 操作手機）取向 |
-| ****規格驅動開發**** | spec-kit、nick-vels/skills、sharptoolbox/ontology-driven-dev、Innei/ryugi（[[topics/community-guardrails#2026-11]]） | ⏳ 新興 | 2026-11-15 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | ****Agent 活動可視化**** | claude-office、agent-office、MioIsland、ccdeck、HachimoDock、capri-desktop 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-12 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **跨 Repo 依賴可視化** | Floorplan、Archify、Understand Anything、cross-repo blast radius 分析（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-06 | 多個 repo 的專案裡，用 Claude Code plugin 畫出跨 repo 的依賴與影響範圍圖 |
 | ****Agent 預算控制**** | rbartoli/agent-usage-guard（[[topics/community-cost#2026-10]]） | ⏳ 新興 | 2026-10-23 | 以 hooks 在用量窗口超過門檻時防新 subagent，提前提示先壓縮再送出 |
@@ -100,6 +100,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **三類仍在 60 天內、暫未列入概覽表：**Agent 記憶保護（AGENTS.md 輸出持久化片段，最後動態 2026-10-08，原始條目見 [[topics/community-memory#2026-10]]）、架構邊界合約（HERO-Anti-OverDefense、ANMA YAML contracts、ISO 29148 規格驅動等，最後動態 2026-10-18，原始條目見 [[topics/community-guardrails#2026-10]]）、MCP 長 Session 穩健化（dev.to 三種隱性失效模式排查清單重新出現代表技巧，最後動態 2026-11-17，原始條目見 [[topics/community-integrations#2026-11]]）。
 
 %% MCP 長 Session 穩健化出現新代表技巧，是否補回「模式概覽」表需比對現有 21 列留表優先序，留待 /wiki-lint 判定，2026-11-17 %%
+
+%% 2026-11-28 lint 5k 複查：21 列最舊為 Agent 預算控制（2026-10-23，距今 36 天），無逾 60 天；表仍滿載。讓位候選為 MCP 長 Session 穩健化（⏳、最後動態 2026-11-17）。**主編裁決：不讓位，本輪表不動。** 留表優先序（成熟度 ＞ 最後動態 ＞ 實作數）是用來在「都夠格入表」的候選之間排序，不是用來判斷夠不夠格——MCP 長 Session 穩健化目前只有一篇 dev.to 排查清單、零代表實作，而本表每列都要填得出「代表技巧」那一格，沒有實作就填不出來。Agent 預算控制有實作（rbartoli/agent-usage-guard）且未逾 60 天退場線，留表。MCP 長 Session 穩健化留在表下，等它出現第一個代表實作、或與 Plugin／MCP 整合的證據合流時再評估。 %%
 
 %% 未列入概覽表：表滿載，2026-11-22。架構邊界合約讓位給安全架構（主編採納 11-21 lint 5k 第一組；⏳→⚡ 成熟度較高、最後動態 11-17 較新，依留表優先序）。 %%
 

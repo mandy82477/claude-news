@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（現行世代為 Fable 5.2，2026-11-09 取代 5.1 成為預設；5.1 官方仍列 Active、退役不早於 2027-09-01（2026-11-14 查證）；Fable 5 仍為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-11-21"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-21"
 status_main: "active"
 days_since_news: 7
@@ -33,7 +33,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-21
 
 > **研究動態**（2026-11-21）
@@ -97,9 +97,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 | 項目 | 評分 |
 |------|------|
 | 社群熱度 | 🔥🔥🔥🔥🔥（HN 614 分，發布日，2 個來源；2026-11-09）|
-| 試用價值 | ⏳ 剛發布、資料不足（2026-11-09 判定）；Artificial Analysis 評 65 分為該站現行最高（2026-11-09） |
+| 試用價值 | ✅ 強烈推薦（自動套用，無需操作）；Artificial Analysis 評 65 分為該站現行最高（2026-11-09） |
 | 最適合 | 待社群累積實測後補；官方定位同前代（跨多天的長期 agentic 工作流、多步驟深推理、安全漏洞分析）|
 | 不適合 | 待補；分散式訓練基建、加速器設計這類前沿 LLM 開發（分類器是否延續同範圍待官方查證，見下一節）|
+
+%% 2026-11-28 /wiki-lint 5l④：試用價值原為「⏳ 剛發布、資料不足（2026-11-09 判定）」，與 `feature-radar` 全覽表 Fable 5.2 那一列的 ✅ 強烈推薦不一致，依 `.claude/reporter-rules/models/pages.md`「模型頁兩代對照表」以 radar 為準同步。「最適合」「不適合」兩列自 11-09 起仍寫「待補」，已逾兩週，下輪模型記者派工時補實測 %%
 
 > 本表跟著 [[feature-radar]] 全覽表的現行世代那一列走；最新熱度以 [[feature-radar]] 為準。
 
@@ -308,7 +310,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 #### 2026-11-10
 **Fable 5.2 提示指南摘引與第三方資安基準標題**：
 - Simon Willison 摘引 Anthropic〈Prompting Claude Fable 5.2〉：Fable 5.2 對提示中「程式碼歸誰」敏感；加一句「這份程式碼是你的」後，小型編碼任務約半數嘗試會合併重複程式碼，沒加不到十分之一。官方文件本身未直接查證，措辭面整理見「跟它怎麼說話」（[Simon Willison](https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/)，2026-11-10）
-- The Hacker News 標題稱 Fable 5.2 在多階段網路攻擊基準測試勝過 GPT-6 Cyber（僅標題；測試方與分數未載），資安面見 [[topics/ai-agent-safety-cyber]]（Google News/The Hacker News，2026-11-10）
+- The Hacker News 標題稱 Fable 5.2 在多階段網路攻擊基準測試勝過 GPT-6 Cyber；官方文（11-28 查）列 CyScenarioBench：Mythos 5.2 76.3%、GPT-6 Cyber 61%（任務不同），見 [[topics/ai-agent-safety-cyber]]（Google News/The Hacker News，2026-11-10）
 - Kingy AI 標題問 Fable 5.2 是否值得比 GPT-6.1 Sol 貴四倍（僅標題；計價基準未載），牌價見 [[entities/pricing]]（Google News/Kingy AI，2026-11-10）
 
 #### 2026-11-09

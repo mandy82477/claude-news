@@ -16,9 +16,9 @@ inbound_links: 58
 attribution_count: 21
 attribution_last: "2026-11-19"
 top_source: "github"
-pending_count: 0
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-12-10"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -179,7 +179,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**legend-of-alan/ghostmode**](https://github.com/legend-of-alan/ghostmode) | 工作流 | ⏳ | 2026-11-27 | Show HN（HN 2 分）：開源重現官方實驗性 Code Mode（工具呼叫改寫成程式碼），作者在自家 Rust agent 實測降約 60% token（自測、未經第三方覆核） |
 | [**Bloque**](https://bloque.run) | 整合工具 | ⏳ | 2026-11-27 | Show HN：給沒有 IT 部門小團隊的託管 MCP gateway，主打比起價每月 500 美元的既有產品好上手；HN 單來源，無使用回報 |
 | [**pierridotite/mobile-agent-testers**](https://github.com/pierridotite/mobile-agent-testers) | 多 Agent | ⏳ | 2026-11-26 | 20 支 Claude Code agent 在 GitHub 免費 Runner 的 iOS／Android 模擬器上並行測同一個 App，取代自建裝置農場；2,488 星，僅星數佐證 |
-| [**ffroliva/gflow-cli**](https://github.com/ffroliva/gflow-cli) | 整合工具 | ⏳ | 2026-11-26 | MCP server／CLI 接 Google Flow，從 Claude Code 出 Veo 3.1 影片與 Nano Banana／Imagen 圖片；955 星（近 2 天 +289），星速待確認是否為批次效應 |
+| [**ffroliva/gflow-cli**](https://github.com/ffroliva/gflow-cli) | 整合工具 | ⏳ | 2026-11-26 | MCP server／CLI 接 Google Flow，從 Claude Code 出 Veo 3.1 影片與 Nano Banana／Imagen 圖片；955 星（+289／2 天）；❓ 待查證 ⟨Q-01⟩ |
 | [**session-vault.dev**](https://session-vault.dev/) | 記憶工具 | ⏳ | 2026-11-26 | Show HN（10 分）：Claude Code plugin，用自己機器產生的金鑰加密備份 session 逐字稿，避開官方預設 30 天清除；加密機制僅作者自述，未見第三方稽核 |
 | [**Carry**](https://carry.md/) | 記憶工具 | ⏳ | 2026-11-25 | Show HN（26 分）：把 Gemini、ChatGPT、Claude、Grok 等對話自動備份成本機 Markdown，方便跨應用搜尋；非 Claude Code 專用，HN 單來源 |
 | [**op7418/guizang-game-skill**](https://github.com/op7418/guizang-game-skill) | Skills | ⏳ | 2026-11-25 | 歸藏 Game Skill：讓 Claude Code／Codex 從零生成可玩的瀏覽器 3D 動作遊戲（three.js、單一 HTML），附 demo；506 星，與同日 4 款倉庫同時點衝榜，疑為批次快照效應 |
@@ -216,7 +216,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**meshapplied/goethe**](https://github.com/meshapplied/goethe) | 其他 | ⏳ | 2026-11-17 | Show HN：把有 NVIDIA GPU（Ampere 以上）的 Linux 機器變成相容 OpenAI／Anthropic API 格式的推論伺服器；HN 5 分，單一來源 |
 | [**muaaz9329/cheap-ag**](https://github.com/muaaz9329/cheap-ag) | 模型路由 | ⏳ | 2026-11-17 | MCP server：便宜模型寫程式、測試結果決定變更能不能送出，宣稱讓 $20 訂閱用量延長 50 倍（量測方法未見報導）；335 星，僅星數佐證 |
 | [**tuzhechen2005/opus-video-skills**](https://github.com/tuzhechen2005/opus-video-skills) | Skills | ⏳ | 2026-11-17 | Opus 5.5 專用影片製作 skill 庫，一風格一技能，逐格與分鏡皆由程式產生；525 星，僅星數佐證 |
-| [**hitkeeen/blender-ai-mcp-addon**](https://github.com/hitkeeen/blender-ai-mcp-addon) | 整合工具 | ⏳ | 2026-11-16 | Blender 的多模型 AI／MCP 外掛，含視覺化對話、場景工具與 multi-agent 工作流；近 3 天新增約 1,995 星、累計 2,123 星，增速異常，僅星數佐證 |
+| [**hitkeeen/blender-ai-mcp-addon**](https://github.com/hitkeeen/blender-ai-mcp-addon)**（原文已失效）** | 整合工具 | ⏳ | 2026-11-16 | Blender 的多模型 AI／MCP 外掛，含視覺化對話、場景工具與 multi-agent 工作流；近 3 天新增約 1,995 星、累計 2,123 星，增速異常，僅星數佐證 |
 | [**cth9191/animate**](https://github.com/cth9191/animate) | Skills | ⏳ | 2026-11-16 | Claude Code 程式化動畫工具，產生單檔短動畫，內建 7 種風格或比對參考素材；2,054 星，僅星數佐證 |
 | [**chutingyean/Agent-Cockpit**](https://github.com/chutingyean/Agent-Cockpit) | 工作流 | ⏳ | 2026-11-16 | 證據鏈白板＋MCP server，讓 research agent 的每個結論可回溯到執行紀錄與程式碼；505 星、2 個來源同日報導 |
 | [**KarpelesLab/teamclaude**](https://github.com/KarpelesLab/teamclaude) | 費用監測 | ⏳ | 2026-11-16 | 把多個 Claude Max、Codex、API 金鑰帳號集中成帳號池，額度用完自動輪替；503 星，僅星數佐證，多帳號集中使用前先確認服務條款 |
@@ -460,6 +460,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Caliber** | 工作流 | ⚡ | 2026-05-02 | 跨工具 AI config 統一管理（CLAUDE.md/.cursor/rules/AGENTS.md）；05-02 記到 888 stars，2026-09-22 查不到公開 repo 或產品頁 |
 | [**ness**](https://github.com/ness-dev/ness)（原名 Harness） | 多 Agent | ⚡ | 2026-04-29 | 多 Git worktree 並行管理多個 Claude Code agent；2026-11-01 查得已改名 ness、103★、12 forks，自述改為「給 agent 用的 IDE」，README 仍寫可同時跑十個 Claude |
 | [**Groundtruth**](https://github.com/vnmoorthy/groundtruth) | 工作流 | ⚡ | 2026-04-27 | Stop Hook，強制 Claude 提供可驗證執行證明才能宣告完成 |
+
+**懸置細節**
+- ⟨Q-01⟩ ❓ **待查證**（標 2026-11-26｜查 gflow-cli、批次效應）：近 2 天 +289 星是否為批次效應，尚無第二來源佐證
 
 ### 用量／token 觀測工具
 

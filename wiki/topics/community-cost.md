@@ -3,7 +3,7 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-27"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-27"
 status_main: "ongoing"
 days_since_news: 1
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-11-27
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-27
 
 > **開源版 Code Mode 獨立實測：官方宣稱 95%，自測約 60%**（2026-11-27）
@@ -53,6 +53,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **11 月中旬新冒出一批用量觀測品**：Model-share、Wake、Faros Desktop 等，見 [[topics/community-tech-tools]]「用量／token 觀測工具」。
 - **並行成本歸因是缺口**：額度監控工具都有，「這一批 subagent 花了多少、做出了什麼」沒有人答得出來（見下方機制細節）。
 - **省 token 的工具開始合體**：2026-11-12 Downshift 把指令輸出壓縮與 subagent 模型路由放進同一個工具（beta、單一作者，尚無量化節省）；11-02 的 Reddit「20 招」清單把零散做法收成對照表，11-04 一則公開帳單稱 17 個 bot 一個月只用一個 100 美元 Max 方案（單一案例、非第三方審計）。
+  - 11-27 ghostmode 開源重現官方 Code Mode，自家 Rust agent 實測約省 60%，低於官方部分工作負載宣稱的 95%（作者自測）。
 - **你的選項：** 先量再省——用額度監控工具看清楚是哪一類工作在燒；再挑上面三路之一，路由給便宜模型的降幅目前最高，但只有單一團隊的數字。合體工具等有人量出省多少再裝。
 
 ### 用量去向歸因
@@ -204,7 +205,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### Claude Code 背景 agent 面板每 30 秒重傳完整逐字稿給模型：no-agent-summary.js 停用此行為（2026-10-29）
 
 - **主線：** 並行規模
-- **核心模式：** 社群分析發現 Claude Code 每隔約 30 秒把每個背景 agent 的完整對話記錄重新送給模型，只為更新 agents 面板的狀態列；作者發布 `no-agent-summary.js`（Bun `--preload`）可停用此計時器，不修改 Claude Code 本體二進位檔，於 2.1.257–2.1.312（Linux）測試過，據稱 macOS 亦可行。
+- **核心模式：** 社群發現 [[entities/claude-code]] 每約 30 秒把每個背景 agent 的完整逐字稿重送給模型，只為更新 agents 面板狀態列；作者發布 `no-agent-summary.js`（Bun `--preload`）可停用此計時器、不改本體二進位檔；2.1.257–2.1.312（Linux）實測，macOS 據稱可行。
 - **與既有模式的關係：** Token / 成本優化——既有做法多在「送得少」（穴居人）或「送得晚」（MCP Code Execution），本則揭露的是官方 agents 面板本身的隱藏重傳成本；同時跑的背景 agent 數越多，影響越大，主線填並行規模。
 - **可信度註記：** 單一作者分析＋腳本，於 2.1.257–2.1.312（Linux）實測，macOS 可行性為他人回報、未附對照數字，無第三方獨立覆核；HN 累積 527 分，為今日討論度最高條目。
 - **來源：** Hacker News；[Gist](https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce)

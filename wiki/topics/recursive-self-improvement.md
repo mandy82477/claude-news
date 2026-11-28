@@ -15,8 +15,8 @@ inbound_links: 46
 attribution_count: 82
 attribution_last: "2026-11-27"
 top_source: "google-news"
-pending_count: 12
-pending_overdue: 3
+pending_count: 11
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 1
 staleness_exempt: null
@@ -93,7 +93,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 2026-10-31 再查聽證報導（如 [Bloomberg 轉載](https://www.thestar.com.my/tech/tech-news/2026/10/05/former-anthropic-researcher-coxon-to-testify-at-new-york-city-ai-hearing-bloomberg-news-reports)），僅見證詞與 Anthropic 等四家公司宣誓作證，仍無該批評出處，Anthropic 官方亦無說明。
 - **2026-10-10，Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：首次從泛稱業界風險轉為具體「間諜滲透」指控；
   - 🔎 **查無官方**（標 2026-10-10｜查 Jacob Coxon、間諜滲透｜複 2026-11-30）｜**九成把握稱**：僅 Coxon 單一來源（podcast 發言），未提證據、未點名個人（[SCMP](https://www.scmp.com/news/china/diplomacy/article/3370108/china-already-has-spies-us-ai-labs-claims-ex-anthropic-researcher)，2026-10-31 查）；媒體稱 Business Insider 引匿名知情人士說無證據支持，Anthropic 官方未回應，此指控無第二來源佐證，亦未被官方否認。
-    - ❓ **待查證**（標 2026-10-10｜查 Jacob Coxon、Business Insider｜複 2026-11-24）｜**間諜滲透指控真偽**：已掃日報至 2026-11-20 無後續；官方頁面未查證
+    - 🔎 **查無官方**（標 2026-10-10｜查 Jacob Coxon、Business Insider｜複 2026-12-26）｜**間諜滲透指控真偽**：2026-11-28 再查，未見 Anthropic 官方聲明與第二來源證據
+      - Coxon 未點名、未提證據，九成把握為其個人信心；媒體稱（Business Insider，[日文站版](https://www.businessinsider.jp/article/2610-jacob-coxon-pacing-frontier-might-not-work-openai-anthropic-china-spies/)，取自搜尋摘要）引知情人士說無證據支持
 - **2026-10-16，Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio 加入評估者**：延續 09-19 Accenture 內嵌評估者承諾，METR 角色由「參與洽談」具體落實為員工級系統存取權；官方稱呼應上月簽署的白宮超級智慧協議（White House Accord on Super Intelligence），詳見「## 技術彙整」。
 - **2026-10-26，BBC／Axios／CNN：Anthropic IPO 前 S-1 文件揭露 AI「災難性風險」語言**：呼應本頁既有「核心矛盾」——呼籲謹慎示警的同時走向 IPO；政府與產品後果面完整記錄於 [[topics/anthropic-government-policy#攻防紀錄]]，本頁不重複，詳見「## 技術彙整」。
 - **2026-10-27，CNN／The Washington Post 補上風險清單具體項目＋Forbes／Times of India 揭露程式碼比例新數字**：CNN／WaPo 為 10-26 S-1「災難性風險」條目補上具體項目（生物武器、勒索、「AI 甦醒」警語）
@@ -182,9 +183,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **揭露來源**：Google News／TechCrunch（11/09 19:24 UTC）、Google News／Yahoo Finance（11/11 06:00 UTC）；互動均為 0，無可讀內文
 - **核心主張（僅標題可用）**：TechCrunch 標題稱 Anthropic 在 RSI 疑慮下發布新的 Mythos 與 Fable 模型；Yahoo Finance 標題稱 Anthropic 說某個關鍵 AI 安全警報已被觸發，時間在 IPO 前數天
-- **與既有敘事的關係**：（推論）「警報」可能指 11-02～03 S-1/A 自評「可能迫近」的內部 RSI 門檻，標題未寫明；模型發布本身見 [[entities/mythos]]、[[entities/fable-5]]
+- **與既有敘事的關係**：依 11-12 日報，「警報」即 11-10 修訂版招股說明書宣告跨過 RSP 門檻（見下方標記）；11-02～03 S-1/A 當時僅自評「可能迫近」；模型發布本身見 [[entities/mythos]]、[[entities/fable-5]]
 - **可信度評估**：兩則均單一來源、僅標題層級；警報指涉對象、觸發時點與官方後續處置均未見報導
-- ❓ **待查證**（標 2026-11-11｜查 safety alarm、RSI threshold｜複 2026-11-25｜訊 2026-11-12）｜**「關鍵安全警報」的指涉**：11-12 收錄的 Yahoo Finance 摘要稱修訂版招股說明書寫明已跨過 RSP 門檻，與此警報高度相符；招股說明書原文與官方 RSP 條文仍未見
+- ❓ **待查證**（標 2026-11-11｜查 safety alarm、RSI threshold｜複 2026-12-26｜訊 2026-11-12）｜**「關鍵安全警報」的指涉**：依 11-12 日報，11-10 修訂版招股說明書宣告已判定達到 RSP 的 AI 研發自動化門檻，與此警報相符
+  - 日報稱門檻條件是 AI 承擔足夠多研究工作、使模型進步速度約加倍；一週前（11-02 S-1/A）仍稱可能「隨時」觸發
+  - 招股說明書原文與官方 RSP 條文仍未見；2026-11-28 補查 anthropic.com，[11-10 roadshow 公告](https://www.anthropic.com/news/roadshow-launch)無此表述，RSP 更新頁最新條目 08-14 未載門檻已達
 
 ### METR／The Information／The Independent／AP News：METR 發布對 Anthropic 2026 年 10 月 AI 研發加速度的獨立評估（2026-11-05～06 新增）
 
@@ -233,9 +236,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有敘事的關係**：延續下方 09-19 條目「Anthropic 指定 Accenture 為首位內嵌評估者」——當時官方已稱 METR「亦有參與」，本次是 METR 角色的具體落實（由「參與」升級為「員工級存取權」），非全新機制
 - **白宮協議**：官方稱此舉呼應上月簽署的白宮「超級智慧協議」（White House Accord on Super Intelligence），公司承諾與獨立外部稽核員或評估者合作
 - **白宮超級智慧協議**（2026-11-14 查）：[Anthropic 〈獨立評估者更新〉](https://www.anthropic.com/news/an-update-on-independent-evaluators)確認公司已簽署，承諾與獨立外部稽核員或評估者合作；Anthropic 2026 公益報告稱協議屬自願、無罰則；簽署日 2026-09-29（媒體稱，Infosecurity、Al Jazeera）；白宮條款全文本輪未連上
+- **白宮協議日期與條款**（2026-11-28 查）：白宮文件存於 [UCSB American Presidency Project](https://www.presidency.ucsb.edu/documents/white-house-accord-super-intelligence)，2026-09-29 發布簽署
+  - 全文約 300 字，自願、無罰則；媒體稱（Infosecurity Magazine、Al Jazeera）含內控、獨立稽核、董事會監督等四層控制，不要求公開稽核結果；全文本輪未能開啟
 - **官方原文補充**（2026-10-31 查 [Anthropic〈獨立評估者更新〉](https://www.anthropic.com/news/an-update-on-independent-evaluators)）：METR 由 6 名員工組成，取得公司硬體、辦公空間與內部工具及系統，存取程度「約與 Anthropic 自家風險評估團隊相當」；
   - Anthropic 不能否決 METR 發布，但可要求對預定類別（如機密智財）做遮蔽；文中未賦予 METR 中止部署權，也未給發布時程；SecureBio 正審查 8 月風險報告的化生武章節，Anthropic 將於審查後考慮提高其存取；協議簽署日期與條款官方文中未載
-- **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；存取範圍已由官方原文說明（見上）；❓ **待查證**（標 2026-10-16｜查 White House Accord、Super Intelligence｜複 2026-11-24）｜**協議日期與條款**：官方文中未載；已掃日報至 2026-11-20 無後續；官方頁面未查證
+- **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；存取範圍已由官方原文說明（見上）；白宮協議日期與條款見下方「白宮超級智慧協議」行（2026-11-28 查證補充）
 
 ### Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司（2026-10-10 新增）
 
@@ -518,6 +523,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/mythos]]（能力擴張的具體案例）
 - [[entities/jacob-coxon]]（09-09 辭職警告的當事人）
 - [[entities/evan-hubinger]]（09-09 存在性風險機率估計的當事人）
+
+%% 拆頁評估 2026-11-28：該拆，切出兩個子頁：①公司揭露與量測（S-1／RSP 門檻、量化指標表、R&D Index、自動化研究員、METR／Accenture 獨立評估，技術彙整約 166 行＋指標表 16 行＋對應時序，合計約 230 行）②示警與社會反應（離職示警、Coxon／Hubinger／Ladish、川普與北京反應、LeCun／Suleyman／Burry 批評、非營利提告、匿名員工爆料，技術彙整約 221 行＋對應時序，合計約 290 行）；母頁留摘要與目前結論、子頁路由表。理由：正文 640 行、事件流約 82%（技術彙整約 390 行、時序約 114 行），兩群各逾 150 行不算太薄，且各有獨立問題（「Anthropic 自己量到並揭露到哪」vs「誰在示警、各方怎麼回應」）；注意兩群條目互相「延續」引用頻繁，下次本機 dry run 須逐群過子故事三題，Q3 被獨立引用答不齊的群併鄰群；蒸餾無助（≥3 個月前時段僅 06 月摘要與 08-29～31 約 30 行）。%%
 
 ## 時序
 

@@ -3,7 +3,7 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-27"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-27"
 status_main: "ongoing"
 days_since_news: 1
@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 17
+inbound_links: 18
 attribution_count: 39
 attribution_last: "2026-11-27"
 top_source: "github"
@@ -31,12 +31,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-27
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-27
 
 > **Together AI 發布開源 agent 測試工具 Hurdle**（2026-11-27）
 > 專門測試 Claude Code、Codex 等 coding agent 表現，供評估自身 agent 工作流穩定性；至少 2 個來源同日報導。
 ---
+
+%% 拆頁評估 2026-11-28：不拆，每群太薄（<150 行）。事件流依類別欄只分得出三群：Skills 設計約 430 行（本頁主體，無第二條軸可再分）、可靠性測試 8 則約 72 行、課程與資源盤點／垂直領域合集 14 則約 125 行；後兩群各低於 150 行，三題答不齊併回鄰群，剩一群即本頁。2026-08 時段已滿 3 個月，蒸餾後（約少 65 行）再重算行數；雲端本輪不開拆頁波。 %%
 
 ## 摘要
 
@@ -62,6 +64,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Skills 正從「指令封裝」變成「知識框架載體」**：單一職責的寫法自 2026-05 起沒有人再反對，但也還沒有第二方量測（[[topics/community-skills#2026-09]]）。
   - **接下來看什麼：** 第三方 skill 的品質量測（可靠性測試那一類）有了第一個來源：2026-11-19 NVIDIA SkillEvaluator 在安裝前篩品質、安全與語意重疊，仍是單一團隊發布、無採用回報。
 - **來源從個人 repo 擴到業者與策展站**：2026-11-12 Jane Street 公開自家 agent skills 集合（描述僅「Agent skills」、內容細節未載），11-13 出現每 8 小時更新、附安全評級的 skills 目錄站；兩者都只有星數與站方自述，沒有使用回饋。
+  - 11-26 aiskillstore 市集與微軟 skills-for-copilot-studio 同時點衝上搜尋榜，疑似批次快照效應，不當採用證據。
+- **測試的對象從 skill 本身延伸到 agent 的行為**：11-21 對照實驗顯示沒被叫用的 Skill 仍蓋過 CLAUDE.md；11-22 fast-anything 啟用前先重放真實呼叫；11-27 Together AI 發布測試工具 Hurdle。
+  - 皆單一來源；Hurdle 有 2 家媒體同日報導、測試方法未載，fast-anything 加速數字為作者自測。
 - **做法會隨模型版本靜默失效**：2026-11-03 一位作者靠強迫呼叫不存在工具取得結構化輸出，Opus 5.5 不再配合；10-26 另有一套把「需求沒做到」與「測試寫得太綁死」分開判讀的方法。兩者都是單一作者案例。
 - **你的選項：** 寫新 skill 前先把 description 寫成「什麼時候該叫我」的具體條件；skill 一多就檢查清單有沒有被擠掉；要硬擋的規則改用 hook；換模型版本後重跑一次依賴特定輸出格式的 skill。
 

@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（Legacy，仍可呼叫）"
 domain: "🤖 模型"
-last_updated: "2026-11-21"
+last_updated: "2026-11-28"
 last_news_update: "2026-09-28"
 status_main: "active"
 days_since_news: 61
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（Legacy，仍可呼叫）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-01
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-09-28
 
 > **最新動態**（2026-09-28）
@@ -40,7 +40,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-- **自 2026-09-28 起無新動態**（2026-11-21 查核）：本頁仍被全庫 21 處引用，但停滯是事實而非漏更新——Sonnet 這一代的新消息都落在 [[entities/sonnet-5-5]]，拿它做選型決定前先看那一頁。
+- **自 2026-09-28 起無新動態**（2026-11-28 查核）：本頁仍被全庫 20 處引用，但停滯是事實而非漏更新——Sonnet 這一代的新消息都落在 [[entities/sonnet-5-5]]，拿它做選型決定前先看那一頁。
 
 **2026-09-28 最新**：Anthropic 發布 [[entities/sonnet-5-5|Claude Sonnet 5.5]]，Claude Code v2.1.284 將其設為 **Anthropic API 預設 Sonnet 模型**；Terminal-Bench 4.0 由本代的 10.3% 升至 70.6%，牌價維持 $2/$10 不變（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。完整換代對照見 [[entities/sonnet-5-5]]。自 2026-09-28 起無新動態（2026-10-31 核）；本代已被 Sonnet 5.5 取代，停滯是事實而非漏更新。
 
@@ -135,7 +135,7 @@ claude --model claude-sonnet-5-20260701
 - **07-01 發布**：最 agentic 的 Sonnet，效能接近 Opus 4.8；促銷價 $2/$10（08-10 永久化）；Claude Code v2.1.197 設為預設；Terminal-Bench 2.1 85.2%（09-13 查得，見「核心能力」）。
 - **07-02 發布次日爭議**：官方 BrowseComp 圖表換版（HN 3 分）與個性流失回饋，結論見上方「爭議」。
 - **穩定性事件三起，皆非能力或定價變化**：07-07 錯誤率升高（07:37 UTC 解決）；07-08 再度升高（06:40 UTC 解決）；07-31 效能降級（06:18–07:04 UTC，約 46 分鐘）。
-- **07-09 媒體報導查證**：Mashable「正式發布」為遲到報導、非第二次發布；「API 成本減半」屬實（對 Sonnet 4.6 的 $3/$15）；tech-insider.org 的「57 分」查無官方、不採信（🔎 標記複 2026-11-26，見 [[entities/sonnet-5-archive#2026-07]]）；Reddit「回應重複」為弱訊號。
+- **07-09 媒體報導查證**：Mashable「正式發布」為遲到報導、非第二次發布；「API 成本減半」屬實（對 Sonnet 4.6 的 $3/$15）；tech-insider.org 的「57 分」查無官方、不採信（🔎 標記複 2026-12-26，見 [[entities/sonnet-5-archive#2026-07]]）；Reddit「回應重複」為弱訊號。
 - **07-14 MarkTechPost 三模型比較**（Sonnet 5／Sonnet 4.6／Opus 4.8）：僅標題，無量化數字；選型見 [[topics/model-comparison]]。
 - **07-25 dev.to 促銷「real but temporary」**：無新定價數字；同日 Opus 5 發布，不影響本代預設定位。
 - 原始條目見 [[entities/sonnet-5-archive#2026-07]]

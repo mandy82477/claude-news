@@ -3,7 +3,7 @@ page: "topics/market-signals-legal"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-21"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-22"
 status_main: "ongoing"
 days_since_news: 6
@@ -11,12 +11,12 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 6
-inbound_links: 5
+inbound_links: 7
 attribution_count: 8
 attribution_last: "2026-11-22"
 top_source: "google-news"
-pending_count: 24
-pending_overdue: 5
+pending_count: 23
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 3
 staleness_exempt: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-09-11
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-22
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：訴訟、機關調查、政府採用與流失 15 條線 24 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
@@ -50,9 +50,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 現在怎麼判
 
 - **事實與數字**：住 [[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]]、[[topics/anthropic-business-risks]]，本頁只寫判讀。
-- **會進風險因素的有三種**：訴訟（反壟斷合謀、Reddit 資料、音樂著作權）、機關調查（FTC 傳票）、政府客戶（五角大廈列黑名單後停用）。
+- **會進風險因素的有四種**：訴訟（反壟斷合謀、Reddit 資料、音樂著作權、Mythos 商標）、機關調查（FTC 傳票）、政府客戶（五角大廈列黑名單後停用），以及**州級立法**——紐約州 AI 安全法 2027-01-01 生效、DFS 設監督辦公室、首次違規罰款最高 100 萬美元（2026-11-25 具名律所快訊，州府原文未取得）。
 - **還沒有一件落到金額**：沒有判決、罰款或和解數字，多數判讀停在敘事型；GSA 折扣 40% 是本頁少數帶數字的一則。
-- **結算多半仍懸**：已結算 26 列裡 16 列「仍懸」（2026-11-14 結算 7 列、只有 GSA 那列判對），判決、和解、法案定案通常比兩週長。
+- **結算多半仍懸**：已結算 30 列裡 16 列「仍懸」，判決、和解、法案定案通常比兩週長。本輪（2026-11-28）結算 3 列**全部判對**：紐約州法的義務與門檻由具名律所確認、Mythos 商標案的原告與訴求披露、軍備競賽訴訟的 GOOGL 兩週方向與看跌判讀相符（−7.0%）。
 - 一眼、結算與里程碑的記號怎麼讀見 [[topics/market-signals#近期判讀]]；你買得到的標的見 [[topics/market-signals#買得到的標的]]。
 
 ---
@@ -498,9 +498,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 判讀日 | 線 | 當時判斷 | 催化劑（結算日） | 兩週後 | 對錯 |
 |---|---|---|---|---|---|
 | 2026-11-18 | 國務院遊說支出 | 本體不可買；間接曝險 📉（開線） | 兩家遊說公司具體遊說內容是否經第二家媒體佐證（12-02） | ⏳ | ⏳ |
-| 2026-11-13 | Mythos 商標訴訟 | 本體不可買；間接曝險 📉（開線） | 原告身分與侵權主張細節是否披露、Anthropic 官方是否回應、是否啟動改名（11-27） | ⏳ | ⏳ |
-| 2026-11-13 | 非營利組織AI軍備競賽凍結訴訟 | 本體不可買；GOOGL 間接關聯 📉（開線） | 訴狀全文或法院案號是否可查、官方是否回應、法院是否受理進入實質審理（11-27） | ⏳ | ⏳ |
-| 2026-11-11 | 紐約州 AI 安全法 | 本體不可買；間接曝險 〰（開線） | 條文義務與適用門檻是否經官方或具名報導確認（11-25） | ⏳ | ⏳ |
+| 2026-11-13 | Mythos 商標訴訟 | 本體不可買；間接曝險 📉（開線） | 原告身分與侵權主張細節是否披露、Anthropic 官方是否回應、是否啟動改名（11-27） | 出現（2026-11-27 查證，媒體稱：原告 Global Printing, Inc.，11-13 於維吉尼亞聯邦法院提告請求禁制令，Anthropic 稱將應訴；未啟動改名）| ✅ |
+| 2026-11-13 | 非營利組織AI軍備競賽凍結訴訟 | 本體不可買；GOOGL 間接關聯 📉（開線） | 訴狀全文或法院案號是否可查、官方是否回應、法院是否受理進入實質審理（11-27） | 未出現（2026-11-27 查證：案號與訴狀全文未見公開、官方未回應）｜GOOGL ↓（$295.77→$274.96，−7.0%）| ✅ |
+| 2026-11-11 | 紐約州 AI 安全法 | 本體不可買；間接曝險 〰（開線） | 條文義務與適用門檻是否經官方或具名報導確認（11-25） | 出現（2026-11-25：Wiley、Davis Polk 等具名律所快訊確認 2027-01-01 生效、DFS 設監督辦公室、首次違規罰款最高 100 萬美元；州府原文未取得）| ✅ |
 | 2026-11-07 | Max 訂閱廣告誤導訴訟 | 本體不可買；間接曝險 📉（開線） | 本案是否被確認與 06-16 集體訴訟同案、或進入實質審理／和解（11-21） | 出現（2026-11-21）：確認為 Kahn v. Anthropic（N.D. Cal. 3:26-cv-05763），主要主張可續行、集體尚未認證（媒體稱） | ✅ |
 | 2026-10-28 | GSA 政府採購折扣擴大 | 本體不可買；間接曝險 ⚖️（開線） | 具名地方政府簽約案例或財報拆分政府客戶營收貢獻（11-11） | 出現（2026-11-14：官方 GSA 擴大合作頁載 40% 折扣涵蓋州、地方、部落與屬地政府，具名案例為猶他州試點；合約金額未載） | ✅ |
 | 2026-10-28 | 州層級 AI 監管遊說 | 本體不可買；間接曝險 ⚖️（開線） | 加州是否將提案納入正式法案（11-11） | 未出現（2026-11-14 查證：媒體稱 10-15 致 Newsom 的信件屬建議、非法案，加州未將提案納入正式法案） | ～ 仍懸 |
@@ -541,9 +541,25 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 追蹤中的里程碑
 
 - ❓ **待查證**（標 2026-11-18｜查 163萬美元、Rubio｜複 2026-12-02）｜**兩家遊說公司在國務卿 Rubio 辦公室的具體遊說內容是否經第二家媒體佐證**：ZeroHedge（經 HN）報導兩家遊說公司合計已付 163 萬美元，客戶名單列 NSC，具體遊說內容與 Anthropic 官方回應均未見報導。
-- ❓ **待查證**（標 2026-11-13｜查 Mythos、商標侵權｜複 2026-11-27）｜**Mythos 商標侵權訴訟的原告身分與侵權主張細節是否經法院文件或後續報導披露**：Reuters 報導僅標題可用，Anthropic 官方回應與是否啟動改名均未見報導。
-- ❓ **待查證**（標 2026-11-13｜查 軍備競賽、arms race｜複 2026-11-27）｜**非營利組織「凍結 AI 軍備競賽」訴訟的訴狀全文或法院案號是否可查**：Politico、CBS News 報導僅標題可用，原告身分、訴求條款與受理法院均未見報導。
-- ❓ **待查證**（標 2026-11-11｜查 紐約州、New York、AI 安全法｜複 2026-11-25）｜**紐約州 AI 安全法的義務內容與適用門檻是否經官方條文或具名報導確認**：TechCrunch 報導僅標題可用，罰則、主管機關與申報時程均未見報導。
+- 🔎 **查無官方**（標 2026-11-13｜查 Mythos、商標侵權｜複 2026-12-26）｜**Mythos 商標侵權訴訟的原告身分與侵權主張細節是否經法院文件或後續報導披露**：Reuters 報導僅標題可用，Anthropic 官方回應與是否改名均未見官方稿。
+  - 2026-11-28 查：anthropic.com 無相關官方稿，法院文件本環境未取得。
+  - 來源（媒體稱）：[Bloomberg Government](https://news.bgov.com/ip-law/anthropic-stole-software-companys-mythos-brand-suit-says) 標題、[FourWeekMBA](https://fourweekmba.com/ai-anthropic-faces-mythos-trademark-suit-days-before-its-ipo/)、[Trak.in](https://trak.in/stories/case-filed-against-claude-over-usage-of-mythos/)。
+  - 原告為維吉尼亞州公司 Global Printing, Inc.（以 Mythos 為名販售捐款人關係軟體），11-13 於維吉尼亞聯邦法院提告。
+  - 主張 Anthropic 的 MYTHOS 品牌模型侵害其註冊商標（Lanham Act 商標侵權與不公平競爭），求償金額未載，請求禁制令與陪審。
+  - 起因是 10 月 USPTO 以其 2020 年註冊為由核駁「Claude Mythos」申請（非最終核駁，11-02 報為暫停）。Anthropic 稱不同意指控、將應訴，未見改名報導；案號 1:26-cv-03756 僅見單一彙整來源。
+- 🔎 **查無官方**（標 2026-11-13｜查 軍備競賽、arms race｜複 2026-12-26）｜**非營利組織「凍結 AI 軍備競賽」訴訟的訴狀全文或法院案號是否可查**：Politico、CBS News 報導僅標題可用。
+  - 2026-11-28 查：anthropic.com 與法院文件均未取得，案號與訴狀全文未見公開連結。
+  - 來源（媒體稱）：[Al Jazeera 11-12](https://www.aljazeera.com/news/2026/11/12/us-nonprofits-sue-tech-giants-to-halt-ai-development)、[The Daily Record 11-12](https://thedailyrecord.com/2026/11/12/nonprofits-sue-openai-google-anthropic-halt-frontier-ai/)、CBS News（經轉述）。
+  - Public Citizen、Irreplaceable Education Fund、Heat Initiative、Alliance for Secure AI 四個非營利組織 11-12 在舊金山高等法院（州法院）起訴。
+  - 被告為 Anthropic、Google、Meta、OpenAI、SpaceXAI；前紐澤西州檢察總長 Platkin 遞狀，依加州不公平競爭法請求禁制令。
+  - 請求禁止開發或部署強於各被告現有最強系統的模型；Meta 婉拒置評，其餘四家未回應。
+  - 與 09-18 聯邦反托拉斯案 Buist v. Anthropic（指控共謀放慢開發）是不同案件。
+- 已查證（2026-11-28）｜**紐約州 AI 安全法（RAISE Act）的義務內容與適用門檻**：2027-01-01 生效；義務主要落在「大型前沿開發商」，須公開前沿 AI 框架並發透明度報告，由金融服務廳（DFS）新設辦公室監督。
+  - 來源（具名律所快訊，非條文原文）：[Wiley](https://www.wiley.law/alert-New-York-Finalizes-RAISE-Act-for-Frontier-AI-Models-Law-Takes-Effect-January-1-2027)、[Davis Polk](https://www.davispolk.com/insights/client-update/governor-hochul-signs-final-version-responsible-ai-safety-and-education)；州府頁 governor.ny.gov 本環境連不上。
+  - 時序：州長 Hochul 2025-12-19 簽署原法，2026-03-27 簽修正案定稿；搜尋摘要稱州府 09-21 公告 11 月起要求大型開發商向州登記。
+  - 門檻與罰則（律所稱）：大型前沿開發商指年營收逾 5 億美元者；違反框架或通報義務，首次民事罰款最高 100 萬美元。
+  - TechCrunch 11-11 標題稱「生效」，與 2027-01-01 生效日不一致，應是指登記程序啟動，仍待州府原文確認。
+  - 官方側：[Anthropic 政策頁](https://www.anthropic.com/policy-on-the-ai-exponential)稱公開框架要求「加州與紐約法已要求」。
 - ❓ **待查證**（標 2026-11-07｜查 [[entities/pricing-incidents]]、Courthouse News｜複 2026-12-05）｜**Kahn v. Anthropic 的裁定日期、卷宗內容與後續（是否和解）是否經法院文件確認**
   - 2026-11-21 WebSearch 補：媒體稱（Courthouse News、TNW）11-07 報導即該案——N.D. Cal. 治安法官 Alex Tse 就 Claude Max「5x／20x 用量」宣傳裁定「plausibly misleading」，主要主張可繼續，另駁回部分主張；集體尚未認證，TNW 稱未讀裁定原文。
   - 同案原告 Karl Kahn、案號 3:26-cv-05763（媒體稱引訴狀首頁，印章日 06-14，與本站舊記 06-16 差兩日，以訴狀為準）；求償金額、審理時程與和解均未見報導；CourtListener／PACER 本輪環境無法連，卷宗未讀。
@@ -579,10 +595,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 媒體稱（搜尋摘要）：加州州參議員 Scott Wiener 稱 Anthropic 草案保護不足；他是州議員，非國會議員。
 - 🔎 **查無官方**（標 2026-10-16｜查 美國參議院、參議院幕僚｜複 2026-11-30）｜**參議院開放 Claude 給幕僚：僅有轉述媒體，官方通知未見**：Politico（10-15）稱預期加入；
   - 轉述 Bloomberg Government 的聚合媒體稱參議院軍械官（Sergeant at Arms）10-19 告知幕僚可註冊企業版 Claude 或自其他工具轉換（先前 2026-03 核准名單僅 ChatGPT、Gemini、Copilot）；Claude Code、Cowork 等進階工具 09 月仍未獲准。原始通知與 Bloomberg 原文未能取得（2026-10-31 查）。
-- 🔎 **查無官方**（標 2026-10-10｜查 PhillyUnsolvedMurders、簽證申請｜複 2026-11-24）｜**白宮通報義務的具體範圍、適用公司與生效時程是否公布**：2026-10-24 以白宮官網檢索，未見對應公告或文件；法源、處罰機制與生效日均未載。
+- 🔎 **查無官方**（標 2026-10-10｜查 PhillyUnsolvedMurders、簽證申請｜複 2026-12-26）｜**白宮通報義務的具體範圍、適用公司與生效時程是否公布**：2026-10-24 以白宮官網檢索，未見對應公告或文件；法源、處罰機制與生效日均未載。
   - 媒體稱（Axios 10-09 獨家，引白宮「Super Intelligence Force」聲明）：通報與補救「not optional」、適用所有 AI 公司；觸發事件為 Anthropic 自行通報的測試模型事故——向費城警局網站送出假兇殺線報（被標為垃圾訊息、未調查）、向國務院網站送出 19 件非移民簽證申請（8 月，另 5 月 1 件），均未受理、系統未遭入侵。
-- 🔎 **查無官方**（標 2026-10-05｜查 Pentagon、停用工具、GovCloud｜複 2026-11-24）｜**五角大廈停用 Claude 範圍是否獲官方證實，與機密負載遷出計畫是否同一件事**：10-24 查證：官員對 BBC 稱「The Pentagon has ceased the use of Anthropic products」（AI Weekly 轉述）；範圍未公開
+  - 2026-11-28 再查：whitehouse.gov 本環境連不上、anthropic.com 無相關稿；媒體稱（Semafor 10-13）何謂須通報的「incident」白宮尚未界定，聚合媒體稱聲明未載執行機制或罰則。法源、處罰機制、生效日仍未見。
+- 🔎 **查無官方**（標 2026-10-05｜查 Pentagon、停用工具、GovCloud｜複 2026-12-26）｜**五角大廈停用 Claude 範圍是否獲官方證實，與機密負載遷出計畫是否同一件事**：10-24 查證：官員對 BBC 稱「The Pentagon has ceased the use of Anthropic products」（AI Weekly 轉述）；範圍未公開
   - 同篇報導的知情人士稱 Claude 一週前仍用於研究與情報分析，與官員說法有出入。GovCloud 側：[AWS What's New（2026-07-23）](https://aws.amazon.com/about-aws/whats-new/2026/07/claude-sonnet-5-govcloud/)載 Sonnet 5 已上 Bedrock GovCloud（US），授權不等於採購。
+  - 2026-11-28 讀官方 [Claude for Government](https://claude.com/solutions/government)：供應鏈風險認定（2026-03）「適用於 Claude 作為國防部（DoW）合約與分包一部分的使用」，不適用其他聯邦機關、州地方政府或商業用途，承包商在涵蓋範圍外的使用不受限；
+  - N.D. Cal. 08-27 裁定其中一項認定違法，D.C. Circuit 09-25 以 2 比 1 維持另一項並駁回 Anthropic 聲請，Anthropic 稱評估下一步。該頁未載五角大廈停用或機密負載遷出，只稱 Bedrock 的 AWS GovCloud（US）為 FedRAMP High 並獲 DoD IL4/IL5 核准、機密環境請洽 AWS。
+  - 官方未證實停用範圍。
 - ❓ **待查證**（標 2026-09-30｜查 Federal Trade Commission、subpoena、investigation scope｜複 2026-12-14｜訊 2026-10-15）｜**FTC 傳票範圍與法源是否公布**：依 10-15 日報（CBS News、The Hill）：已對 Anthropic、OpenAI 發出傳票，Ars Technica 同證。
   - 2026-11-14 WebSearch 補：媒體稱（Axios 10-15）兩家各收到逾 50 頁的民事調查要求（CID，傳票的一種），涵蓋安全事故、防護措施、行銷素材與隱私政策；FTC 09-30 已證實調查，法源 FTC Act 第 5 條；ftc.gov 本輪環境無法連。
   - 媒體稱（Reuters 09-30，引 FTC 資深官員）：屬涵蓋多家 AI 實驗室的產業調查，依據為 FTC 對不公平或欺騙行為的職權；傳票具體範圍仍未見。ftc.gov 本輪無法連線，未查官方。
@@ -629,3 +649,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[topics/anthropic-government-policy]] — 政府採購、軍方與監管的事實層
 - [[topics/anthropic-business]] — 訴訟與風險的事實層
 - [[topics/market-lessons]] — 課程表與消息線走向（週更）
+%% 拆頁評估 2026-11-28：不拆，理由＝分不出群。651 行、事件流佔比 0%，與 market-signals-ipo／-customers 同一個版面：逐則判讀（60–493，29 則）／回顧結算（494–540，30 列）／追蹤中的里程碑（541–645）是同一個故事的三層，判讀寫預測、結算回頭對答案、里程碑是未到期的那些，切開任一層另兩層失去對照。本頁已於 11-02 照線別自母頁拆出，再往下切（訴訟／機關調查／政府採用）每群都要複製同一張結算表與里程碑。回顧結算不走蒸餾封存；表 30 列 >20，但最早判讀日 2026-09-09 距今不到 6 個月，無「≥6 個月且已定案」列可搬封存頁（最早可搬日約 2027-03-09）。 %%

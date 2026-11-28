@@ -39,39 +39,39 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 2026-08
 
 ### 2026-08-31
-- **[戰略合作] Seeking Alpha：Amazon 將 OpenAI、Meta、Anthropic 模型帶進 AWS GovCloud**：供政府相關客戶使用，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Seeking Alpha）
-- **[戰略合作] EdTech Innovation Hub：Anthropic 開放美國中小學與學區免費使用 Claude for Teachers 企業版**：延續 Claude Academy（08-23）教育普及路線，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/EdTech Innovation Hub）
+- **[戰略合作] Seeking Alpha：Amazon 將 OpenAI、Meta、Anthropic 模型帶進 AWS GovCloud**：供政府相關客戶使用，相關列見「哪個合作會改到你用的 Claude」表（Google News/Seeking Alpha）
+- **[戰略合作] EdTech Innovation Hub：Anthropic 開放美國中小學與學區免費使用 Claude for Teachers 企業版**：延續 Claude Academy（08-23）教育普及路線，相關列見「哪個合作會改到你用的 Claude」表（Google News/EdTech Innovation Hub）
 - **[商業風險] technology.org／The Guardian：Sony、Warner Chappell 等音樂出版商正式提告，補上「Warner Chappell」具體法律實體名稱**：與 08-29 記錄之 Sony Music／Warner 訴訟為同一案，詳見「還沒過去的風險」表細節更新（Google News；The Guardian）
 - **[投資人／股權] Business Insider：回顧 FTX 案相關人士（Sam Bankman-Fried、Caroline Ellison、Nishad Singh）持有之 Anthropic 股權遭聯邦查扣後的處置現況**：延續 2026-06-15 的「FTX 前 Anthropic 股份估值 $75B」（見下方時序 2026-06-15），本則首度補充查扣後股權**實際處置流程**的後續報導；具體處置方式（拍賣、轉予 FTX 債權人信託、或由 DOJ 直接持有待決）、目前市值換算基準、時程均未見報導，僅標題可用（Business Insider，2026-08-31）
 
 ### 2026-08-29
 - **[商業風險，升級] TechCrunch／Business Insider：Sony Music、Warner 等唱片公司控告 Anthropic 大規模非法透過 BT 下載盜版音樂訓練 Claude，求償每首歌最高 15 萬美元**：延續 08-18 記錄之音樂出版商著作權訴訟（Round Hill Music 10 億美元、另一出版商對 Anthropic/Suno），本次原告升級為主流大型唱片公司，詳見「還沒過去的風險」表更新列（Google News/TechCrunch；Google News/Business Insider）
-- **[戰略合作] Wccftech：OpenAI 退出與 SpaceX 旗下 Cursor 的合作，Anthropic 加碼承接**：具體合約規模、承接比例未見報導，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Wccftech）
+- **[戰略合作] Wccftech：OpenAI 退出與 SpaceX 旗下 Cursor 的合作，Anthropic 加碼承接**：具體合約規模、承接比例未見報導，相關列見「哪個合作會改到你用的 Claude」表（Google News/Wccftech）
 
 ### 2026-08-28
-- **[戰略合作] Forbes／Financial Times：Anthropic 與英國新創 Nscale 簽署 450 億美元資料中心協議，取得 460 MW Vera Rubin 世代算力**：繼 AMD、Nvidia 後第三筆重大算力布局，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Forbes；Google News/Financial Times）
-- **[戰略合作，媒體獨家未經證實] Yahoo Finance 獨家：Claude 營收年增稱達 1,000%，對 ChatGPT 差距縮小**：單一來源、無官方確認，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Yahoo Finance）
-- **[戰略合作，補上具體金額] 後續報導：Meta 傳將於 Anthropic 支出達 100 億美元**：與既有 07-17 記錄之運算力租賃洽談金額相同，詳見「哪個合作會改到你用的 Claude」表 Meta 列更新（Hacker News；Google News/The New York Times）
+- **[戰略合作] Forbes／Financial Times：Anthropic 與英國新創 Nscale 簽署 450 億美元資料中心協議，取得 460 MW Vera Rubin 世代算力**：繼 AMD、Nvidia 後第三筆重大算力布局，相關列見「哪個合作會改到你用的 Claude」表（Google News/Forbes；Google News/Financial Times）
+- **[戰略合作，媒體獨家未經證實] Yahoo Finance 獨家：Claude 營收年增稱達 1,000%，對 ChatGPT 差距縮小**：單一來源、無官方確認，相關列見「哪個合作會改到你用的 Claude」表（Google News/Yahoo Finance）
+- **[戰略合作，補上具體金額] 後續報導：Meta 傳將於 Anthropic 支出達 100 億美元**：與既有 07-17 記錄之運算力租賃洽談金額相同，Meta 列見「哪個合作會改到你用的 Claude」表（Hacker News；Google News/The New York Times）
 - **[戰略合作，財報面補強] WSJ：Salesforce 財報獲利與營收雙雙成長，同步擴大與 Anthropic 合作發布 Claudeforce**：與既有 08-26 記錄為同一事件，詳見「哪個合作會改到你用的 Claude」表 Salesforce 列更新（WSJ；Salesforce 官方新聞稿）
 - **[戰略合作，市場觀感角度] Yahoo Finance：財經評論員 Jim Cramer 稱 Salesforce（CRM）與 Anthropic 合作「緩解 AI 顛覆傳統 SaaS 業務之疑慮」**：與同日 WSJ 財報面補強、08-26 Claudeforce 發布為同一合作事件的市場觀感延伸；呼應本頁「產品市場契合度」段落既有「AI 是否侵蝕傳統 SaaS」討論（見 07 月〈小型企業改用 Claude 自建工作流取代 Salesforce〉一則），本則從 Salesforce 立場提供正面反例——深度整合而非被取代；具體論點內容、是否涉及股價評級調整未見報導，僅標題可用（Google News/Yahoo Finance）。
 
 ### 2026-08-26
 - **[IPO/估值敘事，正反論戰] Hacker News 雙帖＋Anadolu Ajansı／Moomoo 等：Anthropic 傳簡報宣稱 AI 服務潛在市場（TAM）上看 30 兆美元；Yahoo Finance／Marcus on AI／24/7 Wall St.（引述 Chamath Palihapitiya）提出懷疑角度**：須留意「30 兆美元市場總量」與同日 Fortune 報導「2 兆美元 IPO 估值」口徑不同，不可混淆，見 「IPO 追蹤」與「還沒過去的風險」表新增列（Hacker News；Google News/Anadolu Ajansı；Google News/Moomoo；Google News/Yahoo Finance；Google News/Marcus on AI；Google News/24/7 Wall St.；Google News/Fortune）
-- **[研究資助] Anthropic Blog：啟動 500 萬美元獎助計畫，資助 AI 對使用者身心福祉影響之獨立評測研究**：屬公益/CSR 性質，詳見「這些數字是誰說的」表新增列（Anthropic Blog）
-- **[戰略合作] Bloomberg：一家與 Anthropic、Google 合作之 AI 資安新創獲得 1.4 億美元融資**：新創名稱未具名，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Bloomberg.com）
-- **[戰略合作，歸屬待定] ABC News：內部郵件揭露 Anthropic 澳洲 AI 佈局規模**：僅標題層級可用，具體內容未見報導，可能涉及政府合作面向，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/ABC News）
+- **[研究資助] Anthropic Blog：啟動 500 萬美元獎助計畫，資助 AI 對使用者身心福祉影響之獨立評測研究**：屬公益/CSR 性質，相關列見「這些數字是誰說的」表（Anthropic Blog）
+- **[戰略合作] Bloomberg：一家與 Anthropic、Google 合作之 AI 資安新創獲得 1.4 億美元融資**：新創名稱未具名，相關列見「哪個合作會改到你用的 Claude」表（Google News/Bloomberg.com）
+- **[戰略合作，歸屬待定] ABC News：內部郵件揭露 Anthropic 澳洲 AI 佈局規模**：僅標題層級可用，具體內容未見報導，可能涉及政府合作面向，相關列見「哪個合作會改到你用的 Claude」表（Google News/ABC News）
 - **[戰略合作] ababnews.com：轉載 Anthropic 推出免費「Claude Academy」課程消息**：與既有 08-23 記錄為同一事件，來源可信度見「戰略合作細節」08-26 跟進段落，詳見「哪個合作會改到你用的 Claude」表更新（Google News/ababnews.com）
 
 ### 2026-08-25
-- **[基礎設施擴張] KXAN Austin：Anthropic 洽談租用德州 Bastrop County 大型資料中心**：僅標題層級可用，洽談階段非確定簽約，詳見上方「哪個合作會改到你用的 Claude」表新增列（Google News/KXAN Austin）
-- **[IPO/估值敘事分歧] 24/7 Wall St. 同日刊出兩篇方向相反文章：「意圖超越 SpaceX IPO 規模」vs「估值遠遜於 SpaceX」**：兩篇並陳呈現、不擇一，詳見上方[[topics/anthropic-ipo]] 表新增列（Google News/24/7 Wall St.；Google News/Yahoo Finance）
-- **[治理權分析] Bloomberg〈Who Should Control Anthropic?〉**：與既有超級投票權籌備信號同屬治理敘事，詳見上方[[topics/anthropic-ipo]] 表新增列（Google News/Bloomberg）
+- **[基礎設施擴張] KXAN Austin：Anthropic 洽談租用德州 Bastrop County 大型資料中心**：僅標題層級可用，洽談階段非確定簽約，相關列見上方「哪個合作會改到你用的 Claude」表（Google News/KXAN Austin）
+- **[IPO/估值敘事分歧] 24/7 Wall St. 同日刊出兩篇方向相反文章：「意圖超越 SpaceX IPO 規模」vs「估值遠遜於 SpaceX」**：兩篇並陳呈現、不擇一，相關列見上方[[topics/anthropic-ipo]]表（Google News/24/7 Wall St.；Google News/Yahoo Finance）
+- **[治理權分析] Bloomberg〈Who Should Control Anthropic?〉**：與既有超級投票權籌備信號同屬治理敘事，相關列見上方[[topics/anthropic-ipo]]表（Google News/Bloomberg）
 - **[企業採用反面訊號] cio.com：部分企業對 Anthropic 旗艦模型採用意願不如預期**：與 08-23 FT 消費者端反面訊號並置，詳見上方「產品市場契合度」反面訊號段落更新（Google News/cio.com）
 
 ### 2026-08-24
 - **[人才／文化] Axios 獨家：Anthropic 面試候選人時會詢問其如何看待「使命」與「金錢」之間的優先順序**：屬公司招募文化／人才篩選標準的具體訊號，與本頁既有「敘事整備」（07-17，Anthropic 揭露支付 60 萬美元徵才協助形塑 IPO 敘事）同屬公司對外形象經營路線，但本則聚焦招募流程本身而非公關職缺；若此為系統性面試設計，顯示公司在快速擴張＋IPO 前更看重候選人對「使命優先」文化的認同度，避免純粹逐利心態稀釋既有安全/使命導向敘事（推論）；具體面試問題全文、篩選權重、適用職級範圍未見報導，僅標題可用（Google News/Axios）。**08-25 跟進（Hacker News，36 分，補上具體引述）**：報導原文引述一名求職者（因擔憂影響未來求職機會而匿名受訪）回憶，面試官問其若公司未來因安全考量放棄 AI 願景、導致股票歸零，會作何感受——是「使命 vs 金錢」提問框架下的具體場景範例。HN 討論兩極：部分留言認為這是 Anthropic 一貫透明作風的延伸、非新聞爆點；另有留言認為此問法對一般求職者而言不近人情。屬同一報導的深化補充，未改變既有「招募文化篩選訊號」的判讀（Hacker News）
 - **[市場滲透] Bloomberg.com：Anthropic 表態指出澳洲在 Claude 程式開發工具的採用速度上落後其他市場**：是本頁首見針對單一國家市場「採用落後」的官方公開表態，與既有企業採用率指標（Ramp AI Index 34.4%，全球整體數字）為不同顆粒度——本則為特定地區的相對落後評語，非全球數字修正；與 08-03 的印度市場擴大布局（在地化定價＋更普及）形成對照，顯示 Anthropic 對不同市場的滲透速度存在明顯落差，且公司願意公開點名特定市場落後（推論）；具體落後幅度、比較基準（對比美國或其他亞太市場）、Anthropic 是否有對應澳洲市場的加碼計畫均未見報導，僅標題可用（Google News/Bloomberg.com）
-- **[戰略合作] EdTech Innovation Hub：Anthropic 推出「Claude Academy」，提供免費 AI 課程與企業導入指南**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/EdTech Innovation Hub）
+- **[戰略合作] EdTech Innovation Hub：Anthropic 推出「Claude Academy」，提供免費 AI 課程與企業導入指南**：相關列見「哪個合作會改到你用的 Claude」表（Google News/EdTech Innovation Hub）
 - **[商業風險] The Daily Beacon：UT 校內學生報跟進報導 UTRF 專利侵權訴訟**：與既有 07-21 UTRF 訴訟為同一案，詳見「還沒過去的風險」表更新（Google News/The Daily Beacon）
 - **[戰略合作] citybiz：轉載 Amir Salek 加入 Anthropic 消息**：與既有 08-21/08-23 記錄為同一事件，詳見「哪個合作會改到你用的 Claude」表更新（Google News/citybiz）
 
@@ -81,54 +81,54 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 2026-08-21
 - **[IPO 前瞻] CNBC（消息人士）：Anthropic IPO 申報文件將把「AI 反彈情緒」列為風險因素之一**：見 [[topics/anthropic-ipo]]（Google News/CNBC）
 - **[IPO 前瞻] Financial Times：整理散戶投資人參與 Anthropic IPO 前需留意的重點**：見 [[topics/anthropic-ipo]]（Google News/Financial Times）
-- **[戰略合作，首見晶片人才招募訊號] Seeking Alpha／Bloomberg（雙重來源確認）：Anthropic 延攬前 Google 晶片工程師，評估自研晶片方案跨入硬體領域**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Seeking Alpha；Bloomberg.com）
+- **[戰略合作，首見晶片人才招募訊號] Seeking Alpha／Bloomberg（雙重來源確認）：Anthropic 延攬前 Google 晶片工程師，評估自研晶片方案跨入硬體領域**：相關列見「哪個合作會改到你用的 Claude」表（Google News/Seeking Alpha；Bloomberg.com）
 
 ### 2026-08-20
 - **[IPO 前瞻] Bloomberg：Anthropic 據傳預期 IPO 規模將比肩甚至超越 SpaceX 先前紀錄發行規模；Yahoo Finance：Anthropic 有可能最快本月遞交 IPO 文件**：均僅標題可用，見 [[topics/anthropic-ipo]]（Google News/Bloomberg.com；Google News/Yahoo Finance）
-- **[戰略合作] crn.com／Seeking Alpha／The Information：與 Anthropic 關聯之 Ode 收購顧問公司 Casper Studios**：延續 07-16 的 Ode 合資公司動態，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/crn.com；Google News/Seeking Alpha；Google News/The Information）
+- **[戰略合作] crn.com／Seeking Alpha／The Information：與 Anthropic 關聯之 Ode 收購顧問公司 Casper Studios**：延續 07-16 的 Ode 合資公司動態，相關列見「哪個合作會改到你用的 Claude」表（Google News/crn.com；Google News/Seeking Alpha；Google News/The Information）
 - **[計費/合規政策，詳見 pricing] 路透社／彭博社（消息人士）：Anthropic 據傳計畫調整企業資料保留政策**：當時未經官方證實，本頁不重複列出，詳見 [[entities/pricing]]「定價與促銷」（**後續（2026-09-03）**：官方版本即 09-01 公告的 Enterprise Frontier Safeguards，見本頁「哪個合作會改到你用的 Claude」EFS 列）；競爭面（OpenAI 零資料保留承諾）詳見 [[topics/competitor-landscape]]（Google News/Reuters；Google News/Bloomberg.com）
 - **[具名企業退出，詳見 enterprise-tool-tracker] Yahoo Finance：Goldman Sachs、OKX 雙雙於香港被切斷 Claude AI 存取權限**：涉及地緣政治與合規因素，成因未明；本頁不重複列出，詳見 [[topics/enterprise-tool-tracker]]、[[topics/anthropic-government-policy]]（Google News/Yahoo Finance）
-- **[財務狀況] CNBC：Anthropic 已超越 OpenAI 成為市場最熱門 AI 新創（含股票贏家/輸家分析）**：詳見「這些數字是誰說的」表新增列（Google News/CNBC）
-- **[財務狀況，安全面另見 ai-agent-safety] The Information：OpenAI 安全政策追上 Anthropic 之際，Anthropic 營收領先幅度仍在擴大**：本頁僅記錄商業面，詳見「這些數字是誰說的」表新增列（Google News/The Information）
+- **[財務狀況] CNBC：Anthropic 已超越 OpenAI 成為市場最熱門 AI 新創（含股票贏家/輸家分析）**：相關列見「這些數字是誰說的」表（Google News/CNBC）
+- **[財務狀況，安全面另見 ai-agent-safety] The Information：OpenAI 安全政策追上 Anthropic 之際，Anthropic 營收領先幅度仍在擴大**：本頁僅記錄商業面，相關列見「這些數字是誰說的」表（Google News/The Information）
 - **[IPO 前瞻，分析文章] Motley Fool：若 IPO 估值傳聞成真，Amazon 持有 Anthropic 股份價值恐超過 $4,000 億美元**：見 [[topics/anthropic-ipo]]（Google News/The Motley Fool）
-- **[戰略合作] Yahoo Finance：與 Anthropic 相關資料中心取得 13 億美元私募信貸貸款**：未具名資料中心，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Yahoo Finance）
+- **[戰略合作] Yahoo Finance：與 Anthropic 相關資料中心取得 13 億美元私募信貸貸款**：未具名資料中心，相關列見「哪個合作會改到你用的 Claude」表（Google News/Yahoo Finance）
 
 ### 2026-08-19
 - **[IPO 前置動作] Reuters：Anthropic 傳保留創辦人超級投票權**：引述 The Information，僅標題可用，見 [[topics/anthropic-ipo]]（Google News/Reuters）
 - **[IPO 前置動作] Bloomberg：Anthropic 上市前信用額度傳擴大至逾 100 億美元**：僅標題可用，見 [[topics/anthropic-ipo]]（Google News/Bloomberg.com）
-- **[商業風險] The Hollywood Reporter／Reuters：Round Hill Music（10 億美元求償）與另一家音樂出版商對 Anthropic、Suno 提起著作權侵權訴訟**：音樂產業首度具名著作權訴訟，詳見「還沒過去的風險」表新增列（Google News/The Hollywood Reporter；Google News/Reuters）
-- **[財務狀況，多來源含相反訊號] WSJ／CoinDesk／SiliconANGLE：OpenAI 第二季業績落後 Anthropic；The Information：OpenAI 在 OpenRouter 客戶占比回升**：詳見「這些數字是誰說的」表新增列（Hacker News/WSJ；Google News/CoinDesk；Google News/SiliconANGLE；Google News/The Information）
+- **[商業風險] The Hollywood Reporter／Reuters：Round Hill Music（10 億美元求償）與另一家音樂出版商對 Anthropic、Suno 提起著作權侵權訴訟**：音樂產業首度具名著作權訴訟，相關列見「還沒過去的風險」表（Google News/The Hollywood Reporter；Google News/Reuters）
+- **[財務狀況，多來源含相反訊號] WSJ／CoinDesk／SiliconANGLE：OpenAI 第二季業績落後 Anthropic；The Information：OpenAI 在 OpenRouter 客戶占比回升**：相關列見「這些數字是誰說的」表（Hacker News/WSJ；Google News/CoinDesk；Google News/SiliconANGLE；Google News/The Information）
 - **[具名企業/機構採用，詳見 enterprise-tool-tracker] Payward 採用 Claude Mythos 5；Duke University 推出 pay-as-you-go Claude 訂閱方案**：本頁不重複列出，詳見 [[topics/enterprise-tool-tracker]]（Google News/FF News；Google News/The Duke Chronicle）
 
 ### 2026-08-18
 - **[IPO 前瞻／財務狀況，重大，四方同步報導] Bloomberg、Reuters、CNBC、Benzinga：Anthropic 年化營收站上 $65B（7 月數字）**：CNBC 引述消息稱 Anthropic 已向投資人透露；見 「IPO 追蹤」與「現在的數字」表更新（Google News/Bloomberg；Google News/Reuters；Google News/CNBC；Google News/Benzinga）
 - **[財務狀況，補充] TechRadar／Hacker News（22 分）：Anthropic 定價最高卻拿下最多 AI token 營收（Vercel 數據，7 月）**：延續 08-15 的「Apple of AI」框架，補上 Vercel 統計佐證，詳見「這些數字是誰說的」表更新列（Hacker News）
-- **[商業風險，單一來源] The Information：探討 Anthropic、OpenAI 是否將停止把最強模型販售給企業客戶**：僅標題可用，詳見「還沒過去的風險」表新增列（Google News/The Information）
+- **[商業風險，單一來源] The Information：探討 Anthropic、OpenAI 是否將停止把最強模型販售給企業客戶**：僅標題可用，相關列見「還沒過去的風險」表（Google News/The Information）
 
 ### 2026-08-15
 - **[IPO 前瞻，重大，首見具體遠期預測數字] Reuters 獨家：IPO 估值取決於 2028 年 $190–200B 營收預測**：知情人士消息，未經官方證實，見 [[topics/anthropic-ipo]]（[Reuters](https://www.reuters.com/business/anthropic-ipo-valuation-hinges-190-200-billion-2028-revenue-forecast-sources-say-2026-08-15/)）
-- **[財務狀況，首見具體單季數字] Yahoo Finance：2026 Q2 營收超過 $115 億美元**：詳見「這些數字是誰說的」表新增列（Google News/Yahoo Finance）
+- **[財務狀況，首見具體單季數字] Yahoo Finance：2026 Q2 營收超過 $115 億美元**：相關列見「這些數字是誰說的」表（Google News/Yahoo Finance）
 - **[IPO 前瞻，評論文章] Forbes：以 2 兆美元估值切入討論 AI 泡沫疑慮**：延續 08-13 的估值傳聞，屬評論性分析，見 [[topics/anthropic-ipo]]（Google News/Forbes）
-- **[財務狀況] Business Journals：Anthropic 合資企業於 Raleigh 招聘，最高職缺薪資逾 $60 萬美元**：詳見「這些數字是誰說的」表新增列（Google News/The Business Journals）
+- **[財務狀況] Business Journals：Anthropic 合資企業於 Raleigh 招聘，最高職缺薪資逾 $60 萬美元**：相關列見「這些數字是誰說的」表（Google News/The Business Journals）
 
 ### 2026-08-14
 - **[IPO 前瞻] CNBC（雙重來源確認）：CFO Krishna Rao 已展開早期 IPO 相關投資人會議，尚未討論估值**：見 [[topics/anthropic-ipo]]（Google News/CNBC）
 - **[IPO 前瞻] Gizmodo：投資人評估估值上看 2 兆美元**：與同日 CFO 投資人會議報導並置，屬投資人一方評估／臆測，見 [[topics/anthropic-ipo]]（Google News/Gizmodo）
 
 ### 2026-08-13
-- **[戰略合作，收購洽談，跨多來源] Bloomberg、Reuters、calcalistech、Gizmodo：Anthropic 傳洽購世界模型新創 Decart，約 60 億美元**：calcalistech 指出 Decart 為以色列 AI 新創；Hacker News 討論串出現質疑聲音，詳見「哪個合作會改到你用的 Claude」表新增列（Hacker News；Google News/Reuters；Google News/calcalistech；Google News/Gizmodo；Bloomberg 原文）
+- **[戰略合作，收購洽談，跨多來源] Bloomberg、Reuters、calcalistech、Gizmodo：Anthropic 傳洽購世界模型新創 Decart，約 60 億美元**：calcalistech 指出 Decart 為以色列 AI 新創；Hacker News 討論串出現質疑聲音，相關列見「哪個合作會改到你用的 Claude」表（Hacker News；Google News/Reuters；Google News/calcalistech；Google News/Gizmodo；Bloomberg 原文）
 - **[IPO 前瞻] PYMNTS、Financial Times（雙重來源確認）、WSJ：Anthropic 評估上看 2 兆美元估值、規劃創紀錄 IPO**：三則均僅標題可用，見 [[topics/anthropic-ipo]]（Google News/PYMNTS；Google News/Financial Times；Google News/WSJ）
-- **[財務分析，單一來源，非新增融資] Yahoo Finance：Nvidia 對 OpenAI、Anthropic 等公司合計約 700 億美元投資的潛在股東回報分析**：僅標題可用，詳見「這些數字是誰說的」表新增列（Google News/finance.yahoo.com）
+- **[財務分析，單一來源，非新增融資] Yahoo Finance：Nvidia 對 OpenAI、Anthropic 等公司合計約 700 億美元投資的潛在股東回報分析**：僅標題可用，相關列見「這些數字是誰說的」表（Google News/finance.yahoo.com）
 
 ### 2026-08-11
-- **[戰略合作] Anthropic 與 Riot Platforms 簽署 20 年、90 億美元雲端協議；另與 GIC、Macquarie 洽談資料中心開發**：多家媒體報導，詳見「哪個合作會改到你用的 Claude」表新增三列（多家媒體）
-- **[戰略合作] 南韓 Naver 投資 Anthropic 700 萬美元**：KED Global 報導，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/KED Global）
+- **[戰略合作] Anthropic 與 Riot Platforms 簽署 20 年、90 億美元雲端協議；另與 GIC、Macquarie 洽談資料中心開發**：多家媒體報導，相關列見「哪個合作會改到你用的 Claude」表（多家媒體）
+- **[戰略合作] 南韓 Naver 投資 Anthropic 700 萬美元**：KED Global 報導，相關列見「哪個合作會改到你用的 Claude」表（Google News/KED Global）
 - **[IPO 前瞻] WSJ：Anthropic IPO 前設法穩固投資人信心**：見 [[topics/anthropic-ipo]]（Google News/WSJ）
 - **[戰略合作，媒體角度延伸] VentureBeat：AWS Continuum 整合 Codex 與 Claude Code，定位為大型 AI 資安舉措一環**：與既有 08-05 的 AWS Continuum 合作事實一致，詳見「哪個合作會改到你用的 Claude」表 AWS 列補充（Google News/VentureBeat）
 
 ### 2026-08-10
 - **[戰略合作，已確認為 08-04 Volta 案之重複報導] Google News／Yahoo Finance：Anthropic 與「成立僅七個月」新創簽下 100 億美元歐洲算力合約**：2026-09-20 查證確認與 08-04 Volta 案為同一筆交易，詳見「哪個合作會改到你用的 Claude」一行制清單 Volta 條目（Google News/Yahoo Finance）
-- **[財務狀況，詳見 ⟨Q-01⟩] Hacker News 論戰：OpenAI／Anthropic 合計佔 AI 產業營收 70%**：YouTube 影片主張此比例，HN 討論串（73 分）出現反駁聲音質疑推理市場規模被高估，詳見「這些數字是誰說的」表新增列（Hacker News）
+- **[財務狀況，詳見 ⟨Q-01⟩] Hacker News 論戰：OpenAI／Anthropic 合計佔 AI 產業營收 70%**：YouTube 影片主張此比例，HN 討論串（73 分）出現反駁聲音質疑推理市場規模被高估，相關列見「這些數字是誰說的」表（Hacker News）
 - **[基礎設施投資規模，分析文章，2026-09-05 自 [[topics/competitor-landscape]] 移入] SemiAnalysis（經 Stocktwits 轉引）：討論 Microsoft 能否在 AI 基礎設施競賽中超越 OpenAI 與 Anthropic**：財經媒體 Stocktwits 轉引研究機構 SemiAnalysis 分析，文中提及每 GW 推理商機規模達**千億美元**（$100B-per-GW）的估算。**與既有觀察的呼應**：延續 07-07 Microsoft 傳出以自研模型逐步取代 OpenAI/Anthropic 模型、07-15 訓練業務團隊淡化競品優勢等既有對抗策略軌跡，本次從「產品/銷售」層面轉向「基礎設施投資規模」層面立論，若分析屬實，代表 Microsoft 對抗兩大競爭對手的路線正擴及運算基礎設施投資規模的直接比拼（推論）
 - **$100B-per-GW 推理商機的測算方法已查得**（2026-09-20 查證）：
   - 營收側：SemiAnalysis 用自家 **Tokenomics Model ＋ Inference Simulator**，以 GB300 叢集與前沿級模型架構，配合其 agentic coding 基準 **AgentX**（取自真實生產環境的 coding trace）估算 token 產出。
@@ -136,29 +136,29 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - **這是單一分析機構的模型估算，不是任一公司的財報或官方數字**，且營收端假設滿載售出（[SemiAnalysis X 貼文](https://x.com/SemiAnalysis_/status/2087667983288078795)、[InferenceX 估算器](https://inferencex.semianalysis.com/profit-estimator-per-gigawatt)）。
 
 ### 2026-08-08
-- **[新事業/人才佈局] Anthropic 任命 Robert Mahari 出任新設「Claude for Legal」部門負責人**：Legal IT Insider、Law.com 兩家獨立媒體同日報導，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Legal IT Insider；Google News/Law.com）
+- **[新事業/人才佈局] Anthropic 任命 Robert Mahari 出任新設「Claude for Legal」部門負責人**：Legal IT Insider、Law.com 兩家獨立媒體同日報導，相關列見「哪個合作會改到你用的 Claude」表（Google News/Legal IT Insider；Google News/Law.com）
 - **[法律風險，🔎 查無新訴訟證據]** The Post-Crescent 報導 Anthropic 因訓練 AI 使用受版權保護書籍遭提告：查證（2026-08-13，複查 2026-09-13）後查無獨立於既有 15 億美元著作權集體訴訟和解案的新案報導，高度疑似地方報重提舊案，惟未能取得原文 100% 排除新案可能，詳見「還沒過去的風險」表對應列（Google News/The Post-Crescent）
 
 ### 2026-08-07
 - **[重大，戰略層級，硬體自主] Anthropic 正式證實成立內部晶片設計團隊**：Reuters、TechCrunch、Business Insider、Tom's Hardware（皆 08-05）、arstechnica（08-06）、Fstoppers（08-07）六家媒體連續三天報導；Anthropic 發言人首次公開證實自研 Claude 推理晶片計畫，同時明確表態仍維持「多晶片」策略，AWS/Google/Nvidia/AMD 硬體仍是擴展運算核心。詳見「商業模式」新增說明（Google News/Reuters；Google News/TechCrunch；Google News/Business Insider；Google News/Tom's Hardware；Google News/arstechnica；Google News/Fstoppers）
-- **[戰略合作] Millennium 與 Anthropic 合作開發 AI 風險分析師**：Yahoo Finance（三重來源確認）報導，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Yahoo Finance）
-- **[戰略合作] AWS 攜手 Anthropic、OpenAI 推出 AWS Continuum**：AWS 官方宣布，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/AWS）
+- **[戰略合作] Millennium 與 Anthropic 合作開發 AI 風險分析師**：Yahoo Finance（三重來源確認）報導，相關列見「哪個合作會改到你用的 Claude」表（Google News/Yahoo Finance）
+- **[戰略合作] AWS 攜手 Anthropic、OpenAI 推出 AWS Continuum**：AWS 官方宣布，相關列見「哪個合作會改到你用的 Claude」表（Google News/AWS）
 - **[企業採用，詳見 enterprise-tool-tracker，非新增合作事實] Syracuse University 擴大 Claude Enterprise 授權（含 Claude Code、Claude Cowork）**：Syracuse University Today 官方報導，詳見 [[topics/enterprise-tool-tracker]]
 
 ### 2026-08-04
-- **[戰略合作] Anthropic 與新創雲端運算商 Volta 簽署 100 億美元運算協議**：TechCrunch、The Telegraph（補充：僅成立八個月的英國新創）、TipRanks（補充：獲 Nvidia 支持）三方同日報導同一事件，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/TechCrunch；Google News/The Telegraph；Google News/TipRanks）
-- **[戰略合作] SpaceX 財報揭露 Anthropic／Google 運算合作推升營收翻倍**：TechCrunch 報導，詳見「哪個合作會改到你用的 Claude」表新增列（Google News/TechCrunch）
+- **[戰略合作] Anthropic 與新創雲端運算商 Volta 簽署 100 億美元運算協議**：TechCrunch、The Telegraph（補充：僅成立八個月的英國新創）、TipRanks（補充：獲 Nvidia 支持）三方同日報導同一事件，相關列見「哪個合作會改到你用的 Claude」表（Google News/TechCrunch；Google News/The Telegraph；Google News/TipRanks）
+- **[戰略合作] SpaceX 財報揭露 Anthropic／Google 運算合作推升營收翻倍**：TechCrunch 報導，相關列見「哪個合作會改到你用的 Claude」表（Google News/TechCrunch）
 - **[企業採用，詳見 enterprise-tool-tracker，非新增合作事實] Fierce Biotech 二次報導 ICON 與 Anthropic 臨床試驗合作**：延續 07-29 的 ICON（Clinical Trials Arena）合作案，詳見 [[topics/enterprise-tool-tracker]]
 
 ### 2026-08-02
-- **[戰略合作，基礎設施擴張] Morgan Stanley 領投 150 億美元 Anthropic 德州資料中心校園投資案**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/thestreet.com）
+- **[戰略合作，基礎設施擴張] Morgan Stanley 領投 150 億美元 Anthropic 德州資料中心校園投資案**：相關列見「哪個合作會改到你用的 Claude」表（Google News/thestreet.com）
 
 ## 2026-07
 
 ### 2026-07-29
-- **[戰略合作] Oxide 加入 Project Glasswing**：詳見「哪個合作會改到你用的 Claude」表新增列（Oxide 官方部落格；Hacker News，16 分，雙重來源確認）
+- **[戰略合作] Oxide 加入 Project Glasswing**：相關列見「哪個合作會改到你用的 Claude」表（Oxide 官方部落格；Hacker News，16 分，雙重來源確認）
 - **[戰略合作，媒體重複報導] Yahoo Finance 重申 Meta 與 Anthropic 早期洽談 100 億美元運算力租賃**：與 07-17 的 Reuters／NYT／Hacker News 三方報導事實一致（金額、洽談階段均未變），未見新增條款或進展，維持既有「哪個合作會改到你用的 Claude」表 Meta 列不動，用詞保守——仍屬早期洽談，非確定簽約（Google News/Yahoo Finance）
-- **[戰略合作，資安/合規生態擴張] Surf AI 宣布整合 Claude Compliance API**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Yahoo Finance）
+- **[戰略合作，資安/合規生態擴張] Surf AI 宣布整合 Claude Compliance API**：相關列見「哪個合作會改到你用的 Claude」表（Google News/Yahoo Finance）
 - **[企業採用，詳見 enterprise-tool-tracker] ICON 與 Anthropic 合作將 Claude AI 整合進臨床試驗流程；Cognizant（CTSH）股價因 07-28 合作公告第二日再漲 8%**：詳見 [[topics/enterprise-tool-tracker]]
 - **[競品動態，詳見 competitor-landscape] The Information（三重來源確認）：儘管 Codex 與開源模型討論度上升，Claude Code 採用黏著度仍領先**：詳見 [[topics/competitor-landscape]]
 - **[已查證]** Axios〈Anthropic's lonely island〉：已查證（2026-08-13）——文章核心論點為 Anthropic 是唯一未簽署 Nvidia CEO Jensen Huang 領銜「Open Weights and American AI Leadership」產業公開信的前沿實驗室；Dario Amodei 發部落格回應強調「Anthropic 從未主張禁止開放權重模型」，但仍未簽署該信，凸顯其在開放權重立場上與同業孤立（[Axios 原文](https://www.axios.com/2026/07/29/anthropic-claude-open-models-ban-china)）（Google News/Axios，雙重來源確認）
@@ -176,7 +176,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-07-24
 - **[估值訊號] Bloomberg：Alphabet 持有 Anthropic 股權市值跳升至約 1,240 億美元**：見 [[topics/anthropic-ipo]]、[[entities/google-investment]] 時序（Google News/Bloomberg.com）
-- **[戰略合作，資安生態擴張] Cyberhaven 新增支援 ChatGPT Enterprise 與 Claude Compliance API 整合；Orca Security 07-21 整合再獲二次確認**：詳見「哪個合作會改到你用的 Claude」表新增列/更新（Google News/PR Newswire；Google News/Security Info Watch）
+- **[戰略合作，資安生態擴張] Cyberhaven 新增支援 ChatGPT Enterprise 與 Claude Compliance API 整合；Orca Security 07-21 整合再獲二次確認**：相關列見「哪個合作會改到你用的 Claude」表/更新（Google News/PR Newswire；Google News/Security Info Watch）
 - **[著作權和解案，媒體擴散] NDTV 跟進報導《哈利波特》系列出版商將獲數百萬美元賠付**：與 07-22/23 已記錄事實相同，未見新增細節，詳見「這些數字是誰說的」表更新（Google News/NDTV）
 - **[計費/配額相關，詳見 pricing] GitHub Issue #79337：Fable 5 於 Max 方案的用量點數異常持續逾 4 天未解**：詳見 [[entities/pricing]]「當前生效的計費規則」
 - **[補貼可持續性，一手實測，詳見 pricing] Hacker News/modelplane.ai：Team 綁定方案改走純 API 計費後月費暴增 44 倍，推估補貼倍數約 13 倍**：與既有 token-xray 17 倍估計方向一致，詳見 [[entities/pricing]]「成本案例與優化」（Hacker News/modelplane.ai）
@@ -184,20 +184,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[競品動態，詳見 competitor-landscape] tech-insider.org：Antigravity vs Cursor vs Claude Code 定價比較（Free 至 $200，標題層級）**：詳見 [[topics/competitor-landscape]]
 
 ### 2026-07-23
-- **[重大，CSR/經濟政策研究，官方公告] Anthropic 公布 Economic Futures Research Fund 研究議程，承諾投入 2 億美元支持外部研究**：Anthropic Blog 公告研究議程，聚焦勞工衝擊、AI 轉型輔助、所得支持現代化、工作者在 AI 成長中的持股五大方向；官方原文明確表態：「We're committing $200 million to the fund to support ambitious external research on interventions to prepare society for the economic impacts of AI.」詳見「這些數字是誰說的」表新增列（Anthropic Blog https://www.anthropic.com/news/economic-futures-research-fund-agenda）
+- **[重大，CSR/經濟政策研究，官方公告] Anthropic 公布 Economic Futures Research Fund 研究議程，承諾投入 2 億美元支持外部研究**：Anthropic Blog 公告研究議程，聚焦勞工衝擊、AI 轉型輔助、所得支持現代化、工作者在 AI 成長中的持股五大方向；官方原文明確表態：「We're committing $200 million to the fund to support ambitious external research on interventions to prepare society for the economic impacts of AI.」相關列見「這些數字是誰說的」表（Anthropic Blog https://www.anthropic.com/news/economic-futures-research-fund-agenda）
 - **[產品/工具，資訊量少，與上則不同產物] Anthropic Economic Index connector 曝光**：Google News 收錄一則 Anthropic 相關報導，介紹「Anthropic Economic Index connector」。**注意**：與上則 Economic Futures Research Fund 同屬經濟研究相關動態但為不同產物（一為研究資金承諾，一為工具/連接器產品），僅標題可用，具體功能與定位未見報導，暫不合併記錄（Google News/Anthropic）
 - **[IPO 敘事，兩則標題層級報導，無新增查證數字] SF Chronicle、24/7 Wall St. 同日探討 Anthropic／OpenAI 兆美元估值 IPO 前景**：San Francisco Chronicle 分析 OpenAI 與 Anthropic 未來可能以數兆美元估值掛牌上市，探討舊金山當地能否受益；24/7 Wall St. 評論文章稱兆美元估值的 Anthropic IPO「已成定局」，作者表示不會投資。**注意**：兩則均僅標題可用，未見具體估值數字、時程或官方確認，延續既有「IPO 追蹤」 表所記錄的市場臆測層級訊號，暫不新增正式表格列（該表僅收錄有具體查證數字或事件的條目），僅記錄為既有敘事延續（Google News/San Francisco Chronicle；Google News/24/7 Wall St.）
 - **[企業成本案例，詳見 enterprise-cost-management] Business Insider：Amazon 逐步降低 Alexa 對 Anthropic 高成本模型依賴以削減 AI 支出**：詳見 [[topics/enterprise-cost-management]]（Google News/Business Insider）
-- **[著作權和解案再添細節，四媒體跟進] The Guardian：《哈利波特》系列出版商將獲數百萬美元賠付**：詳見「這些數字是誰說的」表新增列（The Wenatchee World；Jurist.org；The Guardian；WXYZ Channel 7）
+- **[著作權和解案再添細節，四媒體跟進] The Guardian：《哈利波特》系列出版商將獲數百萬美元賠付**：相關列見「這些數字是誰說的」表（The Wenatchee World；Jurist.org；The Guardian；WXYZ Channel 7）
 - **[競品動態，詳見 competitor-landscape] tech-insider.org：Cline vs Claude Code vs Copilot 定價比較（Free vs $20 vs $10）**：詳見 [[topics/competitor-landscape]]
 
 ### 2026-07-22
-- **[重大，晶片供應鏈＋投資，三媒體同步] AMD 宣布對 Anthropic 投資最高 50 億美元，簽署晶片暨投資協議**：詳見「哪個合作會改到你用的 Claude」表新增列（Reuters／Hacker News；Google News/WSJ；Google News/Yahoo Finance）
+- **[重大，晶片供應鏈＋投資，三媒體同步] AMD 宣布對 Anthropic 投資最高 50 億美元，簽署晶片暨投資協議**：相關列見「哪個合作會改到你用的 Claude」表（Reuters／Hacker News；Google News/WSJ；Google News/Yahoo Finance）
 - **[投資人效應分析，標題層級] Fortune：Anthropic 與 SpaceX 的支出讓 Google 締造公司史上獲利最高一季（帳面上）**：Fortune 分析文章指出 Anthropic 與 SpaceX 兩者的支出，如何在帳面上幫助 Google 締造公司史上獲利最高的一季。**注意**：僅標題可用，具體財報數字、Anthropic 對 Google Cloud 的支出規模未見細節；與既有 [[entities/google-investment]]（Google 對 Anthropic $400 億美元投資）、07-17 BofA 分析師觀點（Alphabet 財報可能因雲端業務與 Anthropic 投資收益優於預期）同屬「Anthropic 支出/投資回饋 Google 財報」的分析角度延伸（推論）（Google News/Fortune）
 - **[重大，法律/財務，多媒體跟進] 著作權和解案執行細節浮現：91% 賠付申請率、律師費削減至 6.8%、Bloomsbury 分潤**：延續 07-20 法院核准 15 億美元著作權集體訴訟和解案消息，今日多家媒體補充執行細節——法院文件顯示逾 48.2 萬本受涵蓋書籍中約 **91%** 已由作者或出版商提出賠付申請（每本約 3,000 美元），法官將集體訴訟律師費比例削減至 **6.8%**（原告律師 Justin Nelson 稱此為「史上最大宗已知著作權求償和解案」）；英國出版商 **Bloomsbury** 確認為受益方之一（The Times、Research Information、Reuters 均以 Bloomsbury 分潤為標題重點）。**對商業的意涵**：高達 91% 的申請率顯示和解案執行進度快速、爭議金額實質流向作者與出版商，強化「和解已進入落地階段而非僅具法律效力」的敘事；律師費比例（6.8%）遠低於美國集體訴訟常見的 25–33%，可能反映法官對過高律師費的審查趨嚴（推論）（Mashable「largest copyright class action settlement in history」；marketplace.org；nashuatelegraph.com；AnewZ；Reuters ×2；The Times；Research Information；[HN 討論](https://news.ycombinator.com/item?id=48996972)；[法院文件 PDF](https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.680.0_4.pdf)）
 - **[新事件，獨立於著作權和解案，兩來源交叉確認] Anthropic 遭指控侵犯神經網路技術相關專利**：Reuters、Bloomberg Law 各自報導 Anthropic 因神經網路技術相關專利遭提告。**注意**：僅標題可用，待補充——原告名稱、具體專利號、求償金額均未見報導；與 07-20/07-22 著作權和解案為完全不同的法律案件（著作權涉及訓練資料來源合法性，本案涉及專利技術本身），不可混為一談（Reuters「Anthropic sued for infringing neural network technology patents」；Bloomberg Law News「Anthropic Hit With Patent Suit Over Claude AI Neural Networks」）
 - **[新事件，獨立於著作權和解案] 田納西大學對 Anthropic 提起訴訟**：Knoxville News Sentinel（經 Google News 轉載）報導田納西大學對 Anthropic 提起訴訟。**注意**：僅標題可用，待補充——具體案由、求償內容、與 Anthropic 有何業務往來均未見報導，暫不推測性質（Google News/Knoxville News Sentinel）
-- **[商業合作，次要，兩則資安廠商整合] Orca Security 與 Druva 分別擴充其資安/韌性平台整合 Claude API**：詳見「哪個合作會改到你用的 Claude」表新增列（Business Wire；Virtualization Review）
+- **[商業合作，次要，兩則資安廠商整合] Orca Security 與 Druva 分別擴充其資安/韌性平台整合 Claude API**：相關列見「哪個合作會改到你用的 Claude」表（Business Wire；Virtualization Review）
 - **[競品/聲譽動態，詳見 competitor-landscape] 中國 AI agent 於自主研究任務據稱超越 Claude Code；Claude 曾自稱為 Alibaba Qwen AI 引發蒸餾雙標批評**：詳見 [[topics/competitor-landscape]]
 
 ### 2026-07-21
@@ -210,7 +210,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 2026-07-20
 - **[IPO 前瞻，創投表態] Yahoo Finance UK：具名創投人士看好 Anthropic IPO 前景優於 OpenAI**：見 [[topics/anthropic-ipo]]（Google News/Yahoo Finance UK）
 - **[IPO 前瞻，財務前置動作，07-19 報導] Anthropic 傳出仿效 SpaceX 模式尋求數十億美元信貸額度**：見 [[topics/anthropic-ipo]]（Google News/Yahoo Finance）
-- **[戰略合作，UST 合作範疇疑似再擴大] The Fast Mode：UST 與 Anthropic 合作部署 Claude AI 至企業平台**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/The Fast Mode）
+- **[戰略合作，UST 合作範疇疑似再擴大] The Fast Mode：UST 與 Anthropic 合作部署 Claude AI 至企業平台**：相關列見「哪個合作會改到你用的 Claude」表（Google News/The Fast Mode）
 - **[政府/機構評估階段，非確定採用] AI News：美國公共衛生機構據報將測試 OpenAI 與 Anthropic AI 模型**：報導稱美國公共衛生機構將測試 OpenAI 與 Anthropic 的 AI 模型。**注意**：原文摘要遭 RSS 截斷，僅知「測試」而非確定採用，屬評估階段，暫不列入「哪個合作會改到你用的 Claude」表（正式採用需先有確認事件），待後續報導補充具體機構名稱、測試範圍與結果後再評估（Google News/AI News）
 - **[CSR／教育投資] FOX13 Memphis：Anthropic 捐贈曼菲斯非營利組織 100 萬美元興建聚焦 AI 教育之新總部**：報導稱 Anthropic 捐贈曼菲斯一家非營利組織 **100 萬美元**，用於興建聚焦 AI 教育的新總部。**注意**：屬企業社會責任／教育投資性質，與既有 Claude Corps（美國非營利培力）、加拿大 AI 研究資助（1,000 萬加幣，07-15）同屬「軟性在地佈局」路線（推論）；具體非營利組織名稱、總部用途細節未見完整報導，僅標題可用（Google News/FOX13 Memphis）
 - **[運算力供給側，媒體持續追蹤，未見新金額] Meta 與 Anthropic 運算力合作洽談持續有媒體報導**：Yahoo Finance（「Meta weighs up to $10bn AI compute deal with Anthropic」）、Techzine Global（「Meta is exploring the possibility of leasing AI capacity to Anthropic」）同日報導，延續 07-17/18 已記錄的 Meta 100 億美元運算力租賃洽談（見「哪個合作會改到你用的 Claude」表 07-17 列），惟兩則報導金額與既有數字一致（$10bn=100億美元），未見新增具體細節，屬既有訊號的持續媒體確認而非新事實（Google News/Yahoo Finance；Google News/Techzine Global）
@@ -224,7 +224,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[資訊過於單薄，未建立正式條目] Yahoo Finance Australia 稱「Meta、Anthropic 投下震撼彈」**：報導標題以「投下震撼彈」形容 Meta 與 Anthropic 近期針對 AI 市場的相關消息，原文摘要遭 RSS 截斷，具體內容不明，無法判斷是否為 07-18 已記錄的「Meta 100 億美元運算力洽談」的延伸報導或全新事件，暫不建立正式條目，僅此處記錄待後續補充（Google News/Yahoo Finance Australia，07-18 17:47 UTC）
 
 ### 2026-07-18
-- **[重大，算力供給側，三方交叉驗證] Meta 據報洽談以 100 億美元規模租賃運算力予 Anthropic**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Reuters；Google News/The New York Times；Hacker News）
+- **[重大，算力供給側，三方交叉驗證] Meta 據報洽談以 100 億美元規模租賃運算力予 Anthropic**：相關列見「哪個合作會改到你用的 Claude」表（Google News/Reuters；Google News/The New York Times；Hacker News）
 - **[運算力吃緊訊號，與上則呼應] Anthropic 收緊 Claude Fable 5 存取限制，Startup Fortune／the-decoder 稱因運算資源不足**：詳見 [[entities/pricing]]
 - **[矛盾訊號，需持續觀察] 官方 `@claudeai` 帳號同日稱將 Fable 5「設為永久」，與上則收緊限制方向相反**：詳見 [[entities/pricing]]
 - **[分析師觀察，未確認] Jefferies 分析師關注 AMD 是否將與 Anthropic 達成合作，時值 Advancing AI 2026 活動將近**：Yahoo! Finance Canada 報導 Jefferies 分析師持續關注 AMD 是否可能與 Anthropic 達成合作協議，時值 AMD「Advancing AI 2026」活動即將舉行。**注意**：屬分析師觀察/猜測階段，非官方確認或洽談中報導，暫不列入戰略合作表（Google News/Yahoo! Finance Canada）
@@ -234,26 +234,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-07-17
 - **[IPO 敘事整備，具體金額首見] Anthropic 揭露將支付 60 萬美元徵才形塑其「棘手 IPO 敘事故事」**：Business Insider 報導 Anthropic 將支付 $600,000 尋人協助形塑其 IPO 前敘事。**對商業的意涵**：見 [[topics/anthropic-ipo]]（Google News/Business Insider）
-- **[戰略合作，金融科技延續] FIS 與 Anthropic 延長既有合作關係**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Asset Servicing Times）
-- **[戰略合作，顧問服務商產品化] Deloitte 推出 Claude 驅動的安全軟體平台**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/PR Newswire）
+- **[戰略合作，金融科技延續] FIS 與 Anthropic 延長既有合作關係**：相關列見「哪個合作會改到你用的 Claude」表（Google News/Asset Servicing Times）
+- **[戰略合作，顧問服務商產品化] Deloitte 推出 Claude 驅動的安全軟體平台**：相關列見「哪個合作會改到你用的 Claude」表（Google News/PR Newswire）
 - **[投資人回報訊號，單一分析師觀點] BofA：Alphabet 財報可能因雲端業務與 Anthropic 投資收益優於預期**：Yahoo Finance Canada 報導美銀（BofA）分析師指出 Alphabet 雲端業務強勁與 Anthropic 投資回報可能使其財報表現超出市場預期。**對商業的意涵**：是繼 07-09 Yahoo Finance「IPO windfall profits」報導後，第二個從「Anthropic 為其投資人帶來財務回報」角度切入的分析，惟本次聚焦 Alphabet 財報估計而非 IPO 本身，且報導僅為分析師定性觀點（「could crush estimates」），無具體百分比或金額數字，暫不進正式表格，僅記錄為投資人回報敘事的延伸訊號（推論，待後續財報公布查證）（Google News/Yahoo! Finance Canada）
 - **[企業採用擴張案例，公益計畫延續] Claude Corps 首度揭露具體單人薪資 8.5 萬美元，現正開放申請**：ZDNET 報導 Anthropic 的 Claude Corps 計畫將支付 **$85,000** 予 1,000 名早期職涯專業人士，目前開放申請。**注意**：Claude Corps 整體計畫（$1.5 億、1,000 個 Fellowship、150+ 非營利組織）已於 06-11（首發）、06-12（官方確認總額）、06-18（Forbes 深度報導）、07-11/07-13（媒體跟進）多次記錄，本次為首次揭露**具體單人薪資數字**且明確開放申請，屬新增具體細節而非純媒體擴散（Google News/ZDNET）
 - **[市場押注，非官方，詳見 pricing] 交易員押注 Fable 5 免費期將第四度延長**：詳見 [[entities/pricing]]
 - **[競品動態，詳見 competitor-landscape] Moonshot AI 發布 Kimi K3、TechCrunch 分析 Kimi 3 逼近 Opus 4.8、Nadella 批評 Fable「受編輯控制」**：三則競品/表態動態詳見 [[topics/competitor-landscape]]
 
 ### 2026-07-16
-- **[重大，商業模式擴張] Anthropic 與 Blackstone 共同成立 $15 億美元 AI 實作公司「Ode」**：Technology Org 報導 Anthropic 與私募巨頭 Blackstone 共同成立名為 Ode 的 AI 實作（implementation）公司，規模達 15 億美元；TechCrunch（07-15）分析文章同步指出，兩者押注「下一個兆美元級 AI 商機在於實作，而非模型本身」。**對商業的意涵**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Technology Org；Google News/TechCrunch）
+- **[重大，商業模式擴張] Anthropic 與 Blackstone 共同成立 $15 億美元 AI 實作公司「Ode」**：Technology Org 報導 Anthropic 與私募巨頭 Blackstone 共同成立名為 Ode 的 AI 實作（implementation）公司，規模達 15 億美元；TechCrunch（07-15）分析文章同步指出，兩者押注「下一個兆美元級 AI 商機在於實作，而非模型本身」。**對商業的意涵**：相關列見「哪個合作會改到你用的 Claude」表（Google News/Technology Org；Google News/TechCrunch）
 
 ### 2026-07-15
 - **[IPO 進程加溫，跨三媒體同步] Anthropic 據稱安排 IPO 前投資人會議，銀行家介入協調**：Yahoo Finance、CNBC（雙重來源確認）、Bloomberg（雙重來源確認）三家財經媒體同步報導 Anthropic 正安排上市前一系列投資人會議。**對估值/IPO 進程的意涵**：見 「IPO 追蹤」（Google News/Yahoo Finance；Google News/CNBC；Google News/Bloomberg.com）
 - **[官方降本論述] Anthropic 官員：停止使用 AI 是面對成本疑慮的「錯誤」回應**：Business Insider 報導一位未具名 Anthropic 官員表示，企業或個人面對 AI 使用成本疑慮時，「停止使用 AI」並非正確的因應方式。**對商業的意涵**：屬官方對「補貼不可持續」「定價透明度危機」等既有商業風險（見「還沒過去的風險」表）的公開防禦性論述，時間點緊接 07-12/13 已記錄的 1660 萬美元帳務錯誤揭露與企業支出控管功能上線，可能是在回應 [[topics/enterprise-cost-management]] 長期累積的企業成本焦慮敘事（推論）；僅標題可用，未見官員姓名與完整發言脈絡（Google News/Business Insider）
-- **[研究資助，地緣佈局] Anthropic 承諾投入 1,000 萬加幣支持加拿大 AI 研究**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/EdTech Innovation Hub）
-- **[生態合作] Claranova 透過新 API 將 PDF 工具與 Claude 整合**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Idéal Investisseur）
+- **[研究資助，地緣佈局] Anthropic 承諾投入 1,000 萬加幣支持加拿大 AI 研究**：相關列見「哪個合作會改到你用的 Claude」表（Google News/EdTech Innovation Hub）
+- **[生態合作] Claranova 透過新 API 將 PDF 工具與 Claude 整合**：相關列見「哪個合作會改到你用的 Claude」表（Google News/Idéal Investisseur）
 - **[競品/生態動態，詳見 competitor-landscape] Claude Code vs Codex vs OpenCode 全端工程師觀點比較文、Claude Code 內部邏輯凸顯 Anthropic–Alibaba 競爭關係分析文**：兩則動態詳見 [[topics/competitor-landscape]]
 
 ### 2026-07-14
-- **[醫療產業擴張] Anthropic 透過 Optum 合作與 UST 整合深入醫療產業**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Fierce Healthcare，雙重來源確認）
-- **[資安生態合作] Varonis 為 Claude Code 與 Cowork 提供執行期安全防護**：詳見「哪個合作會改到你用的 Claude」表新增列（Google News/Stock Titan）
+- **[醫療產業擴張] Anthropic 透過 Optum 合作與 UST 整合深入醫療產業**：相關列見「哪個合作會改到你用的 Claude」表（Google News/Fierce Healthcare，雙重來源確認）
+- **[資安生態合作] Varonis 為 Claude Code 與 Cowork 提供執行期安全防護**：相關列見「哪個合作會改到你用的 Claude」表（Google News/Stock Titan）
 - **[媒體擴散] Hacker News 延燒 07-11 已記錄的 Mission Local 6.5 萬美元職缺爭議報導**：Hacker News（連結 missionlocal.org，score 28）轉載延燒 07-11 已記錄的 Mission Local 報導——Anthropic 開出年薪 $65,000–$85,000 職缺（生物/生化研究職），較舊金山中位數收入低約四成，爭議浮現於公司估值約 $965B、IPO 熱潮期間。**注意**：本次為社群平台對同一報導的延伸討論，非獨立新事實，HN 28 分、社群熱度不高，僅補充社群關注度訊號（Hacker News → missionlocal.org https://missionlocal.org/2026/07/anthropic-sf-affordability-ipo-housing-evictions-rent/）
 - **[企業據點擴張，資訊量少] Claude Science app 據報將進駐波士頓 Kendall Square 生技聚落**：The Boston Globe 報導 Anthropic 的 Claude Science app 即將進駐波士頓 Kendall Square（全球指標性生技聚落）。**對商業的意涵**：延續 07-01 STAT News 首報、07-03 The Verge 跟進的「Claude Science 藥物開發野心」敘事，本次首度出現具體地理據點訊號，顯示生命科學垂直產業布局可能從遠端工具延伸至實體據點進駐；僅標題式報導，具體規模、時程、合作方未見細節（推論）（The Boston Globe）
 - **[競品陣營表態延續，詳見 competitor-landscape] Musk「Anthropic 是 AI 明確領導者」發言延伸分析**：財經媒體 Proactive 分析文章解讀 Elon Musk 稱 Anthropic 為「AI 領域明確領先者（clear leader in AI）」發言背後意涵，延續 07-10（首次表態）、07-13（兩獨立來源重申）已記錄的表態序列；本次為第三方媒體對既有表態的解讀分析，未見新引言或新事實，詳見 [[topics/competitor-landscape]]

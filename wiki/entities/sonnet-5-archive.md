@@ -17,8 +17,8 @@ attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-12-26"
 pending_signalled: 0
 staleness_exempt: null
 signal: "休眠"
@@ -54,7 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **「正式發布」非新事件**：官方發布公告為 2026-06-30 美西／本庫採計之 07-01（[Anthropic Blog](https://www.anthropic.com/news/claude-sonnet-5)、TechCrunch 同日），Mashable 07-09 一文屬遲到報導，**不構成第二次發布**
 - **「API 成本減半」屬實**：$2/$10 per Mtok 對前代 Sonnet 4.6 的 $3/$15 為降價，對 Opus 4.8 的 $5/$25 更省約 60%；該價已於 2026-08-10 永久化（見 [[entities/pricing]]）
-- 🔎 **查無官方**（標 2026-08-26｜查 tech-insider.org、57 Score｜複 2026-11-26）｜**「57 分」的 benchmark 名稱**：官方模型頁與發布公告均未見此數字，原文亦未指明測的是哪個 benchmark，**不採信為評測事實**；tech-insider.org 為模板化標題農場型來源（同站另有多篇 "X vs Y: $N Gap" 系列，見 [[entities/fable-5]]），本庫不以其數字入表
+- 🔎 **查無官方**（標 2026-08-26｜查 tech-insider.org、57 Score｜複 2026-12-26）｜**「57 分」的 benchmark 名稱**：官方模型頁與發布公告均未見此數字（2026-11-28 複查 [Anthropic 發布公告](https://www.anthropic.com/news/claude-sonnet-5) 仍無「57」），原文亦未指明測的是哪個 benchmark，**不採信為評測事實**；tech-insider.org 為模板化標題農場型來源（同站另有多篇 "X vs Y: $N Gap" 系列，見 [[entities/fable-5]]），本庫不以其數字入表
 
 此外 Reddit r/ClaudeCode 出現「回應內容重複」的弱訊號回報（score 恆 0，見「爭議」區）。
 

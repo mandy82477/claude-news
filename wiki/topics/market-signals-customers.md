@@ -3,7 +3,7 @@ page: "topics/market-signals-customers"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-21"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-22"
 status_main: "ongoing"
 days_since_news: 6
@@ -16,7 +16,7 @@ attribution_count: 11
 attribution_last: "2026-11-22"
 top_source: "google-news"
 pending_count: 22
-pending_overdue: 6
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 0
 staleness_exempt: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-08-26
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-22
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：定價改版、企業採用等 16 條線 25 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
@@ -52,6 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **價格在降**：Opus 5.5、Haiku 5.5 牌價下修，Managed Agents 改毫秒計費；對毛利率的影響至今沒有一則被財報或 S-1 拆出來。
 - **客戶兩邊都有**：具名擴大（Barclays、JPMorgan、Novo Nordisk）與具名縮減（Meta、Microsoft、Replit、Accenture 每月 29 美元上限）並存，金額多數未經官方證實。
 - **線很散**：16 條線裡 14 條只有一則，單一消息很難看出方向，要對照「買得到的標的」表的同一列看。
+- **「獨家」這個詞要自己去官方頁對一次**：Schwab 那條線的判讀建立在「獨家合作」上，但官方 Schwab Advisor Services 連接器頁沒有「獨家」措辭、也沒列具名 AI 平台（2026-11-28 查證）——該列的前提目前只有媒體說法。
 - 一眼、結算與里程碑的記號怎麼讀見 [[topics/market-signals#近期判讀]]；你買得到的標的見 [[topics/market-signals#買得到的標的]]。
 
 ---
@@ -104,6 +105,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 下次怎麼認：看到既有客戶「自建」原本外購的技術層，先問這是否在為引入替代供應商做準備。
 
 ### 💰 Fable 5.2／Mythos 5.2 發布同步降價：Fable 牌價降 20%、快取讀取倍率首次低於標準值（2026-11-09）
+
+**更正（2026-11-28 查官方定價文件）**：「快取讀取倍率首次降到 0.025 倍」不成立。0.025 倍自 Fable 5.1／Mythos 5.1（09-02）起，5.2 沿用；5.2 的快取讀取 $0.20／MTok 較 5.1 的 $0.25 降 20%（只隨基礎價 $10→$8 下降），較 Fable 5 的 $1 降 80%。下文「倍率下修壓低重度快取客戶單位營收」的推論只對 5.1 起成立，5.2 這一步等同牌價降幅，以下保留當日原判讀。事實見 [[entities/pricing]]。
 
 **一眼**：📈 正面（數字型，動到 API 定價與快取成本結構）｜誰有感：無（未上市）｜硬度：官方一手（Anthropic Blog／Platform Docs／Help Center 同日更新）｜線：定價改版 ▸ 第 7 則
 
@@ -523,9 +526,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|---|
 | 2026-11-20 | 企業採用 | 本體不可買；BCS／BK 間接關聯 📈（第 6 則） | Citadel、BNY 官方是否說明導入範疇與規模；下一份財報是否拆分金融業客戶貢獻（12-04） | ⏳ | ⏳ |
 | 2026-11-19 | 競品定價對標 | GOOGL ⚖️（第 2 則） | 社群是否獨立複現 Gemini 4 Neon／Astra 6.2 測試結果；Anthropic 是否調整定價（12-03） | ⏳ | ⏳ |
-| 2026-11-13 | Schwab 自建 MCP 動搖獨家地位 | SCHW 📉（開線） | 獨家合作條款是否已變動、Schwab agentic AI 是否接入其他 LLM 供應商、RIA 何時納入（11-27） | ⏳ | ⏳ |
-| 2026-11-09 | 定價改版 | 本體不可買；間接曝險 📈（第 7 則） | 財報／S-1 是否拆分 Fable 系列營收與毛利率變化、快取倍率對帳單的實際影響是否有數字佐證（11-23） | ⏳ | ⏳ |
-| 2026-11-09 | 資安工具整合 Mythos | IBM／CSCO ⚖️（開線） | IBM Concert、Cisco AI Defense 的 Mythos 整合是否正式上線並公布時程或合約金額（11-23） | ⏳ | ⏳ |
+| 2026-11-13 | Schwab 自建 MCP 動搖獨家地位 | SCHW 📉（開線） | 獨家合作條款是否已變動、Schwab agentic AI 是否接入其他 LLM 供應商、RIA 何時納入（11-27） | 未出現（2026-11-27 查證：官方 Schwab Advisor Services 連接器頁無「獨家」措辭、未列具名 AI 平台）｜SCHW ～（$92.98→$94.06，+1.2%）| ❌（判跌，實際橫盤微漲）|
+| 2026-11-09 | 定價改版 | 本體不可買；間接曝險 📈（第 7 則） | 財報／S-1 是否拆分 Fable 系列營收與毛利率變化、快取倍率對帳單的實際影響是否有數字佐證（11-23） | 未出現（2026-11-23 查證：官方未拆分 Fable 系列營收與毛利率；本輪另查實快取讀取 ×0.025 自 5.1 起沿用、非 5.2 才降，見本頁 11-09 更正註）| ～ 仍懸 |
+| 2026-11-09 | 資安工具整合 Mythos | IBM／CSCO ⚖️（開線） | IBM Concert、Cisco AI Defense 的 Mythos 整合是否正式上線並公布時程或合約金額（11-23） | 未出現（2026-11-23 查證：IBM 公告與 Cisco 部落格皆僅稱計畫、未載上線日期）｜CSCO ～（$98.15→$96.80，−1.4%，11-10 收盤代 11-09）；IBM 兩日收盤查不到 | ～（判未定且 CSCO 確實橫盤；IBM 不可驗證）|
 | 2026-10-29 | Financial Advisors 使用額度優惠 | SCHW ⚖️（開線） | 額度補貼適用範圍與期限是否經官方說明（11-12） | 出現（2026-11-14：額度由 Schwab 提供而非 Anthropic，適用範圍與期限官方仍未說明——InvestmentNews）｜股價 —（見表下註） | ❌（前提是 Anthropic 補貼，實為 Schwab 提供） |
 | 2026-10-29 | Copilot 性價比對標 Claude Code | 本體不可買；MSFT 間接關聯 📉（開線） | 基準測試方法論是否公開或遭社群複現反駁（11-12） | 出現（2026-11-14，媒體稱：基準出自 Artificial Analysis，Fusion Max 60 分／$5.59 對 Claude Code＋Opus 5.5 Max 62 分／$11.42）｜股價 —（見表下註） | ✅ |
 | 2026-10-28 | 生技策略併購 | 本體不可買；間接曝險 ⚖️（開線） | 收購金額與條款披露、創辦人身分公開（11-11） | 出現（2026-10-27：官方文章已具名創辦人 Cody Tranbarger 並確認完成收購；金額與條款仍未載） | ✅ |
@@ -567,9 +570,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ❓ **待查證**（標 2026-11-20｜查 Citadel、金融業工作流｜複 2026-12-04）｜**Citadel、BNY 導入 Claude 的具體範疇、席位數與費用是否經官方進一步說明**：報導僅標題層級，三家金融機構並列但未見官方公告佐證導入深度。
 - ❓ **待查證**（標 2026-11-19｜查 Gemini 4 Neon、Astra 6.2｜複 2026-12-03）｜**Gemini 4 Neon 與 Astra 6.2 的對標測試是否經社群獨立複現**：OODA Loop／BigGo Finance 報導均為標題轉述，測試方法論、題目選取與第三方複現均未見報導。
-- ❓ **待查證**（標 2026-11-13｜查 自建 MCP、agentic AI｜複 2026-11-27）｜**Schwab 自建 MCP 伺服器後，獨家合作條款是否已變動、是否接入其他 LLM 供應商**：RIABiz 報導僅標題可用，具體時程、範圍與獨家條款現況均未見報導。
-- ❓ **待查證**（標 2026-11-09｜查 Fable 5.2、快取讀取｜複 2026-11-23）｜**Fable 5.2 快取讀取倍率降至 0.025 倍對重度快取客戶帳單的實際影響是否有數字佐證**：官方文件僅載新倍率，財報或 S-1 是否拆分 Fable 系列營收與毛利率變化均未見報導。
-- ❓ **待查證**（標 2026-11-09｜查 IBM Concert、Cisco AI Defense｜複 2026-11-23）｜**IBM Concert、Cisco AI Defense 導入 Mythos 5.2 是否正式上線並公布時程或合約金額**：IBM、Cisco Blogs 報導僅標題可用，上線時程、整合深度與是否為付費採購均未見報導。
+- 🔎 **查無官方**（標 2026-11-13｜查 自建 MCP、agentic AI｜複 2026-12-26）｜**Schwab 自建 MCP 伺服器後，獨家合作條款是否已變動、是否接入其他 LLM 供應商**：RIABiz 報導僅標題可用，具體時程、範圍與獨家條款現況均未見官方說法。
+  - 2026-11-28 讀官方 [Claude 市集 Schwab Advisor Services 連接器頁](https://claude.com/marketplace/connectors/schwab-advisor-services)（2026-10 上架）：唯讀存取 Schwab Advisor Center 的部位、交易與警示，需 Schwab 託管顧問、經事務所負責人核可；
+  - 未列任何具名 AI 平台（僅稱 approved third-party tools and AI services）、自稱非 AI 模型，全頁無「獨家」措辭。此為顧問端連接器，與 Schwab 11-12 公告的客戶端 MCP 伺服器（媒體稱僅對選定 Claude 用戶試行、日後支援其他 AI 平台，見上方 11-21 標記）是否同一產品，頁面未載；
+  - Schwab 新聞稿本環境未取得。
+- 🔎 **查無官方**（標 2026-11-09｜查 Fable 5.2、快取讀取｜複 2026-12-26）｜**Fable 系列營收與毛利率是否拆分揭露，快取讀取降價對重度快取客戶帳單的實際影響是否有數字佐證**：官方文件只載費率，未載帳單影響或系列拆分。
+  - 2026-11-28 讀官方 [定價文件](https://platform.claude.com/docs/en/about-claude/pricing)：快取讀取每百萬 token——Fable 5.2／Mythos 5.2 $0.20（基礎輸入 $8 的 0.025 倍）、Fable 5.1／Mythos 5.1 $0.25（基礎 $10 的 0.025 倍）、Fable 5／Mythos 5 $1（0.1 倍）。
+  - 0.025 倍自 5.1 起，5.2 沿用；5.2 較 5.1 降 20%（只隨基礎價下降）、較 Fable 5 降 80%。原題「降至 0.025 倍」前提有誤，已在 11-09 事件段加註更正。S-1 原文本環境連不上，系列拆分未核對。
+- 🔎 **查無官方**（標 2026-11-09｜查 IBM Concert、Cisco AI Defense｜複 2026-12-26）｜**IBM Concert、Cisco AI Defense 導入 Mythos 5.2 是否正式上線並公布時程或合約金額**：IBM、Cisco Blogs 報導僅標題可用，上線時程、整合深度與是否為付費採購均未見官方說法。
+  - 2026-11-28 查：Anthropic 官方站無 IBM 或 Cisco 導入公告（[Project Glasswing 頁](https://www.anthropic.com/glasswing)只載 Cisco 為 2026-04-07 的啟動夥伴、使用 Mythos Preview，未載 IBM）；
+  - 官方 [IBM 公告](https://www.ibm.com/new/announcements/ibm-plans-to-bring-anthropic-s-claude-mythos-cyber-reasoning-into-ibm-concert)與 Cisco 部落格只稱「計畫（plans to）」、未載上線日期（2026-11-28 於 [[topics/ai-agent-safety-cyber]] 同題查證；
+  - 本環境連不上 ibm.com、blogs.cisco.com，未自行開啟）。
+  - 媒體稱（Network World、Le Monde Informatique、Unite.AI 等）：兩家 11-09 各自宣布，是兩項獨立整合——Cisco 把 Mythos 加入 AI Defense 做自適應紅隊測試（僅限已註冊授權目標）；
+  - IBM 計畫把 Mythos 資安推理加入 Concert Protect，媒體稱目標 2027 年初正式上市（GA），官方公告未載日期；均未見合約金額，各報未載「5.2」版本，僅稱 Mythos。
 - 🔎 **查無官方**（標 2026-10-29｜查 4,800、Financial Advisors｜複 2026-12-14）｜**Anthropic 向 Claude for Financial Advisors 用戶提供 4,800 美元額度抵用的適用範圍與期限是否經官方說明**：官方新聞室至 11-10 未載，前提需更正。
   - 媒體稱（[InvestmentNews](https://www.investmentnews.com/transformation/schwab-offers-4800-credit-to-cover-claude-enterprise-seat-cost-for-rias/268779)）：4,800 美元額度由 Schwab 提供、非 Anthropic，等於 20 席企業方案一年最低消費，11 月 30 日前簽約者適用，token 用量費另計；是否延長未見報導。
 - 🔎 **查無官方**（標 2026-10-29｜查 Copilot Fusion、GitHub Copilot｜複 2026-12-14）｜**GitHub Copilot Fusion「以一半 API 成本勝過 Claude Code」的基準測試方法論是否公開或遭社群複現反駁**：官方新聞室至 11-10 無回應，GitHub 與評測方官網本輪環境無法連。
@@ -595,16 +608,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 2026-10-31 搜尋僅得 Artificial Analysis 的 Gemini 4 Carbon 對照頁（無法讀到分數），未見對 Argon 的獨立複現或指明對標的 Claude 模型。
 - 已查證（2026-10-24，[官方計畫頁](https://claude.com/programs/startups)）｜**Claude Startups 免費 Team 試用與 $1,000 額度已暫停**：計畫頁載「current cohort is now full」、不受理新申請；暫停措辭僅見 Forbes、AI Weekly 轉述（媒體稱），無恢復日期。
   - 定價頁「$100–$200/月」是 Max 月度 API credits，與暫停無關，見 [[entities/pricing]]。
-- 🔎 **查無官方**（標 2026-10-09｜查 Azure Marketplace、17,600｜複 2026-11-24）｜**Microsoft／Anthropic 是否回應 Marketplace 轉售帳務爭議**：10-24 查 [定價文件](https://platform.claude.com/docs/en/about-claude/pricing)：Foundry 經 Azure Marketplace 以 CCU 計量、月出帳後付，未載贊助額度是否適用；兩家對此案無公開聲明。
+- 🔎 **查無官方**（標 2026-10-09｜查 Azure Marketplace、17,600｜複 2026-12-26）｜**Microsoft／Anthropic 是否回應 Marketplace 轉售帳務爭議**：10-24 查 [定價文件](https://platform.claude.com/docs/en/about-claude/pricing)：Foundry 經 Azure Marketplace 以 CCU 計量、月出帳後付，未載贊助額度是否適用；兩家對此案無公開聲明。
   - 媒體稱（The Register、Microsoft 社群討論串）：新創 Vegalabs 帳單約 $17,600（稅前），Microsoft 稱市集夥伴收費無法調整，Anthropic 立場據創辦人轉述為看不到 Foundry 用量、無法退款；Microsoft 贊助額度條款排除經市集購買的 Anthropic 模型。
+  - 2026-11-28 再讀 [定價文件](https://platform.claude.com/docs/en/about-claude/pricing)：Foundry 經 Azure Marketplace 以 CCU（每 CCU $0.01）計量、每小時回報、月出帳、僅事後付款（無預付額度）；仍無贊助額度是否適用的說明，anthropic.com 檢索也未見兩家針對此案的聲明。
 - 已查證（2026-10-24，[Claude 定價文件](https://platform.claude.com/docs/en/about-claude/pricing)、[Haiku 5.5 公告](https://www.anthropic.com/news/claude-haiku-5-5)）｜**Haiku 5.5 逐 token 費率**：提示 ≤10 萬 token 為 $0.10 input／$0.50 output 每百萬 token，超過則 $0.50／$2.50；公告稱比 Haiku 4.5 平均低約 75%。
   - Haiku 5.5 降幅口徑：短提示低 90%、長提示低 50%，VentureBeat「降 90%」只適用短提示。
   - GPT-6 Luna 側：Anthropic 公告與定價頁不含比較；Apidog 稱 Luna 為 $0.10／$0.50，OpenAI 官方費率本輪未覆核，「看齊」維持媒體稱。
 - 已查證（2026-10-24，[官方文件](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)）｜**Max／Team 每月 API credits 金額**：Max 5x $100、Max 20x $200；Team 每 Standard 席 $20、Premium 席 $100，池上限 $500；不涵蓋 Claude Code 與 Claude apps。媒體「最高 $200／$500」分屬 Max 與 Team，不矛盾。
-- 🔎 **查無官方**（標 2026-10-07｜查 Grok、Midjourney、Suno、整合細節｜複 2026-11-24）｜**Grok Bot 整合 Claude／Midjourney／Suno 的範圍是否獲官方證實**：2026-10-24 檢索未見 Anthropic、Suno 的公開聲明。
+- 🔎 **查無官方**（標 2026-10-07｜查 Grok、Midjourney、Suno、整合細節｜複 2026-12-26）｜**Grok Bot 整合 Claude／Midjourney／Suno 的範圍是否獲官方證實**：2026-10-24 檢索未見 Anthropic、Suno 的公開聲明。
   - 媒體稱（AI Musicpreneur 轉述 Musk 在 X 的貼文）：Grok @Bot 將依任務選用最佳後端模型，含 Claude Opus 5.5、Midjourney、Suno；屬計畫陳述，不是已確認的產品整合，任務路由範圍、計費與時程均未載。
-- 🔎 **查無官方**（標 2026-10-05｜查 Meta、Microsoft、減少內部使用｜複 2026-11-24）｜**Meta、Microsoft 內部使用限縮政策是否獲官方證實**：10-24 查證：兩家與 Anthropic 均無官方稿；金額與動機見上方判讀，多家二手轉述一致，兩家均未取消合約。日報 10-07 `訊` 為探針假命中，已移除。
+  - 2026-11-28 再查：Anthropic 官方站仍無相關稿；x.ai 官方頁本環境連不上。媒體稱（The Next Web、Music Business Worldwide 轉述 Musk 10-07 的 X 貼文）；數家媒體稱一週後 Grok Bot 產品頁未列 Claude、Midjourney、Suno，Suno 啟用時程未定，資料共享條款未公布。
+- 🔎 **查無官方**（標 2026-10-05｜查 Meta、Microsoft、減少內部使用｜複 2026-12-26）｜**Meta、Microsoft 內部使用限縮政策是否獲官方證實**：10-24 查證：兩家與 Anthropic 均無官方稿；金額與動機見上方判讀，多家二手轉述一致，兩家均未取消合約。日報 10-07 `訊` 為探針假命中，已移除。
   - 媒體稱（The Information 引知情人士，經 Dealroom、Let's Data Science 等轉述）：Microsoft 發言人確認內部預設編碼模型改用 OpenAI、工程師仍可選 Claude；Meta 與 Anthropic 均無公開說法。
+  - 2026-11-28 再查：anthropic.com 與 support.claude.com 無相關稿，Meta、Microsoft 亦無公開聲明；上方結論不變，與 [[topics/market-lessons]] 兩處同步為 複 2026-12-26。
 - 已查證（2026-10-24，[SemiAnalysis X 貼文](https://x.com/SemiAnalysis_/status/2107204965710053510)）｜**SemiAnalysis「5 倍」的口徑與方法**：原題「Anthropic Subscriptions Offer 5x+ More Value Than OpenAI」，各家訂閱方案跑額度測試至週上限並換算 API 牌價等值，稱 Anthropic $200 方案約為 OpenAI 同價位 5 倍。
   - 口徑是「用戶得到的價值」，不是財報補貼金額。
   - 媒體稱（AI Weekly、Dataconomy）：SemiAnalysis 估計訂閱用掉約 42% 推論算力、僅貢獻約 10% 營收，為假設推算。完整報告部分付費牆，方案別美元拆分本輪未取得。

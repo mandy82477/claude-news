@@ -17,8 +17,8 @@ attribution_count: 5
 attribution_last: "2026-08-27"
 top_source: "google-news"
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-12-26"
 pending_signalled: 0
 staleness_exempt: null
 signal: "休眠"
@@ -96,8 +96,8 @@ Hacker News 多名用戶反映自 Opus 4.7 版本以來，Claude Code 頻繁出�
 - 本頁原記「Opus 4.7 估算約 4T 參數、疑似少於 Opus 4.6 的 5.3T、實為降規」
 - **2026-08-26 查證論文原文後，上述數字不成立**（詳見下方 callout）
 
-> 🔎 **查無官方**（標 2026-08-26｜查 2604.24827、Incompressible Knowledge Probes｜複 2026-11-26）｜**Opus 4.7 參數規模：論文未給、官方不公布**：
-> 已取得 arxiv 2604.24827v2（2026-07-05，Bojie Li〈Incompressible Knowledge Probes: Estimating Black-Box LLM Parameter Counts via Factual Capacity〉，Pine AI）全文查證：
+> 🔎 **查無官方**（標 2026-08-26｜查 2604.24827、Incompressible Knowledge Probes｜複 2026-12-26）｜**Opus 4.7 參數規模：論文未給、官方不公布**：
+> 已取得 arxiv 2604.24827v2（2026-07-05，Bojie Li〈Incompressible Knowledge Probes: Estimating Black-Box LLM Parameter Counts via Factual Capacity〉，Pine AI）全文查證：（2026-11-28 複查：anthropic.com/news/claude-opus-4-7 發布頁仍未載參數規模；arxiv 本輪無法連線，論文結論沿用 08-26 查證）
 > - 論文**確實涵蓋 Anthropic 模型**，但 Figure 1 的前沿模型估算列的是 **Claude Opus 4.6 約 1.6T、Sonnet 4.6 約 766B、Haiku 4.5 約 28B**，**未給 Opus 4.7 的參數估算**
 > - 本頁原記的「4T」與「Opus 4.6 = 5.3T」在 v2 全文中均查無出處，且 4T > 1.6T，「降規」推論的算式本身也不成立——原數字疑為早期轉述失真，已停止當作事實陳述
 > - 論文對 Opus 4.7 的實際結論是**指紋分析**：Opus 4.6 → 4.7 的 hallucination similarity HSS = 0.00（15 個共同答錯樣本），落在 *retrained*（完整重訓）而非 post-train 區間；作者自述樣本數小（7–71 probes），僅為提示性、不可獨立驗證

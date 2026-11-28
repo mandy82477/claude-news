@@ -3,7 +3,7 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "💻 開發實務"
-last_updated: "2026-11-21"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-21"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-21
 
 > **本頁在回答什麼**
@@ -190,8 +190,9 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 | hook | 生命週期事件 | **強制** |
 | auto memory | `MEMORY.md` 前 200 行／25KB | Claude 自寫 |
 
-三件容易搞錯的：
+四件容易搞錯的：
 
+- **沒被叫用的 skill 也可能蓋過 CLAUDE.md。** 一位作者在拋棄式 fixture 放三份互相衝突的指示（AGENTS.md、CLAUDE.md、一個 skill），實測沒被明確叫用的 skill 仍蓋過另兩者（dev.to，2026-11-21，單一來源、無第三方複現）；規則有衝突時別假設 CLAUDE.md 勝出，見 [[topics/community-skills]]。
 - **`paths:` 不是 rules 專屬**，skill frontmatter 也有，官方明寫「Uses the same format as path-specific rules」。
 - **skill 跟 CLAUDE.md 一樣是建議層。** 差別在載入時機與 token 成本，不在強制力。官方原話：一條 skill 若失效，「use hooks to enforce behavior deterministically」。
 - **強制層是 hooks 或 permissions 兩者。** `PreToolUse` hook 觸發即硬擋（先於 allow 規則），但比對是盡力而為、不保證一定觸發（官方 permissions／hooks 文件，2026-11-01 查）；要保證一定擋，用沙箱。
@@ -284,6 +285,8 @@ Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](
 
 **長 session 中途調 effort 不會打掉快取**：官方 prompt-caching 文件載明 Opus 5.5、Sonnet 5.5、Haiku 5.5、Fable 5.1 以 API key 或訂閱使用時，中途改 effort 不讓快取失效，例行工作可放心中途降檔，見 [[topics/code-quality-decline]]。
 
+**resume 綁啟動目錄**：`--resume` 只能在當初啟動該 session 的目錄下恢復，換目錄後找不回（issue #5768，63 讚，官方未回應），常切專案的人續作前先 cd 回原目錄，見 [[entities/claude-code-known-issues]]。
+
 **接續閒置對話前會先警告**：v2.1.304 起 Pro／Max 若接續會吃掉相當比例的 5 小時額度，先提示，可選仍接續或開新對話讓 Claude 查前一段，見 [[entities/claude-code]]。
 
 **成本旋鈕再兩個**：`CLAUDE_CODE_SUBAGENT_EFFORT`（v2.1.316）固定 subagent 的 effort，與 `CLAUDE_CODE_SUBAGENT_MODEL` 並列，仍只能固定、不能動態路由，見 [[topics/official-community-gap]]；`CLAUDE_CODE_DISABLE_ULTRATHINK`（同版）讓 ultrathink 關鍵字不再觸發額外思考。
@@ -366,6 +369,8 @@ Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](
 
 規劃產出物可以直接改：**`Ctrl+G` 用你的編輯器打開 plan**。
 
+**Plan Mode 不是硬防線**：issue #38255（30 則留言、38 讚，Opus 4.6）回報 Plan Mode 開著、系統多次提醒不得編輯檔案時，模型仍直接改了原始檔，官方未回應；需要規劃期絕對唯讀的人，另用 permissions 或 hook 擋寫入，見 [[entities/claude-code-known-issues]]。
+
 官方 Claude Code Projects（beta，僅 Pro／Max，2026-11-14 重新設計）把這一步交給 Claude：你描述目標，它自己界定範圍、拆成多條平行工作線、離開電腦後仍持續跑；是否切得合你預期沒有公開判準，用前先看它拆的範圍，見 [[entities/claude-code]]。
 
 ### 官方的規格品質判準
@@ -405,7 +410,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - **`security-guidance` 外掛** —— 三層，深度差很多：每次 edit 是零模型呼叫的字串比對（零成本）；每個 turn 結束跑一次背景模型 review（≤30 檔、連續最多 3 次）；Claude 自己 commit/push 時跑深度 agentic review（每小時 ≤20 次）。預設用 Opus 4.7，可用 `SECURITY_REVIEW_MODEL`／`SG_AGENTIC_MODEL` 換。可加專案自訂規則（`.claude/claude-security-guidance.md` ≤8KB、`.claude/security-patterns.yaml` ≤50 條），只能加不能停用內建。
 - **`.claude/rules/` + `paths:`** —— 規則只在碰到匹配檔案時載入。
 
-⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI，而 hook 本身也會失靈，三件事先知道：command／HTTP hook 設 `onFailure: "block"`（v2.1.295 起），hook 起不來或逾時就擋下動作、不默默放行；沙箱自動放行（`autoAllowBashIfSandboxed`）遇到含 shell expansion 的指令不保證成立，無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略是長期未解的已知問題，強制性要落在 hook 而不是措辭。issue 狀態與其他失效模式見 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]]。改了 hooks、MCP 或 plugin 設定後要完整重啟 session 才生效、沒有熱重載（GitHub issue #24057，未修復），改設定前先收尾手上的工作。
+⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI，而 hook 本身也會失靈，三件事先知道：command／HTTP hook 設 `onFailure: "block"`（v2.1.295 起），hook 起不來或逾時就擋下動作、不默默放行；沙箱自動放行（`autoAllowBashIfSandboxed`）遇到含 shell expansion 的指令不保證成立，無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略是長期未解的已知問題，強制性要落在 hook 而不是措辭（最新一例：issue #90542，一份 700 行規則契約在單次 4.5 小時 session 內被整套忽視，Opus 5，官方未回應）。另有 Windows 回報 PreToolUse hook 回傳後工具不再派發、session 卡在半途（issue #95354，2.1.220，官方未回應），用 hook 當防線者升版後先自測。issue 狀態與其他失效模式見 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]]。改了 hooks、MCP 或 plugin 設定後要完整重啟 session 才生效、沒有熱重載（GitHub issue #24057，未修復），改設定前先收尾手上的工作。
 
 想把寫入範圍鎖在工作目錄內，v2.1.314 起可開 `permissions.blockWritesOutsideWorkingDirectories`（預設關；`stable` 通道 2.1.323 已含（2026-11-21 查證），通道見 [[entities/claude-code-releases]]）：Write／Edit／NotebookEdit 在任何權限模式（含 bypass）都拒絕寫入工作目錄外的路徑，不必自己寫 hook；官方只列這三個工具，Bash 寫入不在其中（推論）。若依賴 sandboxed Bash 當隔離邊界，v2.1.309 之前的版本實際比預期鬆——指令執行前會先跑 shell 啟動檔而落在沙盒外，macOS 的 `denyWrite` glob 也比對不完全，兩者 v2.1.309 修復，見 [[entities/claude-code]]。
 
@@ -450,6 +455,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 邊寫邊掃的兩個外掛不算 review 入口：`security-guidance` 每次 edit 自動三層掃描、算一般用量（見第 4 段）；Claude Security 外掛（beta）在 Claude Code 端用你當前 session 的模型掃描，不含網頁版 Claude Security 的 Mythos 掃描，見 [[entities/claude-security]]。
 
 **官方給的成本收斂旋鈕**：GitHub 上的 Code Review——觸發模式選 Manual 或 Once、審查等級選 Quick（Standard 為預設、Deep 最貴）、`REVIEW.md` 列出要跳過的路徑與類別、專屬月上限、看各 repo 的估算成本；本機 `/code-review`——effort 給 `low` 只報最有信心的（少誤報而非少覆蓋，`medium` 起擴大覆蓋），自 v2.1.288 起可加 `--max-findings <n>`（或 `all`、`default`）限制回報條數，見 [[entities/claude-code]]；security-guidance 可分層關閉。
+
+**官方 Claude Ship（2026-11-23）**：Claude 自動審 PR、修問題，並依團隊規則核准變更（Claude Approvals 加 PR Steward 兩套子機制）。具體核准範圍與風險控管官方文件內文本站尚未讀到，先別拿它取代人工審核；媒體稱其 policy check 不能取代必要的 code owner 核准（Superpower Daily，僅標題），要上線先確認與既有 CODEOWNERS 規則的關係，見 [[entities/claude-code-features#Claude Ship：自動審查、修復與核准 PR]]。
 
 **本機和 PR 上的校準不同**：官方明寫 Code Review 讀 `REVIEW.md`，本機 `/code-review` 不讀、只跟 `CLAUDE.md`。「本機先審再上 PR」時兩邊標準會不一樣（推論：要一致，就把關鍵規則也寫進 `CLAUDE.md`）。
 
@@ -678,11 +685,11 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 
 ## 本週 coding 亮點
 
-- **升 stable 一次吃 12 版**：stable 跳到 2.1.323，CI 與腳本要逐項對照，見 [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)
-- **Fable 5.2 官方提示做法**：「這份程式碼是你的」收斂重複碼但多耗 token、長任務收手的可貼段落、effort 要重跑 sweep，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
-- **官方的驗證迴圈**：Claude Code 團隊以三種測試迴圈撐起大規模平行委派，見 [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)
+- **官方 Claude Ship 與它的煞車**：自動審 PR 並依規則核准，但別拿來取代 code owner 核准，見 [第 5 段](#5-code-review-該用哪個入口怎麼審得起)
+- **防線有洞的三處**：Plan Mode 會被繞過、PreToolUse hook 在 Windows 可能卡住 session、長規則契約整套被忽視，見 [第 3 段](#3-規劃改動-先寫規格還是直接開工)與[第 4 段](#4-實際動手寫-錯誤何時被攔)
+- **沒叫用的 skill 也會蓋過 CLAUDE.md**：單一實測，見 [第 1 段](#東西該放哪一層)
 
-%% 亮點檢查日 2026-11-21；其餘候選（工具星數類、單一作者工具、安全事件、功能請求類 issue、Code Mode 與 Monitor tool 屬他頁）不入本節。 %%
+%% 亮點檢查日 2026-11-28；其餘候選（fast-anything、code-review-gate-skill、facadecode、用量監測工具潮、Postman 外掛事件、Opus 退化 issue、蒸餾誤判案例、Techzine 即時成本控管未經官方核對）不入本節。 %%
 
 ---
 
@@ -734,7 +741,7 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 
 社群與一手觀察：
 
-- [anthropics/skills](https://github.com/anthropics/skills) ／ [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — 官方技能清冊，2026-11-21 查證，近 7 天無增減
+- [anthropics/skills](https://github.com/anthropics/skills) ／ [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — 官方技能清冊，2026-11-28 查證，近 7 天無增減
 - [Putting Spec Kit through its paces](https://blog.scottlogic.com/2025/11/26/putting-spec-kit-through-its-paces-radical-idea-or-reinvented-waterfall.html) — spec-driven 反方實測
 - [Cross-Model LLM Code Review（arXiv 2607.21656）](https://arxiv.org/abs/2607.21656) — 跨模型互審通過率方法論，[[topics/community-guardrails]]「查證備註」2026-08-13 查證
 - 熱門專案設定調查 — 14 個 repo，2026-08-08 一手觀察，樣本限制見該節

@@ -16,7 +16,7 @@ attribution_count: 73
 attribution_last: "2026-11-27"
 top_source: "google-news"
 pending_count: 26
-pending_overdue: 2
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 2
 staleness_exempt: null
@@ -142,7 +142,11 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **性質判斷**：（推論）屬帳號與憑證被濫用類；與 11-04 資訊竊取軟體鎖定 Claude 帳號權杖同一類風險，那一則見下方 11-04 條目
 - **可信度評估**：媒體標題層級，無研究者名稱與官方回應；Claude Code 功能面（是否改設定或啟動遠端工作階段）見 [[entities/claude-code-features]]
 - **2026-11-15 跟進（無新事實）**：Help Net Security 自家「一週回顧」專欄把本事件列為一週要點之一，僅重述標題，未補充研究團隊、控制通道或官方回應
-- ❓ **待查證**（標 2026-11-12｜查 Remote-Controlled Implant、Stolen Claude API Keys｜複 2026-11-26｜訊 2026-11-15）｜**披露來源與機制**：研究團隊、控制通道與官方是否回應均未見報導
+- **2026-11-28 查證補充**：研究方為 Darktrace，見〈[Living off the AI](https://www.darktrace.com/blog/living-off-the-ai-shared-memories-as-a-covert-c2-channel)〉，屬實驗室概念驗證，未在野觀察到
+  - 前提是攻擊者已在裝置落腳並取得使用者 Claude 憑證；Darktrace 稱不依賴 Claude 平台漏洞
+  - 用憑證在使用者所屬 Console 工作區新增 memory store 當指令與回傳通道，流量與推論呼叫同走 api.anthropic.com；另一篇稱以 Files API 外傳 1 GB 檔案
+  - Cloud Security Alliance 研究筆記（11-13）建議改用短效、限工作區範圍的聯合憑證
+- 🔎 **查無官方**（標 2026-11-12｜查 Remote-Controlled Implant、Stolen Claude API Keys｜複 2026-12-26｜訊 2026-11-15）｜**Anthropic 是否回應**：2026-11-28 搜尋未見 Anthropic 針對此研究的官方說明或緩解公告
 
 #### Tech Times（Topic Watch）：Rain 推出 Agent Vaults，讓 AI agent 用單次使用的 Visa、Mastercard 卡付款（2026-11-12 新增，定向補抓）
 
@@ -165,7 +169,11 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **核心主張（僅標題可用）**：報導稱一項與 Claude 相關的安全缺陷可能讓 Linux 環境的組織面臨惡意程式碼被執行的風險；具體攻擊鏈、受影響產品版本與是否已有在野攻擊案例均未見報導
 - **你能先做什麼**：在企業 Linux 環境導入 Claude 的管理者，留意官方是否後續發布修補資訊
 - **可信度評估**：單一來源、互動 0，原文無可讀內文，訊號強度低
-- ❓ **待查證**（標 2026-11-09｜查 Dark Reading、Linux Orgs｜複 2026-11-23）｜**攻擊鏈細節與受影響範圍**：僅標題可用，具體漏洞機制、受影響產品與官方回應均未見報導
+- **2026-11-28 查證補充**（媒體稱，取自搜尋摘要，Dark Reading 原文本輪連不上；標題對應〈[Office Party 缺陷](https://darkreading.com/endpoint-security/attackers-claude-office-party-flaw-malicious-code-linux)〉屬推論）
+  - AIR Security 稱官方 DOCX／PPTX／XLSX 技能會載入共用暫存目錄的 `lo_socket_shim.so` 卻不驗來源，攻擊者預放惡意檔即可經 LD_PRELOAD 執行
+  - 影響 Unix socket 被封鎖的 Linux 環境（含部分容器設定與 Claude Code 沙箱），macOS 不受影響
+  - AIR 稱 5 月通報、Anthropic 承認存在；Dark Reading 稱 Anthropic 選擇不修
+- 🔎 **查無官方**（標 2026-11-09｜查 Dark Reading、Linux Orgs｜複 2026-12-26）｜**官方回應與修補狀態**：2026-11-28 搜尋未見 Anthropic 官方聲明、公告或對應 CVE；「不修」僅見媒體說法
 
 #### CIO：Claude Code、Codex 與 Cursor 已悄悄成為企業軟體供應鏈一部分，多數未經正式安全核准（2026-11-09 新增）
 

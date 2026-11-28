@@ -17,7 +17,7 @@ attribution_count: 11
 attribution_last: "2026-11-26"
 top_source: "google-news"
 pending_count: 3
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 1
 staleness_exempt: null
@@ -353,7 +353,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 조선일보報導中國境內存在規避封鎖使用 Claude 的黑市交易，顯示官方封鎖未完全阻絕當地需求，規模與定價未見報導（Google News/조선일보，2026-10-04）；地緣政治執法面見 [[topics/ai-agent-safety]]。（區域存取政策本身的動態見 [[topics/anthropic-government-policy]]「現在有哪幾條線在動」第 1 列）
 - 轉售商以最高 90% 折扣轉賣 Claude／Codex API 存取權，違反 Anthropic 消費者條款（禁止 resell、禁止分享帳號憑證）。
 - 灰市管道「Poison Claude」已被兩獨立媒體證實會讓中間營運者讀取客戶傳送的全部 prompt——安全事件細節與可信度評估見 [[topics/ai-agent-safety]]。
-- 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜複 2026-11-24）｜轉售規模與個案執法回應均未見官方或媒體佐證。10-24 查官方：[商業條款](https://www.anthropic.com/legal/commercial-terms) D.4(a) 禁止未經核准的 resell；[Transparency Hub](https://www.anthropic.com/transparency) 未見轉售執法統計。08-29 `訊` 為探針假命中，已移除。
+- 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜複 2026-12-26）｜轉售規模與個案執法回應均未見官方或媒體佐證；[Transparency Hub](https://www.anthropic.com/transparency) 未見轉售執法統計。08-29 `訊` 為探針假命中，已移除。
+  - 10-24、11-28 兩度查官方：[商業條款](https://www.anthropic.com/legal/commercial-terms) D.4(a) 禁止未經 Anthropic 明確核准的 resell；仍無執法統計。
 
 ---
 

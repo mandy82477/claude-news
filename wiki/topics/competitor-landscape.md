@@ -16,7 +16,7 @@ attribution_count: 331
 attribution_last: "2026-11-27"
 top_source: "blog"
 pending_count: 10
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-12-05"
 pending_signalled: 2
 staleness_exempt: null
@@ -73,7 +73,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 個人方案不變：Pro ~$20／Ultra ~$100／Ultra 20x $200。
 - ⟨Q-07⟩ 已查證（2026-10-17，[OpenAI 定價頁](https://developers.openai.com/api/docs/pricing)，以搜尋摘要讀取，直連失敗）：GPT-6.1 Sol 標準價 $2 input／$0.10 快取／$10 output 每百萬 token，GPT-6 Astra $10／$1／$50，Sol 約為 Astra 的五分之一。
   - 對照 Claude 官方定價：Sol 與 Sonnet 5.5（$2／$10）同價，約為 Opus 5.5（$4／$20）的一半。「改預設」是否見於官方 Codex 更新紀錄，本輪未查得。
-- ⟨Q-08⟩ 🔎 **查無官方**（標 2026-10-05｜查 GLM-5.3、雙重背書｜複 2026-11-24）：finance.biggo.com 稱 GLM-5.3 獲 Cursor、Anthropic 雙重背書；2026-10-24 檢索未見 Anthropic 對 GLM-5.3 的任何背書。
+- ⟨Q-08⟩ 🔎 **查無官方**（標 2026-10-05｜查 GLM-5.3、雙重背書｜複 2026-12-26）：finance.biggo.com 稱 GLM-5.3 獲 Cursor、Anthropic 雙重背書；2026-10-24、11-28 兩度檢索未見 Anthropic 對 GLM-5.3 的任何背書；Cursor 官方文件僅列為可自行加入的模型，未載雙重背書。
   - Cursor 側有佐證（檢索摘要）：[Cursor 文件](https://cursor.com/docs/models/glm-5-3)列 GLM 5.3 為 Z.ai 最新開放權重編碼模型（需手動加入、計第三方額度池）；Cursor 10-01 的 X 貼文稱 GLM 5.3 Max 是其內部 CursorBench 4.0 得分最高的開放權重模型（SmartScope 轉述）。「雙重背書」只有 Cursor 一半有跡可循。
 
 %% 維運備忘：上表固定 12 列，⚪ 級一律不佔列，動態只在時序累積。2026-09-07：騰訊 Hy4（唯一 ⚪ 列）讓位給新進 xAI（Grok 4.5，🟡），移入下方未列入清單。 %%
@@ -333,10 +333,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **非編碼競品**：OpenAI 公布兒少性剝削防治新工具與合作夥伴、發表 1,800 名科學家使用 ChatGPT 的研究報告；Meta 公布新加坡中小企業 AI 需求調查，皆非 AI 編碼工具競品，不列入「對手雷達」表（Blog/OpenAI News；Blog/Meta Newsroom）
 
 #### 2026-11-13
-- **Microsoft／GitHub**：Copilot app 新增 GitHub Enterprise Server（GHES）帳號整合，可在 app 內直接操作 GHES 的 repo／issue／PR；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot app 新增 GitHub Enterprise Server（GHES）帳號整合，可在 app 內直接操作 GHES 的 repo／issue／PR；Microsoft／GitHub 列見「對手雷達」（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub（Google Gemini 4 Hydrogen）**：Gemini 4 Hydrogen 於 Copilot 全面開放，主打快速 agentic coding 與多步驟工作流；模型發布本身見 11-12（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub**：官方公告將於 12-14 跨 Copilot Chat／inline edits／agent 模式／code completions 棄用部分模型，具體模型名稱未見完整列表（Blog/GitHub Copilot Changelog）
-- **OpenAI**：推出 ChatGPT Wallet，讓 agent 在 ChatGPT Work、Codex 與 dots 中經使用者核准、用既有卡片保護完成購買；詳見「對手雷達」OpenAI 列更新（Blog/OpenAI News）
+- **OpenAI**：推出 ChatGPT Wallet，讓 agent 在 ChatGPT Work、Codex 與 dots 中經使用者核准、用既有卡片保護完成購買；OpenAI 列見「對手雷達」（Blog/OpenAI News）
 - **OpenAI（透過客戶案例，Amplitude／Wave）**：官方部落格報導 Amplitude 以 OpenAI 模型打造主動式產品 agent「Wave」，1–2 天內交付產品改版；屬廠商自宣客戶案例，具體規模與效益數字未見，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-11-12
@@ -375,7 +375,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **OpenAI（透過客戶案例，非編碼工具）**：官方部落格報導澳洲多所大學擴大 ChatGPT 使用、把 AI 帶入教學；教育場域採用案例非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-11-05
-- **Microsoft／GitHub**：Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段；對比之下 Claude Code 無官方 Xcode 原生整合，詳見「對手雷達」與「雷達細節」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段；對比之下 Claude Code 無官方 Xcode 原生整合，Microsoft／GitHub 列見「對手雷達」與「雷達細節」（Blog/GitHub Copilot Changelog）
 
 #### 2026-11-04
 - **OpenAI（分析文，非編碼能力異動）**：官方宣布收購 Pierre Computer Company，稱將擴充 Codex 在建置、理解與審查程式碼方面的工具，具體功能與上線時間未見報導，不列入「對手雷達」表（Blog/OpenAI News）
@@ -394,19 +394,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   %% 新進入者，是否開「對手雷達」新列待主編裁示：表已滿 12 列、無 ⚪ 可汰，記者不自行汰除 🟡 %%
 
 #### 2026-11-02
-- **DeepSeek**：Techzine Global 稱 11-01 發布的「超級 agent」為開源版 Claude Code 替代品，權重開放範圍與發布規模未見細節；詳見「對手雷達」與「雷達細節」DeepSeek 列更新（Google News/Techzine Global）
+- **DeepSeek**：Techzine Global 稱 11-01 發布的「超級 agent」為開源版 Claude Code 替代品，權重開放範圍與發布規模未見細節；DeepSeek 列見「對手雷達」與「雷達細節」（Google News/Techzine Global）
 - **OpenAI（分析文，非編碼工具）**：官方部落格宣布 Grid Protectors Program，與電力公司合作協助未來運算園區支援電網穩定並保護消費者電價；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 - **OpenAI（分析文，非編碼工具）**：推出 LifeVal 基準，衡量 AI 協助托育、理財、政府文書等日常任務的表現；非編碼工具競品異動，不列入「對手雷達」表（Blog/OpenAI News）
 - **Qodo（透過 Codex 整合，⚪）**：官方部落格報導 Qodo 把公司知識與程式規範帶入 Codex 的 AI code review，協助開發者在 PR 前抓到 P0 問題；屬第三方整合生態擴張，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-11-01
-- **DeepSeek**：發布自主程式開發「超級 agent」，4 家媒體同日定位為直接挑戰 Claude Code，恰在 IPO 前數週推出；詳見「對手雷達」DeepSeek 列更新（Google News/Bloomberg.com）
+- **DeepSeek**：發布自主程式開發「超級 agent」，4 家媒體同日定位為直接挑戰 Claude Code，恰在 IPO 前數週推出；DeepSeek 列見「對手雷達」（Google News/Bloomberg.com）
 
 ### 2026-10
 
 #### 2026-10-30
 - **OpenAI（分析文，透過觀察）**：Simon Willison 觀察 OpenAI 已跟進推出與 Anthropic Max／Team 訂閱相同額度的 API credits 福利（$100／$200／$500，隨 ChatGPT 方案層級對應）；具體到期日與適用方案細節未見，不列入「對手雷達」表（Blog/Simon Willison）
-- **Mistral（分析文，僅標題可用）**：ZDNET 稱開源模型 Le Chonk 已擠進頂尖開源編碼模型之列，與 Codex GPT-6.1 Terra 並列；具體榜單與分數未附，不列入「對手雷達」表（Topic Watch/competitor-landscape）
+- **Mistral（分析文，僅標題可用）**：ZDNET 稱開源模型 Le Chonk 已擠進頂尖開源編碼模型之列，與 Codex GPT-6.1 Terra 並列；具體榜單與分數未附，不列入「對手雷達」表
 - **OpenAI（分析文，非競品動態）**：官方部落格發布更新版 Model Spec，提出五項核心價值引導 AI 走向更穩健判斷、人類自主與忠於使用者意圖；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 - **Meta（分析文，非編碼工具）**：官方部落格宣布與加拿大非營利組織 INCA 合作，支援當地視障、聾盲及弱視人士；非 AI 編碼工具競品異動，不列入「對手雷達」表（Blog/Meta Newsroom ×2，英法雙語版）
 
@@ -416,17 +416,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Google（DeepMind）**：發布新一代前沿模型 Gemini 4 Carbon，稱 AA Intelligence Index v5.0 第一（59分），資安基準 SEC-bench Pro／ExploitGym／CWE-bench 領先；詳見「對手雷達」Google 列（Blog/Google DeepMind Blog）
 
 #### 2026-10-28
-- **Microsoft／GitHub**：Copilot Fusion 跨模型智慧路由正式 GA；同日 GitHub Enterprise 新增內建 Copilot 存取權（企業可透過既有授權取得），另發布跨 repo／Universe 相關更新；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog ×3）
+- **Microsoft／GitHub**：Copilot Fusion 跨模型智慧路由正式 GA；同日 GitHub Enterprise 新增內建 Copilot 存取權（企業可透過既有授權取得），另發布跨 repo／Universe 相關更新；Microsoft／GitHub 列見「對手雷達」（Blog/GitHub Copilot Changelog ×3）
 - **OpenAI（透過客戶案例，Legora）**：官方部落格報導法律科技公司 Legora 用 OpenAI 模型打造「法律 agentic 作業系統」，與 Claude for Legal Artifacts 同日發布正面相撞；屬廠商自報客戶案例，非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 - **Meta（分析文，非編碼工具）**：個人 AI agent「Muse」正式於新加坡上線，可連結 Gmail、Google Calendar、Instagram 等應用；消費者助理產品非 AI 編碼工具競品，不列入「對手雷達」表（Blog/Meta Newsroom）
 - **Google（DeepMind，非編碼工具）**：發表世界模型 Genie 4，主打即時互動模擬與多模態生成；非 AI 編碼 agent 或定價異動，不列入「對手雷達」表（Blog/Google DeepMind Blog）
 - **OpenAI（透過客戶案例，非編碼工具）**：官方部落格報導語音 agent 平台 Retell 用 GPT-6 Astra 稱居語音 agent 基準測試之首，並稱 Codex 協助其達成每人年營收 160 萬美元；非 AI 編碼工具自身異動，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-10-27
-- **Microsoft／GitHub**：Copilot「輔助式權限」（assisted permissions）於 CLI／App／VS Code 正式 GA；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
-- **OpenAI（GitHub Copilot）**：GPT-6.1 Terra 正式 GA 進駐 Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作；詳見「對手雷達」OpenAI 列更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot「輔助式權限」（assisted permissions）於 CLI／App／VS Code 正式 GA；Microsoft／GitHub 列見「對手雷達」（Blog/GitHub Copilot Changelog）
+- **OpenAI（GitHub Copilot）**：GPT-6.1 Terra 正式 GA 進駐 Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作；OpenAI 列見「對手雷達」（Blog/GitHub Copilot Changelog）
 - **OpenAI（分析文，透過觀察）**：Simon Willison 觀察 GPT-6.1 Terra 主打視覺推理與電腦操作，市場定位類似 Claude Sonnet——非最便宜也非最貴，難判斷何時該用，不列入「對手雷達」表（Blog/Simon Willison）
-- **Cursor**：把自家 coding agent 包成任何人都能呼叫的 TypeScript SDK；詳見「對手雷達」Cursor 列更新（Google News/Startup Fortune；Topic Watch/competitor-landscape）
+- **Cursor**：把自家 coding agent 包成任何人都能呼叫的 TypeScript SDK；Cursor 列見「對手雷達」（Google News/Startup Fortune）
 - **Greptile（透過比較報導，⚪）**：OpenAI 官方部落格介紹 Greptile 以 GPT-6 Astra 的電腦操作能力，把測試範圍從讀程式碼擴大到實際跑一遍使用者流程；Greptile 本身非 Anthropic 直接對標對象，具體與 Claude 的對比未見報導，不列入「對手雷達」表（Blog/OpenAI News）
 - **OpenAI（分析文，非競品動態）**：官方部落格分享與學術社群合作驗證 Kakeya 猜想、指數時間假設、量子色動力學等模型研究成果；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 - **Hob（開源新進者，⚪）**：FrigadeHQ 作者於 HN 發布 MIT 授權本地端桌面 app，操作檔案方式比照 Claude／ChatGPT 桌面版，模型改在使用者自己電腦執行（Gemma 4／gpt-oss），尚無對比對象，不列入「對手雷達」表（Hacker News／HN Repo Bridge）
@@ -444,10 +444,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 2026-10-23
 - **Moonshot AI**：Kimi K3.1 Pro 上線 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；OrcaRouter 整理在 Claude Code／Codex 切換使用的設定與踩坑，均無量化數字（Google News/The Decoder；Google News/OrcaRouter；Blog/Simon Willison）
-- **Microsoft／GitHub**：shattered.io 整理 2026 年 GitHub Copilot 方案定價，稱 $10 可換 1,500 AI credits；詳見「競品定價對照」新增列，單一來源僅標題可用（Topic Watch/competitor-landscape）
-- **Microsoft／GitHub**：VS 版 Copilot 9 月更新支援聊天內瀏覽 PR、切換信任 AI 模型、即時修補弱點套件；同日官方確認 09-24／25 公布之全域預設開啟政策現已正式 GA；詳見「對手雷達」與「雷達細節」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog ×2）
+- **Microsoft／GitHub**：shattered.io 整理 2026 年 GitHub Copilot 方案定價，稱 $10 可換 1,500 AI credits；相關列見「競品定價對照」，單一來源僅標題可用
+- **Microsoft／GitHub**：VS 版 Copilot 9 月更新支援聊天內瀏覽 PR、切換信任 AI 模型、即時修補弱點套件；同日官方確認 09-24／25 公布之全域預設開啟政策現已正式 GA；Microsoft／GitHub 列見「對手雷達」與「雷達細節」（Blog/GitHub Copilot Changelog ×2）
 - **Microsoft／GitHub**：Copilot 用量指標 API 新增顯示組織自建 skills、custom agents、MCP servers、slash commands 與 plugins 的具體名稱，不再合併計算；屬企業用量分析功能，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
-- **OpenAI**：官方推出 Decisions API 正式版（GPT-6 Luna 模型），宣稱比 Responses API 快 10 倍、聚焦低成本快速決策，並提供美歐資料落地選項；詳見「對手雷達」OpenAI 列更新（Blog/OpenAI News）
+- **OpenAI**：官方推出 Decisions API 正式版（GPT-6 Luna 模型），宣稱比 Responses API 快 10 倍、聚焦低成本快速決策，並提供美歐資料落地選項；OpenAI 列見「對手雷達」（Blog/OpenAI News）
 - **OpenAI（分析文，非競品動態）**：官方部落格宣布與波蘭 NASK 機構合作推進 AI 安全、資安與技術研究，強化防護與數位韌性；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 - **Meta（透過比較報導）**：Barron's 發表「Claude Duet 與 Meta Muse 比較」文章，具體比較內容與結論未見報導，僅標題可用（Google News/Barron's）
 
@@ -456,41 +456,41 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **OpenAI（分析文，非競品動態）**：ChatGPT Ads 擴展至 26 個新國家，官方稱累計逾 10 萬廣告主使用；廣告業務擴張，非編碼/模型能力變動，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-10-20
-- **Microsoft／GitHub**：Copilot 新推出四模型組合，報導稱正拉近與 Cursor 的差距；具體模型清單與對比數字未見報導，僅標題可用（Google News/tech-insider.org；Topic Watch/competitor-landscape）
+- **Microsoft／GitHub**：Copilot 新推出四模型組合，報導稱正拉近與 Cursor 的差距；具體模型清單與對比數字未見報導，僅標題可用（Google News/tech-insider.org）
 
 #### 2026-10-19
 - **Microsoft／GitHub**：Copilot 新增 REST API，供企業、企業團隊、企業應用與組織查詢並更新模型使用政策（GET／PATCH 端點）；屬企業治理功能，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub**：09-19 預告之部分 Copilot 模型停用今日正式生效，涵蓋 Chat、inline edits、ask／agent 模式與程式碼補全，完整型號清單見官方 changelog；詳見「對手雷達」Microsoft／GitHub 列（Blog/GitHub Copilot Changelog）
 
 #### 2026-10-18
-- **ForgeCode（分析文，廠商自宣）**：Startup Fortune 報導 ForgeCode 宣稱效能勝過 Claude Code 與 Codex，但細則另有保留；具體數字與測試方法未見報導，僅標題可用，不列入「對手雷達」表（Google News/Startup Fortune；Topic Watch/competitor-landscape）
+- **ForgeCode（分析文，廠商自宣）**：Startup Fortune 報導 ForgeCode 宣稱效能勝過 Claude Code 與 Codex，但細則另有保留；具體數字與測試方法未見報導，僅標題可用，不列入「對手雷達」表（Google News/Startup Fortune）
 
 #### 2026-10-16
 - **具名企業退出事件（非本頁收錄範圍）**：Replit 執行長表示已不再與 Anthropic 合作，事件層詳見 [[topics/enterprise-tool-tracker]]（Google News/TechCrunch）。執行長稱 OpenAI 的 Sol／Astra 在從零建 app 上表現較好，但匿名知情人士否認合作已結束，狀態有爭議
 - **OpenAI**：官方部落格發布 Itaú（巴西零售銀行）導入案例，以對話介面 ia.i 與治理平台 IARA 推動全客群生成式 AI；廠商自宣客戶案例，具體規模與效益數字未見報導，不進「對手雷達」（Blog/OpenAI News）
-- **Microsoft／GitHub**：Copilot in Slack and Teams 新增多 repo 單一對話支援；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
-- **Microsoft／GitHub**：官方公告 11-16 起全平台棄用部分 GitHub Copilot 模型，具體型號清單見官方 changelog；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot in Slack and Teams 新增多 repo 單一對話支援；Microsoft／GitHub 列見「對手雷達」（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：官方公告 11-16 起全平台棄用部分 GitHub Copilot 模型，具體型號清單見官方 changelog；Microsoft／GitHub 列見「對手雷達」（Blog/GitHub Copilot Changelog）
 - **OpenAI（分析文，非競品動態）**：官方部落格推出 Rosalind Academic Plan，向學術實驗室提供贊助的 GPT-Rosalind 存取與生命科學研究工具；非編碼領域、未直接對比 Claude，屬廠商自宣，不列入「對手雷達」表（Blog/OpenAI News）
 - **Google（分析文，非競品動態）**：DeepMind 部落格介紹 Google Antigravity 用於加速抗菌胜肽研究的科學工作台應用；非編碼領域、未直接對比 Claude，屬廠商自宣，不列入「對手雷達」表（Blog/Google DeepMind Blog）
 
 #### 2026-10-15
-- **Microsoft／GitHub**：Agentic autofix for code scanning alerts 正式 GA；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
-- **OpenAI（Codex CLI）**：GPT-6.1 Sol 成為 Codex CLI 預設模型，宣稱成本降 77%；單一來源，詳見「對手雷達」OpenAI 列更新與 ⟨Q-07⟩（Google News/tech-insider.org）
+- **Microsoft／GitHub**：Agentic autofix for code scanning alerts 正式 GA；Microsoft／GitHub 列見「對手雷達」（Blog/GitHub Copilot Changelog）
+- **OpenAI（Codex CLI）**：GPT-6.1 Sol 成為 Codex CLI 預設模型，宣稱成本降 77%；單一來源，OpenAI 列見「對手雷達」與 ⟨Q-07⟩（Google News/tech-insider.org）
 - **Meta（分析文，非競品動態）**：Yahoo Finance 稱 Meta 握有 OpenAI、Anthropic 無法複製的 AI 優勢，具體優勢未見報導，僅標題可用（Google News/Yahoo Finance）
 
 #### 2026-10-14
-- **Microsoft／GitHub**：HydraFusion 更新模型池並新增 HydraFusion Max 方案；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
-- **Google**：Gemini 4 Argon 今日 GA 上架 GitHub Copilot，DeepMind 另發表模型負責任開發與安全說明文章；詳見「對手雷達」與「雷達細節」Google 列更新（Blog/GitHub Copilot Changelog；Blog/Google DeepMind Blog）
+- **Microsoft／GitHub**：HydraFusion 更新模型池並新增 HydraFusion Max 方案；Microsoft／GitHub 列見「對手雷達」（Blog/GitHub Copilot Changelog）
+- **Google**：Gemini 4 Argon 今日 GA 上架 GitHub Copilot，DeepMind 另發表模型負責任開發與安全說明文章；Google 列見「對手雷達」與「雷達細節」（Blog/GitHub Copilot Changelog；Blog/Google DeepMind Blog）
 - **OpenAI（分析文，非競品動態）**：官方部落格發表「The EU's next chapter in AI is agentic」，分析歐盟企業 agentic AI 採用趨勢，未直接對比 Claude，屬廠商自宣分析文，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-10-13
-- **Google**：DeepMind 官方推出 Gemini 4 Argon 全面開放，定價 $2／$10 per Mtok，另一篇聚焦機器人應用場景；詳見「對手雷達」與「雷達細節」Google 列更新（Blog/Google DeepMind Blog ×2）
-- **Meta（透過比較報導）**：Kingy AI 發表「Is Muse Wonder Full Worth $50 a Month?」，首度揭露 Muse Wonder Full 月費 $50；詳見「競品定價對照」新增列（Google News/Kingy AI）
+- **Google**：DeepMind 官方推出 Gemini 4 Argon 全面開放，定價 $2／$10 per Mtok，另一篇聚焦機器人應用場景；Google 列見「對手雷達」與「雷達細節」（Blog/Google DeepMind Blog ×2）
+- **Meta（透過比較報導）**：Kingy AI 發表「Is Muse Wonder Full Worth $50 a Month?」，首度揭露 Muse Wonder Full 月費 $50；相關列見「競品定價對照」（Google News/Kingy AI）
 - **Microsoft／GitHub**：Copilot 企業端新增 managed settings 強制即時取得伺服器端政策設定，不再信任本機快取版本；企業治理功能持續堆疊，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
-- **AI Coding Agents（整體產業，非競品）**：研究指出 AI coding agent 普遍讓程式碼量增加三成，但不代表軟體完工度或品質同步提升，具體方法論未見報導，僅標題可用（Topic Watch/competitor-landscape）
+- **AI Coding Agents（整體產業，非競品）**：研究指出 AI coding agent 普遍讓程式碼量增加三成，但不代表軟體完工度或品質同步提升，具體方法論未見報導，僅標題可用
 
 #### 2026-10-12
-- **Meta**：官方推出新前沿模型 Muse Wonder／Muse Wonder Full，主打法律、金融、健康等專業 agentic 任務並宣稱具「frontier coding performance」；詳見「對手雷達」與「雷達細節」Meta 列更新（Blog/Meta Newsroom）
+- **Meta**：官方推出新前沿模型 Muse Wonder／Muse Wonder Full，主打法律、金融、健康等專業 agentic 任務並宣稱具「frontier coding performance」；Meta 列見「對手雷達」與「雷達細節」（Blog/Meta Newsroom）
 - **Microsoft／GitHub**：Copilot 新增企業端可用的用戶歸因遙測功能，且不蒐集提示詞或回應內容本身；屬企業治理差異化功能，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
 
 #### 2026-10-10
@@ -518,25 +518,25 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Reflection**：紐約時報報導開源權重模型新創崛起為 Anthropic 新挑戰者，具體模型規格與數字未見報導（Google News/The New York Times）
 
 #### 2026-10-05
-- **Zhipu Z.AI**：finance.biggo.com 傳 GLM-5.3 獲 Cursor、Anthropic 雙重背書；2026-10-24 查證僅 Cursor 側有跡可循、Anthropic 側查無官方，見「對手雷達」⟨Q-08⟩（Topic Watch/competitor-landscape）
+- **Zhipu Z.AI**：finance.biggo.com 傳 GLM-5.3 獲 Cursor、Anthropic 雙重背書；2026-10-24 查證僅 Cursor 側有跡可循、Anthropic 側查無官方，見「對手雷達」⟨Q-08⟩
 - **OpenAI**：官方部落格說明因應歐盟文字來源標示規則的作法，聚焦浮水印適用範圍與偵測機制（Blog/OpenAI News）
 - **OpenAI**：官方部落格推出 ChatGPT 新視覺廣告格式，並擴充衡量工具與品牌歸因合作（Blog/OpenAI News）
 - **產業趨勢**：fortune.com 報導 OpenAI、Anthropic 因資料隱私爭議促使更多企業轉向開源模型與「主權 AI」，未點名具體企業或數字（Google News/fortune.com）
 
 #### 2026-10-04
-- **DeepSeek**：Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性）；詳見「對手雷達」與「雷達細節」DeepSeek 列更新（Google News/Pandaily）
+- **DeepSeek**：Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性）；DeepSeek 列見「對手雷達」與「雷達細節」（Google News/Pandaily）
 - **OpenAI（透過比較報導）**：quasa.io 發表 Claude Code 與 Codex CLI 分數與任務成本對照文，具體數字未見報導，僅標題可用（Google News/quasa.io）
-- **Startup Fortune**：發表 AI 編碼代理訂閱定價分析，點出重度使用者用量成本對供應商毛利的壓力，未點名具體工具或數字，僅標題可用（Topic Watch/competitor-landscape）
+- **Startup Fortune**：發表 AI 編碼代理訂閱定價分析，點出重度使用者用量成本對供應商毛利的壓力，未點名具體工具或數字，僅標題可用
 
 #### 2026-10-02
 - **Microsoft／GitHub**：Copilot code review 可透過 REST 與 GraphQL API 請求並逐次設定 effort 等級，Balanced 成為新預設（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub**：GitHub 自 10 月 2 日起在所有 Copilot 介面（Chat、inline edits、ask／agent 模式、程式碼補全）停用部分模型，清單未載入原料（Blog/GitHub Copilot Changelog）
 
 #### 2026-10-01
-- **Microsoft／GitHub**：GitHub Copilot CLI 與桌面版（macOS／Windows）公開預覽新增 computer use，可代操作桌面應用程式；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
-- **Microsoft／GitHub**：Copilot CLI、App 與 SDK 新增可用程式碼定義的動態工作流程編排功能；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：GitHub Copilot CLI 與桌面版（macOS／Windows）公開預覽新增 computer use，可代操作桌面應用程式；見「對手雷達」（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot CLI、App 與 SDK 新增可用程式碼定義的動態工作流程編排功能；見「對手雷達」（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub**：GitHub Copilot in VS Code 9 月彙整（v1.136–v1.140），聚焦從實作到 PR 合併的 agent 導向開發流程精簡，未點名單一新能力，僅彙整層級可用（Blog/GitHub Copilot Changelog）
-- **Google DeepMind**：發布新一代前沿模型 Gemini 4 Argon，主打 agentic software engineering、企業知識工作與資安防禦場景，先限量開放 Fairwind Program 予受信任網路防禦者；詳見「對手雷達」Google 列更新（Blog/Google DeepMind Blog）
+- **Google DeepMind**：發布新一代前沿模型 Gemini 4 Argon，主打 agentic software engineering、企業知識工作與資安防禦場景，先限量開放 Fairwind Program 予受信任網路防禦者；Google 列見「對手雷達」（Blog/Google DeepMind Blog）
 - **OpenAI**：發布 Albertsons Cos. 導入 ChatGPT Enterprise 與 OpenAI API 案例，用於加速內部團隊工作與零售流程；廠商自宣客戶案例，具體規模與效益數字未見報導，不進「對手雷達」（Blog/OpenAI News）
 - **OpenAI（透過比較報導）**：TechRepublic 發表 Claude Code vs OpenAI Codex 選型比較文，主張優劣不只看跑分；具體論點與數字未見報導，僅標題可用（Google News/TechRepublic）
 
@@ -547,8 +547,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **OpenAI**：官方部落格宣布與美國 SBDC 合作擴大中小企業 AI 培訓與在地支援，並發布中小企業 AI 使用報告，非產品或定價異動（Blog/OpenAI News）
 
 #### 2026-09-29
-- **OpenAI**：發布 GPT-6.1 Sol，以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens；詳見「對手雷達」與「雷達細節」OpenAI 列更新（Blog/Simon Willison）
-- **Microsoft／GitHub**：GitHub Copilot 官方 changelog 宣布 GPT-6.1 Sol 全面開放，用於 agentic coding 與終端機工作流；詳見「對手雷達」OpenAI 列更新（Blog/GitHub Copilot Changelog）
+- **OpenAI**：發布 GPT-6.1 Sol，以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens；OpenAI 列見「對手雷達」與「雷達細節」（Blog/Simon Willison）
+- **Microsoft／GitHub**：GitHub Copilot 官方 changelog 宣布 GPT-6.1 Sol 全面開放，用於 agentic coding 與終端機工作流；OpenAI 列見「對手雷達」（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub**：GitHub 官方 changelog 宣布 [[entities/sonnet-5-5|Claude Sonnet 5.5]] 全面開放於 GitHub Copilot，供開發者日常編碼工作直接選用，屬 Claude 經競品平台擴大觸及而非競品自身能力異動，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
 - **Meta**：官方部落格推出 Forum，Facebook Groups 專用獨立 app，非 AI 產品或定價異動（Blog/Meta Newsroom）
 - **Meta**：官方部落格擴大 Instagram School Partnership Program，協助青少年掌握資訊安全，非 AI 產品或定價異動（Blog/Meta Newsroom）
@@ -557,17 +557,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **OpenAI**：官方部落格發布前沿 AI 訓練安全案例（safety cases）初版指引，涵蓋技術防護、營運實務與異常對齊事件調查，非產品或定價異動（Blog/OpenAI News）
 
 #### 2026-09-28
-- **Meta**：官方推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務；詳見「對手雷達」與「雷達細節」Meta 列更新（Blog/Meta Newsroom）
+- **Meta**：官方推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務；Meta 列見「對手雷達」與「雷達細節」（Blog/Meta Newsroom）
 - **Base44（Wix）**：官方推出新產品 Base Code，報導定位為直接對標 Claude Code 與 Cursor 的競品；同日 CDOTrends 另一篇報導稱有替代方案以約十二分之一成本達到相近效果，惟未點名具體產品，價格與能力對比均未見報導細節（Google News/calcalistech.com；Google News/CDOTrends）
 - **OpenAI**：官方部落格宣布擴大 Lenfest AI Collaborative 新聞業合作計畫，追加 500 萬美元資金與最高 500 萬美元軟體額度及工程支援，非產品或定價異動（Blog/OpenAI News）
 
 #### 2026-09-27
-- **MarkTechPost**：發表企業導入 AI coding agent 比較文，聚焦智財賠償（IP indemnity）、資料落地與 500 人規模成本差異，未指名具體工具或數字，僅標題可用（Topic Watch/competitor-landscape）
+- **MarkTechPost**：發表企業導入 AI coding agent 比較文，聚焦智財賠償（IP indemnity）、資料落地與 500 人規模成本差異，未指名具體工具或數字，僅標題可用
 - **OpenAI（GPT-6 Astra）**：Kingy AI 發表 GPT-6 Astra 與 Claude Opus 5.5 效能與費用比較文，2 個來源同日報導，具體數字未見（Google News/Kingy AI）
 - **OpenAI（ChatGPT Pro）**：Kingy AI 發表 ChatGPT Pro（$100）與 Claude Max（$200）訂閱方案比較文，2 個來源同日報導，具體差異未見報導細節（Google News/Kingy AI）
 
 #### 2026-09-26
-- **Meta（Muse Code）**：tech-insider.org 發表 Muse Code、Claude Code、Cursor 三方比較文，具體數字未見，僅標題可用（Topic Watch/competitor-landscape）
+- **Meta（Muse Code）**：tech-insider.org 發表 Muse Code、Claude Code、Cursor 三方比較文，具體數字未見，僅標題可用
 - **Jev（TypeSafe AI）**：FT 報導低價新模型 Jev 意圖挑戰 OpenAI 與 Anthropic，具體定價與效能數據未見，僅標題與 HN 討論可用（Google News/Financial Times；Hacker News）
 - **OpenAI**：官方發布車隊管理新創 Proaction 導入 Codex 案例，稱月省 40–60 工程時數、銷售成長 60%；詳見「雷達細節」更新（Blog/OpenAI News）
 - **Microsoft／GitHub**：Copilot 新增 enterprise managed settings 驗證器，偵測畸形 JSON、不支援設定與無效團隊對應（Blog/GitHub Copilot Changelog）
@@ -577,7 +577,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### 2026-09-25
 - **Microsoft／GitHub**：CNBC／GeekWire 報導 Microsoft 推出 all-in-one Copilot app，整合旗下商用 AI 功能，劍指 Anthropic 與 OpenAI，盼加速企業採用；詳見「對手雷達」與「雷達細節」更新（Google News/CNBC；Google News/GeekWire）
 - **Microsoft／GitHub**：GitHub 官方 changelog 宣布 Copilot Business／Enterprise 帳號推出全域預設開啟政策，涵蓋已 GA 功能與支援的用戶端能力；詳見「對手雷達」與「雷達細節」更新（Blog/GitHub Copilot Changelog）
-- **Google（Gemini）**：DeepMind 官方部落格發布 Gemini 3.8 Live 的 Live Avatar 即時視覺化身功能，鎖定企業客服與互動導覽情境；詳見「對手雷達」列更新（Blog/Google DeepMind Blog）
+- **Google（Gemini）**：DeepMind 官方部落格發布 Gemini 3.8 Live 的 Live Avatar 即時視覺化身功能，鎖定企業客服與互動導覽情境；見「對手雷達」（Blog/Google DeepMind Blog）
 
 #### 2026-09-23
 - **Microsoft／GitHub**：Copilot code review 新增個人化設定選項、擴大適用方案並提供企業層級預設，全面 GA；詳見「對手雷達」與「雷達細節」更新（Blog/GitHub Copilot Changelog）
@@ -588,8 +588,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **DeepSeek／Moonshot AI**：Gizmodo 報導中國當局調查兩家公司，起因是 Anthropic 先前指控其將部分請求轉發給 Claude 處理——若屬實顯示部分中國模型的實測能力可能部分借道 Claude，衝擊本頁既有「低價可用替代」判讀的可信度（推論，安全政策面詳見 [[topics/ai-agent-safety]]）（Google News/Gizmodo）
 
 #### 2026-09-21
-- **OpenAI**：官方部落格發布 V7，讓 AI agent 具備「機構記憶」，把公司檔案轉為 agent context；GPT-6 Astra 於其最難圖查詢測試達 89% 準確率；詳見「對手雷達」與「雷達細節」OpenAI 列更新（Blog/OpenAI News）
-- **xAI（透過 GitHub Copilot）**：Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
+- **OpenAI**：官方部落格發布 V7，讓 AI agent 具備「機構記憶」，把公司檔案轉為 agent context；GPT-6 Astra 於其最難圖查詢測試達 89% 準確率；OpenAI 列見「對手雷達」與「雷達細節」（Blog/OpenAI News）
+- **xAI（透過 GitHub Copilot）**：Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線；見「對手雷達」（Blog/GitHub Copilot Changelog）
 
 #### 2026-09-19
 - **Microsoft／GitHub**：Copilot code review 改版——版本演進呈現更清楚、自動解決建議更聰明、accept 時產生 commit 訊息；詳見「對手雷達」與「雷達細節」更新（Blog/GitHub Copilot Changelog）
@@ -602,18 +602,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 2026-09-17
 - **Microsoft／GitHub**：Copilot 新增功能採用儀表板（Impact Dashboard）與 agentic CLI 用量指標 API（涵蓋 skills、custom agents、MCP、slash commands、plugins）；詳見「對手雷達」列與「雷達細節」更新（Blog/GitHub Copilot Changelog）
-- **Microsoft／GitHub**：Copilot 預算增加請求正式開放（GA），額度用盡後可申請提高預算而非被完全鎖住；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot 預算增加請求正式開放（GA），額度用盡後可申請提高預算而非被完全鎖住；見「對手雷達」（Blog/GitHub Copilot Changelog）
 - **OpenAI**：官方部落格發布「模型不對齊回報框架」，含 6 份異常模型行為報告，非產品或定價異動（Blog/OpenAI News）
 
 #### 2026-09-16
-- **Google（Gemini）**：DeepMind 官方部落格發布 Gemini 3.8 Live 與 3.8 Live Extended Thinking，主打語音 agent、對話智慧與近即時多步推理；詳見「對手雷達」列更新（Blog/Google DeepMind Blog）
+- **Google（Gemini）**：DeepMind 官方部落格發布 Gemini 3.8 Live 與 3.8 Live Extended Thinking，主打語音 agent、對話智慧與近即時多步推理；見「對手雷達」（Blog/Google DeepMind Blog）
 
 #### 2026-09-15
-- **Microsoft／GitHub**：Copilot auto model selection 新增效率／平衡／智慧三檔，讓使用者自訂成本與品質取捨；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot auto model selection 新增效率／平衡／智慧三檔，讓使用者自訂成本與品質取捨；見「對手雷達」（Blog/GitHub Copilot Changelog）
 - **Meta（Meta One）**：官方發布新訂閱服務 Meta One，整合更多功能與 AI 能力，定位為一般消費訂閱而非編碼工具，與 Muse Code 為不同產品線（Blog/Meta Newsroom）
 
 #### 2026-09-13
-- **OpenAI（透過 Perplexity 案例）**：Perplexity 用 GPT-6 Astra 自主寫通訊、改軟體、監控正式環境，人工複查頻率大減；詳見「對手雷達」與「雷達細節」OpenAI 列更新（Blog/OpenAI News）
+- **OpenAI（透過 Perplexity 案例）**：Perplexity 用 GPT-6 Astra 自主寫通訊、改軟體、監控正式環境，人工複查頻率大減；OpenAI 列見「對手雷達」與「雷達細節」（Blog/OpenAI News）
 
 #### 2026-09-12
 - **Google（Gemini）**：HN 討論稱 Gemini 2.5 Pro／Flash 十月停用、尚無 GA 版 Pro 級後繼；長文件利基（千頁僅需 30 萬 tokens）Anthropic／OpenAI 均無同等方案，代價逾 10 倍 → 需要此利基的工程師暫無替代可轉。僅單一 HN 討論串（19 分），無官方公告佐證（Hacker News）
@@ -623,7 +623,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Logitech**：推出可自訂快捷鍵的 MX Keypad，鎖定開發者作為多應用 AI 控制中心，廠商自宣性質，無 Claude 對比（Topic Watch）
 
 #### 2026-09-07
-- **xAI（Grok 4.5）**：官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude；詳見「對手雷達」與「競品定價對照」新增列（Google News/shattered.io）
+- **xAI（Grok 4.5）**：官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude；相關列見「對手雷達」與「競品定價對照」（Google News/shattered.io）
 
 #### 2026-09-05
 - **OpenAI**：Google News/Pasquale Pillitteri 報導稱 GPT-6 Astra 全面上線 Pro、Enterprise、API，副標提及「Anthropic 重置 Claude 用量限制」，原文全文未能取得（Google News/Pasquale Pillitteri）
@@ -678,8 +678,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-12-14｜訊 2026-09-21）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 僅標題可用，能力提升內容仍未見（Google News/Barron's）
   - 09-21 日報：Grok 4.7 已上線 GitHub Copilot（GitHub changelog），主打 agentic coding——新版確有發布；媒體稱（Decrypt 等，2026-11-14 查）定價 $2／$6 per Mtok、context 50 萬 token，能力數字為 xAI 自報，xAI 官方頁 2026-11-14 連不上，未查證
 - 後續（依 09-07 日報）：版本號為 **Grok 4.5**，shattered.io 稱定價每百萬 token 輸入 2 美元／輸出 6 美元、優於 GPT-5 與 Claude；該說法僅見媒體標題，xAI 官方頁面未查
-- **訊 2026-09-07**：Grok 4.5 官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude（shattered.io，單一來源），為此前訊號補上版本號與定價，詳見「競品定價對照」與「對手雷達」新增列。
-- **訊 2026-09-21**：Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線，官方一手來源（GitHub Copilot Changelog），惟未提供 benchmark 或定價，未直接證實 Barron's 稱「加壓 Anthropic 與 OpenAI」的具體效果，詳見「對手雷達」新增列。
+- **訊 2026-09-07**：Grok 4.5 官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude（shattered.io，單一來源），為此前訊號補上版本號與定價，相關列見「競品定價對照」與「對手雷達」。
+- **訊 2026-09-21**：Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線，官方一手來源（GitHub Copilot Changelog），惟未提供 benchmark 或定價，未直接證實 Barron's 稱「加壓 Anthropic 與 OpenAI」的具體效果，相關列見「對手雷達」。
 
 
 ---

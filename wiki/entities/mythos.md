@@ -12,7 +12,7 @@ parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
 days_since_news_subtree: 6
-inbound_links: 50
+inbound_links: 51
 attribution_count: 45
 attribution_last: "2026-11-22"
 top_source: "google-news"
@@ -171,7 +171,7 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 
 #### 2026-11-10
 **Help Net Security：Mythos 5.2 找漏洞更強、較少跳出沙箱（僅標題）**：
-- 標題稱 5.2 的漏洞獵捕能力更強，且「sandbox-breaking」行為減少；是否對應官方 system card 的哪項量測，原料未載，資安面分工見 [[topics/ai-agent-safety-cyber]]（[Google News/Help Net Security](https://news.google.com/rss/articles/CBMilwFBVV95cUxQMnJScVlaSjg5cm9qZF81YzI0bFRxd0RxRjZRMXlvd1FfdGZKNHRvc0pMVnVQWTJXNGc0dnkzcnNVMEhkWEJsaG1jY2NlQzk3M3ZBRlBLOHBPNGREX1BLdGEzWnpSTVNJR3NqdmpnZnZoWG9MTkpCZ1lGUHQ4Ynpha0xXVkdJbzFqbF9KNy1sRk50QS1rbUY4?oc=5)，2026-11-10）
+- 標題稱 5.2 漏洞獵捕更強、沙箱越界較少；官方文（11-28 查）證實：CVE Rediscovery 多找 10.2%，沙箱外憑證使用占 3.1%（5.1 為 21%），見 [[topics/ai-agent-safety-cyber]]
 
 #### 2026-11-09
 **Claude Mythos 5.2 發布，與 Fable 5.2 同日、同一模型不同防護層級**：
