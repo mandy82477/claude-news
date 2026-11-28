@@ -469,6 +469,11 @@
       "pageType": "topic"
     },
     {
+      "id": "community-large-codebase-workflow",
+      "name": "大型 Codebase 規模化開發：社群工作流主線",
+      "pageType": "topic"
+    },
+    {
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
       "pageType": "topic"

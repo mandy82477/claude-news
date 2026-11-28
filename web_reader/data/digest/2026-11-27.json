@@ -389,8 +389,18 @@
       "pageType": "topic"
     },
     {
+      "id": "community-pattern-trends",
+      "name": "社群趨勢觀察（週更）",
+      "pageType": "topic"
+    },
+    {
       "id": "community-skills",
       "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-tools",
+      "name": "社群工具目錄",
       "pageType": "topic"
     },
     {
