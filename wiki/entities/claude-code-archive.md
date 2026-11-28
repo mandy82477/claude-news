@@ -11,7 +11,7 @@ parent: "entities/claude-code"
 children: "[]"
 page_role: "archive"
 days_since_news_subtree: 212
-inbound_links: 10
+inbound_links: 9
 attribution_count: 0
 attribution_last: null
 top_source: null

@@ -471,3 +471,4 @@
 {"id": "H-2a4232", "opened": "2026-11-26", "from": "社群", "to": "功能", "page": "topics/anthropic-product-matrix", "note": "評估產品化矩陣新增列：mobile-agent-testers（並行 agent 行動裝置 QA，2,488★）、gflow-cli（MCP 接外部雲端生成服務 Google Flow，955★）", "status": "open"}
 {"id": "H-2929ad", "closed": "2026-11-26", "status": "done", "by": "功能", "result": "功能記者 2026-11-26 ingest 回報已處理"}
 {"id": "H-2a4232", "closed": "2026-11-27", "status": "void", "by": "主編", "result": "功能記者本輪判斷：mobile-agent-testers／gflow-cli 為第三方社群工具（★計數），非官方產品×功能範疇，且無官方一手來源佐證，暫不入列產品化矩陣；待未來有官方證據再評估"}
+{"id": "H-101056", "opened": "2026-11-28", "from": "開發實務", "to": "功能", "page": "entities/claude-code-features", "note": "第 91 行引 Superpower Daily 的那句只有標題、未取得一手來源或原文。該句目前被 coding-workflow-guide 第 5 段當作 Claude Ship policy check 限制的依據，請補一手來源（官方文件或原文），補不到則在該句明標「僅標題可用」並降為參考", "status": "open"}

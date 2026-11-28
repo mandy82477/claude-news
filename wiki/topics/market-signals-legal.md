@@ -11,7 +11,7 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 6
-inbound_links: 7
+inbound_links: 8
 attribution_count: 8
 attribution_last: "2026-11-22"
 top_source: "google-news"
@@ -584,7 +584,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 2026-11-22 查證：訴狀仍未直讀。媒體稱（Music Business Worldwide 搜尋摘要）案號：Suno 案 3:26-cv-12305、Anthropic 案 5:26-cv-12308；11-11 修正訴狀使兩案合計作品由 1,903 首增至 2,511 首，Anthropic 案列 1,143 首。
 - 🔎 **查無官方**（標 2026-10-21｜查 sole-source award、FedScoop｜複 2026-12-22）｜**HHS 唯一來源授予 Anthropic 聯邦合約的金額與範疇是否經官方公告**：FedScoop 報導 HHS 將做出唯一來源採購決定，先於後續更廣泛 AI 採購競標程序，合約金額、服務範疇、是否已簽署，以及是否有競爭對手提出異議均未見報導。
   - 2026-11-08 查證（[FedScoop 10-23](https://fedscoop.com/hhs-sole-source-award-to-anthropic-continues-to-raise-questions/)，引 HHS 於 SAM.gov 的公告與 HHS 發言人）：範疇已載——「有限度的服務延續」過渡合約，HHS 稱為「臨時六個月唯一來源橋接合約」。
-    - 因 Anthropic 的 OneGov 折扣協議 10 月底到期，同時籌備競爭性多廠商 BPA；依簡化採購門檻程序。
+    - 因 Anthropic 的 OneGov 折扣協議 10 月底到期，同時籌備競爭性多廠商 BPA；依簡化採購門檻程序。**到期不等於折扣消失**——官方 10-27 公告的擴大版 OneGov 協議（40% 折扣、延伸至 SLTT 政府）已接上，見本頁同節 10-27 條目（2026-11-28 核）。
     - **金額公告未載**（FedScoop 稱若依該門檻應低於 35 萬美元，但無成本列示故不確定），是否已簽署未載，無競爭對手異議報導；採購法學者質疑唯一來源理由循環。
   - 2026-11-22 重查 FedScoop 10-23 原文：仍稱計畫中的授予、未確認已簽署，金額與授予日未載；其後無新報導。
 - 🔎 **查無官方**（標 2026-10-19｜查 50 人以上死亡、10 億美元損害｜複 2026-12-22）｜**國會 AI 安全法案的門檻數字是否進入正式提案或遭議員公開質疑**：Yahoo／Mashable 報導遊說版法案僅逾 50 人死亡或 10 億美元損害政府才可封鎖模型，Reddit 社群質疑門檻過高，法案是否進入正式立法程序與具體提案人均未見報導。

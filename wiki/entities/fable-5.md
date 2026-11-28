@@ -12,7 +12,7 @@ parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
 days_since_news_subtree: 7
-inbound_links: 85
+inbound_links: 83
 attribution_count: 80
 attribution_last: "2026-11-21"
 top_source: "google-news"

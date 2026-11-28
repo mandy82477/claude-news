@@ -12,7 +12,7 @@ parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 25
+inbound_links: 26
 attribution_count: 117
 attribution_last: "2026-11-27"
 top_source: "github-issues"

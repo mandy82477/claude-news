@@ -12,7 +12,7 @@ parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
 days_since_news_subtree: 6
-inbound_links: 51
+inbound_links: 50
 attribution_count: 45
 attribution_last: "2026-11-22"
 top_source: "google-news"

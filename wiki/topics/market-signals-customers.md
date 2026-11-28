@@ -11,7 +11,7 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 6
-inbound_links: 6
+inbound_links: 5
 attribution_count: 11
 attribution_last: "2026-11-22"
 top_source: "google-news"

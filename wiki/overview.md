@@ -1,31 +1,29 @@
 # Claude / Anthropic 生態系概覽
 
-**最後更新：** 2026-11-21
+**最後更新：** 2026-11-28
 **更新頻率：** 🗓️ 週更（每週檢視一次；更新日期停留數天屬正常節奏）
 
 ---
 
 ## 當前局勢
 
-**IPO 從定價走完到結算，然後股價就跌了**：官方 11-18 以每股 **$83** 定價，11-19 以代號 **ANT** 在 Nasdaq 掛牌（開盤 $111.50、盤中一度 $114.99），11-20 官方公告超額配售權全額行使、發行上修至 **11.27 億股**，結算毛額約 **$935 億**、實收約 **$916 億**，為史上規模最大 IPO。但掛牌第二天股價較前一日再跌逾 **11%**，同日那斯達克綜合指數抹平 2026 全年漲幅。市值估算各家口徑不一（Reuters 稱盤中近 $2 兆後回落約 $1.2 兆，WSJ 稱 $1.5～2 兆）。事實層見 [[topics/anthropic-ipo]]，判讀層見 [[topics/market-signals-ipo]]。
+**股價走完一輪 V 型，11-27 收復 $83 發行價**：掛牌後連日下探，11-24 正式跌破發行價、11-25 創新低 $74（Reuters，累計跌約 33%），11-26 連續第二天收在發行價之下且 Bloomberg 稱華爾街內部罕見分歧，11-27 單日大漲約 11% **首次全面收復 $83**（Forbes；IBD／Yahoo Finance 同步確認）。本輪 5h 結算 13 列判讀，IPO 線一次結掉 5 列——**定價 $83 高於 $70～78 路演區間上緣、11-19 如期掛牌**，三列催化劑落定；仍沒結的是官方從未公布 RSP 門檻後的防護升級內容與調整後營業利益率的調整項。詳見 [[topics/anthropic-ipo]]、判讀與結算見 [[topics/market-signals-ipo]]。
 
-**Gemini 4 Neon 直接對著 Opus 5.5 打**：11-19 Google 發布 Gemini 4 Neon 並同步上線 GitHub Copilot，官方稱程式撰寫能力追平 Claude Opus 5.5、**API 價低 25%**；同期 OpenAI Astra 6.2 被報導在速度與成本上優於 Claude Fable 5.2，但 12 項任務輸 7 項。價格戰這一輪輪到對手降價，見 [[topics/competitor-landscape]]。
+**Claude Ship 是本週最大的新功能，但它有一道煞車**：11-23 發布，讓 Claude 自動審查 pull request、修好問題並依團隊規則核准變更（含 Claude Approvals／PR Steward 兩套子機制），兩日內累計 10+ 家媒體跟進、熱度衝到 🔥🔥🔥🔥🔥；同日 Superpower Daily 澄清**它的 policy check 不能取代團隊既有的 code-owner 人工審核要求**。試用價值仍為 ⏳ 觀望（官方未附第三方量測），見 [[feature-radar]]。
 
-**stable 通道一次跳 12 個版號，這一跳不是無痛的**：npm `stable` 由 2.1.311 升到 **2.1.323**、`latest`＝**2.1.330**（dist-tags，2026-11-21 查證）。本站核對過的破壞性變更**現在全部落在 stable 裡**——寫入邊界設定（2.1.314）、auto mode 在 LLM gateway 下不再退回舊分類（2.1.319）、Fable 5.2 成為預設 Fable（2.1.321），加上預設關閉的實驗性 **Code Mode**（2.1.323）。**停在 2.1.311 的人升 stable 會一次吃下這幾項行為改變**，升之前逐列看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]。
+**官方把 Skills 接上 MCP，同版另給了一道攔截 hook**：11-25／26 的 v2.1.332 讓 MCP 伺服器直接為 Claude 與 Claude Code 提供 Skills（beta，`/` 選單顯示 `server:skill`），同版新增 `PreSkillShellCommand` hook——可在 skill 或指令載入時攔下它內嵌的 shell 指令。後者本輪已寫進 [[topics/official-community-gap]]「它會不會跑出破壞性指令」那一列。
 
-**護欄的切換類別由四類收斂為三類，前沿 LLM 開發現在也有接手模型**（本輪對官方說明中心查證）：官方文件標題已再度更名為〈Why Claude switched models in your conversation with Fable models〉，明載同一套機制涵蓋 Fable 5.2／5.1／5。現在會觸發切換的是**攻擊性資安**（接手 Opus 4.8）、**雙重用途生物**與**窄範圍前沿 LLM 開發**（兩者皆接手 Opus 5）。本頁此前寫「模型萃取」是第四個獨立類別、且前沿 LLM 開發「沒有繞法」，兩處都已失效並更正——distillation 分類器仍在，但官方只在計費段提到它。見 [[entities/fable-5]]。
+**stable 這一跳變成無痛的**：npm `stable` 由 2.1.323 前進到 **2.1.326**、`latest`＝**2.1.332**（dist-tags，2026-11-28 查證），**2.1.324～326 沒有新增會改到既有行為的變更**——上一輪那句「升 stable 不是無痛的」已經失效並改寫。還停在 2.1.311 之前的人仍要先看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]。版本通道見 [[entities/claude-code-releases]]。
 
-**官方 Fable 5.2 專屬 prompting 指南已出並逐條讀過**：解掉 11-09 起懸著的一題。和 5.1 最不一樣的三件事——effort 級距跨代不等量、照搬 5.1 的值是白花錢；長任務「還沒做完就收手」官方給了可貼的 system prompt 段落，但代價是輸出 token 多三成、它問你的次數變少；**「這份程式碼是你的」那一句**會把重複程式碼收斂率由不到 10% 推到約 75%，同時輸出 token 多 70–80% 並做沒人要求的改動。另有新的拒絕類別 `reasoning_extraction`。見 [[entities/fable-5#跟它怎麼說話]]、[[entities/mythos]]。
+**Max 方案用量異常同一天冒出四份高熱度 issue**：11-26 社群同步湧現至少 4 份 GitHub Issue 反映 Max 方案用量異常（最熱 1,501 則留言），11-27 另在行動版多帳號切換的功能請求上衝出 190 則留言與 1,0xx 個讚。這類訊號的家在 [[entities/claude-code-known-issues]]。
 
-**金融業三家同週導入，數學與物理各出一個未經同行審查的宣稱**：Barclays／Citadel／BNY 將 Claude 導入工作流（11-20）；同日 Anthropic 數學家 Levent Alpöge 聲稱與 Claude 合作找到黎曼猜想的證明（**尚未經同行審查**，多家媒體以 unverified 措辭跟進），Anthropic Research 另發文稱 Claude 解開黑洞物理兩個懸置逾 20 年的理論問題（附預印本）。採用面見 [[topics/market-signals-customers]]。
+**官方自己公開了紅隊結果，而且結果好壞兼具**：11-24 WIRED 報導官方架設蜜罐誘捕 agent 的不當行為，11-25「Siren」測試顯示弱化沙盒限制下 Claude 代理最高 **32%** 突破限制（2 來源同日，測試方法與樣本數未載），11-26 官方公開逾 **1,700 個陷阱**情境的測試結果（Malwarebytes／The New Stack 跟進，dev.to 補充「徹底執行」「權威身分」等措辭會提高逃脫機率）。逐則見 [[topics/ai-agent-safety-cyber]]。
 
-**IPO 前夕的安全品牌質疑，本輪查出了具體內容**：聯名信〈The MisAnthropic Statement〉具名簽署人包含 Thomas Wolf、Igor Babuschkin、Steven Pinker、Max Tegmark 與 [[entities/gary-marcus|Gary Marcus]]，Center for AI Safety 亦加入，網站列 89 人；主張是 Anthropic 一邊警告遞迴自我改進 AI、一邊競相打造，並以安全品牌向投資人與大眾取得權力。Anthropic 回應稱自己有「業界最強安全防護之一」。評級那一則**本庫此前寫錯了評級方**：給出「商業倫理嚴重、人力資本高」評等的是 **Morningstar Sustainalytics**（報告日 11-16），ESG Dive 只是報導者，已更正。以上皆為媒體轉述、未讀到原文（`businesswire.com` 仍不在雲端網路白名單內）。見 [[topics/ai-agent-safety]]。
-
-**本輪站內最值得記的事實面修正**：除上面兩條官方查證外，`feature-radar` 的「升級前要知道的」表由 22 列裁回規則上限 **12 列**（破壞性變更 8 列全留），被裁的 10 列事實先搬進 [[entities/claude-code-releases]] 才移出；`entities/claude-code-releases` 另把發布逾 90 天的 23 列版本搬進 [[entities/claude-code-archive]]。
+**本輪站內最值得記的事實面修正**（5c 清零 44 筆的副產品）：**快取讀取 ×0.025 倍率是自 Fable 5.1（09-02）起沿用、不是 5.2 才降**（原判讀寫反，已更正）；官方 11-09 發布文**表列的是 Mythos 5.2 而非 Fable 5.2**（CyScenarioBench 無防護 76.3% 對 GPT-6 Cyber 61%，官方註腳明言各家任務不同不可互比，且通篇沒有「多階段」字樣）；**遠端遙控植入程式是 Darktrace 的實驗室概念驗證**（需已取得憑證、不依賴平台漏洞、未在野觀察），不是在野攻擊；**CVP 核准仍被擋那則（#61889）已於 09-12 由機器人自動關閉為 `not_planned`**，44 則留言全是使用者、沒有維護者回覆過；**自架 Managed Agents 由懸置改為官方事實**（private beta、harness／sandbox／憑證／session 歷史皆在客戶環境）。
 
 ## 主要模型現況
 
-> 牌價、知識截止與退役日為 **2026-11-14 官方模型總覽頁與各模型頁查證**（本輪 5l 複查：fable-5 資料截至 11-09、opus-5 資料截至 11-14，皆未逾 60 天，不觸發重查）。
+> 牌價、知識截止與退役日為 **2026-11-14 官方模型總覽頁與各模型頁查證**（2026-11-28 5l 複查：fable-5 資料截至 11-09、opus-5 資料截至 11-14，皆未逾 60 天，不觸發重查）。
 
 | 模型 | 狀態 | 備注 |
 |------|------|------|
@@ -41,7 +39,7 @@
 | Claude Opus 4.8 | ⚠️ Legacy | 仍是 Fable 系**資安類**請求被護欄攔下時的接手模型；**fast mode 已宣告淘汰、2026-11-30 移除** |
 | Claude Opus 4.7／4.6、Sonnet 4.6、Haiku 4.5 | ⚠️ Legacy | 仍可選用；**4.7 起換新 tokenizer**，同一份文字約 **1x–1.35x** token（官方遷移指南；計價頁另寫「約多 30%」，取決於內容）|
 
-> 快速選型與情境推薦見 **[[topics/model-comparison]]**；跨家任務榜單見 **[[topics/model-task-leaderboard]]**（本輪因雲端網路未開放榜單網域未更新）
+> 快速選型與情境推薦見 **[[topics/model-comparison]]**；跨家任務榜單見 **[[topics/model-task-leaderboard]]**（2026-11-28 因雲端網路未開放榜單網域未更新）
 > 現行模型頁的「跟它怎麼說話」節均已從官方 prompting 指南補齊，**本輪 Fable／Mythos 兩頁已換成官方 5.2 版指南**——**換代時哪幾句 prompt 要加、哪幾句要刪**看那一節。同一句話在相鄰兩代常是相反的藥。
 
 ---
@@ -71,15 +69,16 @@
 12. **[[topics/recursive-self-improvement]]**（ongoing）— 黎曼猜想與黑洞物理兩個宣稱都未經同行審查，屬本頁射程
 13. **[[topics/safety-china-trust-dispute]]**（monitoring，已宣告新鮮度豁免——刻意停在 07-11，之後見政策頁）
 
-## 近期重大事件（2026-11-15 至 2026-11-21）
+## 近期重大事件（2026-11-22 至 2026-11-27）
 
 | 日期 | 事件 | 影響 |
 |------|------|------|
-| 11-20 | **IPO 結算完成**（11.27 億股、毛額約 $935 億）；次日股價再跌逾 11%；**Barclays／Citadel／BNY 導入**；兩個未經同行審查的研究宣稱 | 資本面落地、採用面擴張，研究宣稱待驗 |
-| 11-19 | **IPO 定價 $83、以 ANT 在 Nasdaq 掛牌**（開盤 $111.50）；**Google Gemini 4 Neon 發布**並上線 GitHub Copilot（稱追平 Opus 5.5、API 低 25%）| 上市日與對手旗艦撞在同一天 |
-| 11-18 | **IPO 定價最後階段**；Amazon／Google 合計持股近 30%；**安全品牌三面受質疑**（聯名信、評級、Altman）；遊說支出 $163 萬曝光 | 定價前夕的信任面壓力測試 |
-| 11-17 | Claude Code v2.1.326：agent teams 可與 **Code Mode** 同開 | 實驗功能與多 agent 接上 |
-| 11-16 | Jasjeet Sekhon（Google DeepMind 前策略長）離職加入 Anthropic 傳聞；Brad Gerstner 宣布 $50 億認購 | 人才與認購同週 |
+| 11-27 | **股價首次收復 $83 發行價**（單日 +11%）；行動版多帳號切換功能請求衝出 190 則留言 | IPO 線本週收尾 |
+| 11-26 | **MCP 伺服器可直接提供 Skills**（公開測試）；官方公開逾 1,700 個紅隊陷阱測試結果；Max 方案用量異常同日 4 份高熱 issue | 擴充面與用量爭議同週 |
+| 11-25 | **Artifacts 可安裝成 macOS／Windows 獨立 app**；官方部落格說明 Messages API 改寫為 Rust（CPU 每請求降 70%）；股價創新低 $74；「Siren」測試稱弱化沙盒下 32% 突破限制 | 產品、工程與風險三面 |
+| 11-24 | 股價正式跌破 $83；**Claude 完成 VP≠VNP 形式化證明**；**MCP SDK 單月下載破 7 億次**、Background Tasks 轉 GA；WIRED 報導官方蜜罐 | 數學宣稱與生態規模 |
+| 11-23 | **Claude Ship 發布**（自動審 PR、修問題、依規則核准）；Hackread 揭惡意 Google 廣告偽冒 Codex／Claude Code 下載頁鎖定 Mac | 本週最大新功能＋新攻擊面 |
+| 11-22 | IPO 財富效應具體數字（Business Insider 報導七位高階主管持股）；reanimate 動畫逐格拆解 skill | 商業與社群工具 |
 
 > 完整事件時序見各 topics 頁面「時序」區塊；[[log]] 含每日更新完整紀錄。
 
