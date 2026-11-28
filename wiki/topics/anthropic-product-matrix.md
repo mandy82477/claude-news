@@ -6,11 +6,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-11-22"
 last_news_update: "2026-11-20"
 status_main: "ongoing"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 7
+days_since_news_subtree: 8
 inbound_links: 3
 attribution_count: 43
 attribution_last: "2026-11-20"
@@ -18,7 +18,7 @@ top_source: "user-query"
 pending_count: 1
 pending_overdue: 1
 pending_next_review: null
-pending_signalled: 0
+pending_signalled: 1
 staleness_exempt: null
 signal: "孤島"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -288,7 +288,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude Code × Motion**：管理指南列為 artifact 範本、限 Team／Enterprise，Claude Code 文件沒提；需要 Team 帳號實測。
 - **Claude Duet × Motion**：Motion 只開 Team／Enterprise、Duet 還沒開放 Team／Enterprise，兩句合起來等於用不到，但官方沒直接寫，維持未公開。
 - **Claude Code × 語音**：Claude Code 有 /voice 語音輸入，說明中心另寫 voice mode（雙向對話）不在 Claude Code；本表把語音輸入算可用，兩者差別寫在格內。
-- ❓ **待查證**（標 2026-11-11｜查 Claude Sheets、Claude Whiteboards、Claude Meetings）｜**Meetings、Sheets、Whiteboards 未入表**：專頁見 [[entities/claude-workspace-suite]]、[[entities/claude-meetings]]；他產品欄未查
+- ❓ **待查證**（標 2026-11-11｜查 Claude Sheets、Claude Whiteboards、Claude Meetings｜訊 2026-11-24）｜**Meetings、Sheets、Whiteboards 未入表**：專頁見 [[entities/claude-workspace-suite]]、[[entities/claude-meetings]]；他產品欄未查
 - **Claude app × 背景／排程任務的 Free 方案**：說明中心列付費方案，Free 沒寫；官方部落格曾說 Free「soon」。
 
 ## 相關實體

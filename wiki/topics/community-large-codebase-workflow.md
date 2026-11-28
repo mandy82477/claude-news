@@ -3,15 +3,15 @@ page: "topics/community-large-codebase-workflow"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-13"
+last_updated: "2026-11-28"
+last_news_update: "2026-11-26"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 14
+days_since_news: 2
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 14
+days_since_news_subtree: 2
 inbound_links: 54
 attribution_count: 2
 attribution_last: "2026-08-05"
@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-05-02
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後更新：** 2026-11-28
+**最後新聞更新：** 2026-11-26
 
-> **並行規模、Context、索引記憶、除錯四條線各多一個實作，答案都沒變**（2026-11-13）
-> runner 讓四種 agent CLI 在同一任務協作，Aq 用注意力佇列管等待中的 session；context-mode 把工具輸出攔在 context 外；claim-check 在完成宣告缺證據時退回。四者都只有單一來源或星數。
+> **並行規模與除錯分工兩條線各添新例，答案沒變；Context、索引記憶本週沒有新實作**（2026-11-26）
+> 官方部落格（11-17，HN 194）把「agent 能自證工作」講成同時平行跑幾十個 Claude 的前提，與本頁「把關前移」同向；跨機器協調（facadecode）與 20 支 agent 並行跑模擬器 QA（mobile-agent-testers）都只有星數；code-review-gate-skill、Agent-Cockpit 兩個「誰把關」工具也只有星數。
 
 ---
 
@@ -58,7 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **現在的答案**
 - **官方已給**：`claude --worktree <名字>` 開隔離 session，subagent 設 `isolation: worktree` 各拿暫時 worktree（[官方文件](https://code.claude.com/docs/en/worktrees)）；何時該隔離見 [[topics/anthropic-agent-stack]]，monorepo 只取需要的目錄見 [[topics/coding-workflow-guide]]
 - 隔離是並行的起點：每個 agent 一個 worktree（或等價的檔案系統隔離），社群近三個月沒有出現反對意見
-- 規模一段一段加：社群的崩潰分析建議先在 10–20 個 agent 驗證協調機制，每倍增一次重驗，不線性外推
+- 規模一段一段加：社群的崩潰分析建議先在 10–20 個 agent 驗證協調機制，每倍增一次重驗，不線性外推；Claude Code 團隊自述（官方部落格，2026-11-17，HN 194，單一來源）則把前提放在驗證迴圈——agent 能用端對端、property、差異測試自證工作，才敢同時平行跑幾十個，否則一次只顧一兩個
 - 隔離之後的戰線是協調，兩種型態互不取代：統一容器（換底層 agent 不必重寫協作邏輯）與任務脈絡互通（各自獨立的 agent 像用 Slack 一樣互相知會）
 
 **🧰 現在就能下的解**：見 [[topics/community-tech-tools]]「我卡在這裡」——「多個 agent 在同一 repo 互相覆蓋」列（首選 ness，原名 Harness；已經用 worktree 隔離、只差 commit 落地不打架的分界在同列第三欄）與「一堆 agent 在跑，看不到誰卡住」列（首選 Omar）
@@ -68,8 +68,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
 | 隔離 | OS 帳號隔離 → git worktree 成共識，並工具化、動態化；官方也已內建 | Claudette、Superset、cc-fleet 等，見 [[topics/community-tech-patterns-archive]] | 多來源 |
-| 規模上限 | 4→20 崩潰主因：git lock／DB 連線競爭、context 洩漏、無協調層；單一長 session 動用 147 個 subagent（09-04）；tmux 實務在第四個 agent 觸頂（10-19） | 《Why 20 Instances Break Down》、F-Zero X 移植、tmux 設定 | 單一深度分析 |
-| 統一容器 | 08-05 起一批接一批，至 11-10 仍有新品（控制平面、24/7 自架、同任務跨 CLI 協作）；換底層 agent 不必重寫協作邏輯 | omnigent、zeron、runner 等，見 [[topics/community-multi-agent]] | 已成趨勢 |
+| 規模上限 | 4→20 崩潰主因：git lock／DB 競爭、context 洩漏、無協調層；147 個 subagent（09-04）；tmux 第四個觸頂（10-19）；20 支跑模擬器 QA（11-26，僅星數） | 《Why 20 Instances Break Down》、F-Zero X 移植、mobile-agent-testers 等 | 單一深度分析 |
+| 統一容器 | 08-05 起一批接一批，至 11-22 仍有新品；換底層 agent 不必重寫協作邏輯；官方 Projects beta（11-14）見 [[topics/anthropic-agent-stack]] | omnigent、runner、facadecode 等，見 [[topics/community-multi-agent]] | 已成趨勢 |
 | 任務脈絡互通 | 讓獨立 agent 共享任務脈絡；09-16 有跨終端傳訊第二例，09-20 另有「planner 先產結構化規格合約」的交接做法 | Concord（MCP）、hcom | 單一實測 |
 | 隱藏重傳成本 | 官方 agents 面板約每 30 秒重送各背景 agent 逐字稿（10-29，HN 527 分），agent 越多越貴；作者用 Bun preload 腳本停用 | no-agent-summary.js | 單一實測 |
 | 可觀測性 | 多款儀表板分「讀官方 event stream」與「自解析 transcript」兩路；10-03～10-10 再添並排 worktree 管理與視訊通話介面；11-11 起另有依注意力排程的等待佇列 | HUD、episko（原名 Cockpit）、Aq 等，見 [[topics/community-pattern-trends]] 趨勢六 | 已成趨勢 |
@@ -151,10 +151,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
 | 邊界規則 | 11 條多 agent CLAUDE.md 規則（工作區邊界、禁改共享狀態、merge 責任）；PostToolUse 稽核日誌 | Multi-agent 衝突防範、稽核日誌模式 | 多來源 |
-| 對抗式審查 | 計畫前／程式碼後兩做法；唯讀審查者；跨模型交叉審查（論文，解題測試）；另有把審查意見刻意「降階」以免過度採信的單一提案 | Read-Only Reviewer、Agent-plan-review-loop、interns-review-plugin 等，見 [[topics/community-guardrails]] | 多來源 |
+| 對抗式審查 | 計畫前／程式碼後兩做法；唯讀審查者；跨模型交叉審查（論文，解題測試）；另有把審查意見刻意「降階」以免過度採信的單一提案；11-15 起另有四道獨立探針＋JSON 合併關卡決定 PR 能否通過（星數佐證） | Read-Only Reviewer、Agent-plan-review-loop、code-review-gate-skill 等，見 [[topics/community-guardrails]] | 多來源 |
 | 規劃分層 | 規劃層「做什麼」／執行層「怎麼做」；把關前移 | beads 兩層架構、品質把關前移 | 單一實測 |
 | 長 session 穩健化 | 心跳／超時重試／狀態快照，從 MCP 層擴到 session（工具失敗、API 500、用量限制各有自動接續） | auto-undo、nightshift、resume-on-ratelimit | 多來源 |
-| 回報驗證 | 靜默失敗 → 證據紀錄＋可驗證交接；11-12 另有 Stop hook 在完成宣告缺證據時退回一次（作者自測）；外部看板加「每項宣稱重驗」 | Groundtruth、claim-check、Chief of Staff 等 | 單一實測 |
+| 回報驗證 | 靜默失敗 → 證據紀錄＋可驗證交接；Stop hook 缺證據時退回（11-12，自測）；證據鏈白板（11-16）；官方 11-17 稱驗證迴圈是大規模委派前提 | Groundtruth、claim-check、Agent-Cockpit 等 | 單一實測 |
 | 確定性把關 | 不呼叫 LLM 的靜態分析，專抓 AI agent 留下的技術債（26 條規則、可掛 hooks） | sloppy（PHP） | 單一實測 |
 | 相鄰案例 | 六秒 CI 測語意漂移；同形狀 bug 跨 repo 批修 28 PR；PR 協作健康度視覺化 | 語意漂移 CI、批量 OSS 修復、Devthropology | 推論 |
 
@@ -194,7 +194,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/managed-agents]]（各功能的版本紀錄與已知問題；Managed Agents 是平台代管的另一個產品）
 - [[entities/boris-cherny]]（千級子代理工作流、「沿途驗證」心法）
 
-%% 週更撈料：patterns 節點以 `**主線：**` 欄位標記所屬線（規則：.claude/reporter-rules/community/daily.md「主線 tag 規則」、weekly.md「週更整線重寫」）；週更已收至 2026-11-12 %%
+%% 週更撈料：patterns 節點以 `**主線：**` 欄位標記所屬線（規則：.claude/reporter-rules/community/daily.md「主線 tag 規則」、weekly.md「週更整線重寫」）；週更已收至 2026-11-26 %%
 
 ## 參考來源
 

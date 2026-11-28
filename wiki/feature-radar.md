@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-26
+**最後更新：** 2026-11-28
 
 > **本日熱度更新**（2026-11-26，無新條目）
 > 「MCP 伺服器技能」今天再有 TechRepublic、Dataconomy、Crypto Briefing、VentureBeat 等至少 4 家媒體跟進，熱度由 🔥 升至 🔥🔥；「Artifact 安裝為獨立應用程式」今天擴大到免費方案也能用（Wccftech），熱度由 🔥🔥🔥 升至 🔥🔥🔥🔥。
@@ -104,7 +104,7 @@
 | **`/claude-api managed-agents-secure`**（v2.1.304，對照官方安全指南檢查 Managed Agents 設定，唯讀） | 2026-10-19 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Code Review 審查等級 Quick／Standard／Deep**（v2.1.304，組織層或逐 repo 設定；新增審查全組織 repo 選項） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.302**（`/config` Idle compaction 開關；`-p` 預設權限模式與 fork subagent 預設改變） | 2026-10-16 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Code Review（GitHub App）正式發布（GA）**（PR 審查，$50,000 點數方案，官方文件新增 6 頁） | 2026-10-15 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Code Review（GitHub App）正式發布（GA）**（PR 審查，$50,000 點數方案，官方文件新增 6 頁） | 2026-10-15 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Messages API speed 參數＋usage-tier**（anthropic-sdk-python v1.15.0／typescript sdk-v0.135.0） | 2026-10-15 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **無人值守重試逾時上限**（`CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`，v2.1.301） | 2026-10-15 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude API 原生 OpenTelemetry Tracing**（SDK 自動建立/匯出 span，免改程式碼；vertex-sdk v0.21.0／python v1.14.0） | 2026-10-14 | 🔥 | ⚡ 有條件推薦 | Beta（公開測試） |
@@ -127,7 +127,7 @@
 | **Auto mode 免計費 server-side classifier**（v2.1.278，`/status` 新增顯示列） | 2026-09-19 | 🔥🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
 | **Claude Code 讀取 AGENTS.md**（v2.1.277，無 CLAUDE.md 時原生改讀，回應 #6235） | 2026-09-18 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code Projects**（雲端並行 agent session，協調多執行緒，Beta） | 2026-09-17 | 🔥 | ⏳ 觀望 | Beta |
-| **Claude Cowork 與 Chat 合併＋Claude Docs／Slides 上線**（Design 整合進對話，可輸出 PPT／PDF） | 2026-09-17 | 🔥🔥 | ⏳ 觀望 | Beta |
+| **Claude Cowork 與 Chat 合併＋Claude Docs／Slides 上線**（Design 整合進對話，可輸出 PPT／PDF） | 2026-09-17 | 🔥 | ⏳ 觀望 | Beta |
 | **Claude Code v2.1.274**（記憶體用量警示；`CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標） | 2026-09-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Salesforce in Claude**（beta，整合銷售機會、客戶帳號與 pipeline 資料進 Claude 對話） | 2026-09-15 | 🔥 | ⏳ 觀望 | Beta |
 | **Claude Code 桌面版 `/resume`＋面板獨立視窗**（`/resume` 接續 CLI session；diff／終端機可拉出獨立視窗；macOS 背景 computer use 不再隱藏其他視窗） | 2026-09-15 | 🔥 | ⏳ 觀望 | 正式發布 |
@@ -140,8 +140,8 @@
 | **使用者個人資料 API**（Beta，TS sdk-v0.123.0／Python v1.3.0，含 `external_user_onboarding` 欄位） | 2026-09-01 | 🔥 | ⏳ 觀望 | Beta |
 | **PreModelSwitch／PostModelSwitch Hook 事件**（v2.1.251，可攔截/確認/標註模型切換，SessionStart resume 回傳新鮮度） | 2026-08-28 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **SDK files／skills 命名空間轉正**（TypeScript sdk-v0.122.0／Python v1.2.0，beta 介面形狀改為 GA） | 2026-08-27 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **SendFeedback 工具**（v2.1.247，session 出錯時 Claude 草擬回報，經 `/feedback` 檢視後送出；可用 `feedbackDisabled` 關閉） | 2026-08-27 | 🔥 | ⏳ 觀望 | 正式發布 |
-| **Model Hardware Standard**（統一介面供 Claude 代理人操作機器人與科學實驗室儀器，Bloomberg／Ars Technica／FT 三方跟進） | 2026-08-27 | 🔥 | ⏳ 觀望 | Research Preview |
+| **SendFeedback 工具**（v2.1.247，出錯時草擬回報、經 `/feedback` 送出）（2026-08-27 公告，此後未見後續報導） | 2026-08-27 | 🔥 | ⏳ 觀望 | 正式發布 |
+| **Model Hardware Standard**（統一介面供 Claude 操作機器人與實驗室儀器）（2026-08-27 公告，此後未見後續報導） | 2026-08-27 | 🔥 | ⏳ 觀望 | Research Preview |
 | **Cowork 記憶功能整合**（設定 > Memory > Topics，跨 web/App/Cowork 共用記憶，敏感主題預設關閉） | 2026-08-25 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **anthropic-sdk-python 1.0.0**（httpx2 Breaking Change，⚠️ 無過渡期） | 2026-08-20 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **keybindingFlavor readline 模式**（v2.1.238，可選提示列刪除鍵行為；v2.1.261 起失效） | 2026-08-20 | 🔥 | ❌ 暫不推薦 | 正式發布 |
@@ -275,7 +275,7 @@
 
 **為何熱：** 官方 Claude Help Center release notes 首發，單一官方來源，尚無社群討論。
 
-**現在要試嗎：** 有串接外部應用、需要雙向交換檔案的人可現在就試；官方未載涵蓋哪些已連接應用程式與檔案類型限制，建議先在非關鍵資料上測試。
+**現在要試嗎：** 有串接外部應用、需要雙向交換檔案的人可現在就試，建議先在非關鍵資料上測試。❓ **待查證**（標 2026-11-25｜查 已連接的應用程式、檔案傳送、儲存對方提供的檔案）｜**涵蓋哪些已連接應用程式與檔案類型限制**：已掃日報至 2026-11-28 無後續；官方頁面未查證。
 
 **快速上手：** 官方 release notes 僅標題可用，具體操作路徑與涵蓋範圍待補。
 

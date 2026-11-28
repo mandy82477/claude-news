@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-11-27"
 last_news_update: "2026-11-27"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 25
 attribution_count: 73
 attribution_last: "2026-11-27"
@@ -281,7 +281,6 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
   - 攻擊始於 6 月：假招聘人員在第二輪面試經社群聊天軟體要求工程師從線上程式庫下載「程式測試題」，另有藏在廣告裡的軟體入侵兩名員工電腦。
   - 再以第三名員工的電腦轉出約 63 億美元；北韓歸因為媒體推測，Binance 未明確連結特定行動。受害範圍說法分歧（Reuters 稱兩台被入侵加一台轉帳，他報稱三名工程師）。
   - **是否涉及 agent 自動執行**：具名媒體均未提及，Binance 原始聲明本輪連不上、未讀。
-%% 未列入現況表：表滿載，2026-11-03（母頁「現在還擋不住的攻擊」11 列已滿，逐列核對均未滿 90 天且無 ✅／⛔+替代方案可退場）%%
 
 ### 2026-10
 

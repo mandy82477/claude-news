@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-11-24"
 last_news_update: "2026-11-24"
 status_main: "active"
-days_since_news: 3
+days_since_news: 4
 parent: null
 children: "['entities/opus-4-8-archive']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 4
 inbound_links: 9
 attribution_count: 7
 attribution_last: "2026-11-24"
@@ -42,7 +42,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-11-24 最新**：GitHub Issue #68780 回報 Opus 4.8、5.0 推理能力明顯退化，即使 Max effort 仍嚴重下滑，43 則留言、35 個 👍，官方尚無回應；完整記錄見 [[entities/opus-5]]「歷史記錄」（GitHub Issue #68780，2026-11-24）。
 
-**2026-07-25**：取代 Opus 4.8 成為次旗艦，並成為 Max／Team premium／Enterprise 隨用隨付／API 的預設 Opus（詳見 [[entities/opus-5#你現在拿到的是什麼]]）。近兩週的「Opus 5」傳聞（HackerNoon 07-24、TestingCatalog 07-23 等，見下方「下一代模型觀察」歷史記錄）就此獲得官方證實。Opus 4.8 本身能力與規格未變，仍是 Fable 5 護欄觸發時的 fallback 模型，但已不再是次高階公開模型的首選。官方模型總覽頁已將它標為 Legacy、載明退役不早於 **2027-05-28**，建議遷移至 [[entities/opus-5|Opus 5]]（2026-09-07 查證）
+**2026-07-25**：[[entities/opus-5|Opus 5]] 發布並取代 Opus 4.8 成為次旗艦，並成為 Max／Team premium／Enterprise 隨用隨付／API 的預設 Opus（詳見 [[entities/opus-5#你現在拿到的是什麼]]）。近兩週的「Opus 5」傳聞（HackerNoon 07-24、TestingCatalog 07-23 等，見下方「下一代模型觀察」歷史記錄）就此獲得官方證實。Opus 4.8 本身能力與規格未變，仍是 Fable 5 護欄觸發時的 fallback 模型，但已不再是次高階公開模型的首選。官方模型總覽頁已將它標為 Legacy、載明退役不早於 **2027-05-28**，建議遷移至 [[entities/opus-5|Opus 5]]（2026-09-07 查證）
 
 Claude Opus 4.8 於 2026-05-28 正式發布，同步推出 Dynamic Workflows（Research Preview）與 Fast Mode 降價，是 2026 年以來 Anthropic 發布規模最大的旗艦更新。**2026-06-09 Claude Fable 5 發布後，Opus 4.8 不再是最高階公開模型**，現作為 Fable 5 安全分類器觸發時的 fallback 模型（< 5% session 觸發）——出口管制期間（2026-06-13 停用至 06-30 解除、07-01 全球恢復）Opus 4.8 曾是 Fable 5 全面下線時的唯一替代選項，管制已於 2026-07-01 解除，現行 fallback 角色改由 Fable 5「Defense in Depth」分類器觸發（詳見 [[entities/fable-5]]）。核心指標：SWE-bench Pro 69.2%（1M context window）；Fast Mode 速度為標準的 2.5 倍、費率降至前代的 1/3。
 

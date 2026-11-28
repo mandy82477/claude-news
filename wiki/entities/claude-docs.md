@@ -4,15 +4,15 @@ kind: "entity"
 type: "feature"
 status: "active（2026-10-08 起脫離 beta，所有方案含 Free 可用；2026-10-23 官方查證）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-23"
+last_updated: "2026-11-28"
 last_news_update: "2026-10-23"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 35
+days_since_news: 36
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 35
+days_since_news_subtree: 36
 inbound_links: 6
 attribution_count: 3
 attribution_last: "2026-10-23"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 功能（產出物）
 **首次出現：** 2026-09-17
-**最後更新：** 2026-10-23
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-10-23
 
 > **最新動態**（2026-10-23）
@@ -52,7 +52,7 @@ Claude Docs 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥 |
+| 社群熱度 | 🔥 |
 | 試用價值 | ⏳ 觀望 |
 | 最適合 | 待社群實測後補齊 |
 | 不適合 | 待社群實測後補齊 |

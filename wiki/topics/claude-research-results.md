@@ -6,16 +6,16 @@ domain: "🤖 模型"
 last_updated: "2026-11-26"
 last_news_update: "2026-11-26"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 8
 attribution_count: 6
 attribution_last: "2026-11-26"
 top_source: "google-news"
-pending_count: 5
+pending_count: 8
 pending_overdue: 0
 pending_next_review: "2026-11-30"
 pending_signalled: 1
@@ -43,7 +43,7 @@ Claude 參與的科學與數學聲稱清單，逐項記錄是誰宣稱、有沒�
 
 截至 2026-11-26，本站收到的八項聲稱中，沒有任何一項見到同行審查完成的報導。費馬最後定理的形式化有領域專家公開回應，橢圓曲線 rank 紀錄有第三方題庫登錄，GRH 形式化驗證經社群獨立重寫並通過 Lean 檢驗，其餘五項只有宣稱方自己的說法。
 
-最新的是社群把 Anthropic 的 GRH（廣義黎曼猜想）Lean 形式化驗證從 1,700 萬行精簡到 7.6 萬行（-99.56%），仍通過 Lean 檢驗，HN 討論衝上 525 分（11-25）。VP≠VNP 代數複雜度猜想形式化證明方面，Anthropic 11-23 發布、OpenAI 11-24 稱自家更早完成，雙方互貼 GitHub commit 時間戳記；黎曼猜想聲稱（11-20）仍未經同行審查，11-24 另有兩則標題稱證明達 25 萬頁、一名 Anthropic 數學家稱其「是個笑話」，原文均無法讀取，待查證。
+最新的是社群把 Anthropic 的 GRH（廣義黎曼猜想）Lean 形式化驗證從 1,700 萬行精簡到 7.6 萬行（-99.56%），仍通過 Lean 檢驗，HN 討論衝上 525 分（11-25）。VP≠VNP 代數複雜度猜想形式化證明方面，Anthropic 11-23 發布、OpenAI 11-24 稱自家更早完成，雙方互貼 GitHub commit 時間戳記；黎曼猜想聲稱（11-20）仍未經同行審查，11-24 另有兩則標題稱證明達 25 萬頁、一名 Anthropic 數學家稱其「是個笑話」，原文均無法讀取（❓ **待查證**（標 2026-11-24｜查 Alpöge、Riemann hypothesis｜複 2026-12-08）｜**黎曼猜想 25 萬頁／「是個笑話」標題的原意**：是否為正式撤回或自嘲，日報僅有標題）。
 
 zeta、rank、費馬三項明載用內部研究模型，黑洞、黎曼與 VP≠VNP 三項未見點名版本；都不能直接當成 [[entities/fable-5]] 產品版的能力。
 
@@ -65,7 +65,7 @@ zeta、rank、費馬三項明載用內部研究模型，黑洞、黎曼與 VP≠
 - **GRH 社群精簡版（11-25）**：社群開發者 lsernau 把 Anthropic 原本約 1,700 萬行的 GRH（廣義黎曼猜想）Lean 形式化驗證重寫至約 7.6 萬行，仍通過 Lean 檢驗、縮減 99.56%，HN 討論衝上 525 分；原始版本發布時間與管道未見報導，待查。（[GitHub](https://github.com/lsernau/grh-lean)，2026-11-25）
 - **VP≠VNP（11-23 Anthropic 發布、11-24 OpenAI 跟進）**：Anthropic 稱 Claude 完成代數複雜度理論猜想 VP≠VNP 的形式化證明（Lean），OpenAI 翌日公開聲稱自家證明更早完成（[Anthropic](https://github.com/anthropics/formal-math/tree/main/vp-vnp)；[OpenAI](https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026)，2026-11-23/24）。
 - **VP≠VNP 優先權的時間戳記佐證**：雙方於 Hacker News 互貼 GitHub commit 時間戳記（Anthropic 11-23 12:04、OpenAI 17:30，太平洋時間），討論串分別衝上 355 分與 77 分，孰先未有共識，均未見同行審查。
-- **黎曼猜想的 11-24 後續報導**：Interesting Engineering 與 The Register 同日標題稱 Alpöge 的證明長達 25 萬頁、一名 Anthropic 數學家稱其「是個笑話」；兩則原料均僅有標題與連結、無法讀取正文，是否為正式撤回或作者自嘲待查證（[Interesting Engineering](https://news.google.com/rss/articles/CBMikwFBVV95cUxOOWx2VGRIM0F6YkFpLWxRMnpfcERZcUF0MFVfcHVmcnl4Z1ZyUlJVNElJRDBNbFY1azBLQzd6ZUx1S0JJdmo2LTZoWEJleGFxVjBBM0kwekgtXzR2c29vdm1tWWdQZnNtQzZ5QmFJakxrMGZHblRSM1duWWlIbl92WHp2V2lKUnEwVjBuY0k3U3FzTVE?oc=5)；[The Register](https://news.google.com/rss/articles/CBMi6wFBVV95cUxPc1hFcE5MWURoX29EZXNEXzBaU1A4RC1VZGlzUHBBWTUwdXJGSUQyTzh0Rm9NU09qN3lxS2pvdVBlN1JxdjBzY3E3ZFZEMUN1aVhlR3NuWWlEWE5ncEdxV3A3Wl9zeFhEQWZfcXdua3puSkp3MkpkaGl6S3N6UzFLMGZna3JabWgwUFp5N3pFaWlkbDlXWXdGQzdTZWk5XzFUMktnOEFVSnk4aVpETEZXUGEzci1kb19hd0NOMHdJS01MLV9CRENMWWVXMHc2LUd1RktsWUdRRF8zc0xkaDZ1aENsUDlpcGFaSmdF?oc=5)，2026-11-24）。
+- **黎曼猜想的 11-24 後續報導**：兩則標題稱 Alpöge 證明達 25 萬頁、Anthropic 數學家稱其「是個笑話」；❓ **待查證**（標 2026-11-24｜查 Alpöge、Riemann hypothesis｜複 2026-12-08）｜**標題原意**：僅有標題（[Interesting Engineering](https://news.google.com/rss/articles/CBMikwFBVV95cUxOOWx2VGRIM0F6YkFpLWxRMnpfcERZcUF0MFVfcHVmcnl4Z1ZyUlJVNElJRDBNbFY1azBLQzd6ZUx1S0JJdmo2LTZoWEJleGFxVjBBM0kwekgtXzR2c29vdm1tWWdQZnNtQzZ5QmFJakxrMGZHblRSM1duWWlIbl92WHp2V2lKUnEwVjBuY0k3U3FzTVE?oc=5)；[The Register](https://news.google.com/rss/articles/CBMi6wFBVV95cUxPc1hFcE5MWURoX29EZXNEXzBaU1A4RC1VZGlzUHBBWTUwdXJGSUQyTzh0Rm9NU09qN3lxS2pvdVBlN1JxdjBzY3E3ZFZEMUN1aVhlR3NuWWlEWE5ncEdxV3A3Wl9zeFhEQWZfcXdua3puSkp3MkpkaGl6S3N6UzFLMGZna3JabWgwUFp5N3pFaWlkbDlXWXdGQzdTZWk5XzFUMktnOEFVSnk4aVpETEZXUGEzci1kb19hd0NOMHdJS01MLV9CRENMWWVXMHc2LUd1RktsWUdRRF8zc0xkaDZ1aENsUDlpcGFaSmdF?oc=5)，2026-11-24）。
 - **zeta 零點下界（08-11）**：官方稱是一個未發布的研究版 Claude 在嘗試證明黎曼假設未果時意外取得（[Anthropic](https://www.anthropic.com/research/riemann-zeta)，HN 211 分、4 個獨立來源轉載）；TechSpot 08-13 為同一事件的接力報導，無新增細節。
 - **橢圓曲線 rank（08-23 提交、09-16 報導、10-03 查證）**：Alpöge 與密碼學者 Ava Howell 用 Claude 於數日內先後提交 rank ≥30 與 ≥31；此前由 rank 28 到 29 耗時逾 18 年。
 - **rank 紀錄的來源限制**：所用為內部未發布版本；Scientific American 本環境無法讀全文，內容取自搜尋摘要（[Scientific American](https://www.scientificamerican.com/article/anthropics-ai-steals-mathematicians-record-for-most-complicated-curve/)；[Epoch AI](https://epoch.ai/frontiermath/open-problems/elliptic-curve-rank)，查證 2026-10-03）。
@@ -103,14 +103,25 @@ zeta、rank、費馬三項明載用內部研究模型，黑洞、黎曼與 VP≠
 
 ## 時序
 
+**2026-11**
+
 - **2026-11-25**：社群開發者把 Anthropic 的 GRH Lean 形式化驗證從 1,700 萬行精簡到 7.6 萬行（-99.56%），HN 衝上 525 分
-- **2026-11-24**：OpenAI 公開聲稱 VP≠VNP 證明完成時間早於 Anthropic，雙方互貼 GitHub commit 時間戳記；另有媒體標題稱 Anthropic 數學家稱黎曼猜想的 25 萬頁證明「是個笑話」，待查證
+- **2026-11-24**：OpenAI 稱 VP≠VNP 證明更早完成，雙方互貼 commit 時間戳記；另有標題稱黎曼猜想 25 萬頁證明「是個笑話」❓ **待查證**（標 2026-11-24｜查 Alpöge、Riemann hypothesis｜複 2026-12-08）｜**標題原意**：無法讀取原文
 - **2026-11-23**：Anthropic 發布 Claude 完成 VP≠VNP 代數複雜度猜想的形式化證明
 - **2026-11-21**：史丹佛發布全人類競爭證明草稿，雙方均未經同行審查
 - **2026-11-20**：Alpöge 黎曼猜想草稿；黑洞兩題官方部落格補第二項並附兩篇預印本
 - **2026-11-19**：黑洞物理兩題首發
 - **2026-11-09**：Fable 5.2 發布文提到 prerelease 解開兩個開放數學問題
+
+**2026-10**
+
 - **2026-10-03**：橢圓曲線 rank 紀錄查證補述
+
+**2026-09**
+
 - **2026-09-16**：Scientific American 報導橢圓曲線 rank 紀錄
 - **2026-09-04**：費馬最後定理形式化
+
+**2026-08**
+
 - **2026-08-11**：zeta 零點下界紀錄

@@ -9607,3 +9607,37 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：void H-2a4232（功能記者本輪判斷：mobile-agent-testers／gflow-cli 為第三方社群工具，非官方產品×功能範疇，且無官方一手來源佐證，暫不入列產品化矩陣；待未來有官方證據再評估）
 - devpractice 沉澱：本日無「開發實務.md」包，未派工（今日無官方使用指南類條目）
 - market 判讀：判讀 1 則（第 1 類／IPO 進程第 42 則：股價收復 $83 發行價，各家估單日漲幅 7～11%，首次全面收復），「買得到的標的」ANT 方向由 ⚖️ 兩面 → 📈 正面，新增回顧結算 ⏳ 1 列（判讀日 2026-11-27，結算日 12-11）；JERA 一線因標的不可交易，本輪未開新線（見上方品質備註）
+
+### 2026-11-28 Lint 檢查點 1（進行中）
+
+- 已完成：A 段 1–5（六記者收報、收報核對、行為層抽驗）、5a、5b（egress 跳過）、5d（判讀完成待寫回報）、5i、5m、5n
+- 下一步：5c（逾期待查證清算，清零制），其後 5e／5f／5g／5h／5j／5k／5l／5o，再 C 段、D 段、步驟 8–10
+- 回報行（暫存）：
+  - 修正矛盾：`entities/opus-4-8` 現況「2026-07-25：取代 Opus 4.8…」缺主詞，已補為「[[entities/opus-5|Opus 5]] 發布並取代 Opus 4.8」（模型記者）。其餘五位回報無矛盾
+  - 補連結：無（六位記者的負責頁入邊皆 ≥1）
+  - 狀態更新：`topics/model-comparison` ongoing→monitoring（最後新聞更新 11-11，17 天；index.md 第 128 列已同步）；`topics/ai-eval-boundary-incidents` monitoring→ongoing（3c 回升邊，最後新聞更新 11-22，6 天；為母頁子故事，index 無獨立列）
+  - resolved 收尾：月度，本週跳過（本月首次 lint 為 11-14）
+  - 新增 entities：無
+  - 呈現品質：⚠️已修復 3 頁（`topics/claude-research-results` 時序改按月分組、`topics/community-tech-tools` 讀者語言與儲存格、`topics/community-large-codebase-workflow` 儲存格）；📋 待辦為多頁逾 200 行警示，本輪不動
+  - 入口層健檢：月度，本週跳過。無語意分岔／死案候選
+  - 待查證回訪：已加 `訊` 7 處（`entities/claude-code`:111、`topics/anthropic-product-matrix`:291、`entities/claude-workspace-suite`:78 皆 ｜訊 2026-11-24；`entities/opus-5-5` 三處 ｜訊 2026-11-26）；已改註「日報無後續、官方未查證」2 處（`topics/ai-agent-safety-cyber`:141、`feature-radar` 檔案傳送條）；舊語法回填 **10 筆／配額 10**（盲區 10→0；`claude-research-results` 3、`opus-5-5` 2、`boris-cherny` 1、`cat-wu` 1、`feature-radar` 1、`ai-agent-safety-cyber` 1、`market-signals-ipo` 1）
+  - 蒸餾候選（3h）：提案 **26 個時段／20 頁**（模型 5、功能 5、商業 3、安全政策 8、社群 6 含 3 筆被錨點邊擋；人物 3），本輪**未執行任何蒸餾**（例外 2／3 待主編核）
+  - lint 自我遵守率：**5/6 位一次過**；退回 1 位（安全政策記者 3h 自承未執行引用檢查，SendMessage 退回後補齊 8 筆提案）；另退回 1 次非九項缺失（功能記者本輪改動觸發 cell_limits 新增超限，已補修）
+  - 行為層抽驗：擲骰 seed `2026-W48`、N=23 → 抽中編號 15＝安全政策記者「`topics/ai-eval-boundary-incidents` monitoring→ongoing」。主編親開 `git diff` 核對：frontmatter 與正文狀態行皆已改、`last_news_update` 實為 2026-11-22（距今 6 天 ≤14），3c 回升邊成立 → **如實**
+  - 熱度降溫（5a）：檢查 **29 條**（🔥🔥 以上全覽），降 **2 條**——Code Review（GitHub App）GA 🔥🔥→🔥（4 週命中全為 GitHub Copilot code review，假命中經原文剔除）、Claude Cowork 與 Chat 合併＋Docs／Slides 🔥🔥→🔥（0 命中）；同步 entities 頁 **2 處**（`claude-docs`、`claude-slides` 社群熱度 🔥🔥→🔥）。另 4 條零命中經原文複查為真有後續不降（Auto mode 設定 11-19、Claude Mods 11-04／11-15、auto mode classifier 11-15、桌面版雲端 session 11-23）。⏳ 逾期：**10 條**，處置（升 0／降 0／加註 2：SendFeedback 工具、Model Hardware Standard；已加註跳過 8，含 1Password 一筆「密碼管理」命中經原文確認為社群重寫 Android 密碼管理器的假命中）。Claude Code 通道現值：stable **2.1.326**、latest **2.1.332**（npm dist-tags，查證 2026-11-28），已寫進 `entities/claude-code`「版本」與 `entities/claude-code-releases`「現在該跟哪條」；2.1.324～326 無新增破壞性變更，該頁「升 stable 不是無痛的」一句已失效並改寫
+  - 跨家榜單週更（5b）：雲端 egress 未開，跳過（`EGRESS: leaderboard PARTIAL 1/12`，僅 github.com 通）
+  - 歸因忠實度抽查（5d）：抽 5 筆，相符 **3**（`entities/opus-5-5` nerfing 10-01、`entities/claude-code` GitHub connector #71542 11-01 互動數 71/77 與日報一致、`topics/anthropic-partnerships-compute` JERA 11-27）／修正漂移 **0**／未刊出抓取條目 **2**（`topics/community-cost` Downshift 11-12、`topics/community-integrations` Quick Study 10-24；兩筆全庫日報零命中且 `src/gathered_archive/` 僅存 11-23 起，原料已過 14 天保留窗）／無對應 **0**
+  - 安全兩頁結論表退場（5i）：safety（複查 11 列，移除 **1**／補位 **1**／不動 10；三類結論改寫 **3** 類；未歸類分派 0 則——本頁無該節）／injection（訊號表 8/8 列、階梯 8/8 階，收斂點未變故不動；導言／收斂點／仍未有答案三處則數皆 8，與表列數一致）／cyber（網攻表移出 **4** 列，29→25）／gov-policy（複查 8 列，移除 0／補位 0／不動 8；產品節 3 項對標「會」3 列 ✅）
+    - 移除：套件供應鏈列（最後動態 2026-08-29，判定日 11-27 已到；8 週日報零新事實——11 月「供應鏈」命中全為算力財務供應鏈與 llms.txt 文件索引異動）
+    - 補位：「假招聘人員要你下載的程式測試題 repo」（Reuters／Axios／BleepingComputer 2026-11-03 三源，Binance 約 63 億美元竊案源頭；原因表滿載在候補，已移除 product-vulns 的未列入註記）
+    - 資訊竊取型惡意軟體列最後動態更正為 2026-11-23（Hackread 假冒下載頁擴及 macOS，同一讀者動作併入），判定日順延至 2027-02-21
+  - code-quality-decline 三條線（5m）：**4 列比對／0 列已改**（`gh api` 實查：#41930 closed、#65687／#77136／#83510 open，與上輪全同）／資料截至 2026-11-28
+  - 官方補了沒表（5n）：**18 列比對／3 列已改**／核對日逾 30 天 **0** 列。CHANGELOG 已掃到 v2.1.332，2.1.331～332 未補上任何一列缺口；改動為：破壞性指令列補 `PreSkillShellCommand` hook（v2.1.332）、#40043 快照 33→34 則留言／109→111 讚、#12925 快照 154→156 讚。四個仍被引用的 issue 以 `gh api` 實查：#40043 open、#28300 open、#24316 closed、#12925 open
+- 主編判定（至今）：
+  - **5a 的 4 條零命中不降**：`news_mentions.py` 預設模式要求 ≥2 別名同日命中，對「Sonnet 5.5」這類無中文譯名的條目會造成系統性假零命中；改 `--any` 搭配具體別名重掃並逐條看原文行後，4 條確認有真後續。降的 2 條是原文行確認過的真零命中（Code Review 那批命中全指 GitHub Copilot）
+  - **cyber 網攻表以「滿載最舊者移出」而非 90 天退場處置**：最舊列 09-25 距今 64 天未逾 90，但 29 列逾 25 上限，依 `safety-policy/pages.md` 第 3 條滿載條款移出 4 最舊列；移出前逐列確認事實的家，10-03～10-04 的時序條目原本反指回本表，已先把該句寫進時序再移
+  - **`topics/market-signals-ipo` 的 3g 配額派給商業記者**：該頁 `domain` 為 💼 商業但 `reporter_pages.py --category 商業` 未列出（投資訊號判讀本體屬 market 記者），本輪僅就舊語法標記回填派工、不動該頁其他內容
+  - **本輪 5i 母頁「三類各自走到哪」改寫 3 類**：提示注入（新載體從外部內容往內挪到官方 MCP 自己夾帶推銷指令，Notion 11-26）、產品層（stable 前進到 2.1.326 且無新破壞性變更，上一輪「升 stable 不是無痛」的結論已反轉）、模型網攻（防守方放行開始往企業端走 IBM／Cisco 11-09，誤擋多一筆 claude.ai 端回報 #61889 11-12）；自我複製／蠕蟲化與評測越界兩類子頁答案未變，不動
+  - **主編自己的改動也要過機械閘**：本輪 5a／5i／5n 的寫入一度造成 5 筆 cell_limits 新增超限（feature-radar 兩列加註、ai-agent-safety 資訊竊取列、official-community-gap 破壞性指令列、claude-code-releases 細節區條列），已全部縮短或拆條至無新增超限
+- 本機承接（至今）：
+  - **跨家任務榜單週更（5b）**：跨家榜單週更因雲端 egress 未開（leaderboard）跳過，留待本機 `/weekly`

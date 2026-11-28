@@ -4,14 +4,14 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-25"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-25"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 14
 attribution_count: 34
 attribution_last: "2026-11-25"
@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-25
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-25
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
@@ -45,13 +45,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現在該跟哪條
 
-- **stable＝2.1.323、latest＝2.1.330**（npm dist-tags，查證 2026-11-21），差 7 個版號；stable 本週由 2.1.311 一次跳到 2.1.323。
+- **stable＝2.1.326、latest＝2.1.332**（npm dist-tags，查證 2026-11-28），差 6 個版號；stable 本週由 2.1.323 前進到 2.1.326。
 - **留在 stable 已經夠**：本站核對過的破壞性變更（最高 v2.1.321）現在全在 stable 裡
   - 危險 `rm` 兩道修正（2.1.287／288）、bypass 改直接拒絕（2.1.309）
   - 寫入邊界設定（2.1.314）、auto mode 在 LLM gateway 下不再退回舊分類（2.1.319）
   - Fable 5.2 成為預設 Fable（2.1.321），以及預設關閉的實驗性 Code Mode（2.1.323）
-- **但這次升 stable 不是無痛的**：上一輪停在 2.1.311 的人，這一跳會一次吃下上面五項行為改變，升之前逐列看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]。
-- **latest 現在多的是什麼**：2.1.324–330 的新功能（如 2.1.326 起 agent teams 可與 Code Mode 同開、2.1.328 auto mode 跨平台擴及 Opus 4.6／Sonnet 4.6），沒有破壞性變更非升不可。
+- **這一輪升 stable 是無痛的**：2.1.324～326 沒有新增破壞性變更（上一輪由 2.1.311 跳到 2.1.323 才會一次吃下上面五項行為改變）；若你還停在 2.1.311 之前，升之前仍逐列看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]。
+- **latest 現在多的是什麼**：2.1.327–332 的新功能，沒有破壞性變更非升不可。
+  - 2.1.331 起 Code Mode 擴及 Bedrock／Google Cloud Agent Platform／Foundry／Claude Platform on AWS 的終端機 session。
+  - 2.1.332 新增 MCP 伺服器技能（beta）與 `PreSkillShellCommand` hook。
+- **已經進 stable 的**：agent teams 可與 Code Mode 同開（2.1.326）、auto mode 跨平台擴及 Opus 4.6／Sonnet 4.6（2.1.328）。
 - **升版會改到既有行為的**：破壞性變更與預設值改變見 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]。
 
 ## 發布通道（stable／latest）

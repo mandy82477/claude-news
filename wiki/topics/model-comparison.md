@@ -1,16 +1,16 @@
 ---
 page: "topics/model-comparison"
 kind: "topic"
-status: "ongoing"
+status: "monitoring"
 domain: "🤖 模型"
-last_updated: "2026-11-14"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-11"
-status_main: "ongoing"
-days_since_news: 16
+status_main: "monitoring"
+days_since_news: 17
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 16
+days_since_news_subtree: 17
 inbound_links: 55
 attribution_count: 25
 attribution_last: "2026-11-11"
@@ -25,10 +25,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude 模型選型對照
 
-**狀態：** ongoing
+**狀態：** monitoring
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-14
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-11
 
 > **Fable 5.2 升級有遷移項，Gemini 4 Carbon 開放**（2026-11-11）

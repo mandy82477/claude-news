@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-11-27"
 last_news_update: "2026-11-27"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 17
 attribution_count: 7
 attribution_last: "2026-11-27"
@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-11-27
 
 > **最新動態**（2026-11-27）
-> 36Kr 專訪「Claude Code 核心負責人」談 vibe coding 未來，受訪者姓名未載；候選含本人（已轉任 OpenAI）與 [[entities/boris-cherny|Boris Cherny]]，待查證歸屬。她本人已於 2026-11-05 確認卸任後轉往 OpenAI，具體職位未揭露。
+> 36Kr 專訪「Claude Code 核心負責人」談 vibe coding 未來，受訪者姓名未載；候選含本人（已轉任 OpenAI）與 [[entities/boris-cherny|Boris Cherny]]，歸屬尚未釐清（懸置標記見下）。她本人已於 2026-11-05 確認卸任後轉往 OpenAI，具體職位未揭露。
 
 ---
 

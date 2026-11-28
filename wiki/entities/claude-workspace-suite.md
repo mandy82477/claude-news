@@ -8,11 +8,11 @@ last_updated: "2026-11-22"
 last_news_update: "2026-11-15"
 status_main: "beta"
 matrix_role: "功能"
-days_since_news: 12
+days_since_news: 13
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 12
+days_since_news_subtree: 13
 inbound_links: 13
 attribution_count: 2
 attribution_last: "2026-11-15"
@@ -20,7 +20,7 @@ top_source: "anthropic-official"
 pending_count: 1
 pending_overdue: 0
 pending_next_review: "2026-11-29"
-pending_signalled: 0
+pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -75,7 +75,7 @@ Claude Meetings 是另一條產品線，不列為三件組（Whiteboards／Sheet
 
 ## 尚未取得的細節
 
-- ❓ **待查證**（標 2026-11-15｜查 Claude Sheets、Claude Whiteboards、Claude Meetings）｜**Sheets 與 Whiteboards 功能細節**：能否匯入匯出、與 Google Sheets 或 Excel 的關係、即時共編規則、用量是否算進方案額度，均未取得（官方說用量未載）
+- ❓ **待查證**（標 2026-11-15｜查 Claude Sheets、Claude Whiteboards、Claude Meetings｜訊 2026-11-24）｜**Sheets 與 Whiteboards 功能細節**：能否匯入匯出、與 Google Sheets 或 Excel 的關係、即時共編規則、用量是否算進方案額度，均未取得（官方說用量未載）
 - Claude Data 即時分享的對象權限與資料量上限：Dashboards 時期說明中心即未載，轉正式版後未見更新
 
 ## 相關實體

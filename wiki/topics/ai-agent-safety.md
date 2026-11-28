@@ -3,14 +3,14 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-27"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-12"
 status_main: "ongoing"
-days_since_news: 15
+days_since_news: 16
 parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-agent-safety-cyber', 'topics/ai-agent-safety-product-vulns', 'topics/ai-agent-safety-prompt-injection', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 133
 attribution_count: 304
 attribution_last: "2026-11-12"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-27
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
@@ -64,7 +64,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 只列**現在還擋不住**的攻擊面，不收論述、教學與產業對照。狀態符號與 [[entities/claude-code]] 相同，語意在本頁是「現在仍會發生」：🔴 仍會發生／✅ 已修或官方已處置／⛔ 官方認定不修／❓ 待查證／🔎 查無官方。依「誰會遇到」的範圍由寬到窄；寫「所有人」的一律在最上。
 %% 維運備忘：本表上限 11 列，退場與補位判準見 `.claude/reporter-rules/safety-policy/pages.md`「topics/ai-agent-safety」節第 2 條 %%
-%% 最後動態（列內無日期者）：套件供應鏈列＝2026-08-29（Alon Hertz `llms.txt` 揭露；前一則 Keyv npm 蠕蟲 2026-08-04），90 天退場判定日 2026-11-27 %%
+%% 2026-11-28 複查（11 列全查）：套件供應鏈列（最後動態 2026-08-29）逾 90 天判定日 11-27，本輪 8 週日報零新事實——11 月「供應鏈」命中全為算力財務供應鏈與 llms.txt 文件索引異動，非本列攻擊面——依第 2 條退場，事實仍在 [[topics/ai-agent-safety-product-vulns]]；補位為「假招聘人員要你下載的程式測試題 repo」（Reuters／Axios／BleepingComputer 2026-11-03，三源，原因表滿載在候補），已移除其 product-vulns 的未列入註記。資訊竊取型惡意軟體列最後動態更正為 2026-11-23（Hackread 假冒下載頁擴及 macOS，同一讀者動作併入；前一則 11-04 新變種 token 濫用），判定日順延至 2027-02-21，不退場。其餘判定日：Auto 模式 2026-11-29、deny-list 2026-12-10。下輪先看 Auto 模式列 %%
 %% 2026-11-14 複查（11 列全查，移除 0／補位 0／滿載 11/11）——逐列最後動態與 90 天判定日：Auto 模式列＝2026-08-31（embracethered／The Register 實測 60–80%，見 prompt-injection 2026-08-31 條），判定日 2026-11-29；Gmail 代寄列＝2026-08-19（媒體報導，無後續），判定日 2026-11-17；deny-list 列＝2026-09-11（Show HN 8 種繞過），判定日 2026-12-10；資訊竊取型惡意軟體列＝2026-08-30（官方通知），判定日 2026-11-28。下輪先看 Gmail 與套件供應鏈兩列 %%
 %% 2026-11-21 複查（11 列全查）：Gmail 代寄列（最後動態 2026-08-19）逾 90 天判定日 11-17，本輪 8 週日報零新事實，依第 2 條退場——事實仍在 [[topics/ai-agent-safety-product-vulns]]；補位為「外洩或遭竊的 API 金鑰可被遠端遙控」（Help Net Security 2026-11-12，2 來源；與 11-07 金鑰外洩同一個讀者動作，依第 2 條合為一列）。其餘 10 列判定日未到：套件供應鏈 11-27、資訊竊取型惡意軟體 11-28、Auto 模式 11-29、deny-list 12-10。下輪先看套件供應鏈與資訊竊取兩列 %%
 %% 2026-11-05：灰市轉售折扣帳號列（最後動態 08-06）距今逾 90 天，本輪無新事實，依第 2 條退場；事實仍在 [[topics/ai-agent-safety-product-vulns]] 2026-08 技術彙整。Claude Dispatch 新列（The Register，2026-11-05）補位 %%
@@ -77,13 +77,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 惡意 `.git` 設定檔可誘使 agent 執行攻擊者指定的程式碼，跨廠通用 | 以壓縮檔、共享資料夾或同步雲端夾收到含 `.git` 的 repo 的人；正常 `git clone` 不受影響 | 🔴 | v2.1.196 修了 `core.fsmonitor` 變體，第二變體至 2.1.252 未修（Manifold Security 09-02 揭露，CSA 註記轉述） | 解壓或同步來的 repo，先自己看一遍 `.git/config` 有沒有不是你加的設定，再讓 agent 進去 |
 | deny-list 型權限設定可被繞過，只有 allow-list 型設定擋得住 | 用 deny-list（黑名單）方式設定 Claude Code 權限的人 | 🔴 | 官方 03 月回應稱 deny 規則不是擋刻意構造指令的安全屏障（他人轉述）；09-11 Show HN 展示 8 種繞過 | 改用 allow-list（白名單）方式設定權限，或在沙箱裡跑 |
 | 一句模糊的指令就可能讓它遞迴強制刪掉整個資料夾 | 用自然語言派刪除或整理任務、且沒有備份或版本控制的人 | 🔴 | 無回應（2026-04-28、2026-08-12、2026-09-17 三起同構事件；09-25 傳第四起 48,000 檔案案例，單一來源，見產品漏洞子頁 09-25 條目） | 動資料前先建備份；把 DROP、DELETE、`rm -rf` 設成要顯式確認才放行 |
-| 套件供應鏈：受感染 npm 套件植入 SessionStart hook；`llms.txt` 指向未註冊套件名可被搶注 | 讓 agent 照建議裝套件的人；安裝過受感染 npm 套件的開發環境 | 🔴 | 無回應（第三方生態；惡意版本帶有效簽章，常規信任檢查失效） | 裝套件前確認套件名已註冊、作者對得上；檢查專案裡有沒有不是你建立的 `.claude/settings.json` hook |
-| 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶：強制登出、移除已存付款方式、退款未授權扣款；平台本身未被入侵；11-04 另有報導稱新變種 token 重設密碼後仍可濫用，官方未回應 | 安裝檔只從官方 Releases 取；被強制登出後重新加付款方式，並核對帳單有無未授權扣款；僅改密碼不夠，需同步撤銷既有登入憑證／token |
+| 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶（強制登出、移除已存付款方式、退款），平台本身未被入侵；11-04 新變種 token 改密碼後仍可濫用、11-23 惡意 Google 廣告偽冒下載頁鎖定 Mac，官方皆未回應 | 安裝檔只從官方網域或官方 Releases 取、不點搜尋廣告；被強制登出後重新加付款方式，並核對帳單有無未授權扣款；僅改密碼不夠，需同步撤銷既有登入憑證／token |
+| 假招聘人員要你下載的「程式測試題」repo，開進主機就可能被植入 | 求職中、會從陌生招募方給的連結下載程式測試題的工程師 | 🔴 | 無獨立官方安全說明（2026-11-03 Reuters／Axios／BleepingComputer 三源；Binance 約 63 億美元竊案源頭；是否經 agent 自動執行具名媒體均未提及） | 陌生招募方要你下載的 repo，先在隔離容器或拋棄式虛擬機裡開，別在平常工作的主機上執行 |
 | 外洩或遭竊的 Claude API 金鑰可被拿來把 Claude Code 當成遠端遙控植入程式 | 金鑰曾進過公開 repo、容器映像或共用設定檔的人 | 🔴 | 無獨立官方安全說明（2026-11-12 Help Net Security，2 個來源；與 11-07 揭露的「是，並不要再問」選項外洩密碼與金鑰為同一個讀者動作） | 立刻輪替所有 Claude API 金鑰，改用範圍最小的金鑰，並掃一次自己的公開 repo 與映像 |
 | 任何網站都能把指令檔丟進你的 Downloads 資料夾，Claude Code／Codex 會照著執行 | 允許 Claude Code 或 Codex 存取 Downloads 資料夾的使用者 | ❓ | 已查官方公告與 CHANGELOG，查無修補（2026-11-14；2026-10-26／10-27 兩個獨立來源披露，觸發機制未見報導） | 定期清空或隔離 Downloads 資料夾，別讓 agent 自動讀取裡面你沒建立的檔案 |
 | Claude Dispatch 存在安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令 | 在企業環境啟用 Claude Dispatch 跨團隊功能的管理者 | ⛔ | 官方確認但決定不修補（11-05 The Register）；攻擊鏈為惡意瀏覽器外掛（11-06）；媒體稱 11-21 查未見在野攻擊 | 無繞法（官方未提供規避建議）；優先檢查已連接裝置上的瀏覽器外掛來源 |
 
-另有偽裝求職面試程式測試題 repo 的供應鏈攻擊案例（Binance 竊案源頭）與「是，並不要再問」選項外洩密碼／金鑰案例（1,994 個倉庫、2,539 組密鑰，11-07），見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+受感染 npm 套件植入 SessionStart hook 與 `llms.txt` 套件名搶注（最後動態 2026-08-29）已逾 90 天無新事實，本輪移出本表；該案例與「是，並不要再問」選項外洩密碼／金鑰案例（1,994 個倉庫、2,539 組密鑰，11-07）皆見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 
 遞迴強制刪檔那一列的「要顯式確認才放行」可用 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線|hook]] 或本頁 [[#官方現在擋到哪|deny 規則]] 設確認關卡，兩者皆非保證擋下，詳見連結說明。
 
@@ -109,7 +109,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 提示注入
 
-十一月仍沒改變收斂點：代理讀進來的東西仍沒有一層在問「憑什麼可信」。本月多的是 Claude Code 記憶功能這個新載體（11-17，媒體稱、未讀原文）。證據與訊號表見 [[topics/ai-agent-safety-prompt-injection]]。
+十一月仍沒改變收斂點：代理讀進來的東西仍沒有一層在問「憑什麼可信」。本月新增的載體從「代理讀到的外部內容」往內挪了一步——官方 MCP 伺服器本身夾帶推銷指令（Notion，11-26，討論串），以及 Claude Code 記憶功能（11-17，媒體稱、未讀原文）。證據與訊號表見 [[topics/ai-agent-safety-prompt-injection]]。
 
 ### 自我複製／蠕蟲化
 
@@ -117,11 +117,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 產品層漏洞與誤操作
 
-**這週變的是「升上去」本身的成本**：npm stable 由 2.1.311 一次跳到 **2.1.323**（2026-11-21 查證），已修的漏洞躲得掉，但同一跳會一次吃下三項會改到既有行為的變更，升版前先看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]。升版也還開著的仍是上表的 email 外流與誤刪類，以及新補上表的金鑰外洩一列。逐則見 [[topics/ai-agent-safety-product-vulns]]。
+**這週「升上去」的成本降回來了**：npm stable 由 2.1.323 前進到 **2.1.326**（2026-11-28 查證），2.1.324～326 沒有新增會改到既有行為的變更——上一輪那一跳的三項行為改變已經吃完，這一輪升版是無痛的（還停在 2.1.311 之前的人仍要先看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]）。升版也還開著的仍是上表的 email 外流與誤刪類、金鑰外洩一列，以及本輪新補上表的求職測試題 repo。逐則見 [[topics/ai-agent-safety-product-vulns]]。
 
 ### 模型網攻能力與防護
 
-防守方放行在擴大（CVP 三層、Cyber Mission），通過審核還被擋的摩擦沒有官方修復時程；拿 Claude 打人的案例，官方承認的只有威脅情報報告點名的幾件，其餘是第三方說法。事件表、誰承認了什麼、誰能申請什麼見 [[topics/ai-agent-safety-cyber]]。
+防守方放行在擴大（CVP 三層、Cyber Mission），且開始往企業端走（IBM Concert、Cisco AI Defense 宣布導入 Mythos 做資安推理與紅隊測試，11-09，僅宣布階段）；但通過審核還被擋的摩擦照舊沒有官方修復時程，11-12 甚至多一筆 claude.ai 端的誤擋回報（#61889）。拿 Claude 打人的案例，官方承認的只有威脅情報報告點名的幾件，其餘是第三方說法。事件表、誰承認了什麼、誰能申請什麼見 [[topics/ai-agent-safety-cyber]]。
 
 ### 評測越界
 

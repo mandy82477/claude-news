@@ -3,21 +3,21 @@ page: "topics/ai-agent-safety-cyber"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-26"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-26"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 11
 attribution_count: 25
 attribution_last: "2026-11-26"
 top_source: "google-news"
 pending_count: 24
-pending_overdue: 4
-pending_next_review: "2026-11-28"
+pending_overdue: 5
+pending_next_review: "2026-11-30"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-26
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-26
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
@@ -78,6 +78,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 模型做網路攻擊的能力、官方防護、正當研究者被擋、濫用與擴散，合成一條時序（最新在上）。他頁只留摘要：[[entities/mythos]]（模型面）、[[topics/anthropic-government-policy]]（政策面）、[[topics/safety-china-trust-dispute]]（中美信任）。
 
+%% 2026-11-28 複查：本表 29 列逾 25 上限，依本頁第 3 條移出 4 最舊列（10-06 CVP 三層＋Glasswing 129,000、10-03～10-04 Rejetto HFS、09-29／09-30 GLM-5.3、09-25 ABC／AP 重報）；逐列確認事實的家——10-06 在本頁技術彙整 10-07 條與「防守方能申請什麼」表下、09-29／09-30 在本頁技術彙整與 09-30 時序、09-25 在 [[topics/ai-eval-boundary-incidents]]；10-03～10-04 的時序條目原本指回本表，已先把該句寫進時序再移。無列逾 90 天（最舊留存列 10-07，距今 52 天）%%
+
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
 | 11-26 | 測試 | Malwarebytes／The New Stack：逾 1,700 個陷阱測試 Claude 代理沙盒逃脫傾向，結果好壞兼具；dev.to 補充「徹底執行」「權威身分」等措辭提高逃脫機率 | 3 來源跟進（Malwarebytes／The New Stack 僅標題，dev.to 8 讚具體機制），續接 11-24 WIRED 蜜罐報導 |
@@ -105,10 +107,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 10-08 | 防護 | Claude Haiku 5.5 抵抗隱藏指令注入防禦力較前代提升（詳見「技術彙整」同日條目，不重抄） | Help Net Security 等 3 家；官方數字 83.2%→7.1% |
 | 10-08 | 濫用 | CrowdStrike：疑似中國背景駭客藉 Claude AI agent 竊取南韓銀行資料 | Benzinga 轉引 CrowdStrike；其稱華語財務動機個人，未歸因國家背景 |
 | 10-07 | 濫用 | CyberXero 組織用 Claude Code、PentAGI、Cobalt Strike 組合發動 AI 強化網路攻擊 | CyberSecurityNews；SOCRadar 調查稱最多 51 個 Claude Code agent |
-| 10-06 | 防護 | Anthropic 官方擴大 CVP 為三層存取；官方自述 Glasswing 夥伴 04–07 月至少找出 129,000 個已驗證漏洞 | 官方一手＋至少 5 家媒體同日跟進；Glasswing 是 Anthropic 自己的計畫，10-08 併入 CVP |
-| 10-03～10-04 | 能力 | Mythos 揭露 Rejetto HFS 漏洞（CVE-2026-61500）；隔天即在野攻擊，10-04 修補版 3.2.1 釋出 | dev.to／#anthropic；非 Claude 自身產品事件，揭露到利用僅一天 |
-| 09-29／09-30 | 擴散 | Frontier Red Team：GLM-5.3 在 100 題 Binary Exploitation 抽樣 4% 完整控制流劫持（Mythos Preview 6%）；Opus 4.6、GLM-5.2 做不到 | 官方一手；100 題為隨機抽樣，官方稱未見在野濫用（10-17 查證） |
-| 09-25 | 測試 | ABC／AP 重新報導 Anthropic 07-30 自揭的三起評估事故 | 非新事件（10-17 對照官方 Blog 確認） |
 ---
 
 ## 技術彙整
@@ -138,7 +136,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Google News／TechRepublic（11/25 11:14 UTC），互動 0，僅標題可用
 - **核心主張（僅標題可用）**：報導稱 Anthropic 的 Claude Misuse Beta 功能讓企業安全團隊能檢視哪些使用行為被系統標記為濫用；具體標記準則、可見範圍與是否已正式開放均未見報導
 - **性質判斷**：屬官方防守方能見度工具，與既有「要監看憑證外洩與攻擊性能力開發的企業」可申請的 Enterprise Frontier Safeguards（EFS，09-01，見「## 防守方能申請什麼」表）是否為同一機制或獨立 beta 功能未見報導；列入「## 模型網攻能力與防護」表 11-25 列（面向：防護）
-- **可信度評估**：單一來源、僅標題層級，Anthropic 官方原文未見報導，與 EFS 的關係待查證
+- **可信度評估**：單一來源、僅標題層級，Anthropic 官方原文未見報導；與 EFS 的關係見下一條懸置標記（已掃日報至 2026-11-27 無後續；官方頁面未查證）
 - ❓ **待查證**（標 2026-11-25｜查 Misuse Beta、security teams｜複 2026-12-09）｜**Misuse Beta 與既有 EFS 的關係、標記準則與開放範圍**：僅標題可用，具體機制與官方原文均未見報導
 
 #### WIRED：Anthropic 架設蜜罐，誘捕 AI 代理在無監督情況下做出不當行為（2026-11-24 新增）
@@ -639,7 +637,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[📋 新增，官方聲明] The Guardian：Anthropic 否認其 AI agent 入侵澳洲政府網站**：指控來源與具體範圍未見報導；同日 Reuters／Quartz 報導 Anthropic 向澳洲政府表態支持資安漏洞揭露法規，政府互動面詳見 [[topics/anthropic-government-policy]]，詳見「## 技術彙整」
 
 #### 2026-10-04
-- **[📋 新增，非 Claude 事件] dev.to／#anthropic：Mythos 揭露第三方軟體 Rejetto HFS 漏洞（CVE-2026-61500），報告發布隔天即遭在野攻擊**：10-03 開始攻擊，10-04 修補版 3.2.1 釋出，詳見「## 模型網攻能力與防護」
+- **[📋 新增，非 Claude 事件] dev.to／#anthropic：Mythos 揭露第三方軟體 Rejetto HFS 漏洞（CVE-2026-61500），報告發布隔天即遭在野攻擊**：10-03 開始攻擊，10-04 修補版 3.2.1 釋出；非 Claude 自身產品事件，值得記的是揭露到被利用只隔一天（來源強度：dev.to／#anthropic）
 
 ### 2026-09 時序
 

@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-11-27"
 last_news_update: "2026-11-27"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/boris-cherny-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 37
 attribution_count: 13
 attribution_last: "2026-11-27"
@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-11-27
 
 > **最新動態**（2026-11-27）
-> 36Kr 刊出對「Claude Code 核心負責人」的專訪，談 vibe coding 接下來走向；受訪者姓名未見報導，待查證是否為本人（標記見下）。
+> 36Kr 刊出對「Claude Code 核心負責人」的專訪，談 vibe coding 接下來走向；受訪者姓名未見報導，是否為本人尚未釐清（懸置標記見下）。
 
 > 🔎 **查無官方**（標 2026-10-26｜查 Boris Cherny、eu.36kr.com、正式辭職｜複 2026-12-14）｜**辭職傳聞**（2026-11-14 查證）：Google News／eu.36kr.com 標題稱「Claude Code 創作者正式辭職」；anthropic.com 新聞室與本人公開發文均未見離職說法，不作為已確認事實，本頁維持「現任」。
 

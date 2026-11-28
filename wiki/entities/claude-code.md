@@ -4,15 +4,15 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-27"
+last_updated: "2026-11-28"
 last_news_update: "2026-11-26"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 129
 attribution_count: 856
 attribution_last: "2026-11-26"
@@ -20,7 +20,7 @@ top_source: "github-issues"
 pending_count: 6
 pending_overdue: 0
 pending_next_review: "2026-11-30"
-pending_signalled: 0
+pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-27
+**最後更新：** 2026-11-28
 **最後新聞更新：** 2026-11-26
 
 > **最新動態**（2026-11-27）
@@ -77,8 +77,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **版本：**
 
-- npm `stable`＝**2.1.323**、`latest`＝**2.1.330**（dist-tags，查證 2026-11-21）。stable 這週一次跳過 12 個版號（2.1.311→2.1.323）。
-- **該不該升**：**本站核對過的破壞性變更已全部落在 stable 裡**（最高 v2.1.321）
+- npm `stable`＝**2.1.326**、`latest`＝**2.1.332**（dist-tags，查證 2026-11-28），差 6 個版號。stable 這週前進 3 個版號（2.1.323→2.1.326）。
+- **該不該升**：**本站核對過的破壞性變更已全部落在 stable 裡**（最高 v2.1.321）；2.1.324～326 無新增破壞性變更
   - 含先前只有 latest 才有的寫入邊界設定（`blockWritesOutsideWorkingDirectories`，2.1.314）
   - auto mode 在 LLM gateway 下不再退回舊分類（2.1.319）、Fable 5.2 成為預設模型（2.1.321）
   - **升上 stable 這一步本身就會改到既有行為**，升之前先看 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]
@@ -108,7 +108,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期報導（尚待官方佐證）：**
 
 - ❓ **待查證**（標 2026-11-26｜查 Google Drive、file browser｜複 2026-12-10）｜**TestingCatalog 報導 Claude 將推出 Google Drive 檔案瀏覽功能**（2026-11-26，僅標題）：尚未正式開放；官方文件與 changelog 未見對應項目。
-- ❓ **待查證**（標 2026-11-17｜查 Claude Sheets）｜**財經媒體稱 Anthropic 推出「Claude Sheets」**（Google News／The Motley Fool，2026-11-17，殼層摘要、無可讀內文）：標題稱推出新產品並藉此質疑 Microsoft 股價，未附產品細節；非官方來源，官方文件與 changelog 未見對應名稱。
+- ❓ **待查證**（標 2026-11-17｜查 Claude Sheets｜訊 2026-11-24）｜**財經媒體稱 Anthropic 推出「Claude Sheets」**（Google News／The Motley Fool，2026-11-17，無可讀內文）：標題稱推出新產品並質疑 Microsoft 股價，未附產品細節；非官方來源，官方文件與 changelog 未見對應名稱。
 - 🔎 **查無官方**（標 2026-11-07｜查 自動設定、API 金鑰｜複 2026-12-21）｜**Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰**（Google News／FourWeekMBA＋Pasquale Pillitteri，2026-11-07，僅標題）
   - 兩篇低流量轉述來源稱雲端開新任務可自動配置 repo 與 API 金鑰，省去手動初始化
   - 官方文件與 changelog 未見對應條目；2026-11-21 再查官方雲端文件仍未見
